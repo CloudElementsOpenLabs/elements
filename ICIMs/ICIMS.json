@@ -1,0 +1,2474 @@
+{
+    "configuration": [
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "Pagination Type",
+            "active": true,
+            "description": "ICIMS Pagination Type",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "pagination.type",
+            "required": false
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "displayOrder": 1,
+            "active": true,
+            "description": "ICIMS Max Page Size (or limit)",
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Max Page Size (or limit)",
+            "groupControl": false,
+            "key": "pagination.max"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "customerId",
+            "active": true,
+            "description": "ICIMS Customer ID",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "customerid",
+            "required": true
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "https://api.icims.com/customers/{customerId}",
+            "displayOrder": 1,
+            "active": true,
+            "description": "ICIMS Base Url",
+            "type": "TEXTFIELD_1000",
+            "resellerConfig": false,
+            "required": true,
+            "hideFromConsole": true,
+            "name": "Base Url",
+            "groupControl": false,
+            "key": "base.url"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 2,
+            "name": "Username",
+            "active": true,
+            "description": "ICIMS Username",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "username",
+            "required": true
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 3,
+            "name": "Password",
+            "active": true,
+            "description": "ICIMS Password",
+            "type": "PASSWORD",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "password",
+            "required": true
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 11,
+            "name": "Event Notification Signature Key",
+            "active": true,
+            "description": "ICIMS Event Notification Signature Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.signature.key",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 98,
+            "name": "Default select fields",
+            "active": true,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "type": "TEXTAREA",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "default.select.fields.map",
+            "required": false
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "displayOrder": 99,
+            "active": true,
+            "description": "Used to enable/disable filtering of null values from the responses",
+            "type": "BOOLEAN",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Filter null values from the response",
+            "groupControl": false,
+            "key": "filter.response.nulls"
+        }
+    ],
+    "objects": [],
+    "description": "this is a demo element for ICIMS API",
+    "cloneable": false,
+    "extended": false,
+    "bulkDownloadEnabled": false,
+    "useModelsForMetadata": true,
+    "trialAccount": false,
+    "logo": "icims",
+    "hooks": [],
+    "beta": false,
+    "key": "icims",
+    "authentication": {
+        "type": "basic"
+    },
+    "bulkUploadEnabled": false,
+    "image": "https://images.cloudelements.io/icims-logo-main201901252048.png",
+    "models": [],
+    "active": true,
+    "resources": [
+        {
+            "path": "/hubs/general/companies",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /companies",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/search/companies"
+        },
+        {
+            "path": "/hubs/general/companies",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a(n) /companies",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "companies",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "companies",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/companies"
+        },
+        {
+            "path": "/hubs/general/companies/{id}",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve a(n) /companies",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/companies/{id}"
+        },
+        {
+            "path": "/hubs/general/companies/{id}",
+            "vendorMethod": "PATCH",
+            "method": "PATCH",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Update a(n) /companies",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "companies",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "companies",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                },
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "profileId",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/companies/{profileId}"
+        },
+        {
+            "path": "/hubs/general/companies/schema",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve the Company profile schema",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/profiledefinitions/v1/company/schema"
+        },
+        {
+            "path": "/hubs/general/jobs",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /jobs",
+            "model": {
+                "transform": false,
+                "name": "jobs",
+                "swagger": {
+                    "secondaryrecruiter": {
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "education": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "talentpools": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "talentpool": {
+                                    "type": "object",
+                                    "properties": {
+                                        "profile": {
+                                            "type": "string"
+                                        },
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "value": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "hiringmanager": {
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "bonus": {
+                        "type": "string"
+                    },
+                    "videointerviewpackage": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "formattedvalue": {
+                                    "type": "string"
+                                },
+                                "id": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "externalid": {
+                        "type": "string"
+                    },
+                    "jobowner": {
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "startdate": {
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "field14981": {
+                        "type": "string"
+                    },
+                    "bgcpackagetype": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "formattedvalue": {
+                                    "type": "string"
+                                },
+                                "id": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "jobid": {
+                        "type": "string"
+                    },
+                    "qualifications": {
+                        "type": "string"
+                    },
+                    "incentive": {
+                        "type": "object",
+                        "properties": {
+                            "amountstring": {
+                                "type": "string"
+                            },
+                            "amount": {
+                                "type": "number"
+                            },
+                            "currency": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "responsibilities": {
+                        "type": "string"
+                    },
+                    "hiretype": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "additionallocations": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "location": {
+                                    "type": "object",
+                                    "properties": {
+                                        "profile": {
+                                            "type": "string"
+                                        },
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "value": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "field25288": {
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "field25293": {
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobpostend": {
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "replacing": {
+                        "type": "string"
+                    },
+                    "priority": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobtype": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "maximumsalary": {
+                        "type": "object",
+                        "properties": {
+                            "amountstring": {
+                                "type": "string"
+                            },
+                            "timeframe": {
+                                "type": "string"
+                            },
+                            "amount": {
+                                "type": "number"
+                            },
+                            "currency": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "eeocategory": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "enddate": {
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "folder": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobnumber": {
+                        "type": "string"
+                    },
+                    "field25294": {
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "accountmanager": {
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "minimumsalary": {
+                        "type": "object",
+                        "properties": {
+                            "amountstring": {
+                                "type": "string"
+                            },
+                            "timeframe": {
+                                "type": "string"
+                            },
+                            "amount": {
+                                "type": "number"
+                            },
+                            "currency": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobtemplate": {
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "positioncategory": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "positionlevel": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "telecommute": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "industry": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "newhirecategory": {
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "experienceyears": {
+                        "type": "integer"
+                    },
+                    "assessmenttype": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "formattedvalue": {
+                                    "type": "string"
+                                },
+                                "id": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "commission": {
+                        "type": "string"
+                    },
+                    "department": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "costcenter": {
+                        "type": "string"
+                    },
+                    "percentofbase": {
+                        "type": "integer"
+                    },
+                    "overview": {
+                        "type": "string"
+                    },
+                    "drugscreenpackage": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "formattedvalue": {
+                                    "type": "string"
+                                },
+                                "id": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "jobtitle": {
+                        "type": "string"
+                    },
+                    "recruiter": {
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "billingcode": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "formattedvalue": {
+                                    "type": "string"
+                                },
+                                "id": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "billrate": {
+                        "type": "object",
+                        "properties": {
+                            "amountstring": {
+                                "type": "string"
+                            },
+                            "timeframe": {
+                                "type": "string"
+                            },
+                            "amount": {
+                                "type": "number"
+                            },
+                            "currency": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobpoststart": {
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "positiontype": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "duedate": {
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "visa": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "travel": {
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "joblocation": {
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "numberofpositions": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let params = request_vendor_parameters;\nlet exprs = request_expression; \n//exprs = [ { \"value\": ..., \"operator\": ..., \"attribute\": ... }]\nlet empty_filter = {\"filters\": [\n                          {\"name\": \"job.id\",\n                           \"value\": [\"0\"],\n                           \"operator\": \">\"\n                          }\n                          ]\n                    };\n                    \n//if(exprs && exprs.length){\n//  exprs.forEach((param, index) => {\n//    if(param.attribute == 'date'&& param.operator == '='){\n//       res_date = param.value;\n//    }\n//  });\n//}\n\n\nparams.searchJson = encodeURI(JSON.stringify(empty_filter));\n\ndone({\n    'request_vendor_parameters': params,\n    'continue': true\n});",
+                    "type": "preRequest"
+                },
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let response = response_body;\n\nresponse = response.searchResults ? response.searchResults : response\n\ndone({\n     'response_body': response\n});",
+                    "type": "postRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "staleness",
+                    "description": "the staleness of the search cache",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "staleness",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/search/jobs"
+        },
+        {
+            "path": "/hubs/general/jobs",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a(n) /jobs",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "jobs",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "jobs",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/jobs"
+        },
+        {
+            "path": "/hubs/general/jobs/{id}",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve a(n) /jobs",
+            "model": {
+                "transform": false,
+                "name": "jobs",
+                "swagger": {
+                    "jobsHiretype": {
+                        "title": "hiretype",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "New",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D15001",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "New",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsAdditionallocations": {
+                        "title": "additionallocations",
+                        "properties": {
+                            "entry": {
+                                "x-samplevalue": 2,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "location": {
+                                "type": "jobsAdditionallocationsLocation"
+                            }
+                        }
+                    },
+                    "jobsSecondaryrecruiter": {
+                        "title": "secondaryrecruiter",
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "x-samplevalue": "https://api.icims.com/customers/10116/people/166",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": 166,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "value": {
+                                "x-samplevalue": "Maxwell Warner",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs": {
+                        "title": "jobs",
+                        "properties": {
+                            "secondaryrecruiter": {
+                                "type": "jobsSecondaryrecruiter"
+                            },
+                            "education": {
+                                "type": "jobsEducation"
+                            },
+                            "createddate": {
+                                "x-samplevalue": "2019-01-15 04:34 AM",
+                                "type": "string"
+                            },
+                            "positioncategory": {
+                                "type": "jobsPositioncategory"
+                            },
+                            "bonus": {
+                                "x-samplevalue": "45",
+                                "type": "string"
+                            },
+                            "positionlevel": {
+                                "type": "jobsPositionlevel"
+                            },
+                            "externalid": {
+                                "x-samplevalue": "23333",
+                                "type": "string"
+                            },
+                            "startdate": {
+                                "x-samplevalue": "2019-01-29",
+                                "x-mask": "yyyy-MM-dd",
+                                "format": "date",
+                                "type": "string"
+                            },
+                            "experienceyears": {
+                                "x-samplevalue": 2,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "qualifications": {
+                                "x-samplevalue": "<p style=\"margin: 0px;\">this is fake qualifications</p>",
+                                "type": "string"
+                            },
+                            "incentive": {
+                                "type": "jobsIncentive"
+                            },
+                            "responsibilities": {
+                                "x-samplevalue": "<p style=\"margin: 0px;\">this is fake responsibilities</p>",
+                                "type": "string"
+                            },
+                            "createdby": {
+                                "type": "jobsCreatedby"
+                            },
+                            "hiretype": {
+                                "type": "jobsHiretype"
+                            },
+                            "commission": {
+                                "x-samplevalue": "34",
+                                "type": "string"
+                            },
+                            "links": {
+                                "type": "array",
+                                "items": {
+                                    "type": "jobsLinks"
+                                }
+                            },
+                            "department": {
+                                "type": "jobsDepartment"
+                            },
+                            "additionallocations": {
+                                "type": "array",
+                                "items": {
+                                    "type": "jobsAdditionallocations"
+                                }
+                            },
+                            "costcenter": {
+                                "x-samplevalue": "cost_centre",
+                                "type": "string"
+                            },
+                            "overview": {
+                                "x-samplevalue": "<p style=\"margin: 0px;\">this is fake overview</p>",
+                                "type": "string"
+                            },
+                            "jobtitle": {
+                                "x-samplevalue": "Assistant to the Regional Manager",
+                                "type": "string"
+                            },
+                            "jobpostend": {
+                                "x-samplevalue": "2019-02-01",
+                                "x-mask": "yyyy-MM-dd",
+                                "format": "date",
+                                "type": "string"
+                            },
+                            "priority": {
+                                "type": "jobsPriority"
+                            },
+                            "jobtype": {
+                                "type": "jobsJobtype"
+                            },
+                            "maximumsalary": {
+                                "type": "jobsMaximumsalary"
+                            },
+                            "eeocategory": {
+                                "type": "jobsEeocategory"
+                            },
+                            "billrate": {
+                                "type": "jobsBillrate"
+                            },
+                            "enddate": {
+                                "x-samplevalue": "2019-05-31",
+                                "x-mask": "yyyy-MM-dd",
+                                "format": "date",
+                                "type": "string"
+                            },
+                            "folder": {
+                                "type": "jobsFolder"
+                            },
+                            "jobpoststart": {
+                                "x-samplevalue": "2019-01-22",
+                                "x-mask": "yyyy-MM-dd",
+                                "format": "date",
+                                "type": "string"
+                            },
+                            "jobnumber": {
+                                "x-samplevalue": "12345",
+                                "type": "string"
+                            },
+                            "positiontype": {
+                                "type": "jobsPositiontype"
+                            },
+                            "duedate": {
+                                "x-samplevalue": "2019-02-01",
+                                "x-mask": "yyyy-MM-dd",
+                                "format": "date",
+                                "type": "string"
+                            },
+                            "visa": {
+                                "type": "jobsVisa"
+                            },
+                            "updateddate": {
+                                "x-samplevalue": "2019-01-15 05:58 AM",
+                                "type": "string"
+                            },
+                            "travel": {
+                                "type": "jobsTravel"
+                            },
+                            "minimumsalary": {
+                                "type": "jobsMinimumsalary"
+                            },
+                            "joblocation": {
+                                "type": "jobsJoblocation"
+                            },
+                            "numberofpositions": {
+                                "x-samplevalue": 1,
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    "jobsCreatedby": {
+                        "title": "createdby",
+                        "type": "object",
+                        "properties": {
+                            "profile": {
+                                "x-samplevalue": "https://api.icims.com/customers/10116/people/162",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": 162,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "value": {
+                                "x-samplevalue": "Cloud Elements Test API User",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsIncentive": {
+                        "title": "incentive",
+                        "type": "object",
+                        "properties": {
+                            "amountstring": {
+                                "x-samplevalue": "45.00",
+                                "type": "string"
+                            },
+                            "amount": {
+                                "x-samplevalue": 45,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "currency": {
+                                "x-samplevalue": "USD",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsDepartment": {
+                        "title": "department",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Quality Assurance",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D37002041010",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Quality Assurance",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsJoblocation": {
+                        "title": "joblocation",
+                        "type": "object",
+                        "properties": {
+                            "companyid": {
+                                "x-samplevalue": 5,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "address": {
+                                "x-samplevalue": "https://api.icims.com/customers/10116/companies/5/fields/addresses/2",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": 2,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "value": {
+                                "x-samplevalue": "Your Company Name - 1234 Main Street Suite 2 New York, New York 10002 United States New York, ",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsPriority": {
+                        "title": "priority",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Normal",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D85002",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Normal",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsPositioncategory": {
+                        "title": "positioncategory",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Administrative/Clerical",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "C8718",
+                                "type": "string"
+                            },
+                            "soccode": {
+                                "x-samplevalue": "0",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Administrative/Clerical",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsMaximumsalary": {
+                        "title": "maximumsalary",
+                        "type": "object",
+                        "properties": {
+                            "amountstring": {
+                                "x-samplevalue": "50000.00",
+                                "type": "string"
+                            },
+                            "timeframe": {
+                                "x-samplevalue": "Annually",
+                                "type": "string"
+                            },
+                            "amount": {
+                                "x-samplevalue": 50000,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "currency": {
+                                "x-samplevalue": "USD",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsTravel": {
+                        "title": "travel",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "10%",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D37002016002",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "10%",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsEeocategory": {
+                        "title": "eeocategory",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Administrative Support Workers",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D19005",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Administrative Support Workers",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsFolder": {
+                        "title": "folder",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Pending Approval",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D31002",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Pending Approval",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsPositionlevel": {
+                        "title": "positionlevel",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Assistant Manager",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "C3874",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Assistant Manager",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsPositiontype": {
+                        "title": "positiontype",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Regular Full-Time",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D12001",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Regular Full-Time",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsJobtype": {
+                        "title": "jobtype",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Exempt",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "C8711",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Exempt",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsMinimumsalary": {
+                        "title": "minimumsalary",
+                        "type": "object",
+                        "properties": {
+                            "amountstring": {
+                                "x-samplevalue": "60000.00",
+                                "type": "string"
+                            },
+                            "timeframe": {
+                                "x-samplevalue": "Annually",
+                                "type": "string"
+                            },
+                            "amount": {
+                                "x-samplevalue": 60000,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "currency": {
+                                "x-samplevalue": "USD",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsLinks": {
+                        "title": "links",
+                        "properties": {
+                            "rel": {
+                                "x-samplevalue": "self",
+                                "type": "string"
+                            },
+                            "title": {
+                                "x-samplevalue": "The current profile being viewed.",
+                                "type": "string"
+                            },
+                            "url": {
+                                "x-samplevalue": "https://api.icims.com/customers/10116/jobs/1017",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsAdditionallocationsLocation": {
+                        "title": "location",
+                        "type": "object",
+                        "properties": {
+                            "companyid": {
+                                "x-samplevalue": 5,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "address": {
+                                "x-samplevalue": "https://api.icims.com/customers/10116/companies/5/fields/addresses/2",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": 2,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "value": {
+                                "x-samplevalue": "Your Company Name - 1234 Main Street Suite 2 New York, New York 10002 United States New York, ",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsBillrate": {
+                        "title": "billrate",
+                        "type": "object",
+                        "properties": {
+                            "amountstring": {
+                                "x-samplevalue": "233.00",
+                                "type": "string"
+                            },
+                            "timeframe": {
+                                "x-samplevalue": "Annually",
+                                "type": "string"
+                            },
+                            "amount": {
+                                "x-samplevalue": 233,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "currency": {
+                                "x-samplevalue": "USD",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsEducation": {
+                        "title": "education",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Bachelor's Degree",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D37002017004",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Bachelor's Degree",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobsVisa": {
+                        "title": "visa",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "No Restrictions",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D3001",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "No Restrictions",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let params = request_vendor_parameters;\nlet fields = \"accountmanager,additionallocations,assessmenttype,bgcpackagetype,billingcode,billrate,bonus,commission,confidence,costcenter,department,drugscreenpackage,duedate,education,eeocategory,enddate,experienceyears,externalid,fee,folder,hiretype,hiringmanager,incentive, industry, jobid,joblength,joblocation,jobnumber,jobowner,jobpostend,jobpoststart,jobtemplate,jobtitle,jobtype,maximumsalary,minimumsalary,newhirecategory,numberofpositions,overview,percentofbase,positioncategory,positionlevel,positiontype,priority,qualifications,rate,recruiter,replacing,responsibilities,secondaryrecruiter,skillset,startdate,talentpools,travel,videointerviewpackage,visa,createddate,createdby,updateddate\";\n\nif(!params){\n  params = {};\n}\n\nparams.fields = fields;\n\ndone({\n    'request_vendor_parameters': params,\n    'continue': true\n});\n",
+                    "type": "preRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/jobs/{id}"
+        },
+        {
+            "path": "/hubs/general/jobs/{id}",
+            "vendorMethod": "PATCH",
+            "method": "PATCH",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Update a(n) /jobs",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "jobs",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "jobs",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                },
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "profileId",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/jobs/{profileId}"
+        },
+        {
+            "path": "/hubs/general/jobs/schema",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve the Jobs profile schema",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/profiledefinitions/v1/job/schema"
+        },
+        {
+            "path": "/hubs/general/people",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /people",
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let params = request_vendor_parameters;\nlet exprs = request_expression; \n//exprs = [ { \"value\": ..., \"operator\": ..., \"attribute\": ... }]\nlet empty_filter = {\"filters\": [\n                          {\"name\": \"person.id\",\n                           \"value\": [\"0\"],\n                           \"operator\": \">\"\n                          }\n                          ]\n                    };\n                    \nconsole.log(exprs);\n\nif(exprs && exprs.length){\n  exprs.forEach((param, index) => {\n    if(param.attribute == 'date'&& param.operator == '='){\n       //res_date = param.value;\n    }\n  });\n}\n\n\nparams.searchJson = encodeURI(JSON.stringify(empty_filter));\n\ndone({\n    'request_vendor_parameters': params,\n    'continue': true\n});",
+                    "type": "preRequest"
+                },
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let response = response_body;\n\nresponse = response.searchResults ? response.searchResults : response\n\ndone({\n     'response_body': response\n});",
+                    "type": "postRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "staleness",
+                    "description": "the staleness of the search cache",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "staleness",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "no-op",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "where",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/search/people"
+        },
+        {
+            "path": "/hubs/general/people",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a(n) /people",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "people",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "people",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/people"
+        },
+        {
+            "path": "/hubs/general/people/{id}",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve a(n) /people",
+            "model": {
+                "transform": false,
+                "name": "people",
+                "swagger": {
+                    "peopleAddressesAddresstype": {
+                        "title": "addresstype",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Home",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D84002",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Home",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "peopleAddressesAddressstate": {
+                        "title": "addressstate",
+                        "type": "object",
+                        "properties": {
+                            "abbrev": {
+                                "x-samplevalue": "CO",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D41001009",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Colorado",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "peoplePhones": {
+                        "title": "phones",
+                        "properties": {
+                            "entry": {
+                                "x-samplevalue": 49,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "phonetype": {
+                                "type": "peoplePhonesPhonetype"
+                            },
+                            "phonenumber": {
+                                "x-samplevalue": "8882224444",
+                                "type": "string"
+                            },
+                            "primary": {
+                                "x-samplevalue": true,
+                                "type": "boolean"
+                            }
+                        }
+                    },
+                    "peoplePhonesPhonetype": {
+                        "title": "phonetype",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Mobile",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D83004",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Mobile",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "peopleTags": {
+                        "title": "tags",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Ambitious",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D105001",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Ambitious",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "peopleLinks": {
+                        "title": "links",
+                        "properties": {
+                            "rel": {
+                                "x-samplevalue": "self",
+                                "type": "string"
+                            },
+                            "title": {
+                                "x-samplevalue": "The current profile being viewed.",
+                                "type": "string"
+                            },
+                            "url": {
+                                "x-samplevalue": "https://api.icims.com/customers/10116/people/167",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "peopleFolder": {
+                        "title": "folder",
+                        "type": "object",
+                        "properties": {
+                            "formattedvalue": {
+                                "x-samplevalue": "Contact",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D32001",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "Contact",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "people": {
+                        "title": "people",
+                        "properties": {
+                            "addresses": {
+                                "type": "array",
+                                "items": {
+                                    "type": "peopleAddresses"
+                                }
+                            },
+                            "firstname": {
+                                "x-samplevalue": "leslie",
+                                "type": "string"
+                            },
+                            "middlename": {
+                                "x-samplevalue": "middlena",
+                                "type": "string"
+                            },
+                            "phones": {
+                                "type": "array",
+                                "items": {
+                                    "type": "peoplePhones"
+                                }
+                            },
+                            "lastname": {
+                                "x-samplevalue": "knoppe",
+                                "type": "string"
+                            },
+                            "tags": {
+                                "type": "array",
+                                "items": {
+                                    "type": "peopleTags"
+                                }
+                            },
+                            "integrationpassword": {
+                                "x-samplevalue": "1234password",
+                                "type": "string"
+                            },
+                            "folder": {
+                                "type": "peopleFolder"
+                            },
+                            "integrationusername": {
+                                "x-samplevalue": "lil_sebasian_123",
+                                "type": "string"
+                            },
+                            "formerlastname": {
+                                "x-samplevalue": "adddd",
+                                "type": "string"
+                            },
+                            "links": {
+                                "type": "array",
+                                "items": {
+                                    "type": "peopleLinks"
+                                }
+                            },
+                            "socialaccounturl": {
+                                "x-samplevalue": "www.social.com",
+                                "type": "string"
+                            },
+                            "email": {
+                                "x-sub-format": "email",
+                                "x-samplevalue": "leslie_knoppe@parksandrecs.gov",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "peopleAddresses": {
+                        "title": "addresses",
+                        "properties": {
+                            "addresscity": {
+                                "x-samplevalue": "denver",
+                                "type": "string"
+                            },
+                            "entry": {
+                                "x-samplevalue": 36,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "addresszip": {
+                                "x-samplevalue": "80205",
+                                "type": "string"
+                            },
+                            "addresscounty": {
+                                "x-samplevalue": "denver",
+                                "type": "string"
+                            },
+                            "addressstate": {
+                                "type": "peopleAddressesAddressstate"
+                            },
+                            "addresscountry": {
+                                "type": "peopleAddressesAddresscountry"
+                            },
+                            "addresstype": {
+                                "type": "peopleAddressesAddresstype"
+                            },
+                            "addressstreet1": {
+                                "x-samplevalue": "3845 walnut st",
+                                "type": "string"
+                            },
+                            "primary": {
+                                "x-samplevalue": true,
+                                "type": "boolean"
+                            }
+                        }
+                    },
+                    "peopleAddressesAddresscountry": {
+                        "title": "addresscountry",
+                        "type": "object",
+                        "properties": {
+                            "abbrev": {
+                                "x-samplevalue": "US",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "D41001",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "United States",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let params = request_vendor_parameters;\n//let fields = \"addresses,addresshistory,age,aliases,availabledate,availstatus,bgcresults,billrate,birthdate,bonus,commission,currentindustry,currentposition,currentpositionlevel,decisiondate,department,disability,division,drivinglicensenumber,drivinglicensestate,drugscreeningresults,education,email,enddate,experienceyears,externalid,externalsource,federaladditionalwithholding,federalexemptfromfit,federalexemptions,federalmaritalstatus,federalwithholdingtype,firstname,folder,formerlastname,gender,groupinformation,hiredate,hiringmanagerdivision,hiringmanagerorganization,hiringmanagerroom,hiringmanagerskillset,hiringmanagersource,i9allaccess,i9businessunit,i9completioncode,i9completionlocation,i9nextaction,i9nextactionduedate,i9url,i9worksite,initialemployeraccess,initialworksiteaccess,integrationpassword,integrationusername,job,jobtitle,lastname,licensecertification,location,login,logingroup,manager,middlename,nationality,note,organization,origin,password,phones,poenddate,polocation,ponumber,postartdate,preferredcountry,preferredindustries,preferredjoblocations,preferredlocations,preferredpositions,primaryreps,priority,profilepicture,qualification,race,rating,recruiter,references,religion,room,salary,secondaryreps,secretary,skype,socialaccounturl,socialdistributionenabled,source,sourcechannel,sourcedevice,sourceemail,sourcename,sourceperson,sourcephone,sourceportal,ssn,startdate,stateadditionalwithholding,stateexemptfromfit,stateexemptions,statemaritalstatus,statewithholdingtype,supervisor,tags,title,userlists,usssn,veteran,visastatus,willingtorelocate,withholdingstate,workexperience\";\n\n//if(!params){\n  //params = {};\n//}\n\n//params.fields = fields;\n\ndone({\n    'request_vendor_parameters': params,\n    'continue': true\n});",
+                    "type": "preRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/people/{id}"
+        },
+        {
+            "path": "/hubs/general/people/{id}",
+            "vendorMethod": "PATCH",
+            "method": "PATCH",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Update a(n) /person",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "people",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "people",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                },
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "profileId",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/people/{profileId}"
+        },
+        {
+            "path": "/hubs/general/people/schema",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve the People profile schema",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/profiledefinitions/v1/person/schema"
+        },
+        {
+            "path": "/hubs/general/talentpools",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /talentpools",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/search/talentpools"
+        },
+        {
+            "path": "/hubs/general/talentpools",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a(n) /talentpools",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "talentpools",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "talentpools",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/talentpools"
+        },
+        {
+            "path": "/hubs/general/talentpools/{id}",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve a(n) /talentpools",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/talentpools/{id}"
+        },
+        {
+            "path": "/hubs/general/talentpools/{id}",
+            "vendorMethod": "PATCH",
+            "method": "PATCH",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Update a(n) /talentpools",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "profileId",
+                    "required": true
+                },
+                {
+                    "vendorType": "body",
+                    "dataType": "talentpools",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "talentpools",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/talentpools/{profileId}"
+        },
+        {
+            "path": "/hubs/general/talentpools/schema",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve the Talent Pools profile schema",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/profiledefinitions/v1/talentpools/schema"
+        }
+    ],
+    "modelType": "basic",
+    "protocolType": "http",
+    "transformationsEnabled": true,
+    "deleted": false,
+    "hub": "general",
+    "typeOauth": false,
+    "name": "ICIMS",
+    "extendable": true,
+    "parameters": [
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "required": false
+        },
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "required": false
+        },
+        {
+            "vendorType": "path",
+            "name": "customerid",
+            "source": "request",
+            "type": "configuration",
+            "vendorName": "customerId",
+            "required": false
+        }
+    ]
+}
