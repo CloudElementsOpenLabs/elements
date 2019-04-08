@@ -17,7 +17,7 @@
         {
             "internal": false,
             "companyConfig": false,
-            "defaultValue": "https://buyerintegration.staging.taulia.com:443",
+            "defaultValue": "",
             "displayOrder": 1,
             "active": true,
             "description": "Taulia Base Url",
