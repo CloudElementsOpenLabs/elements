@@ -15,7 +15,7 @@
             "name": "Base Url",
             "key": "base.url",
             "description": "Infoplus Base Url",
-            "defaultValue": "https://freddietown-infopluswms-com-1hibhyqe7iji.runscope.net/infoplus-wms/api/v2.0",
+            "defaultValue": "",
             "resellerConfig": false,
             "companyConfig": false,
             "active": true,
