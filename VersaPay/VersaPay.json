@@ -77,7 +77,7 @@
         {
             "internal": false,
             "companyConfig": false,
-            "defaultValue": "https://demo-versapay-com-6akozk4g29qk.runscope.net",
+            "defaultValue": "",
             "displayOrder": 1,
             "active": true,
             "description": "VersaPay Base Url",
