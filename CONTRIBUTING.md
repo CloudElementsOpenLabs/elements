@@ -1,5 +1,7 @@
 # Contributing
 
+Please be sure to review the [Open Labs Overview](https://docs.cloud-elements.com/home/open-labs-overview) before using this repo. 
+
 To contribute we ask that you create a folder that contains the Element JSON as well as a short README file with a description of what you built (endpoint name and resources available so people can see them without importing the Element), a link to the documentation you used when creating the Element, and any known endpoint limitation that might affect how your Element works.
 
 We’re still working out the kinks to make contributing to this project as easy and transparent as possible. Hopefully this document makes the process for contributing clear and answers some questions that you may have.
