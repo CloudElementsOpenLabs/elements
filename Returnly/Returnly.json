@@ -1,0 +1,673 @@
+{
+    "configuration": [
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "Pagination Type",
+            "active": true,
+            "description": "Returnly API Pagination Type",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "pagination.type",
+            "required": false
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Returnly API Max Page Size (or limit)",
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Max Page Size (or limit)",
+            "groupControl": false,
+            "key": "pagination.max"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "API Key",
+            "active": true,
+            "description": "API Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "api.key",
+            "required": true
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "https://api.returnly.com/",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Returnly API Base URL",
+            "type": "TEXTFIELD_1000",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Base URL",
+            "groupControl": false,
+            "key": "base.url"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 11,
+            "name": "Event Notification Signature Key",
+            "active": true,
+            "description": "Returnly API Event Notification Signature Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.signature.key",
+            "required": false
+        },
+        {
+            "internal": true,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 100,
+            "name": "Time of Getting Token or Performing Authentication",
+            "active": true,
+            "description": "Returnly API Time of Getting Token or Performing Authentication",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "authentication.time",
+            "required": false
+        }
+    ],
+    "objects": [],
+    "description": "# Introduction\nThe Returnly API enables developers to seamlessly receive and pass up-to-date returns and refunds data into the platforms you use to run your business. Optimize your returns and merchandise strategies, maximize your technology investments and streamline your business with our [Returns](#tag/Returns), [Requests](#tag/Requests) & [Refunds](#tag/Refunds) APIs\n\n# Common Use Cases\n * Update your OMS with real-time returns data\n * Get up to date returns status in real-time\n * Leverage granular return data to optimize your current merchandise initiatives\n * Track shipping and delivery of product returns\n * Feed your CRM systems with real-time customer returns data\n * Manage inventory predictably by monitoring returns and understanding which items have resell potential\n * Manage inventory predictably by monitoring returns and understanding which items have resell potential\n * Automate order refunds by connecting your warehouse scan system to the Returnly Refund API\n\n# Getting Started\n## Customers\nYou will need an Enterprise Returnly license in order to access our API. Please contact your Returnly representative to gain access.\n",
+    "cloneable": true,
+    "extended": false,
+    "bulkDownloadEnabled": false,
+    "useModelsForMetadata": true,
+    "trialAccount": false,
+    "logo": "returnlyapi",
+    "hooks": [],
+    "beta": false,
+    "key": "returnlyapi",
+    "authentication": {
+        "type": "custom"
+    },
+    "bulkUploadEnabled": false,
+    "image": "http://console.cloud-elements.com/elements/images/elements/email-default.png",
+    "models": [],
+    "active": true,
+    "resources": [
+        {
+            "path": "/hubs/general/refund_requests",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve collection of Refund requests",
+            "model": {
+                "transform": false,
+                "name": "RefundRequestResponseList",
+                "swagger": {
+                    "RefundRequestResponse": {
+                        "type": "object",
+                        "properties": {
+                            "data": {
+                                "$ref": "RefundRequest"
+                            }
+                        },
+                        "required": [
+                            "data"
+                        ]
+                    },
+                    "RefundRequest": {
+                        "type": "object",
+                        "properties": {
+                            "refunded_at": {
+                                "type": "string"
+                            },
+                            "updated_at": {
+                                "type": "string"
+                            },
+                            "payload": {
+                                "type": "object",
+                                "x-description": "Payload"
+                            },
+                            "id": {
+                                "type": "string",
+                                "x-description": "Refund request ID"
+                            },
+                            "r_returns_id": {
+                                "type": "string",
+                                "x-description": "Return ID"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "r_returns_id",
+                            "payload"
+                        ]
+                    },
+                    "RefundRequestResponseList": {
+                        "id": "RefundRequestResponseList",
+                        "type": "array",
+                        "items": {
+                            "$ref": "RefundRequestResponse"
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "status",
+                    "description": "status",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "status",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "number",
+                    "name": "page",
+                    "description": "Example `3`",
+                    "vendorDataType": "number",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "number",
+                    "name": "per_page",
+                    "description": "Example `10`",
+                    "vendorDataType": "number",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "per_page",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/refund_requests"
+        },
+        {
+            "path": "/hubs/general/refund_requests/not_refunded",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve collection of not refunded requests",
+            "model": {
+                "transform": false,
+                "name": "RefundRequestResponseList",
+                "swagger": {
+                    "RefundRequestResponse": {
+                        "type": "object",
+                        "properties": {
+                            "data": {
+                                "$ref": "RefundRequest"
+                            }
+                        },
+                        "required": [
+                            "data"
+                        ]
+                    },
+                    "RefundRequestResponseList": {
+                        "id": "RefundRequestResponseList",
+                        "type": "array",
+                        "items": {
+                            "$ref": "RefundRequestResponse"
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "number",
+                    "name": "page",
+                    "description": "Example `3`",
+                    "vendorDataType": "number",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "number",
+                    "name": "per_page",
+                    "description": "Example `10`",
+                    "vendorDataType": "number",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "per_page",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/refund_requests/not_refunded"
+        },
+        {
+            "path": "/hubs/general/refunds",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Refund shopper based on package information.",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "string",
+                    "name": "payload",
+                    "description": "payload",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "payload",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/refunds"
+        },
+        {
+            "path": "/hubs/general/returns",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve collection of RMAs",
+            "model": {
+                "transform": false,
+                "name": "RflowReturnResponseList",
+                "swagger": {
+                    "Include": {
+                        "type": "object",
+                        "properties": {
+                            "attributes": {
+                                "type": "object"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "type",
+                            "attributes"
+                        ]
+                    },
+                    "RflowReturnResponse": {
+                        "type": "object",
+                        "properties": {
+                            "data": {
+                                "$ref": "RflowReturn"
+                            },
+                            "included": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "Include"
+                                }
+                            }
+                        },
+                        "required": [
+                            "data"
+                        ]
+                    },
+                    "RflowReturnResponseList": {
+                        "id": "RflowReturnResponseList",
+                        "type": "array",
+                        "items": {
+                            "$ref": "RflowReturnResponse"
+                        }
+                    },
+                    "RflowReturn": {
+                        "type": "object",
+                        "properties": {
+                            "relationships": {
+                                "type": "object",
+                                "properties": {
+                                    "return_line_items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "data": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$ref": "#/definitions/Relation"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "shipping_labels": {
+                                        "type": "object",
+                                        "properties": {
+                                            "data": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$ref": "#/definitions/Relation"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "attributes": {
+                                "type": "object",
+                                "x-description": "Return object attributes",
+                                "properties": {
+                                    "return_shipping_quote_amount": {
+                                        "type": "string"
+                                    },
+                                    "tax_amount": {
+                                        "type": "string"
+                                    },
+                                    "shopper_message": {
+                                        "type": "string"
+                                    },
+                                    "return_label_amount": {
+                                        "type": "string"
+                                    },
+                                    "discount_amount": {
+                                        "type": "string"
+                                    },
+                                    "ext_store_id": {
+                                        "type": "string"
+                                    },
+                                    "return_shipping_refund_amount": {
+                                        "type": "string"
+                                    },
+                                    "rma": {
+                                        "type": "string"
+                                    },
+                                    "shopper_address": {
+                                        "$ref": "#/definitions/ShopperAddress"
+                                    },
+                                    "created_at": {
+                                        "type": "string"
+                                    },
+                                    "estimated_refund_amount": {
+                                        "type": "string"
+                                    },
+                                    "return_shipping_paid_amount": {
+                                        "type": "string"
+                                    },
+                                    "merchant_notes": {
+                                        "type": "string"
+                                    },
+                                    "subtotal_amount": {
+                                        "type": "string"
+                                    },
+                                    "is_exchange": {
+                                        "type": "boolean"
+                                    },
+                                    "restocking_fee_amount": {
+                                        "type": "string"
+                                    },
+                                    "instant_refund_status": {
+                                        "type": "string"
+                                    },
+                                    "refunded_at": {
+                                        "type": "string"
+                                    },
+                                    "updated_at": {
+                                        "type": "string"
+                                    },
+                                    "order_shipping_refund": {
+                                        "type": "string"
+                                    },
+                                    "refund_amount": {
+                                        "type": "string"
+                                    },
+                                    "currency": {
+                                        "type": "string"
+                                    },
+                                    "shopper_email": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "id": {
+                                "type": "string",
+                                "x-description": "Return ID"
+                            },
+                            "type": {
+                                "type": "string",
+                                "x-description": "Type of the object",
+                                "example": "returns"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "type"
+                        ]
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "array",
+                    "name": "include",
+                    "description": "include",
+                    "vendorDataType": "array",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "include",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "status",
+                    "description": "status",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "status",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "integer",
+                    "name": "page",
+                    "description": "Example 1",
+                    "vendorDataType": "integer",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "max_refunded_at",
+                    "description": "Example `2017-02-22T20:28:13.000Z`",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "max_refunded_at",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "min_refunded_at",
+                    "description": "Example `2017-02-22T20:28:13.000Z`",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "min_refunded_at",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "max_updated_at",
+                    "description": "Example `2017-02-22T20:28:13.000Z`",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "max_updated_at",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "min_updated_at",
+                    "description": "Example `2017-02-22T20:28:13.000Z`",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "min_updated_at",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/returns"
+        },
+        {
+            "path": "/hubs/general/returns/{id}",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve single RMA details",
+            "model": {
+                "transform": false,
+                "name": "RflowReturnResponse",
+                "swagger": {
+                    "RflowReturnResponse": {
+                        "type": "object",
+                        "properties": {
+                            "data": {
+                                "$ref": "RflowReturn"
+                            },
+                            "included": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "Include"
+                                }
+                            }
+                        },
+                        "required": [
+                            "data"
+                        ]
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "array",
+                    "name": "include",
+                    "description": "include",
+                    "vendorDataType": "array",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "include",
+                    "required": false
+                },
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "Return ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/returns/{id}"
+        },
+        {
+            "path": "/hubs/general/support",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "GET a(n) /support",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "vendorPath": "/support"
+        }
+    ],
+    "protocolType": "http",
+    "transformationsEnabled": true,
+    "deleted": false,
+    "hub": "general",
+    "typeOauth": false,
+    "name": "Returnly API",
+    "extendable": false,
+    "parameters": [
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "required": false
+        },
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "required": false
+        },
+        {
+            "vendorType": "header",
+            "name": "api.key",
+            "source": "request",
+            "type": "configuration",
+            "vendorName": "X-Api-Token",
+            "required": false
+        }
+    ]
+}

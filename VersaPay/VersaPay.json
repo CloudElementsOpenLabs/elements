@@ -1,0 +1,342 @@
+{
+    "configuration": [
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "yyyy-MM-dd",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Bulk query Date Mask",
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Bulk query Date Mask",
+            "groupControl": false,
+            "key": "bulk.query.date_mask"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "date",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Bulk Query Created Field Name",
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Bulk query Created Field Name",
+            "groupControl": false,
+            "key": "bulk.attribute.created_time"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "number",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Bulk query FieldName",
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Bulk query FieldName",
+            "groupControl": false,
+            "key": "bulk.query.field_name"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": ">=",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Bulk query Operator",
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Bulk query Operator",
+            "groupControl": false,
+            "key": "bulk.query.operator"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "Pagination Type",
+            "active": true,
+            "description": "VersaPay Pagination Type",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "pagination.type",
+            "required": false
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "",
+            "displayOrder": 1,
+            "active": true,
+            "description": "VersaPay Base Url",
+            "type": "TEXTFIELD_1000",
+            "resellerConfig": false,
+            "required": true,
+            "hideFromConsole": true,
+            "name": "Base Url",
+            "groupControl": false,
+            "key": "base.url"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "displayOrder": 1,
+            "active": true,
+            "description": "VersaPay OAuth basic header",
+            "type": "BOOLEAN",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "OAuth basic header",
+            "groupControl": false,
+            "key": "oauth.basic.header"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "displayOrder": 1,
+            "active": true,
+            "description": "VersaPay Max Page Size (or limit)",
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Max Page Size (or limit)",
+            "groupControl": false,
+            "key": "pagination.max"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "JSON",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Bulk Download Format",
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Bulk Download Format",
+            "groupControl": false,
+            "key": "bulk.query.download_format"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "Bulk Add Metadata",
+            "active": true,
+            "description": "Bulk Add Metadata",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "bulk.add_metadata",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "Bulk Relations",
+            "active": true,
+            "description": "Bulk Relations",
+            "type": "TEXTAREA",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "bulk.relations",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 2,
+            "name": "Username",
+            "active": true,
+            "description": "VersaPay Username",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "username",
+            "required": true
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 3,
+            "name": "Password",
+            "active": true,
+            "description": "VersaPay Password",
+            "type": "PASSWORD",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "password",
+            "required": true
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 11,
+            "name": "Event Notification Signature Key",
+            "active": true,
+            "description": "VersaPay Event Notification Signature Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.signature.key",
+            "required": false
+        }
+    ],
+    "objects": [
+        {
+            "bulkUploadEnabled": true,
+            "elementId": 12148,
+            "metadataDiscovery": false,
+            "updatedDateName": "date",
+            "createdDateName": "date",
+            "customFields": false,
+            "eventsEnabled": false,
+            "nativeBulkUpload": false,
+            "vendorEventTypes": "unknown",
+            "createdDateFormat": "yyyy-MM-dd",
+            "updatedDateFormat": "yyyy-MM-dd",
+            "bulkDownloadEnabled": false,
+            "nullsRequired": false,
+            "name": "api",
+            "operationsSupported": [
+                "unknown"
+            ],
+            "nativeBulkDownload": false,
+            "primaryKeyName": "number"
+        }
+    ],
+    "description": "blah blah blah",
+    "cloneable": true,
+    "extended": false,
+    "bulkDownloadEnabled": true,
+    "useModelsForMetadata": true,
+    "trialAccount": false,
+    "logo": "versapay",
+    "hooks": [],
+    "beta": false,
+    "key": "versapay",
+    "authentication": {
+        "type": "basic"
+    },
+    "bulkUploadEnabled": true,
+    "image": "elements/custom-element-default-logo.png",
+    "models": [],
+    "active": true,
+    "resources": [
+        {
+            "path": "/hubs/general/api/exports/payment_amounts",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": ".",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "watermark",
+                    "description": ".",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "watermark",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/api/exports/payment_amounts"
+        },
+        {
+            "path": "/hubs/general/api/imports",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a(n) /",
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let headers = {\n    'Content-Type': 'multipart/form-data; boundary=',\n     'Accept': '*/*',\n     'Accept-Encoding': 'gzip, deflate'\n    }\n    \n    done({\"request_vendor_headers\":headers});\n",
+                    "type": "preRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "multipart",
+                    "dataType": "file",
+                    "name": "file",
+                    "description": "The file to be uploaded",
+                    "vendorDataType": "file",
+                    "source": "request",
+                    "type": "multipart",
+                    "vendorName": "file",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "true",
+                    "description": "Content  Length",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "value",
+                    "vendorName": "Content-Length",
+                    "required": false
+                },
+                {
+                    "vendorType": "form",
+                    "dataType": "string",
+                    "name": "filename",
+                    "description": "filename",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "form",
+                    "vendorName": "filename",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/api/imports/invoice"
+        }
+    ],
+    "modelType": "basic",
+    "protocolType": "http",
+    "transformationsEnabled": true,
+    "deleted": false,
+    "hub": "general",
+    "typeOauth": false,
+    "name": "VersaPay",
+    "extendable": false,
+    "parameters": []
+}
