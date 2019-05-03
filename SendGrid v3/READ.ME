@@ -1,0 +1,12 @@
+# SendGrid v3
+
+Vendor Documentation: https://sendgrid.com/docs/API_Reference/api_v3.html
+
+For more information on how to use Cloud Elements, see our [help center](https://docs.cloud-elements.com)
+or our [support page](https://support.cloud-elements.com/hc/en-us).
+
+Known Limitations: This element as it is currently built uses an api key for each call since this is sent in every call and
+not in the creation of an instance you can can currently authenticate with an invalid api key (but then you can't make any successful api calls)
+
+One way you can fix this is to make an on provision resource that makes a simple get call and checks that you are getting a 200
+status returned and if not then it will not create the instance. 
