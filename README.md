@@ -6,6 +6,8 @@ Check out a simple [example](https://github.com/CloudElementsOpenLabs/examples/t
 ### Using
 To begin using any of the previously created elements within this repo, clone the repo to your own repo and begin implementing the element to work with your environment.
 
+![alt text](https://github.com/peytonsteiner97/elements/blob/master/Screenshot.png)
+
 ### Contributing
 To contribute we ask that you create a folder that contains the Element JSON as well as a short README file with a description of what you built (endpoint name and resources available so people can see them without importing the Element), a link to the documentation you used when creating the Element, and any known endpoint limitation that might affect how your Element works.
 
