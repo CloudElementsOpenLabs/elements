@@ -1,5 +1,5 @@
 # Elements
-Cloud Elements has created a community of customer made elements that can be viewed, downloaded, and shared. This is an independent catalog of abstract elements created by customers, partners and Cloud Elements developers. Additionally, this community supports our partners leveraging CloudElements technology.
+Cloud Elements has created a community of custom made elements that can be viewed, downloaded, and shared. This is an independent catalog of abstract elements created by customers, partners and Cloud Elements developers. Additionally, this community supports our partners leveraging CloudElements technology.
 
 ### Using
 To begin using any of the previously created elements within this repo, fork this repo to your own github environment and make all changes on your local version of the repo. Then create a pull request from your forked branch to the open source repo.
