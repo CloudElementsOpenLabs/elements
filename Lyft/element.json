@@ -1,0 +1,1091 @@
+{
+    "active": true,
+    "authentication": {
+        "type": "oauth2"
+    },
+    "beta": false,
+    "bulkDownloadEnabled": false,
+    "bulkUploadEnabled": false,
+    "cloneable": true,
+    "configuration": [
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "description": "Lyft OAuth basic header",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.basic.header",
+            "name": "OAuth basic header",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Lyft OAuth Token Refresh URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.token.refresh_url",
+            "name": "OAuth Token Refresh URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Lyft OAuth Refresh Time",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.refresh_time",
+            "name": "OAuth Refresh Time",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_64"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "3600",
+            "description": "Lyft OAuth Refresh Interval (s)",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.refresh_interval",
+            "name": "OAuth Refresh Interval (s)",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "public rides.read offline rides.request",
+            "description": "Lyft OAuth Scope",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.scope",
+            "name": "OAuth Scope",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_64"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://api.lyft.com/oauth/authorize",
+            "description": "Lyft OAuth Authorization URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.authorization.url",
+            "name": "OAuth Authorization URL",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Lyft OAuth API Key",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.api.key",
+            "name": "OAuth API Key",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "auth.cloudelements.io/oauth",
+            "description": "Lyft OAuth Callback URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.callback.url",
+            "name": "OAuth Callback URL",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Lyft OAuth Token Revoke URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.token.revoke_url",
+            "name": "OAuth Token Revoke URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Lyft OAuth Refresh Token",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.refresh_token",
+            "name": "OAuth Refresh Token",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_64"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://api.lyft.com/oauth/token",
+            "description": "Lyft OAuth Token URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.token.url",
+            "name": "OAuth Token URL",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Lyft OAuth Access Token",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.token",
+            "name": "OAuth Access Token",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "description": "Lyft Max Page Size (or limit)",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.max",
+            "name": "Max Page Size (or limit)",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://api.lyft.com/v1",
+            "description": "Lyft Base URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "base.url",
+            "name": "Base URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "offset",
+            "description": "Lyft Pagination Type",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.type",
+            "name": "Pagination Type",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Lyft OAuth API Secret",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.api.secret",
+            "name": "OAuth API Secret",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Lyft Event Notification Signature Key",
+            "displayOrder": 11,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "event.notification.signature.key",
+            "name": "Event Notification Signature Key",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "displayOrder": 98,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "default.select.fields.map",
+            "name": "Default select fields",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTAREA"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "description": "Used to enable/disable filtering of null values from the responses",
+            "displayOrder": 99,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "filter.response.nulls",
+            "name": "Filter null values from the response",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "webhooks",
+            "description": "Event Type",
+            "displayOrder": 100,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "event.vendor.type",
+            "name": "Event Type",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "false",
+            "description": "Enable/Disable Event Notification",
+            "displayOrder": 101,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.enabled",
+            "name": "Event Notifications Enabled",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "false",
+            "description": "Event Notification Callback URL",
+            "displayOrder": 102,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.callback.url",
+            "name": "Event Notification Callback URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Event Notification Instance Finder",
+            "displayOrder": 103,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "event.notification.instance.finder",
+            "name": "Event Notification Instance Finder",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Event Notification Subscription ID",
+            "displayOrder": 104,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "event.notification.subscription.id",
+            "name": "Event Notification Subscription ID",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        }
+    ],
+    "deleted": false,
+    "description": "Lyft",
+    "extendable": true,
+    "extended": false,
+    "hookName": "Lyft",
+    "hooks": [
+        {
+            "isLegacy": false,
+            "mimeType": "application/javascript",
+            "type": "event"
+        }
+    ],
+    "hub": "general",
+    "image": "https://images.cloudelements.io/Screen Shot 2019-02-23 at 1.40.30 PM201902232040.png",
+    "key": "lyft",
+    "logo": "lyft",
+    "models": [],
+    "name": "Lyft",
+    "objects": [],
+    "parameters": [
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "vendorType": "header"
+        },
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "vendorType": "header"
+        }
+    ],
+    "private": true,
+    "protocolType": "http",
+    "resources": [
+        {
+            "description": "Get Rides",
+            "hooks": [],
+            "id": 352653,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "rides",
+                "swagger": {
+                    "charges": {
+                        "id": "charges",
+                        "properties": {
+                            "amount": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "currency": {
+                                "type": "string"
+                            },
+                            "payment_method": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "destination": {
+                        "id": "destination",
+                        "properties": {
+                            "address": {
+                                "type": "string"
+                            },
+                            "lat": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "lng": {
+                                "format": "double",
+                                "type": "number"
+                            }
+                        }
+                    },
+                    "driver": {
+                        "id": "driver",
+                        "properties": {
+                            "first_name": {
+                                "type": "string"
+                            },
+                            "image_url": {
+                                "type": "string"
+                            },
+                            "phone_number": {
+                                "type": "string"
+                            },
+                            "rating": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "dropoff": {
+                        "id": "dropoff",
+                        "properties": {
+                            "address": {
+                                "type": "string"
+                            },
+                            "lat": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "lng": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "time": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "line_items": {
+                        "id": "line_items",
+                        "properties": {
+                            "amount": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "currency": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "origin": {
+                        "id": "origin",
+                        "properties": {
+                            "address": {
+                                "type": "string"
+                            },
+                            "lat": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "lng": {
+                                "format": "double",
+                                "type": "number"
+                            }
+                        }
+                    },
+                    "passenger": {
+                        "id": "passenger",
+                        "properties": {
+                            "first_name": {
+                                "type": "string"
+                            },
+                            "image_url": {
+                                "type": "string"
+                            },
+                            "last_name": {
+                                "type": "string"
+                            },
+                            "rating": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pickup": {
+                        "id": "pickup",
+                        "properties": {
+                            "address": {
+                                "type": "string"
+                            },
+                            "lat": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "lng": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "time": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "price": {
+                        "id": "price",
+                        "properties": {
+                            "amount": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "currency": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "ride_history": {
+                        "id": "ride_history",
+                        "properties": {
+                            "charges": {
+                                "items": {
+                                    "$ref": "charges"
+                                },
+                                "type": "array"
+                            },
+                            "destination": {
+                                "type": "destination"
+                            },
+                            "driver": {
+                                "type": "driver"
+                            },
+                            "dropoff": {
+                                "type": "dropoff"
+                            },
+                            "line_items": {
+                                "items": {
+                                    "$ref": "line_items"
+                                },
+                                "type": "array"
+                            },
+                            "origin": {
+                                "type": "origin"
+                            },
+                            "passenger": {
+                                "type": "passenger"
+                            },
+                            "pickup": {
+                                "type": "pickup"
+                            },
+                            "price": {
+                                "type": "price"
+                            },
+                            "requested_at": {
+                                "type": "string"
+                            },
+                            "ride_id": {
+                                "type": "string"
+                            },
+                            "ride_type": {
+                                "type": "string"
+                            },
+                            "status": {
+                                "type": "string"
+                            },
+                            "vehicle": {
+                                "type": "vehicle"
+                            }
+                        }
+                    },
+                    "rides": {
+                        "id": "rides",
+                        "properties": {
+                            "ride_history": {
+                                "items": {
+                                    "$ref": "ride_history"
+                                },
+                                "type": "array"
+                            }
+                        }
+                    },
+                    "vehicle": {
+                        "id": "vehicle",
+                        "properties": {
+                            "color": {
+                                "type": "string"
+                            },
+                            "image_url": {
+                                "type": "string"
+                            },
+                            "license_plate": {
+                                "type": "string"
+                            },
+                            "license_plate_state": {
+                                "type": "string"
+                            },
+                            "make": {
+                                "type": "string"
+                            },
+                            "model": {
+                                "type": "string"
+                            },
+                            "year": {
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "Start Time",
+                    "required": true,
+                    "sampleData": "2016-09-11T22:48:40Z",
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "start_time",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "End Time",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "end_time",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "integer",
+                    "description": ".",
+                    "name": "Limit",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "integer",
+                    "vendorName": "limit",
+                    "vendorType": "query"
+                }
+            ],
+            "path": "/hubs/general/rides",
+            "response": {
+                "contentType": "application/json",
+                "sampleData": "{\"ride_history\":[{\"ride_id\":\"907683042817845412\",\"origin\":{\"address\":\"3970 24th St\",\"lng\":-122.4312,\"lat\":37.75154},\"dropoff\":{\"address\":\"3270 24th St, San Francisco, CA 94110\",\"lng\":-122.41787,\"time\":\"2016-09-12T00:43:10+00:00\",\"lat\":37.75228},\"destination\":{\"address\":\"24th St\",\"lng\":-122.41354,\"lat\":37.75254},\"pickup\":{\"address\":\"3167 24th St, San Francisco, CA 94114\",\"lng\":-122.43126,\"time\":\"2016-09-12T00:37:10+00:00\",\"lat\":37.75146},\"line_items\":[{\"amount\":701,\"currency\":\"USD\",\"type\":\"Line Ride\"},{\"amount\":-226,\"currency\":\"USD\",\"type\":\"Lyft Line Discount\"}],\"ride_type\":\"lyft_line\",\"vehicle\":{\"license_plate_state\":\"CA\",\"license_plate\":\"6UWY306\",\"color\":\"Silver\",\"year\":2012,\"image_url\":\"https://s3.amazonaws.com/lyftapi/production/photos/stockcarphotos/whitebg/640x400/2012/hyundai/elantra/silver/a00ac3600c98386deb16f4a6adf73714.png\",\"model\":\"Elantra\",\"make\":\"Hyundai\"},\"charges\":[{\"amount\":475,\"currency\":\"USD\",\"payment_method\":\"Card\"}],\"driver\":{\"image_url\":\"https://lyftapi.s3.amazonaws.com/production/photos/320x200/754453795727616002_driver.jpg\",\"rating\":\"4.9\",\"phone_number\":\"+18317503917\",\"first_name\":\"David\"},\"passenger\":{\"image_url\":\"https://lyft-app-img.s3.amazonaws.com/production/profilePicture/840550540775202008/d85ff0ca-1a59-56b8-8c0f-bc67d00aa63a/max1200.jpg\",\"rating\":\"4.9\",\"last_name\":\"Laforte\",\"first_name\":\"Danielle\"},\"price\":{\"amount\":475,\"description\":\"Total ride price\",\"currency\":\"USD\"},\"status\":\"droppedOff\",\"requested_at\":\"2016-09-12T00:33:47+00:00\"},{\"ride_id\":\"907936924075415104\",\"origin\":{\"address\":\"3966 24th St\",\"lng\":-122.43109,\"lat\":37.75158},\"dropoff\":{\"address\":\"156 2nd St, San Francisco, CA 94105\",\"lng\":-122.39892,\"time\":\"2016-09-12T17:26:41+00:00\",\"lat\":37.78729},\"destination\":{\"address\":\"156 2nd St\",\"lng\":-122.39912,\"lat\":37.7871},\"pickup\":{\"address\":\"3966 24th St, San Francisco, CA 94114\",\"lng\":-122.43115,\"time\":\"2016-09-12T17:01:54+00:00\",\"lat\":37.7515},\"line_items\":[{\"amount\":1347,\"currency\":\"USD\",\"type\":\"Line Ride\"},{\"amount\":-872,\"currency\":\"USD\",\"type\":\"Lyft Line Discount\"}],\"ride_type\":\"lyft_line\",\"vehicle\":{\"license_plate_state\":\"CA\",\"license_plate\":\"7LRN385\",\"color\":\"Black\",\"year\":2015,\"image_url\":\"https://s3.amazonaws.com/lyftapi/production/photos/stockcarphotos/whitebg/640x400/2015/toyota/prius/black/b51a8a7b98f8e396cc0860a51523da5a.png\",\"model\":\"Prius\",\"make\":\"Toyota\"},\"charges\":[{\"amount\":475,\"currency\":\"USD\",\"payment_method\":\"Card\"}],\"driver\":{\"image_url\":\"https://lyftapi.s3.amazonaws.com/production/photos/320x200/592874193496205428_driver.jpg\",\"rating\":\"4.6\",\"phone_number\":\"+18315080554\",\"first_name\":\"Kenny\"},\"passenger\":{\"image_url\":\"https://lyft-app-img.s3.amazonaws.com/production/profilePicture/840550540775202008/d85ff0ca-1a59-56b8-8c0f-bc67d00aa63a/max1200.jpg\",\"rating\":\"4.9\",\"last_name\":\"Laforte\",\"first_name\":\"Danielle\"},\"price\":{\"amount\":475,\"description\":\"Total ride price\",\"currency\":\"USD\"},\"status\":\"droppedOff\",\"requested_at\":\"2016-09-12T16:58:58+00:00\"},{\"ride_id\":\"908303535775824184\",\"origin\":{\"address\":\"3970 24th St\",\"lng\":-122.4312,\"lat\":37.75154},\"dropoff\":{\"lng\":-122.39906,\"time\":\"2016-09-13T17:19:57+00:00\",\"lat\":37.78734},\"destination\":{\"address\":\"156 2nd St\",\"lng\":-122.39912,\"lat\":37.7871},\"pickup\":{\"lng\":-122.43106,\"time\":\"2016-09-13T16:47:48+00:00\",\"lat\":37.75143},\"line_items\":[{\"amount\":1349,\"currency\":\"USD\",\"type\":\"Line Ride\"},{\"amount\":587,\"currency\":\"USD\",\"type\":\"Prime Time + 50%\"},{\"amount\":-1452,\"currency\":\"USD\",\"type\":\"Lyft Line Discount\"}],\"ride_type\":\"lyft_line\",\"vehicle\":{\"license_plate_state\":\"CA\",\"license_plate\":\"6WQW703\",\"color\":\"Gold\",\"year\":2012,\"image_url\":\"https://s3.amazonaws.com/lyftapi/production/photos/stockcarphotos/whitebg/640x400/2012/ford/escape/gold/47af5c31b3a5d98c37116911fe653f44.png\",\"model\":\"Escape\",\"make\":\"Ford\"},\"driver\":{\"image_url\":\"https://lyftapi.s3.amazonaws.com/production/photos/320x200/698848952071901186_driver.jpg\",\"rating\":\"4.9\",\"phone_number\":\"+18316619958\",\"first_name\":\"Scott\"},\"passenger\":{\"image_url\":\"https://lyft-app-img.s3.amazonaws.com/production/profilePicture/840550540775202008/d85ff0ca-1a59-56b8-8c0f-bc67d00aa63a/max1200.jpg\",\"rating\":\"4.9\",\"last_name\":\"Laforte\",\"first_name\":\"Danielle\"},\"price\":{\"amount\":484,\"description\":\"Total ride price\",\"currency\":\"USD\"},\"primetime_percentage\":\"50%\",\"status\":\"droppedOff\",\"requested_at\":\"2016-09-13T16:41:36+00:00\"}]}"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/rides"
+        },
+        {
+            "description": "Create Rides",
+            "hooks": [],
+            "id": 352654,
+            "kind": "eb",
+            "method": "POST",
+            "model": {
+                "name": "rides",
+                "requestName": "object",
+                "requestSwagger": {
+                    "object_": {
+                        "id": "object_",
+                        "properties": {
+                            "origin": {
+                                "type": "origin"
+                            },
+                            "ride_type": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "origin": {
+                        "id": "origin",
+                        "properties": {
+                            "lat": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "lng": {
+                                "format": "double",
+                                "type": "number"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "origin": {
+                        "id": "origin",
+                        "properties": {
+                            "lat": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "lng": {
+                                "format": "double",
+                                "type": "number"
+                            }
+                        }
+                    },
+                    "passenger": {
+                        "id": "passenger",
+                        "properties": {
+                            "first_name": {
+                                "type": "string"
+                            },
+                            "image_url": {
+                                "type": "string"
+                            },
+                            "last_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "rides": {
+                        "id": "rides",
+                        "properties": {
+                            "origin": {
+                                "type": "origin"
+                            },
+                            "passenger": {
+                                "type": "passenger"
+                            },
+                            "ride_id": {
+                                "type": "string"
+                            },
+                            "ride_type": {
+                                "type": "string"
+                            },
+                            "status": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "object",
+                    "description": "Ex: {\"ride_type\" : \"lyft_line\", \"origin\" : {\"lat\" : 37.75186, \"lng\" : -122.43075 } , “destination” : {\"lat\" : 37.7871, \"lng\" : -122.39912 } }",
+                    "name": "body",
+                    "required": false,
+                    "sampleData": "{\"origin\":{\"lng\":-118.8893667,\"lat\":34.305658},\"ride_type\":\"lyft\"}",
+                    "source": "request",
+                    "type": "body",
+                    "vendorDataType": "object",
+                    "vendorName": "body",
+                    "vendorType": "body"
+                }
+            ],
+            "path": "/hubs/general/rides",
+            "response": {
+                "contentType": "application/json",
+                "sampleData": "{\"ride_id\":\"13456796109190015586\",\"passenger\":{\"image_url\":\"https://public-api.lyft.com/static/images/user.png\",\"last_name\":\"Doe\",\"first_name\":\"Jane\"},\"origin\":{\"lng\":-118.8893667,\"lat\":34.305658},\"status\":\"pending\",\"ride_type\":\"lyft\"}"
+            },
+            "type": "api",
+            "vendorMethod": "POST",
+            "vendorPath": "/rides"
+        },
+        {
+            "description": "Rides ",
+            "hooks": [],
+            "id": 352655,
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "id",
+                    "required": false,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/rides/{id}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/rides/{id}"
+        },
+        {
+            "description": "Create Rides",
+            "hooks": [],
+            "id": 352656,
+            "kind": "eb",
+            "method": "POST",
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The whatever ID",
+                    "name": "id",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/rides/{id}/cancel",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "POST",
+            "vendorPath": "/rides/{id}/cancel"
+        },
+        {
+            "description": "Create Rides",
+            "hooks": [],
+            "id": 352657,
+            "kind": "eb",
+            "method": "POST",
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "object",
+                    "description": "Ex: {\"rating\" : 5, \"tip\" : {\"amount\": 100, \"currency\": \"USD\"}, \"feedback\" : \"great ride!\"}",
+                    "name": "body",
+                    "required": false,
+                    "source": "request",
+                    "type": "body",
+                    "vendorDataType": "object",
+                    "vendorName": "body",
+                    "vendorType": "body"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The ID of the ride.",
+                    "name": "id",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/rides/{id}/rating",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "PUT",
+            "vendorPath": "/rides/{id}/rating"
+        },
+        {
+            "description": "Rides ",
+            "hooks": [],
+            "id": 352658,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "ridesReceipt",
+                "swagger": {
+                    "charges": {
+                        "id": "charges",
+                        "properties": {
+                            "amount": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "currency": {
+                                "type": "string"
+                            },
+                            "payment_method": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "line_items": {
+                        "id": "line_items",
+                        "properties": {
+                            "amount": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "currency": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "price": {
+                        "id": "price",
+                        "properties": {
+                            "amount": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "currency": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "ridesReceipt": {
+                        "id": "ridesReceipt",
+                        "properties": {
+                            "charges": {
+                                "items": {
+                                    "$ref": "charges"
+                                },
+                                "type": "array"
+                            },
+                            "line_items": {
+                                "items": {
+                                    "$ref": "line_items"
+                                },
+                                "type": "array"
+                            },
+                            "price": {
+                                "type": "price"
+                            },
+                            "requested_at": {
+                                "type": "string"
+                            },
+                            "ride_id": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "id",
+                    "required": false,
+                    "sampleData": "908382171721454490",
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/rides/{id}/receipt",
+            "response": {
+                "contentType": "application/json",
+                "sampleData": "{\"ride_id\":\"908382171721454490\",\"charges\":[{\"amount\":5962,\"currency\":\"USD\",\"payment_method\":\"Card\"}],\"price\":{\"amount\":5962,\"description\":\"Total ride price\",\"currency\":\"USD\"},\"line_items\":[{\"amount\":5252,\"currency\":\"USD\",\"type\":\"Ride\"},{\"amount\":210,\"currency\":\"USD\",\"type\":\"Trust & Service Fee\"},{\"amount\":215,\"currency\":\"USD\",\"type\":\"DEN Airport - Airport Fee\"},{\"amount\":285,\"currency\":\"USD\",\"type\":\"Toll: E-470 (Plaza D) South\"}],\"requested_at\":\"2016-09-13T21:46:45+00:00\"}"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/rides/{id}/receipt"
+        },
+        {
+            "description": "Create Rides",
+            "hooks": [],
+            "id": 352659,
+            "kind": "eb",
+            "method": "PUT",
+            "model": {
+                "name": "sandboxRides",
+                "requestName": "object",
+                "requestSwagger": {
+                    "object_": {
+                        "id": "object_",
+                        "properties": {
+                            "status": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "sandboxRides": {
+                        "id": "sandboxRides",
+                        "properties": {
+                            "ride_id": {
+                                "type": "string"
+                            },
+                            "status": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The whatever ID",
+                    "name": "id",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "object",
+                    "description": "The whatever object body",
+                    "name": "body",
+                    "required": false,
+                    "source": "request",
+                    "type": "body",
+                    "vendorDataType": "object",
+                    "vendorName": "body",
+                    "vendorType": "body"
+                }
+            ],
+            "path": "/hubs/general/sandbox/rides/{id}",
+            "response": {
+                "contentType": "application/json",
+                "sampleData": "{\"ride_id\":\"11726840803385238106\",\"status\":\"accepted\"}"
+            },
+            "type": "api",
+            "vendorMethod": "PUT",
+            "vendorPath": "/sandbox/rides/{id}"
+        }
+    ],
+    "transformationsEnabled": true,
+    "trialAccount": false,
+    "typeOauth": false,
+    "useModelsForMetadata": true
+}

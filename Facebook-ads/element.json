@@ -1,0 +1,1102 @@
+{
+    "active": true,
+    "authentication": {
+        "type": "oauth2"
+    },
+    "beta": false,
+    "bulkDownloadEnabled": false,
+    "bulkUploadEnabled": false,
+    "cloneable": true,
+    "configuration": [
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Facebook Ads OAuth Token Revoke URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.token.revoke_url",
+            "name": "OAuth Token Revoke URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "The OAuth API key used to make API requests to Facebook Lead Ads.",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.api.key",
+            "name": "OAuth API Key",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Facebook Lead Ads Beta OAuth Refresh Time",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.refresh_time",
+            "name": "OAuth Refresh Time",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_64"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Account Id",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "account.id",
+            "name": "Account Id",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Facebook Ads OAuth Token Refresh URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.token.refresh_url",
+            "name": "OAuth Token Refresh URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://graph.facebook.com/v2.8/oauth/access_token",
+            "description": "Facebook Lead Ads Token URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.token.url",
+            "name": "OAuth Token URL",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://graph.facebook.com/v2.8",
+            "description": "Facebook Lead Ads Base URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "base.url",
+            "name": "Base URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://www.facebook.com/v2.8/dialog/oauth",
+            "description": "Facebook Lead Ads Authorization URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.authorization.url",
+            "name": "OAuth Authorization URL",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Facebook Lead Ads Beta OAuth Refresh Token",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.refresh_token",
+            "name": "OAuth Refresh Token",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_64"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "manage_pages,ads_management,pages_messaging",
+            "description": "Facebook Lead Ads OAuth Scope",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.scope",
+            "name": "OAuth Scope",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "200",
+            "description": "Facebook Lead Ads Beta Max Page Size (or limit)",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.max",
+            "name": "Max Page Size (or limit)",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "offset",
+            "description": "Facebook Lead Ads Pagination Type",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.type",
+            "name": "Pagination Type",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Facebook Lead Ads Pages",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "facebookleadads.pages",
+            "name": "Facebook Lead Ads Pages",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "auth.cloudelements.io/oauth",
+            "description": "Facebook Lead Ads Callback URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.callback.url",
+            "name": "OAuth Callback URL",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "description": "Facebook Lead Ads Beta OAuth basic header",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.basic.header",
+            "name": "OAuth basic header",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Facebook Lead Ads Beta OAuth Access Token",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.token",
+            "name": "OAuth Access Token",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "The OAuth API secret used to make API requests to Facebook Lead Ads.",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.api.secret",
+            "name": "OAuth API Secret",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "app token",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.app.token",
+            "name": "app token",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_64"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "3600",
+            "description": "Facebook Lead Ads Beta OAuth Refresh Interval (s)",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.refresh_interval",
+            "name": "OAuth Refresh Interval (s)",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "description": "Used to enable/disable filtering of null values from the responses.",
+            "displayOrder": 51,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "filter.response.nulls",
+            "name": "Filter null values from the response",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "displayOrder": 98,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "default.select.fields.map",
+            "name": "Default select fields",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTAREA"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "webhooks",
+            "description": "Facebook Lead Ads Vendor Event Type",
+            "displayOrder": 100,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "event.vendor.type",
+            "name": "Vendor Event Type",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "false",
+            "description": "Facebook Lead Ads Enabled/Disable Event Notifications",
+            "displayOrder": 101,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.enabled",
+            "name": "Enabled/Disable Event Notifications",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Facebook Lead Ads Beta Event Notification Callback URL",
+            "displayOrder": 102,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.callback.url",
+            "name": "Event Notification Callback URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Event Notification Instance Finder",
+            "displayOrder": 103,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "event.notification.instance.finder",
+            "name": "Event Notification Instance Finder",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Event Notification Subscription ID",
+            "displayOrder": 104,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "event.notification.subscription.id",
+            "name": "Event Notification Subscription ID",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "A key used to generate a validation hash header of the event/bulk notification webhook callback payload",
+            "displayOrder": 306,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.signature.key",
+            "name": "Callback Notification Signature Key",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        }
+    ],
+    "deleted": false,
+    "description": "Facebook Ads API.",
+    "extendable": true,
+    "extended": false,
+    "hookName": "FacebookLeadAds",
+    "hooks": [
+        {
+            "isLegacy": false,
+            "mimeType": "application/javascript",
+            "type": "event"
+        }
+    ],
+    "hub": "marketing",
+    "image": "https://images.cloudelements.io/Screen Shot 2019-02-23 at 1.57.00 PM201902232057.png",
+    "key": "facebookads",
+    "logo": "facebookads",
+    "models": [],
+    "name": "Facebook Ads",
+    "objects": [],
+    "parameters": [
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "vendorType": "header"
+        },
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "vendorType": "header"
+        }
+    ],
+    "private": true,
+    "protocolType": "http",
+    "resources": [
+        {
+            "description": "List all pages",
+            "hooks": [],
+            "id": 352694,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "customaudiences",
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "paginationType": "VENDOR_SUPPORTED",
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "${configuration.account.id}",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "accountId",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The page number. When this parameter is omitted, 1 is implied.",
+                    "name": "page",
+                    "required": false,
+                    "sampleData": "1",
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "offset",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The number of results to fetch in a given page. When this parameter is omitted, 200 results are returned.",
+                    "name": "pageSize",
+                    "required": false,
+                    "sampleData": "200",
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "limit",
+                    "vendorType": "query"
+                }
+            ],
+            "path": "/hubs/marketing/customaudiences",
+            "response": {
+                "contentType": "application/json",
+                "sampleData": "[null]"
+            },
+            "rootKey": "|data",
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "https://graph.facebook.com/v2.8/act_{accountId}/customaudiences"
+        },
+        {
+            "description": "on provision leadgenwebhook",
+            "hooks": [],
+            "id": 352695,
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "paginationType": "VENDOR_SUPPORTED",
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "Facebook Lead Ads Pages",
+                    "name": "facebookleadads.pages",
+                    "required": false,
+                    "source": "response",
+                    "type": "configuration",
+                    "vendorDataType": "string",
+                    "vendorName": "pages",
+                    "vendorType": "body"
+                }
+            ],
+            "path": "/hubs/marketing/leadgenwebhook",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "onProvision",
+            "vendorMethod": "GET",
+            "vendorPath": "/me/accounts"
+        },
+        {
+            "description": "on delete leadgenwebhook",
+            "hooks": [],
+            "id": 352696,
+            "kind": "eb",
+            "method": "DELETE",
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "paginationType": "VENDOR_SUPPORTED",
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "page",
+                    "name": "page",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "object",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": "API Secret ",
+                    "name": "oauth.api.secret",
+                    "required": false,
+                    "source": "request",
+                    "type": "configuration",
+                    "vendorDataType": "string",
+                    "vendorName": "oauth.api.secret",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "API Key",
+                    "name": "oauth.api.key",
+                    "required": false,
+                    "source": "request",
+                    "type": "configuration",
+                    "vendorDataType": "string",
+                    "vendorName": "oauth.api.key",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/marketing/leadgenwebhookdelete",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "onDelete",
+            "vendorMethod": "DELETE",
+            "vendorPath": "/"
+        },
+        {
+            "description": "Retrieve a lead",
+            "hooks": [],
+            "id": 352697,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "leads",
+                "swagger": {
+                    "leads": {
+                        "id": "leads",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "paginationType": "VENDOR_SUPPORTED",
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "Id of the lead",
+                    "name": "leadId",
+                    "required": false,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "leadId",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/marketing/leads/{leadId}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "rootKey": "|data",
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/{leadId}"
+        },
+        {
+            "description": "List all pages",
+            "hooks": [],
+            "id": 352698,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "pagesList",
+                "swagger": {
+                    "pagesList": {
+                        "id": "pagesList",
+                        "items": {
+                            "$ref": "pagesListObject"
+                        },
+                        "type": "array"
+                    },
+                    "pagesListObject": {
+                        "id": "pagesListObject",
+                        "properties": {
+                            "access_token": {
+                                "type": "string"
+                            },
+                            "category": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "perms": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "paginationType": "VENDOR_SUPPORTED",
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The number of results to fetch in a given page. When this parameter is omitted, 200 results are returned.",
+                    "name": "pageSize",
+                    "required": false,
+                    "sampleData": "200",
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "limit",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The page number. When this parameter is omitted, 1 is implied.",
+                    "name": "page",
+                    "required": false,
+                    "sampleData": "1",
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "offset",
+                    "vendorType": "query"
+                }
+            ],
+            "path": "/hubs/marketing/pages",
+            "response": {
+                "contentType": "application/json"
+            },
+            "rootKey": "|data",
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/me/accounts"
+        },
+        {
+            "description": "Retrieve a page",
+            "hooks": [],
+            "id": 352699,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "pages",
+                "swagger": {
+                    "pages": {
+                        "id": "pages",
+                        "properties": {
+                            "access_token": {
+                                "type": "string"
+                            },
+                            "category": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "paginationType": "VENDOR_SUPPORTED",
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "Set fields as access_token, name and category",
+                    "name": "access_token,name,category",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "fields",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": "Id of the page ",
+                    "name": "pageId",
+                    "required": false,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "pageId",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/marketing/pages/{pageId}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "rootKey": "|data",
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/{pageId}"
+        },
+        {
+            "description": "Retrieve subscribed apps for a page, to verify that your app was successfully subscribed",
+            "hooks": [],
+            "id": 352700,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "pagesSubscribed_appsList",
+                "swagger": {
+                    "pagesSubscribed_appsList": {
+                        "id": "pagesSubscribed_appsList",
+                        "items": {
+                            "$ref": "pagesSubscribed_appsListObject"
+                        },
+                        "type": "array"
+                    },
+                    "pagesSubscribed_appsListObject": {
+                        "id": "pagesSubscribed_appsListObject",
+                        "properties": {
+                            "category": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "link": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "paginationType": "VENDOR_SUPPORTED",
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "Page access token.",
+                    "name": "page_token",
+                    "required": true,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "access_token",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": "Page ID to subscribe.",
+                    "name": "pageId",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "pageId",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/marketing/pages/{pageId}/subscribed-apps",
+            "response": {
+                "contentType": "application/json"
+            },
+            "rootKey": "|data",
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/{pageId}/subscribed_apps"
+        },
+        {
+            "description": "Create a subscribed app for a page, to subscribe the page to the app",
+            "hooks": [],
+            "id": 352701,
+            "kind": "eb",
+            "method": "POST",
+            "model": {
+                "name": "pagesSubscribed_apps",
+                "requestName": "pagesSubscribed_apps",
+                "requestSwagger": {
+                    "pagesSubscribed_apps": {
+                        "id": "pagesSubscribed_apps",
+                        "properties": {}
+                    }
+                },
+                "swagger": {
+                    "pagesSubscribed_apps": {
+                        "id": "pagesSubscribed_apps",
+                        "properties": {
+                            "success": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "paginationType": "VENDOR_SUPPORTED",
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "Page access token.",
+                    "name": "page_token",
+                    "required": true,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "access_token",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": "Page ID to subscribe.",
+                    "name": "pageId",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "pageId",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/marketing/pages/{pageId}/subscribed-apps",
+            "response": {
+                "contentType": "application/json"
+            },
+            "rootKey": "|data",
+            "type": "api",
+            "vendorMethod": "POST",
+            "vendorPath": "/{pageId}/subscribed_apps"
+        },
+        {
+            "description": "On provision webhook to delete configuration.",
+            "hooks": [],
+            "id": 352702,
+            "kind": "eb",
+            "method": "DELETE",
+            "model": {
+                "name": "webhooks",
+                "swagger": {
+                    "webhooks": {
+                        "id": "webhooks",
+                        "properties": {
+                            "success": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "paginationType": "VENDOR_SUPPORTED",
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "App ID.",
+                    "name": "oauth.api.key",
+                    "required": false,
+                    "source": "request",
+                    "type": "configuration",
+                    "vendorDataType": "string",
+                    "vendorName": "appId",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "Set fields to leadgen.",
+                    "name": "leadgen",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "fields",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": "Set page as an object.",
+                    "name": "page",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "object",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": "APP access token.",
+                    "name": "${configuration.oauth.api.key}|${configuration.oauth.api.secret}",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "access_token",
+                    "vendorType": "query"
+                }
+            ],
+            "path": "/hubs/marketing/webhooks",
+            "response": {
+                "contentType": "application/json"
+            },
+            "rootKey": "|data",
+            "type": "onDeleteWebhook",
+            "vendorMethod": "DELETE",
+            "vendorPath": "/{appId}/subscriptions"
+        },
+        {
+            "description": "On provision webhook to get configure the app.",
+            "hooks": [],
+            "id": 352703,
+            "kind": "eb",
+            "method": "POST",
+            "model": {
+                "name": "webhooks",
+                "requestName": "webhooks",
+                "requestSwagger": {
+                    "webhooks": {
+                        "id": "webhooks",
+                        "properties": {}
+                    }
+                },
+                "swagger": {
+                    "webhooks": {
+                        "id": "webhooks",
+                        "properties": {
+                            "success": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "paginationType": "VENDOR_SUPPORTED",
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "Callback url.",
+                    "name": "{webhookCallbackUrl}",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "callback_url",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": "Set fields to leadgen.",
+                    "name": "leadgen",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "fields",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": "Set verify token to any string.",
+                    "name": "xxxxx",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "verify_token",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": "Set page as an object.",
+                    "name": "page",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "object",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": "APP access token.",
+                    "name": "${configuration.oauth.api.key}|${configuration.oauth.api.secret}",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "access_token",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": "App ID.",
+                    "name": "oauth.api.key",
+                    "required": false,
+                    "source": "request",
+                    "type": "configuration",
+                    "vendorDataType": "string",
+                    "vendorName": "appId",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/marketing/webhooks",
+            "response": {
+                "contentType": "application/json"
+            },
+            "rootKey": "|data",
+            "type": "onProvisionWebhook",
+            "vendorMethod": "POST",
+            "vendorPath": "/{appId}/subscriptions"
+        }
+    ],
+    "transformationsEnabled": true,
+    "trialAccount": false,
+    "typeOauth": false,
+    "useModelsForMetadata": true
+}
