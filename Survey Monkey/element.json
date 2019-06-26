@@ -1,0 +1,662 @@
+{
+  "configuration": [
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Scope",
+      "active": true,
+      "description": "Survey Monkey OAuth Scope",
+      "type": "TEXTFIELD_64",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.scope",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "100",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Survey Monkey Max Page Size (or limit)",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Max Page Size (or limit)",
+      "groupControl": false,
+      "key": "pagination.max"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "true",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Survey Monkey OAuth basic header",
+      "type": "BOOLEAN",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "OAuth basic header",
+      "groupControl": false,
+      "key": "oauth.basic.header"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "https://api.surveymonkey.com/v3",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Survey Monkey Base Url",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "Base Url",
+      "groupControl": false,
+      "key": "base.url"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Token Revoke URL",
+      "active": true,
+      "description": "Survey Monkey OAuth Token Revoke URL",
+      "type": "TEXTFIELD_1000",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.token.revoke_url",
+      "required": false
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Token Refresh URL",
+      "active": true,
+      "description": "Survey Monkey OAuth Token Refresh URL",
+      "type": "TEXTFIELD_1000",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.token.refresh_url",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "auth.cloudelements.io/oauth",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Survey Monkey OAuth Callback URL",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "OAuth Callback URL",
+      "groupControl": false,
+      "key": "oauth.callback.url"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth API Secret",
+      "active": true,
+      "description": "Survey Monkey OAuth API Secret",
+      "type": "PASSWORD",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.api.secret",
+      "required": true
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth API Key",
+      "active": true,
+      "description": "Survey Monkey OAuth API Key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.api.key",
+      "required": true
+    },
+    {
+      "internal": true,
+      "companyConfig": false,
+      "defaultValue": "https://api.surveymonkey.com/oauth/authorize",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Survey Monkey OAuth Authorization URL",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "OAuth Authorization URL",
+      "groupControl": false,
+      "key": "oauth.authorization.url"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Refresh Time",
+      "active": true,
+      "description": "Survey Monkey OAuth Refresh Time",
+      "type": "TEXTFIELD_64",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.user.refresh_time",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "page",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Survey Monkey Pagination Type",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Pagination Type",
+      "groupControl": false,
+      "key": "pagination.type"
+    },
+    {
+      "internal": true,
+      "companyConfig": false,
+      "defaultValue": "https://api.surveymonkey.com/oauth/token",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Survey Monkey OAuth Token URL",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "OAuth Token URL",
+      "groupControl": false,
+      "key": "oauth.token.url"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Refresh Token",
+      "active": true,
+      "description": "Survey Monkey OAuth Refresh Token",
+      "type": "TEXTFIELD_64",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.user.refresh_token",
+      "required": false
+    },
+    {
+      "internal": true,
+      "companyConfig": false,
+      "defaultValue": "3600",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Survey Monkey OAuth Refresh Interval (s)",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "OAuth Refresh Interval (s)",
+      "groupControl": false,
+      "key": "oauth.user.refresh_interval"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Access Token",
+      "active": true,
+      "description": "Survey Monkey OAuth Access Token",
+      "type": "TEXTFIELD_32",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.user.token",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 11,
+      "name": "Event Notification Signature Key",
+      "active": true,
+      "description": "Survey Monkey Event Notification Signature Key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.signature.key",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 12,
+      "name": "Event Notification Basic User Name",
+      "active": true,
+      "description": "Survey Monkey Event Notification Basic User Name",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.username",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 13,
+      "name": "Event Notification Basic Password",
+      "active": true,
+      "description": "Survey Monkey Event Notification Basic Password",
+      "type": "PASSWORD",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.password",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 98,
+      "name": "Default select fields",
+      "active": true,
+      "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+      "type": "TEXTAREA",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "default.select.fields.map",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "true",
+      "displayOrder": 99,
+      "active": true,
+      "description": "Used to enable/disable filtering of null values from the responses",
+      "type": "BOOLEAN",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": false,
+      "name": "Filter null values from the response",
+      "groupControl": false,
+      "key": "filter.response.nulls"
+    }
+  ],
+  "objects": [
+    {
+      "elementId": 16956,
+      "metadataDiscovery": false,
+      "bulkDownloadEnabled": true,
+      "eventsEnabled": false,
+      "name": "contacts",
+      "nativeBulkUpload": false,
+      "hulkDownloadEnabled": false,
+      "vendorEventTypes": "unknown",
+      "migrated": false,
+      "nativeBulkDownload": false,
+      "primaryKeyName": "id",
+      "hulkUploadEnabled": false
+    }
+  ],
+  "description": "Create Surveys That Get Responses.",
+  "cloneable": false,
+  "extended": false,
+  "bulkDownloadEnabled": false,
+  "useModelsForMetadata": true,
+  "trialAccount": false,
+  "logo": "surveymonkey",
+  "hooks": [],
+  "beta": false,
+  "key": "surveymonkey",
+  "authentication": {
+    "type": "oauth2"
+  },
+  "bulkUploadEnabled": false,
+  "image": "https://images.cloudelements.io/Screen Shot 2019-02-27 at 10.44.00 AM201902271746.png",
+  "models": [],
+  "active": true,
+  "resources": [
+    {
+      "method": "GET",
+      "kind": "eb",
+      "description": "Search for /contacts",
+      "type": "api",
+      "vendorPath": "/contacts",
+      "path": "/hubs/general/contacts",
+      "vendorMethod": "GET",
+      "response": {
+        "contentType": "application/json"
+      },
+      "model": {
+        "transform": false,
+        "name": "contacts",
+        "swagger": {
+          "contacts": {
+            "title": "contacts",
+            "properties": {
+              "custom_fields": {
+                "type": "string"
+              },
+              "last_name": {
+                "x-samplevalue": "Allen",
+                "type": "string"
+              },
+              "href": {
+                "x-samplevalue": "https://api.surveymonkey.com/v3/contacts/2856850975",
+                "type": "string"
+              },
+              "id": {
+                "x-samplevalue": "2856850975",
+                "type": "string"
+              },
+              "first_name": {
+                "x-samplevalue": "Barbara",
+                "type": "string"
+              },
+              "email": {
+                "x-sub-format": "email",
+                "x-samplevalue": "barbaraallen@fake.com",
+                "type": "string"
+              },
+              "status": {
+                "x-samplevalue": "active",
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "hooks": [
+        {
+          "isLegacy": false,
+          "mimeType": "application/javascript",
+          "body": "done({\"continue\":true});",
+          "type": "postRequest"
+        }
+      ],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "query",
+          "converter": "toQueryParameters",
+          "dataType": "string",
+          "name": "where",
+          "description": "The CEQL search expression",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "converter:toQueryParameters",
+          "required": false
+        },
+        {
+          "vendorType": "query",
+          "dataType": "string",
+          "name": "page",
+          "description": "The page number of resources to retrieve",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "page",
+          "required": false
+        },
+        {
+          "vendorType": "query",
+          "dataType": "string",
+          "name": "pageSize",
+          "description": "The number of resources to return in a given page",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "per_page",
+          "required": false
+        }
+      ],
+      "rootKey": "requestrootkey|data"
+    },
+    {
+      "path": "/hubs/general/contacts",
+      "vendorMethod": "POST",
+      "method": "POST",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Create a(n) /contacts",
+      "model": {
+        "requestName": "contacts",
+        "transform": false,
+        "name": "contacts",
+        "requestSwagger": {
+          "contacts": {
+            "title": "contacts",
+            "properties": {
+              "last_name": {
+                "x-samplevalue": "Allen",
+                "type": "string"
+              },
+              "first_name": {
+                "x-samplevalue": "Barbara",
+                "type": "string"
+              },
+              "email": {
+                "x-sub-format": "email",
+                "x-samplevalue": "barbaraallen@fake.com",
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "body",
+          "dataType": "contacts-request",
+          "name": "body",
+          "description": "The object body",
+          "vendorDataType": "contacts",
+          "source": "request",
+          "type": "body",
+          "vendorName": "body",
+          "required": true
+        }
+      ],
+      "vendorPath": "/contacts"
+    },
+    {
+      "path": "/hubs/general/contacts/{id}",
+      "vendorMethod": "DELETE",
+      "method": "DELETE",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Delete a(n) /contacts",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "vendorPath": "/contacts/{id}"
+    },
+    {
+      "path": "/hubs/general/contacts/{id}",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Retrieve a(n) /contacts",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "vendorPath": "/contacts/{id}"
+    },
+    {
+      "path": "/hubs/general/contacts/{id}",
+      "vendorMethod": "PATCH",
+      "method": "PATCH",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Update a(n) /contacts",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "vendorPath": "/contacts/{id}"
+    },
+    {
+      "path": "/hubs/general/contacts/{id}",
+      "vendorMethod": "PUT",
+      "method": "PUT",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Update a(n) /contacts",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "vendorPath": "/contacts/{id}"
+    },
+    {
+      "path": "/hubs/general/surveys",
+      "vendorMethod": "POST",
+      "method": "POST",
+      "nextResource": "POST:/hubs/general/weblink",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Create a(n) /contacts",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "body",
+          "dataType": "surveys",
+          "name": "body",
+          "description": "The object body",
+          "vendorDataType": "surveys",
+          "source": "request",
+          "type": "body",
+          "vendorName": "body",
+          "required": true
+        }
+      ],
+      "vendorPath": "/surveys"
+    },
+    {
+      "path": "/hubs/general/webhooks",
+      "vendorMethod": "POST",
+      "method": "POST",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Create a(n) /webhooks",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "body",
+          "dataType": "webhooks-request",
+          "name": "{\"name\":\"My Webhook\", \"event_type\":\"survey_created\",\"subscription_url\":\"{{webhookCallbackUrl}}\"}",
+          "description": "The webhook body",
+          "vendorDataType": "webhooks-request",
+          "source": "request",
+          "type": "value",
+          "vendorName": "body",
+          "required": true
+        }
+      ],
+      "vendorPath": "/webhooks"
+    },
+    {
+      "path": "/hubs/general/weblink",
+      "vendorMethod": "POST",
+      "method": "POST",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Create a(n) /contacts",
+      "type": "api",
+      "hooks": [
+        {
+          "isLegacy": false,
+          "mimeType": "application/javascript",
+          "body": "let surveyId = request_previous_response.id;\n\n\ndone({\"request_vendor_path\": \"/surveys/\"+surveyId+\"/collectors\", \n      \"continue\":true\n})\n\n",
+          "type": "preRequest"
+        }
+      ],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "body",
+          "dataType": "contacts-request",
+          "name": "{\"type\":\"weblink\"}",
+          "description": "The object body",
+          "vendorDataType": "contacts-request",
+          "source": "request",
+          "type": "value",
+          "vendorName": "body",
+          "required": true
+        }
+      ],
+      "vendorPath": "/surveys/{id}/collectors"
+    }
+  ],
+  "modelType": "basic",
+  "protocolType": "http",
+  "transformationsEnabled": true,
+  "deleted": false,
+  "hub": "general",
+  "typeOauth": false,
+  "name": "Survey Monkey",
+  "extendable": true,
+  "parameters": [
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Accept",
+      "required": false
+    },
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Content-Type",
+      "required": false
+    }
+  ]
+}
