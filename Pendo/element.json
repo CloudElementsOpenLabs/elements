@@ -1,0 +1,324 @@
+{
+  "configuration": [
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "https://app.pendo.io/api/v1",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pendo Base Url",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "Base Url",
+      "groupControl": false,
+      "key": "base.url"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "page",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pendo Pagination Type",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Pagination Type",
+      "groupControl": false,
+      "key": "pagination.type"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "100",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pendo Max Page Size (or limit)",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Max Page Size (or limit)",
+      "groupControl": false,
+      "key": "pagination.max"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "Key",
+      "active": true,
+      "description": "Key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "key",
+      "required": true
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 11,
+      "name": "Event Notification Signature Key",
+      "active": true,
+      "description": "Pendo Event Notification Signature Key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.signature.key",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 12,
+      "name": "Event Notification Basic User Name",
+      "active": true,
+      "description": "Pendo Event Notification Basic User Name",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.username",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 13,
+      "name": "Event Notification Basic Password",
+      "active": true,
+      "description": "Pendo Event Notification Basic Password",
+      "type": "PASSWORD",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.password",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 98,
+      "name": "Default select fields",
+      "active": true,
+      "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+      "type": "TEXTAREA",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "default.select.fields.map",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "true",
+      "displayOrder": 99,
+      "active": true,
+      "description": "Used to enable/disable filtering of null values from the responses",
+      "type": "BOOLEAN",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": false,
+      "name": "Filter null values from the response",
+      "groupControl": false,
+      "key": "filter.response.nulls"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 100,
+      "name": "Time of Getting Token or Performing Authentication",
+      "active": true,
+      "description": "Pendo Time of Getting Token or Performing Authentication",
+      "type": "TEXTFIELD_32",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "authentication.time",
+      "required": false
+    }
+  ],
+  "objects": [
+    {
+      "bulkUploadEnabled": false,
+      "elementId": 17364,
+      "metadataDiscovery": false,
+      "updatedDateName": "",
+      "createdDateName": "",
+      "customFields": false,
+      "eventsEnabled": false,
+      "nativeBulkUpload": false,
+      "vendorEventTypes": "unknown",
+      "createdDateFormat": "",
+      "updatedDateFormat": "",
+      "bulkDownloadEnabled": true,
+      "nullsRequired": false,
+      "name": "bulk",
+      "migrated": false,
+      "nativeBulkDownload": false,
+      "primaryKeyName": "visitorId"
+    },
+    {
+      "bulkUploadEnabled": false,
+      "elementId": 17364,
+      "metadataDiscovery": false,
+      "updatedDateName": "",
+      "createdDateName": "",
+      "customFields": false,
+      "eventsEnabled": false,
+      "nativeBulkUpload": false,
+      "vendorEventTypes": "unknown",
+      "createdDateFormat": "",
+      "updatedDateFormat": "",
+      "bulkDownloadEnabled": true,
+      "nullsRequired": false,
+      "name": "reports",
+      "migrated": false,
+      "nativeBulkDownload": false,
+      "primaryKeyName": ""
+    }
+  ],
+  "description": "Pendo API",
+  "cloneable": true,
+  "extended": false,
+  "bulkDownloadEnabled": false,
+  "useModelsForMetadata": true,
+  "trialAccount": false,
+  "logo": "pendo",
+  "hooks": [],
+  "beta": false,
+  "key": "pendoapi",
+  "authentication": {
+    "type": "custom"
+  },
+  "bulkUploadEnabled": false,
+  "image": "https://images.cloudelements.io/pendo-share-logo201804082331.png",
+  "models": [],
+  "active": true,
+  "resources": [
+    {
+      "path": "/hubs/general/reports/{id}",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Retrieve a(n) /visitors/{id}",
+      "model": {
+        "transform": false,
+        "name": "reports",
+        "swagger": {
+          "reports": {
+            "x-has-customfields": false,
+            "title": "reports",
+            "properties": {
+              "visitor_agent_email": {
+                "x-sub-format": "email",
+                "x-samplevalue": "0e667568-203a-456d-bcb0-71a86b1d3eeb@m3i.net",
+                "type": "string"
+              },
+              "visitor_agent_firstname": {
+                "x-samplevalue": "0e667568-203a-456d-bcb0-71a86b1d3eeb",
+                "type": "string"
+              },
+              "visitor_agent_lastname": {
+                "x-samplevalue": "11c8e6c0-77ab-4d4d-b5c6-3561c11d9817",
+                "type": "string"
+              },
+              "visitorId": {
+                "x-sub-format": "email",
+                "x-samplevalue": "0e667568-203a-456d-bcb0-71a86b1d3eeb@m3i.net",
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "path",
+          "dataType": "string",
+          "name": "id",
+          "description": "id of report (Y-aYxxxxrb_Fxxx3B-0UxxxxxxxRo)",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "path",
+          "vendorName": "id",
+          "required": true
+        }
+      ],
+      "vendorPath": "/report/{id}/results.json"
+    },
+    {
+      "path": "/hubs/general/visitors/{id}",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Retrieve a(n) /visitors/{id}",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "path",
+          "dataType": "string",
+          "name": "id",
+          "description": "Ex: demo@example.com",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "path",
+          "vendorName": "id",
+          "required": true
+        }
+      ],
+      "vendorPath": "/visitor/{id}"
+    }
+  ],
+  "protocolType": "http",
+  "transformationsEnabled": true,
+  "deleted": false,
+  "hub": "general",
+  "typeOauth": false,
+  "name": "Pendo",
+  "extendable": false,
+  "parameters": [
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Accept",
+      "required": false
+    },
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Content-Type",
+      "required": false
+    },
+    {
+      "vendorType": "header",
+      "name": "${configuration.key}",
+      "source": "request",
+      "type": "value",
+      "vendorName": "x-pendo-integration-key",
+      "required": false
+    }
+  ]
+}

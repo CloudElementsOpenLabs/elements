@@ -1,0 +1,300 @@
+{
+  "configuration": [
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "Password",
+      "active": true,
+      "description": "Password",
+      "type": "PASSWORD",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "password",
+      "required": true
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "https://direct.dnb.com/V4.0",
+      "displayOrder": 1,
+      "active": true,
+      "description": "D&B Base Url",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "Base Url",
+      "groupControl": false,
+      "key": "base.url"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "Token",
+      "active": true,
+      "description": "Token",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "token",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "100",
+      "displayOrder": 1,
+      "active": true,
+      "description": "D&B Max Page Size (or limit)",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Max Page Size (or limit)",
+      "groupControl": false,
+      "key": "pagination.max"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "Username",
+      "active": true,
+      "description": "Username",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "username",
+      "required": true
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "page 0",
+      "displayOrder": 1,
+      "active": true,
+      "description": "D&B Pagination Type",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Pagination Type",
+      "groupControl": false,
+      "key": "pagination.type"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 11,
+      "name": "Event Notification Signature Key",
+      "active": true,
+      "description": "D&B Event Notification Signature Key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.signature.key",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 98,
+      "name": "Default select fields",
+      "active": true,
+      "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+      "type": "TEXTAREA",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "default.select.fields.map",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "true",
+      "displayOrder": 99,
+      "active": true,
+      "description": "Used to enable/disable filtering of null values from the responses",
+      "type": "BOOLEAN",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": false,
+      "name": "Filter null values from the response",
+      "groupControl": false,
+      "key": "filter.response.nulls"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 100,
+      "name": "Time of Getting Token or Performing Authentication",
+      "active": true,
+      "description": "D&B Time of Getting Token or Performing Authentication",
+      "type": "TEXTFIELD_32",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "authentication.time",
+      "required": false
+    }
+  ],
+  "objects": [],
+  "description": "D&B",
+  "cloneable": false,
+  "extended": false,
+  "bulkDownloadEnabled": false,
+  "useModelsForMetadata": true,
+  "trialAccount": false,
+  "logo": "db",
+  "hooks": [],
+  "beta": false,
+  "key": "db",
+  "authentication": {
+    "type": "custom"
+  },
+  "bulkUploadEnabled": false,
+  "image": "https://images.cloudelements.io/Screen Shot 2019-05-09 at 11.50.51 AM201905091751.png",
+  "models": [],
+  "active": true,
+  "resources": [
+    {
+      "path": "/hubs/general/contact-profile",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Search for /contact-profile",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "path",
+          "dataType": "string",
+          "name": "principal id number",
+          "description": "2206467361",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "pid",
+          "required": false
+        },
+        {
+          "vendorType": "path",
+          "dataType": "string",
+          "name": "country",
+          "description": "GB",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "country",
+          "required": true
+        },
+        {
+          "vendorType": "path",
+          "dataType": "string",
+          "name": "duns",
+          "description": "220646736",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "duns",
+          "required": false
+        }
+      ],
+      "vendorPath": "/organizations/{duns}/products/CNTCT?CountryISOAlpha2Code={country}&PrincipalIdentificationNumber={pid}"
+    },
+    {
+      "path": "/hubs/general/token",
+      "vendorMethod": "POST",
+      "method": "POST",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Create a(n) /token",
+      "type": "onProvision",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "header",
+          "dataType": "string",
+          "name": "${configuration.username}",
+          "description": ".",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "value",
+          "vendorName": "x-dnb-user",
+          "required": false
+        },
+        {
+          "vendorType": "header",
+          "dataType": "string",
+          "name": "${configuration.password}",
+          "description": ".",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "value",
+          "vendorName": "x-dnb-pwd",
+          "required": false
+        },
+        {
+          "vendorType": "bodyField",
+          "dataType": "string",
+          "name": "token",
+          "description": ".",
+          "vendorDataType": "string",
+          "source": "response",
+          "type": "configuration",
+          "vendorName": "AuthenticationDetail.Token",
+          "required": false
+        }
+      ],
+      "vendorPath": "https://direct.dnb.com/Authentication/V2.0/"
+    }
+  ],
+  "modelType": "basic",
+  "protocolType": "http",
+  "transformationsEnabled": true,
+  "deleted": false,
+  "hub": "general",
+  "typeOauth": false,
+  "name": "D&B",
+  "extendable": true,
+  "parameters": [
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Accept",
+      "required": false
+    },
+    {
+      "vendorType": "header",
+      "name": "${configuration.token}",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Authorization",
+      "required": false
+    },
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Content-Type",
+      "required": false
+    }
+  ]
+}
