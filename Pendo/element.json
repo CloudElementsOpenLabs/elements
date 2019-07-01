@@ -148,8 +148,6 @@
   "objects": [
     {
       "bulkUploadEnabled": false,
-      "bulkv3DownloadEnabled": false,
-      "bulkv3UploadEnabled": false,
       "elementId": 17364,
       "metadataDiscovery": false,
       "updatedDateName": "",
@@ -169,8 +167,6 @@
     },
     {
       "bulkUploadEnabled": false,
-      "bulkv3DownloadEnabled": false,
-      "bulkv3UploadEnabled": false,
       "elementId": 17364,
       "metadataDiscovery": false,
       "updatedDateName": "",
