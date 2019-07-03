@@ -7,7 +7,7 @@ To begin using any of the previously created elements within this repo, fork thi
 ![alt text](https://github.com/peytonsteiner97/elements/blob/master/Screenshot.png)
 
 ### Contributing
-To contribute we ask that you create a folder that contains the Element JSON as well as a short README file with a description of what you built (endpoint name and resources available so people can see them without importing the Element), a link to the documentation you used when creating the Element, and any known endpoint limitation that might affect how your Element works.
+To contribute we ask that you create a folder for the element, using pascal casing for the folder name (ex. `CloudElements`). The folder should contain the Element JSON as well as a short README file with a description of what you built (endpoint name and resources available so people can see them without importing the Element), a link to the documentation you used when creating the Element, and any known endpoint limitation that might affect how your Element works.
 
 Check out a simple [example](https://github.com/CloudElementsOpenLabs/examples/tree/master/elements) of an element if you are unsure of how to get started
 
