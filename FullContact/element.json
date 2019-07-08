@@ -1,0 +1,737 @@
+{
+  "configuration": [
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "cursor",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Full Contact Pagination Type",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Pagination Type",
+      "groupControl": false,
+      "key": "pagination.type"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "API Key",
+      "active": true,
+      "description": "The API Key.",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "key",
+      "required": true
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "https://api.fullcontact.com/v2",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Full Contact Base URL",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Base URL",
+      "groupControl": false,
+      "key": "base.url"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "100",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Full Contact Max Page Size (or limit)",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Max Page Size (or limit)",
+      "groupControl": false,
+      "key": "pagination.max"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 11,
+      "name": "Event Notification Signature Key",
+      "active": true,
+      "description": "Full Contact Event Notification Signature Key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.signature.key",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 12,
+      "name": "Event Notification Basic User Name",
+      "active": true,
+      "description": "Full Contact Event Notification Basic User Name",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.username",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 13,
+      "name": "Event Notification Basic Password",
+      "active": true,
+      "description": "Full Contact Event Notification Basic Password",
+      "type": "PASSWORD",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.password",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 98,
+      "name": "Default select fields",
+      "active": true,
+      "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+      "type": "TEXTAREA",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "default.select.fields.map",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "true",
+      "displayOrder": 99,
+      "active": true,
+      "description": "Used to enable/disable filtering of null values from the responses",
+      "type": "BOOLEAN",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": false,
+      "name": "Filter null values from the response",
+      "groupControl": false,
+      "key": "filter.response.nulls"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 100,
+      "name": "Time of Getting Token or Performing Authentication",
+      "active": true,
+      "description": "Full Contact Time of Getting Token or Performing Authentication",
+      "type": "TEXTFIELD_32",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "authentication.time",
+      "required": false
+    }
+  ],
+  "objects": [],
+  "description": "Keep all your contacts in one place and automatically up-to-date with the FullContact Address Book.",
+  "cloneable": true,
+  "extended": false,
+  "bulkDownloadEnabled": false,
+  "useModelsForMetadata": true,
+  "trialAccount": false,
+  "logo": "fullcontact",
+  "hooks": [],
+  "beta": false,
+  "key": "fullcontact",
+  "authentication": {
+    "type": "custom"
+  },
+  "bulkUploadEnabled": false,
+  "image": "https://www.fullcontact.com/wp-content/uploads/2013/06/logo-google.png",
+  "models": [],
+  "active": true,
+  "resources": [
+    {
+      "method": "GET",
+      "kind": "eb",
+      "description": "Find contacts in the CRM system, using the provided CEQL search expression. The search expression in CEQL is the WHERE clause in a typical SQL query, but without the WHERE keyword. For example, to search for all contacts whose name contains the word 'jones', the search expression parameter will be <i>where=name='%jones%'</i>. If a search expression is not provided, then the first 200 records will be returned. <p>If a value of true is specified for the includeDeleted flag, then any soft-deleted records will also be considered in the searched records.",
+      "type": "api",
+      "vendorPath": "/company/lookup.json",
+      "path": "/hubs/crm/companies",
+      "paginationType": "VENDOR_SUPPORTED",
+      "vendorMethod": "GET",
+      "response": {
+        "sampleData": "{\"website\":\"https://www.fullcontact.com\",\"languageLocale\":\"en\",\"requestId\":\"792aeae5-e6b4-456d-bd01-1dd372572ed5\",\"socialProfiles\":[{\"typeName\":\"Facebook\",\"typeId\":\"facebook\",\"url\":\"https://www.facebook.com/FullContactAPI\"},{\"typeName\":\"Facebook\",\"typeId\":\"facebook\",\"url\":\"https://www.facebook.com/fullcontact\"},{\"followers\":7003,\"following\":1958,\"typeName\":\"Twitter\",\"bio\":\"We help you to stay fully connected, master your contacts, and be awesome with people.\",\"typeId\":\"twitter\",\"id\":\"142954090\",\"url\":\"https://twitter.com/FullContact\",\"username\":\"FullContact\"},{\"followers\":285,\"typeName\":\"AngelList\",\"bio\":\"FullContact's address book brings all of your contacts into one place and keeps them automatically up to date on the web, as well as on your iPhone and iPad. \\n\\nAdd photos to your contacts. Find them on social networks like Twitter, Facebook, LinkedIn and of course AngelList. It's the address book that busy professionals from any walk of life can appreciate, and best of all it's free. \\n\\nFor developers, the suite of FullContact APIs builds powerful, complete profiles of contacts that can be included in any application.\",\"typeId\":\"angellist\",\"id\":\"1748\",\"url\":\"https://angel.co/fullcontact\",\"username\":\"fullcontact\"},{\"typeName\":\"CrunchBase\",\"bio\":\"FullContact provides a suite of cloud-based contact management solutions for businesses, developers, and individuals.\",\"typeId\":\"crunchbasecompany\",\"url\":\"http://www.crunchbase.com/organization/fullcontact\",\"username\":\"fullcontact\"},{\"typeName\":\"Klout\",\"typeId\":\"klout\",\"id\":\"32651102063581374\",\"url\":\"http://klout.com/FullContact\",\"username\":\"FullContact\"},{\"typeName\":\"YouTube\",\"typeId\":\"youtube\",\"url\":\"https://youtube.com/user/FullContactAPI\",\"username\":\"FullContactAPI\"},{\"typeName\":\"YouTube\",\"typeId\":\"youtube\",\"url\":\"https://youtube.com/user/fullcontact\",\"username\":\"fullcontact\"},{\"followers\":3078,\"typeName\":\"LinkedIn\",\"bio\":\"FullContact is the most powerful fully-connected contact management platform for professionals and enterprises who need to master their contacts and be awesome with people. FullContact's cross-platform suite of Apps and APIs enhance contacts with insights, while keeping them organized, synchronized, up to date, and safe.\",\"typeId\":\"linkedincompany\",\"id\":\"2431118\",\"url\":\"https://www.linkedin.com/company/fullcontact-inc-\",\"username\":\"fullcontact-inc-\"}],\"organization\":{\"overview\":\"Solving the world's contact information problem!\",\"images\":[{\"label\":\"other\",\"url\":\"https://d2ojpxxtu63wzl.cloudfront.net/static/4c1d5bdcea5612a206ba2573d5f459cf_b9ac649579685df0f8240be77db8ae57e20569a63521f9419c48cb98031bfe50\"},{\"label\":\"logo\",\"url\":\"https://d2ojpxxtu63wzl.cloudfront.net/static/2ab4d453f220d5d33558a29b95d5ef28_b151428e2f8f7f87ca0b7f870eb1799c23598700baab75c45cfb8de2810cf30f\"},{\"label\":\"other\",\"url\":\"https://d2ojpxxtu63wzl.cloudfront.net/static/b347f5995110aeae6f89ad668ba700dd_c1077b8caee4c315fcfde814c6696860a6ac71a45c4971933e489c3aa06c3ac7\"}],\"contactInfo\":{\"addresses\":[{\"country\":{\"code\":\"US\",\"name\":\"United States\"},\"postalCode\":\"80202\",\"locality\":\"Denver\",\"addressLine1\":\"1755 Blake Street\",\"addressLine2\":\"Suite 450\",\"label\":\"work\",\"region\":{\"code\":\"CO\",\"name\":\"Colorado\"}}],\"emailAddresses\":[{\"label\":\"support\",\"value\":\"support@fullcontact.com\"},{\"label\":\"sales\",\"value\":\"sales@fullcontact.com\"},{\"label\":\"other\",\"value\":\"team@fullcontact.com\"}],\"phoneNumbers\":[{\"number\":\"+1 (888) 330-6943\",\"label\":\"other\"},{\"number\":\"+1 (720) 475-1292\",\"label\":\"other\"}]},\"keywords\":[\"CRM\",\"Contact Management\",\"Creativity\",\"Developer APIs\",\"Information Services\",\"Services\",\"Social Media\"],\"approxEmployees\":150,\"name\":\"FullContact Inc.\",\"founded\":\"2010\",\"links\":[{\"label\":\"rss\",\"url\":\"https://www.fullcontact.com/feed\"},{\"label\":\"rss\",\"url\":\"https://www.fullcontact.com/home/feed\"},{\"label\":\"rss\",\"url\":\"https://www.fullcontact.com/comments/feed\"},{\"label\":\"blog\",\"url\":\"https://www.fullcontact.com/blog\"},{\"label\":\"youtube\",\"url\":\"https://www.youtube.com/watch?v=RnltbT0BKMo\"}]},\"logo\":\"https://d2ojpxxtu63wzl.cloudfront.net/static/1bacd7306731a30d2a9f024eeb1dcff1_94d77dcdedbfe40707ac4a75ca4f4d2978bffc20b2e33a3288ea9e4d47f5af6c\",\"category\":[{\"code\":\"OTHER\",\"name\":\"Other\"}],\"status\":200,\"traffic\":{\"ranking\":[{\"rank\":26972,\"locale\":\"global\"},{\"rank\":10306,\"locale\":\"us\"}],\"topCountryRanking\":[{\"rank\":10306,\"locale\":\"us\"},{\"rank\":7136,\"locale\":\"gb\"},{\"rank\":28795,\"locale\":\"in\"}]}}",
+        "contentType": "application/json"
+      },
+      "model": {
+        "transform": false,
+        "name": "companies",
+        "swagger": {
+          "country": {
+            "id": "country",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "addresses": {
+            "id": "addresses",
+            "properties": {
+              "country": {
+                "type": "country"
+              },
+              "postalCode": {
+                "type": "string"
+              },
+              "locality": {
+                "type": "string"
+              },
+              "addressLine1": {
+                "type": "string"
+              },
+              "addressLine2": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "region": {
+                "type": "region"
+              }
+            }
+          },
+          "images": {
+            "id": "images",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          },
+          "contactInfo": {
+            "id": "contactInfo",
+            "properties": {
+              "addresses": {
+                "type": "array",
+                "items": {
+                  "$ref": "addresses"
+                }
+              },
+              "emailAddresses": {
+                "type": "array",
+                "items": {
+                  "$ref": "emailAddresses"
+                }
+              },
+              "phoneNumbers": {
+                "type": "array",
+                "items": {
+                  "$ref": "phoneNumbers"
+                }
+              }
+            }
+          },
+          "phoneNumbers": {
+            "id": "phoneNumbers",
+            "properties": {
+              "number_": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            }
+          },
+          "topCountryRanking": {
+            "id": "topCountryRanking",
+            "properties": {
+              "rank": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "locale": {
+                "type": "string"
+              }
+            }
+          },
+          "companies": {
+            "id": "companies",
+            "properties": {
+              "website": {
+                "type": "string"
+              },
+              "languageLocale": {
+                "type": "string"
+              },
+              "requestId": {
+                "type": "string"
+              },
+              "socialProfiles": {
+                "type": "array",
+                "items": {
+                  "$ref": "socialProfiles"
+                }
+              },
+              "organization": {
+                "type": "organization"
+              },
+              "logo": {
+                "type": "string"
+              },
+              "category": {
+                "type": "array",
+                "items": {
+                  "$ref": "category"
+                }
+              },
+              "status": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "traffic": {
+                "type": "traffic"
+              }
+            }
+          },
+          "emailAddresses": {
+            "id": "emailAddresses",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          "socialProfiles": {
+            "id": "socialProfiles",
+            "properties": {
+              "typeName": {
+                "type": "string"
+              },
+              "typeId": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          },
+          "organization": {
+            "id": "organization",
+            "properties": {
+              "overview": {
+                "type": "string"
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "$ref": "images"
+                }
+              },
+              "contactInfo": {
+                "type": "contactInfo"
+              },
+              "keywords": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "approxEmployees": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "founded": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "$ref": "links"
+                }
+              }
+            }
+          },
+          "links": {
+            "id": "links",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          },
+          "ranking": {
+            "id": "ranking",
+            "properties": {
+              "rank": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "locale": {
+                "type": "string"
+              }
+            }
+          },
+          "category": {
+            "id": "category",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "region": {
+            "id": "region",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "traffic": {
+            "id": "traffic",
+            "properties": {
+              "ranking": {
+                "type": "array",
+                "items": {
+                  "$ref": "ranking"
+                }
+              },
+              "topCountryRanking": {
+                "type": "array",
+                "items": {
+                  "$ref": "topCountryRanking"
+                }
+              }
+            }
+          }
+        }
+      },
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "query",
+          "converter": "toQueryParameters",
+          "dataType": "string",
+          "name": "where",
+          "description": "Example: domain='fullcontact.com'",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "converter:toQueryParameters",
+          "required": true
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "kind": "eb",
+      "description": "Find contacts in the CRM system, using the provided CEQL search expression. The search expression in CEQL is the WHERE clause in a typical SQL query, but without the WHERE keyword. For example, to search for all contacts whose name contains the word 'jones', the search expression parameter will be <i>where=name='%jones%'</i>. If a search expression is not provided, then the first 200 records will be returned. <p>If a value of true is specified for the includeDeleted flag, then any soft-deleted records will also be considered in the searched records.",
+      "type": "api",
+      "vendorPath": "/person.json",
+      "path": "/hubs/crm/contacts",
+      "paginationType": "VENDOR_SUPPORTED",
+      "vendorMethod": "GET",
+      "response": {
+        "sampleData": "{\"likelihood\":0.99,\"contactInfo\":{\"familyName\":\"Kerns\",\"givenName\":\"Natalie\",\"fullName\":\"Natalie Kerns\"},\"requestId\":\"750ad5dc-4c7a-4fdf-961c-d7a6131e3f99\",\"socialProfiles\":[{\"followers\":7,\"typeName\":\"GooglePlus\",\"typeId\":\"google\",\"id\":\"112228379336510758404\",\"type\":\"google\",\"url\":\"https://plus.google.com/112228379336510758404\"},{\"typeName\":\"Gravatar\",\"bio\":\"Seattle native, BD for Cloud Elements, inspired by women in tech.\",\"typeId\":\"gravatar\",\"id\":\"69901688\",\"type\":\"gravatar\",\"url\":\"https://gravatar.com/nataliekerns\",\"username\":\"nataliekerns\"},{\"typeName\":\"LinkedIn\",\"typeId\":\"linkedin\",\"type\":\"linkedin\",\"url\":\"https://www.linkedin.com/in/natkerns\",\"username\":\"natkerns\"},{\"followers\":112,\"following\":247,\"typeName\":\"Twitter\",\"bio\":\"@cloudelements BusDev. You build the killer app, we’ll take care of the REST. Seattle native, CO transplant, @GonzagaU grad, integrating API's near you soon :)\",\"typeId\":\"twitter\",\"type\":\"twitter\",\"url\":\"https://twitter.com/natalie_kerns\",\"username\":\"natalie_kerns\"}],\"organizations\":[{\"name\":\"CLOUD ELEMENTS\",\"title\":\"Software Engineer\"}],\"photos\":[{\"isPrimary\":true,\"typeName\":\"Twitter\",\"typeId\":\"twitter\",\"type\":\"other\",\"url\":\"https://d2ojpxxtu63wzl.cloudfront.net/static/b276c7030823d2029bd0c71721aac6c0_93618d5de0f83b6571823fe3c7c50af34ac1c7a9b1dc984394b161c85f1ee8e1\"},{\"typeName\":\"GooglePlus\",\"typeId\":\"google\",\"type\":\"google\",\"url\":\"https://d2ojpxxtu63wzl.cloudfront.net/static/10a5596171de4ff3e26f512916e6b6b9_a6dee4db11a0fc3f110f2c913074cccae447169116d7c9eafc5a367c1919aaba\"}],\"status\":200,\"demographics\":{\"gender\":\"Female\",\"locationDeduced\":{\"deducedLocation\":\"Denver, Colorado, United States\",\"continent\":{\"deduced\":true,\"name\":\"North America\"},\"country\":{\"code\":\"US\",\"name\":\"United States\"},\"likelihood\":1.0,\"city\":{\"name\":\"Denver\"},\"county\":{\"deduced\":true,\"name\":\"Denver\"},\"state\":{\"code\":\"CO\",\"name\":\"Colorado\"},\"normalizedLocation\":\"Denver, Colorado, United States\"},\"locationGeneral\":\"Denver, Colorado, United States\"}}",
+        "contentType": "application/json"
+      },
+      "model": {
+        "transform": false,
+        "name": "contacts",
+        "swagger": {
+          "continent": {
+            "id": "continent",
+            "properties": {
+              "deduced": {
+                "type": "boolean"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "country": {
+            "id": "country",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "contactInfo": {
+            "id": "contactInfo",
+            "properties": {
+              "familyName": {
+                "type": "string"
+              },
+              "givenName": {
+                "type": "string"
+              },
+              "fullName": {
+                "type": "string"
+              }
+            }
+          },
+          "city": {
+            "id": "city",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "locationDeduced": {
+            "id": "locationDeduced",
+            "properties": {
+              "continent": {
+                "type": "continent"
+              },
+              "deducedLocation": {
+                "type": "string"
+              },
+              "country": {
+                "type": "country"
+              },
+              "likelihood": {
+                "format": "double",
+                "type": "number"
+              },
+              "city": {
+                "type": "city"
+              },
+              "county": {
+                "type": "county"
+              },
+              "state": {
+                "type": "state"
+              },
+              "normalizedLocation": {
+                "type": "string"
+              }
+            }
+          },
+          "socialProfiles": {
+            "id": "socialProfiles",
+            "properties": {
+              "followers": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "typeName": {
+                "type": "string"
+              },
+              "typeId": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          },
+          "county": {
+            "id": "county",
+            "properties": {
+              "deduced": {
+                "type": "boolean"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "organizations": {
+            "id": "organizations",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          },
+          "state": {
+            "id": "state",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "photos": {
+            "id": "photos",
+            "properties": {
+              "isPrimary": {
+                "type": "boolean"
+              },
+              "typeName": {
+                "type": "string"
+              },
+              "typeId": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          },
+          "contacts": {
+            "id": "contacts",
+            "properties": {
+              "contactInfo": {
+                "type": "contactInfo"
+              },
+              "likelihood": {
+                "format": "double",
+                "type": "number"
+              },
+              "requestId": {
+                "type": "string"
+              },
+              "socialProfiles": {
+                "type": "array",
+                "items": {
+                  "$ref": "socialProfiles"
+                }
+              },
+              "organizations": {
+                "type": "array",
+                "items": {
+                  "$ref": "organizations"
+                }
+              },
+              "photos": {
+                "type": "array",
+                "items": {
+                  "$ref": "photos"
+                }
+              },
+              "demographics": {
+                "type": "demographics"
+              },
+              "status": {
+                "format": "int32",
+                "type": "integer"
+              }
+            }
+          },
+          "demographics": {
+            "id": "demographics",
+            "properties": {
+              "gender": {
+                "type": "string"
+              },
+              "locationDeduced": {
+                "type": "locationDeduced"
+              },
+              "locationGeneral": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "query",
+          "converter": "toQueryParameters",
+          "dataType": "string",
+          "name": "where",
+          "description": "Example: email='bart@fullcontact.com'   If you will be using webhooks, the input would be email='bart@fullcontact.com' and webhookUrl='http://requestb.in/1dwgppc1'",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "converter:toQueryParameters",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "protocolType": "http",
+  "transformationsEnabled": true,
+  "deleted": false,
+  "hub": "crm",
+  "typeOauth": false,
+  "name": "Full Contact",
+  "extendable": true,
+  "parameters": [
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Accept",
+      "required": false
+    },
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Content-Type",
+      "required": false
+    },
+    {
+      "vendorType": "header",
+      "name": "key",
+      "source": "request",
+      "type": "configuration",
+      "vendorName": "X-FullContact-APIKey",
+      "required": false
+    }
+  ]
+}

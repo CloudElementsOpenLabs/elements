@@ -1,0 +1,2777 @@
+{
+  "configuration": [
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth API Key",
+      "active": true,
+      "description": "Mavenlink OAuth API Key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.api.key",
+      "required": true
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Refresh Time",
+      "active": true,
+      "description": "Mavenlink OAuth Refresh Time",
+      "type": "TEXTFIELD_64",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.user.refresh_time",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "true",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Mavenlink OAuth basic header",
+      "type": "BOOLEAN",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "OAuth basic header",
+      "groupControl": false,
+      "key": "oauth.basic.header"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "100",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Mavenlink Max Page Size (or limit)",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Max Page Size (or limit)",
+      "groupControl": false,
+      "key": "pagination.max"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth API Secret",
+      "active": true,
+      "description": "Mavenlink OAuth API Secret",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.api.secret",
+      "required": true
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "https://auth.cloudelements.io/oauth",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Mavenlink OAuth Callback URL",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "OAuth Callback URL",
+      "groupControl": false,
+      "key": "oauth.callback.url"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "offset",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Mavenlink Pagination Type",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Pagination Type",
+      "groupControl": false,
+      "key": "pagination.type"
+    },
+    {
+      "internal": true,
+      "companyConfig": false,
+      "defaultValue": "https://app.mavenlink.com/oauth/token",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Mavenlink OAuth Token URL",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "OAuth Token URL",
+      "groupControl": false,
+      "key": "oauth.token.url"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Scope",
+      "active": true,
+      "description": "Mavenlink OAuth Scope",
+      "type": "TEXTFIELD_64",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.scope",
+      "required": false
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Token Refresh URL",
+      "active": true,
+      "description": "Mavenlink OAuth Token Refresh URL",
+      "type": "TEXTFIELD_1000",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.token.refresh_url",
+      "required": false
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Token Revoke URL",
+      "active": true,
+      "description": "Mavenlink OAuth Token Revoke URL",
+      "type": "TEXTFIELD_1000",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.token.revoke_url",
+      "required": false
+    },
+    {
+      "internal": true,
+      "companyConfig": false,
+      "defaultValue": "https://app.mavenlink.com/oauth/authorize",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Mavenlink OAuth Authorization URL",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "OAuth Authorization URL",
+      "groupControl": false,
+      "key": "oauth.authorization.url"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "https://api.mavenlink.com/api/v1/",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Mavenlink Base Url",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "Base Url",
+      "groupControl": false,
+      "key": "base.url"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Access Token",
+      "active": true,
+      "description": "Mavenlink OAuth Access Token",
+      "type": "TEXTFIELD_32",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.user.token",
+      "required": false
+    },
+    {
+      "internal": true,
+      "companyConfig": false,
+      "defaultValue": "3600",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Mavenlink OAuth Refresh Interval (s)",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "OAuth Refresh Interval (s)",
+      "groupControl": false,
+      "key": "oauth.user.refresh_interval"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Refresh Token",
+      "active": true,
+      "description": "Mavenlink OAuth Refresh Token",
+      "type": "TEXTFIELD_64",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.user.refresh_token",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 11,
+      "name": "Event Notification Signature Key",
+      "active": true,
+      "description": "Mavenlink Event Notification Signature Key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.signature.key",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 12,
+      "name": "Event Notification Basic User Name",
+      "active": true,
+      "description": "Mavenlink Event Notification Basic User Name",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.username",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 13,
+      "name": "Event Notification Basic Password",
+      "active": true,
+      "description": "Mavenlink Event Notification Basic Password",
+      "type": "PASSWORD",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.password",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 98,
+      "name": "Default select fields",
+      "active": true,
+      "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+      "type": "TEXTAREA",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "default.select.fields.map",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "true",
+      "displayOrder": 99,
+      "active": true,
+      "description": "Used to enable/disable filtering of null values from the responses",
+      "type": "BOOLEAN",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": false,
+      "name": "Filter null values from the response",
+      "groupControl": false,
+      "key": "filter.response.nulls"
+    }
+  ],
+  "objects": [],
+  "description": "Mavenlink Element",
+  "cloneable": true,
+  "extended": false,
+  "bulkDownloadEnabled": false,
+  "useModelsForMetadata": true,
+  "trialAccount": false,
+  "logo": "mavenlink",
+  "hooks": [],
+  "beta": false,
+  "key": "mavenlink",
+  "authentication": {
+    "type": "oauth2"
+  },
+  "bulkUploadEnabled": false,
+  "image": "https://images.cloudelements.io/LogoName201712152026.png",
+  "models": [],
+  "active": true,
+  "resources": [
+    {
+      "method": "DELETE",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Delete an {objectName}",
+      "type": "api",
+      "vendorPath": "",
+      "nextPageKey": "",
+      "path": "/hubs/general/{objectName}/{objectId}",
+      "paginationType": "",
+      "vendorMethod": "DELETE",
+      "response": {
+        "contentType": "application/json"
+      },
+      "operationId": "",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        }
+      ],
+      "rootKey": ""
+    },
+    {
+      "method": "GET",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Retrieve an {objectName}",
+      "type": "api",
+      "vendorPath": "",
+      "nextPageKey": "",
+      "path": "/hubs/general/{objectName}/{objectId}",
+      "paginationType": "",
+      "vendorMethod": "GET",
+      "response": {
+        "contentType": "application/json"
+      },
+      "operationId": "",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ],
+      "rootKey": ""
+    },
+    {
+      "method": "PATCH",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Update an {objectName}",
+      "type": "api",
+      "vendorPath": "",
+      "nextPageKey": "",
+      "path": "/hubs/general/{objectName}/{objectId}",
+      "paginationType": "",
+      "vendorMethod": "PATCH",
+      "response": {
+        "contentType": "application/json"
+      },
+      "operationId": "",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "Body",
+          "name": "Body",
+          "description": "The {objectName}",
+          "vendorDataType": "Body",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "Body",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ],
+      "rootKey": ""
+    },
+    {
+      "method": "PUT",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Update an {objectName}",
+      "type": "api",
+      "vendorPath": "",
+      "nextPageKey": "",
+      "path": "/hubs/general/{objectName}/{objectId}",
+      "paginationType": "",
+      "vendorMethod": "PUT",
+      "response": {
+        "contentType": "application/json"
+      },
+      "operationId": "",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "Body",
+          "name": "Body",
+          "description": "The {objectName}",
+          "vendorDataType": "Body",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "Body",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ],
+      "rootKey": ""
+    },
+    {
+      "method": "GET",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Search for {childObjectName}",
+      "type": "api",
+      "vendorPath": "",
+      "nextPageKey": "",
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}",
+      "paginationType": "",
+      "vendorMethod": "GET",
+      "response": {
+        "contentType": "application/json"
+      },
+      "operationId": "",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "integer",
+          "name": "pageSize",
+          "description": "The page size. Defaults to 200 if not provided. Maximum of 5000.",
+          "vendorDataType": "integer",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "pageSize",
+          "required": false
+        },
+        {
+          "vendorType": "form",
+          "dataType": "integer",
+          "name": "page",
+          "description": "The page number. Defaults to 1 if not provided.",
+          "vendorDataType": "integer",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "page",
+          "required": false
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "where",
+          "description": "The CEQL search expression.",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "where",
+          "required": false
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the childObjectName",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        }
+      ],
+      "rootKey": ""
+    },
+    {
+      "method": "POST",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Create an {childObjectName}",
+      "type": "api",
+      "vendorPath": "",
+      "nextPageKey": "",
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}",
+      "paginationType": "",
+      "vendorMethod": "POST",
+      "response": {
+        "contentType": "application/json"
+      },
+      "operationId": "",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "Body",
+          "name": "Body",
+          "description": "The {childObjectName}",
+          "vendorDataType": "Body",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "Body",
+          "required": true
+        }
+      ],
+      "rootKey": ""
+    },
+    {
+      "method": "DELETE",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Delete an {childObjectName}",
+      "type": "api",
+      "vendorPath": "",
+      "nextPageKey": "",
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}/{childObjectId}",
+      "paginationType": "",
+      "vendorMethod": "DELETE",
+      "response": {
+        "contentType": "application/json"
+      },
+      "operationId": "",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectId",
+          "description": "The {childObjectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the childObjectName",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ],
+      "rootKey": ""
+    },
+    {
+      "method": "GET",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Retrieve an {childObjectName}",
+      "type": "api",
+      "vendorPath": "",
+      "nextPageKey": "",
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}/{childObjectId}",
+      "paginationType": "",
+      "vendorMethod": "GET",
+      "response": {
+        "contentType": "application/json"
+      },
+      "operationId": "",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectId",
+          "description": "The {childObjectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the childObjectName",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ],
+      "rootKey": ""
+    },
+    {
+      "method": "PATCH",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Update an {childObjectName}",
+      "type": "api",
+      "vendorPath": "",
+      "nextPageKey": "",
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}/{childObjectId}",
+      "paginationType": "",
+      "vendorMethod": "PATCH",
+      "response": {
+        "contentType": "application/json"
+      },
+      "operationId": "",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "Body",
+          "name": "Body",
+          "description": "The {objectName}",
+          "vendorDataType": "Body",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "Body",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectId",
+          "description": "The {childObjectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the childObjectName",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ],
+      "rootKey": ""
+    },
+    {
+      "method": "PUT",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Update an {childObjectName}",
+      "type": "api",
+      "vendorPath": "",
+      "nextPageKey": "",
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}/{childObjectId}",
+      "paginationType": "",
+      "vendorMethod": "PUT",
+      "response": {
+        "contentType": "application/json"
+      },
+      "operationId": "",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectId",
+          "description": "The {childObjectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "Body",
+          "name": "Body",
+          "description": "The {objectName}",
+          "vendorDataType": "Body",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "Body",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the childObjectName",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        }
+      ],
+      "rootKey": ""
+    },
+    {
+      "method": "GET",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Search for /projects",
+      "type": "api",
+      "vendorPath": "/workspaces.json",
+      "nextPageKey": "",
+      "path": "/hubs/general/projects",
+      "paginationType": "VENDOR_SUPPORTED",
+      "vendorMethod": "GET",
+      "response": {
+        "sampleData": "[{\"18045395\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-10-26T13:38:09-07:00\",\"can_create_line_items\":false,\"title\":\"sample project\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":0,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-10-26T13:38:09-07:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"$100,000\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18045395\",\"budget_used\":\"$0\",\"client_role_name\":\"Clients\",\"start_date\":\"\",\"percent_of_budget_used\":0,\"default_rate\":\"150.00\",\"percentage_complete\":0,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"5903917\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"price_in_cents\":10000000,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"budget_remaining\":\"$100,000\",\"has_budget_access\":true,\"creator_id\":\"5903917\",\"change_orders_enabled\":true,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}},\"18283405\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-11-20T09:03:30-08:00\",\"can_create_line_items\":false,\"title\":\"Fixed Fee Proj\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":212200,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-12-12T11:22:03-08:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"2017-11-30\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"$100,000\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18283405\",\"budget_used\":\"$2,122\",\"client_role_name\":\"Clients\",\"start_date\":\"2017-11-20\",\"percent_of_budget_used\":2,\"default_rate\":\"150.00\",\"percentage_complete\":50,\"total_expenses_in_cents\":2200,\"currency_symbol\":\"$\",\"due_date\":\"2017-11-30\",\"primary_maven_id\":\"5309075\",\"has_active_timesheet_submissions\":true,\"exclude_archived_stories_percent_complete\":false,\"price_in_cents\":10000000,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"budget_remaining\":\"$97,878\",\"has_budget_access\":true,\"creator_id\":\"5309075\",\"change_orders_enabled\":false,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}},\"18574815\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"Dave's cool test project!\",\"created_at\":\"2017-12-15T12:51:27-08:00\",\"can_create_line_items\":true,\"title\":\"Dave's Test Project\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":0,\"stories_are_fixed_fee_by_default\":false,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-12-15T12:51:28-08:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"2018-01-31\",\"permissions\":{\"can_upload_files\":true,\"is_participant\":true,\"can_private_message\":true,\"can_edit\":true,\"can_join\":false,\"user_is_client\":false,\"access_level\":\"admin\",\"can_change_price\":true,\"can_see_financials\":true,\"restricted\":false,\"can_change_story_billable\":true,\"can_post\":true,\"team_lead\":true},\"price\":\"TBD\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18574815\",\"budget_used\":\"$0\",\"client_role_name\":\"Clients\",\"start_date\":\"2017-12-15\",\"percent_of_budget_used\":0,\"can_invite\":true,\"default_rate\":\"150.00\",\"percentage_complete\":0,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"2018-01-31\",\"primary_maven_id\":\"9434505\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"has_budget_access\":true,\"creator_id\":\"9434505\",\"change_orders_enabled\":false,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}},\"18504185\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-12-12T12:10:46-08:00\",\"can_create_line_items\":false,\"title\":\"Fixed Fee Proj- November 2017\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":0,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-12-12T13:00:06-08:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"$100,000\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18504185\",\"budget_used\":\"$0\",\"client_role_name\":\"Clients\",\"start_date\":\"2017-11-20\",\"percent_of_budget_used\":0,\"default_rate\":\"150.00\",\"percentage_complete\":0,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"5309075\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"price_in_cents\":10000000,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"budget_remaining\":\"$100,000\",\"has_budget_access\":true,\"creator_id\":\"5309075\",\"change_orders_enabled\":false,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}},\"18459025\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-12-07T07:30:12-08:00\",\"can_create_line_items\":false,\"title\":\"Project: Estimate: Grand Hotels SLA: Scenario 2\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":0,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-12-07T07:30:14-08:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"$499,600\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18459025\",\"budget_used\":\"$0\",\"client_role_name\":\"Clients\",\"start_date\":\"2017-11-28\",\"percent_of_budget_used\":0,\"default_rate\":\"150.00\",\"percentage_complete\":0,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"5309075\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"price_in_cents\":49960000,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"budget_remaining\":\"$499,600\",\"has_budget_access\":true,\"creator_id\":\"5309075\",\"change_orders_enabled\":true,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Proposed\",\"key\":140}},\"17254575\":{\"require_expense_approvals\":true,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-08-09T06:33:40-07:00\",\"can_create_line_items\":false,\"title\":\"Test Project Rates and Roles \",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budgeted\":true,\"access_level\":\"admins\",\"archived\":false,\"updated_at\":\"2017-11-29T17:33:40-08:00\",\"rate_card_id\":131827,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":false,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":false},\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"17254575\",\"client_role_name\":\"Clients\",\"start_date\":\"\",\"percentage_complete\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"4800555\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"account_id\":3111155,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"has_budget_access\":false,\"creator_id\":\"4800555\",\"change_orders_enabled\":false,\"consultant_role_name\":\"Mavenlink\"},\"17975505\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-10-19T11:52:38-07:00\",\"can_create_line_items\":false,\"title\":\"Spartan Resources - Opp 10-19\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":0,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-11-03T13:44:28-07:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"$10,000\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"17975505\",\"budget_used\":\"$0\",\"client_role_name\":\"Clients\",\"start_date\":\"\",\"percent_of_budget_used\":0,\"default_rate\":\"150.00\",\"percentage_complete\":50,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"5309075\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"price_in_cents\":1000000,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":false,\"budget_remaining\":\"$10,000\",\"has_budget_access\":true,\"creator_id\":\"5309075\",\"change_orders_enabled\":true,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}},\"18071985\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-10-30T13:53:08-07:00\",\"can_create_line_items\":false,\"title\":\"Test Project\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":122500,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-12-14T14:17:17-08:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"TBD\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18071985\",\"budget_used\":\"$1,225\",\"client_role_name\":\"Clients\",\"start_date\":\"\",\"percent_of_budget_used\":0,\"default_rate\":\"150.00\",\"percentage_complete\":0,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"5903917\",\"has_active_timesheet_submissions\":true,\"exclude_archived_stories_percent_complete\":false,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"has_budget_access\":true,\"creator_id\":\"5309075\",\"change_orders_enabled\":false,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}}}]",
+        "contentType": "application/json"
+      },
+      "model": {
+        "transform": false,
+        "name": "projectsList",
+        "swagger": {
+          "17254575": {
+            "id": "17254575",
+            "properties": {
+              "require_expense_approvals": {
+                "type": "boolean"
+              },
+              "update_whitelist": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "has_active_expense_report_submissions": {
+                "type": "boolean"
+              },
+              "currency_base_unit": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "can_create_line_items": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "string"
+              },
+              "account_features": {
+                "type": "17254575Account_features"
+              },
+              "budgeted": {
+                "type": "boolean"
+              },
+              "access_level": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "boolean"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "rate_card_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "effective_due_date": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "17254575Permissions"
+              },
+              "posts_require_privacy_decision": {
+                "type": "boolean"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "client_role_name": {
+                "type": "string"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "percentage_complete": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "currency_symbol": {
+                "type": "string"
+              },
+              "due_date": {
+                "type": "string"
+              },
+              "primary_maven_id": {
+                "type": "string"
+              },
+              "has_active_timesheet_submissions": {
+                "type": "boolean"
+              },
+              "exclude_archived_stories_percent_complete": {
+                "type": "boolean"
+              },
+              "account_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "require_time_approvals": {
+                "type": "boolean"
+              },
+              "tasks_default_non_billable": {
+                "type": "boolean"
+              },
+              "creator_id": {
+                "type": "string"
+              },
+              "has_budget_access": {
+                "type": "boolean"
+              },
+              "change_orders_enabled": {
+                "type": "boolean"
+              },
+              "consultant_role_name": {
+                "type": "string"
+              }
+            }
+          },
+          "17975505": {
+            "id": "17975505",
+            "properties": {
+              "require_expense_approvals": {
+                "type": "boolean"
+              },
+              "over_budget": {
+                "type": "boolean"
+              },
+              "update_whitelist": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "has_active_expense_report_submissions": {
+                "type": "boolean"
+              },
+              "currency_base_unit": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "can_create_line_items": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "string"
+              },
+              "account_features": {
+                "type": "17975505Account_features"
+              },
+              "budget_used_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "budgeted": {
+                "type": "boolean"
+              },
+              "access_level": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "boolean"
+              },
+              "expenses_in_burn_rate": {
+                "type": "boolean"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "rate_card_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "effective_due_date": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "17975505Permissions"
+              },
+              "price": {
+                "type": "string"
+              },
+              "posts_require_privacy_decision": {
+                "type": "boolean"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "budget_used": {
+                "type": "string"
+              },
+              "client_role_name": {
+                "type": "string"
+              },
+              "percent_of_budget_used": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "default_rate": {
+                "type": "string"
+              },
+              "percentage_complete": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "total_expenses_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "currency_symbol": {
+                "type": "string"
+              },
+              "due_date": {
+                "type": "string"
+              },
+              "primary_maven_id": {
+                "type": "string"
+              },
+              "has_active_timesheet_submissions": {
+                "type": "boolean"
+              },
+              "exclude_archived_stories_percent_complete": {
+                "type": "boolean"
+              },
+              "price_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "account_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "require_time_approvals": {
+                "type": "boolean"
+              },
+              "tasks_default_non_billable": {
+                "type": "boolean"
+              },
+              "budget_remaining": {
+                "type": "string"
+              },
+              "creator_id": {
+                "type": "string"
+              },
+              "has_budget_access": {
+                "type": "boolean"
+              },
+              "change_orders_enabled": {
+                "type": "boolean"
+              },
+              "consultant_role_name": {
+                "type": "string"
+              },
+              "status": {
+                "type": "17975505Status"
+              }
+            }
+          },
+          "18045395": {
+            "id": "18045395",
+            "properties": {
+              "require_expense_approvals": {
+                "type": "boolean"
+              },
+              "over_budget": {
+                "type": "boolean"
+              },
+              "update_whitelist": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "has_active_expense_report_submissions": {
+                "type": "boolean"
+              },
+              "currency_base_unit": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "can_create_line_items": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "string"
+              },
+              "account_features": {
+                "type": "account_features"
+              },
+              "budget_used_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "budgeted": {
+                "type": "boolean"
+              },
+              "access_level": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "boolean"
+              },
+              "expenses_in_burn_rate": {
+                "type": "boolean"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "rate_card_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "effective_due_date": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "permissions"
+              },
+              "price": {
+                "type": "string"
+              },
+              "posts_require_privacy_decision": {
+                "type": "boolean"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "budget_used": {
+                "type": "string"
+              },
+              "client_role_name": {
+                "type": "string"
+              },
+              "percent_of_budget_used": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "default_rate": {
+                "type": "string"
+              },
+              "percentage_complete": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "total_expenses_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "currency_symbol": {
+                "type": "string"
+              },
+              "due_date": {
+                "type": "string"
+              },
+              "primary_maven_id": {
+                "type": "string"
+              },
+              "has_active_timesheet_submissions": {
+                "type": "boolean"
+              },
+              "exclude_archived_stories_percent_complete": {
+                "type": "boolean"
+              },
+              "price_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "account_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "require_time_approvals": {
+                "type": "boolean"
+              },
+              "tasks_default_non_billable": {
+                "type": "boolean"
+              },
+              "budget_remaining": {
+                "type": "string"
+              },
+              "creator_id": {
+                "type": "string"
+              },
+              "has_budget_access": {
+                "type": "boolean"
+              },
+              "change_orders_enabled": {
+                "type": "boolean"
+              },
+              "consultant_role_name": {
+                "type": "string"
+              },
+              "status": {
+                "type": "status"
+              }
+            }
+          },
+          "18071985": {
+            "id": "18071985",
+            "properties": {
+              "require_expense_approvals": {
+                "type": "boolean"
+              },
+              "over_budget": {
+                "type": "boolean"
+              },
+              "update_whitelist": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "has_active_expense_report_submissions": {
+                "type": "boolean"
+              },
+              "currency_base_unit": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "can_create_line_items": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "string"
+              },
+              "account_features": {
+                "type": "18071985Account_features"
+              },
+              "budget_used_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "budgeted": {
+                "type": "boolean"
+              },
+              "access_level": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "boolean"
+              },
+              "expenses_in_burn_rate": {
+                "type": "boolean"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "rate_card_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "effective_due_date": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "18071985Permissions"
+              },
+              "price": {
+                "type": "string"
+              },
+              "posts_require_privacy_decision": {
+                "type": "boolean"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "budget_used": {
+                "type": "string"
+              },
+              "client_role_name": {
+                "type": "string"
+              },
+              "percent_of_budget_used": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "default_rate": {
+                "type": "string"
+              },
+              "percentage_complete": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "total_expenses_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "currency_symbol": {
+                "type": "string"
+              },
+              "due_date": {
+                "type": "string"
+              },
+              "primary_maven_id": {
+                "type": "string"
+              },
+              "has_active_timesheet_submissions": {
+                "type": "boolean"
+              },
+              "exclude_archived_stories_percent_complete": {
+                "type": "boolean"
+              },
+              "account_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "require_time_approvals": {
+                "type": "boolean"
+              },
+              "tasks_default_non_billable": {
+                "type": "boolean"
+              },
+              "creator_id": {
+                "type": "string"
+              },
+              "has_budget_access": {
+                "type": "boolean"
+              },
+              "change_orders_enabled": {
+                "type": "boolean"
+              },
+              "consultant_role_name": {
+                "type": "string"
+              },
+              "status": {
+                "type": "18071985Status"
+              }
+            }
+          },
+          "18283405": {
+            "id": "18283405",
+            "properties": {
+              "require_expense_approvals": {
+                "type": "boolean"
+              },
+              "over_budget": {
+                "type": "boolean"
+              },
+              "update_whitelist": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "has_active_expense_report_submissions": {
+                "type": "boolean"
+              },
+              "currency_base_unit": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "can_create_line_items": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "string"
+              },
+              "account_features": {
+                "type": "18283405Account_features"
+              },
+              "budget_used_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "budgeted": {
+                "type": "boolean"
+              },
+              "access_level": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "boolean"
+              },
+              "expenses_in_burn_rate": {
+                "type": "boolean"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "rate_card_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "effective_due_date": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "18283405Permissions"
+              },
+              "price": {
+                "type": "string"
+              },
+              "posts_require_privacy_decision": {
+                "type": "boolean"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "budget_used": {
+                "type": "string"
+              },
+              "client_role_name": {
+                "type": "string"
+              },
+              "percent_of_budget_used": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "default_rate": {
+                "type": "string"
+              },
+              "percentage_complete": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "total_expenses_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "currency_symbol": {
+                "type": "string"
+              },
+              "due_date": {
+                "type": "string"
+              },
+              "primary_maven_id": {
+                "type": "string"
+              },
+              "has_active_timesheet_submissions": {
+                "type": "boolean"
+              },
+              "exclude_archived_stories_percent_complete": {
+                "type": "boolean"
+              },
+              "price_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "account_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "require_time_approvals": {
+                "type": "boolean"
+              },
+              "tasks_default_non_billable": {
+                "type": "boolean"
+              },
+              "budget_remaining": {
+                "type": "string"
+              },
+              "creator_id": {
+                "type": "string"
+              },
+              "has_budget_access": {
+                "type": "boolean"
+              },
+              "change_orders_enabled": {
+                "type": "boolean"
+              },
+              "consultant_role_name": {
+                "type": "string"
+              },
+              "status": {
+                "type": "18283405Status"
+              }
+            }
+          },
+          "18459025": {
+            "id": "18459025",
+            "properties": {
+              "require_expense_approvals": {
+                "type": "boolean"
+              },
+              "over_budget": {
+                "type": "boolean"
+              },
+              "update_whitelist": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "has_active_expense_report_submissions": {
+                "type": "boolean"
+              },
+              "currency_base_unit": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "can_create_line_items": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "string"
+              },
+              "account_features": {
+                "type": "18459025Account_features"
+              },
+              "budget_used_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "budgeted": {
+                "type": "boolean"
+              },
+              "access_level": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "boolean"
+              },
+              "expenses_in_burn_rate": {
+                "type": "boolean"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "rate_card_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "effective_due_date": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "18459025Permissions"
+              },
+              "price": {
+                "type": "string"
+              },
+              "posts_require_privacy_decision": {
+                "type": "boolean"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "budget_used": {
+                "type": "string"
+              },
+              "client_role_name": {
+                "type": "string"
+              },
+              "percent_of_budget_used": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "default_rate": {
+                "type": "string"
+              },
+              "percentage_complete": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "total_expenses_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "currency_symbol": {
+                "type": "string"
+              },
+              "due_date": {
+                "type": "string"
+              },
+              "primary_maven_id": {
+                "type": "string"
+              },
+              "has_active_timesheet_submissions": {
+                "type": "boolean"
+              },
+              "exclude_archived_stories_percent_complete": {
+                "type": "boolean"
+              },
+              "price_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "account_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "require_time_approvals": {
+                "type": "boolean"
+              },
+              "tasks_default_non_billable": {
+                "type": "boolean"
+              },
+              "budget_remaining": {
+                "type": "string"
+              },
+              "creator_id": {
+                "type": "string"
+              },
+              "has_budget_access": {
+                "type": "boolean"
+              },
+              "change_orders_enabled": {
+                "type": "boolean"
+              },
+              "consultant_role_name": {
+                "type": "string"
+              },
+              "status": {
+                "type": "18459025Status"
+              }
+            }
+          },
+          "18504185": {
+            "id": "18504185",
+            "properties": {
+              "require_expense_approvals": {
+                "type": "boolean"
+              },
+              "over_budget": {
+                "type": "boolean"
+              },
+              "update_whitelist": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "has_active_expense_report_submissions": {
+                "type": "boolean"
+              },
+              "currency_base_unit": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "can_create_line_items": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "string"
+              },
+              "account_features": {
+                "type": "18504185Account_features"
+              },
+              "budget_used_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "budgeted": {
+                "type": "boolean"
+              },
+              "access_level": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "boolean"
+              },
+              "expenses_in_burn_rate": {
+                "type": "boolean"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "rate_card_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "effective_due_date": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "18504185Permissions"
+              },
+              "price": {
+                "type": "string"
+              },
+              "posts_require_privacy_decision": {
+                "type": "boolean"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "budget_used": {
+                "type": "string"
+              },
+              "client_role_name": {
+                "type": "string"
+              },
+              "percent_of_budget_used": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "default_rate": {
+                "type": "string"
+              },
+              "percentage_complete": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "total_expenses_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "currency_symbol": {
+                "type": "string"
+              },
+              "due_date": {
+                "type": "string"
+              },
+              "primary_maven_id": {
+                "type": "string"
+              },
+              "has_active_timesheet_submissions": {
+                "type": "boolean"
+              },
+              "exclude_archived_stories_percent_complete": {
+                "type": "boolean"
+              },
+              "price_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "account_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "require_time_approvals": {
+                "type": "boolean"
+              },
+              "tasks_default_non_billable": {
+                "type": "boolean"
+              },
+              "budget_remaining": {
+                "type": "string"
+              },
+              "creator_id": {
+                "type": "string"
+              },
+              "has_budget_access": {
+                "type": "boolean"
+              },
+              "change_orders_enabled": {
+                "type": "boolean"
+              },
+              "consultant_role_name": {
+                "type": "string"
+              },
+              "status": {
+                "type": "18504185Status"
+              }
+            }
+          },
+          "18574815": {
+            "id": "18574815",
+            "properties": {
+              "require_expense_approvals": {
+                "type": "boolean"
+              },
+              "over_budget": {
+                "type": "boolean"
+              },
+              "update_whitelist": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "has_active_expense_report_submissions": {
+                "type": "boolean"
+              },
+              "currency_base_unit": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "can_create_line_items": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "string"
+              },
+              "account_features": {
+                "type": "18574815Account_features"
+              },
+              "budget_used_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "stories_are_fixed_fee_by_default": {
+                "type": "boolean"
+              },
+              "budgeted": {
+                "type": "boolean"
+              },
+              "access_level": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "boolean"
+              },
+              "expenses_in_burn_rate": {
+                "type": "boolean"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "rate_card_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "effective_due_date": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "18574815Permissions"
+              },
+              "price": {
+                "type": "string"
+              },
+              "posts_require_privacy_decision": {
+                "type": "boolean"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "budget_used": {
+                "type": "string"
+              },
+              "client_role_name": {
+                "type": "string"
+              },
+              "percent_of_budget_used": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "can_invite": {
+                "type": "boolean"
+              },
+              "default_rate": {
+                "type": "string"
+              },
+              "percentage_complete": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "total_expenses_in_cents": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "currency_symbol": {
+                "type": "string"
+              },
+              "due_date": {
+                "type": "string"
+              },
+              "primary_maven_id": {
+                "type": "string"
+              },
+              "has_active_timesheet_submissions": {
+                "type": "boolean"
+              },
+              "exclude_archived_stories_percent_complete": {
+                "type": "boolean"
+              },
+              "account_id": {
+                "format": "int32",
+                "type": "integer"
+              },
+              "require_time_approvals": {
+                "type": "boolean"
+              },
+              "tasks_default_non_billable": {
+                "type": "boolean"
+              },
+              "creator_id": {
+                "type": "string"
+              },
+              "has_budget_access": {
+                "type": "boolean"
+              },
+              "change_orders_enabled": {
+                "type": "boolean"
+              },
+              "consultant_role_name": {
+                "type": "string"
+              },
+              "status": {
+                "type": "18574815Status"
+              }
+            }
+          },
+          "17975505Status": {
+            "id": "17975505Status",
+            "properties": {
+              "color": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "key": {
+                "format": "int32",
+                "type": "integer"
+              }
+            }
+          },
+          "18283405Permissions": {
+            "id": "18283405Permissions",
+            "properties": {
+              "can_change_price": {
+                "type": "boolean"
+              },
+              "can_see_financials": {
+                "type": "boolean"
+              },
+              "can_upload_files": {
+                "type": "boolean"
+              },
+              "is_participant": {
+                "type": "boolean"
+              },
+              "can_private_message": {
+                "type": "boolean"
+              },
+              "can_edit": {
+                "type": "boolean"
+              },
+              "can_change_story_billable": {
+                "type": "boolean"
+              },
+              "can_post": {
+                "type": "boolean"
+              },
+              "can_join": {
+                "type": "boolean"
+              }
+            }
+          },
+          "18459025Status": {
+            "id": "18459025Status",
+            "properties": {
+              "color": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "key": {
+                "format": "int32",
+                "type": "integer"
+              }
+            }
+          },
+          "account_features": {
+            "id": "account_features",
+            "properties": {
+              "time_trackable": {
+                "type": "boolean"
+              },
+              "has_time_entry_role_picker": {
+                "type": "boolean"
+              }
+            }
+          },
+          "17975505Permissions": {
+            "id": "17975505Permissions",
+            "properties": {
+              "can_change_price": {
+                "type": "boolean"
+              },
+              "can_see_financials": {
+                "type": "boolean"
+              },
+              "can_upload_files": {
+                "type": "boolean"
+              },
+              "is_participant": {
+                "type": "boolean"
+              },
+              "can_private_message": {
+                "type": "boolean"
+              },
+              "can_edit": {
+                "type": "boolean"
+              },
+              "can_change_story_billable": {
+                "type": "boolean"
+              },
+              "can_post": {
+                "type": "boolean"
+              },
+              "can_join": {
+                "type": "boolean"
+              }
+            }
+          },
+          "18459025Account_features": {
+            "id": "18459025Account_features",
+            "properties": {
+              "time_trackable": {
+                "type": "boolean"
+              },
+              "has_time_entry_role_picker": {
+                "type": "boolean"
+              }
+            }
+          },
+          "18504185Permissions": {
+            "id": "18504185Permissions",
+            "properties": {
+              "can_change_price": {
+                "type": "boolean"
+              },
+              "can_see_financials": {
+                "type": "boolean"
+              },
+              "can_upload_files": {
+                "type": "boolean"
+              },
+              "is_participant": {
+                "type": "boolean"
+              },
+              "can_private_message": {
+                "type": "boolean"
+              },
+              "can_edit": {
+                "type": "boolean"
+              },
+              "can_change_story_billable": {
+                "type": "boolean"
+              },
+              "can_post": {
+                "type": "boolean"
+              },
+              "can_join": {
+                "type": "boolean"
+              }
+            }
+          },
+          "18574815Account_features": {
+            "id": "18574815Account_features",
+            "properties": {
+              "time_trackable": {
+                "type": "boolean"
+              },
+              "has_time_entry_role_picker": {
+                "type": "boolean"
+              }
+            }
+          },
+          "18283405Status": {
+            "id": "18283405Status",
+            "properties": {
+              "color": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "key": {
+                "format": "int32",
+                "type": "integer"
+              }
+            }
+          },
+          "permissions": {
+            "id": "permissions",
+            "properties": {
+              "can_change_price": {
+                "type": "boolean"
+              },
+              "can_see_financials": {
+                "type": "boolean"
+              },
+              "can_upload_files": {
+                "type": "boolean"
+              },
+              "is_participant": {
+                "type": "boolean"
+              },
+              "can_private_message": {
+                "type": "boolean"
+              },
+              "can_edit": {
+                "type": "boolean"
+              },
+              "can_change_story_billable": {
+                "type": "boolean"
+              },
+              "can_post": {
+                "type": "boolean"
+              },
+              "can_join": {
+                "type": "boolean"
+              }
+            }
+          },
+          "18071985Account_features": {
+            "id": "18071985Account_features",
+            "properties": {
+              "time_trackable": {
+                "type": "boolean"
+              },
+              "has_time_entry_role_picker": {
+                "type": "boolean"
+              }
+            }
+          },
+          "17254575Account_features": {
+            "id": "17254575Account_features",
+            "properties": {
+              "time_trackable": {
+                "type": "boolean"
+              },
+              "has_time_entry_role_picker": {
+                "type": "boolean"
+              }
+            }
+          },
+          "18071985Status": {
+            "id": "18071985Status",
+            "properties": {
+              "color": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "key": {
+                "format": "int32",
+                "type": "integer"
+              }
+            }
+          },
+          "18283405Account_features": {
+            "id": "18283405Account_features",
+            "properties": {
+              "time_trackable": {
+                "type": "boolean"
+              },
+              "has_time_entry_role_picker": {
+                "type": "boolean"
+              }
+            }
+          },
+          "projectsListObject": {
+            "id": "projectsListObject",
+            "properties": {
+              "17254575": {
+                "type": "17254575"
+              },
+              "17975505": {
+                "type": "17975505"
+              },
+              "18045395": {
+                "type": "18045395"
+              },
+              "18071985": {
+                "type": "18071985"
+              },
+              "18283405": {
+                "type": "18283405"
+              },
+              "18459025": {
+                "type": "18459025"
+              },
+              "18504185": {
+                "type": "18504185"
+              },
+              "18574815": {
+                "type": "18574815"
+              }
+            }
+          },
+          "18574815Status": {
+            "id": "18574815Status",
+            "properties": {
+              "color": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "key": {
+                "format": "int32",
+                "type": "integer"
+              }
+            }
+          },
+          "18504185Status": {
+            "id": "18504185Status",
+            "properties": {
+              "color": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "key": {
+                "format": "int32",
+                "type": "integer"
+              }
+            }
+          },
+          "18574815Permissions": {
+            "id": "18574815Permissions",
+            "properties": {
+              "can_upload_files": {
+                "type": "boolean"
+              },
+              "is_participant": {
+                "type": "boolean"
+              },
+              "can_private_message": {
+                "type": "boolean"
+              },
+              "can_edit": {
+                "type": "boolean"
+              },
+              "can_join": {
+                "type": "boolean"
+              },
+              "user_is_client": {
+                "type": "boolean"
+              },
+              "access_level": {
+                "type": "string"
+              },
+              "can_change_price": {
+                "type": "boolean"
+              },
+              "can_see_financials": {
+                "type": "boolean"
+              },
+              "restricted": {
+                "type": "boolean"
+              },
+              "can_change_story_billable": {
+                "type": "boolean"
+              },
+              "can_post": {
+                "type": "boolean"
+              },
+              "team_lead": {
+                "type": "boolean"
+              }
+            }
+          },
+          "17254575Permissions": {
+            "id": "17254575Permissions",
+            "properties": {
+              "can_change_price": {
+                "type": "boolean"
+              },
+              "can_see_financials": {
+                "type": "boolean"
+              },
+              "can_upload_files": {
+                "type": "boolean"
+              },
+              "is_participant": {
+                "type": "boolean"
+              },
+              "can_private_message": {
+                "type": "boolean"
+              },
+              "can_edit": {
+                "type": "boolean"
+              },
+              "can_change_story_billable": {
+                "type": "boolean"
+              },
+              "can_post": {
+                "type": "boolean"
+              },
+              "can_join": {
+                "type": "boolean"
+              }
+            }
+          },
+          "18459025Permissions": {
+            "id": "18459025Permissions",
+            "properties": {
+              "can_change_price": {
+                "type": "boolean"
+              },
+              "can_see_financials": {
+                "type": "boolean"
+              },
+              "can_upload_files": {
+                "type": "boolean"
+              },
+              "is_participant": {
+                "type": "boolean"
+              },
+              "can_private_message": {
+                "type": "boolean"
+              },
+              "can_edit": {
+                "type": "boolean"
+              },
+              "can_change_story_billable": {
+                "type": "boolean"
+              },
+              "can_post": {
+                "type": "boolean"
+              },
+              "can_join": {
+                "type": "boolean"
+              }
+            }
+          },
+          "18504185Account_features": {
+            "id": "18504185Account_features",
+            "properties": {
+              "time_trackable": {
+                "type": "boolean"
+              },
+              "has_time_entry_role_picker": {
+                "type": "boolean"
+              }
+            }
+          },
+          "projectsList": {
+            "id": "projectsList",
+            "type": "array",
+            "items": {
+              "$ref": "projectsListObject"
+            }
+          },
+          "17975505Account_features": {
+            "id": "17975505Account_features",
+            "properties": {
+              "time_trackable": {
+                "type": "boolean"
+              },
+              "has_time_entry_role_picker": {
+                "type": "boolean"
+              }
+            }
+          },
+          "18071985Permissions": {
+            "id": "18071985Permissions",
+            "properties": {
+              "can_change_price": {
+                "type": "boolean"
+              },
+              "can_see_financials": {
+                "type": "boolean"
+              },
+              "can_upload_files": {
+                "type": "boolean"
+              },
+              "is_participant": {
+                "type": "boolean"
+              },
+              "can_private_message": {
+                "type": "boolean"
+              },
+              "can_edit": {
+                "type": "boolean"
+              },
+              "can_change_story_billable": {
+                "type": "boolean"
+              },
+              "can_post": {
+                "type": "boolean"
+              },
+              "can_join": {
+                "type": "boolean"
+              }
+            }
+          },
+          "status": {
+            "id": "status",
+            "properties": {
+              "color": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "key": {
+                "format": "int32",
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "query",
+          "converter": "toQueryParameters",
+          "dataType": "string",
+          "name": "where",
+          "description": "The CEQL search expression.",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "converter:toQueryParameters",
+          "required": false
+        },
+        {
+          "vendorType": "query",
+          "sampleData": "1",
+          "dataType": "string",
+          "name": "page",
+          "description": "The page number of resources to retrieve",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "page",
+          "required": false
+        },
+        {
+          "vendorType": "query",
+          "sampleData": "100",
+          "dataType": "string",
+          "name": "pageSize",
+          "description": "The number of resources to return in a given page",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "per_page",
+          "required": false
+        }
+      ],
+      "rootKey": "|workspaces"
+    },
+    {
+      "path": "/hubs/general/projects",
+      "vendorMethod": "POST",
+      "method": "POST",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Create a new workspace",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "body",
+          "dataType": "projects",
+          "name": "body",
+          "description": "The object body",
+          "vendorDataType": "projects",
+          "source": "request",
+          "type": "body",
+          "vendorName": "body",
+          "required": true
+        }
+      ],
+      "vendorPath": "/workspaces.json"
+    },
+    {
+      "path": "/hubs/general/projects/{id}",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "adsf",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "path",
+          "dataType": "string",
+          "name": "id",
+          "description": "Workspace Id",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "path",
+          "vendorName": "id",
+          "required": true
+        }
+      ],
+      "vendorPath": "/workspaces.json?only={id}",
+      "rootKey": "workspaces"
+    },
+    {
+      "method": "GET",
+      "nextResource": "",
+      "kind": "eb",
+      "description": "Search for /users",
+      "type": "api",
+      "vendorPath": "/users/me.json",
+      "nextPageKey": "",
+      "path": "/hubs/general/users",
+      "paginationType": "",
+      "vendorMethod": "GET",
+      "response": {
+        "contentType": "application/json"
+      },
+      "operationId": "",
+      "hooks": [],
+      "modelMigrated": false,
+      "rootKey": ""
+    }
+  ],
+  "protocolType": "http",
+  "transformationsEnabled": true,
+  "deleted": false,
+  "hub": "general",
+  "typeOauth": false,
+  "name": "Mavenlink",
+  "extendable": false,
+  "parameters": [
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Accept",
+      "required": false
+    },
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Content-Type",
+      "required": false
+    }
+  ]
+}
