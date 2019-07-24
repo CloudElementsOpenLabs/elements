@@ -10,7 +10,6 @@ GET /inputBeneficiary
 GET /invoices  
 POST /invoices  
 GET /invoices/{id}  
-POST /Oauth  
 GET /objects  
 GET /suppliers  
 GET /suppliers/{id}  
