@@ -7,7 +7,7 @@ This element includes all endpoints detailed in the documentation though some fu
 
 ## Instance Creation
 
-To create an instance of this element you must already have an [app] (https://discordapp.com/developers/applications) and a bot on that app. The three configuration parameters that you need to fill in are *Bot Token*, *App Client ID*, and *App Client Secret*. All of these values can be found on your app's page. Remember to input your *Bot Token* in the form `Bot <BOT_TOKEN>` to make the auth work.
+To create an instance of this element you must already have an [app](https://discordapp.com/developers/applications) and a bot on that app. The three configuration parameters that you need to fill in are *Bot Token*, *App Client ID*, and *App Client Secret*. All of these values can be found on your app's page. Remember to input your *Bot Token* in the form `Bot <BOT_TOKEN>` to make the auth work.
 
 ## Known Issues
 
