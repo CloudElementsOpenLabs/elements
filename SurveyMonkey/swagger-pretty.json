@@ -2621,7 +2621,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-surveymonkey",
+    "title" : "surveymonkey",
     "version" : "api-v2"
   },
   "tags" : [ {

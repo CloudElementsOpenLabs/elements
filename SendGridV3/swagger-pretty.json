@@ -1768,7 +1768,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-sendgridv3",
+    "title" : "sendgridv3",
     "version" : "api-v2"
   },
   "tags" : [ {

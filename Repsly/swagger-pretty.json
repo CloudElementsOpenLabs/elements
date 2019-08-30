@@ -1919,7 +1919,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-repsly",
+    "title" : "repsly",
     "version" : "api-v2"
   },
   "tags" : [ {

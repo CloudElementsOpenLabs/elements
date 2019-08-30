@@ -1874,7 +1874,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-democalculator",
+    "title" : "democalculator",
     "version" : "api-v2"
   },
   "tags" : [ {

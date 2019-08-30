@@ -3101,7 +3101,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-shiftboard",
+    "title" : "shiftboard",
     "version" : "api-v2"
   },
   "tags" : [ {

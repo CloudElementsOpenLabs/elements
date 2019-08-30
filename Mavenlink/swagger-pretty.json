@@ -3462,7 +3462,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-mavenlink",
+    "title" : "mavenlink",
     "version" : "api-v2"
   },
   "tags" : [ {

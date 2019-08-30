@@ -1917,7 +1917,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-googlepubsub",
+    "title" : "googlepubsub",
     "version" : "api-v2"
   },
   "tags" : [ {

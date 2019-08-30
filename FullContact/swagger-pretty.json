@@ -2118,7 +2118,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-fullcontact",
+    "title" : "fullcontact",
     "version" : "api-v2"
   },
   "tags" : [ {

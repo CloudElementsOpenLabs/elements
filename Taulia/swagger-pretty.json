@@ -3711,7 +3711,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-taulia",
+    "title" : "taulia",
     "version" : "api-v2"
   },
   "tags" : [ {

@@ -8691,7 +8691,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-discordbot",
+    "title" : "discordbot",
     "version" : "api-v2"
   },
   "tags" : [ {

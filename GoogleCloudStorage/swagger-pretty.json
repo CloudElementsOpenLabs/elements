@@ -1645,7 +1645,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-google_cloud_storage",
+    "title" : "google_cloud_storage",
     "version" : "api-v2"
   },
   "tags" : [ {

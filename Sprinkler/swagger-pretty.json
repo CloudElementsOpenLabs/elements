@@ -2558,7 +2558,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-sprinklr",
+    "title" : "sprinklr",
     "version" : "api-v2"
   },
   "tags" : [ {

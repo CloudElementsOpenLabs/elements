@@ -6209,7 +6209,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-billyaccounting",
+    "title" : "billyaccounting",
     "version" : "api-v2"
   },
   "tags" : [ {

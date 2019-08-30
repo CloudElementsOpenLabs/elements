@@ -30356,7 +30356,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-tracktikapi2",
+    "title" : "tracktikapi2",
     "version" : "api-v2"
   },
   "tags" : [ {

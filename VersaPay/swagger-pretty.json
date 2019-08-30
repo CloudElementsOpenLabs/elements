@@ -2316,7 +2316,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-versapay",
+    "title" : "versapay",
     "version" : "api-v2"
   },
   "tags" : [ {

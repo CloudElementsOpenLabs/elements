@@ -1944,7 +1944,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-demosamanage",
+    "title" : "demosamanage",
     "version" : "api-v2"
   },
   "tags" : [ {

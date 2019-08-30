@@ -4299,7 +4299,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-icims",
+    "title" : "icims",
     "version" : "api-v2"
   },
   "tags" : [ {

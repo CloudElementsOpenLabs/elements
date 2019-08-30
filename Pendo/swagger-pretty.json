@@ -2242,7 +2242,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-pendoapi",
+    "title" : "pendoapi",
     "version" : "api-v2"
   },
   "tags" : [ {

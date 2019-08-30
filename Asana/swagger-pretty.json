@@ -2701,7 +2701,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-asana",
+    "title" : "asana",
     "version" : "api-v2"
   },
   "tags" : [ {

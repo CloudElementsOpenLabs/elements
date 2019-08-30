@@ -2272,7 +2272,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-demoexpensewire",
+    "title" : "demoexpensewire",
     "version" : "api-v2"
   },
   "tags" : [ {

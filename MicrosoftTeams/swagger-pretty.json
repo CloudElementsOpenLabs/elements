@@ -6579,7 +6579,7 @@
     "contact" : {
       "email" : "support@cloud-elements.com"
     },
-    "title" : "swagger-microsoftgraph",
+    "title" : "microsoftgraph",
     "version" : "api-v2"
   },
   "tags" : [ {
