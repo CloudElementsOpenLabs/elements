@@ -11,7 +11,7 @@
     "key" : "mandrill_3"
   },
   "CambridgeFx" : {
-    "image" : "---",
+    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/ADPWorkForceNow/democambridgefx.png",
     "path" : "CambridgeFx/element.json",
     "hub" : "general",
     "author" : "CE",
@@ -110,7 +110,7 @@
     "key" : "returnlyapi"
   },
   "VersaPay" : {
-    "image" : "---",
+    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/ADPWorkForceNow/versapay.png",
     "path" : "VersaPay/element.json",
     "hub" : "general",
     "author" : "CE",
@@ -242,7 +242,7 @@
     "key" : "billyaccounting"
   },
   "CloudElements" : {
-    "image" : "---",
+    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/ADPWorkForceNow/democloudelements.png",
     "path" : "CloudElements/element.json",
     "hub" : "general",
     "author" : "CE",
@@ -264,7 +264,7 @@
     "key" : "google_cloud_storage"
   },
   "SapHybrisMarketing" : {
-    "image" : "---",
+    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/ADPWorkForceNow/hybris3.png",
     "path" : "SapHybrisMarketing/element.json",
     "hub" : "erp",
     "author" : "CE",
@@ -352,7 +352,7 @@
     "key" : "sprinklr"
   },
   "ADPWorkForceNow" : {
-    "image" : "---",
+    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/ADPWorkForceNow/adpwfnSDF.png",
     "path" : "ADPWorkForceNow/element.json",
     "hub" : "general",
     "author" : "CE",
