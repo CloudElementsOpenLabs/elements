@@ -40,7 +40,7 @@
     "name" : "GitHub",
     "description" : "Build software better, together. Powerful collaboration, code review, and code management for open source and private projects.",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "latest",
     "key" : "github_max_test"
   },
   "Asana" : {
@@ -73,7 +73,7 @@
     "name" : "ICIMS",
     "description" : "this is a demo element for ICIMS API",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "latest",
     "key" : "icims"
   },
   "Pendo" : {
@@ -106,7 +106,7 @@
     "name" : "Returnly API",
     "description" : "# Introduction\nThe Returnly API enables developers to seamlessly receive and pass up-to-date returns and refunds data into the platforms you use to run your business. Optimize your returns and merchandise strategies, maximize your technology investments and streamline your business with our [Returns](#tag/Returns), [Requests](#tag/Requests) & [Refunds](#tag/Refunds) APIs\n\n# Common Use Cases\n * Update your OMS with real-time returns data\n * Get up to date returns status in real-time\n * Leverage granular return data to optimize your current merchandise initiatives\n * Track shipping and delivery of product returns\n * Feed your CRM systems with real-time customer returns data\n * Manage inventory predictably by monitoring returns and understanding which items have resell potential\n * Manage inventory predictably by monitoring returns and understanding which items have resell potential\n * Automate order refunds by connecting your warehouse scan system to the Returnly Refund API\n\n# Getting Started\n## Customers\nYou will need an Enterprise Returnly license in order to access our API. Please contact your Returnly representative to gain access.\n",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "v1.0.0",
     "key" : "returnlyapi"
   },
   "VersaPay" : {
@@ -117,7 +117,7 @@
     "name" : "VersaPay",
     "description" : "blah blah blah",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "latest",
     "key" : "versapay"
   },
   "FullContact" : {
@@ -150,7 +150,7 @@
     "name" : "Calculator Soap",
     "description" : "Imported simple calculator SOAP Element",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "latest",
     "key" : "democalculator"
   },
   "Pinterest" : {
@@ -183,7 +183,7 @@
     "name" : "TalentReef",
     "description" : "yaaa",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "v1",
     "key" : "talentreef"
   },
   "AccurateBackground" : {
@@ -205,7 +205,7 @@
     "name" : "Samanage (Demo)",
     "description" : "Samanage help desk Element",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "v2.1",
     "key" : "demosamanage"
   },
   "VCloudAir" : {
@@ -216,7 +216,7 @@
     "name" : "vCloud Air",
     "description" : "vCloud Air is the hybrid cloud built for modern IT.",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "5.7",
     "key" : "vcloudair"
   },
   "Lyft" : {
@@ -271,7 +271,7 @@
     "name" : "HybrisMarketing",
     "description" : "THe hybris marketing element",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "v2",
     "key" : "hybris3"
   },
   "OneLogin" : {
@@ -304,7 +304,7 @@
     "name" : "Infoplus",
     "description" : "This element will be partially built ",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "latest",
     "key" : "infoplus"
   },
   "Ipify" : {
@@ -315,7 +315,7 @@
     "name" : "ipify",
     "description" : "An example of an element using ipify.org - a simple public IP address API",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "latest",
     "key" : "ipify"
   },
   "FacebookAds" : {
@@ -337,7 +337,7 @@
     "name" : "Paychex Flex (Demo)",
     "description" : "Paychex Flex Element",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "v1",
     "key" : "demopaychexflex"
   },
   "Sprinkler" : {
@@ -425,8 +425,19 @@
     "name" : "ExpenseWire (Demo)",
     "description" : "Imported http://ExpenseWire.com/ SOAP Element",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "v2.0",
     "key" : "demoexpensewire"
+  },
+  "AmazonRekognition" : {
+    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/AmazonRekognition/awsrekognition.jpg",
+    "path" : "AmazonRekognition/element.json",
+    "hub" : "ai",
+    "author" : "CE",
+    "name" : "AWS Rekognition",
+    "description" : "Api's to connect to aws rekognition service using aws lambda service.",
+    "active" : true,
+    "vendor_version" : "latest",
+    "key" : "awsrekognition"
   },
   "DiscordBot" : {
     "image" : "https://images.cloudelements.io/discordbot201907252107.png",
@@ -458,7 +469,7 @@
     "name" : "Shiftboard",
     "description" : "Element for the Shiftboard Element",
     "active" : true,
-    "vendor_version" : "---",
+    "vendor_version" : "RPC",
     "key" : "shiftboard"
   },
   "DueDil" : {
