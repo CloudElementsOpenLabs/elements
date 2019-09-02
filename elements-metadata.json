@@ -11,7 +11,7 @@
     "key" : "mandrill_3"
   },
   "CambridgeFx" : {
-    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/ADPWorkForceNow/democambridgefx.png",
+    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/CambridgeFx/democambridgefx.png",
     "path" : "CambridgeFx/element.json",
     "hub" : "general",
     "author" : "CE",
@@ -110,7 +110,7 @@
     "key" : "returnlyapi"
   },
   "VersaPay" : {
-    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/ADPWorkForceNow/versapay.png",
+    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/VersaPay/versapay.png",
     "path" : "VersaPay/element.json",
     "hub" : "general",
     "author" : "CE",
@@ -242,7 +242,7 @@
     "key" : "billyaccounting"
   },
   "CloudElements" : {
-    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/ADPWorkForceNow/democloudelements.png",
+    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/CloudElements/democloudelements.png",
     "path" : "CloudElements/element.json",
     "hub" : "general",
     "author" : "CE",
@@ -264,7 +264,7 @@
     "key" : "google_cloud_storage"
   },
   "SapHybrisMarketing" : {
-    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/ADPWorkForceNow/hybris3.png",
+    "image" : "https://raw.githubusercontent.com/PradheepKumarA/elements/master/SapHybrisMarketing/hybris3.png",
     "path" : "SapHybrisMarketing/element.json",
     "hub" : "erp",
     "author" : "CE",
