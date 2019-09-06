@@ -12,4 +12,20 @@ Note that you will need to set redirect URLs to your app as to https://auth.clou
 
 ## Known Issues
 
-- Missing resources. The main resources implemented are for playback (Control API), group discovery (Control API) and authentication
+Sonos exposes a rich set of API resources. This element focuses on the Sonos Control and Authorization API. Resources implemented
+*  Authorization
+	* Create authorization code
+	* Create token
+	* Refresh token
+* Control API
+	* GET /households
+	* GET /groups/{householdId}
+	* GET /groupsFirstHousehold
+	* POST /createGroup/{householdId}
+	* POST /modifyGroup/{groupId}
+	* GET /pause/{groupId}
+	* GET /play/{groupId}
+	* GET /volume/{playerId}
+	* POST /volume/{playerId}
+
+The Sonos element easy extendible in case you need additional resources for the Control API or access to the Sonos's Cloud Queue API or Sonos Music API.
