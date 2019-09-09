@@ -1,0 +1,564 @@
+e-framework-00003336.sql	Bhargavi	EL-3675 reverting bulk for marketo to migration state
+ce-framework-00003335.sql	Harsha	EL-3493 Zendesk support Side Loading
+ce-framework-00003334.sql	Mukund Bayyaram	EL-3665 OracleSalesCloud WHERE clause config & x-searchable-joins update in models for all objects
+ce-framework-00003333.sql	Mounika	EL-3341 Changes to Google Drive
+ce-framework-00003332.sql	shirisha kodimala	EL-3620 - Intacct - add the /bills-payments/{id}/reverse and the /bills-payments/{id}/void endpoints
+ce-framework-00003331.sql	Stephen Hanzlik	SDR-1717 - Add ability to edit Ids with a PUT for Intelligence Users
+ce-framework-00003330.sql	Jimmy Truong	EL-3229 - Maximizer: Fix typo in schemaUpdates hook
+ce-framework-00003329.sql	Bharadwaj Turlapati	EL-1839 - Hide old Java element Zoho CRM from UI
+ce-framework-00003328.sql	Bharadwaj Turlapati	EL-3502 - Sage Intacct : Where clause description should be changed
+ce-framework-00003327.sql	Bharadwaj Turlapati	EL-3483 Servicenow: GET objects/{ObjectName}/metadata is returning 500 for requests Endpoints
+ce-framework-00003326.sql	Satish V	EL-3658 - Sage Intact : Models issues for DTD 3.0
+ce-framework-00003325.sql	Bharadwaj Turlapati	EL-3501 - Sage Intacct : No nextPage field for GET entities
+ce-framework-00003324.sql	Mounika	EL-3494 Add Beta tag to new Elements
+ce-framework-00003323.sql	Pradheep Kumar	EL-3628 - Files element - swagger issue
+ce-framework-00003322.sql	Mounika	EL-3622- Office365
+ce-framework-00003321.sql	Rafi	EL-3565 Added description column for element parameter
+ce-framework-00003320.sql	Bharadwaj Turlapati	EL-2208 Sage 200:Bulk job is aborting for payments and paymentsReceipts endpoints.
+ce-framework-00003319.sql	Naga	EL-3619 Maximizer add addressbook-entries config
+ce-framework-00003318.sql	Atul	EL-3618 SAP B1 Improvements
+ce-framework-00003317.sql	Rafi	EL-3568 Update varchar size for model names
+ce-framework-00003316.sql	Mounika	EL-3130- Hide Office365 Element
+ce-framework-00003315.sql	Bharadwaj Turlapati	EL-3082 Hide Netsuite Element in production
+ce-framework-00003314.sql	Mounika	EL-3592- Office 365
+ce-framework-00003313.sql	Harsha	EL-3496 Remove sharepoint requirement for key/secret
+ce-framework-00003312.sql	Shanuksha	EL-956 model change for Dropbox PATCH/files/metadata
+ce-framework-00003311.sql	Mounika	EL-3499 ConnectWise CRM REST : Issues with campaigns endpoint
+ce-framework-00003310.sql	Naga	EL-1328 - Autotask Update kind for ping api
+ce-framework-00003309.sql	Pradheep Kumar	EL-2297 - Files element Release
+ce-framework-00003308.sql	Harsha	EL-3455 - Added cloudElementsLink parameter for Evernote Element.
+ce-framework-00003307.sql	Satish V	EL-3518 - salesforcemarketingcloud:activities-events-id-2nd is showing in the resource tab
+ce-framework-00003306.sql	Satish V	EL-2809 - SuccessFactors SAP Issues
+ce-framework-00003305.sql	Mukund	IBM-150 - Oracle sales cloud - pk change from vendor in activities object
+ce-framework-00003304.sql	bhargavi	EL-3158 - Marketo bulk enabling and disabling for objects
+ce-framework-00003303.sql	Harsha	EL-2594 - SFDC Migration to EB Formt
+ce-framework-00003302.sql	Harsha	EL-2550 - Remove required startDate from GET /employees/job/{id} in Success Factors
+ce-framework-00003301.sql	Sai charan	EL-3512 - Oracle service cloud missing fields in agents after migration.
+ce-framework-00003300.sql	Mounika	EL-2873 - Migration of Jira to EB element
+ce-framework-00003299.sql	Bharadwaj Turlapati	EL-3454 - Intacct : Discrepancy with the primary key defined in the model for sales-order endpoint
+ce-framework-00003298.sql	Pradheep Kumar	EL-3431 - Pardot model fix for contacts endpoint
+ce-framework-00003297.sql	Harsha	EL-3202 - Fixed Onedrive for Business /files/copy endpoint issue
+ce-framework-00003296.sql	Harsha	EL-2711 - Migration of DropboxBusinessV2 to EB format
+ce-framework-00003295.sql	Bhargavi	EL-2607 - Migration of Dropbox to EB element
+ce-framework-00003294.sql	Satish V	EL-2337 Migration of Salesforce Marketing Cloud to EB element
+ce-framework-00003293.sql	Harsha	EL-3257 - OracleHCM Cloud Events Issue
+ce-framework-00003292.sql	Harsha	EL-2593 - Migration of SFDC Libraries
+ce-framework-00003291.sql	Naga	EL-1238 Ping for Autotask
+ce-framework-00003290.sql	Ganesh	SDR-1564 Google Analytics JS Snippet Preventing Axway from Getting User Session Data
+ce-framework-00003289.sql	Bhargavi	EL-2545 bulkupload apis
+ce-framework-00003288.sql	Harsha	EL-3438 - Change Request model of PUT /spreadsheets endpoint
+ce-framework-00003287.sql	Atul .	EL-3434 SapB1 Enhancements SQ and VM Ware Take 1 .
+ce-framework-00003286.sql	Naga	Elements Cheat Update
+ce-framework-00003285.sql	Jamie	EL-3296 FIX
+ce-framework-00003284.sql	Pradheep Kumar	EL-3205 - Pardot metadata fix
+ce-framework-00003283.sql	Mukund	EL-3427 Oracle sales cloud: Where clause fix and x-searchables for activities object
+ce-framework-00003282.sql	Satish V	EL-2592 Migration of SFDC DOCUMENTS to Element Builder Format.
+ce-framework-00003281.sql	M Bhargavi	EL-3371 adding variable declaration in javascript
+ce-framework-00003280.sql	Taylor	add cascade on delete for vdr_field
+ce-framework-00003279.sql	Satish V	Intacct : Added departments, entity Resource
+ce-framework-00003278.sql	Apoorva Tiwari	EL-3166 - Intacct : Added /ap-bills Resource
+ce-framework-00003277.sql	Rahul	EL-2588 - Volusion element migration to EB format.
+ce-framework-00003276.sql	Bhargavi	EL-3069 - Adding bulk query resource fro eloqua
+ce-framework-00003275.sql	Avinash	EL-3258 Bamboo HR Element changes from XML to JSON data type
+ce-framework-00003274.sql	Shanuksha	EL-3204 ConnectWise CRM REST Add /products Resource
+ce-framework-00003273.sql	Ramana	EL-3223 SAP S/4 Hana cloud provisioning
+ce-framework-00003272.sql	Naga	EL-1238 - Ping API
+ce-framework-00003271.sql	Avinash	EL-3329 - Zendesk addition of fields in /sections payload
+ce-framework-00003270.sql	Mounika	EL-3203 Added /campaigns, /campaign-types, /campaign-subTypes, /campaign-statuses Resource for ConnectWise CRM REST
+ce-framework-00003269.sql	Bharadwaj Turlapati	EL-3154 - Intacct : Discrepancy with the primary key defined in the model for sales-order endpoint
+ce-framework-00003268.sql	shirisha	EL-3294 - Need to support Accept header param with value = application/vnd.citrix.g2wapi-v1.1+json for GoToWebinar V2 Apis. Incorporation of Get Registration Fields in list of resources.
+ce-framework-00003267.sql	Pradheep Kumar	EL-3205 - Pardot metadata enhancement
+ce-framework-00003266.sql	Sai charan J M	EL-795- Swagger Issue on Sailthru because of missing models on all APIs
+ce-framework-00003265.sql	Bhargavi	EL-3274 - Adding scope to outlook to get refresh token.
+ce-framework-00003264.sql	Harsha	EL-24 - Made changes across Docs Hub to Filter CE Public Links
+ce-framework-00003263.sql	Mounika	EL-3318 Make API Key and API Secret Required for Gmail Element
+ce-framework-00003262.sql	Rahul	EL-3304 - GoodData swagger error fixes.
+ce-framework-00003261.sql	Ramana	EL-238 - Enhanced JDBC bulk downloads to be default to 100
+ce-framework-00003260.sql	Shirisha	EL-3314 - Syncplicity - OAuth2 Default API Key and Secret for EU and US Users
+ce-framework-00003259.sql	Rahul	EL-3314 - Make client id mandatory for ConnectWiseCrmRest element.
+ce-framework-00003258.sql	Satish V	EL-3310 - Fix Swagger Issues for GoToWebinar across all enviornments
+ce-framework-00003257.sql	Rahul	EL-3312 - Migrates infobip to EB format and fixes swagger errors.
+ce-framework-00003256.sql	Sai charan J M	EL-3302 - Hide Nimsoft Element across all environments
+ce-framework-00003255.sql	Pradheep Kumar	EL-3287 - Intacct parameter fix
+ce-framework-00003254.sql	Satish V	EL-3103 - Need to support arguments like initial_comment,file_name,filetype,title for POST files for slack element.
+ce-framework-00003253.sql	Jamie	EL-3296 - adding SageOne Delete payments API
+ce-framework-00003252.sql	Harsha	EL-2863 - Dropboxv2 Element Migration to EB Element
+ce-framework-00003251.sql	M Bhargavi	EL-3829 - Swagger Issue for zoho crm v2
+ce-framework-00003250.sql	Satish V	EL-3098 - SuccessFactors Element is configured to only work with US data centers
+ce-framework-00003249.sql	Pradheep Kumar	EL-3287 - Intacct Swagger Issue
+ce-framework-00003248.sql	NAGA	EL-3244 SFDC Duplicate events stuff
+ce-framework-00003247.sql	Mounika	EL-2310 Office365 Element
+ce-framework-00003246.sql	Giri	EL-2872 Migration of SFDC_SERVICE_CLOUD to EB element
+ce-framework-00003245.sql	Sai charan J M	EL-2865 Migration of Oracle Service Cloud to Element Builder Format
+ce-framework-00003244.sql	Bharadwaj Turlapati	EL-2839 Resources for Netsuite Suitescript element
+ce-framework-00003243.sql	NAGA	EL-3175 GoogleDrive - adds config to decide revoke or not
+ce-framework-00003242.sql	Jimmy	EL-3167 Intacct: Patch and Delete for credit-memos and debit-memos
+ce-framework-00003241.sql	Avinash	EL-1376 Configuration Standarization for Zendesk.
+ce-framework-00003240.sql	Rahul	EL-3182 Deletes the duplicate resource in Eloqua.
+ce-framework-00003239.sql	Tyler	EL-3212 Fixed E-conomic provisioning
+ce-framework-00003238.sql	Jimmy	EL-3163 Adds patch /bills-reverse endpoint to intacct
+ce-framework-00003237.sql	NAGA	EL-3250 and EL-3245 Added new AP's G2W
+ce-framework-00003236.sql	Giri	EL-3232 - Google Adwords disable pagination
+ce-framework-00003235.sql	Satish V	EL-3211 Syncplicity - uploading a JPG type file results in a 500 error
+ce-framework-00003234.sql	Avinash	EL-3228 - Jira Issue
+ce-framework-00003233.sql	Tyler	SDR-1552 - Added backup SAML cert ability for Service Provider
+ce-framework-00003232.sql	Rahul	EL-3201 - Tylor's sql to use xml.parser v2 for 2 elements.
+ce-framework-00003231.sql	Avinash	EL-3207 : Jira On Prem Missing object id for one event
+ce-framework-00003230.sql	Avinash	EL-3153 : Unhide Jira On Prem element
+ce-framework-00003229.sql	Naga	EL-3139 : Github making API api and secret as non-required
+ce-framework-00003228.sql	Avinash	EL-3159: Display Name change
+ce-framework-00003227.sql	Satish V	EL-3171 - Freshbooks Cloud Accounting - Cannot POST Instance
+ce-framework-00003226.sql	Pradheep Kumar	EL-2297 - Files Element
+ce-framework-00003225.sql	Eva Suska	TS-1131 - completed marketing flag
+ce-framework-00003224.sql	Pradheep Kumar	EL-3072 - Intacct tickets
+ce-framework-00003223.sql	Avinash	EL-3159: QA Defect Fixes for Jira On Prem New Element
+ce-framework-00003222.sql	Bhargavi	EL-2811 Adding Zoho crm v2 custom objects
+ce-framework-00003221.sql	Harsha	EL-3090 Renamed Request Models for Gmail Element
+ce-framework-00003220.sql	Harsha	EL-3181 : Fixed Spreadsheet PUT endpoint to support Conditional Formatting
+ce-framework-00003219.sql	Harsha	EL-2934 : DB Script to update context_params column in element_resource_hook for all elements
+ce-framework-00003218.sql	Harsha	EL-2934 : DB Script to update context_params column in element_hook for all elements
+ce-framework-00003217.sql	Atul	EL-3044 Marketo Add Config to enable companies
+ce-framework-00003216.sql	Mounika	EL-3152 Cleo - Greenhouse CandidatesListObject Missing Swagger Fields
+ce-framework-00003215.sql	Bharadwaj Turlapati	EL-2643 - Migration of QuickBooks to Element Builder Format
+ce-framework-00003214.sql	Satish V	EL-3039 Allow an optional payload to be associated with a bulk callback
+ce-framework-00003213.sql	Harsha	EL-3097 : Fixed Element IRS issue for Expensify Policies Endpoint
+ce-framework-00003212.sql	Bharadwaj Turlapati	QBO - Adding oauth2 to dropdown
+ce-framework-00003211.sql	Giri	EL-3080 : Add new reporting resource to Google AdWords
+ce-framework-00003210.sql	NAGA	QBO - ADD /preference-object API
+ce-framework-00003209.sql	Bharadwaj Turlapati	QBO - Defaulting auth type to oauth1
+ce-framework-00003208.sql	Harsha	EL-3106 : UnHide OracleHCM Cloud Element
+ce-framework-00003207.sql	Harsha	EL-3105 : Hide OracleHCM Cloud Element
+ce-framework-00003206.sql	Avinash	EL-3133 - Hide Jira On Prem Element unless testing is complete
+ce-framework-00003205.sql	Mounika	EL-2605 - Migration of BOX to Element Builder Format
+ce-framework-00003204.sql	Pradheep Kumar	EL-3124 - Intercom duplicate entries in metadata
+ce-framework-00003203.sql	Vineet	DELETED BEFORE MERGE: THIS NUMBER CAN BE REUSED FOR AN INDEPENDENT SCRIPT
+ce-framework-00003202.sql	Atul	EL-3102 : Unhide Rest Id in ConnectWise
+ce-framework-00003201.sql	Avinash	EL-3047 : Twitter Add media upload end-points for images
+ce-framework-00003200.sql	Avinash	EL-2526 : Jira Service Desk New Element
+ce-framework-00003199.sql	Naga	EL-3070 : Gotowebinar enhanced v1 to v2
+ce-framework-00003198.sql	Satish V	EL-2986 Please add item-receipts endpoint to the swagger for Netsuite Finance 2018 Release 1
+ce-framework-00003197.sql	Sai charan J M	EL-3041 : Intact : SalesOrder : Element Irs failure for sage intact sales order
+ce-framework-00003196.sql	Harsha	EL-3091 : Swagger failure for Zendesk
+ce-framework-00003195.sql	Harsha	EL-3053 : Fixed Swagger Issue for Bullhorn Element
+ce-framework-00003194.sql	Satish V	EL-3040 Marketo:Bulk is failing some endpoints.
+ce-framework-00003193.sql	Bhargavi	EL-2604 Sharepoint element builder migration.
+ce-framework-00003192.sql	Mounika	EL-3073 Swagger validation for googledrive, terminus and netsuitefinancev2
+ce-framework-00003191.sql	Rahul	EL-2999 Marketo end-point fixes.
+ce-framework-00003190.sql	Ramana	Reverts Marketo element_object updates.
+ce-framework-00003189.sql	Rahul	EL-3043: Reverts Marketo, sharepoint, and Zendesk elements migration.
+ce-framework-00003188.sql	Harsha	EL-2956 : Response Format issue in Reports Endpoint for Expensify Element
+ce-framework-00003187.sql	M.Bhargavi	EL-2427: Maximizer alias as optional field
+ce-framework-00003186.sql	NAGA	EL-2726 Acuity Webhooks
+ce-framework-00003185.sql	Sai charan J M	EL-3005 Sage Intacct create Sales-Order models
+ce-framework-00003184.sql	Satish V	EL-2983: Google Drive - allow includeTeamDrives=true as the default (K2)
+ce-framework-00003183.sql	Mounika	EL-2650: ACT-hide
+ce-framework-00003182.sql	Satish V	EL-2614: [Migration]Migration of Marketo to Element Builder Format
+ce-framework-00003181.sql	Avinash	EL-2904 : Unhide Dynamics Navision
+ce-framework-00003180.sql	Avinash	EL-2823 : Dynamics Navision QA Fix
+ce-framework-00003179.sql	Harsha	EL-2796 : Added New Endpoints for Expensify Element
+ce-framework-00003178.sql	Sai charan	IBM-148 Oracle service cloud advance model
+ce-framework-00003177.sql	Pradheep Kumar	Intercom - Issue fixes
+ce-framework-00003176.sql	Apoorva	EL-2608: Migration of Oracle Eloqua to Element Builder
+ce-framework-00003175.sql	Jimmy	EL-2966: Constant Contact - Remove "print" from resource prehook
+ce-framework-00003174.sql	Bhargavi	EL-2545: Zoho CRM V2 bulk download enable and adding hook
+ce-framework-00003173.sql	Avinash	EL-1119: Oracle Sales Cloud Cleo Gap Enhancement Changes
+ce-framework-00003172.sql	Satish V	EL-2594: Migration of SalesForce Salescloud to Element Builder Format(SL1)
+ce-framework-00003171.sql	Satish V	EL-2893: Hubspot CRM: GET /leads is missing from swagger
+ce-framework-00003170.sql	Bharadwaj Turlapati	EL-2869: Migration of NETSUITECRMV2 to EB element
+ce-framework-00003169.sql	Rafi	EB-420 : Fixing model issues for woocommercerest, shopify and quickbase
+ce-framework-00003168.sql	Clayton	Extending Branding
+ce-framework-00003167.sql	Harsha	EL-2699 : Db Scripts to update context_params column in element_resource_hook table for Bullhorn element
+ce-framework-00003166.sql	Harsha	EL-2699 : Db Scripts to update context_params column in element_hook table for Bullhorn element
+ce-framework-00003165.sql	Pradheep Kumar	Unhide Intercom
+ce-framework-00003164.sql	Pradheep Kumar	Hide Intercom Unless complete testing is done
+ce-framework-00003163.sql	Harsha	EL-2931 : Db Scripts to create context_params column in hook tables
+ce-framework-00003162.sql	Bharadwaj Turlapati	Fix models for hubspot crm and marketo
+ce-framework-00003161.sql	Avinash	EL-2926-element_resource path variable correction post migration
+ce-framework-00003160.sql	Naga	EL-2919 Google drive /team-drives pagination issue
+ce-framework-00003159.sql	Avinash	EL-2903 Hide Dynamics Navision Unless complete testing is done
+ce-framework-00003158.sql	Avinash	EL-1431 GD : Add additional links to /files/links GET endpoint
+ce-framework-00003157.sql	Satish V	EL-2654 Add /balance/history to Stripe Element
+ce-framework-00003156.sql	Pradheep Kumar	EL-2875 - Migrate hubspotcrm to EB
+ce-framework-00003155.sql	Harsha	EL-2551 Fixed Element IRS Issue for Infusionsoft Rest
+ce-framework-00003154.sql	Bharadwaj Turlapati	EL-2888 - Marketo : API docs, authentication and other operations are broken
+ce-framework-00003153.sql	Rafi	EL-2871 Migration of SFTP to EB Format
+ce-framework-00003152.sql	Avinash	EL-2606 Migration of BoxV2 to Element Builder Format
+ce-framework-00003151.sql	Harsha	EL-2715 Migration of MAILCHIMP to Element Builder Format
+ce-framework-00003150.sql	Rafi	EL-2717 Migration of Mailjetmarketing to EB Format
+ce-framework-00003149.sql	Satish V	EL-2708 Migration of Ecwid to EB element
+ce-framework-00003148.sql	Shirisha	EL-2720 Migration of docushareflex to Element Builder Format
+ce-framework-00003146.sql	Mukund	EL-2609 Migration: Salesfore Pardot to EB format
+ce-framework-00003145.sql	Rahul	EL-2718 Migrate OneNote element to EB format
+ce-framework-00003144.sql	Mounika	EL-2336 Migration of Amazon S3 to EB element
+ce-framework-00003143.sql	Sai charan J M	EL-2716 Migration of MAILJET, to Element Builder Format
+ce-framework-00003142.sql	Satish V	EL-2694 OneDriveForBusiness:Add search functionality
+ce-framework-00003141.sql	Naga	EL-2812 Salesforce Marketing Cloud OAuth Upgrade
+ce-framework-00003140.sql	Atul	EL-2725, EL-2859
+ce-framework-00003139.sql	Harsha	EL-2292 Added new element OracleHCM Cloud
+ce-framework-00003138.sql	Atul	EL-2814 Hide/Unhide elements in all envs
+ce-framework-00003137.sql	Satish V	EL-2613 Migration of Zendesk to Element Builder Format
+ce-framework-00003136.sql	Naga	EL-1688 SFDC set polling as default event type
+ce-framework-00003135.sql	Naga	EL-2784 Workday Added Get /supplier-categories API
+ce-framework-00003134.sql	Atul	EL-2738 Unhide Sage 200 Element in all Envs
+ce-framework-00003133.sql	Atul	EL-1765 Change Element Name For Infusionsoft
+ce-framework-00003132.sql	Naga	EL-2620 Eloqua Added CRUDS for /contact-fields API
+ce-framework-00003131.sql	Mukund	IBM-143 Twitter: Renaming objects and advanced models
+ce-framework-00003130.sql	Shirisha	EL-2661-Capture Metadata: Define Metadata Schemas.
+ce-framework-00003129.sql	Mounika	EL-2327-Pipedrive element now supports oauth authentication
+ce-framework-00003128.sql	Bharadwaj Turlapati	EL-2769 Marketo : CEQL search should be removed for custom-objects/describe endpoint
+ce-framework-00003127.sql	Mounika	EL-2779 - BrightTALK Element Enhancements Bug with hubspotCountryValues field
+ce-framework-00003126.sql	Steve	EL-2125 Marketo - add the /forms and /forms/{id}/fields resources
+ce-framework-00003125.sql	Mounika	EL-2638 - Successfactors : GET/user-accounts API returns 413 (Request size limit exceeded)
+ce-framework-00003124.sql	Naga	EL-2727 - GoToWebinar - URI Updates
+ce-framework-00003123.sql	Satish V	EL-1694 - Netsuite - Allow disableMandatoryCustomFieldValidation on a per request basis (WebExpenses)
+ce-framework-00003122.sql	Bharadwaj Turlapati	EL-2447 - Insightly - Authentication Errors
+ce-framework-00003121.sql	Naga	EL-2726 - Acuityscheduling - Webhooks not works
+ce-framework-00003120.sql	Naga	EB-372 - Successfactors - Added Java Hook
+ce-framework-00003119.sql	Bharadwaj Turlapati	EL-2766 Netsuite Finance - Add /custom-lists Endpoint
+ce-framework-00003118.sql	Satish V	EL-2694 OneDriveForBusiness:Add search functionality
+ce-framework-00003117.sql	Pradheep Kumar A	Intercom - New Element
+ce-framework-00003116.sql	Atul	EL-2763 Fix Sage Element Visibility and Names
+ce-framework-00003115.sql	Atul	EL-2725 Fix Economic Property Names
+ce-framework-00003114.sql	Sai charan J M	IBM-141 Eloqua accounts nested object model fix
+ce-framework-00003113.sql	Pradheep Kumar	EL-2454 Eloqua to Add Visitors Endpoint and Support Visitors Bulk
+ce-framework-00003112.sql	M Bhargavi	EL-2604 Migration of Sharepoint to element builder
+ce-framework-00003111.sql	Bharadwaj T	EL-2325 Marketo - add custom object configuration API (HG Data)
+ce-framework-00003110.sql	M Bhargavi	EL-2582 Migration of AutotaskFinance to element builder format
+ce-framework-00003109.sql	Naga	EL-2422 Zoho CRM - Fix Pagination Issue
+ce-framework-00003108.sql	Atul	EL-2427 Revert
+ce-framework-00003107.sql	Rafi	EL-2707 - Migration of Syncplicity to Element Builder Format
+ce-framework-00003106.sql	Mukund	IBM-139 - Removed 'x-primary-key' field from request model in concur
+ce-framework-00003105.sql	Mounika	EL-2651- Act! Premium - Enable Bulk
+ce-framework-00003104.sql	Mukund	IBM-138 - Removed 'x-primary-key' field from request model in paypalv2
+ce-framework-00003103.sql	Mukund	IBM-137 - Queryparams change in OAuthUtil & delete prehook in twitter
+ce-framework-00003102.sql	Atul	EL-2621 - New Config to leverage Framework Bulk For Netsuite
+ce-framework-00003101.sql	Naga	EL-1786 - Google Adwords - Fix Versioning and Provision stuff
+ce-framework-00003100.sql	Rafi	EL-2587 - Migration of Sap Business One to Element Builder Format
+ce-framework-00003099.sql	Satish	EL-2649 - Migration of BrightTalk to Element Builder Format
+ce-framework-00003098.sql	Ramana	EL-2598 - Migration of Google Drive to EB element
+ce-framework-00003097.sql	Bharadwaj Turlapati	EL-2813 - Disable OAuth1 Provisioning in our UI so that it will default to Oauth2 Provisioning.
+ce-framework-00003096.sql	Bharadwaj Turlapati	EL-2603 - Migration of One Drive to Element Builder Format
+ce-framework-00003095.sql	Rahul	EL-2642 - Migration of Evernote to Element Builder Format
+ce-framework-00003094.sql	Mounika	EL2650 - Act! Premium - Unhide Element in All CE Environments
+ce-framework-00003093.sql	Naga	EL2689 - Egnyte Update Pagination Type
+ce-framework-00003092.sql	Mounika	EL-2327 Pipedrive element to support oauth
+ce-framework-00003091.sql	Vineet	SLYT-1054 Event hash validation
+ce-framework-00003090.sql	Atul	EL-2255 The refresh Time is set for 155 Days need to move it to 100
+ce-framework-00003089.sql	Atul	CE File Element
+ce-framework-00003088.sql	Bharadwaj Turlapati	EL-2576: Marketo Migration
+ce-framework-00003087.sql	Ramana	EL-2598: Googledrive Migration
+ce-framework-00003086.sql	Rahul	EL-2647: Update secret key type to Password for Amazon S3
+ce-framework-00003085.sql	Jimmy	EL-2056 Intacct: Update Dates type to string
+ce-framework-00003084.sql	Avinash	EL-2285 Microsoft Dynamics Navision New Element
+ce-framework-00003083.sql	Rahul	EL-2630 Updated the Client id and secret for google sheets and google sheets V4
+ce-framework-00003082.sql	Sai charan	EL-2626 ZohoCRMV2 : x-searchable is missing for accounts endpoint
+ce-framework-00003081.sql	M Bhargavi	EL-2406 object transformations for Act-on element
+ce-framework-00003080.sql	Naveen Kumar	EL-2509 Maximizer account issues due to old models /object
+ce-framework-00003079.sql	M Bhargavi	EL-2406 Migrate Acton
+ce-framework-00003078.sql	M Bhargavi	EL-2406 Migrate autotaskhelpdesk
+ce-framework-00003076.sql	M Bhargavi	EL-2406 Hide onedrive v1 element
+ce-framework-00003075.sql	Mukund	IBM-133 Stripe: Remove trailing spaces in fields names
+ce-framework-00003074.sql	Mounika	EL-2446-Add /meetings endpoint for Sugar CRM v2
+ce-framework-00003073.sql	Apoorva Tiwari	IBM-132 Paypal: Model fix for orders and payments objects
+ce-framework-00003072.sql	Apoorva Tiwari	IBM-131 Concur: Model fix for items object
+ce-framework-00003071.sql	Mukund	IBM-130 Intactt: Remove trailing spaces in fields names
+ce-framework-00003070.sql	Mukund	IBM-129 Freshbooks: Removing space in "date_from " field
+ce-framework-00003069.sql	M Bhargavi	EL-2326 Unhiding base element
+ce-framework-00003068.sql	M Bhargavi	EL-2427 Removing default values for maximizer configuration fields
+ce-framework-00003067.sql	Naveen Kumar	Sage 200:DELETE /warehouse-holdings/{id} & DELETE /warehouses/{id} is not deleting record from the list
+ce-framework-00003066.sql	M Bhargavi	EL-2452 Removing post hook for intacct element
+ce-framework-00003065.sql	Mounika	EL-2450 Deactivate Sugar element
+ce-framework-00003064.sql	Naveen Kumar	EL-2454 Enhance Eloqua to Add Visitors Endpoint and Support Visitors Bulk
+ce-framework-00003063.sql	Atul	EL-2348 Add option to merge Ids for Quick Books
+ce-framework-00003062.sql	Bharadwaj Turlapati	EL-2491 Docusign - Enhance Docusign To Derive The User's Language And Pass It As a Parameter to /documents/certificate
+ce-framework-00003061.sql	Austin	RVCL-1091 add sharing org element instance privileges
+ce-framework-00003060.sql	Mukund	IBM-68 Oracle Sales Cloud Advanced Models
+ce-framework-00003059.sql	Mounika	EL-2318 Sage 200:Response model is missing for some endpoints
+ce-framework-00003058.sql	Harsha	EL-1681 Added new endpoint for Bullhorn Element
+ce-framework-00003057.sql	M Bhargavi	Hide Webhook event in Google drive Configuration
+ce-framework-00003056.sql	Ramana	Autotaskcrm element migration
+ce-framework-00003055.sql	Ramana	Element Migration scripts
+ce-framework-00003054.sql	Chinna	EL-2479 Netsuite Fin adding a new resource
+ce-framework-00003053.sql	Mounika	EL-2377 BrightTalk element enhancements
+ce-framework-00003052.sql	Bharadwaj Turlapati	EL-1459 Great Plains - Remove GET /{objectName} for TaxCode and paymentmethod from Apidocs and Get/objects
+ce-framework-00003051.sql	NAGA	EL-2332 Gmail - Events Issue
+ce-framework-00003050.sql	Jimmy	EL-2155 Update deals model for Hubspot CRM and Marketing
+ce-framework-00003049.sql	M Bhargavi	Update display order for Oracle Eloqua element
+ce-framework-00003048.sql	M Bhargavi	Updating base element image and information to Zendesk sell
+ce-framework-00003046.sql	Chinna	EL-2057 exposing Concur base URL
+ce-framework-00003045.sql	Chinna	EL-1194 HubSpot Marketing name correction
+ce-framework-00003044.sql	Chinna	EL-1193 MS Great Planes name correction
+ce-framework-00003043.sql	Chinna	EL-2250 Connectwise ClientId header
+ce-framework-00003042.sql	NAGA	EL-2381 SmartRecruiters - Bulk Issue
+ce-framework-00003041.sql	M Bhargavi	EL-2328 Adding partner_id to marketo's authentication
+ce-framework-00003040.sql	Pradheep Kumar	EL-1125 Paypal Model - Cleogap
+ce-framework-00003039.sql	NAGA	Workday - Added API to validate cred's during provision instance and Event Poller Confi's
+ce-framework-00003038.sql	Sai charan	IBM-126 Eloqua Advance Model
+ce-framework-00003037.sql	Naveen Kumar	EL-1723 Swagger validation fails for nimsoft
+ce-framework-00003036.sql	Bharadwaj Turlapati	EL-2005 SuccessFactors' Host Name tooltip displays an href element
+ce-framework-00003035.sql	Bharadwaj Turlapati	EL-2161 OneDrive- New endpoint for Upload Session to overcome vendor limitation
+ce-framework-00003034.sql	Naga	EL-2224 Boxv2 custom-fields-templates API fix
+ce-framework-00003033.sql	Bharadwaj Turlapati	EL-2236: Adding vendorcategory, unitstypes, customlist and other charge purchase for netsuite erp.
+ce-framework-00003032.sql	Naveen Kumar	EL-2006: SAGE Accounting (One) - POST Journal-Entry Models/Swagger changed.
+ce-framework-00003031.sql	Rahul	EL-2319: Fixed models and resource path names for Pipedrive.
+ce-framework-00003030.sql	Naveen kumar	EL-1616 Issues for FieldServiceEdge element
+ce-framework-00003029.sql	Naveen kumar	EL-1827 QA-Production Defect.
+ce-framework-00003028.sql	Mounika	EL-2037 Clover- Deprecation of href value in JSON responses
+ce-framework-00003027.sql	Harsha	EL-1799 Fixed Bug and Model issues for Infusionsoft REST Element
+ce-framework-00003026.sql	Chinna	EL-2214 Nullify Empty flag for bulk downloads
+ce-framework-00003025.sql	Mukund	EL-2262 Twitter advanced models & added global POST hook
+ce-framework-00003024.sql	shirisha	EL-2128
+ce-framework-00003023.sql	Harsha	EL-2087 Fixed Model and Swagger issues for ZohoCRMv2 Element
+ce-framework-00003022.sql	Naveen Kumar	EL-1864 Plaid element does not have bank name in access_token type authentication
+ce-framework-00003021.sql	Chinna	EB-2247 Fixing Marketo /folders pagination issue
+ce-framework-00003020.sql	Tyler	EL-2266 Auditing element configs
+ce-framework-00003019.sql	Shirisha	EL-502 - GET /objects/{objectName}/metadata re-throws EB errors
+ce-framework-00003018.sql	Pradheep Kumar	EL-1424 - Correcting SQL script
+ce-framework-00003017.sql	Chinna	Tangocard: exposing baseURL to be able to update
+ce-framework-00003016.sql	Rahul	EL-2068: Fixed models for Weebly.
+ce-framework-00003015.sql	Naveen Kumar	EL-2006 SAGE Accounting (One) - POST Journal-Entry Models/Swagger
+ce-framework-00003014.sql	Naveen Kumar	Sage 200:DELETE /warehouse-holdings/{id} & DELETE /warehouses/{id} is not deleting record from the list
+ce-framework-00003013.sql	Mounika	Sage 200:Response model is not returning complete response body
+ce-framework-00003012.sql	Mounika	EL-2132Sage 200:Response model is missing for some endpoints
+ce-framework-00003011.sql	Rahul	EL-1729: Fixes for SmartRecruiters's swagger and models.
+ce-framework-00003010.sql	Avinash	EL-2013: Add email-stats end-point for Pardot Element.
+ce-framework-00003009.sql	Naveen kumar	EL-2141: Implement CEQL Queries for /expenses endpoint.
+ce-framework-00003008.sql	Rahul	EL-2151: Fix for the ZuoaV2 request model.
+ce-framework-00003007.sql	Sai charan J M	EL-2195 ZohoCRM v2: retrieve all is failing on the next page token.
+ce-framework-00003006.sql	Naveen kumar	EL-2164 Sage200:PATCH /warehouses/{id} is creating new record.
+ce-framework-00003005.sql	Apoorva Tiwari	EL-2188 Adobe-esign: Advance models for library-documents object
+ce-framework-00003004.sql	Austin	RVCL-924 Added sharing account element instances privileges
+ce-framework-00003003.sql	Harsha	EL-1249 Added new endpoint for Workplace by Facebook Element
+ce-framework-00003002.sql	Jimmy	EL-2124 Added forms endpoint to Pardot
+ce-framework-00003001.sql	Mounika	Fix Swagger Validation in Quickbase Element and un-hide.
+ce-framework-00002999.sql	Avinash	Taleo Business Basic Auth Provisioning Validation
+ce-framework-00002998.sql	Mukund	Infusionsoft CRM model changes
+ce-framework-00002997.sql	Pradheep Kumar	EL-1755 Hubspot CRM - Webhook fix
+ce-framework-00002996.sql	Shirisha	MicroStrategy. SuccessFactors. Should validate credentials on POST /instances
+ce-framework-00002995.sql	Atul	Modification to Eloqua Post Hook on Custom Object Creation
+ce-framework-00002994.sql	Chinna	Bullhorn /job-submissions and /opportunities updates
+ce-framework-00002993.sql	Tyler	Staging catalog cleanup and logos
+ce-framework-00002992.sql	Naga	Netsuite Add item-groups object_transformation for Financev2 and ERPv2
+ce-framework-00002991.sql	Sai Charan	Zohocrmv2:Remove unnecessary fields in the Response model for POST /accounts
+ce-framework-00002990.sql	Naveen	EL-1313 Deactivate Onedrive element
+ce-framework-00002989.sql	Chinna	Pardot config update
+ce-framework-00002988.sql	Naga	Tango Card Revert EL-1673 Script
+ce-framework-00002987.sql	Naga	JWT OAuth Configs for SFDC and Box
+ce-framework-00002986.sql	Chinna	Hiding SDK Broker Element
+ce-framework-00002985.sql	Taylor	Syncplicity logo field
+ce-framework-00002984.sql	Pradheep Kumar	Servicenow Oauth - Added Request endpoint
+ce-framework-00002983.sql	Pradheep Kumar	EL-1244 Servicenow - Added Request endpoint
+ce-framework-00002982.sql	Harsha	EL-1250 Added new Endpoint for Facebook Workplace Element
+ce-framework-00002981.sql	Apoorva Tiwari	EL-2041 Adobe - Sign Added pagination for certain endpoints
+ce-framework-00002980.sql	Harsha	EL-1602 Swagger validation for Field Service Edge
+ce-framework-00002979.sql	Matt	DELIVERY-321 Enhance BambooHR for Tempo
+ce-framework-00002978.sql	Rahul Gupta	RVCL-957: Added viewOrgOAuthProxy privilege and assigned it to all org-admins.
+ce-framework-00002977.sql	Rahul Gupta	EL-1986 Fixed ZuoraV2 request and response models.
+ce-framework-00002976.sql	shirisha	EL-1695 Eloqua - Add Support for Container Existence Contact Filtering (InsightSquared).
+ce-framework-00002975.sql	Apoorva Tiwari	IBM-122 Freshbooks Classic : Added this element in the list of lbdocs version generator
+ce-framework-00002974.sql	Rahul Gupta	EL-1854 Fixed Expensify model and added more description for resources.
+ce-framework-00002973.sql	Laura	RVCL-793 Remove unused customer_setting and setting tables
+ce-framework-00002972.sql	Rahul Gupta	EL-1852 Fixed Expensify models to show required fields.
+ce-framework-00002971.sql	Austin	RVCL-786 Adding vimeo video id to branding
+ce-framework-00002970.sql	Clayton	RVCL-789 Adding Zendesk to branding
+ce-framework-00002969.sql	Rahul Gupta	EL-1933 Fixed models with missing primary key
+ce-framework-00002968.sql	Laura	Formula instance shouldStoreExecutionValues
+ce-framework-00002967.sql	Shirisha	EL-1762 Add Resource 'Forms' which supports CRUD - PGi (ReadyTalk)
+ce-framework-00002966.sql	Sai Charan J M	EL-1926 ZohoCRMV2 x-searchable is missing in the model And EL-1868 Zohocrmv2: Issue from element irs test run
+ce-framework-00002965.sql	Bharadwaj	EL-40 No API Doc for Twitter
+ce-framework-00002964.sql	Naga	Boxv2 New Element
+ce-framework-00002963.sql	Rahul Gupta	EL-1915 Set API secret key type to password wherever applicable
+ce-framework-00002962.sql	Taylor	Hide allow.select.fields param
+ce-framework-00002961.sql	Taylor	Syncplicity api key & secret
+ce-framework-00002960.sql	Laura	OAuth Proxy Level support
+ce-framework-00002959.sql	Apoorva Tiwari	IBM-118 BigCommerce - Updated Prehook for Orders endpoint
+ce-framework-00002958.sql	Pradheep Kumar	EL-1424 Intacct - Sales-order fix
+ce-framework-00002957.sql	Rahul Gupta	EL-1728 Swagger Errors fixed for Plaid
+ce-framework-00002956.sql	Naveen	EL-1806 BrightTALK - Metadata Not Representing The Actual Vendor Response Structure
+ce-framework-00002955.sql	Apoorva Tiwari	IBM-116 BigCommerce - Added Prehook for Orders endpoint
+ce-framework-00002954.sql	Mukund	IBM-112 Pardot - Advanced Models for Visitors and Visits
+ce-framework-00002953.sql	Rahul Gupta	EL-1729 Swagger Errors fixed for Smart Recruiters
+ce-framework-00002952.sql	Harsha	EL-1705 Resolved Bug for Etsy Element
+ce-framework-00002951.sql	Harsha	EL-1669 Swagger validation fails for Abbyy
+ce-framework-00002950.sql	Austin Mahan	RVCL-854 formula instance object id
+ce-framework-00002949.sql	Pradheep Kumar	EL-1146 Hubspot element forms resource
+ce-framework-00002948.sql	Ricky Amparo	EL-1775 Billy Accounting
+ce-framework-00002947.sql	Sai Charan	EL-1768
+ce-framework-00002946.sql	Rahul Gupta	EL-1727 Swagger validation for Terminus Element
+ce-framework-00002945.sql	Laura	New privileges for formulas at different levels
+ce-framework-00002944.sql	Rahul Gupta	EL-1722 Hide fresh sales from Elements Catalog
+ce-framework-00002943.sql	Rahul Gupta	EL-1748 Updates google API IDs and Secrets
+ce-framework-00002942.sql	naveen	EL-1715 Swagger Validation Failure of Lithium Response
+ce-framework-00002941.sql	Harsha	EL-1718 Swagger validation fails for Tipalti
+ce-framework-00002940.sql	Pradheep Kumar	EL-1702 Intaact Model Fix
+ce-framework-00002939.sql	Atul	EL-1686 Marketo Poller Migration
+ce-framework-00002938.sql	Avinash	EL-1588 Basic auth info add to event notification
+ce-framework-00002937.sql	Rahul Gupta	EL-1505 Corrected response codes for Expensify
+ce-framework-00002936.sql	Rahul Gupta	EL-1126 Weebly Element Enhancement
+ce-framework-00002935.sql	Pradheep Kumar	EL-1702 Intaact Model Fix
+ce-framework-00002934.sql	NAGA	EL-1673 Tango Card - Catalogs added Pagination
+ce-framework-00002933.sql	Pradheep Kumar	EL-1672 Fixes Intaact Model issue
+ce-framework-00002932.sql	Ramana	EL-1648 Fixes Intaact issue
+ce-framework-00002931.sql	Apoorva Tiwari	EL-1584 Enhance Lbdocs generation
+ce-framework-00002930.sql	Laura	New Customer Preference for limiting instance response
+ce-framework-00002929.sql	Apoorva Tiwari	IBM-115 Added a posthook in BigCommerce
+ce-framework-00002928.sql	Atul	EL-49 fixing additional scopes for FB
+ce-framework-00002927.sql	Ramana	EL-1585 Ability to retrieve bulk upload files
+ce-framework-00002926.sql	Pradheep Kumar	EL-1120 Intacct - Model Standardisation
+ce-framework-00002925.sql	Ramana	EL-1580 Fixes ping API for SAP c4c elements
+ce-framework-00002924.sql	Apoorva Tiwari	IBM-111 Hubspot CRM - Added primary key
+ce-framework-00002923.sql	Rahul Gupta	EL-1522 Expensify - Swagger validation fix
+ce-framework-00002922.sql	Taylor Clark	fields param
+ce-framework-00002921.sql	Pradheep Kumar	Google adwords - Swagger validation fix
+ce-framework-00002920.sql	Shirisha	EL-1296 Cleo Gap Enhancements: Infusionsoft REST-P2-Transactions
+ce-framework-00002919.sql	Apoorva Tiwari	Intacct Model fix
+ce-framework-00002918.sql	Shirisha	EL-1296 Cleo Gap Enhancements: Infusionsoft REST-P2-Products
+ce-framework-00002917.sql	Shirisha	EL-1296 Cleo Gap Enhancements: Infusionsoft REST-P2-Orders
+ce-framework-00002916.sql	NAGA	Autotask CRM, FINANCE and HELPDESk
+ce-framework-00002915.sql	Shirisha	EL-1296 Cleo Gap Enhancements: Infusionsoft REST-P2-Contacts
+ce-framework-00002914.sql	Pradheep Kumar	Dropbox oauth credentials updated
+ce-framework-00002913.sql	Yogesh K	EL-1389 SageOne swagger issue
+ce-framework-00002912.sql	Avinash C	EL-1149 DropBox Ref Id Change for Events
+ce-framework-00002911.sql	Avinash C	EL-1149 DropBox Ref Id Change for Events
+ce-framework-00002910.sql	Shirisha	EL-1253 Swagger Error validations for Zoho CRM V2
+ce-framework-00002909.sql	Shirisha	EL-1259 Swagger Error validations for bamboohr
+ce-framework-00002908.sql	Avinash C	EL-1149 DropBox Ref Id Change for Events
+ce-framework-00002907.sql	Avinash C	EL-1149 DropBox Ref Id Change for Events
+ce-framework-00002906.sql	Abhishek	EL-1121 Cleo Gap Enhancements: ZohoCRM
+ce-framework-00002905.sql	Shirisha	EL-1278 Swagger Error validations for Pipedrive
+ce-framework-00002904.sql	Pradheep Kumar	EL-1261 Swagger Error validations for Google Analytics
+ce-framework-00002903.sql	Pradheep Kumar	EL-1049 Zoho CRM - Multi Domain Support
+ce-framework-00002902.sql	Isha	EL-1151 Syncplicity
+ce-framework-00002901.sql	Shirisha	EL-1273 Swagger Error validations for Magento Soap V19
+ce-framework-00002900.sql	Martin	Adding company term column to branding
+ce-framework-00002899.sql	Shirisha	EL-1280 Swagger Error validations for SAP C4C Help Desk
+ce-framework-00002898.sql	Shirisha	EL-1267 Swagger Error validations for Google sheets v4
+ce-framework-00002897.sql	Shevy	EL-1124 Cleo Gap Enhancement : Etsy
+ce-framework-00002896.sql	Pradheep Kumar	Servicenow Oauth - Enhance Discovery API
+ce-framework-00002895.sql	Taylor	EL-780 Update Google Element's OAuth creds
+ce-framework-00002894.sql	Yogesh	EL-1118 : Expensify
+ce-framework-00002893.sql	Shirisha	EL-1281: Swagger Error validation for R3 BAPI
+ce-framework-00002892.sql	Apoorva Tiwari	EL-1271: SugarCRM runtime error with 503 status code
+ce-framework-00002891.sql	Shirisha	EL-1282: Swagger error validation for SAP s4 BAPI
+ce-framework-00002890.sql	Shirisha	EL-1283: Swagger Error validations for SAP s4 HANA Cloud
+ce-framework-00002889.sql	Vineet	Customer (super-org) settings
+ce-framework-00002888.sql	NAGA	SAGE 200 : Filling gaps
+ce-framework-00002887.sql	Shirisha	EL-1258 Swagger Error validations for Sage 200
+ce-framework-00002886.sql	Shirisha	EL-1257 Swagger Error validations for Salesforce Sales Cloud
+ce-framework-00002885.sql	Abhishek	EL-1123: Cleo Gap Enhancements: Epages
+ce-framework-00002884.sql	NAGA	WORKDAY NEW ELEMENT
+ce-framework-00002883.sql	Satya Dev.	EL-1201 SageOne contact-payments endpoint
+ce-framework-00002882.sql	Atul	Hide Elements EL-1276
+ce-framework-00002881.sql	Chinna	SageOne business endpoint
+ce-framework-00002880.sql	Pradheep Kumar	1200 - Servicenow - URL fix
+ce-framework-00002879.sql	Yogesh K	New Element: First Advantage
+ce-framework-00002878.sql	Satya Dev.	EL-958 Updated Google Analytics Oauth Authorization URL
+ce-framework-00002877.sql	Taylor	Update Syncplicity logo
+ce-framework-00002876.sql	Shirisha	EL-1069 - Type returned as "unicode" instead of "integer"
+ce-framework-00002875.sql	Jamie	Maximizer schema
+ce-framework-00002874.sql	Taylor	Syncplicity events
+ce-framework-00002873.sql	Chinna	SDK Broker Element Script
+ce-framework-00002872.sql	NAGA	Zendesk Pagination Type Update
+ce-framework-00002871.sql	Garima	GlobalMeet : Added native filter support for reports API
+ce-framework-00002870.sql	Taylor	Hide Syncplicity OAuth Token
+ce-framework-00002869.sql	Apoorva Tiwari	EL-1152 - Expensify /POST policies model update
+ce-framework-00002868.sql	Shevy Mittal	EL-162 - SuccessFactors onBoardings where clause added
+ce-framework-00002867.sql	Satya Dev	EL-964, EL-965 - Slack Model Defects Fix
+ce-framework-00002866.sql	Afrin	EL-893 - Intacct: Added v3.0 APIs for some resources
+ce-framework-00002865.sql	Shevy Mittal	EL-15 - New APIs for SuccessFactors - Performance Feedback
+ce-framework-00002864.sql	Mohd Rafi	EL-1085 - Modified Custom_Fields Request Model
+ce-framework-00002863.sql	Pratik	EL-1055- CiscoSpark: Updated description for channelUsers API
+ce-framework-00002862.sql	Taylor	EL-1138 - Fix Syncplicity Auth URL
+ce-framework-00002861.sql	Akash B	EL-857 OracleTaleo Cleo Gap Enhancements
+ce-framework-00002860.sql	Shirisha	EL-502 Updated PostHook response for SAP Hibris C4C
+ce-framework-00002859.sql	Garima	EL-49 Facebook remove depracated scope publish_actions
+ce-framework-00002858.sql	Sandeep .	EL-1093 OneDrive Business : Model defect fix
+ce-framework-00002857.sql	Apoorva Tiwari	EL-1087 Intacct : Updated the Response Model
+ce-framework-00002856.sql	Mohd Rafi	EL-1084 SalesLoft : Modify Pagination Max Value
+ce-framework-00002855.sql	Akash B	EL-963 SageOne : Added standard Models
+ce-framework-00002854.sql	Garima	Salesloft : Modify global to support total count header
+ce-framework-00002853.sql	Yogesh K	EL-1018 Ping API Override sapc4chd
+ce-framework-00002852.sql	Akash S .	IBM-100 SFMC model defect fix
+ce-framework-00002851.sql	Isha	EL-30 Google Analytics Add Measurement Protocol and Reporting API models
+ce-framework-00002850.sql	Satya Dev .	El-858 SuccessFactors Cleo Gap Enhancements
+ce-framework-00002849.sql	NAGA	EL-1072 Microsoft Dynamics 365 FO - Added Bulk Hook
+ce-framework-00002848.sql	Avinash	EL-604 Smart Recruiter Additional Endpoints
+ce-framework-00002847.sql	Sandeep	EL-930 Tango Card polling
+ce-framework-00002846.sql	Pratik	EL-1009 SAP C4C CRM issue
+ce-framework-00002845.sql	Yogesh K	SAP C4C HD issue
+ce-framework-00002844.sql	Garima	Hide Connectwise CRM and Connectwisehd SOAP elements from Catalog
+ce-framework-00002843.sql	NAGA	Facebookworkplace Transformations not works for DELETE APIS
+ce-framework-00002842.sql	Chinna	Mysql UTF encoding flag
+ce-framework-00002841.sql	Yogesh K	EL-1041 Taleo business Pagination
+ce-framework-00002840.sql	Abhishek	EL-966 Quickbooks GET and GETbyID model resolution
+ce-framework-00002839.sql	Pratik	EL-823 Updating element name for Cisco Spark
+ce-framework-00002838.sql	Naga	EL-1035 Tipalti Script to add Java Hook
+ce-framework-00002837.sql	Naga	EL-1013 Terminus Url's Update
+ce-framework-00002836.sql	Pratik	EL-896 Updating element name for SuccessFactors
+ce-framework-00002835.sql	Clayton	RVCL-440 Adding tables for branding
+ce-framework-00002834.sql	Afrin	Updating API secret for Ciscospark churros account
+ce-framework-00002833.sql	Garima	New Element : Field Service Edge
+ce-framework-00002832.sql	Tyler	RVCL-564 'addUsersCustomer' privilege
+ce-framework-00002831.sql	Sandeep	EL-818 InfusionSoftCRM Model defects
+ce-framework-00002830.sql	Pratik U	IBM-108 Cisco Spark messages advanced models
+ce-framework-00002829.sql	Yogesh K	EL-897 Intacct Invoices
+ce-framework-00002828.sql	Naga	EL-927 Pardot Update Object Metadata
+ce-framework-00002827.sql	Sandeep	EL-786 Twilio Model defect
+ce-framework-00002826.sql	Satya Dev	EL-386 Eloqua GET and GET by Id model updates
+ce-framework-00002825.sql	Mohd Rafi	SalesLoft : New Element
+ce-framework-00002824.sql	Sandeep	EL-844 Shopify Model defect
+ce-framework-00002823.sql	Venessa	EL-261 NetsuiteERP metadata made consistent
+ce-framework-00002822.sql	Sandeep	EL-838 InfusionSoftERP
+ce-framework-00002821.sql	Mayur	EL-819 Zendesk metadata updates
+ce-framework-00002820.sql	Shevy	EL-723 Intacct GET by Id description update
+ce-framework-00002819.sql	Isha	EL-395 Shopify GET and GET by Id model updates
+ce-framework-00002818.sql	Shevy	EL-162 SuccessFactors Where clause not supported
+ce-framework-00002817.sql	Naga	EL-603 Autotask Pagination Type
+ce-framework-00002816.sql	Naga	EL-550 Zendesk Pagination Type
+ce-framework-00002815.sql	Naga	EL-923 ZohoCRMv2 Oauth Refresh Issue
+ce-framework-00002814.sql	Taylor	Syncplicity Element
+ce-framework-00002813.sql	Abhishek	EL-805 Intacct Swagger validation
+ce-framework-00002812.sql	Avinash C	EL-825 BullHorn Candidate Search API IN clause support
+ce-framework-00002811.sql	Satya Dev	EL-392 SuccessFactors GET and GET by Id model updates
+ce-framework-00002810.sql	Taylor	Revert Syncplicity
+ce-framework-00002809.sql	Isha	EL-400 Dropboxbusiness GET and GET by Id model updates
+ce-framework-00002808.sql	Naga	EL-814 Intacct Fix Issue having . in Keys
+ce-framework-00002807.sql	Venessa	EL-774 SugarCRM Removed empty fields
+ce-framework-00002806.sql	Isha	EL-399 Dropbox GET and GET by Id model updates
+ce-framework-00002805.sql	Atul	EL-845 Hide Amazon SQS Element
+ce-framework-00002804.sql	Satya Dev	EL-385 Intacct GET and GET by id (UI) Standard-Models
+ce-framework-00002803.sql	Sandeep	Zoho CRMV2: Model defects
+ce-framework-00002802.sql	Yogesh K	EL-718 Intacct Updating /bills-GET to DTD 3.0
+ce-framework-00002801.sql	Naga	New Element Dynamics 365 Finance and Operations
+ce-framework-00002800.sql	Tyler	EL-815 Compress IdP table updates
+ce-framework-00002799.sql	Isha	EL-398-Box GET and GET by Id Models updates
+ce-framework-00002798.sql	Sandeep	AmazonMarketPlace: Model defects
+ce-framework-00002797.sql	Sandeep	Updating display order
+ce-framework-00002796.sql	Tyler	Addressed Successfactors issue: EL-610
+ce-framework-00002795.sql	Afrin	Sailthru: Added CRDS for blast resource
+ce-framework-00002794.sql	Sandeep	SageOne: Changing to Sage Accounting
+ce-framework-00002793.sql	Sandeep	Magento: Model defect
+ce-framework-00002792.sql	Sandeep	Service now: fix .
+ce-framework-00002791.sql	Venessa	Zoho CRM: Fixed metadata for Notes
+ce-framework-00002790.sql	Mayur	User-Agent header for Onedrive for Business
+ce-framework-00002789.sql	Taylor	Syncplicity Element
+ce-framework-00002788.sql	Mohd Rafi	BrightTALK - Added Questions to Element
+ce-framework-00002787.sql	Tyler	EDI Hub and orderful element
+ce-framework-00002786.sql	Chinna	SageOne migrating other_payments to ServiceImpl
+ce-framework-00002785.sql	Sai	Successfactor : Missed script for EL-606, SAP-SuccessFactor defect fixes #9393
+ce-framework-00002784.sql	Sandeep	Shopify : model defect fixes
+ce-framework-00002783.sql	Sandeep	FreshBooksClassic: Model fixes
+ce-framework-00002782.sql	Taylor	Fix element_object issue
+ce-framework-00002781.sql	Sandeep	SAp C4C CRM/HD .
+ce-framework-00002780.sql	Naga	SLY-713 Netsuite HC - Event poller update .
+ce-framework-00002779.sql	Satya Dev	EL-393 Servicenow GET and GET by id (UI) Standard Models
+ce-framework-00002778.sql	Sandeep	Sage Live to Sage Financials name change .
+ce-framework-00002777.sql	Chinna	Sage One to Sage Accounting (Just name change)
+ce-framework-00002776.sql	Afrin	sapc4chd : Updated get and getById models for all objects
+ce-framework-00002775.sql	Venessa	Onedrivev2: Implemented pagination
+ce-framework-00002774.sql	Isha	IBM-23- Adobe-esign Model fixes
+ce-framework-00002773.sql	Sai	Zoho CRM V2 Model update for contacts
+ce-framework-00002772.sql	Yogesh K	IBM-70 Intacct Advanced models change
+ce-framework-00002771.sql	Priya	EL-247 Tipalti
+ce-framework-00002770.sql	Chinna	Magento V2 OAuth1
+ce-framework-00002769.sql	Taylor	element_object & element_metadata import
