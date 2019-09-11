@@ -27,5 +27,6 @@ Sonos exposes a rich set of API resources. This element focuses on the Sonos Con
 	* GET /play/{groupId}
 	* GET /volume/{playerId}
 	* POST /volume/{playerId}
+	* POST /playAudio/{playerId}
 
 The Sonos element easy extendible in case you need additional resources for the Control API or access to the Sonos's Cloud Queue API or Sonos Music API.

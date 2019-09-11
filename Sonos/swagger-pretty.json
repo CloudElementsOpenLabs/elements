@@ -704,6 +704,78 @@
         ]
       }
     },
+    "/playAudio/{playerId}": {
+      "post": {
+        "summary": "Play an audio clip from a url (.wav or .mp3) over one of your Sonos speakers. Not all speakers support this functionality (Devices supported are Sonos One, Amp, Play:5 2nd gen and the Beam ",
+        "operationId": "createPlayAudioByPlayerId",
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/groups"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "playerId",
+            "description": "Get volume of a given player",
+            "type": "string",
+            "required": true
+          },
+          {
+            "schema": {
+              "$ref": "#/definitions/volumeRequest"
+            },
+            "in": "body",
+            "name": "body",
+            "description": "The object body",
+            "required": true
+          }
+        ],
+        "tags": [
+          "playAudio"
+        ]
+      }
+    },
     "/volume/{playerId}": {
       "post": {
         "summary": "Search for households",
@@ -2109,8 +2181,25 @@
     },
     "groups": {
       "properties": {
-        "group": {
-          "$ref": "#/definitions/groupsGroup"
+        "appId": {
+          "type": "string",
+          "x-samplevalue": "com.acme.app"
+        },
+        "clipType": {
+          "type": "string",
+          "x-samplevalue": "CUSTOM"
+        },
+        "id": {
+          "type": "string",
+          "x-samplevalue": "35"
+        },
+        "name": {
+          "type": "string",
+          "x-samplevalue": "ACME"
+        },
+        "priority": {
+          "type": "string",
+          "x-samplevalue": "LOW"
         }
       },
       "title": "groups",
@@ -2358,6 +2447,9 @@
     },
     {
       "name": "createGroup"
+    },
+    {
+      "name": "playAudio"
     },
     {
       "name": "ping"
