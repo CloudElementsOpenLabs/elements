@@ -1,0 +1,743 @@
+{  
+   "configuration":[  
+      {  
+         "internal":false,
+         "hideFromConsole":true,
+         "companyConfig":false,
+         "displayOrder":1,
+         "name":"Bulk Add Metadata",
+         "active":true,
+         "description":"Bulk Add Metadata",
+         "type":"TEXTFIELD_128",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"bulk.add_metadata",
+         "required":false
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":false,
+         "companyConfig":false,
+         "displayOrder":1,
+         "name":"Subdomain",
+         "active":true,
+         "description":"Options: snapshot, staging, console",
+         "type":"TEXTFIELD_32",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"subdomain",
+         "required":true
+      },
+      {  
+         "internal":false,
+         "companyConfig":false,
+         "defaultValue":"offset",
+         "displayOrder":1,
+         "active":true,
+         "description":"Cloud Elements Pagination Type",
+         "type":"TEXTFIELD_32",
+         "resellerConfig":false,
+         "required":false,
+         "hideFromConsole":true,
+         "name":"Pagination Type",
+         "groupControl":false,
+         "key":"pagination.type"
+      },
+      {  
+         "internal":false,
+         "companyConfig":false,
+         "defaultValue":"https://{subdomain}.cloud-elements.com/elements/api-v2",
+         "displayOrder":1,
+         "active":true,
+         "description":"Cloud Elements Base Url",
+         "type":"TEXTFIELD_1000",
+         "resellerConfig":false,
+         "required":true,
+         "hideFromConsole":true,
+         "name":"Base Url",
+         "groupControl":false,
+         "key":"base.url"
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":true,
+         "companyConfig":false,
+         "displayOrder":1,
+         "name":"Bulk query Date Mask",
+         "active":true,
+         "description":"Bulk query Date Mask",
+         "type":"TEXTFIELD_128",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"bulk.query.date_mask",
+         "required":false
+      },
+      {  
+         "internal":false,
+         "companyConfig":false,
+         "defaultValue":"=",
+         "displayOrder":1,
+         "active":true,
+         "description":"Bulk query Operator",
+         "type":"TEXTFIELD_128",
+         "resellerConfig":false,
+         "required":false,
+         "hideFromConsole":true,
+         "name":"Bulk query Operator",
+         "groupControl":false,
+         "key":"bulk.query.operator"
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":true,
+         "companyConfig":false,
+         "displayOrder":1,
+         "name":"Bulk query FieldName",
+         "active":true,
+         "description":"Bulk query FieldName",
+         "type":"TEXTFIELD_128",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"bulk.query.field_name",
+         "required":false
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":true,
+         "companyConfig":false,
+         "displayOrder":1,
+         "name":"Bulk query Created Field Name",
+         "active":true,
+         "description":"Bulk Query Created Field Name",
+         "type":"TEXTFIELD_128",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"bulk.attribute.created_time",
+         "required":false
+      },
+      {  
+         "internal":false,
+         "companyConfig":false,
+         "defaultValue":"200",
+         "displayOrder":1,
+         "active":true,
+         "description":"Cloud Elements Max Page Size (or limit)",
+         "type":"TEXTFIELD_32",
+         "resellerConfig":false,
+         "required":false,
+         "hideFromConsole":true,
+         "name":"Max Page Size (or limit)",
+         "groupControl":false,
+         "key":"pagination.max"
+      },
+      {  
+         "internal":false,
+         "companyConfig":false,
+         "defaultValue":"JSON",
+         "displayOrder":1,
+         "active":true,
+         "description":"Bulk Download Format",
+         "type":"TEXTFIELD_128",
+         "resellerConfig":false,
+         "required":false,
+         "hideFromConsole":true,
+         "name":"Bulk Download Format",
+         "groupControl":false,
+         "key":"bulk.query.download_format"
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":false,
+         "companyConfig":false,
+         "displayOrder":1,
+         "name":"User Secret",
+         "active":true,
+         "description":"User Secret associated with your subdomain",
+         "type":"PASSWORD",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"user.secret",
+         "required":true
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":false,
+         "companyConfig":false,
+         "displayOrder":1,
+         "name":"Organization Secret",
+         "active":true,
+         "description":"Organization Secret associated with your subdomain",
+         "type":"PASSWORD",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"organization.secret",
+         "required":true
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":true,
+         "companyConfig":false,
+         "displayOrder":1,
+         "name":"Bulk Relations",
+         "active":true,
+         "description":"Bulk Relations",
+         "type":"TEXTAREA",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"bulk.relations",
+         "required":false
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":true,
+         "companyConfig":false,
+         "displayOrder":11,
+         "name":"Event Notification Signature Key",
+         "active":true,
+         "description":"Cloud Elements Event Notification Signature Key",
+         "type":"TEXTFIELD_128",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"event.notification.signature.key",
+         "required":false
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":false,
+         "companyConfig":false,
+         "displayOrder":12,
+         "name":"Event Notification Basic User Name",
+         "active":true,
+         "description":"Cloud Elements 2 Event Notification Basic User Name",
+         "type":"TEXTFIELD_128",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"event.notification.basic.username",
+         "required":false
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":false,
+         "companyConfig":false,
+         "displayOrder":13,
+         "name":"Event Notification Basic Password",
+         "active":true,
+         "description":"Cloud Elements 2 Event Notification Basic Password",
+         "type":"PASSWORD",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"event.notification.basic.password",
+         "required":false
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":false,
+         "companyConfig":false,
+         "displayOrder":98,
+         "name":"Default select fields",
+         "active":true,
+         "description":"Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+         "type":"TEXTAREA",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"default.select.fields.map",
+         "required":false
+      },
+      {  
+         "internal":false,
+         "companyConfig":false,
+         "defaultValue":"true",
+         "displayOrder":99,
+         "active":true,
+         "description":"Used to enable/disable filtering of null values from the responses",
+         "type":"BOOLEAN",
+         "resellerConfig":false,
+         "required":false,
+         "hideFromConsole":false,
+         "name":"Filter null values from the response",
+         "groupControl":false,
+         "key":"filter.response.nulls"
+      },
+      {  
+         "internal":true,
+         "companyConfig":false,
+         "defaultValue":"polling",
+         "displayOrder":100,
+         "active":true,
+         "description":"Cloud Elements Event Type",
+         "type":"TEXTFIELD_128",
+         "resellerConfig":false,
+         "required":false,
+         "hideFromConsole":true,
+         "name":"Event Type",
+         "groupControl":false,
+         "key":"event.vendor.type"
+      },
+      {  
+         "internal":true,
+         "hideFromConsole":true,
+         "companyConfig":false,
+         "displayOrder":100,
+         "name":"Time of Getting Token or Performing Authentication",
+         "active":true,
+         "description":"Cloud Elements Time of Getting Token or Performing Authentication",
+         "type":"TEXTFIELD_32",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"authentication.time",
+         "required":false
+      },
+      {  
+         "internal":false,
+         "companyConfig":false,
+         "defaultValue":"5",
+         "displayOrder":101,
+         "active":true,
+         "description":"Cloud Elements 2 Set time interval for polling application (in minutes)",
+         "type":"TEXTFIELD_128",
+         "resellerConfig":false,
+         "required":false,
+         "hideFromConsole":false,
+         "name":"Event poller refresh interval",
+         "groupControl":false,
+         "key":"event.poller.refresh_interval"
+      },
+      {  
+         "internal":false,
+         "companyConfig":false,
+         "defaultValue":"false",
+         "displayOrder":102,
+         "active":true,
+         "description":"Cloud Elements Enable/Disable Event Notification",
+         "type":"BOOLEAN",
+         "resellerConfig":false,
+         "required":false,
+         "hideFromConsole":false,
+         "name":"Event Notifications Enabled",
+         "groupControl":false,
+         "key":"event.notification.enabled"
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":false,
+         "companyConfig":false,
+         "displayOrder":102,
+         "name":"Event Notification Callback URL",
+         "active":true,
+         "description":"Cloud Elements Event Notification Callback URL",
+         "type":"TEXTFIELD_1000",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"event.notification.callback.url",
+         "required":false
+      },
+      {  
+         "internal":false,
+         "companyConfig":false,
+         "defaultValue":"{\"ceInstances\":{\"url\":\"/hubs/general/ceInstances?where=createdDate>='${gmtDate:yyyy-MM-dd'T'HH:mm:ss'Z'}'\",\"idField\":\"id\",\"filterByUpdatedDate\":\"false\",\"datesConfiguration\":{\"updatedDateField\":\"createdDate\",\"updatedDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"updatedDateTimezone\":\"GMT\",\"createdDateField\":\"createdDate\",\"createdDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"createdDateTimezone\":\"GMT\"}}}",
+         "displayOrder":104,
+         "active":true,
+         "description":"Cloud Elements 2 Event Poller Resources Configuration",
+         "type":"TEXTAREA",
+         "resellerConfig":false,
+         "required":false,
+         "hideFromConsole":false,
+         "name":"Event Poller Resources Configuration",
+         "groupControl":false,
+         "key":"event.poller.configuration"
+      },
+      {  
+         "internal":false,
+         "hideFromConsole":true,
+         "companyConfig":false,
+         "displayOrder":104,
+         "name":"Event Notification Subscription ID",
+         "active":true,
+         "description":"Cloud Elements Event Notification Subscription ID",
+         "type":"TEXTFIELD_1000",
+         "groupControl":false,
+         "resellerConfig":false,
+         "key":"event.notification.subscription.id",
+         "required":false
+      }
+   ],
+   "objects":[  
+
+   ],
+   "description":"Cloud Elements for bulk usage calls",
+   "cloneable":true,
+   "extended":false,
+   "bulkDownloadEnabled":true,
+   "useModelsForMetadata":true,
+   "trialAccount":false,
+   "logo":"cloudelements",
+   "hooks":[  
+      {  
+         "isLegacy":false,
+         "mimeType":"application/javascript",
+         "body":"var userSecret = configuration['user.secret'];\nvar orgSecret = configuration['organization.secret'];\n\nrequest_vendor_headers.Authorization = \"User \" + userSecret + \", Organization \" + orgSecret;\n\ndone({\n\t\"request_vendor_headers\": request_vendor_headers,\n  continue: true\n})",
+         "type":"preRequest"
+      }
+   ],
+   "beta":false,
+   "key":"democloudelements",
+   "authentication":{  
+      "type":"custom"
+   },
+   "bulkUploadEnabled":true,
+   "image":"elements/custom-element-default-logo.png",
+   "models":[  
+
+   ],
+   "active":true,
+   "resources":[  
+      {  
+         "path":"/hubs/general/ceInstances",
+         "vendorMethod":"GET",
+         "method":"GET",
+         "kind":"eb",
+         "response":{  
+            "contentType":"application/json"
+         },
+         "description":"Search for /ceInstances",
+         "type":"api",
+         "hooks":[  
+            {  
+               "isLegacy":false,
+               "mimeType":"application/javascript",
+               "body":"let parameters = request_vendor_parameters\nvar response = response_body;\nlet filtered = [];\n\nif (request_expression) {\n \t for (let i = 0; i < request_expression.length; i++) {\n   \t\tif (request_expression[i].attribute === 'createdDate' && request_expression[i].operator === \">\" || request_expression[i].operator === \">=\") {\n       \t\tresponse.forEach(res => {\n            if (res.createdDate >= request_expression[i].value) {\n            \tfiltered.push(res)\n            }\n          })\n      }\n   }\n}\n\ndone({\n  \"response_body\": filtered\n})",
+               "type":"postRequest"
+            }
+         ],
+         "modelMigrated":false,
+         "parameters":[  
+            {  
+               "vendorType":"no-op",
+               "dataType":"string",
+               "name":"where",
+               "description":"The CEQL search expression",
+               "vendorDataType":"string",
+               "source":"request",
+               "type":"query",
+               "vendorName":"where",
+               "required":false
+            },
+            {  
+               "vendorType":"query",
+               "dataType":"string",
+               "name":"pageSize",
+               "description":"The number of resources to return in a given page",
+               "vendorDataType":"string",
+               "source":"request",
+               "type":"query",
+               "vendorName":"pageSize",
+               "required":false
+            },
+            {  
+               "vendorType":"query",
+               "dataType":"string",
+               "name":"page",
+               "description":"The page number of resources to retrieve",
+               "vendorDataType":"string",
+               "source":"request",
+               "type":"query",
+               "vendorName":"page",
+               "required":false
+            }
+         ],
+         "vendorPath":"/instances"
+      },
+      {  
+         "path":"/hubs/general/elementKeys",
+         "vendorMethod":"GET",
+         "method":"GET",
+         "kind":"eb",
+         "response":{  
+            "contentType":"application/json"
+         },
+         "description":"Search for /elementKeys",
+         "type":"api",
+         "hooks":[  
+
+         ],
+         "modelMigrated":false,
+         "vendorPath":"/elements/keys"
+      },
+      {  
+         "path":"/hubs/general/usage",
+         "vendorMethod":"GET",
+         "method":"GET",
+         "kind":"eb",
+         "response":{  
+            "contentType":"application/json"
+         },
+         "description":"Search for usages",
+         "model":{  
+            "transform":false,
+            "name":"usageList",
+            "swagger":{  
+               "usageList":{  
+                  "id":"usageList",
+                  "type":"array",
+                  "items":{  
+                     "$ref":"usageListObject"
+                  },
+                  "x-vendor-objectname":"Usage"
+               },
+               "usageListObject":{  
+                  "x-primary-key":[  
+                     "id"
+                  ],
+                  "x-has-customfields":false,
+                  "title":"usageListObject",
+                  "x-vendor-objectname":"Usage",
+                  "properties":{  
+                     "request_status":{  
+                        "x-samplevalue":"FAILED",
+                        "type":"string"
+                     },
+                     "is_ce_mapped_resource":{  
+                        "x-samplevalue":true,
+                        "type":"boolean"
+                     },
+                     "user_name":{  
+                        "x-samplevalue":"gts@cloud-elements.com",
+                        "type":"string"
+                     },
+                     "request_method":{  
+                        "x-samplevalue":"GET",
+                        "type":"string"
+                     },
+                     "process_time":{  
+                        "x-samplevalue":648,
+                        "format":"int32",
+                        "type":"integer"
+                     },
+                     "provider_message":{  
+                        "x-samplevalue":"{\"requestId\":\"5b31352ae4b089f56fbae41f\",\"message\":\"No usage logs found\"}",
+                        "type":"string"
+                     },
+                     "traffic_id":{  
+                        "x-samplevalue":"5b31352ae4b089f56fbae41d",
+                        "type":"string"
+                     },
+                     "vendor_process_time":{  
+                        "x-samplevalue":639,
+                        "format":"int32",
+                        "type":"integer"
+                     },
+                     "company_external_id":{  
+                        "x-samplevalue":"NA",
+                        "type":"string"
+                     },
+                     "account_name":{  
+                        "x-samplevalue":"Test's  Company Default Account",
+                        "type":"string"
+                     },
+                     "vendor_request_method":{  
+                        "x-samplevalue":"GET",
+                        "type":"string"
+                     },
+                     "id":{  
+                        "x-samplevalue":"5b31352ae4b089f56fbae41d",
+                        "type":"string"
+                     },
+                     "instance_tags":{  
+                        "x-samplevalue":"My Cloud Elements",
+                        "type":"string"
+                     },
+                     "traffic_date":{  
+                        "x-samplevalue":"2018-06-25T18:32:11.326Z",
+                        "x-mask":"yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                        "format":"date-time",
+                        "type":"string"
+                     },
+                     "headers":{  
+                        "type":"string"
+                     },
+                     "request_ip":{  
+                        "x-samplevalue":"127.0.0.1",
+                        "type":"string"
+                     },
+                     "instance_name":{  
+                        "x-samplevalue":"My Cloud Elements",
+                        "type":"string"
+                     },
+                     "company_id":{  
+                        "x-samplevalue":42,
+                        "format":"int32",
+                        "type":"integer"
+                     },
+                     "response_status":{  
+                        "x-samplevalue":404,
+                        "format":"int32",
+                        "type":"integer"
+                     },
+                     "vendor_resource":{  
+                        "x-samplevalue":"usage",
+                        "type":"string"
+                     },
+                     "element_tag":{  
+                        "x-samplevalue":"My Cloud Elements",
+                        "type":"string"
+                     },
+                     "element_resource":{  
+                        "x-samplevalue":"usage",
+                        "type":"string"
+                     },
+                     "element_key":{  
+                        "x-samplevalue":"cloudelements",
+                        "type":"string"
+                     },
+                     "message":{  
+                        "x-samplevalue":"Request failed",
+                        "type":"string"
+                     },
+                     "request_uri":{  
+                        "x-samplevalue":"/elements/api-v2/hubs/general/usage",
+                        "type":"string"
+                     },
+                     "account_id":{  
+                        "x-samplevalue":1710,
+                        "format":"int32",
+                        "type":"integer"
+                     },
+                     "instance_id":{  
+                        "x-samplevalue":99846,
+                        "format":"int32",
+                        "type":"integer"
+                     },
+                     "platform_process_time":{  
+                        "x-samplevalue":9,
+                        "format":"int32",
+                        "type":"integer"
+                     },
+                     "provision_name":{  
+                        "x-samplevalue":"My Cloud Elements",
+                        "type":"string"
+                     },
+                     "user_id":{  
+                        "x-samplevalue":173,
+                        "format":"int32",
+                        "type":"integer"
+                     },
+                     "company_name":{  
+                        "x-samplevalue":"Test's  Company",
+                        "type":"string"
+                     },
+                     "element_api":{  
+                        "x-samplevalue":"avadaKedavra",
+                        "type":"string"
+                     },
+                     "company_external_name":{  
+                        "x-samplevalue":"NA",
+                        "type":"string"
+                     },
+                     "element_name":{  
+                        "x-samplevalue":"Cloud Elements",
+                        "type":"string"
+                     },
+                     "request_id":{  
+                        "x-samplevalue":"5b31352ae4b089f56fbae41d",
+                        "type":"string"
+                     }
+                  }
+               }
+            }
+         },
+         "type":"api",
+         "hooks":[  
+            {  
+               "isLegacy":false,
+               "mimeType":"application/javascript",
+               "body":"let parameters = request_vendor_parameters\n\nif (request_expression) {\n \t for (let i = 0; i < request_expression.length; i++) {\n   \t\tif (request_expression[i].operator === \">\" || request_expression[i].operator === \">=\") {\n       \t\tparameters.from = request_expression[i].value; \n      } else {\n        \tparameters.to = request_expression[i].value;\n      }\t\n   }\n}\n\ndelete parameters.where\ndelete parameters.page\ndelete parameters.pageSize\ndelete parameters.pageOffset\n\ndone({\n\trequest_vendor_parameters: parameters,\n  continue: true\n})",
+               "type":"preRequest"
+            },
+            {  
+               "isLegacy":false,
+               "mimeType":"application/javascript",
+               "body":"var response = response_body;\nvar responseStatusCode = response_status_code;\nif(responseStatusCode == 404) {\n\tvar message = response.message;\n  if(message == \"No usage logs found\") {\n  \tresponseStatusCode = 200;\n    response = [];\n  }\n} else {\n\tfor (let i = 0; i < response.length; i++) {\n  \tresponse[i]['id'] = response[i]['request_id'];\n  }\n}\ndone({\n\t\"response_status_code\": responseStatusCode,\n  \"response_body\": response\n})",
+               "type":"postRequest"
+            }
+         ],
+         "modelMigrated":false,
+         "parameters":[  
+            {  
+               "vendorType":"no-op",
+               "dataType":"string",
+               "name":"where",
+               "description":"The CEQL search expression",
+               "vendorDataType":"string",
+               "source":"request",
+               "type":"query",
+               "vendorName":"where",
+               "required":false
+            },
+            {  
+               "vendorType":"query",
+               "dataType":"string",
+               "name":"page",
+               "description":"The page number of resources to retrieve",
+               "vendorDataType":"string",
+               "source":"request",
+               "type":"query",
+               "vendorName":"pageOffset",
+               "required":false
+            },
+            {  
+               "vendorType":"query",
+               "dataType":"string",
+               "name":"pageSize",
+               "description":"The number of resources to return in a given page",
+               "vendorDataType":"string",
+               "source":"request",
+               "type":"query",
+               "vendorName":"pageSize",
+               "required":false
+            }
+         ],
+         "vendorPath":"/usage"
+      }
+   ],
+   "protocolType":"http",
+   "transformationsEnabled":true,
+   "deleted":false,
+   "hub":"general",
+   "typeOauth":false,
+   "name":"Cloud Elements (Demo)",
+   "extendable":true,
+   "parameters":[  
+      {  
+         "vendorType":"header",
+         "name":"application/json",
+         "source":"request",
+         "type":"value",
+         "vendorName":"Accept",
+         "required":false
+      },
+      {  
+         "vendorType":"header",
+         "name":"auth.header",
+         "source":"request",
+         "type":"configuration",
+         "vendorName":"Authorization",
+         "required":false
+      },
+      {  
+         "vendorType":"header",
+         "name":"application/json",
+         "source":"request",
+         "type":"value",
+         "vendorName":"Content-Type",
+         "required":false
+      },
+      {  
+         "vendorType":"path",
+         "name":"subdomain",
+         "source":"request",
+         "type":"configuration",
+         "vendorName":"subdomain",
+         "required":false
+      }
+   ]
+}

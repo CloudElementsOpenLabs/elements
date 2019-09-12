@@ -1,0 +1,2657 @@
+{
+    "configuration": [
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "API Key",
+            "active": true,
+            "description": "API Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "api.key",
+            "required": true
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Mandrill Max Page Size (or limit)",
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Max Page Size (or limit)",
+            "groupControl": false,
+            "key": "pagination.max"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "Pagination Type",
+            "active": true,
+            "description": "Mandrill Pagination Type",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "pagination.type",
+            "required": false
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "https://mandrillapp.com/api/1.0/",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Mandrill Base Url",
+            "type": "TEXTFIELD_1000",
+            "resellerConfig": false,
+            "required": true,
+            "hideFromConsole": true,
+            "name": "Base Url",
+            "groupControl": false,
+            "key": "base.url"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 11,
+            "name": "Event Notification Signature Key",
+            "active": true,
+            "description": "Mandrill Event Notification Signature Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.signature.key",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 98,
+            "name": "Default select fields",
+            "active": true,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "type": "TEXTAREA",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "default.select.fields.map",
+            "required": false
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "displayOrder": 99,
+            "active": true,
+            "description": "Used to enable/disable filtering of null values from the responses",
+            "type": "BOOLEAN",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Filter null values from the response",
+            "groupControl": false,
+            "key": "filter.response.nulls"
+        },
+        {
+            "internal": true,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 100,
+            "name": "Time of Getting Token or Performing Authentication",
+            "active": true,
+            "description": "Mandrill Time of Getting Token or Performing Authentication",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "authentication.time",
+            "required": false
+        },
+        {
+            "internal": true,
+            "companyConfig": false,
+            "defaultValue": "polling",
+            "displayOrder": 100,
+            "active": true,
+            "description": "Mandrill Event Type",
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Event Type",
+            "groupControl": false,
+            "key": "event.vendor.type"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "15",
+            "displayOrder": 101,
+            "active": true,
+            "description": "Mandrill Set time interval for polling application (in minutes)",
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Event poller refresh interval",
+            "groupControl": false,
+            "key": "event.poller.refresh_interval"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "false",
+            "displayOrder": 102,
+            "active": true,
+            "description": "Mandrill Enable/Disable Event Notification",
+            "type": "BOOLEAN",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Event Notifications Enabled",
+            "groupControl": false,
+            "key": "event.notification.enabled"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 102,
+            "name": "Event Notification Callback URL",
+            "active": true,
+            "description": "Mandrill Event Notification Callback URL",
+            "type": "TEXTFIELD_1000",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.callback.url",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 104,
+            "name": "Event Notification Subscription ID",
+            "active": true,
+            "description": "Mandrill Event Notification Subscription ID",
+            "type": "TEXTFIELD_1000",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.subscription.id",
+            "required": false
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "{\"templates\":{\"url\":\"/templates/list.json?where=updated_date>='${gmtDate:yyyy-MM-dd'T'HH:mm:ss'Z'}'\",\"idField\":\"name\",\"datesConfiguration\":{\"updatedDateField\":\"created_date\",\"updatedDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"updatedDateTimezone\":\"GMT\",\"createdDateField\":\"updated_date\",\"createdDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"createdDateTimezone\":\"GMT\"}}}",
+            "displayOrder": 104,
+            "active": true,
+            "description": "Mandrill Event Poller Resources Configuration",
+            "type": "TEXTAREA",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Event Poller Resources Configuration",
+            "groupControl": false,
+            "key": "event.poller.configuration"
+        }
+    ],
+    "objects": [],
+    "description": "mailchimp's transactional email service, mandrill",
+    "cloneable": false,
+    "extended": false,
+    "bulkDownloadEnabled": false,
+    "useModelsForMetadata": true,
+    "trialAccount": false,
+    "logo": "mandrill",
+    "hooks": [],
+    "beta": false,
+    "key": "mandrill_3",
+    "authentication": {
+        "type": "custom"
+    },
+    "bulkUploadEnabled": false,
+    "image": "https://images.cloudelements.io/mandrill201810221710.png",
+    "models": [
+        {
+            "parentModelIds": [],
+            "childModelIds": [],
+            "customFields": false,
+            "nullsRequired": false,
+            "ownerAccountId": 4804,
+            "ownerCompanyId": 1286,
+            "name": "Templates",
+            "resources": [],
+            "isQA": false,
+            "modelType": "standard",
+            "fields": [
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23929,
+                            "direction": "REQUEST",
+                            "fieldId": 3037
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23930,
+                            "direction": "REQUEST",
+                            "fieldId": 3037
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23931,
+                            "direction": "REQUEST",
+                            "fieldId": 3037
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 23932,
+                            "direction": "RESPONSE",
+                            "fieldId": 3037
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 23933,
+                            "direction": "RESPONSE",
+                            "fieldId": 3037
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23934,
+                            "direction": "RESPONSE",
+                            "fieldId": 3037
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23935,
+                            "direction": "RESPONSE",
+                            "fieldId": 3037
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23936,
+                            "direction": "RESPONSE",
+                            "fieldId": 3037
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "code",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3037,
+                    "relatedModelId": 0,
+                    "sampleValue": "<b>sup bro</b>",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "date-time",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23937,
+                            "direction": "REQUEST",
+                            "fieldId": 3038
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23938,
+                            "direction": "REQUEST",
+                            "fieldId": 3038
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23939,
+                            "direction": "REQUEST",
+                            "fieldId": 3038
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 23940,
+                            "direction": "RESPONSE",
+                            "fieldId": 3038
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 23941,
+                            "direction": "RESPONSE",
+                            "fieldId": 3038
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23942,
+                            "direction": "RESPONSE",
+                            "fieldId": 3038
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23943,
+                            "direction": "RESPONSE",
+                            "fieldId": 3038
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23944,
+                            "direction": "RESPONSE",
+                            "fieldId": 3038
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "created_at",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3038,
+                    "relatedModelId": 0,
+                    "sampleValue": "2018-10-22 21:22:56.8261",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "mask": "YYYY-MM-DD HH:mm:ss.SSSD",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "date-time",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23945,
+                            "direction": "REQUEST",
+                            "fieldId": 3039
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23946,
+                            "direction": "REQUEST",
+                            "fieldId": 3039
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23947,
+                            "direction": "REQUEST",
+                            "fieldId": 3039
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 23948,
+                            "direction": "RESPONSE",
+                            "fieldId": 3039
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 23949,
+                            "direction": "RESPONSE",
+                            "fieldId": 3039
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23950,
+                            "direction": "RESPONSE",
+                            "fieldId": 3039
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23951,
+                            "direction": "RESPONSE",
+                            "fieldId": 3039
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23952,
+                            "direction": "RESPONSE",
+                            "fieldId": 3039
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "draft_updated_at",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3039,
+                    "relatedModelId": 0,
+                    "sampleValue": "2018-10-22 21:36:18",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "mask": "YYYY-MM-DD H:mm:ss",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23953,
+                            "direction": "REQUEST",
+                            "fieldId": 3040
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23954,
+                            "direction": "REQUEST",
+                            "fieldId": 3040
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23955,
+                            "direction": "REQUEST",
+                            "fieldId": 3040
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 23956,
+                            "direction": "RESPONSE",
+                            "fieldId": 3040
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 23957,
+                            "direction": "RESPONSE",
+                            "fieldId": 3040
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23958,
+                            "direction": "RESPONSE",
+                            "fieldId": 3040
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23959,
+                            "direction": "RESPONSE",
+                            "fieldId": 3040
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23960,
+                            "direction": "RESPONSE",
+                            "fieldId": 3040
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "from_email",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3040,
+                    "relatedModelId": 0,
+                    "sampleValue": "sales-demo@c-e.site",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23961,
+                            "direction": "REQUEST",
+                            "fieldId": 3041
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23962,
+                            "direction": "REQUEST",
+                            "fieldId": 3041
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23963,
+                            "direction": "REQUEST",
+                            "fieldId": 3041
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 23964,
+                            "direction": "RESPONSE",
+                            "fieldId": 3041
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 23965,
+                            "direction": "RESPONSE",
+                            "fieldId": 3041
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23966,
+                            "direction": "RESPONSE",
+                            "fieldId": 3041
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23967,
+                            "direction": "RESPONSE",
+                            "fieldId": 3041
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23968,
+                            "direction": "RESPONSE",
+                            "fieldId": 3041
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "from_name",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3041,
+                    "relatedModelId": 0,
+                    "sampleValue": "Maxwell Warner",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23969,
+                            "direction": "REQUEST",
+                            "fieldId": 3042
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23970,
+                            "direction": "REQUEST",
+                            "fieldId": 3042
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23971,
+                            "direction": "REQUEST",
+                            "fieldId": 3042
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 23972,
+                            "direction": "RESPONSE",
+                            "fieldId": 3042
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 23973,
+                            "direction": "RESPONSE",
+                            "fieldId": 3042
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23974,
+                            "direction": "RESPONSE",
+                            "fieldId": 3042
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23975,
+                            "direction": "RESPONSE",
+                            "fieldId": 3042
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23976,
+                            "direction": "RESPONSE",
+                            "fieldId": 3042
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "key",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3042,
+                    "relatedModelId": 0,
+                    "sampleValue": "kuxM0RvaFJ8bYMpmPdHcbQ",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "object",
+                        "jsonType": "array"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23977,
+                            "direction": "REQUEST",
+                            "fieldId": 3043
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23978,
+                            "direction": "REQUEST",
+                            "fieldId": 3043
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23979,
+                            "direction": "REQUEST",
+                            "fieldId": 3043
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 23980,
+                            "direction": "RESPONSE",
+                            "fieldId": 3043
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 23981,
+                            "direction": "RESPONSE",
+                            "fieldId": 3043
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23982,
+                            "direction": "RESPONSE",
+                            "fieldId": 3043
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23983,
+                            "direction": "RESPONSE",
+                            "fieldId": 3043
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23984,
+                            "direction": "RESPONSE",
+                            "fieldId": 3043
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "labels",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3043,
+                    "relatedModelId": 0,
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23985,
+                            "direction": "REQUEST",
+                            "fieldId": 3044
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23986,
+                            "direction": "REQUEST",
+                            "fieldId": 3044
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23987,
+                            "direction": "REQUEST",
+                            "fieldId": 3044
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 23988,
+                            "direction": "RESPONSE",
+                            "fieldId": 3044
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 23989,
+                            "direction": "RESPONSE",
+                            "fieldId": 3044
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23990,
+                            "direction": "RESPONSE",
+                            "fieldId": 3044
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23991,
+                            "direction": "RESPONSE",
+                            "fieldId": 3044
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23992,
+                            "direction": "RESPONSE",
+                            "fieldId": 3044
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "name",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3044,
+                    "relatedModelId": 0,
+                    "sampleValue": "TestTemplate",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23993,
+                            "direction": "REQUEST",
+                            "fieldId": 3045
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23994,
+                            "direction": "REQUEST",
+                            "fieldId": 3045
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 23995,
+                            "direction": "REQUEST",
+                            "fieldId": 3045
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 23996,
+                            "direction": "RESPONSE",
+                            "fieldId": 3045
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 23997,
+                            "direction": "RESPONSE",
+                            "fieldId": 3045
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 23998,
+                            "direction": "RESPONSE",
+                            "fieldId": 3045
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 23999,
+                            "direction": "RESPONSE",
+                            "fieldId": 3045
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24000,
+                            "direction": "RESPONSE",
+                            "fieldId": 3045
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "publish_code",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3045,
+                    "relatedModelId": 0,
+                    "sampleValue": "<b>sup bro</b>",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24001,
+                            "direction": "REQUEST",
+                            "fieldId": 3046
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24002,
+                            "direction": "REQUEST",
+                            "fieldId": 3046
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24003,
+                            "direction": "REQUEST",
+                            "fieldId": 3046
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 24004,
+                            "direction": "RESPONSE",
+                            "fieldId": 3046
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 24005,
+                            "direction": "RESPONSE",
+                            "fieldId": 3046
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24006,
+                            "direction": "RESPONSE",
+                            "fieldId": 3046
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24007,
+                            "direction": "RESPONSE",
+                            "fieldId": 3046
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24008,
+                            "direction": "RESPONSE",
+                            "fieldId": 3046
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "publish_from_email",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3046,
+                    "relatedModelId": 0,
+                    "sampleValue": "sales-demo@c-e.site",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24009,
+                            "direction": "REQUEST",
+                            "fieldId": 3047
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24010,
+                            "direction": "REQUEST",
+                            "fieldId": 3047
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24011,
+                            "direction": "REQUEST",
+                            "fieldId": 3047
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 24012,
+                            "direction": "RESPONSE",
+                            "fieldId": 3047
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 24013,
+                            "direction": "RESPONSE",
+                            "fieldId": 3047
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24014,
+                            "direction": "RESPONSE",
+                            "fieldId": 3047
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24015,
+                            "direction": "RESPONSE",
+                            "fieldId": 3047
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24016,
+                            "direction": "RESPONSE",
+                            "fieldId": 3047
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "publish_from_name",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3047,
+                    "relatedModelId": 0,
+                    "sampleValue": "Maxwell Warner",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24017,
+                            "direction": "REQUEST",
+                            "fieldId": 3048
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24018,
+                            "direction": "REQUEST",
+                            "fieldId": 3048
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24019,
+                            "direction": "REQUEST",
+                            "fieldId": 3048
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 24020,
+                            "direction": "RESPONSE",
+                            "fieldId": 3048
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 24021,
+                            "direction": "RESPONSE",
+                            "fieldId": 3048
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24022,
+                            "direction": "RESPONSE",
+                            "fieldId": 3048
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24023,
+                            "direction": "RESPONSE",
+                            "fieldId": 3048
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24024,
+                            "direction": "RESPONSE",
+                            "fieldId": 3048
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "publish_name",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3048,
+                    "relatedModelId": 0,
+                    "sampleValue": "TestTemplate",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24025,
+                            "direction": "REQUEST",
+                            "fieldId": 3049
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24026,
+                            "direction": "REQUEST",
+                            "fieldId": 3049
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24027,
+                            "direction": "REQUEST",
+                            "fieldId": 3049
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 24028,
+                            "direction": "RESPONSE",
+                            "fieldId": 3049
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 24029,
+                            "direction": "RESPONSE",
+                            "fieldId": 3049
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24030,
+                            "direction": "RESPONSE",
+                            "fieldId": 3049
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24031,
+                            "direction": "RESPONSE",
+                            "fieldId": 3049
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24032,
+                            "direction": "RESPONSE",
+                            "fieldId": 3049
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "publish_subject",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3049,
+                    "relatedModelId": 0,
+                    "sampleValue": "This is merely a test",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24033,
+                            "direction": "REQUEST",
+                            "fieldId": 3050
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24034,
+                            "direction": "REQUEST",
+                            "fieldId": 3050
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24035,
+                            "direction": "REQUEST",
+                            "fieldId": 3050
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 24036,
+                            "direction": "RESPONSE",
+                            "fieldId": 3050
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 24037,
+                            "direction": "RESPONSE",
+                            "fieldId": 3050
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24038,
+                            "direction": "RESPONSE",
+                            "fieldId": 3050
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24039,
+                            "direction": "RESPONSE",
+                            "fieldId": 3050
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24040,
+                            "direction": "RESPONSE",
+                            "fieldId": 3050
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "publish_text",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3050,
+                    "relatedModelId": 0,
+                    "sampleValue": "To Whom it may concern,\n\n\nI would like to reach out to you to let you know that I don't actually care to send you emails, but instead want to test some sandbox API functionality.\n\nBest,\n\nClaude",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "date-time",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24041,
+                            "direction": "REQUEST",
+                            "fieldId": 3051
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24042,
+                            "direction": "REQUEST",
+                            "fieldId": 3051
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24043,
+                            "direction": "REQUEST",
+                            "fieldId": 3051
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 24044,
+                            "direction": "RESPONSE",
+                            "fieldId": 3051
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 24045,
+                            "direction": "RESPONSE",
+                            "fieldId": 3051
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24046,
+                            "direction": "RESPONSE",
+                            "fieldId": 3051
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24047,
+                            "direction": "RESPONSE",
+                            "fieldId": 3051
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24048,
+                            "direction": "RESPONSE",
+                            "fieldId": 3051
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "published_at",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3051,
+                    "relatedModelId": 0,
+                    "sampleValue": "2018-10-23 03:21:59",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "mask": "YYYY-MM-DD HH:mm:ss",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24049,
+                            "direction": "REQUEST",
+                            "fieldId": 3052
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24050,
+                            "direction": "REQUEST",
+                            "fieldId": 3052
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24051,
+                            "direction": "REQUEST",
+                            "fieldId": 3052
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 24052,
+                            "direction": "RESPONSE",
+                            "fieldId": 3052
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 24053,
+                            "direction": "RESPONSE",
+                            "fieldId": 3052
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24054,
+                            "direction": "RESPONSE",
+                            "fieldId": 3052
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24055,
+                            "direction": "RESPONSE",
+                            "fieldId": 3052
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24056,
+                            "direction": "RESPONSE",
+                            "fieldId": 3052
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "slug",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3052,
+                    "relatedModelId": 0,
+                    "sampleValue": "testtemplate",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24057,
+                            "direction": "REQUEST",
+                            "fieldId": 3053
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24058,
+                            "direction": "REQUEST",
+                            "fieldId": 3053
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24059,
+                            "direction": "REQUEST",
+                            "fieldId": 3053
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 24060,
+                            "direction": "RESPONSE",
+                            "fieldId": 3053
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 24061,
+                            "direction": "RESPONSE",
+                            "fieldId": 3053
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24062,
+                            "direction": "RESPONSE",
+                            "fieldId": 3053
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24063,
+                            "direction": "RESPONSE",
+                            "fieldId": 3053
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24064,
+                            "direction": "RESPONSE",
+                            "fieldId": 3053
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "subject",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3053,
+                    "relatedModelId": 0,
+                    "sampleValue": "This is merely a test",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "string",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24065,
+                            "direction": "REQUEST",
+                            "fieldId": 3054
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24066,
+                            "direction": "REQUEST",
+                            "fieldId": 3054
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24067,
+                            "direction": "REQUEST",
+                            "fieldId": 3054
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 24068,
+                            "direction": "RESPONSE",
+                            "fieldId": 3054
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 24069,
+                            "direction": "RESPONSE",
+                            "fieldId": 3054
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24070,
+                            "direction": "RESPONSE",
+                            "fieldId": 3054
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24071,
+                            "direction": "RESPONSE",
+                            "fieldId": 3054
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24072,
+                            "direction": "RESPONSE",
+                            "fieldId": 3054
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "text",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3054,
+                    "relatedModelId": 0,
+                    "sampleValue": "To Whom it may concern,\n\n\nI would like to reach out to you to let you know that I don't actually care to send you emails, but instead want to test some sandbox API functionality.\n\nBest,\n\nClaude",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "primaryKey": false
+                },
+                {
+                    "hidden": false,
+                    "nullable": false,
+                    "modelId": 613,
+                    "dataType": {
+                        "format": "date-time",
+                        "jsonType": "string"
+                    },
+                    "minLength": "",
+                    "precision": "",
+                    "fieldMethods": [
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24073,
+                            "direction": "REQUEST",
+                            "fieldId": 3055
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24074,
+                            "direction": "REQUEST",
+                            "fieldId": 3055
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24075,
+                            "direction": "REQUEST",
+                            "fieldId": 3055
+                        },
+                        {
+                            "method": "GET",
+                            "populated": "NEVER",
+                            "id": 24076,
+                            "direction": "RESPONSE",
+                            "fieldId": 3055
+                        },
+                        {
+                            "method": "GET_BY_ID",
+                            "populated": "NEVER",
+                            "id": 24077,
+                            "direction": "RESPONSE",
+                            "fieldId": 3055
+                        },
+                        {
+                            "method": "PATCH",
+                            "populated": "NEVER",
+                            "id": 24078,
+                            "direction": "RESPONSE",
+                            "fieldId": 3055
+                        },
+                        {
+                            "method": "POST",
+                            "populated": "NEVER",
+                            "id": 24079,
+                            "direction": "RESPONSE",
+                            "fieldId": 3055
+                        },
+                        {
+                            "method": "PUT",
+                            "populated": "NEVER",
+                            "id": 24080,
+                            "direction": "RESPONSE",
+                            "fieldId": 3055
+                        }
+                    ],
+                    "description": "",
+                    "readOnly": false,
+                    "primaryIdentifier": false,
+                    "vendorName": "updated_at",
+                    "createdDate": "2018-10-23T21:33:28Z",
+                    "objectNameReference": "",
+                    "ownerAccountId": 4804,
+                    "ownerCompanyId": 1286,
+                    "ignore": false,
+                    "id": 3055,
+                    "relatedModelId": 0,
+                    "sampleValue": "2018-10-23 03:21:59.65657",
+                    "foreignKey": false,
+                    "subformat": "",
+                    "maxLength": "",
+                    "mask": "YYYY-MM-DD HH:mm:ss.SSSD",
+                    "primaryKey": false
+                }
+            ],
+            "vendorName": "templates"
+        }
+    ],
+    "active": true,
+    "resources": [
+        {
+            "path": "/hubs/general/me",
+            "vendorMethod": "POST",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "get info on your user",
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let obj = response_body;\nlet response = [obj];\n\ndone({\n     'response_body': response\n});",
+                    "type": "postRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/users/info.json"
+        },
+        {
+            "path": "/hubs/general/messages",
+            "vendorMethod": "POST",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "for POC purposes: https://mandrill.zendesk.com/hc/en-us/articles/205583137-How-do-I-search-my-outbound-activity-in-Mandrill-",
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "var response = response_body;\n\nresponse.forEach(function (record, index) {\n  var jsDate = new Date(record.ts*1000);\n  response[index].created_date = jsDate;\n});\n\ndone({'response_body': response});",
+                    "type": "postRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "bodyField",
+                    "dataType": "string",
+                    "name": "date_from",
+                    "description": "like \"\"2013-01-01\"",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "date_from",
+                    "required": false
+                },
+                {
+                    "vendorType": "bodyField",
+                    "dataType": "string",
+                    "name": "date_to",
+                    "description": "like \"2013-01-01\"",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "date_to",
+                    "required": false
+                },
+                {
+                    "vendorType": "bodyField",
+                    "dataType": "string",
+                    "name": "query",
+                    "description": "examples: full_email:joe@domain.* AND sender:me@company.com",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "query",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/messages/search.json"
+        },
+        {
+            "path": "/hubs/general/messages",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a(n) /messages",
+            "model": {
+                "requestName": "messages",
+                "transform": false,
+                "name": "messages",
+                "requestSwagger": {
+                    "headers": {
+                        "x-has-customfields": false,
+                        "title": "headers",
+                        "type": "object",
+                        "properties": {
+                            "Reply-To": {
+                                "x-sub-format": "email",
+                                "x-samplevalue": "message.reply@example.com",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "images": {
+                        "x-has-customfields": false,
+                        "title": "images",
+                        "properties": {
+                            "name": {
+                                "x-samplevalue": "IMAGECID",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "image/png",
+                                "type": "string"
+                            },
+                            "content": {
+                                "x-samplevalue": "ZXhhbXBsZSBmaWxl",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "metadata": {
+                        "x-has-customfields": false,
+                        "title": "metadata",
+                        "type": "object",
+                        "properties": {
+                            "website": {
+                                "x-samplevalue": "www.example.com",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "attachments": {
+                        "x-has-customfields": false,
+                        "title": "attachments",
+                        "properties": {
+                            "name": {
+                                "x-samplevalue": "myfile.txt",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "text/plain",
+                                "type": "string"
+                            },
+                            "content": {
+                                "x-samplevalue": "ZXhhbXBsZSBmaWxl",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "global_merge_vars": {
+                        "x-has-customfields": false,
+                        "title": "global_merge_vars",
+                        "properties": {
+                            "name": {
+                                "x-samplevalue": "merge1",
+                                "type": "string"
+                            },
+                            "content": {
+                                "x-samplevalue": "merge1 content",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "values": {
+                        "x-has-customfields": false,
+                        "title": "values",
+                        "type": "object",
+                        "properties": {
+                            "user_id": {
+                                "x-samplevalue": 123456,
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    "recipient_metadata": {
+                        "x-has-customfields": false,
+                        "title": "recipient_metadata",
+                        "properties": {
+                            "rcpt": {
+                                "x-sub-format": "email",
+                                "x-samplevalue": "recipient.email@example.com",
+                                "type": "string"
+                            },
+                            "values": {
+                                "type": "values"
+                            }
+                        }
+                    },
+                    "messages": {
+                        "x-has-customfields": false,
+                        "title": "messages",
+                        "properties": {
+                            "async": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "ip_pool": {
+                                "x-samplevalue": "Main Pool",
+                                "type": "string"
+                            },
+                            "send_at": {
+                                "x-samplevalue": "example send_at",
+                                "type": "string"
+                            },
+                            "message": {
+                                "type": "message"
+                            },
+                            "key": {
+                                "x-samplevalue": "kuxM0RvaFJ8bYMpmPdHcbQ",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "merge_vars": {
+                        "x-has-customfields": false,
+                        "title": "merge_vars",
+                        "properties": {
+                            "rcpt": {
+                                "x-sub-format": "email",
+                                "x-samplevalue": "recipient.email@example.com",
+                                "type": "string"
+                            },
+                            "vars": {
+                                "type": "array",
+                                "items": {
+                                    "type": "vars"
+                                }
+                            }
+                        }
+                    },
+                    "to": {
+                        "x-has-customfields": false,
+                        "title": "to",
+                        "properties": {
+                            "name": {
+                                "x-samplevalue": "Recipient Name",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "to",
+                                "type": "string"
+                            },
+                            "email": {
+                                "x-sub-format": "email",
+                                "x-samplevalue": "recipient.email@example.com",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "vars": {
+                        "x-has-customfields": false,
+                        "title": "vars",
+                        "properties": {
+                            "name": {
+                                "x-samplevalue": "merge2",
+                                "type": "string"
+                            },
+                            "content": {
+                                "x-samplevalue": "merge2 content",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "message": {
+                        "x-has-customfields": false,
+                        "title": "message",
+                        "type": "object",
+                        "properties": {
+                            "google_analytics_campaign": {
+                                "x-sub-format": "email",
+                                "x-samplevalue": "message.from_email@example.com",
+                                "type": "string"
+                            },
+                            "metadata": {
+                                "type": "metadata"
+                            },
+                            "attachments": {
+                                "type": "array",
+                                "items": {
+                                    "type": "attachments"
+                                }
+                            },
+                            "from_email": {
+                                "x-sub-format": "email",
+                                "x-samplevalue": "message.from_email@example.com",
+                                "type": "string"
+                            },
+                            "subject": {
+                                "x-samplevalue": "example subject",
+                                "type": "string"
+                            },
+                            "recipient_metadata": {
+                                "type": "array",
+                                "items": {
+                                    "type": "recipient_metadata"
+                                }
+                            },
+                            "preserve_recipients": {
+                                "type": "string"
+                            },
+                            "track_opens": {
+                                "type": "string"
+                            },
+                            "from_name": {
+                                "x-samplevalue": "Example Name",
+                                "type": "string"
+                            },
+                            "google_analytics_domains": {
+                                "x-samplevalue": [
+                                    "example.com"
+                                ],
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "merge_language": {
+                                "x-samplevalue": "mailchimp",
+                                "type": "string"
+                            },
+                            "return_path_domain": {
+                                "type": "string"
+                            },
+                            "merge": {
+                                "x-samplevalue": true,
+                                "type": "boolean"
+                            },
+                            "html": {
+                                "x-samplevalue": "<p>Example HTML content</p>",
+                                "type": "string"
+                            },
+                            "text": {
+                                "x-samplevalue": "Example text content",
+                                "type": "string"
+                            },
+                            "track_clicks": {
+                                "type": "string"
+                            },
+                            "url_strip_qs": {
+                                "type": "string"
+                            },
+                            "signing_domain": {
+                                "type": "string"
+                            },
+                            "view_content_link": {
+                                "type": "string"
+                            },
+                            "headers": {
+                                "type": "headers"
+                            },
+                            "images": {
+                                "type": "array",
+                                "items": {
+                                    "type": "images"
+                                }
+                            },
+                            "bcc_address": {
+                                "x-sub-format": "email",
+                                "x-samplevalue": "message.bcc_address@example.com",
+                                "type": "string"
+                            },
+                            "subaccount": {
+                                "x-samplevalue": "customer-123",
+                                "type": "string"
+                            },
+                            "merge_vars": {
+                                "type": "array",
+                                "items": {
+                                    "type": "merge_vars"
+                                }
+                            },
+                            "tags": {
+                                "x-samplevalue": [
+                                    "password-resets"
+                                ],
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "tracking_domain": {
+                                "type": "string"
+                            },
+                            "important": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "global_merge_vars": {
+                                "type": "array",
+                                "items": {
+                                    "type": "global_merge_vars"
+                                }
+                            },
+                            "auto_text": {
+                                "type": "string"
+                            },
+                            "inline_css": {
+                                "type": "string"
+                            },
+                            "auto_html": {
+                                "type": "string"
+                            },
+                            "to": {
+                                "type": "array",
+                                "items": {
+                                    "type": "to"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "message_send",
+                    "name": "body",
+                    "description": ".",
+                    "vendorDataType": "message_send",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/messages/send.json"
+        },
+        {
+            "path": "/hubs/general/messages/{id}",
+            "vendorMethod": "POST",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve a(n) /messages",
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "var response = response_body;\nvar jsDate = new Date(response.ts*1000);\n\nresponse.created_date = jsDate;\n\ndone({'response_body': response});",
+                    "type": "postRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "bodyField",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "..",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/messages/info.json"
+        },
+        {
+            "path": "/hubs/general/senders",
+            "vendorMethod": "POST",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /senders",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/users/senders.json"
+        },
+        {
+            "path": "/hubs/general/templates",
+            "vendorMethod": "POST",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /templates",
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "var response = response_body;\n\nresponse.forEach(function (record, index) {\n  var new_c_date = new Date(record.created_at);\n  var new_u_date = new Date(record.updated_at);\n  response[index].created_date = new_c_date;\n  response[index].updated_date = new_u_date;\n});\n\ndone({'response_body': response});",
+                    "type": "postRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/templates/list.json"
+        },
+        {
+            "path": "/hubs/general/templates",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a(n) /templates",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "templates",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "templates",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/templates/add.json"
+        },
+        {
+            "path": "/hubs/general/templates/{name}",
+            "vendorMethod": "POST",
+            "method": "DELETE",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Delete a(n) /templates",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "bodyToken",
+                    "dataType": "string",
+                    "name": "name",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "name",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/templates/delete.json"
+        },
+        {
+            "path": "/hubs/general/templates/{name}",
+            "vendorMethod": "POST",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve a(n) /templates",
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "var response = response_body;\nvar new_c_date = new Date(response.created_at);\nvar new_u_date = new Date(response.updated_at);\n\nresponse.created_date = new_c_date;\nresponse.updated_date = new_u_date;\n\ndone({'response_body': response});",
+                    "type": "postRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "bodyField",
+                    "dataType": "string",
+                    "name": "name",
+                    "description": "The template name to lookup",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "name",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/templates/info.json"
+        },
+        {
+            "path": "/hubs/general/templates/{name}",
+            "vendorMethod": "POST",
+            "method": "PATCH",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Update a(n) /templates",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "bodyField",
+                    "dataType": "string",
+                    "name": "name",
+                    "description": "the name of the template to update",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "name",
+                    "required": true
+                },
+                {
+                    "vendorType": "body",
+                    "dataType": "templates",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "templates",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/templates/update.json"
+        },
+        {
+            "path": "/hubs/general/templates/publish",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": ".",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "bodyField",
+                    "dataType": "string",
+                    "name": "name",
+                    "description": "The name ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "name",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/templates/publish.json"
+        }
+    ],
+    "modelType": "basic",
+    "protocolType": "http",
+    "transformationsEnabled": true,
+    "deleted": false,
+    "hub": "general",
+    "typeOauth": false,
+    "name": "Mandrill",
+    "extendable": true,
+    "parameters": [
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "required": false
+        },
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "required": false
+        },
+        {
+            "vendorType": "bodyField",
+            "name": "api.key",
+            "source": "request",
+            "type": "configuration",
+            "vendorName": "key",
+            "required": false
+        }
+    ]
+}
