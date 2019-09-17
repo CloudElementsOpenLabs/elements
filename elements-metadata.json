@@ -55,7 +55,7 @@
     "key" : "asana"
   },
   "Okta" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2018-11-07 at 10.53.38 AM201811071753.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202018-11-07%20at%2010.53.38%20AM201811071753.png",
     "path" : "Okta/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
@@ -88,7 +88,7 @@
     "key" : "pendoapi"
   },
   "Repsly" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-03-09 at 8.50.48 AM201903091550.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-03-09%20at%208.50.48%20AM201903091550.png",
     "path" : "Repsly/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
@@ -132,7 +132,7 @@
     "key" : "fullcontact"
   },
   "SurveyMonkey" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-02-27 at 10.44.00 AM201902271746.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-27%20at%2010.44.00%20AM201902271746.png",
     "path" : "SurveyMonkey/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
@@ -187,7 +187,7 @@
     "key" : "talentreef"
   },
   "AccurateBackground" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2018-11-07 at 10.54.19 AM201811071755.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202018-11-07%20at%2010.54.19%20AM201811071755.png",
     "path" : "AccurateBackground/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
@@ -220,7 +220,7 @@
     "key" : "vcloudair"
   },
   "Lyft" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-02-23 at 1.40.30 PM201902232040.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%201.40.30%20PM201902232040.png",
     "path" : "Lyft/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
@@ -275,7 +275,7 @@
     "key" : "hybris3"
   },
   "OneLogin" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-01-24 at 10.03.19 AM201901241703.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-01-24%20at%2010.03.19%20AM201901241703.png",
     "path" : "OneLogin/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
@@ -297,7 +297,7 @@
     "key" : "demoacquia"
   },
   "Infoplus" : {
-    "image" : "https://images.cloudelements.io/Image 2018-04-03 at 11.49.29 AM201804031759.png",
+    "image" : "https://images.cloudelements.io/Image%202018-04-03%20at%2011.49.29%20AM201804031759.png",
     "path" : "Infoplus/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
@@ -319,7 +319,7 @@
     "key" : "ipify"
   },
   "FacebookAds" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-02-23 at 1.57.00 PM201902232057.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%201.57.00%20PM201902232057.png",
     "path" : "FacebookAds/element.json",
     "hub" : "marketing",
     "author" : "Nick Bair",
@@ -341,7 +341,7 @@
     "key" : "demopaychexflex"
   },
   "Sprinkler" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-02-23 at 2.07.08 PM201902232108.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%202.07.08%20PM201902232108.png",
     "path" : "Sprinkler/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
@@ -363,7 +363,7 @@
     "key" : "adpwfnSDF"
   },
   "WesternUnion" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-02-20 at 2.17.36 PM201902202118.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-20%20at%202.17.36%20PM201902202118.png",
     "path" : "WesternUnion/element.json",
     "hub" : "finance",
     "author" : "Nick Bair",
@@ -374,7 +374,7 @@
     "key" : "westernunion"
   },
   "DunBradstreet" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-05-09 at 11.50.51 AM201905091751.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-05-09%20at%2011.50.51%20AM201905091751.png",
     "path" : "DunBradstreet/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
@@ -385,7 +385,7 @@
     "key" : "db"
   },
   "Uber" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-02-20 at 12.53.35 PM201902201953.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-20%20at%2012.53.35%20PM201902201953.png",
     "path" : "Uber/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
@@ -396,7 +396,7 @@
     "key" : "uber"
   },
   "UnderArmour" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-02-20 at 4.06.25 PM201902202312.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-20%20at%204.06.25%20PM201902202312.png",
     "path" : "UnderArmour/element.json",
     "hub" : "underarmour",
     "author" : "Nick Bair",
@@ -407,7 +407,7 @@
     "key" : "underarmour"
   },
   "SendGridV3" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-04-01 at 2.37.52 PM201904012038.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-04-01%20at%202.37.52%20PM201904012038.png",
     "path" : "SendGridV3/element.json",
     "hub" : "messaging",
     "author" : "Nick Bair",
@@ -451,7 +451,7 @@
     "key" : "discordbot"
   },
   "GooglePubSub" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-02-23 at 1.49.11 PM201902232049.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%201.49.11%20PM201902232049.png",
     "path" : "GooglePubSub/element.json",
     "hub" : "messaging",
     "author" : "Nick Bair",
@@ -473,7 +473,7 @@
     "key" : "shiftboard"
   },
   "DueDil" : {
-    "image" : "https://images.cloudelements.io/Screen Shot 2019-05-09 at 11.53.43 AM201905091754.png",
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-05-09%20at%2011.53.43%20AM201905091754.png",
     "path" : "DueDil/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
