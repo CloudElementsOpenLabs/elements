@@ -121,7 +121,7 @@
     "key" : "versapay"
   },
   "FullContact" : {
-    "image" : "https://www.fullcontact.com/wp-content/uploads/2013/06/logo-google.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/FullContact/fullcontact.png",
     "path" : "FullContact/element.json",
     "hub" : "crm",
     "author" : "Nick Bair",
@@ -209,7 +209,7 @@
     "key" : "demosamanage"
   },
   "VCloudAir" : {
-    "image" : "http://kendrickcoleman.com/slides/vcloudairapi/images/vcloudairlogo.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/VCloudAir/vcloudair.png",
     "path" : "VCloudAir/element.json",
     "hub" : "infrastructure",
     "author" : "Nick Bair",
