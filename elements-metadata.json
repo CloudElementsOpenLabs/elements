@@ -5,7 +5,7 @@
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "Mandrill",
-    "description" : "mailchimp's transactional email service, mandrill",
+    "description" : "mailchimp's transactional email service, mandrill description",
     "active" : true,
     "vendor_version" : "1",
     "key" : "mandrill_3"
