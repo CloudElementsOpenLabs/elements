@@ -274,6 +274,15 @@
     "vendor_version" : "v2",
     "key" : "hybris3"
   },
+  "Resolver" : {
+    "image" : "https://images.cloudelements.io/resolver_logo201904161628.png",
+    "path" : "Resolver/element.json",
+    "hub" : "general",
+    "name" : "Resolver",
+    "active" : true,
+    "description" : "The Element API 1.@4343",
+    "key" : "resolver"
+  },
   "OneLogin" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-01-24%20at%2010.03.19%20AM201901241703.png",
     "path" : "OneLogin/element.json",
