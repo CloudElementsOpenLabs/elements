@@ -1,4 +1,13 @@
 {
+  "ZohoCrmV2-clone" : {
+    "image" : "elements/custom-element-default-logo.png",
+    "path" : "ZohoCrmV2-clone/element.json",
+    "hub" : "crm",
+    "name" : "Zoho Crm V2-clone",
+    "active" : true,
+    "description" : "Add a Zoho CRM V2 Instance to connect your existing Zoho CRM account to the CRM Hub, allowing you to manage contacts, leads, accounts, opportunities etc. across multiple CRM Elements. You will need your Zoho CRM account information to add an instance.",
+    "key" : "zohocrmv2"
+  },
   "Mandrill" : {
     "image" : "https://images.cloudelements.io/mandrill201810221710.png",
     "path" : "Mandrill/element.json",
