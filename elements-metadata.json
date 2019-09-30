@@ -504,5 +504,15 @@
     "active" : true,
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
+  },
+    "jira" : {
+    "path" : "Jira/element.json",
+    "hub" : "general",
+    "author" : "vineet-joshi",
+    "name" : "jira",
+    "description" : "Jira rest apis",
+    "active" : true,
+    "vendor_version" : "1",
+    "key" : "jira-test2"
   }
 }
