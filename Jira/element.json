@@ -16,7 +16,7 @@
   }, {
     "internal": false,
     "companyConfig": false,
-    "defaultValue": "https://yourjirasubdomain.rest/api/3",
+    "defaultValue": "https://<yourjirasubdomain>/rest/api/3",
     "displayOrder": 1,
     "active": true,
     "description": "Confluence Base Url",
@@ -164,7 +164,7 @@
     "type": "preRequest"
   }],
   "beta": false,
-  "key": "jiraTwo",
+  "key": "jiraRest",
   "authentication": {
     "type": "basic"
   },
@@ -197,7 +197,7 @@
     }],
     "vendorPath": "/issue"
   }, {
-    "path": "/hubs/cms/projects ",
+    "path": "/hubs/cms/projects",
     "vendorMethod": "GET",
     "method": "GET",
     "kind": "eb",
@@ -248,7 +248,7 @@
   "deleted": false,
   "hub": "cms",
   "typeOauth": false,
-  "name": "Jira & Confluence rest",
+  "name": "Jira Rest",
   "extendable": true,
   "parameters": [{
     "vendorType": "header",
