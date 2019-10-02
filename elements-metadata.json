@@ -230,6 +230,16 @@
     "vendor_version" : "v1",
     "key" : "lyft"
   },
+  "jira" : {
+    "path" : "Jira/element.json",
+    "hub" : "general",
+    "author" : "vineet-joshi",
+    "name" : "jira",
+    "description" : "Jira rest apis",
+    "active" : true,
+    "vendor_version" : "1",
+    "key" : "jira-test2"
+  },
   "Billy" : {
     "image" : "https://images.cloudelements.io/35356_96135128d7a4354e6d895f49f271ed30b9ee0c97_billy-app_m201901211815.png",
     "path" : "Billy/element.json",
@@ -284,6 +294,15 @@
     "active" : true,
     "vendor_version" : "1",
     "key" : "onelogin"
+  },
+  "GitHub-clone" : {
+    "image" : "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png",
+    "path" : "GitHub-clone/element.json",
+    "hub" : "general",
+    "name" : "GitHub-clone",
+    "active" : true,
+    "description" : "Build software better, together. Powerful collaboration, code review, and code management for open source and private projects.",
+    "key" : "github"
   },
   "AcquiaLiftProfileMgr" : {
     "image" : "https://images.cloudelements.io/acquia201902201909.png",
@@ -504,15 +523,5 @@
     "active" : true,
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
-  },
-    "jira" : {
-    "path" : "Jira/element.json",
-    "hub" : "general",
-    "author" : "vineet-joshi",
-    "name" : "jira",
-    "description" : "Jira rest apis",
-    "active" : true,
-    "vendor_version" : "1",
-    "key" : "jira-test2"
   }
 }
