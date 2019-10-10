@@ -1,0 +1,13 @@
+{
+  "paths" : { },
+  "schemes" : [ "https" ],
+  "swagger" : "2.0",
+  "info" : {
+    "contact" : {
+      "email" : "support@cloud-elements.com"
+    },
+    "title" : "harshabase",
+    "version" : "api-v2"
+  },
+  "tags" : [ ]
+}
