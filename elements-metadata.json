@@ -230,6 +230,16 @@
     "vendor_version" : "v1",
     "key" : "lyft"
   },
+  "jira" : {
+    "path" : "Jira/element.json",
+    "hub" : "general",
+    "author" : "vineet-joshi",
+    "name" : "jira",
+    "description" : "Jira rest apis",
+    "active" : true,
+    "vendor_version" : "1",
+    "key" : "jira-test2"
+  },
   "Billy" : {
     "image" : "https://images.cloudelements.io/35356_96135128d7a4354e6d895f49f271ed30b9ee0c97_billy-app_m201901211815.png",
     "path" : "Billy/element.json",
@@ -273,6 +283,15 @@
     "active" : true,
     "vendor_version" : "v2",
     "key" : "hybris3"
+  },
+  "Resolver" : {
+    "image" : "https://images.cloudelements.io/resolver_logo201904161628.png",
+    "path" : "Resolver/element.json",
+    "hub" : "general",
+    "name" : "Resolver",
+    "active" : true,
+    "description" : "The Element API 1.@4343",
+    "key" : "resolver"
   },
   "OneLogin" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-01-24%20at%2010.03.19%20AM201901241703.png",
@@ -504,15 +523,5 @@
     "active" : true,
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
-  },
-    "jira" : {
-    "path" : "Jira/element.json",
-    "hub" : "general",
-    "author" : "vineet-joshi",
-    "name" : "jira",
-    "description" : "Jira rest apis",
-    "active" : true,
-    "vendor_version" : "1",
-    "key" : "jira-test2"
   }
 }
