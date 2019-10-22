@@ -230,6 +230,16 @@
     "vendor_version" : "v1",
     "key" : "lyft"
   },
+  "jira" : {
+    "path" : "Jira/element.json",
+    "hub" : "general",
+    "author" : "vineet-joshi",
+    "name" : "jira",
+    "description" : "Jira rest apis",
+    "active" : true,
+    "vendor_version" : "1",
+    "key" : "jira-test2"
+  },
   "Billy" : {
     "image" : "https://images.cloudelements.io/35356_96135128d7a4354e6d895f49f271ed30b9ee0c97_billy-app_m201901211815.png",
     "path" : "Billy/element.json",
@@ -395,6 +405,15 @@
     "vendor_version" : "v1",
     "key" : "uber"
   },
+  "HarshaBase" : {
+    "image" : "/base-crm-logo201902141224.jpg",
+    "path" : "HarshaBase/element.json",
+    "hub" : "crm",
+    "name" : "HarshaBase",
+    "active" : true,
+    "description" : "Creating an Base Element",
+    "key" : "harshabase"
+  },
   "UnderArmour" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-20%20at%204.06.25%20PM201902202312.png",
     "path" : "UnderArmour/element.json",
@@ -504,15 +523,5 @@
     "active" : true,
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
-  },
-    "jira" : {
-    "path" : "Jira/element.json",
-    "hub" : "general",
-    "author" : "vineet-joshi",
-    "name" : "jira",
-    "description" : "Jira rest apis",
-    "active" : true,
-    "vendor_version" : "1",
-    "key" : "jira-test2"
   }
 }
