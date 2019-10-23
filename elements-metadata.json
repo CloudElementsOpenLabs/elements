@@ -33,7 +33,7 @@
     "key" : "mavenlink"
   },
   "GitHub" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/GitHub/github_max_test.png",
+    "image" : "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png",
     "path" : "GitHub/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
@@ -121,7 +121,7 @@
     "key" : "versapay"
   },
   "FullContact" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/FullContact/fullcontact.png",
+    "image" : "https://www.fullcontact.com/wp-content/uploads/2013/06/logo-google.png",
     "path" : "FullContact/element.json",
     "hub" : "crm",
     "author" : "Nick Bair",
@@ -209,7 +209,7 @@
     "key" : "demosamanage"
   },
   "VCloudAir" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/VCloudAir/vcloudair.png",
+    "image" : "http://kendrickcoleman.com/slides/vcloudairapi/images/vcloudairlogo.png",
     "path" : "VCloudAir/element.json",
     "hub" : "infrastructure",
     "author" : "Nick Bair",
@@ -504,15 +504,5 @@
     "active" : true,
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
-  },
-    "jira" : {
-    "path" : "Jira/element.json",
-    "hub" : "general",
-    "author" : "vineet-joshi",
-    "name" : "jira",
-    "description" : "Jira rest apis",
-    "active" : true,
-    "vendor_version" : "1",
-    "key" : "jira-test2"
   }
 }
