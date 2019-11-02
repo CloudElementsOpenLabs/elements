@@ -197,6 +197,15 @@
     "vendor_version" : "v3",
     "key" : "demoaccuratebackground"
   },
+  "AWSRekognitionexport" : {
+    "image" : "elements/custom-element-default-logo.png",
+    "path" : "AWSRekognitionexport/element.json",
+    "hub" : "ai",
+    "name" : "AWS Rekognitionexport",
+    "active" : true,
+    "description" : "Api's to connect to aws rekognition service using aws lambda service.",
+    "key" : "awsrekognition"
+  },
   "Samanage" : {
     "image" : "https://images.cloudelements.io/logo_2712_hd-v3201811022006.png",
     "path" : "Samanage/element.json",
@@ -229,6 +238,16 @@
     "active" : true,
     "vendor_version" : "v1",
     "key" : "lyft"
+  },
+  "jira" : {
+    "path" : "Jira/element.json",
+    "hub" : "general",
+    "author" : "vineet-joshi",
+    "name" : "jira",
+    "description" : "Jira rest apis",
+    "active" : true,
+    "vendor_version" : "1",
+    "key" : "jira-test2"
   },
   "Billy" : {
     "image" : "https://images.cloudelements.io/35356_96135128d7a4354e6d895f49f271ed30b9ee0c97_billy-app_m201901211815.png",
@@ -504,15 +523,5 @@
     "active" : true,
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
-  },
-    "jira" : {
-    "path" : "Jira/element.json",
-    "hub" : "general",
-    "author" : "vineet-joshi",
-    "name" : "jira",
-    "description" : "Jira rest apis",
-    "active" : true,
-    "vendor_version" : "1",
-    "key" : "jira-test2"
   }
 }
