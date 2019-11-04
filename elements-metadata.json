@@ -523,6 +523,6 @@
     "description" : "connect to your speakers",
     "active" : true,
     "vendor_version" : "V1",
-    "key" : "jira-test2"
+    "key" : "sonos"
   }
 }
