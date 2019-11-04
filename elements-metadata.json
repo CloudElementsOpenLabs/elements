@@ -514,5 +514,15 @@
     "active" : true,
     "vendor_version" : "1",
     "key" : "jira-test2"
+  },
+  "Sonos" : {
+    "path" : "Sonos/element.json",
+    "hub" : "general",
+    "author" : "Guy Van Wert",
+    "name" : "sonos",
+    "description" : "connect to your speakers",
+    "active" : true,
+    "vendor_version" : "V1",
+    "key" : "jira-test2"
   }
 }
