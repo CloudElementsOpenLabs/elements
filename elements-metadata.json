@@ -21,6 +21,15 @@
     "vendor_version" : "252497",
     "key" : "democambridgefx"
   },
+  "Bullhorn-ChangePR" : {
+    "image" : "elements/provider_bullhorn.png",
+    "path" : "Bullhorn-ChangePR/element.json",
+    "hub" : "crm",
+    "name" : "Bullhorn-ChangePR",
+    "active" : true,
+    "description" : "Add a Bullhorn Instance to connect your existing Bullhorn account to the CRM Hub, allowing you to manage contacts, leads, accounts, opportunities etc. across multiple CRM Elements. You will need your Bullhorn account information to add an instance.",
+    "key" : "bullhorn"
+  },
   "Asana" : {
     "image" : "https://images.cloudelements.io/asana201711150235.png",
     "path" : "Asana/element.json",
@@ -403,15 +412,6 @@
     "active" : true,
     "vendor_version" : "v2",
     "key" : "billyaccounting"
-  },
-  "Bullhorn-Export" : {
-    "image" : "elements/provider_bullhorn.png",
-    "path" : "Bullhorn-Export/element.json",
-    "hub" : "crm",
-    "name" : "Bullhorn-Export",
-    "active" : true,
-    "description" : "Add a Bullhorn Instance to connect your existing Bullhorn account to the CRM Hub, allowing you to manage contacts, leads, accounts, opportunities etc. across multiple CRM Elements. You will need your Bullhorn account information to add an instance.",
-    "key" : "bullhorn"
   },
   "SapHybrisMarketing" : {
     "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/SapHybrisMarketing/hybris3.png",
