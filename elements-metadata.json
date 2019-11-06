@@ -21,14 +21,27 @@
     "vendor_version" : "252497",
     "key" : "democambridgefx"
   },
-  "Bullhorn-ChangePR" : {
-    "image" : "elements/provider_bullhorn.png",
-    "path" : "Bullhorn-ChangePR/element.json",
-    "hub" : "crm",
-    "name" : "Bullhorn-ChangePR",
+  "Mavenlink" : {
+    "image" : "https://images.cloudelements.io/LogoName201712152026.png",
+    "path" : "Mavenlink/element.json",
+    "hub" : "general",
+    "author" : "daniellelaforte",
+    "name" : "Mavenlink",
+    "description" : "Mavenlink Element",
     "active" : true,
-    "description" : "Add a Bullhorn Instance to connect your existing Bullhorn account to the CRM Hub, allowing you to manage contacts, leads, accounts, opportunities etc. across multiple CRM Elements. You will need your Bullhorn account information to add an instance.",
-    "key" : "bullhorn"
+    "vendor_version" : "v1",
+    "key" : "mavenlink"
+  },
+  "GitHub" : {
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/GitHub/github_max_test.png",
+    "path" : "GitHub/element.json",
+    "hub" : "general",
+    "author" : "MaxwellWarnerCE",
+    "name" : "GitHub",
+    "description" : "Build software better, together. Powerful collaboration, code review, and code management for open source and private projects.",
+    "active" : true,
+    "vendor_version" : "latest",
+    "key" : "github_max_test"
   },
   "Asana" : {
     "image" : "https://images.cloudelements.io/asana201711150235.png",
@@ -41,6 +54,39 @@
     "vendor_version" : "1",
     "key" : "asana"
   },
+  "Okta" : {
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202018-11-07%20at%2010.53.38%20AM201811071753.png",
+    "path" : "Okta/element.json",
+    "hub" : "general",
+    "author" : "daniellelaforte",
+    "name" : "OKTA (Demo)",
+    "description" : "Provide secure identity management and single sign-on to any application, whether in the cloud, on-premises or on a mobile device.",
+    "active" : true,
+    "vendor_version" : "v1",
+    "key" : "demookta"
+  },
+  "ICIMs" : {
+    "image" : "https://images.cloudelements.io/icims-logo-main201901252048.png",
+    "path" : "ICIMs/element.json",
+    "hub" : "general",
+    "author" : "MaxwellWarnerCE",
+    "name" : "ICIMS",
+    "description" : "this is a demo element for ICIMS API",
+    "active" : true,
+    "vendor_version" : "latest",
+    "key" : "icims"
+  },
+  "Pendo" : {
+    "image" : "https://images.cloudelements.io/pendo-share-logo201804082331.png",
+    "path" : "Pendo/element.json",
+    "hub" : "general",
+    "author" : "daniellelaforte",
+    "name" : "Pendo",
+    "description" : "Pendo API",
+    "active" : true,
+    "vendor_version" : "v1",
+    "key" : "pendoapi"
+  },
   "Repsly" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-03-09%20at%208.50.48%20AM201903091550.png",
     "path" : "Repsly/element.json",
@@ -52,15 +98,27 @@
     "vendor_version" : "v3",
     "key" : "repsly"
   },
-  "Sonos" : {
-    "path" : "Sonos/element.json",
+  "Returnly" : {
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/Returnly/returnlyapi.png",
+    "path" : "Returnly/element.json",
     "hub" : "general",
-    "author" : "Guy Van Wert",
-    "name" : "sonos",
-    "description" : "connect to your speakers",
+    "author" : "MaxwellWarnerCE",
+    "name" : "Returnly API",
+    "description" : "# Introduction\nThe Returnly API enables developers to seamlessly receive and pass up-to-date returns and refunds data into the platforms you use to run your business. Optimize your returns and merchandise strategies, maximize your technology investments and streamline your business with our [Returns](#tag/Returns), [Requests](#tag/Requests) & [Refunds](#tag/Refunds) APIs\n\n# Common Use Cases\n * Update your OMS with real-time returns data\n * Get up to date returns status in real-time\n * Leverage granular return data to optimize your current merchandise initiatives\n * Track shipping and delivery of product returns\n * Feed your CRM systems with real-time customer returns data\n * Manage inventory predictably by monitoring returns and understanding which items have resell potential\n * Manage inventory predictably by monitoring returns and understanding which items have resell potential\n * Automate order refunds by connecting your warehouse scan system to the Returnly Refund API\n\n# Getting Started\n## Customers\nYou will need an Enterprise Returnly license in order to access our API. Please contact your Returnly representative to gain access.\n",
     "active" : true,
-    "vendor_version" : "V1",
-    "key" : "sonos"
+    "vendor_version" : "v1.0.0",
+    "key" : "returnlyapi"
+  },
+  "VersaPay" : {
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/VersaPay/versapay.png",
+    "path" : "VersaPay/element.json",
+    "hub" : "general",
+    "author" : "MaxwellWarnerCE",
+    "name" : "VersaPay",
+    "description" : "blah blah blah",
+    "active" : true,
+    "vendor_version" : "latest",
+    "key" : "versapay"
   },
   "FullContact" : {
     "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/FullContact/fullcontact.png",
@@ -72,6 +130,28 @@
     "active" : true,
     "vendor_version" : "v2",
     "key" : "fullcontact"
+  },
+  "SurveyMonkey" : {
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-27%20at%2010.44.00%20AM201902271746.png",
+    "path" : "SurveyMonkey/element.json",
+    "hub" : "general",
+    "author" : "Nick Bair",
+    "name" : "Survey Monkey",
+    "description" : "Create Surveys That Get Responses.",
+    "active" : true,
+    "vendor_version" : "v3",
+    "key" : "surveymonkey"
+  },
+  "Calculator" : {
+    "image" : "http://developers.cloud-elements.com/assets/img/default-ce-logo-element-builder.png",
+    "path" : "Calculator/element.json",
+    "hub" : "general",
+    "author" : "daniellelaforte",
+    "name" : "Calculator Soap",
+    "description" : "Imported simple calculator SOAP Element",
+    "active" : true,
+    "vendor_version" : "latest",
+    "key" : "democalculator"
   },
   "Pinterest" : {
     "image" : "https://images.cloudelements.io/App-Pinterest-icon-with-out-background201808282145.png",
@@ -95,6 +175,17 @@
     "vendor_version" : "v1",
     "key" : "taulia"
   },
+  "TalentReef" : {
+    "image" : "https://images.cloudelements.io/TR201901252050.png",
+    "path" : "TalentReef/element.json",
+    "hub" : "general",
+    "author" : "MaxwellWarnerCE",
+    "name" : "TalentReef",
+    "description" : "yaaa",
+    "active" : true,
+    "vendor_version" : "v1",
+    "key" : "talentreef"
+  },
   "AccurateBackground" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202018-11-07%20at%2010.54.19%20AM201811071755.png",
     "path" : "AccurateBackground/element.json",
@@ -117,6 +208,17 @@
     "vendor_version" : "v2.1",
     "key" : "demosamanage"
   },
+  "VCloudAir" : {
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/VCloudAir/vcloudair.png",
+    "path" : "VCloudAir/element.json",
+    "hub" : "infrastructure",
+    "author" : "Nick Bair",
+    "name" : "vCloud Air",
+    "description" : "vCloud Air is the hybrid cloud built for modern IT.",
+    "active" : true,
+    "vendor_version" : "5.7",
+    "key" : "vcloudair"
+  },
   "Lyft" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%201.40.30%20PM201902232040.png",
     "path" : "Lyft/element.json",
@@ -128,15 +230,16 @@
     "vendor_version" : "v1",
     "key" : "lyft"
   },
-  "jira" : {
-    "path" : "Jira/element.json",
-    "hub" : "general",
-    "author" : "vineet-joshi",
-    "name" : "jira",
-    "description" : "Jira rest apis",
+  "Billy" : {
+    "image" : "https://images.cloudelements.io/35356_96135128d7a4354e6d895f49f271ed30b9ee0c97_billy-app_m201901211815.png",
+    "path" : "Billy/element.json",
+    "hub" : "finance",
+    "author" : "Ricky",
+    "name" : "Billy",
+    "description" : "Accounting Software",
     "active" : true,
-    "vendor_version" : "1",
-    "key" : "jira-test2"
+    "vendor_version" : "v2",
+    "key" : "billyaccounting"
   },
   "CloudElements" : {
     "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/CloudElements/democloudelements.png",
@@ -160,6 +263,28 @@
     "vendor_version" : "v1",
     "key" : "google_cloud_storage"
   },
+  "SapHybrisMarketing" : {
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/SapHybrisMarketing/hybris3.png",
+    "path" : "SapHybrisMarketing/element.json",
+    "hub" : "erp",
+    "author" : "Nick Bair",
+    "name" : "HybrisMarketing",
+    "description" : "THe hybris marketing element",
+    "active" : true,
+    "vendor_version" : "v2",
+    "key" : "hybris3"
+  },
+  "OneLogin" : {
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-01-24%20at%2010.03.19%20AM201901241703.png",
+    "path" : "OneLogin/element.json",
+    "hub" : "general",
+    "author" : "daniellelaforte",
+    "name" : "OneLogin",
+    "description" : "OneLogin",
+    "active" : true,
+    "vendor_version" : "1",
+    "key" : "onelogin"
+  },
   "AcquiaLiftProfileMgr" : {
     "image" : "https://images.cloudelements.io/acquia201902201909.png",
     "path" : "AcquiaLiftProfileMgr/element.json",
@@ -171,6 +296,39 @@
     "vendor_version" : "2",
     "key" : "demoacquia"
   },
+  "Infoplus" : {
+    "image" : "https://images.cloudelements.io/Image%202018-04-03%20at%2011.49.29%20AM201804031759.png",
+    "path" : "Infoplus/element.json",
+    "hub" : "general",
+    "author" : "MaxwellWarnerCE",
+    "name" : "Infoplus",
+    "description" : "This element will be partially built ",
+    "active" : true,
+    "vendor_version" : "latest",
+    "key" : "infoplus"
+  },
+  "Ipify" : {
+    "image" : "https://images.cloudelements.io/globe201802112131.png",
+    "path" : "Ipify/element.json",
+    "hub" : "general",
+    "author" : "daniellelaforte",
+    "name" : "ipify",
+    "description" : "An example of an element using ipify.org - a simple public IP address API",
+    "active" : true,
+    "vendor_version" : "latest",
+    "key" : "ipify"
+  },
+  "FacebookAds" : {
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%201.57.00%20PM201902232057.png",
+    "path" : "FacebookAds/element.json",
+    "hub" : "marketing",
+    "author" : "Nick Bair",
+    "name" : "Facebook Ads",
+    "description" : "Facebook Ads API.",
+    "active" : true,
+    "vendor_version" : "v2.8",
+    "key" : "facebookads"
+  },
   "PaychexFlex" : {
     "image" : "https://images.cloudelements.io/paychex201811131855.png",
     "path" : "PaychexFlex/element.json",
@@ -181,6 +339,17 @@
     "active" : true,
     "vendor_version" : "v1",
     "key" : "demopaychexflex"
+  },
+  "Sprinkler" : {
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%202.07.08%20PM201902232108.png",
+    "path" : "Sprinkler/element.json",
+    "hub" : "general",
+    "author" : "daniellelaforte",
+    "name" : "Sprinklr",
+    "description" : "Enterprise software that helps employees across the front office come together and engage with customers through one unified platform.",
+    "active" : true,
+    "vendor_version" : "v1",
+    "key" : "sprinklr"
   },
   "ADPWorkForceNow" : {
     "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/ADPWorkForceNow/adpwfnSDF.png",
@@ -248,237 +417,6 @@
     "vendor_version" : "v3",
     "key" : "sendgridv3"
   },
-  "DiscordBot" : {
-    "image" : "https://images.cloudelements.io/discordbot201907252107.png",
-    "path" : "DiscordBot/element.json",
-    "hub" : "collaboration",
-    "author" : "Aidan-Wood",
-    "name" : "Discord Bot",
-    "description" : "Discord Bot",
-    "active" : true,
-    "vendor_version" : "v6",
-    "key" : "discordbot"
-  },
-  "DueDil" : {
-    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-05-09%20at%2011.53.43%20AM201905091754.png",
-    "path" : "DueDil/element.json",
-    "hub" : "general",
-    "author" : "daniellelaforte",
-    "name" : "DueDil",
-    "description" : "DueDil API",
-    "active" : true,
-    "vendor_version" : "v4",
-    "key" : "duedil"
-  },
-  "MicrosoftTeams" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/MicrosoftTeams/microsoftgraph.jpg",
-    "path" : "MicrosoftTeams/element.json",
-    "hub" : "general",
-    "author" : "Nick Bair",
-    "name" : "Microsoft Graph - Teams",
-    "description" : "Add a Microsoft Graph instance to connect your existing account allowing you to manage calendars and sync to a variety of microsoft endpoints. You will need your AWS account information to add an instance",
-    "active" : true,
-    "vendor_version" : "v1.0",
-    "key" : "microsoftgraph"
-  },
-  "Mavenlink" : {
-    "image" : "https://images.cloudelements.io/LogoName201712152026.png",
-    "path" : "Mavenlink/element.json",
-    "hub" : "general",
-    "author" : "daniellelaforte",
-    "name" : "Mavenlink",
-    "description" : "Mavenlink Element",
-    "active" : true,
-    "vendor_version" : "v1",
-    "key" : "mavenlink"
-  },
-  "GitHub" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/GitHub/github_max_test.png",
-    "path" : "GitHub/element.json",
-    "hub" : "general",
-    "author" : "MaxwellWarnerCE",
-    "name" : "GitHub",
-    "description" : "Build software better, together. Powerful collaboration, code review, and code management for open source and private projects.",
-    "active" : true,
-    "vendor_version" : "latest",
-    "key" : "github_max_test"
-  },
-  "Okta" : {
-    "image" : "https://images.cloudelements.io/Screen%20Shot%202018-11-07%20at%2010.53.38%20AM201811071753.png",
-    "path" : "Okta/element.json",
-    "hub" : "general",
-    "author" : "daniellelaforte",
-    "name" : "OKTA (Demo)",
-    "description" : "Provide secure identity management and single sign-on to any application, whether in the cloud, on-premises or on a mobile device.",
-    "active" : true,
-    "vendor_version" : "v1",
-    "key" : "demookta"
-  },
-  "ICIMs" : {
-    "image" : "https://images.cloudelements.io/icims-logo-main201901252048.png",
-    "path" : "ICIMs/element.json",
-    "hub" : "general",
-    "author" : "MaxwellWarnerCE",
-    "name" : "ICIMS",
-    "description" : "this is a demo element for ICIMS API",
-    "active" : true,
-    "vendor_version" : "latest",
-    "key" : "icims"
-  },
-  "Pendo" : {
-    "image" : "https://images.cloudelements.io/pendo-share-logo201804082331.png",
-    "path" : "Pendo/element.json",
-    "hub" : "general",
-    "author" : "daniellelaforte",
-    "name" : "Pendo",
-    "description" : "Pendo API",
-    "active" : true,
-    "vendor_version" : "v1",
-    "key" : "pendoapi"
-  },
-  "Returnly" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/Returnly/returnlyapi.png",
-    "path" : "Returnly/element.json",
-    "hub" : "general",
-    "author" : "MaxwellWarnerCE",
-    "name" : "Returnly API",
-    "description" : "# Introduction\nThe Returnly API enables developers to seamlessly receive and pass up-to-date returns and refunds data into the platforms you use to run your business. Optimize your returns and merchandise strategies, maximize your technology investments and streamline your business with our [Returns](#tag/Returns), [Requests](#tag/Requests) & [Refunds](#tag/Refunds) APIs\n\n# Common Use Cases\n * Update your OMS with real-time returns data\n * Get up to date returns status in real-time\n * Leverage granular return data to optimize your current merchandise initiatives\n * Track shipping and delivery of product returns\n * Feed your CRM systems with real-time customer returns data\n * Manage inventory predictably by monitoring returns and understanding which items have resell potential\n * Manage inventory predictably by monitoring returns and understanding which items have resell potential\n * Automate order refunds by connecting your warehouse scan system to the Returnly Refund API\n\n# Getting Started\n## Customers\nYou will need an Enterprise Returnly license in order to access our API. Please contact your Returnly representative to gain access.\n",
-    "active" : true,
-    "vendor_version" : "v1.0.0",
-    "key" : "returnlyapi"
-  },
-  "VersaPay" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/VersaPay/versapay.png",
-    "path" : "VersaPay/element.json",
-    "hub" : "general",
-    "author" : "MaxwellWarnerCE",
-    "name" : "VersaPay",
-    "description" : "blah blah blah",
-    "active" : true,
-    "vendor_version" : "latest",
-    "key" : "versapay"
-  },
-  "SurveyMonkey" : {
-    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-27%20at%2010.44.00%20AM201902271746.png",
-    "path" : "SurveyMonkey/element.json",
-    "hub" : "general",
-    "author" : "Nick Bair",
-    "name" : "Survey Monkey",
-    "description" : "Create Surveys That Get Responses.",
-    "active" : true,
-    "vendor_version" : "v3",
-    "key" : "surveymonkey"
-  },
-  "Calculator" : {
-    "image" : "http://developers.cloud-elements.com/assets/img/default-ce-logo-element-builder.png",
-    "path" : "Calculator/element.json",
-    "hub" : "general",
-    "author" : "daniellelaforte",
-    "name" : "Calculator Soap",
-    "description" : "Imported simple calculator SOAP Element",
-    "active" : true,
-    "vendor_version" : "latest",
-    "key" : "democalculator"
-  },
-  "TalentReef" : {
-    "image" : "https://images.cloudelements.io/TR201901252050.png",
-    "path" : "TalentReef/element.json",
-    "hub" : "general",
-    "author" : "MaxwellWarnerCE",
-    "name" : "TalentReef",
-    "description" : "yaaa",
-    "active" : true,
-    "vendor_version" : "v1",
-    "key" : "talentreef"
-  },
-  "VCloudAir" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/VCloudAir/vcloudair.png",
-    "path" : "VCloudAir/element.json",
-    "hub" : "infrastructure",
-    "author" : "Nick Bair",
-    "name" : "vCloud Air",
-    "description" : "vCloud Air is the hybrid cloud built for modern IT.",
-    "active" : true,
-    "vendor_version" : "5.7",
-    "key" : "vcloudair"
-  },
-  "Billy" : {
-    "image" : "https://images.cloudelements.io/35356_96135128d7a4354e6d895f49f271ed30b9ee0c97_billy-app_m201901211815.png",
-    "path" : "Billy/element.json",
-    "hub" : "finance",
-    "author" : "Ricky",
-    "name" : "Billy",
-    "description" : "Accounting Software",
-    "active" : true,
-    "vendor_version" : "v2",
-    "key" : "billyaccounting"
-  },
-  "SapHybrisMarketing" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/SapHybrisMarketing/hybris3.png",
-    "path" : "SapHybrisMarketing/element.json",
-    "hub" : "erp",
-    "author" : "Nick Bair",
-    "name" : "HybrisMarketing",
-    "description" : "THe hybris marketing element",
-    "active" : true,
-    "vendor_version" : "v2",
-    "key" : "hybris3"
-  },
-  "OneLogin" : {
-    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-01-24%20at%2010.03.19%20AM201901241703.png",
-    "path" : "OneLogin/element.json",
-    "hub" : "general",
-    "author" : "daniellelaforte",
-    "name" : "OneLogin",
-    "description" : "OneLogin",
-    "active" : true,
-    "vendor_version" : "1",
-    "key" : "onelogin"
-  },
-  "Infoplus" : {
-    "image" : "https://images.cloudelements.io/Image%202018-04-03%20at%2011.49.29%20AM201804031759.png",
-    "path" : "Infoplus/element.json",
-    "hub" : "general",
-    "author" : "MaxwellWarnerCE",
-    "name" : "Infoplus",
-    "description" : "This element will be partially built ",
-    "active" : true,
-    "vendor_version" : "latest",
-    "key" : "infoplus"
-  },
-  "Ipify" : {
-    "image" : "https://images.cloudelements.io/globe201802112131.png",
-    "path" : "Ipify/element.json",
-    "hub" : "general",
-    "author" : "daniellelaforte",
-    "name" : "ipify",
-    "description" : "An example of an element using ipify.org - a simple public IP address API",
-    "active" : true,
-    "vendor_version" : "latest",
-    "key" : "ipify"
-  },
-  "FacebookAds" : {
-    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%201.57.00%20PM201902232057.png",
-    "path" : "FacebookAds/element.json",
-    "hub" : "marketing",
-    "author" : "Nick Bair",
-    "name" : "Facebook Ads",
-    "description" : "Facebook Ads API.",
-    "active" : true,
-    "vendor_version" : "v2.8",
-    "key" : "facebookads"
-  },
-  "Sprinkler" : {
-    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%202.07.08%20PM201902232108.png",
-    "path" : "Sprinkler/element.json",
-    "hub" : "general",
-    "author" : "daniellelaforte",
-    "name" : "Sprinklr",
-    "description" : "Enterprise software that helps employees across the front office come together and engage with customers through one unified platform.",
-    "active" : true,
-    "vendor_version" : "v1",
-    "key" : "sprinklr"
-  },
   "Expensewire" : {
     "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/Expensewire/demoexpensewire.png",
     "path" : "Expensewire/element.json",
@@ -500,6 +438,17 @@
     "active" : true,
     "vendor_version" : "latest",
     "key" : "awsrekognition"
+  },
+  "DiscordBot" : {
+    "image" : "https://images.cloudelements.io/discordbot201907252107.png",
+    "path" : "DiscordBot/element.json",
+    "hub" : "collaboration",
+    "author" : "Aidan-Wood",
+    "name" : "Discord Bot",
+    "description" : "Discord Bot",
+    "active" : true,
+    "vendor_version" : "v6",
+    "key" : "discordbot"
   },
   "GooglePubSub" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%201.49.11%20PM201902232049.png",
@@ -523,6 +472,28 @@
     "vendor_version" : "RPC",
     "key" : "shiftboard"
   },
+  "DueDil" : {
+    "image" : "https://images.cloudelements.io/Screen%20Shot%202019-05-09%20at%2011.53.43%20AM201905091754.png",
+    "path" : "DueDil/element.json",
+    "hub" : "general",
+    "author" : "daniellelaforte",
+    "name" : "DueDil",
+    "description" : "DueDil API",
+    "active" : true,
+    "vendor_version" : "v4",
+    "key" : "duedil"
+  },
+  "MicrosoftTeams" : {
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/MicrosoftTeams/microsoftgraph.jpg",
+    "path" : "MicrosoftTeams/element.json",
+    "hub" : "general",
+    "author" : "Nick Bair",
+    "name" : "Microsoft Graph - Teams",
+    "description" : "Add a Microsoft Graph instance to connect your existing account allowing you to manage calendars and sync to a variety of microsoft endpoints. You will need your AWS account information to add an instance",
+    "active" : true,
+    "vendor_version" : "v1.0",
+    "key" : "microsoftgraph"
+  },
   "TrackTik" : {
     "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/TrackTik/tracktikapi2.png",
     "path" : "TrackTik/element.json",
@@ -533,5 +504,36 @@
     "active" : true,
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
+  },
+  "jira" : {
+    "path" : "Jira/element.json",
+    "hub" : "general",
+    "author" : "vineet-joshi",
+    "name" : "jira",
+    "description" : "Jira rest apis",
+    "active" : true,
+    "vendor_version" : "1",
+    "key" : "jira-test2"
+  },
+  "Sonos" : {
+    "path" : "Sonos/element.json",
+    "hub" : "general",
+    "author" : "Guy Van Wert",
+    "name" : "sonos",
+    "description" : "connect to your speakers",
+    "active" : true,
+    "vendor_version" : "V1",
+    "key" : "sonos"
+  },
+  "Bullhorn-ChangePR" : {
+    "image" : "elements/provider_bullhorn.png",
+    "path" : "Bullhorn-ChangePR/element.json",
+    "hub" : "crm",
+    "author" : "pradeepgorajana",
+    "name" : "Bullhorn-ChangePR",
+    "active" : true,
+    "description" : "Add a Bullhorn Instance to connect your existing Bullhorn account to the CRM Hub, allowing you to manage contacts, leads, accounts, opportunities etc. across multiple CRM Elements. You will need your Bullhorn account information to add an instance.",
+    "vendor_version" : null,
+    "key" : "bullhorn"
   }
 }
