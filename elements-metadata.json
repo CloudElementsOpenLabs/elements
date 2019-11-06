@@ -505,7 +505,7 @@
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
   },
-    "jira" : {
+  "jira" : {
     "path" : "Jira/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
@@ -524,5 +524,16 @@
     "active" : true,
     "vendor_version" : "V1",
     "key" : "sonos"
+  },
+  "Export-publish" : {
+    "image" : "https://images.cloudelements.io/Screenshot 2019-10-01 at 11.58.40 AM201911020904.png",
+    "path" : "Export-publish/element.json",
+    "hub" : "ai",
+    "author" : "pradeepgorajana",
+    "name" : "Export-publish",
+    "active" : true,
+    "description" : "This element is to verify publish functionality ",
+    "vendor_version" : null,
+    "key" : "export-publish"
   }
 }
