@@ -505,7 +505,7 @@
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
   },
-    "jira" : {
+  "jira" : {
     "path" : "Jira/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
@@ -524,5 +524,16 @@
     "active" : true,
     "vendor_version" : "V1",
     "key" : "sonos"
+  },
+  "OracleSalesCloud" : {
+    "image" : "elements/provider_salescloud.jpg",
+    "path" : "OracleSalesCloud/element.json",
+    "hub" : "crm",
+    "author" : "avinashch0216",
+    "name" : "Oracle Sales Cloud",
+    "active" : true,
+    "description" : "Add an Oracle Sales Cloud Instance to connect your existing Oracle Sales Cloud account to the CRM Hub, allowing you to manage your accounts, opportunities, contacts, leads, users, etc. across multiple CRM Elements. You will need your Oracle Sales Cloud account information to add an instance.",
+    "vendor_version" : null,
+    "key" : "oraclesalescloud"
   }
 }
