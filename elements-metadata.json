@@ -505,7 +505,7 @@
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
   },
-    "jira" : {
+  "jira" : {
     "path" : "Jira/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
@@ -524,5 +524,17 @@
     "active" : true,
     "vendor_version" : "V1",
     "key" : "sonos"
+  },
+  "JiraOnPrem" : {
+    "image" : "elements/custom-element-default-logo.png",
+    "path" : "JiraOnPrem/element.json",
+    "hub" : "helpdesk",
+    "author" : "avinashch0216",
+    "is_extended_element" : true,
+    "name" : "Jira On Prem",
+    "active" : true,
+    "description" : "Add a Jira Instance to connect your existing Jira account to the Help Desk Hub, allowing you to manage your incidents, priorities, statuses, users, etc. across multiple Help Desk Elements. You will need your Jira account information to add an instance.",
+    "vendor_version" : null,
+    "key" : "jiraonprem"
   }
 }
