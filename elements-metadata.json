@@ -525,12 +525,13 @@
     "vendor_version" : "V1",
     "key" : "sonos"
   },
-  "Bullhorn-newpr" : {
+  "Bullhorn" : {
     "image" : "elements/provider_bullhorn.png",
-    "path" : "Bullhorn-newpr/element.json",
+    "path" : "Bullhorn/element.json",
     "hub" : "crm",
     "author" : "pradeepgorajana",
-    "name" : "Bullhorn-newpr",
+    "is_extended_element" : true,
+    "name" : "Bullhorn",
     "active" : true,
     "description" : "Add a Bullhorn Instance to connect your existing Bullhorn account to the CRM Hub, allowing you to manage contacts, leads, accounts, opportunities etc. across multiple CRM Elements. You will need your Bullhorn account information to add an instance.",
     "vendor_version" : null,
