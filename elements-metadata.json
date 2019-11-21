@@ -505,7 +505,7 @@
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
   },
-    "jira" : {
+  "jira" : {
     "path" : "Jira/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
@@ -524,5 +524,17 @@
     "active" : true,
     "vendor_version" : "V1",
     "key" : "sonos"
+  },
+  "Bullhorn" : {
+    "image" : "elements/provider_bullhorn.png",
+    "path" : "Bullhorn/element.json",
+    "hub" : "crm",
+    "author" : "pradeepgorajana",
+    "is_extended_element" : true,
+    "name" : "Bullhorn",
+    "active" : true,
+    "description" : "Add a Bullhorn Instance to connect your existing Bullhorn account to the CRM Hub, allowing you to manage contacts, leads, accounts, opportunities etc. across multiple CRM Elements. You will need your Bullhorn account information to add an instance.",
+    "vendor_version" : null,
+    "key" : "bullhorn"
   }
 }
