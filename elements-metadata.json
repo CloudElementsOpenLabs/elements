@@ -530,7 +530,7 @@
     "path" : "Bullhorn/element.json",
     "hub" : "crm",
     "author" : "pradeepgorajana",
-    "is_extended_element" : true,
+    "is_extended_element" : false,
     "name" : "Bullhorn",
     "active" : true,
     "description" : "Add a Bullhorn Instance to connect your existing Bullhorn account to the CRM Hub, allowing you to manage contacts, leads, accounts, opportunities etc. across multiple CRM Elements. You will need your Bullhorn account information to add an instance.",
