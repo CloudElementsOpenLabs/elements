@@ -505,7 +505,7 @@
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
   },
-    "jira" : {
+  "jira" : {
     "path" : "Jira/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
@@ -524,5 +524,17 @@
     "active" : true,
     "vendor_version" : "V1",
     "key" : "sonos"
+  },
+  "AcuityScheduling" : {
+    "image" : "elements/custom-element-default-logo.png",
+    "path" : "AcuityScheduling/element.json",
+    "hub" : "scheduling",
+    "author" : "pradeepgorajana",
+    "is_extended_element" : false,
+    "name" : "Acuity Scheduling",
+    "active" : true,
+    "description" : "Add an Acuity Scheduling Instance to connect your existing Acuity account to the scheduling Hub, allowing you to manage your appointments and events across multiple scheduling Elements.You will need your Google Calendar account information to add an instance",
+    "vendor_version" : null,
+    "key" : "acuityscheduling"
   }
 }
