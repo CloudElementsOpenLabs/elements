@@ -530,7 +530,7 @@
     "path" : "AcuityScheduling/element.json",
     "hub" : "scheduling",
     "author" : "avinashch0216",
-    "is_extended_element" : false,
+    "is_extended_element" : true,
     "name" : "Acuity Scheduling",
     "active" : true,
     "description" : "Add an Acuity Scheduling Instance to connect your existing Acuity account to the scheduling Hub, allowing you to manage your appointments and events across multiple scheduling Elements.You will need your Google Calendar account information to add an instance",
