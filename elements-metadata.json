@@ -530,7 +530,7 @@
     "path" : "BambooHR/element.json",
     "hub" : "humancapital",
     "author" : "pradeepgorajana",
-    "is_extended_element" : false,
+    "is_extended_element" : true,
     "name" : "Bamboo HR",
     "active" : true,
     "description" : "The API can be used to manipulate employee data and to generate reports in several formats.",
