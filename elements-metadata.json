@@ -505,7 +505,7 @@
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
   },
-    "jira" : {
+  "jira" : {
     "path" : "Jira/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
@@ -524,5 +524,29 @@
     "active" : true,
     "vendor_version" : "V1",
     "key" : "sonos"
+  },
+  "BambooHR" : {
+    "image" : "https://images.cloudelements.io/bamboohr_215201805210906.png",
+    "path" : "BambooHR/element.json",
+    "hub" : "humancapital",
+    "author" : "pradeepgorajana",
+    "is_extended_element" : true,
+    "name" : "Bamboo HR",
+    "active" : true,
+    "description" : "The API can be used to manipulate employee data and to generate reports in several formats.",
+    "vendor_version" : null,
+    "key" : "bamboohr"
+  },
+  "Resolver" : {
+    "image" : "https://images.cloudelements.io/resolver_logo201904161628.png",
+    "path" : "Resolver/element.json",
+    "hub" : "general",
+    "author" : "avinashch0216",
+    "is_extended_element" : false,
+    "name" : "Resolver",
+    "active" : true,
+    "description" : "The Element API 1.@4343",
+    "vendor_version" : null,
+    "key" : "resolver"
   }
 }
