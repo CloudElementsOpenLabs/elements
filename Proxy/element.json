@@ -1,0 +1,629 @@
+{
+    "active": true,
+    "authentication": {
+        "type": "custom"
+    },
+    "beta": false,
+    "bulkDownloadEnabled": false,
+    "bulkUploadEnabled": false,
+    "cloneable": false,
+    "configuration": [
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "page",
+            "description": "Proxy Pagination Type",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.type",
+            "name": "Pagination Type",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Proxied Element Key",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "proxiedElementKey",
+            "name": "Proxied Element Key",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Proxied Instance Token",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "proxiedInstanceToken",
+            "name": "Proxied Instance Token",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Proxied Instance ID",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "proxiedInstanceId",
+            "name": "Proxied Instance ID",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Optional Proxied Organization Token",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "proxiedOrganizationToken",
+            "name": "Proxied Organization Token",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://staging.cloud-elements.com/elements/api-v2",
+            "description": "Proxy Base Url",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "base.url",
+            "name": "Base Url",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "description": "Proxy Max Page Size (or limit)",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.max",
+            "name": "Max Page Size (or limit)",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Optional Proxied User Token",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "proxiedUserToken",
+            "name": "Proxied User Token",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Proxy Event Notification Signature Key",
+            "displayOrder": 11,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "event.notification.signature.key",
+            "name": "Event Notification Signature Key",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Proxy Event Notification Basic User Name",
+            "displayOrder": 12,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.basic.username",
+            "name": "Event Notification Basic User Name",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Proxy Event Notification Basic Password",
+            "displayOrder": 13,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.basic.password",
+            "name": "Event Notification Basic Password",
+            "required": false,
+            "resellerConfig": false,
+            "type": "PASSWORD"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "displayOrder": 98,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "default.select.fields.map",
+            "name": "Default select fields",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTAREA"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "description": "Used to enable/disable filtering of null values from the responses",
+            "displayOrder": 99,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "filter.response.nulls",
+            "name": "Filter null values from the response",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Proxy Time of Getting Token or Performing Authentication",
+            "displayOrder": 100,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "authentication.time",
+            "name": "Time of Getting Token or Performing Authentication",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        }
+    ],
+    "deleted": false,
+    "description": "Proxy element",
+    "extendable": true,
+    "extended": false,
+    "hooks": [
+        {
+            "contextParams": "request_headers,request_vendor_headers,configuration",
+            "isLegacy": false,
+            "mimeType": "application/javascript",
+            "type": "preRequest"
+        }
+    ],
+    "hub": "general",
+    "image": "https://images.cloudelements.io/Anonymous-Mask-PNG-Image-23901-300x300201908311805.png",
+    "key": "proxy",
+    "logo": "proxy",
+    "models": [],
+    "modelType": "basic",
+    "name": "Proxy",
+    "objects": [],
+    "parameters": [
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "vendorType": "header"
+        },
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "vendorType": "header"
+        },
+        {
+            "name": "proxiedElementKey",
+            "required": false,
+            "source": "request",
+            "type": "configuration",
+            "vendorName": "proxiedElementKey",
+            "vendorType": "path"
+        }
+    ],
+    "protocolType": "http",
+    "resources": [
+        {
+            "description": "Search for ",
+            "hooks": [],
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The objectName ID",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/{objectName}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/{objectName}"
+        },
+        {
+            "description": "Create a(n) ",
+            "hooks": [],
+            "kind": "eb",
+            "method": "POST",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The objectName ID",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The object body",
+                    "name": "body",
+                    "required": true,
+                    "source": "request",
+                    "type": "body",
+                    "vendorDataType": "string",
+                    "vendorName": "body",
+                    "vendorType": "body"
+                }
+            ],
+            "path": "/hubs/general/{objectName}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "POST",
+            "vendorPath": "/{objectName}"
+        },
+        {
+            "description": "Delete a(n) ",
+            "hooks": [],
+            "kind": "eb",
+            "method": "DELETE",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The id ID",
+                    "name": "id",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The objectName ID",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/{objectName}/{id}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "DELETE",
+            "vendorPath": "/{objectName}/{id}"
+        },
+        {
+            "description": "Retrieve a(n) ",
+            "hooks": [],
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The objectName ID",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The id ID",
+                    "name": "id",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/{objectName}/{id}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/{objectName}/{id}"
+        },
+        {
+            "description": "Update a(n) ",
+            "hooks": [],
+            "kind": "eb",
+            "method": "PATCH",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The object body",
+                    "name": "body",
+                    "required": true,
+                    "source": "request",
+                    "type": "body",
+                    "vendorDataType": "string",
+                    "vendorName": "body",
+                    "vendorType": "body"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The id ID",
+                    "name": "id",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The objectName ID",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/{objectName}/{id}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "PATCH",
+            "vendorPath": "/{objectName}/{id}"
+        },
+        {
+            "description": "Update a(n) ",
+            "hooks": [],
+            "kind": "eb",
+            "method": "PUT",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The id ID",
+                    "name": "id",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The objectName ID",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The object body",
+                    "name": "body",
+                    "required": true,
+                    "source": "request",
+                    "type": "body",
+                    "vendorDataType": "string",
+                    "vendorName": "body",
+                    "vendorType": "body"
+                }
+            ],
+            "path": "/hubs/general/{objectName}/{id}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "PUT",
+            "vendorPath": "/{objectName}/{id}"
+        },
+        {
+            "description": "Search for objects",
+            "hooks": [],
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "description": "The CEQL search expression",
+                    "name": "where",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "converter:toQueryParameters",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The page number of resources to retrieve",
+                    "name": "page",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "page",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The number of resources to return in a given page",
+                    "name": "pageSize",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "pageSize",
+                    "vendorType": "query"
+                }
+            ],
+            "path": "/hubs/general/objects",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/objects"
+        },
+        {
+            "description": "Search for objectsMetadata",
+            "hooks": [
+                {
+                    "contextParams": "request_path_variables,request_vendor_path",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                }
+            ],
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The objectName ID",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/objects/{objectName}/metadata",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/"
+        },
+        {
+            "description": "Provision the proxied element and save the ID and token",
+            "hooks": [
+                {
+                    "contextParams": "request_vendor_body,request_headers,request_path,request_method,request_vendor_headers,configuration,response_error",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                },
+                {
+                    "contextParams": "configuration,response_body",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "postRequest"
+                }
+            ],
+            "kind": "eb",
+            "method": "POST",
+            "modelMigrated": false,
+            "path": "/hubs/general/onCreateAndUpdate",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "provisionAuthValidation",
+            "vendorMethod": "POST",
+            "vendorPath": "/elements/{proxiedElementKey}/instances"
+        },
+        {
+            "description": "Create a(n) onDelete",
+            "hooks": [],
+            "kind": "eb",
+            "method": "DELETE",
+            "modelMigrated": false,
+            "path": "/hubs/general/onDelete",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "onDeleteWebhook",
+            "vendorMethod": "DELETE",
+            "vendorPath": "/instances"
+        }
+    ],
+    "transformationsEnabled": true,
+    "trialAccount": false,
+    "typeOauth": false,
+    "useModelsForMetadata": true
+}
