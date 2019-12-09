@@ -524,5 +524,15 @@
     "active" : true,
     "vendor_version" : "V1",
     "key" : "sonos"
+  },
+  "alphavantage" : {
+    "path" : "AlphaVantage/element.json",
+    "hub" : "general",
+    "author" : "Nick Bair",
+    "name" : "Alpha Vantage",
+    "description" : "Realtime pricing and technical indicators for stocks, FX and digital currencies",
+    "active" : true,
+    "vendor_version" : "v1",
+    "key" : "alphavantage"
   }
 }
