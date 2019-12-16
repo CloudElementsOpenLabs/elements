@@ -534,5 +534,15 @@
     "active" : true,
     "vendor_version" : "v1",
     "key" : "alphavantage"
+  },
+  "oanda" : {
+    "path" : "Oanda/element.json",
+    "hub" : "general",
+    "author" : "Nick Bair",
+    "name" : "Oanda",
+    "description": "The OANDA v20 REST API provides programmatic access to OANDA’s next generation v20 trading engine. To use this API you must have a v20 trading account, which is available to all divisions except Japan.",
+    "active" : true,
+    "vendor_version" : "v20",
+    "key" : "oanda"
   }
 }
