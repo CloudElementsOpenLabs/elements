@@ -527,14 +527,14 @@
   },
   "AWSRekognition" : {
     "image" : "elements/custom-element-default-logo.png",
-    "path" : "AWSRekognition/element.json",
+    "path" : "awsrekognition/element.json",
     "hub" : "ai",
     "author" : "pradeepgorajana",
-    "is_extended_element" : false,
     "name" : "AWS Rekognition",
     "active" : true,
     "description" : "Api's to connect to aws rekognition service using aws lambda service.",
     "vendor_version" : null,
-    "key" : "awsrekognition"
+    "key" : "awsrekognition",
+    "extended" : false
   }
 }
