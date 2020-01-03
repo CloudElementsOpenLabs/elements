@@ -505,7 +505,7 @@
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
   },
-    "jira" : {
+  "jira" : {
     "path" : "Jira/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
@@ -524,5 +524,41 @@
     "active" : true,
     "vendor_version" : "V1",
     "key" : "sonos"
+  },
+  "BambooHR" : {
+    "image" : "https://images.cloudelements.io/bamboohr_215201805210906.png",
+    "path" : "extended-resources/bamboohr/element.json",
+    "extended" : true,
+    "hub" : "humancapital",
+    "author" : "avinashch0216",
+    "name" : "Bamboo HR",
+    "active" : true,
+    "description" : "The API can be used to manipulate employee data and to generate reports in several formats.",
+    "vendor_version" : null,
+    "key" : "bamboohr"
+  },
+  "TrialElem" : {
+    "image" : "https://images.cloudelements.io/bamboohr_215201805210906.png",
+    "path" : "extended-resources/bamboohr/element.json",
+    "isExtendedElement" : true,
+    "hub" : "erp",
+    "author" : "avinashch0216",
+    "name" : "Trial Element",
+    "active" : true,
+    "description" : "The API can be used to manipulate employee data and to generate reports in several formats.",
+    "vendor_version" : null,
+    "key" : "trialelem"
+  },
+  "uber" : {
+    "image" : "https://images.cloudelements.io/Screen Shot 2019-02-20 at 12.53.35 PM201902201953.png",
+    "path" : "uber/element.json",
+    "hub" : "general",
+    "author" : "avinashch0216",
+    "name" : "uber",
+    "active" : true,
+    "description" : "The Uber Ride-sharing element",
+    "vendor_version" : null,
+    "key" : "uber",
+    "extended" : false
   }
 }
