@@ -505,7 +505,7 @@
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
   },
-    "jira" : {
+  "jira" : {
     "path" : "Jira/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
@@ -524,5 +524,29 @@
     "active" : true,
     "vendor_version" : "V1",
     "key" : "sonos"
+  },
+  "BambooHR" : {
+    "image" : "https://images.cloudelements.io/bamboohr_215201805210906.png",
+    "path" : "extended-resources/bamboohr/element.json",
+    "extended" : true,
+    "hub" : "humancapital",
+    "author" : "avinashch0216",
+    "name" : "Bamboo HR",
+    "active" : true,
+    "description" : "The API can be used to manipulate employee data and to generate reports in several formats.",
+    "vendor_version" : null,
+    "key" : "bamboohr"
+  },
+  "Shopify" : {
+    "image" : "elements/provider_shopify.png",
+    "path" : "extended-resources/shopify/element.json",
+    "hub" : "ecommerce",
+    "author" : "pradeepgorajana",
+    "name" : "Shopify",
+    "active" : true,
+    "description" : "Add a Shopify Instance to connect your existing Shopify account to the eCommerce Hub, allowing you to manage orders and products across multiple eCommerce Elements. You will need your Shopify account information to add an instance.",
+    "vendor_version" : null,
+    "key" : "shopify",
+    "extended" : true
   }
 }
