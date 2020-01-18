@@ -506,7 +506,8 @@
     "key" : "tracktikapi2"
   },
   "jira" : {
-    "path" : "Jira/element.json",
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/jira-test2/jira.jpg",
+    "path" : "jira-test2/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
     "name" : "jira",
@@ -516,6 +517,7 @@
     "key" : "jira-test2"
   },
   "Sonos" : {
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/sonos/sonos.png",
     "path" : "sonos/element.json",
     "hub" : "general",
     "author" : "Guy Van Wert",
