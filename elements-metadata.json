@@ -1,7 +1,7 @@
 {
   "Mandrill" : {
     "image" : "https://images.cloudelements.io/mandrill201810221710.png",
-    "path" : "Mandrill/element.json",
+    "path" : "mandrill_3/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "Mandrill",
@@ -11,8 +11,8 @@
     "key" : "mandrill_3"
   },
   "CambridgeFx" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/CambridgeFx/democambridgefx.png",
-    "path" : "CambridgeFx/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/democambridgefx/democambridgefx.png",
+    "path" : "democambridgefx/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "CambridgeFX (Demo)",
@@ -23,7 +23,7 @@
   },
   "Mavenlink" : {
     "image" : "https://images.cloudelements.io/LogoName201712152026.png",
-    "path" : "Mavenlink/element.json",
+    "path" : "mavenlink/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "Mavenlink",
@@ -33,8 +33,8 @@
     "key" : "mavenlink"
   },
   "GitHub" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/GitHub/github_max_test.png",
-    "path" : "GitHub/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/github_max_test/github_max_test.png",
+    "path" : "github_max_test/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "GitHub",
@@ -45,7 +45,7 @@
   },
   "Asana" : {
     "image" : "https://images.cloudelements.io/asana201711150235.png",
-    "path" : "Asana/element.json",
+    "path" : "asana/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "Asana",
@@ -56,7 +56,7 @@
   },
   "Okta" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202018-11-07%20at%2010.53.38%20AM201811071753.png",
-    "path" : "Okta/element.json",
+    "path" : "demookta/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "OKTA (Demo)",
@@ -67,7 +67,7 @@
   },
   "ICIMs" : {
     "image" : "https://images.cloudelements.io/icims-logo-main201901252048.png",
-    "path" : "ICIMs/element.json",
+    "path" : "icims/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "ICIMS",
@@ -78,7 +78,7 @@
   },
   "Pendo" : {
     "image" : "https://images.cloudelements.io/pendo-share-logo201804082331.png",
-    "path" : "Pendo/element.json",
+    "path" : "pendoapi/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "Pendo",
@@ -89,7 +89,7 @@
   },
   "Repsly" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-03-09%20at%208.50.48%20AM201903091550.png",
-    "path" : "Repsly/element.json",
+    "path" : "repsly/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "Repsly",
@@ -99,8 +99,8 @@
     "key" : "repsly"
   },
   "Returnly" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/Returnly/returnlyapi.png",
-    "path" : "Returnly/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/returnlyapi/returnlyapi.png",
+    "path" : "returnlyapi/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "Returnly API",
@@ -110,8 +110,8 @@
     "key" : "returnlyapi"
   },
   "VersaPay" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/VersaPay/versapay.png",
-    "path" : "VersaPay/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/versapay/versapay.png",
+    "path" : "versapay/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "VersaPay",
@@ -121,8 +121,8 @@
     "key" : "versapay"
   },
   "FullContact" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/FullContact/fullcontact.png",
-    "path" : "FullContact/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/fullcontact/fullcontact.png",
+    "path" : "fullcontact/element.json",
     "hub" : "crm",
     "author" : "Nick Bair",
     "name" : "Full Contact",
@@ -133,7 +133,7 @@
   },
   "SurveyMonkey" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-27%20at%2010.44.00%20AM201902271746.png",
-    "path" : "SurveyMonkey/element.json",
+    "path" : "surveymonkey/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "Survey Monkey",
@@ -144,7 +144,7 @@
   },
   "Calculator" : {
     "image" : "http://developers.cloud-elements.com/assets/img/default-ce-logo-element-builder.png",
-    "path" : "Calculator/element.json",
+    "path" : "democalculator/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "Calculator Soap",
@@ -155,7 +155,7 @@
   },
   "Pinterest" : {
     "image" : "https://images.cloudelements.io/App-Pinterest-icon-with-out-background201808282145.png",
-    "path" : "Pinterest/element.json",
+    "path" : "pinterest/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "Pinterest",
@@ -166,7 +166,7 @@
   },
   "Taulia" : {
     "image" : "https://images.cloudelements.io/taulia-squarelogo-1517525911560201901231715.png",
-    "path" : "Taulia/element.json",
+    "path" : "taulia/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "Taulia",
@@ -177,7 +177,7 @@
   },
   "TalentReef" : {
     "image" : "https://images.cloudelements.io/TR201901252050.png",
-    "path" : "TalentReef/element.json",
+    "path" : "talentreef/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "TalentReef",
@@ -188,7 +188,7 @@
   },
   "AccurateBackground" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202018-11-07%20at%2010.54.19%20AM201811071755.png",
-    "path" : "AccurateBackground/element.json",
+    "path" : "demoaccuratebackground/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "Accurate Background (Demo)",
@@ -199,7 +199,7 @@
   },
   "Samanage" : {
     "image" : "https://images.cloudelements.io/logo_2712_hd-v3201811022006.png",
-    "path" : "Samanage/element.json",
+    "path" : "demosamanage/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "Samanage (Demo)",
@@ -209,8 +209,8 @@
     "key" : "demosamanage"
   },
   "VCloudAir" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/VCloudAir/vcloudair.png",
-    "path" : "VCloudAir/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/vcloudair/vcloudair.png",
+    "path" : "vcloudair/element.json",
     "hub" : "infrastructure",
     "author" : "Nick Bair",
     "name" : "vCloud Air",
@@ -221,7 +221,7 @@
   },
   "Lyft" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%201.40.30%20PM201902232040.png",
-    "path" : "Lyft/element.json",
+    "path" : "lyft/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "Lyft",
@@ -232,7 +232,7 @@
   },
   "Billy" : {
     "image" : "https://images.cloudelements.io/35356_96135128d7a4354e6d895f49f271ed30b9ee0c97_billy-app_m201901211815.png",
-    "path" : "Billy/element.json",
+    "path" : "billyaccounting/element.json",
     "hub" : "finance",
     "author" : "Ricky",
     "name" : "Billy",
@@ -242,8 +242,8 @@
     "key" : "billyaccounting"
   },
   "CloudElements" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/CloudElements/democloudelements.png",
-    "path" : "CloudElements/element.json",
+    "image" : "https://raw.githubusercontent.com/democloudelementsOpenLabs/elements/master/democloudelements/democloudelements.png",
+    "path" : "democloudelements/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "Cloud Elements (Demo)",
@@ -254,7 +254,7 @@
   },
   "GoogleCloudStorage" : {
     "image" : "https://images.cloudelements.io/google-cloud-storage201807191702.png",
-    "path" : "GoogleCloudStorage/element.json",
+    "path" : "google_cloud_storage/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "Google Cloud Storage",
@@ -264,8 +264,8 @@
     "key" : "google_cloud_storage"
   },
   "SapHybrisMarketing" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/SapHybrisMarketing/hybris3.png",
-    "path" : "SapHybrisMarketing/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/hybris3/hybris3.png",
+    "path" : "hybris3/element.json",
     "hub" : "erp",
     "author" : "Nick Bair",
     "name" : "HybrisMarketing",
@@ -276,7 +276,7 @@
   },
   "OneLogin" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-01-24%20at%2010.03.19%20AM201901241703.png",
-    "path" : "OneLogin/element.json",
+    "path" : "onelogin/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "OneLogin",
@@ -287,7 +287,7 @@
   },
   "AcquiaLiftProfileMgr" : {
     "image" : "https://images.cloudelements.io/acquia201902201909.png",
-    "path" : "AcquiaLiftProfileMgr/element.json",
+    "path" : "demoacquia/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "Acquia Lift (Demo)",
@@ -298,7 +298,7 @@
   },
   "Infoplus" : {
     "image" : "https://images.cloudelements.io/Image%202018-04-03%20at%2011.49.29%20AM201804031759.png",
-    "path" : "Infoplus/element.json",
+    "path" : "infoplus/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "Infoplus",
@@ -309,7 +309,7 @@
   },
   "Ipify" : {
     "image" : "https://images.cloudelements.io/globe201802112131.png",
-    "path" : "Ipify/element.json",
+    "path" : "ipify/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "ipify",
@@ -320,7 +320,7 @@
   },
   "FacebookAds" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%201.57.00%20PM201902232057.png",
-    "path" : "FacebookAds/element.json",
+    "path" : "facebookads/element.json",
     "hub" : "marketing",
     "author" : "Nick Bair",
     "name" : "Facebook Ads",
@@ -331,7 +331,7 @@
   },
   "PaychexFlex" : {
     "image" : "https://images.cloudelements.io/paychex201811131855.png",
-    "path" : "PaychexFlex/element.json",
+    "path" : "demopaychexflex/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "Paychex Flex (Demo)",
@@ -342,7 +342,7 @@
   },
   "Sprinkler" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%202.07.08%20PM201902232108.png",
-    "path" : "Sprinkler/element.json",
+    "path" : "sprinklr/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "Sprinklr",
@@ -352,8 +352,8 @@
     "key" : "sprinklr"
   },
   "ADPWorkForceNow" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/ADPWorkForceNow/adpwfnSDF.png",
-    "path" : "ADPWorkForceNow/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/adpwfnSDF/adpwfnSDF.png",
+    "path" : "adpwfnSDF/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "ADP WorkForce Now",
@@ -364,7 +364,7 @@
   },
   "WesternUnion" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-20%20at%202.17.36%20PM201902202118.png",
-    "path" : "WesternUnion/element.json",
+    "path" : "westernunion/element.json",
     "hub" : "finance",
     "author" : "Nick Bair",
     "name" : "Western Union",
@@ -375,7 +375,7 @@
   },
   "DunBradstreet" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-05-09%20at%2011.50.51%20AM201905091751.png",
-    "path" : "DunBradstreet/element.json",
+    "path" : "db/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "D&B",
@@ -386,7 +386,7 @@
   },
   "Uber" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-20%20at%2012.53.35%20PM201902201953.png",
-    "path" : "Uber/element.json",
+    "path" : "uber/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "uber",
@@ -397,7 +397,7 @@
   },
   "UnderArmour" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-20%20at%204.06.25%20PM201902202312.png",
-    "path" : "UnderArmour/element.json",
+    "path" : "underarmour/element.json",
     "hub" : "underarmour",
     "author" : "Nick Bair",
     "name" : "Under Armour",
@@ -408,7 +408,7 @@
   },
   "SendGridV3" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-04-01%20at%202.37.52%20PM201904012038.png",
-    "path" : "SendGridV3/element.json",
+    "path" : "sendgridv3/element.json",
     "hub" : "messaging",
     "author" : "Nick Bair",
     "name" : "SendGrid V3",
@@ -418,8 +418,8 @@
     "key" : "sendgridv3"
   },
   "Expensewire" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/Expensewire/demoexpensewire.png",
-    "path" : "Expensewire/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/demoexpensewire/demoexpensewire.png",
+    "path" : "demoexpensewire/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "ExpenseWire (Demo)",
@@ -429,8 +429,8 @@
     "key" : "demoexpensewire"
   },
   "AmazonRekognition" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/AmazonRekognition/awsrekognition.jpg",
-    "path" : "AmazonRekognition/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/awsrekognition/awsrekognition.jpg",
+    "path" : "awsrekognition/element.json",
     "hub" : "ai",
     "author" : "bharadwajturlapati",
     "name" : "AWS Rekognition",
@@ -441,7 +441,7 @@
   },
   "DiscordBot" : {
     "image" : "https://images.cloudelements.io/discordbot201907252107.png",
-    "path" : "DiscordBot/element.json",
+    "path" : "discordbot/element.json",
     "hub" : "collaboration",
     "author" : "Aidan-Wood",
     "name" : "Discord Bot",
@@ -452,7 +452,7 @@
   },
   "GooglePubSub" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-02-23%20at%201.49.11%20PM201902232049.png",
-    "path" : "GooglePubSub/element.json",
+    "path" : "googlepubsub/element.json",
     "hub" : "messaging",
     "author" : "Nick Bair",
     "name" : "Google Pub-Sub",
@@ -463,7 +463,7 @@
   },
   "Shiftboard" : {
     "image" : "https://images.cloudelements.io/shiftboard201901220402.png",
-    "path" : "Shiftboard/element.json",
+    "path" : "shiftboard/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "Shiftboard",
@@ -474,7 +474,7 @@
   },
   "DueDil" : {
     "image" : "https://images.cloudelements.io/Screen%20Shot%202019-05-09%20at%2011.53.43%20AM201905091754.png",
-    "path" : "DueDil/element.json",
+    "path" : "duedil/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "DueDil",
@@ -484,8 +484,8 @@
     "key" : "duedil"
   },
   "MicrosoftTeams" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/MicrosoftTeams/microsoftgraph.jpg",
-    "path" : "MicrosoftTeams/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/microsoftgraph/microsoftgraph.jpg",
+    "path" : "microsoftgraph/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "Microsoft Graph - Teams",
@@ -495,8 +495,8 @@
     "key" : "microsoftgraph"
   },
   "TrackTik" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/TrackTik/tracktikapi2.png",
-    "path" : "TrackTik/element.json",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/tracktikapi2/tracktikapi2.png",
+    "path" : "tracktikapi2/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "TrackTik API 2",
@@ -505,8 +505,9 @@
     "vendor_version" : "v1",
     "key" : "tracktikapi2"
   },
-    "jira" : {
-    "path" : "Jira/element.json",
+  "jira" : {
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/jira-test2/jira.jpg",
+    "path" : "jira-test2/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
     "name" : "jira",
@@ -516,7 +517,8 @@
     "key" : "jira-test2"
   },
   "Sonos" : {
-    "path" : "Sonos/element.json",
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/sonos/sonos.png",
+    "path" : "sonos/element.json",
     "hub" : "general",
     "author" : "Guy Van Wert",
     "name" : "sonos",
