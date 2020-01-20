@@ -528,7 +528,7 @@
     "key" : "sonos"
   },
   "alphavantage" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/alphavantage/alphavantage.png",
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/AlphaVantage/alphavantage.png",
     "path" : "alphavantage/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
@@ -539,7 +539,7 @@
     "key" : "alphavantage"
   },
   "oanda" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/oanda/oanda.png",
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/Oanda/oanda.png",
     "path" : "oanda/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
