@@ -506,7 +506,7 @@
     "key" : "tracktikapi2"
   },
   "jira" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/jira-test2/jira.jpg",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/jira-test2/jira.jpg",
     "path" : "jira-test2/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
@@ -517,7 +517,7 @@
     "key" : "jira-test2"
   },
   "Sonos" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/sonos/sonos.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/sonos/sonos.png",
     "path" : "sonos/element.json",
     "hub" : "general",
     "author" : "Guy Van Wert",
@@ -528,7 +528,7 @@
     "key" : "sonos"
   },
   "alphavantage" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/AlphaVantage/alphavantage.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/AlphaVantage/alphavantage.png",
     "path" : "alphavantage/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
@@ -539,14 +539,26 @@
     "key" : "alphavantage"
   },
   "oanda" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/Oanda/oanda.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/Oanda/oanda.png",
     "path" : "oanda/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "Oanda",
-    "description": "The OANDA v20 REST API provides programmatic access to OANDA’s next generation v20 trading engine. To use this API you must have a v20 trading account, which is available to all divisions except Japan.",
+    "description" : "The OANDA v20 REST API provides programmatic access to OANDA’s next generation v20 trading engine. To use this API you must have a v20 trading account, which is available to all divisions except Japan.",
     "active" : true,
     "vendor_version" : "v20",
     "key" : "oanda"
+  },
+  "Resolver" : {
+    "image" : "https://images.cloudelements.io/resolver_logo201904161628.png",
+    "path" : "resolver/element.json",
+    "hub" : "general",
+    "author" : "avinashch0216",
+    "name" : "Resolver",
+    "active" : true,
+    "description" : "The Element API 1.@4343",
+    "vendor_version" : null,
+    "key" : "resolver",
+    "extended" : false
   }
 }
