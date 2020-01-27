@@ -527,8 +527,8 @@
     "vendor_version" : "V1",
     "key" : "sonos"
   },
-  "alphavantage" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/AlphaVantage/alphavantage.png",
+  "Alpha Vangate" : {
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/alphavantage/alphavantage.png",
     "path" : "alphavantage/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
@@ -538,15 +538,48 @@
     "vendor_version" : "v1",
     "key" : "alphavantage"
   },
-  "oanda" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/Oanda/oanda.png",
+  "Oanda" : {
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/oanda/oanda.png",
     "path" : "oanda/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "Oanda",
     "description": "The OANDA v20 REST API provides programmatic access to OANDA’s next generation v20 trading engine. To use this API you must have a v20 trading account, which is available to all divisions except Japan.",
     "active" : true,
-    "vendor_version" : "v20",
+    "vendor_version" : "unknown",
     "key" : "oanda"
+  },
+  "Spotify" : {
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/spotify/oanda.png",
+    "path" : "spotify/element.json",
+    "hub" : "music",
+    "author" : "Nick Bair",
+    "name" : "Spotify",
+    "description": "Spotify is a music streaming platform. This element includes all endpoints detailed in the documentation though some functionality may be missing.",
+    "active" : true,
+    "vendor_version" : "unknown",
+    "key" : "oanda"
+  },
+  "Steam" : {
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/stean/steam.png",
+    "path" : "steam/element.json",
+    "hub" : "gaming",
+    "author" : "Aidad Wood",
+    "name" : "steam",
+    "description": "Steam is a video game digital distribution platform. This element includes most endpoints detailed in the documentation for user authentication keys. Abilities include getting player stats, getting app news, getting game achievement schema, etc",
+    "active" : true,
+    "vendor_version" : "unknown",
+    "key" : "steam"
+  },
+  "Netsuite 2018 Release1 (Proxy)" : {
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/netsuiteerp2018release1(proxy)/oanda.png",
+    "path" : "netsuiteerp2018release1(proxy)/element.json",
+    "hub" : "erp",
+    "author" : "Aidan Wood",
+    "name" : "Netsuite 2018 Release1 (Proxy)",
+    "description": "Netsuite 2018 ERP Element",
+    "active" : true,
+    "vendor_version" : "v2018",
+    "key" : "netsuiteerp2018release1(proxy)"
   }
 }

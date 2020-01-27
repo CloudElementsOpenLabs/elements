@@ -1,0 +1,346 @@
+{
+    "active": true,
+    "authentication": {
+        "type": "custom"
+    },
+    "beta": false,
+    "bulkDownloadEnabled": false,
+    "bulkUploadEnabled": false,
+    "cloneable": false,
+    "configuration": [
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "page",
+            "description": "Sendgrid V3 Pagination Type",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.type",
+            "name": "Pagination Type",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "description": "Sendgrid V3 Max Page Size (or limit)",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.max",
+            "name": "Max Page Size (or limit)",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://api.sendgrid.com/v3",
+            "description": "Sendgrid V3 Base Url",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "base.url",
+            "name": "Base Url",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "API Key",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "api.key",
+            "name": "API Key",
+            "required": true,
+            "resellerConfig": false,
+            "type": "PASSWORD"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Sendgrid V3 Event Notification Signature Key",
+            "displayOrder": 11,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "event.notification.signature.key",
+            "name": "Event Notification Signature Key",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Sendgrid V3 Event Notification Basic User Name",
+            "displayOrder": 12,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.basic.username",
+            "name": "Event Notification Basic User Name",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Sendgrid V3 Event Notification Basic Password",
+            "displayOrder": 13,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.basic.password",
+            "name": "Event Notification Basic Password",
+            "required": false,
+            "resellerConfig": false,
+            "type": "PASSWORD"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "displayOrder": 98,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "default.select.fields.map",
+            "name": "Default select fields",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTAREA"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "description": "Used to enable/disable filtering of null values from the responses",
+            "displayOrder": 99,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "filter.response.nulls",
+            "name": "Filter null values from the response",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Sendgrid V3 Time of Getting Token or Performing Authentication",
+            "displayOrder": 100,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "authentication.time",
+            "name": "Time of Getting Token or Performing Authentication",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        }
+    ],
+    "deleted": false,
+    "description": "SendGrid V3",
+    "extendable": true,
+    "extended": false,
+    "hooks": [],
+    "hub": "messaging",
+    "image": "https://images.cloudelements.io/Screen Shot 2019-04-01 at 2.37.52 PM201904012038.png",
+    "key": "sendgridv3",
+    "logo": "sendgridv3",
+    "models": [],
+    "modelType": "basic",
+    "name": "SendGrid V3",
+    "objects": [],
+    "parameters": [
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "vendorType": "header"
+        },
+        {
+            "name": "Bearer ${configuration.api.key}",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Authorization",
+            "vendorType": "header"
+        },
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "vendorType": "header"
+        }
+    ],
+    "private": true,
+    "protocolType": "http",
+    "resources": [
+        {
+            "description": "Create a(n) send",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                }
+            ],
+            "id": 366753,
+            "kind": "eb",
+            "method": "POST",
+            "modelMigrated": false,
+            "ownerAccountId": 18421,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "{\"subject\":\"\", \"from\":\"\", \"to\":\"\", \"body\":\"\"}",
+                    "name": "message",
+                    "required": true,
+                    "source": "request",
+                    "type": "body",
+                    "vendorDataType": "string",
+                    "vendorName": "message",
+                    "vendorType": "body"
+                }
+            ],
+            "path": "/hubs/messaging/send",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "POST",
+            "vendorPath": "/mail/send"
+        },
+        {
+            "description": "Create a(n) send",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                }
+            ],
+            "id": 366754,
+            "kind": "eb",
+            "method": "POST",
+            "modelMigrated": false,
+            "ownerAccountId": 18421,
+            "parameters": [
+                {
+                    "dataType": "file",
+                    "description": ".",
+                    "name": "file",
+                    "required": false,
+                    "source": "request",
+                    "type": "multipart",
+                    "vendorDataType": "string",
+                    "vendorName": "attachment",
+                    "vendorType": "body"
+                },
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "multipart/form-data",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "Content-Type",
+                    "vendorType": "header"
+                },
+                {
+                    "dataType": "string",
+                    "description": "{\"subject\":\"\", \"from\":\"\", \"to\":\"\", \"body\":\"\"}",
+                    "name": "message",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "message",
+                    "vendorType": "no-op"
+                }
+            ],
+            "path": "/hubs/messaging/send/attachment",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "POST",
+            "vendorPath": "/mail/send"
+        },
+        {
+            "description": "Search for usage",
+            "hooks": [],
+            "id": 366755,
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "ownerAccountId": 18421,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The end date of the statistics to retrieve. Defaults to today. Must follow format YYYY-MM-DD.",
+                    "name": "end_date",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "end_date",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The starting date of the statistics to retrieve. Must follow format YYYY-MM-DD.",
+                    "name": "start_date",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "start_date",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": "How to group the statistics. Must be either \"day\", \"week\", or \"month\".",
+                    "name": "aggregated_by",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "aggregated_by",
+                    "vendorType": "query"
+                }
+            ],
+            "path": "/hubs/messaging/usage",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/stats"
+        }
+    ],
+    "transformationsEnabled": true,
+    "trialAccount": false,
+    "typeOauth": false,
+    "useModelsForMetadata": true
+}

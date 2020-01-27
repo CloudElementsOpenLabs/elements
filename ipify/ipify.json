@@ -1,0 +1,152 @@
+{
+    "active": true,
+    "authentication": {
+        "type": "custom"
+    },
+    "beta": false,
+    "bulkDownloadEnabled": false,
+    "bulkUploadEnabled": false,
+    "cloneable": true,
+    "configuration": [
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "ipify Pagination Type",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "id": 136365,
+            "internal": false,
+            "key": "pagination.type",
+            "name": "Pagination Type",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "description": "ipify Max Page Size (or limit)",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "id": 136364,
+            "internal": false,
+            "key": "pagination.max",
+            "name": "Max Page Size (or limit)",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://api.ipify.org",
+            "description": "ipify Base URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "id": 136363,
+            "internal": false,
+            "key": "base.url",
+            "name": "Base URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "ipify Time of Getting Token or Performing Authentication",
+            "displayOrder": 100,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "id": 136366,
+            "internal": true,
+            "key": "authentication.time",
+            "name": "Time of Getting Token or Performing Authentication",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        }
+    ],
+    "deleted": false,
+    "description": "An example of an element using ipify.org - a simple public IP address API",
+    "extendable": false,
+    "extended": true,
+    "hooks": [],
+    "hub": "general",
+    "id": 10177,
+    "image": "https://images.cloudelements.io/globe201802112131.png",
+    "key": "ipify",
+    "name": "ipify",
+    "objects": [],
+    "parameters": [
+        {
+            "createdDate": "2018-02-11T21:31:18Z",
+            "elementId": 10177,
+            "id": 7781,
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "updatedDate": "2018-02-11T21:31:19Z",
+            "vendorName": "Accept",
+            "vendorType": "header"
+        },
+        {
+            "createdDate": "2018-02-11T21:31:18Z",
+            "elementId": 10177,
+            "id": 7780,
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "updatedDate": "2018-02-11T21:31:19Z",
+            "vendorName": "Content-Type",
+            "vendorType": "header"
+        }
+    ],
+    "private": true,
+    "protocolType": "http",
+    "resources": [
+        {
+            "createdDate": "2018-02-11T21:28:46Z",
+            "description": "Search for /ip-address",
+            "hooks": [],
+            "id": 235423,
+            "kind": "eb",
+            "method": "GET",
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "createdDate": "2018-02-11T21:28:46Z",
+                    "dataType": "string",
+                    "description": "Set the desired response format to 'json'",
+                    "id": 511646,
+                    "name": "json",
+                    "required": false,
+                    "resourceId": 235423,
+                    "source": "request",
+                    "type": "value",
+                    "updatedDate": "2018-02-11T21:31:19Z",
+                    "vendorDataType": "string",
+                    "vendorName": "format",
+                    "vendorType": "query"
+                }
+            ],
+            "path": "/hubs/general/ip-address",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "updatedDate": "2018-02-11T21:31:19Z",
+            "vendorMethod": "GET",
+            "vendorPath": "/"
+        }
+    ],
+    "transformationsEnabled": true,
+    "trialAccount": false,
+    "typeOauth": false
+}

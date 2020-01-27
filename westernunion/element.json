@@ -1,0 +1,1442 @@
+{
+    "active": true,
+    "authentication": {
+        "type": "oauth2"
+    },
+    "beta": false,
+    "bulkDownloadEnabled": true,
+    "bulkUploadEnabled": true,
+    "cloneable": true,
+    "configuration": [
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Fairsail OAuth Access Token",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.token",
+            "name": "OAuth Access Token",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "offset",
+            "description": "Fairsail Pagination Type",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.type",
+            "name": "Pagination Type",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://wubs--edgeopens.cs1.my.salesforce.com",
+            "description": "Base URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "baseurl",
+            "name": "Base URL",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Fairsail OAuth Refresh Token",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.refresh_token",
+            "name": "OAuth Refresh Token",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_64"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "JSON",
+            "description": "Bulk Download Format",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "bulk.query.download_format",
+            "name": "Bulk Download Format",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "{baseurl}",
+            "description": "Fairsail Base URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "base.url",
+            "name": "Base URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Fairsail OAuth Token Revoke URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.token.revoke_url",
+            "name": "OAuth Token Revoke URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": ".",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.access.token",
+            "name": "oauth.access.token",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "description": "Fairsail OAuth basic header",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.basic.header",
+            "name": "OAuth basic header",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Fairsail OAuth API Secret",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.api.secret",
+            "name": "OAuth API Secret",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "2000",
+            "description": "Fairsail Max Page Size (or limit)",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.max",
+            "name": "Max Page Size (or limit)",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "yyyy-MM-dd'T'HH:mm:ssXXX",
+            "description": "Bulk query Date Mask",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "bulk.query.date_mask",
+            "name": "Bulk query Date Mask",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Fairsail OAuth Refresh Time",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.refresh_time",
+            "name": "OAuth Refresh Time",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_64"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": ">=",
+            "description": "Bulk query Operator",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "bulk.query.operator",
+            "name": "Bulk query Operator",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Bulk query FieldName",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "bulk.query.field_name",
+            "name": "Bulk query FieldName",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Bulk Query Created Field Name",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "bulk.attribute.created_time",
+            "name": "Bulk query Created Field Name",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Bulk Relations",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "bulk.relations",
+            "name": "Bulk Relations",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTAREA"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Fairsail OAuth API Key",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.api.key",
+            "name": "OAuth API Key",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Bulk Add Metadata",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "bulk.add_metadata",
+            "name": "Bulk Add Metadata",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://wubs--edgeopens.cs1.my.salesforce.com/services/oauth2/token",
+            "description": "Fairsail OAuth Token Refresh URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.token.refresh_url",
+            "name": "OAuth Token Refresh URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://wubs--edgeopens.cs1.my.salesforce.com/services/oauth2/authorize",
+            "description": "Fairsail OAuth Authorization URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.authorization.url",
+            "name": "OAuth Authorization URL",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "3600",
+            "description": "Fairsail OAuth Refresh Interval (s)",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.user.refresh_interval",
+            "name": "OAuth Refresh Interval (s)",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://staging.cloud-elements.com/elements/jsp/home.jsp",
+            "description": "Fairsail OAuth Callback URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.callback.url",
+            "name": "OAuth Callback URL",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://wubs--edgeopens.cs1.my.salesforce.com/services/oauth2/token",
+            "description": "Fairsail OAuth Token URL",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "oauth.token.url",
+            "name": "OAuth Token URL",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "full refresh_token web",
+            "description": "Fairsail OAuth Scope",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "oauth.scope",
+            "name": "OAuth Scope",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_64"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Western Union Event Notification Signature Key",
+            "displayOrder": 11,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "event.notification.signature.key",
+            "name": "Event Notification Signature Key",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "description": "Used to enable/disable filtering of null values from the responses.",
+            "displayOrder": 51,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "filter.response.nulls",
+            "name": "Filter null values from the response",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "displayOrder": 98,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "default.select.fields.map",
+            "name": "Default select fields",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTAREA"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "polling",
+            "description": "Event Type",
+            "displayOrder": 100,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "event.vendor.type",
+            "name": "Event Type",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "15",
+            "description": "Set time interval for polling application (in minutes)",
+            "displayOrder": 101,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.poller.refresh_interval",
+            "name": "Event poller refresh interval",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "false",
+            "description": "Enable/Disable Event Notification",
+            "displayOrder": 102,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.enabled",
+            "name": "Event Notifications Enabled",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Event Notification Callback URL",
+            "displayOrder": 103,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.callback.url",
+            "name": "Event Notification Callback URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "{\"invoices\":{\"url\":\"/hubs/finance/invoices?where=LastModifiedDate>='${gmtDate:yyyy-MM-dd'T'HH:mm:ss'Z'}'\",\"idField\":\"Id\",\"datesConfiguration\":{\"updatedDateField\":\"LastModifiedDate\",\"updatedDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\",\"createdDateField\":\"CreatedDate\",\"createdDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\"}}}",
+            "description": "Event Poller Resources Configuration. The configuration is defined via JSON, an example of which is as follows - { \"contacts\": { \"url\": \"/hubs/helpdesk/contacts\", “idField”: “user.id”, “datesConfiguration”: { \"updatedDateField\": \"user.updated_at\", \"updatedDateFormat\": \"yyyy-MM-dd'T'HH:mm:ssX\", “createdDateField”: “user.created_at”, “createdDateFormat\": \"yyyy-MM-dd'T'HH:mm:ssX\" }, \"pageSize\": 10000 } }",
+            "displayOrder": 104,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.poller.configuration",
+            "name": "Event Poller Resources Configuration",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTAREA"
+        }
+    ],
+    "deleted": false,
+    "description": "Western Union is a money transfer leader.",
+    "extendable": true,
+    "extended": false,
+    "hooks": [],
+    "hub": "finance",
+    "image": "https://images.cloudelements.io/Screen Shot 2019-02-20 at 2.17.36 PM201902202118.png",
+    "key": "westernunion",
+    "logo": "westernunion",
+    "models": [],
+    "name": "Western Union",
+    "objects": [],
+    "parameters": [
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "vendorType": "header"
+        },
+        {
+            "name": "baseurl",
+            "required": false,
+            "source": "request",
+            "type": "configuration",
+            "vendorName": "baseurl",
+            "vendorType": "path"
+        },
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "vendorType": "header"
+        }
+    ],
+    "private": true,
+    "protocolType": "http",
+    "resources": [
+        {
+            "description": "Retrieves invoices.",
+            "hooks": [],
+            "id": 352684,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "beneficiaries",
+                "swagger": {
+                    "beneficiaries": {
+                        "id": "beneficiaries",
+                        "properties": {
+                            "objectDescribe": {
+                                "type": "objectDescribe"
+                            }
+                        }
+                    },
+                    "objectDescribe": {
+                        "id": "objectDescribe",
+                        "properties": {
+                            "activateable": {
+                                "type": "boolean"
+                            },
+                            "createable": {
+                                "type": "boolean"
+                            },
+                            "custom": {
+                                "type": "boolean"
+                            },
+                            "customSetting": {
+                                "type": "boolean"
+                            },
+                            "deletable": {
+                                "type": "boolean"
+                            },
+                            "deprecatedAndHidden": {
+                                "type": "boolean"
+                            },
+                            "feedEnabled": {
+                                "type": "boolean"
+                            },
+                            "keyPrefix": {
+                                "type": "string"
+                            },
+                            "label": {
+                                "type": "string"
+                            },
+                            "labelPlural": {
+                                "type": "string"
+                            },
+                            "layoutable": {
+                                "type": "boolean"
+                            },
+                            "mergeable": {
+                                "type": "boolean"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "queryable": {
+                                "type": "boolean"
+                            },
+                            "replicateable": {
+                                "type": "boolean"
+                            },
+                            "retrieveable": {
+                                "type": "boolean"
+                            },
+                            "searchable": {
+                                "type": "boolean"
+                            },
+                            "triggerable": {
+                                "type": "boolean"
+                            },
+                            "undeletable": {
+                                "type": "boolean"
+                            },
+                            "updateable": {
+                                "type": "boolean"
+                            },
+                            "urls": {
+                                "type": "urls"
+                            }
+                        }
+                    },
+                    "urls": {
+                        "id": "urls",
+                        "properties": {
+                            "approvalLayouts": {
+                                "type": "string"
+                            },
+                            "compactLayouts": {
+                                "type": "string"
+                            },
+                            "defaultValues": {
+                                "type": "string"
+                            },
+                            "describe": {
+                                "type": "string"
+                            },
+                            "layouts": {
+                                "type": "string"
+                            },
+                            "quickActions": {
+                                "type": "string"
+                            },
+                            "rowTemplate": {
+                                "type": "string"
+                            },
+                            "sobject": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "path": "/hubs/finance/beneficiaries",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/services/data/v36.0/sobjects/Beneficiary__c"
+        },
+        {
+            "description": "Retrieves an invoice by ID.",
+            "hooks": [],
+            "id": 352685,
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The whatever ID",
+                    "name": "id",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/finance/beneficiaries/{id}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/services/data/v36.0/sobjects/Beneficiary__c/{id}"
+        },
+        {
+            "description": "Retrieves invoices.",
+            "hooks": [],
+            "id": 352686,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "inputBeneficiary",
+                "swagger": {
+                    "inputBeneficiary": {
+                        "id": "inputBeneficiary",
+                        "properties": {
+                            "objectDescribe": {
+                                "type": "objectDescribe"
+                            }
+                        }
+                    },
+                    "objectDescribe": {
+                        "id": "objectDescribe",
+                        "properties": {
+                            "activateable": {
+                                "type": "boolean"
+                            },
+                            "createable": {
+                                "type": "boolean"
+                            },
+                            "custom": {
+                                "type": "boolean"
+                            },
+                            "customSetting": {
+                                "type": "boolean"
+                            },
+                            "deletable": {
+                                "type": "boolean"
+                            },
+                            "deprecatedAndHidden": {
+                                "type": "boolean"
+                            },
+                            "feedEnabled": {
+                                "type": "boolean"
+                            },
+                            "keyPrefix": {
+                                "type": "string"
+                            },
+                            "label": {
+                                "type": "string"
+                            },
+                            "labelPlural": {
+                                "type": "string"
+                            },
+                            "layoutable": {
+                                "type": "boolean"
+                            },
+                            "mergeable": {
+                                "type": "boolean"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "queryable": {
+                                "type": "boolean"
+                            },
+                            "replicateable": {
+                                "type": "boolean"
+                            },
+                            "retrieveable": {
+                                "type": "boolean"
+                            },
+                            "searchable": {
+                                "type": "boolean"
+                            },
+                            "triggerable": {
+                                "type": "boolean"
+                            },
+                            "undeletable": {
+                                "type": "boolean"
+                            },
+                            "updateable": {
+                                "type": "boolean"
+                            },
+                            "urls": {
+                                "type": "urls"
+                            }
+                        }
+                    },
+                    "urls": {
+                        "id": "urls",
+                        "properties": {
+                            "approvalLayouts": {
+                                "type": "string"
+                            },
+                            "compactLayouts": {
+                                "type": "string"
+                            },
+                            "defaultValues": {
+                                "type": "string"
+                            },
+                            "describe": {
+                                "type": "string"
+                            },
+                            "layouts": {
+                                "type": "string"
+                            },
+                            "quickActions": {
+                                "type": "string"
+                            },
+                            "rowTemplate": {
+                                "type": "string"
+                            },
+                            "sobject": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "path": "/hubs/finance/inputBeneficiary",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/services/data/v36.0/sobjects/Input_Beneficiary__c"
+        },
+        {
+            "description": "Retrieves invoices.",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                }
+            ],
+            "id": 352687,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "invoicesList",
+                "swagger": {
+                    "attributes": {
+                        "id": "attributes",
+                        "properties": {
+                            "type": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "invoicesList": {
+                        "id": "invoicesList",
+                        "items": {
+                            "$ref": "invoicesListObject"
+                        },
+                        "type": "array"
+                    },
+                    "invoicesListObject": {
+                        "id": "invoicesListObject",
+                        "properties": {
+                            "attributes": {
+                                "type": "attributes"
+                            },
+                            "CreatedDate": {
+                                "type": "string"
+                            },
+                            "Id": {
+                                "type": "string"
+                            },
+                            "LastModifiedDate": {
+                                "type": "string"
+                            },
+                            "Name": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The page number of resources to retrieve",
+                    "name": "page",
+                    "required": false,
+                    "sampleData": "1",
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "page",
+                    "vendorType": "bodyToken"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The number of resources to return in a given page",
+                    "name": "pageSize",
+                    "required": false,
+                    "sampleData": "200",
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "pageSize",
+                    "vendorType": "bodyToken"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The CEQL search expression.",
+                    "name": "where",
+                    "required": false,
+                    "sampleData": "LastModifiedDate > '2016-11-21T19:59:00Z'",
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "where",
+                    "vendorType": "bodyToken"
+                },
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "SELECT Id, Name, LastModifiedDate, CreatedDate FROM Invoice__c where {where} ORDER BY Id DESC LIMIT {pageSize} OFFSET {page}",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "q",
+                    "vendorType": "query"
+                }
+            ],
+            "path": "/hubs/finance/invoices",
+            "response": {
+                "contentType": "application/json",
+                "sampleData": "[{\"LastModifiedDate\":\"2016-11-29T16:24:57.000+0000\",\"CreatedDate\":\"2016-11-29T12:12:05.000+0000\",\"attributes\":{\"type\":\"Invoice__c\",\"url\":\"/services/data/v36.0/sobjects/Invoice__c/a1dS0000000CUz4IAG\"},\"Id\":\"a1dS0000000CUz4IAG\",\"Name\":\"INV-0020823\"}]"
+            },
+            "rootKey": "|records",
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/services/data/v36.0/query/"
+        },
+        {
+            "description": "Create an invoice.",
+            "hooks": [],
+            "id": 352688,
+            "kind": "eb",
+            "method": "POST",
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "object",
+                    "description": "The invoice body.",
+                    "name": "body",
+                    "required": false,
+                    "source": "request",
+                    "type": "body",
+                    "vendorDataType": "object",
+                    "vendorName": "body",
+                    "vendorType": "body"
+                }
+            ],
+            "path": "/hubs/finance/invoices",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "POST",
+            "vendorPath": "/services/data/v36.0/sobjects/Invoice__c"
+        },
+        {
+            "description": "Retrieves an invoice by ID.",
+            "hooks": [],
+            "id": 352689,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "invoices",
+                "swagger": {
+                    "attributes": {
+                        "id": "attributes",
+                        "properties": {
+                            "type": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "invoices": {
+                        "id": "invoices",
+                        "properties": {
+                            "Amount__c": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "attributes": {
+                                "type": "attributes"
+                            },
+                            "CreatedById": {
+                                "type": "string"
+                            },
+                            "CreatedDate": {
+                                "type": "string"
+                            },
+                            "Currency_Code__c": {
+                                "type": "string"
+                            },
+                            "CurrencyIsoCode": {
+                                "type": "string"
+                            },
+                            "Custom_Currency__c": {
+                                "type": "string"
+                            },
+                            "Delivery_Method__c": {
+                                "type": "string"
+                            },
+                            "Due_Date__c": {
+                                "type": "string"
+                            },
+                            "Due_Date_Span__c": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "Id": {
+                                "type": "string"
+                            },
+                            "Invite_to_my_network__c": {
+                                "type": "boolean"
+                            },
+                            "Invoice_Name__c": {
+                                "type": "string"
+                            },
+                            "IsDeleted": {
+                                "type": "boolean"
+                            },
+                            "LastModifiedById": {
+                                "type": "string"
+                            },
+                            "LastModifiedDate": {
+                                "type": "string"
+                            },
+                            "LastReferencedDate": {
+                                "type": "string"
+                            },
+                            "LastViewedDate": {
+                                "type": "string"
+                            },
+                            "Name": {
+                                "type": "string"
+                            },
+                            "OwnerId": {
+                                "type": "string"
+                            },
+                            "Payment_Count__c": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "Pending_Balance__c": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "RecordTypeId": {
+                                "type": "string"
+                            },
+                            "Status__c": {
+                                "type": "string"
+                            },
+                            "Status_Date_Time__c": {
+                                "type": "string"
+                            },
+                            "SystemModstamp": {
+                                "type": "string"
+                            },
+                            "Total_Payments__c": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "Type__c": {
+                                "type": "string"
+                            },
+                            "TypeTrans__c": {
+                                "type": "string"
+                            },
+                            "WU_EDGE_Flag__c": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                },
+                "transform": true
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The whatever ID",
+                    "name": "id",
+                    "required": true,
+                    "sampleData": "a1dS0000000CQMmIAO",
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/finance/invoices/{id}",
+            "response": {
+                "contentType": "application/json",
+                "sampleData": "{\"Custom_Currency__c\":\"GBP\",\"LastModifiedDate\":\"2016-11-11T10:53:48.000+0000\",\"Initiated_By__c\":\"Buyer\",\"Pending_Balance__c\":111.0,\"Delivery_Method__c\":\"N/A\",\"LastReferencedDate\":\"2016-11-12T00:57:03.000+0000\",\"Name\":\"INV-0020488\",\"Due_Date_Span__c\":3.0,\"CreatedById\":\"005S00000050XHuIAM\",\"OwnerId\":\"005S00000050XHuIAM\",\"Due_Date__c\":\"2016-11-11\",\"Buyer__c\":\"005S00000050XHuIAM\",\"RecordTypeId\":\"01280000000Bn3sAAC\",\"Currency_Code__c\":\"USD\",\"IsDeleted\":false,\"Buyer_Supplier_Number__c\":\"123456\",\"TypeTrans__c\":\"Invoice\",\"Payment_Count__c\":0.0,\"LastViewedDate\":\"2016-11-12T00:57:03.000+0000\",\"Invoice_Number__c\":\"123456\",\"WU_EDGE_Flag__c\":false,\"Invite_to_my_network__c\":false,\"CurrencyIsoCode\":\"USD\",\"Invoice_Name__c\":\"Inv-0024709\",\"SystemModstamp\":\"2016-11-13T11:30:36.000+0000\",\"Beneficiary_Name__c\":\"Bob Inc\",\"Total_Payments__c\":0.0,\"Input_Beneficiary__c\":\"a08S000000CVdc4IAD\",\"Seller__c\":\"Cloud Elements Test Account Bob Inc\",\"Amount__c\":111.0,\"Type__c\":\"Invoice\",\"Balance__c\":111.0,\"CreatedDate\":\"2016-11-11T10:53:48.000+0000\",\"Account__c\":\"001S000000pATINIA4\",\"attributes\":{\"type\":\"Invoice__c\",\"url\":\"/services/data/v36.0/sobjects/Invoice__c/a1dS0000000CQMmIAO\"},\"Id\":\"a1dS0000000CQMmIAO\",\"Status__c\":\"Pending Approval (Open)\",\"LastModifiedById\":\"005S00000050XHuIAM\",\"Status_Date_Time__c\":\"2016-11-11T10:53:48.000+0000\"}"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/services/data/v36.0/sobjects/Invoice__c/{id}"
+        },
+        {
+            "description": ".",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                },
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "postRequest"
+                }
+            ],
+            "id": 352690,
+            "kind": "eb",
+            "method": "POST",
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "https://auth.cloudelements.io/oauth",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "redirect_uri",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "oauth.user.refresh_token",
+                    "required": false,
+                    "source": "response",
+                    "type": "configuration",
+                    "vendorDataType": "string",
+                    "vendorName": "refresh_token",
+                    "vendorType": "bodyField"
+                },
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "oauth.user.token",
+                    "required": false,
+                    "source": "response",
+                    "type": "configuration",
+                    "vendorDataType": "string",
+                    "vendorName": "access_token",
+                    "vendorType": "bodyField"
+                },
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "authorization_code",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "grant_type",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "${oauth.api.key}",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "client_id",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "${oauth.api.secret}",
+                    "required": false,
+                    "source": "request",
+                    "type": "value",
+                    "vendorDataType": "string",
+                    "vendorName": "client_secret",
+                    "vendorType": "form"
+                },
+                {
+                    "dataType": "string",
+                    "description": ".",
+                    "name": "code",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "code",
+                    "vendorType": "form"
+                }
+            ],
+            "path": "/hubs/finance/Oauth",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "oauthOnTokenExchange",
+            "vendorMethod": "POST",
+            "vendorPath": "https://wubs--edgeopens.cs1.my.salesforce.com/services/oauth2/token"
+        },
+        {
+            "description": "Get List of all available objects",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "postRequest"
+                }
+            ],
+            "id": 352691,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "objects",
+                "swagger": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "path": "/hubs/finance/objects",
+            "response": {
+                "contentType": "application/json"
+            },
+            "rootKey": "|sobjects",
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/services/data/v36.0/sobjects"
+        },
+        {
+            "description": "Retrieves invoices.",
+            "hooks": [],
+            "id": 352692,
+            "kind": "eb",
+            "method": "GET",
+            "model": {
+                "name": "suppliers",
+                "swagger": {
+                    "attributes": {
+                        "id": "attributes",
+                        "properties": {
+                            "type": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "objectDescribe": {
+                        "id": "objectDescribe",
+                        "properties": {
+                            "activateable": {
+                                "type": "boolean"
+                            },
+                            "createable": {
+                                "type": "boolean"
+                            },
+                            "custom": {
+                                "type": "boolean"
+                            },
+                            "customSetting": {
+                                "type": "boolean"
+                            },
+                            "deletable": {
+                                "type": "boolean"
+                            },
+                            "deprecatedAndHidden": {
+                                "type": "boolean"
+                            },
+                            "feedEnabled": {
+                                "type": "boolean"
+                            },
+                            "keyPrefix": {
+                                "type": "string"
+                            },
+                            "label": {
+                                "type": "string"
+                            },
+                            "labelPlural": {
+                                "type": "string"
+                            },
+                            "layoutable": {
+                                "type": "boolean"
+                            },
+                            "mergeable": {
+                                "type": "boolean"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "queryable": {
+                                "type": "boolean"
+                            },
+                            "replicateable": {
+                                "type": "boolean"
+                            },
+                            "retrieveable": {
+                                "type": "boolean"
+                            },
+                            "searchable": {
+                                "type": "boolean"
+                            },
+                            "triggerable": {
+                                "type": "boolean"
+                            },
+                            "undeletable": {
+                                "type": "boolean"
+                            },
+                            "updateable": {
+                                "type": "boolean"
+                            },
+                            "urls": {
+                                "type": "urls"
+                            }
+                        }
+                    },
+                    "recentItems": {
+                        "id": "recentItems",
+                        "properties": {
+                            "attributes": {
+                                "type": "attributes"
+                            },
+                            "Id": {
+                                "type": "string"
+                            },
+                            "Name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "suppliers": {
+                        "id": "suppliers",
+                        "properties": {
+                            "objectDescribe": {
+                                "type": "objectDescribe"
+                            },
+                            "recentItems": {
+                                "items": {
+                                    "$ref": "recentItems"
+                                },
+                                "type": "array"
+                            }
+                        }
+                    },
+                    "urls": {
+                        "id": "urls",
+                        "properties": {
+                            "approvalLayouts": {
+                                "type": "string"
+                            },
+                            "compactLayouts": {
+                                "type": "string"
+                            },
+                            "defaultValues": {
+                                "type": "string"
+                            },
+                            "describe": {
+                                "type": "string"
+                            },
+                            "layouts": {
+                                "type": "string"
+                            },
+                            "quickActions": {
+                                "type": "string"
+                            },
+                            "rowTemplate": {
+                                "type": "string"
+                            },
+                            "sobject": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "transform": false
+            },
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "path": "/hubs/finance/suppliers",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/services/data/v36.0/sobjects/Supplier__c"
+        },
+        {
+            "description": "Retrieves an invoice by ID.",
+            "hooks": [],
+            "id": 352693,
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "ownerAccountId": 1942,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The whatever ID",
+                    "name": "id",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "id",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/finance/suppliers/{id}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/services/data/v36.0/sobjects/Supplier__c/{id}"
+        }
+    ],
+    "transformationsEnabled": true,
+    "trialAccount": false,
+    "typeOauth": false,
+    "useModelsForMetadata": true
+}

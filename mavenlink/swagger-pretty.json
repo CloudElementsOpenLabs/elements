@@ -1,0 +1,3479 @@
+{
+  "basePath" : "/elements/api-v2",
+  "paths" : {
+    "/objects" : {
+      "get" : {
+        "operationId" : "getObjects",
+        "parameters" : [ {
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "in" : "header",
+          "name" : "Authorization",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected",
+            "schema" : {
+              "items" : {
+                "type" : "string"
+              },
+              "type" : "array"
+            }
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary" : "Get a list of all the available objects.",
+        "tags" : [ "objects" ]
+      }
+    },
+    "/objects/{objectName}/docs" : {
+      "get" : {
+        "operationId" : "getObjectsObjectNameDocs",
+        "parameters" : [ {
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "in" : "header",
+          "name" : "Authorization",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "description" : "The name of the object",
+          "in" : "path",
+          "name" : "objectName",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "description" : "Include discovery metadata in definitions",
+          "in" : "query",
+          "name" : "discovery",
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "description" : "Optionally resolve swagger references for an inline object definition",
+          "in" : "query",
+          "name" : "resolveReferences",
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "description" : "Include only OpenAPI / Swagger properties in definitions",
+          "in" : "query",
+          "name" : "basic",
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "description" : "The element swagger version to get the corresponding element swagger, Passing in \"-1\" gives latest element swagger",
+          "in" : "query",
+          "name" : "version",
+          "required" : false,
+          "default" : "-1",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected",
+            "schema" : {
+              "$ref" : "#/definitions/swaggerDocs"
+            }
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary" : "Get swagger docs for an object.",
+        "tags" : [ "objects" ]
+      }
+    },
+    "/objects/{objectName}/metadata" : {
+      "get" : {
+        "operationId" : "getObjectsObjectNameMetadata",
+        "parameters" : [ {
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "in" : "header",
+          "name" : "Authorization",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "description" : "The name of the object",
+          "in" : "path",
+          "name" : "objectName",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected",
+            "schema" : {
+              "$ref" : "#/definitions/objectsMetadata"
+            }
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary" : "Get a list of all the field for an object.",
+        "tags" : [ "objects" ]
+      }
+    },
+    "/ping" : {
+      "get" : {
+        "operationId" : "getPing",
+        "parameters" : [ {
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "in" : "header",
+          "name" : "Authorization",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected",
+            "schema" : {
+              "$ref" : "#/definitions/Pong"
+            }
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary" : "Ping the Element to confirm that the Hub Element has a heartbeat.  If the Element does not have a heartbeat, an error message will be returned.",
+        "tags" : [ "ping" ]
+      }
+    },
+    "/projects" : {
+      "post" : {
+        "summary" : "Create a new workspace",
+        "operationId" : "createProject",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "schema" : {
+            "$ref" : "#/definitions/projects"
+          },
+          "in" : "body",
+          "name" : "body",
+          "description" : "The object body",
+          "required" : true
+        } ],
+        "tags" : [ "projects" ]
+      },
+      "get" : {
+        "summary" : "Search for /projects",
+        "operationId" : "getProjects",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/projectsListObject"
+              }
+            },
+            "x-cloudelements-sample" : "[{\"18045395\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-10-26T13:38:09-07:00\",\"can_create_line_items\":false,\"title\":\"sample project\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":0,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-10-26T13:38:09-07:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"$100,000\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18045395\",\"budget_used\":\"$0\",\"client_role_name\":\"Clients\",\"start_date\":\"\",\"percent_of_budget_used\":0,\"default_rate\":\"150.00\",\"percentage_complete\":0,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"5903917\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"price_in_cents\":10000000,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"budget_remaining\":\"$100,000\",\"has_budget_access\":true,\"creator_id\":\"5903917\",\"change_orders_enabled\":true,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}},\"18283405\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-11-20T09:03:30-08:00\",\"can_create_line_items\":false,\"title\":\"Fixed Fee Proj\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":212200,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-12-12T11:22:03-08:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"2017-11-30\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"$100,000\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18283405\",\"budget_used\":\"$2,122\",\"client_role_name\":\"Clients\",\"start_date\":\"2017-11-20\",\"percent_of_budget_used\":2,\"default_rate\":\"150.00\",\"percentage_complete\":50,\"total_expenses_in_cents\":2200,\"currency_symbol\":\"$\",\"due_date\":\"2017-11-30\",\"primary_maven_id\":\"5309075\",\"has_active_timesheet_submissions\":true,\"exclude_archived_stories_percent_complete\":false,\"price_in_cents\":10000000,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"budget_remaining\":\"$97,878\",\"has_budget_access\":true,\"creator_id\":\"5309075\",\"change_orders_enabled\":false,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}},\"18574815\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"Dave's cool test project!\",\"created_at\":\"2017-12-15T12:51:27-08:00\",\"can_create_line_items\":true,\"title\":\"Dave's Test Project\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":0,\"stories_are_fixed_fee_by_default\":false,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-12-15T12:51:28-08:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"2018-01-31\",\"permissions\":{\"can_upload_files\":true,\"is_participant\":true,\"can_private_message\":true,\"can_edit\":true,\"can_join\":false,\"user_is_client\":false,\"access_level\":\"admin\",\"can_change_price\":true,\"can_see_financials\":true,\"restricted\":false,\"can_change_story_billable\":true,\"can_post\":true,\"team_lead\":true},\"price\":\"TBD\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18574815\",\"budget_used\":\"$0\",\"client_role_name\":\"Clients\",\"start_date\":\"2017-12-15\",\"percent_of_budget_used\":0,\"can_invite\":true,\"default_rate\":\"150.00\",\"percentage_complete\":0,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"2018-01-31\",\"primary_maven_id\":\"9434505\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"has_budget_access\":true,\"creator_id\":\"9434505\",\"change_orders_enabled\":false,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}},\"18504185\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-12-12T12:10:46-08:00\",\"can_create_line_items\":false,\"title\":\"Fixed Fee Proj- November 2017\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":0,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-12-12T13:00:06-08:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"$100,000\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18504185\",\"budget_used\":\"$0\",\"client_role_name\":\"Clients\",\"start_date\":\"2017-11-20\",\"percent_of_budget_used\":0,\"default_rate\":\"150.00\",\"percentage_complete\":0,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"5309075\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"price_in_cents\":10000000,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"budget_remaining\":\"$100,000\",\"has_budget_access\":true,\"creator_id\":\"5309075\",\"change_orders_enabled\":false,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}},\"18459025\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-12-07T07:30:12-08:00\",\"can_create_line_items\":false,\"title\":\"Project: Estimate: Grand Hotels SLA: Scenario 2\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":0,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-12-07T07:30:14-08:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"$499,600\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18459025\",\"budget_used\":\"$0\",\"client_role_name\":\"Clients\",\"start_date\":\"2017-11-28\",\"percent_of_budget_used\":0,\"default_rate\":\"150.00\",\"percentage_complete\":0,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"5309075\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"price_in_cents\":49960000,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"budget_remaining\":\"$499,600\",\"has_budget_access\":true,\"creator_id\":\"5309075\",\"change_orders_enabled\":true,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Proposed\",\"key\":140}},\"17254575\":{\"require_expense_approvals\":true,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-08-09T06:33:40-07:00\",\"can_create_line_items\":false,\"title\":\"Test Project Rates and Roles \",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budgeted\":true,\"access_level\":\"admins\",\"archived\":false,\"updated_at\":\"2017-11-29T17:33:40-08:00\",\"rate_card_id\":131827,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":false,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":false},\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"17254575\",\"client_role_name\":\"Clients\",\"start_date\":\"\",\"percentage_complete\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"4800555\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"account_id\":3111155,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"has_budget_access\":false,\"creator_id\":\"4800555\",\"change_orders_enabled\":false,\"consultant_role_name\":\"Mavenlink\"},\"17975505\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-10-19T11:52:38-07:00\",\"can_create_line_items\":false,\"title\":\"Spartan Resources - Opp 10-19\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":0,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-11-03T13:44:28-07:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"$10,000\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"17975505\",\"budget_used\":\"$0\",\"client_role_name\":\"Clients\",\"start_date\":\"\",\"percent_of_budget_used\":0,\"default_rate\":\"150.00\",\"percentage_complete\":50,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"5309075\",\"has_active_timesheet_submissions\":false,\"exclude_archived_stories_percent_complete\":false,\"price_in_cents\":1000000,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":false,\"budget_remaining\":\"$10,000\",\"has_budget_access\":true,\"creator_id\":\"5309075\",\"change_orders_enabled\":true,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}},\"18071985\":{\"require_expense_approvals\":true,\"over_budget\":false,\"update_whitelist\":[\"title\",\"budgeted\",\"start_date\",\"due_date\",\"description\",\"currency\",\"access_level\",\"consultant_role_name\",\"client_role_name\",\"rate_card_id\",\"exclude_archived_stories_percent_complete\",\"tasks_default_non_billable\",\"stories_are_fixed_fee_by_default\",\"change_orders_enabled\",\"expenses_in_burn_rate\",\"posts_require_privacy_decision\",\"status_key\",\"invoice_preference\",\"approver_id\",\"workspace_group_ids\",\"project_template_start_date\",\"project_template_assignment_mappings\",\"project_template_weekends_as_workdays\",\"project_tracker_template_id\",\"target_margin\",\"archived\",\"price\",\"project_template_before_story_id\"],\"has_active_expense_report_submissions\":false,\"currency_base_unit\":100,\"description\":\"\",\"created_at\":\"2017-10-30T13:53:08-07:00\",\"can_create_line_items\":false,\"title\":\"Test Project\",\"account_features\":{\"time_trackable\":false,\"has_time_entry_role_picker\":true},\"budget_used_in_cents\":122500,\"budgeted\":true,\"access_level\":\"open\",\"archived\":false,\"updated_at\":\"2017-12-14T14:17:17-08:00\",\"expenses_in_burn_rate\":true,\"rate_card_id\":17115,\"effective_due_date\":\"\",\"permissions\":{\"can_change_price\":false,\"can_see_financials\":true,\"can_upload_files\":false,\"is_participant\":false,\"can_private_message\":true,\"can_edit\":false,\"can_change_story_billable\":false,\"can_post\":false,\"can_join\":true},\"price\":\"TBD\",\"posts_require_privacy_decision\":false,\"currency\":\"USD\",\"id\":\"18071985\",\"budget_used\":\"$1,225\",\"client_role_name\":\"Clients\",\"start_date\":\"\",\"percent_of_budget_used\":0,\"default_rate\":\"150.00\",\"percentage_complete\":0,\"total_expenses_in_cents\":0,\"currency_symbol\":\"$\",\"due_date\":\"\",\"primary_maven_id\":\"5903917\",\"has_active_timesheet_submissions\":true,\"exclude_archived_stories_percent_complete\":false,\"account_id\":3481905,\"tasks_default_non_billable\":false,\"require_time_approvals\":true,\"has_budget_access\":true,\"creator_id\":\"5309075\",\"change_orders_enabled\":false,\"consultant_role_name\":\"Consultants\",\"status\":{\"color\":\"grey\",\"message\":\"Not Started\",\"key\":130}}}]"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "query",
+          "name" : "where",
+          "description" : "The CEQL search expression.",
+          "type" : "string",
+          "required" : false
+        }, {
+          "x-cloudelements-sample" : "100",
+          "in" : "query",
+          "name" : "pageSize",
+          "format" : "int64",
+          "description" : "The number of resources to return in a given page",
+          "type" : "string",
+          "required" : false
+        }, {
+          "description" : "The next page cursor, taken from the response header: `elements-next-page-token`",
+          "in" : "query",
+          "name" : "nextPage",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "tags" : [ "projects" ]
+      }
+    },
+    "/projects/{id}" : {
+      "get" : {
+        "summary" : "adsf",
+        "operationId" : "getProjectById",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "path",
+          "name" : "id",
+          "description" : "Workspace Id",
+          "type" : "string",
+          "required" : true
+        } ],
+        "tags" : [ "projects" ]
+      }
+    },
+    "/users" : {
+      "get" : {
+        "summary" : "Search for /users",
+        "operationId" : "getUsers",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        } ],
+        "tags" : [ "users" ]
+      }
+    },
+    "/{objectName}" : {
+      "get" : {
+        "operationId" : "getByObjectName",
+        "parameters" : [ {
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "in" : "header",
+          "name" : "Authorization",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "description" : "The name of the object",
+          "in" : "path",
+          "name" : "objectName",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "description" : "The CEQL search expression.",
+          "in" : "query",
+          "name" : "where",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "description" : "The page size. Defaults to 200 if not provided. Maximum of 5000.",
+          "format" : "int64",
+          "in" : "query",
+          "name" : "pageSize",
+          "required" : false,
+          "type" : "integer"
+        }, {
+          "description" : "The next page cursor, taken from the response header: `elements-next-page-token`",
+          "in" : "query",
+          "name" : "nextPage",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected",
+            "schema" : {
+              "items" : {
+                "$ref" : "#/definitions/Object"
+              },
+              "type" : "array"
+            }
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary" : "Search for {objectName}",
+        "tags" : [ "objectName" ]
+      },
+      "post" : {
+        "operationId" : "createByObjectName",
+        "parameters" : [ {
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "in" : "header",
+          "name" : "Authorization",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "description" : "The name of the object",
+          "in" : "path",
+          "name" : "objectName",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "description" : "The {objectName}",
+          "in" : "body",
+          "name" : "Body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Object"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary" : "Create an {objectName}",
+        "tags" : [ "objectName" ]
+      }
+    },
+    "/{objectName}/{objectId}" : {
+      "patch" : {
+        "summary" : "Update an {objectName}",
+        "operationId" : "updateObjectNameByObjectId",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectName",
+          "description" : "The name of the object",
+          "type" : "string",
+          "required" : true
+        }, {
+          "x-schema" : {
+            "$ref" : "#/definitions/Body"
+          },
+          "in" : "formData",
+          "name" : "Body",
+          "description" : "The {objectName}",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectId",
+          "description" : "The {objectName} ID",
+          "type" : "string",
+          "required" : true
+        } ],
+        "tags" : [ "objectName" ],
+        "consumes" : [ "multipart/form-data" ]
+      },
+      "get" : {
+        "summary" : "Retrieve an {objectName}",
+        "operationId" : "getObjectNameByObjectId",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectName",
+          "description" : "The name of the object",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectId",
+          "description" : "The {objectName} ID",
+          "type" : "string",
+          "required" : true
+        } ],
+        "tags" : [ "objectName" ],
+        "consumes" : [ "multipart/form-data" ]
+      },
+      "delete" : {
+        "summary" : "Delete an {objectName}",
+        "operationId" : "deleteObjectNameByObjectId",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectId",
+          "description" : "The {objectName} ID",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectName",
+          "description" : "The name of the object",
+          "type" : "string",
+          "required" : true
+        } ],
+        "tags" : [ "objectName" ],
+        "consumes" : [ "multipart/form-data" ]
+      },
+      "put" : {
+        "summary" : "Update an {objectName}",
+        "operationId" : "replaceObjectNameByObjectId",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectName",
+          "description" : "The name of the object",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectId",
+          "description" : "The {objectName} ID",
+          "type" : "string",
+          "required" : true
+        }, {
+          "x-schema" : {
+            "$ref" : "#/definitions/Body"
+          },
+          "in" : "formData",
+          "name" : "Body",
+          "description" : "The {objectName}",
+          "type" : "string",
+          "required" : true
+        } ],
+        "tags" : [ "objectName" ],
+        "consumes" : [ "multipart/form-data" ]
+      }
+    },
+    "/{objectName}/{objectId}/{childObjectName}" : {
+      "post" : {
+        "summary" : "Create an {childObjectName}",
+        "operationId" : "createObjectNameByChildObjectName",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "x-schema" : {
+            "$ref" : "#/definitions/Body"
+          },
+          "in" : "formData",
+          "name" : "Body",
+          "description" : "The {childObjectName}",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectName",
+          "description" : "The name of the object",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectId",
+          "description" : "The {objectName} ID",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "childObjectName",
+          "description" : "The name of the object",
+          "type" : "string",
+          "required" : true
+        } ],
+        "tags" : [ "objectName" ],
+        "consumes" : [ "multipart/form-data" ]
+      },
+      "get" : {
+        "summary" : "Search for {childObjectName}",
+        "operationId" : "getObjectNameByChildObjectName",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectId",
+          "description" : "The {objectName} ID",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "childObjectName",
+          "description" : "The name of the childObjectName",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectName",
+          "description" : "The name of the object",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "where",
+          "description" : "The CEQL search expression.",
+          "type" : "string",
+          "required" : false
+        }, {
+          "in" : "formData",
+          "name" : "pageSize",
+          "format" : "int64",
+          "description" : "The page size. Defaults to 200 if not provided. Maximum of 5000.",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "description" : "The next page cursor, taken from the response header: `elements-next-page-token`",
+          "in" : "query",
+          "name" : "nextPage",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "tags" : [ "objectName" ],
+        "consumes" : [ "multipart/form-data" ]
+      }
+    },
+    "/{objectName}/{objectId}/{childObjectName}/{childObjectId}" : {
+      "patch" : {
+        "summary" : "Update an {childObjectName}",
+        "operationId" : "updateObjectNameByChildObjectId",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectName",
+          "description" : "The name of the object",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "childObjectName",
+          "description" : "The name of the childObjectName",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectId",
+          "description" : "The {objectName} ID",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "childObjectId",
+          "description" : "The {childObjectName} ID",
+          "type" : "string",
+          "required" : true
+        }, {
+          "x-schema" : {
+            "$ref" : "#/definitions/Body"
+          },
+          "in" : "formData",
+          "name" : "Body",
+          "description" : "The {objectName}",
+          "type" : "string",
+          "required" : true
+        } ],
+        "tags" : [ "objectName" ],
+        "consumes" : [ "multipart/form-data" ]
+      },
+      "get" : {
+        "summary" : "Retrieve an {childObjectName}",
+        "operationId" : "getObjectNameByChildObjectId",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectName",
+          "description" : "The name of the object",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "childObjectName",
+          "description" : "The name of the childObjectName",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectId",
+          "description" : "The {objectName} ID",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "childObjectId",
+          "description" : "The {childObjectName} ID",
+          "type" : "string",
+          "required" : true
+        } ],
+        "tags" : [ "objectName" ],
+        "consumes" : [ "multipart/form-data" ]
+      },
+      "delete" : {
+        "summary" : "Delete an {childObjectName}",
+        "operationId" : "deleteObjectNameByChildObjectId",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectName",
+          "description" : "The name of the object",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "childObjectName",
+          "description" : "The name of the childObjectName",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectId",
+          "description" : "The {objectName} ID",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "childObjectId",
+          "description" : "The {childObjectName} ID",
+          "type" : "string",
+          "required" : true
+        } ],
+        "tags" : [ "objectName" ],
+        "consumes" : [ "multipart/form-data" ]
+      },
+      "put" : {
+        "summary" : "Update an {childObjectName}",
+        "operationId" : "replaceObjectNameByChildObjectId",
+        "responses" : {
+          "200" : {
+            "description" : "OK - Everything worked as expected"
+          },
+          "400" : {
+            "description" : "Bad Request - Often due to a missing request parameter"
+          },
+          "401" : {
+            "description" : "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "500" : {
+            "description" : "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "403" : {
+            "description" : "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "502" : {
+            "description" : "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          },
+          "404" : {
+            "description" : "Not found - The requested resource is not found"
+          },
+          "415" : {
+            "description" : "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "405" : {
+            "description" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406" : {
+            "description" : "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409" : {
+            "description" : "Conflict - If a resource being created already exists"
+          }
+        },
+        "parameters" : [ {
+          "in" : "header",
+          "name" : "Authorization",
+          "description" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "childObjectName",
+          "description" : "The name of the childObjectName",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectName",
+          "description" : "The name of the object",
+          "type" : "string",
+          "required" : true
+        }, {
+          "x-schema" : {
+            "$ref" : "#/definitions/Body"
+          },
+          "in" : "formData",
+          "name" : "Body",
+          "description" : "The {objectName}",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "childObjectId",
+          "description" : "The {childObjectName} ID",
+          "type" : "string",
+          "required" : true
+        }, {
+          "in" : "formData",
+          "name" : "objectId",
+          "description" : "The {objectName} ID",
+          "type" : "string",
+          "required" : true
+        } ],
+        "tags" : [ "objectName" ],
+        "consumes" : [ "multipart/form-data" ]
+      }
+    }
+  },
+  "host" : "localhost:8080",
+  "schemes" : [ "http" ],
+  "definitions" : {
+    "17975505Status" : {
+      "properties" : {
+        "color" : {
+          "type" : "string"
+        },
+        "key" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "swaggerdefinitions" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "definitions",
+      "properties" : {
+        "definition-name" : {
+          "$ref" : "#/definitions/swaggerdefinition-name"
+        }
+      }
+    },
+    "18283405Permissions" : {
+      "properties" : {
+        "can_change_price" : {
+          "type" : "boolean"
+        },
+        "can_change_story_billable" : {
+          "type" : "boolean"
+        },
+        "can_edit" : {
+          "type" : "boolean"
+        },
+        "can_join" : {
+          "type" : "boolean"
+        },
+        "can_post" : {
+          "type" : "boolean"
+        },
+        "can_private_message" : {
+          "type" : "boolean"
+        },
+        "can_see_financials" : {
+          "type" : "boolean"
+        },
+        "can_upload_files" : {
+          "type" : "boolean"
+        },
+        "is_participant" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "18459025Status" : {
+      "properties" : {
+        "color" : {
+          "type" : "string"
+        },
+        "key" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "swaggerdefinition-name" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "definition-name",
+      "properties" : {
+        "properties" : {
+          "$ref" : "#/definitions/swaggerproperties"
+        }
+      }
+    },
+    "account_features" : {
+      "properties" : {
+        "has_time_entry_role_picker" : {
+          "type" : "boolean"
+        },
+        "time_trackable" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "swaggerparameters" : {
+      "x-has-customfields" : false,
+      "title" : "parameters",
+      "properties" : {
+        "schema" : {
+          "$ref" : "#/definitions/swaggerparametersschema"
+        },
+        "in" : {
+          "x-samplevalue" : "header",
+          "type" : "string"
+        },
+        "name" : {
+          "x-samplevalue" : "Authorization",
+          "type" : "string"
+        },
+        "description" : {
+          "x-samplevalue" : "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type" : "string"
+        },
+        "type" : {
+          "x-samplevalue" : "string",
+          "type" : "string"
+        },
+        "required" : {
+          "x-samplevalue" : true,
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "17975505Permissions" : {
+      "properties" : {
+        "can_change_price" : {
+          "type" : "boolean"
+        },
+        "can_change_story_billable" : {
+          "type" : "boolean"
+        },
+        "can_edit" : {
+          "type" : "boolean"
+        },
+        "can_join" : {
+          "type" : "boolean"
+        },
+        "can_post" : {
+          "type" : "boolean"
+        },
+        "can_private_message" : {
+          "type" : "boolean"
+        },
+        "can_see_financials" : {
+          "type" : "boolean"
+        },
+        "can_upload_files" : {
+          "type" : "boolean"
+        },
+        "is_participant" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "permissions" : {
+      "properties" : {
+        "can_change_price" : {
+          "type" : "boolean"
+        },
+        "can_change_story_billable" : {
+          "type" : "boolean"
+        },
+        "can_edit" : {
+          "type" : "boolean"
+        },
+        "can_join" : {
+          "type" : "boolean"
+        },
+        "can_post" : {
+          "type" : "boolean"
+        },
+        "can_private_message" : {
+          "type" : "boolean"
+        },
+        "can_see_financials" : {
+          "type" : "boolean"
+        },
+        "can_upload_files" : {
+          "type" : "boolean"
+        },
+        "is_participant" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "18071985Account_features" : {
+      "properties" : {
+        "has_time_entry_role_picker" : {
+          "type" : "boolean"
+        },
+        "time_trackable" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "18504185" : {
+      "properties" : {
+        "access_level" : {
+          "type" : "string"
+        },
+        "account_features" : {
+          "$ref" : "#/definitions/18504185Account_features"
+        },
+        "account_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "archived" : {
+          "type" : "boolean"
+        },
+        "budget_remaining" : {
+          "type" : "string"
+        },
+        "budget_used" : {
+          "type" : "string"
+        },
+        "budget_used_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budgeted" : {
+          "type" : "boolean"
+        },
+        "can_create_line_items" : {
+          "type" : "boolean"
+        },
+        "change_orders_enabled" : {
+          "type" : "boolean"
+        },
+        "client_role_name" : {
+          "type" : "string"
+        },
+        "consultant_role_name" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string"
+        },
+        "creator_id" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "currency_base_unit" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "currency_symbol" : {
+          "type" : "string"
+        },
+        "default_rate" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string"
+        },
+        "effective_due_date" : {
+          "type" : "string"
+        },
+        "exclude_archived_stories_percent_complete" : {
+          "type" : "boolean"
+        },
+        "expenses_in_burn_rate" : {
+          "type" : "boolean"
+        },
+        "has_active_expense_report_submissions" : {
+          "type" : "boolean"
+        },
+        "has_active_timesheet_submissions" : {
+          "type" : "boolean"
+        },
+        "has_budget_access" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "over_budget" : {
+          "type" : "boolean"
+        },
+        "percent_of_budget_used" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "percentage_complete" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "permissions" : {
+          "$ref" : "#/definitions/18504185Permissions"
+        },
+        "posts_require_privacy_decision" : {
+          "type" : "boolean"
+        },
+        "price" : {
+          "type" : "string"
+        },
+        "price_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "primary_maven_id" : {
+          "type" : "string"
+        },
+        "rate_card_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "require_expense_approvals" : {
+          "type" : "boolean"
+        },
+        "require_time_approvals" : {
+          "type" : "boolean"
+        },
+        "start_date" : {
+          "type" : "string"
+        },
+        "status" : {
+          "$ref" : "#/definitions/18504185Status"
+        },
+        "tasks_default_non_billable" : {
+          "type" : "boolean"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "total_expenses_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "update_whitelist" : {
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "updated_at" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "17254575Account_features" : {
+      "properties" : {
+        "has_time_entry_role_picker" : {
+          "type" : "boolean"
+        },
+        "time_trackable" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "swagger-contacts-path" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "/contacts",
+      "properties" : {
+        "post" : {
+          "$ref" : "#/definitions/swaggerpost"
+        }
+      }
+    },
+    "17975505" : {
+      "properties" : {
+        "access_level" : {
+          "type" : "string"
+        },
+        "account_features" : {
+          "$ref" : "#/definitions/17975505Account_features"
+        },
+        "account_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "archived" : {
+          "type" : "boolean"
+        },
+        "budget_remaining" : {
+          "type" : "string"
+        },
+        "budget_used" : {
+          "type" : "string"
+        },
+        "budget_used_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budgeted" : {
+          "type" : "boolean"
+        },
+        "can_create_line_items" : {
+          "type" : "boolean"
+        },
+        "change_orders_enabled" : {
+          "type" : "boolean"
+        },
+        "client_role_name" : {
+          "type" : "string"
+        },
+        "consultant_role_name" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string"
+        },
+        "creator_id" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "currency_base_unit" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "currency_symbol" : {
+          "type" : "string"
+        },
+        "default_rate" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string"
+        },
+        "effective_due_date" : {
+          "type" : "string"
+        },
+        "exclude_archived_stories_percent_complete" : {
+          "type" : "boolean"
+        },
+        "expenses_in_burn_rate" : {
+          "type" : "boolean"
+        },
+        "has_active_expense_report_submissions" : {
+          "type" : "boolean"
+        },
+        "has_active_timesheet_submissions" : {
+          "type" : "boolean"
+        },
+        "has_budget_access" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "over_budget" : {
+          "type" : "boolean"
+        },
+        "percent_of_budget_used" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "percentage_complete" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "permissions" : {
+          "$ref" : "#/definitions/17975505Permissions"
+        },
+        "posts_require_privacy_decision" : {
+          "type" : "boolean"
+        },
+        "price" : {
+          "type" : "string"
+        },
+        "price_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "primary_maven_id" : {
+          "type" : "string"
+        },
+        "rate_card_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "require_expense_approvals" : {
+          "type" : "boolean"
+        },
+        "require_time_approvals" : {
+          "type" : "boolean"
+        },
+        "start_date" : {
+          "type" : "string"
+        },
+        "status" : {
+          "$ref" : "#/definitions/17975505Status"
+        },
+        "tasks_default_non_billable" : {
+          "type" : "boolean"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "total_expenses_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "update_whitelist" : {
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "updated_at" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "18071985Status" : {
+      "properties" : {
+        "color" : {
+          "type" : "string"
+        },
+        "key" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "swagger200" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "200",
+      "properties" : {
+        "schema" : {
+          "$ref" : "#/definitions/swaggerschema"
+        },
+        "description" : {
+          "x-samplevalue" : "OK - Everything worked as expected",
+          "type" : "string"
+        }
+      }
+    },
+    "projectsListObject" : {
+      "properties" : {
+        "17254575" : {
+          "$ref" : "#/definitions/17254575"
+        },
+        "17975505" : {
+          "$ref" : "#/definitions/17975505"
+        },
+        "18045395" : {
+          "$ref" : "#/definitions/18045395"
+        },
+        "18071985" : {
+          "$ref" : "#/definitions/18071985"
+        },
+        "18283405" : {
+          "$ref" : "#/definitions/18283405"
+        },
+        "18459025" : {
+          "$ref" : "#/definitions/18459025"
+        },
+        "18504185" : {
+          "$ref" : "#/definitions/18504185"
+        },
+        "18574815" : {
+          "$ref" : "#/definitions/18574815"
+        }
+      },
+      "type" : "object"
+    },
+    "swagger400" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "400",
+      "properties" : {
+        "description" : {
+          "x-samplevalue" : "Bad Request - Often due to a missing request parameter",
+          "type" : "string"
+        }
+      }
+    },
+    "swagger401" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "401",
+      "properties" : {
+        "description" : {
+          "x-samplevalue" : "Unauthorized - An invalid element token, user secret and/or org secret provided",
+          "type" : "string"
+        }
+      }
+    },
+    "swagger403" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "403",
+      "properties" : {
+        "description" : {
+          "x-samplevalue" : "Forbidden - Access to the resource by the provider is forbidden",
+          "type" : "string"
+        }
+      }
+    },
+    "18283405" : {
+      "properties" : {
+        "access_level" : {
+          "type" : "string"
+        },
+        "account_features" : {
+          "$ref" : "#/definitions/18283405Account_features"
+        },
+        "account_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "archived" : {
+          "type" : "boolean"
+        },
+        "budget_remaining" : {
+          "type" : "string"
+        },
+        "budget_used" : {
+          "type" : "string"
+        },
+        "budget_used_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budgeted" : {
+          "type" : "boolean"
+        },
+        "can_create_line_items" : {
+          "type" : "boolean"
+        },
+        "change_orders_enabled" : {
+          "type" : "boolean"
+        },
+        "client_role_name" : {
+          "type" : "string"
+        },
+        "consultant_role_name" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string"
+        },
+        "creator_id" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "currency_base_unit" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "currency_symbol" : {
+          "type" : "string"
+        },
+        "default_rate" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string"
+        },
+        "effective_due_date" : {
+          "type" : "string"
+        },
+        "exclude_archived_stories_percent_complete" : {
+          "type" : "boolean"
+        },
+        "expenses_in_burn_rate" : {
+          "type" : "boolean"
+        },
+        "has_active_expense_report_submissions" : {
+          "type" : "boolean"
+        },
+        "has_active_timesheet_submissions" : {
+          "type" : "boolean"
+        },
+        "has_budget_access" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "over_budget" : {
+          "type" : "boolean"
+        },
+        "percent_of_budget_used" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "percentage_complete" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "permissions" : {
+          "$ref" : "#/definitions/18283405Permissions"
+        },
+        "posts_require_privacy_decision" : {
+          "type" : "boolean"
+        },
+        "price" : {
+          "type" : "string"
+        },
+        "price_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "primary_maven_id" : {
+          "type" : "string"
+        },
+        "rate_card_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "require_expense_approvals" : {
+          "type" : "boolean"
+        },
+        "require_time_approvals" : {
+          "type" : "boolean"
+        },
+        "start_date" : {
+          "type" : "string"
+        },
+        "status" : {
+          "$ref" : "#/definitions/18283405Status"
+        },
+        "tasks_default_non_billable" : {
+          "type" : "boolean"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "total_expenses_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "update_whitelist" : {
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "updated_at" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "18504185Status" : {
+      "properties" : {
+        "color" : {
+          "type" : "string"
+        },
+        "key" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "swagger404" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "404",
+      "properties" : {
+        "description" : {
+          "x-samplevalue" : "Not found - The requested resource is not found",
+          "type" : "string"
+        }
+      }
+    },
+    "18459025Permissions" : {
+      "properties" : {
+        "can_change_price" : {
+          "type" : "boolean"
+        },
+        "can_change_story_billable" : {
+          "type" : "boolean"
+        },
+        "can_edit" : {
+          "type" : "boolean"
+        },
+        "can_join" : {
+          "type" : "boolean"
+        },
+        "can_post" : {
+          "type" : "boolean"
+        },
+        "can_private_message" : {
+          "type" : "boolean"
+        },
+        "can_see_financials" : {
+          "type" : "boolean"
+        },
+        "can_upload_files" : {
+          "type" : "boolean"
+        },
+        "is_participant" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "swagger405" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "405",
+      "properties" : {
+        "description" : {
+          "x-samplevalue" : "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected",
+          "type" : "string"
+        }
+      }
+    },
+    "swaggerDocs" : {
+      "x-has-customfields" : false,
+      "title" : "swaggerDocs",
+      "properties" : {
+        "basePath" : {
+          "x-samplevalue" : "/elements/api-v2/hubs/crm",
+          "type" : "string"
+        },
+        "paths" : {
+          "$ref" : "#/definitions/swaggerpaths"
+        },
+        "host" : {
+          "x-samplevalue" : "localhost:5050",
+          "type" : "string"
+        },
+        "schemes" : {
+          "x-samplevalue" : [ "http" ],
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "definitions" : {
+          "$ref" : "#/definitions/swaggerdefinitions"
+        },
+        "swagger" : {
+          "x-samplevalue" : "2.0",
+          "type" : "string"
+        },
+        "info" : {
+          "$ref" : "#/definitions/swaggerinfo"
+        },
+        "tags" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/swaggertags"
+          }
+        }
+      },
+      "type" : "object"
+    },
+    "18504185Account_features" : {
+      "properties" : {
+        "has_time_entry_role_picker" : {
+          "type" : "boolean"
+        },
+        "time_trackable" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "swaggercontact" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "contact",
+      "properties" : {
+        "email" : {
+          "x-samplevalue" : "support@cloud-elements.com",
+          "type" : "string"
+        }
+      }
+    },
+    "17975505Account_features" : {
+      "properties" : {
+        "has_time_entry_role_picker" : {
+          "type" : "boolean"
+        },
+        "time_trackable" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "18574815" : {
+      "properties" : {
+        "access_level" : {
+          "type" : "string"
+        },
+        "account_features" : {
+          "$ref" : "#/definitions/18574815Account_features"
+        },
+        "account_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "archived" : {
+          "type" : "boolean"
+        },
+        "budget_used" : {
+          "type" : "string"
+        },
+        "budget_used_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budgeted" : {
+          "type" : "boolean"
+        },
+        "can_create_line_items" : {
+          "type" : "boolean"
+        },
+        "can_invite" : {
+          "type" : "boolean"
+        },
+        "change_orders_enabled" : {
+          "type" : "boolean"
+        },
+        "client_role_name" : {
+          "type" : "string"
+        },
+        "consultant_role_name" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string"
+        },
+        "creator_id" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "currency_base_unit" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "currency_symbol" : {
+          "type" : "string"
+        },
+        "default_rate" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string"
+        },
+        "effective_due_date" : {
+          "type" : "string"
+        },
+        "exclude_archived_stories_percent_complete" : {
+          "type" : "boolean"
+        },
+        "expenses_in_burn_rate" : {
+          "type" : "boolean"
+        },
+        "has_active_expense_report_submissions" : {
+          "type" : "boolean"
+        },
+        "has_active_timesheet_submissions" : {
+          "type" : "boolean"
+        },
+        "has_budget_access" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "over_budget" : {
+          "type" : "boolean"
+        },
+        "percent_of_budget_used" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "percentage_complete" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "permissions" : {
+          "$ref" : "#/definitions/18574815Permissions"
+        },
+        "posts_require_privacy_decision" : {
+          "type" : "boolean"
+        },
+        "price" : {
+          "type" : "string"
+        },
+        "primary_maven_id" : {
+          "type" : "string"
+        },
+        "rate_card_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "require_expense_approvals" : {
+          "type" : "boolean"
+        },
+        "require_time_approvals" : {
+          "type" : "boolean"
+        },
+        "start_date" : {
+          "type" : "string"
+        },
+        "status" : {
+          "$ref" : "#/definitions/18574815Status"
+        },
+        "stories_are_fixed_fee_by_default" : {
+          "type" : "boolean"
+        },
+        "tasks_default_non_billable" : {
+          "type" : "boolean"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "total_expenses_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "update_whitelist" : {
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "updated_at" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "swagger406" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "406",
+      "properties" : {
+        "description" : {
+          "x-samplevalue" : "Not acceptable - The response content type does not match the 'Accept' header value",
+          "type" : "string"
+        }
+      }
+    },
+    "18459025" : {
+      "properties" : {
+        "access_level" : {
+          "type" : "string"
+        },
+        "account_features" : {
+          "$ref" : "#/definitions/18459025Account_features"
+        },
+        "account_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "archived" : {
+          "type" : "boolean"
+        },
+        "budget_remaining" : {
+          "type" : "string"
+        },
+        "budget_used" : {
+          "type" : "string"
+        },
+        "budget_used_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budgeted" : {
+          "type" : "boolean"
+        },
+        "can_create_line_items" : {
+          "type" : "boolean"
+        },
+        "change_orders_enabled" : {
+          "type" : "boolean"
+        },
+        "client_role_name" : {
+          "type" : "string"
+        },
+        "consultant_role_name" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string"
+        },
+        "creator_id" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "currency_base_unit" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "currency_symbol" : {
+          "type" : "string"
+        },
+        "default_rate" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string"
+        },
+        "effective_due_date" : {
+          "type" : "string"
+        },
+        "exclude_archived_stories_percent_complete" : {
+          "type" : "boolean"
+        },
+        "expenses_in_burn_rate" : {
+          "type" : "boolean"
+        },
+        "has_active_expense_report_submissions" : {
+          "type" : "boolean"
+        },
+        "has_active_timesheet_submissions" : {
+          "type" : "boolean"
+        },
+        "has_budget_access" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "over_budget" : {
+          "type" : "boolean"
+        },
+        "percent_of_budget_used" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "percentage_complete" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "permissions" : {
+          "$ref" : "#/definitions/18459025Permissions"
+        },
+        "posts_require_privacy_decision" : {
+          "type" : "boolean"
+        },
+        "price" : {
+          "type" : "string"
+        },
+        "price_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "primary_maven_id" : {
+          "type" : "string"
+        },
+        "rate_card_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "require_expense_approvals" : {
+          "type" : "boolean"
+        },
+        "require_time_approvals" : {
+          "type" : "boolean"
+        },
+        "start_date" : {
+          "type" : "string"
+        },
+        "status" : {
+          "$ref" : "#/definitions/18459025Status"
+        },
+        "tasks_default_non_billable" : {
+          "type" : "boolean"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "total_expenses_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "update_whitelist" : {
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "updated_at" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "swaggerdefinition-property" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "#/definitions/definition-property",
+      "properties" : {
+        "type" : {
+          "x-samplevalue" : "string",
+          "type" : "string"
+        }
+      }
+    },
+    "Object" : {
+      "description" : "Fields for the object. There will be fields associated with an Object, which are not all described here.",
+      "properties" : {
+        "objectField" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "swagger409" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "409",
+      "properties" : {
+        "description" : {
+          "x-samplevalue" : "Conflict - If a resource being created already exists",
+          "type" : "string"
+        }
+      }
+    },
+    "objectsMetadata" : {
+      "properties" : {
+        "fields" : {
+          "items" : {
+            "$ref" : "#/definitions/objectsMetadataFields"
+          },
+          "type" : "array"
+        }
+      },
+      "type" : "object"
+    },
+    "Pong" : {
+      "properties" : {
+        "dateTime" : {
+          "format" : "date-time",
+          "type" : "string"
+        },
+        "endpoint" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "status" : {
+      "properties" : {
+        "color" : {
+          "type" : "string"
+        },
+        "key" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "swaggerschema" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "schema",
+      "properties" : {
+        "$ref" : {
+          "x-samplevalue" : "#/definitions/Contact-POST-Response",
+          "type" : "string"
+        }
+      }
+    },
+    "swagger415" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "415",
+      "properties" : {
+        "description" : {
+          "x-samplevalue" : "Unsupported media type - The server cannot handle the requested Content-Type",
+          "type" : "string"
+        }
+      }
+    },
+    "swaggerparametersschema" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "schema",
+      "properties" : {
+        "$ref" : {
+          "x-samplevalue" : "#/definitions/Contact",
+          "type" : "string"
+        }
+      }
+    },
+    "swaggerresponses" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "responses",
+      "properties" : {
+        "200" : {
+          "$ref" : "#/definitions/swagger200"
+        },
+        "400" : {
+          "$ref" : "#/definitions/swagger400"
+        },
+        "401" : {
+          "$ref" : "#/definitions/swagger401"
+        },
+        "403" : {
+          "$ref" : "#/definitions/swagger403"
+        },
+        "404" : {
+          "$ref" : "#/definitions/swagger404"
+        },
+        "405" : {
+          "$ref" : "#/definitions/swagger405"
+        },
+        "406" : {
+          "$ref" : "#/definitions/swagger406"
+        },
+        "409" : {
+          "$ref" : "#/definitions/swagger409"
+        },
+        "415" : {
+          "$ref" : "#/definitions/swagger415"
+        },
+        "500" : {
+          "$ref" : "#/definitions/swagger500"
+        },
+        "502" : {
+          "$ref" : "#/definitions/swagger502"
+        }
+      }
+    },
+    "swaggerproperties" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "properties",
+      "properties" : {
+        "definition-property" : {
+          "$ref" : "#/definitions/swaggerdefinition-property"
+        }
+      }
+    },
+    "18459025Account_features" : {
+      "properties" : {
+        "has_time_entry_role_picker" : {
+          "type" : "boolean"
+        },
+        "time_trackable" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "18504185Permissions" : {
+      "properties" : {
+        "can_change_price" : {
+          "type" : "boolean"
+        },
+        "can_change_story_billable" : {
+          "type" : "boolean"
+        },
+        "can_edit" : {
+          "type" : "boolean"
+        },
+        "can_join" : {
+          "type" : "boolean"
+        },
+        "can_post" : {
+          "type" : "boolean"
+        },
+        "can_private_message" : {
+          "type" : "boolean"
+        },
+        "can_see_financials" : {
+          "type" : "boolean"
+        },
+        "can_upload_files" : {
+          "type" : "boolean"
+        },
+        "is_participant" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "18574815Account_features" : {
+      "properties" : {
+        "has_time_entry_role_picker" : {
+          "type" : "boolean"
+        },
+        "time_trackable" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "18283405Status" : {
+      "properties" : {
+        "color" : {
+          "type" : "string"
+        },
+        "key" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "18283405Account_features" : {
+      "properties" : {
+        "has_time_entry_role_picker" : {
+          "type" : "boolean"
+        },
+        "time_trackable" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "swaggerinfo" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "info",
+      "properties" : {
+        "contact" : {
+          "$ref" : "#/definitions/swaggercontact"
+        },
+        "title" : {
+          "x-samplevalue" : "hubspotcrm",
+          "type" : "string"
+        },
+        "version" : {
+          "x-samplevalue" : "api-v2",
+          "type" : "string"
+        }
+      }
+    },
+    "18574815Status" : {
+      "properties" : {
+        "color" : {
+          "type" : "string"
+        },
+        "key" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "swagger500" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "500",
+      "properties" : {
+        "description" : {
+          "x-samplevalue" : "Server error - Something went wrong on the Cloud Elements server",
+          "type" : "string"
+        }
+      }
+    },
+    "swaggerpaths" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "paths",
+      "properties" : {
+        "/contacts" : {
+          "$ref" : "#/definitions/swagger-contacts-path"
+        }
+      }
+    },
+    "swagger502" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "502",
+      "properties" : {
+        "description" : {
+          "x-samplevalue" : "Provider server error - Something went wrong on the Provider or Endpoint's server",
+          "type" : "string"
+        }
+      }
+    },
+    "18574815Permissions" : {
+      "properties" : {
+        "access_level" : {
+          "type" : "string"
+        },
+        "can_change_price" : {
+          "type" : "boolean"
+        },
+        "can_change_story_billable" : {
+          "type" : "boolean"
+        },
+        "can_edit" : {
+          "type" : "boolean"
+        },
+        "can_join" : {
+          "type" : "boolean"
+        },
+        "can_post" : {
+          "type" : "boolean"
+        },
+        "can_private_message" : {
+          "type" : "boolean"
+        },
+        "can_see_financials" : {
+          "type" : "boolean"
+        },
+        "can_upload_files" : {
+          "type" : "boolean"
+        },
+        "is_participant" : {
+          "type" : "boolean"
+        },
+        "restricted" : {
+          "type" : "boolean"
+        },
+        "team_lead" : {
+          "type" : "boolean"
+        },
+        "user_is_client" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "17254575Permissions" : {
+      "properties" : {
+        "can_change_price" : {
+          "type" : "boolean"
+        },
+        "can_change_story_billable" : {
+          "type" : "boolean"
+        },
+        "can_edit" : {
+          "type" : "boolean"
+        },
+        "can_join" : {
+          "type" : "boolean"
+        },
+        "can_post" : {
+          "type" : "boolean"
+        },
+        "can_private_message" : {
+          "type" : "boolean"
+        },
+        "can_see_financials" : {
+          "type" : "boolean"
+        },
+        "can_upload_files" : {
+          "type" : "boolean"
+        },
+        "is_participant" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "objectsMetadataFields" : {
+      "properties" : {
+        "mask" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "vendorDisplayName" : {
+          "type" : "string"
+        },
+        "vendorPath" : {
+          "type" : "string"
+        },
+        "vendorReadOnly" : {
+          "type" : "boolean"
+        },
+        "vendorRequired" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "17254575" : {
+      "properties" : {
+        "access_level" : {
+          "type" : "string"
+        },
+        "account_features" : {
+          "$ref" : "#/definitions/17254575Account_features"
+        },
+        "account_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "archived" : {
+          "type" : "boolean"
+        },
+        "budgeted" : {
+          "type" : "boolean"
+        },
+        "can_create_line_items" : {
+          "type" : "boolean"
+        },
+        "change_orders_enabled" : {
+          "type" : "boolean"
+        },
+        "client_role_name" : {
+          "type" : "string"
+        },
+        "consultant_role_name" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string"
+        },
+        "creator_id" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "currency_base_unit" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "currency_symbol" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string"
+        },
+        "effective_due_date" : {
+          "type" : "string"
+        },
+        "exclude_archived_stories_percent_complete" : {
+          "type" : "boolean"
+        },
+        "has_active_expense_report_submissions" : {
+          "type" : "boolean"
+        },
+        "has_active_timesheet_submissions" : {
+          "type" : "boolean"
+        },
+        "has_budget_access" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "percentage_complete" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "permissions" : {
+          "$ref" : "#/definitions/17254575Permissions"
+        },
+        "posts_require_privacy_decision" : {
+          "type" : "boolean"
+        },
+        "primary_maven_id" : {
+          "type" : "string"
+        },
+        "rate_card_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "require_expense_approvals" : {
+          "type" : "boolean"
+        },
+        "require_time_approvals" : {
+          "type" : "boolean"
+        },
+        "start_date" : {
+          "type" : "string"
+        },
+        "tasks_default_non_billable" : {
+          "type" : "boolean"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "update_whitelist" : {
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "updated_at" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "18071985" : {
+      "properties" : {
+        "access_level" : {
+          "type" : "string"
+        },
+        "account_features" : {
+          "$ref" : "#/definitions/18071985Account_features"
+        },
+        "account_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "archived" : {
+          "type" : "boolean"
+        },
+        "budget_used" : {
+          "type" : "string"
+        },
+        "budget_used_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budgeted" : {
+          "type" : "boolean"
+        },
+        "can_create_line_items" : {
+          "type" : "boolean"
+        },
+        "change_orders_enabled" : {
+          "type" : "boolean"
+        },
+        "client_role_name" : {
+          "type" : "string"
+        },
+        "consultant_role_name" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string"
+        },
+        "creator_id" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "currency_base_unit" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "currency_symbol" : {
+          "type" : "string"
+        },
+        "default_rate" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string"
+        },
+        "effective_due_date" : {
+          "type" : "string"
+        },
+        "exclude_archived_stories_percent_complete" : {
+          "type" : "boolean"
+        },
+        "expenses_in_burn_rate" : {
+          "type" : "boolean"
+        },
+        "has_active_expense_report_submissions" : {
+          "type" : "boolean"
+        },
+        "has_active_timesheet_submissions" : {
+          "type" : "boolean"
+        },
+        "has_budget_access" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "over_budget" : {
+          "type" : "boolean"
+        },
+        "percent_of_budget_used" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "percentage_complete" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "permissions" : {
+          "$ref" : "#/definitions/18071985Permissions"
+        },
+        "posts_require_privacy_decision" : {
+          "type" : "boolean"
+        },
+        "price" : {
+          "type" : "string"
+        },
+        "primary_maven_id" : {
+          "type" : "string"
+        },
+        "rate_card_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "require_expense_approvals" : {
+          "type" : "boolean"
+        },
+        "require_time_approvals" : {
+          "type" : "boolean"
+        },
+        "start_date" : {
+          "type" : "string"
+        },
+        "status" : {
+          "$ref" : "#/definitions/18071985Status"
+        },
+        "tasks_default_non_billable" : {
+          "type" : "boolean"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "total_expenses_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "update_whitelist" : {
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "updated_at" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "18045395" : {
+      "properties" : {
+        "access_level" : {
+          "type" : "string"
+        },
+        "account_features" : {
+          "$ref" : "#/definitions/account_features"
+        },
+        "account_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "archived" : {
+          "type" : "boolean"
+        },
+        "budget_remaining" : {
+          "type" : "string"
+        },
+        "budget_used" : {
+          "type" : "string"
+        },
+        "budget_used_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budgeted" : {
+          "type" : "boolean"
+        },
+        "can_create_line_items" : {
+          "type" : "boolean"
+        },
+        "change_orders_enabled" : {
+          "type" : "boolean"
+        },
+        "client_role_name" : {
+          "type" : "string"
+        },
+        "consultant_role_name" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string"
+        },
+        "creator_id" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "currency_base_unit" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "currency_symbol" : {
+          "type" : "string"
+        },
+        "default_rate" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string"
+        },
+        "effective_due_date" : {
+          "type" : "string"
+        },
+        "exclude_archived_stories_percent_complete" : {
+          "type" : "boolean"
+        },
+        "expenses_in_burn_rate" : {
+          "type" : "boolean"
+        },
+        "has_active_expense_report_submissions" : {
+          "type" : "boolean"
+        },
+        "has_active_timesheet_submissions" : {
+          "type" : "boolean"
+        },
+        "has_budget_access" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "over_budget" : {
+          "type" : "boolean"
+        },
+        "percent_of_budget_used" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "percentage_complete" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "permissions" : {
+          "$ref" : "#/definitions/permissions"
+        },
+        "posts_require_privacy_decision" : {
+          "type" : "boolean"
+        },
+        "price" : {
+          "type" : "string"
+        },
+        "price_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "primary_maven_id" : {
+          "type" : "string"
+        },
+        "rate_card_id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "require_expense_approvals" : {
+          "type" : "boolean"
+        },
+        "require_time_approvals" : {
+          "type" : "boolean"
+        },
+        "start_date" : {
+          "type" : "string"
+        },
+        "status" : {
+          "$ref" : "#/definitions/status"
+        },
+        "tasks_default_non_billable" : {
+          "type" : "boolean"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "total_expenses_in_cents" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "update_whitelist" : {
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "updated_at" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "18071985Permissions" : {
+      "properties" : {
+        "can_change_price" : {
+          "type" : "boolean"
+        },
+        "can_change_story_billable" : {
+          "type" : "boolean"
+        },
+        "can_edit" : {
+          "type" : "boolean"
+        },
+        "can_join" : {
+          "type" : "boolean"
+        },
+        "can_post" : {
+          "type" : "boolean"
+        },
+        "can_private_message" : {
+          "type" : "boolean"
+        },
+        "can_see_financials" : {
+          "type" : "boolean"
+        },
+        "can_upload_files" : {
+          "type" : "boolean"
+        },
+        "is_participant" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "swaggerpost" : {
+      "x-has-customfields" : false,
+      "type" : "object",
+      "title" : "post",
+      "properties" : {
+        "summary" : {
+          "x-samplevalue" : "Create a new contact in the CRM service. Contact creation will flow through Cloud Elements to your CRM service. With the exception of the 'id' field, the required fields indicated in the 'Contact' model are those required to create a new contact.",
+          "type" : "string"
+        },
+        "operationId" : {
+          "x-samplevalue" : "createContact",
+          "type" : "string"
+        },
+        "responses" : {
+          "$ref" : "#/definitions/swaggerresponses"
+        },
+        "parameters" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/swaggerparameters"
+          }
+        },
+        "tags" : {
+          "x-samplevalue" : [ "contacts" ],
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "swaggertags" : {
+      "x-has-customfields" : false,
+      "title" : "tags",
+      "properties" : {
+        "name" : {
+          "x-samplevalue" : "contacts",
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "contact" : {
+      "email" : "support@cloud-elements.com"
+    },
+    "title" : "mavenlink",
+    "version" : "api-v2"
+  },
+  "tags" : [ {
+    "name" : "projects"
+  }, {
+    "name" : "ping"
+  }, {
+    "name" : "objects"
+  }, {
+    "name" : "objectName"
+  }, {
+    "name" : "users"
+  } ]
+}

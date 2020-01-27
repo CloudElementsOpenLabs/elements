@@ -1,0 +1,1410 @@
+{
+  "configuration": [
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth API Key",
+      "active": true,
+      "description": "Pinterest OAuth API Key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.api.key",
+      "required": true
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Refresh Time",
+      "active": true,
+      "description": "Pinterest OAuth Refresh Time",
+      "type": "TEXTFIELD_64",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.user.refresh_time",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "true",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pinterest OAuth basic header",
+      "type": "BOOLEAN",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "OAuth basic header",
+      "groupControl": false,
+      "key": "oauth.basic.header"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "100",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pinterest Max Page Size (or limit)",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Max Page Size (or limit)",
+      "groupControl": false,
+      "key": "pagination.max"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth API Secret",
+      "active": true,
+      "description": "Pinterest OAuth API Secret",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.api.secret",
+      "required": true
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "https://api.pinterest.com/v1",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pinterest Base Url",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "Base Url",
+      "groupControl": false,
+      "key": "base.url"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "cursor",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pinterest Pagination Type",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Pagination Type",
+      "groupControl": false,
+      "key": "pagination.type"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Token Revoke URL",
+      "active": true,
+      "description": "Pinterest OAuth Token Revoke URL",
+      "type": "TEXTFIELD_1000",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.token.revoke_url",
+      "required": false
+    },
+    {
+      "internal": true,
+      "companyConfig": false,
+      "defaultValue": "https://api.pinterest.com/v1/oauth/token",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pinterest OAuth Token URL",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "OAuth Token URL",
+      "groupControl": false,
+      "key": "oauth.token.url"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Token Refresh URL",
+      "active": true,
+      "description": "Pinterest OAuth Token Refresh URL",
+      "type": "TEXTFIELD_1000",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.token.refresh_url",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "auth.cloudelements.io/oauth",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pinterest OAuth Callback URL",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "OAuth Callback URL",
+      "groupControl": false,
+      "key": "oauth.callback.url"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Access Token",
+      "active": true,
+      "description": "Pinterest OAuth Access Token",
+      "type": "TEXTFIELD_32",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.user.token",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "read_public,write_public,read_relationships,write_relationships",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pinterest OAuth Scope",
+      "type": "TEXTFIELD_64",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "OAuth Scope",
+      "groupControl": false,
+      "key": "oauth.scope"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "OAuth Refresh Token",
+      "active": true,
+      "description": "Pinterest OAuth Refresh Token",
+      "type": "TEXTFIELD_64",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "oauth.user.refresh_token",
+      "required": false
+    },
+    {
+      "internal": true,
+      "companyConfig": false,
+      "defaultValue": "3600",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pinterest OAuth Refresh Interval (s)",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "OAuth Refresh Interval (s)",
+      "groupControl": false,
+      "key": "oauth.user.refresh_interval"
+    },
+    {
+      "internal": true,
+      "companyConfig": false,
+      "defaultValue": "https://api.pinterest.com/oauth/",
+      "displayOrder": 1,
+      "active": true,
+      "description": "Pinterest OAuth Authorization URL",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "OAuth Authorization URL",
+      "groupControl": false,
+      "key": "oauth.authorization.url"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 11,
+      "name": "Event Notification Signature Key",
+      "active": true,
+      "description": "Pinterest Event Notification Signature Key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.signature.key",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 12,
+      "name": "Event Notification Basic User Name",
+      "active": true,
+      "description": "Pinterest Event Notification Basic User Name",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.username",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 13,
+      "name": "Event Notification Basic Password",
+      "active": true,
+      "description": "Pinterest Event Notification Basic Password",
+      "type": "PASSWORD",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.password",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 98,
+      "name": "Default select fields",
+      "active": true,
+      "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+      "type": "TEXTAREA",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "default.select.fields.map",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "true",
+      "displayOrder": 99,
+      "active": true,
+      "description": "Used to enable/disable filtering of null values from the responses",
+      "type": "BOOLEAN",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": false,
+      "name": "Filter null values from the response",
+      "groupControl": false,
+      "key": "filter.response.nulls"
+    },
+    {
+      "internal": true,
+      "companyConfig": false,
+      "defaultValue": "polling",
+      "displayOrder": 100,
+      "active": true,
+      "description": "Pinterest Event Type",
+      "type": "TEXTFIELD_128",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Event Type",
+      "groupControl": false,
+      "key": "event.vendor.type"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "15",
+      "displayOrder": 101,
+      "active": true,
+      "description": "Pinterest Set time interval for polling application (in minutes)",
+      "type": "TEXTFIELD_128",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": false,
+      "name": "Event poller refresh interval",
+      "groupControl": false,
+      "key": "event.poller.refresh_interval"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 102,
+      "name": "Event Notification Callback URL",
+      "active": true,
+      "description": "Pinterest Event Notification Callback URL",
+      "type": "TEXTFIELD_1000",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.callback.url",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "false",
+      "displayOrder": 102,
+      "active": true,
+      "description": "Pinterest Enable/Disable Event Notification",
+      "type": "BOOLEAN",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Event Notifications Enabled",
+      "groupControl": false,
+      "key": "event.notification.enabled"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 104,
+      "name": "Event Notification Subscription ID",
+      "active": true,
+      "description": "Pinterest Event Notification Subscription ID",
+      "type": "TEXTFIELD_1000",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.subscription.id",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "{\"pins\":{\"url\":\"/pins\",\"idField\":\"id\",\"datesConfiguration\":{\"updatedDateField\":\"created_at\",\"updatedDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"updatedDateTimezone\":\"GMT\",\"createdDateField\":\"created_at\",\"createdDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"createdDateTimezone\":\"GMT\"}},\"boards\":{\"url\":\"/boards\",\"idField\":\"id\",\"datesConfiguration\":{\"updatedDateField\":\"created_at\",\"updatedDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"updatedDateTimezone\":\"GMT\",\"createdDateField\":\"created_at\",\"createdDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"createdDateTimezone\":\"GMT\"}}}",
+      "displayOrder": 104,
+      "active": true,
+      "description": "Pinterest Event Poller Resources Configuration",
+      "type": "TEXTAREA",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": false,
+      "name": "Event Poller Resources Configuration",
+      "groupControl": false,
+      "key": "event.poller.configuration"
+    }
+  ],
+  "objects": [
+    {
+      "bulkUploadEnabled": true,
+      "elementId": 18305,
+      "metadataDiscovery": false,
+      "bulkDownloadEnabled": true,
+      "eventsEnabled": false,
+      "name": "boards",
+      "nativeBulkUpload": false,
+      "hulkDownloadEnabled": false,
+      "migrated": false,
+      "nativeBulkDownload": false,
+      "hulkUploadEnabled": false
+    }
+  ],
+  "description": "Pinterest Element",
+  "cloneable": true,
+  "extended": false,
+  "bulkDownloadEnabled": false,
+  "useModelsForMetadata": true,
+  "trialAccount": false,
+  "logo": "pinterest",
+  "hooks": [
+    {
+      "isLegacy": false,
+      "mimeType": "application/javascript",
+      "body": "const needsContentType = () => request_vendor_method && ['POST', 'PATCH', 'PUT'].includes(request_vendor_method);\n\ndone({\n  request_vendor_headers: {\n   'Content-Type': needsContentType() ? 'application/json': null,\n    Authorization: null\n }\n});",
+      "type": "preRequest"
+    }
+  ],
+  "beta": false,
+  "key": "pinterest",
+  "authentication": {
+    "type": "oauth2"
+  },
+  "bulkUploadEnabled": false,
+  "image": "https://images.cloudelements.io/App-Pinterest-icon-with-out-background201808282145.png",
+  "models": [],
+  "active": true,
+  "resources": [
+    {
+      "method": "GET",
+      "kind": "eb",
+      "description": "Search for /boards",
+      "type": "api",
+      "vendorPath": "/me/boards/",
+      "nextPageKey": "body.page.next?cursor",
+      "path": "/hubs/general/boards",
+      "paginationType": "VENDOR_SUPPORTED",
+      "vendorMethod": "GET",
+      "response": {
+        "contentType": "application/json"
+      },
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "query",
+          "dataType": "string",
+          "name": "id, name, url, description, creator, created_at, counts, image",
+          "description": "Fields",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "value",
+          "vendorName": "fields",
+          "required": false
+        },
+        {
+          "vendorType": "query",
+          "dataType": "string",
+          "name": "pageSize",
+          "description": "The number of resources to return in a given page",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "pageSize",
+          "required": false
+        },
+        {
+          "vendorType": "query",
+          "dataType": "string",
+          "name": "page",
+          "description": "The page number of resources to retrieve",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "page",
+          "required": false
+        },
+        {
+          "vendorType": "query",
+          "converter": "toQueryParameters",
+          "dataType": "string",
+          "name": "where",
+          "description": "The CEQL search expression",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "converter:toQueryParameters",
+          "required": false
+        }
+      ],
+      "rootKey": "data"
+    },
+    {
+      "path": "/hubs/general/boards",
+      "vendorMethod": "POST",
+      "method": "POST",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Create a(n) /boards",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "body",
+          "dataType": "boards",
+          "name": "body",
+          "description": "The object body",
+          "vendorDataType": "boards",
+          "source": "request",
+          "type": "body",
+          "vendorName": "body",
+          "required": true
+        }
+      ],
+      "vendorPath": "/boards/"
+    },
+    {
+      "path": "/hubs/general/boards/{id}",
+      "vendorMethod": "DELETE",
+      "method": "DELETE",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Delete a(n) /boards",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "vendorPath": "/boards/{id}/"
+    },
+    {
+      "path": "/hubs/general/boards/{id}",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Retrieve a(n) /boards",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "path",
+          "dataType": "string",
+          "name": "id",
+          "description": "Board Id",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "path",
+          "vendorName": "id",
+          "required": true
+        }
+      ],
+      "vendorPath": "/boards/{id}/"
+    },
+    {
+      "path": "/hubs/general/boards/{id}",
+      "vendorMethod": "PATCH",
+      "method": "PATCH",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Update a(n) /boards",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "body",
+          "dataType": "boards",
+          "name": "body",
+          "description": "The object body",
+          "vendorDataType": "boards",
+          "source": "request",
+          "type": "body",
+          "vendorName": "body",
+          "required": true
+        },
+        {
+          "vendorType": "path",
+          "dataType": "string",
+          "name": "id",
+          "description": "The board you want to fetch in the format <username>/<board_name>.",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "path",
+          "vendorName": "id",
+          "required": true
+        }
+      ],
+      "vendorPath": "/boards/{id}/"
+    },
+    {
+      "path": "/hubs/general/{objectName}/{objectId}",
+      "vendorMethod": "DELETE",
+      "method": "DELETE",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Delete an {objectName}",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ]
+    },
+    {
+      "path": "/hubs/general/{objectName}/{objectId}",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Retrieve an {objectName}",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ]
+    },
+    {
+      "path": "/hubs/general/{objectName}/{objectId}",
+      "vendorMethod": "PATCH",
+      "method": "PATCH",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Update an {objectName}",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "Body",
+          "name": "Body",
+          "description": "The {objectName}",
+          "vendorDataType": "Body",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "Body",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "path": "/hubs/general/{objectName}/{objectId}",
+      "vendorMethod": "PUT",
+      "method": "PUT",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Update an {objectName}",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "Body",
+          "name": "Body",
+          "description": "The {objectName}",
+          "vendorDataType": "Body",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "Body",
+          "required": true
+        }
+      ]
+    },
+    {
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Search for {childObjectName}",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "integer",
+          "name": "pageSize",
+          "description": "The page size. Defaults to 200 if not provided. Maximum of 5000.",
+          "vendorDataType": "integer",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "pageSize",
+          "required": false
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "where",
+          "description": "The CEQL search expression.",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "where",
+          "required": false
+        },
+        {
+          "vendorType": "form",
+          "dataType": "integer",
+          "name": "page",
+          "description": "The page number. Defaults to 1 if not provided.",
+          "vendorDataType": "integer",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "page",
+          "required": false
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the childObjectName",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ]
+    },
+    {
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}",
+      "vendorMethod": "POST",
+      "method": "POST",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Create an {childObjectName}",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "Body",
+          "name": "Body",
+          "description": "The {childObjectName}",
+          "vendorDataType": "Body",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "Body",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}/{childObjectId}",
+      "vendorMethod": "DELETE",
+      "method": "DELETE",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Delete an {childObjectName}",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the childObjectName",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectId",
+          "description": "The {childObjectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ]
+    },
+    {
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}/{childObjectId}",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Retrieve an {childObjectName}",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectId",
+          "description": "The {childObjectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the childObjectName",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ]
+    },
+    {
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}/{childObjectId}",
+      "vendorMethod": "PATCH",
+      "method": "PATCH",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Update an {childObjectName}",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "Body",
+          "name": "Body",
+          "description": "The {objectName}",
+          "vendorDataType": "Body",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "Body",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the childObjectName",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectId",
+          "description": "The {childObjectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        }
+      ]
+    },
+    {
+      "path": "/hubs/general/{objectName}/{objectId}/{childObjectName}/{childObjectId}",
+      "vendorMethod": "PUT",
+      "method": "PUT",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Update an {childObjectName}",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectId",
+          "description": "The {childObjectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectName",
+          "description": "The name of the object",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "childObjectName",
+          "description": "The name of the childObjectName",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "childObjectName",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "string",
+          "name": "objectId",
+          "description": "The {objectName} ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "objectId",
+          "required": true
+        },
+        {
+          "vendorType": "form",
+          "dataType": "Body",
+          "name": "Body",
+          "description": "The {objectName}",
+          "vendorDataType": "Body",
+          "source": "request",
+          "type": "multipart",
+          "vendorName": "Body",
+          "required": true
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "kind": "eb",
+      "description": "Search for /pins",
+      "type": "api",
+      "vendorPath": "/me/pins/",
+      "nextPageKey": "body.page.next?cursor",
+      "path": "/hubs/general/pins",
+      "paginationType": "VENDOR_SUPPORTED",
+      "vendorMethod": "GET",
+      "response": {
+        "contentType": "application/json"
+      },
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "query",
+          "converter": "toQueryParameters",
+          "dataType": "string",
+          "name": "where",
+          "description": "The CEQL search expression",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "converter:toQueryParameters",
+          "required": false
+        },
+        {
+          "vendorType": "query",
+          "dataType": "string",
+          "name": "nextPage",
+          "description": "The page number of resources to retrieve",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "cursor",
+          "required": false
+        },
+        {
+          "vendorType": "query",
+          "dataType": "string",
+          "name": "id, link, url, creator, board, created_at, note, color, counts, media, attribution, image, metadata",
+          "description": "Felds",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "value",
+          "vendorName": "fields",
+          "required": false
+        },
+        {
+          "vendorType": "query",
+          "dataType": "string",
+          "name": "pageSize",
+          "description": "The number of resources to return in a given page",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "query",
+          "vendorName": "limit",
+          "required": false
+        }
+      ],
+      "rootKey": "data"
+    },
+    {
+      "path": "/hubs/general/pins",
+      "vendorMethod": "POST",
+      "method": "POST",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Create a(n) /pins",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "body",
+          "dataType": "pins",
+          "name": "body",
+          "description": "The object body",
+          "vendorDataType": "pins",
+          "source": "request",
+          "type": "body",
+          "vendorName": "body",
+          "required": true
+        }
+      ],
+      "vendorPath": "/pins/"
+    },
+    {
+      "path": "/hubs/general/pins/{id}",
+      "vendorMethod": "DELETE",
+      "method": "DELETE",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Delete a(n) /pins",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "path",
+          "dataType": "string",
+          "name": "id",
+          "description": "id of Pin",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "path",
+          "vendorName": "id",
+          "required": false
+        }
+      ],
+      "vendorPath": "/pins/{id}/"
+    },
+    {
+      "path": "/hubs/general/pins/{id}",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Retrieve a(n) /pins",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "path",
+          "dataType": "string",
+          "name": "id",
+          "description": "The ID (unique string of numbers and letters) of the Pin you want information about.",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "path",
+          "vendorName": "pin",
+          "required": true
+        }
+      ],
+      "vendorPath": "/pins/{pin}"
+    },
+    {
+      "path": "/hubs/general/pins/{id}",
+      "vendorMethod": "PATCH",
+      "method": "PATCH",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Update a(n) /pins",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "vendorPath": "/pins/{id}"
+    },
+    {
+      "path": "/hubs/general/users",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Search for /users",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "vendorPath": "/me"
+    },
+    {
+      "path": "/hubs/general/users",
+      "vendorMethod": "POST",
+      "method": "POST",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Create a(n) /users",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "vendorPath": "/me"
+    },
+    {
+      "path": "/hubs/general/users/{id}",
+      "vendorMethod": "DELETE",
+      "method": "DELETE",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Delete a(n) /users",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "vendorPath": "/me/{id}"
+    }
+  ],
+  "modelType": "basic",
+  "protocolType": "http",
+  "transformationsEnabled": true,
+  "deleted": false,
+  "hub": "general",
+  "typeOauth": false,
+  "name": "Pinterest",
+  "extendable": false,
+  "parameters": [
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Accept",
+      "required": false
+    },
+    {
+      "vendorType": "query",
+      "name": "oauth.user.token",
+      "source": "request",
+      "type": "configuration",
+      "vendorName": "access_token",
+      "required": false
+    },
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Content-Type",
+      "required": false
+    }
+  ]
+}
