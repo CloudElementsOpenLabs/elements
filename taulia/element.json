@@ -1,0 +1,3766 @@
+{
+    "configuration": [
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "API Key",
+            "active": true,
+            "description": "API Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "api.key",
+            "required": true
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Taulia Base Url",
+            "type": "TEXTFIELD_1000",
+            "resellerConfig": false,
+            "required": true,
+            "hideFromConsole": true,
+            "name": "Base Url",
+            "groupControl": false,
+            "key": "base.url"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Taulia Max Page Size (or limit)",
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Max Page Size (or limit)",
+            "groupControl": false,
+            "key": "pagination.max"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "offset",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Taulia Pagination Type",
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Pagination Type",
+            "groupControl": false,
+            "key": "pagination.type"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "\\n",
+            "displayOrder": 1,
+            "active": true,
+            "description": "hidden val",
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "New Line",
+            "groupControl": false,
+            "key": "new.line"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "DEFAULT",
+            "displayOrder": 1,
+            "active": true,
+            "description": "ERP Client ID",
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": true,
+            "hideFromConsole": false,
+            "name": "ERP Client ID",
+            "groupControl": false,
+            "key": "erp.client.id"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "API User",
+            "active": true,
+            "description": "API User",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "api.user",
+            "required": true
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 11,
+            "name": "Event Notification Signature Key",
+            "active": true,
+            "description": "Taulia Event Notification Signature Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.signature.key",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 98,
+            "name": "Default select fields",
+            "active": true,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "type": "TEXTAREA",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "default.select.fields.map",
+            "required": false
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "displayOrder": 99,
+            "active": true,
+            "description": "Used to enable/disable filtering of null values from the responses",
+            "type": "BOOLEAN",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Filter null values from the response",
+            "groupControl": false,
+            "key": "filter.response.nulls"
+        },
+        {
+            "internal": true,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 100,
+            "name": "Time of Getting Token or Performing Authentication",
+            "active": true,
+            "description": "Taulia Time of Getting Token or Performing Authentication",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "authentication.time",
+            "required": false
+        }
+    ],
+    "objects": [
+        {
+            "bulkUploadEnabled": true,
+            "elementId": 15781,
+            "metadataDiscovery": false,
+            "eventsEnabled": false,
+            "name": "supplierMaster",
+            "nativeBulkUpload": false,
+            "operationsSupported": [
+                "unknown"
+            ],
+            "vendorEventTypes": "unknown",
+            "nativeBulkDownload": false,
+            "primaryKeyName": "supplierNumber"
+        }
+    ],
+    "description": "An HMAC signature element built for Taulia POC",
+    "cloneable": false,
+    "extended": false,
+    "bulkDownloadEnabled": false,
+    "useModelsForMetadata": true,
+    "trialAccount": false,
+    "logo": "taulia",
+    "hooks": [
+        {
+            "isLegacy": false,
+            "mimeType": "application/javascript",
+            "body": "const secret = configuration[\"api.key\"];\nconst new_line =  configuration[\"new.line\"];\n\nlet http_method = request_method;\nlet headers = request_vendor_headers;\nlet url_path = request_vendor_path;\nlet cont_type = request_vendor_headers[\"Content-Type\"];\n\nlet d = new Date();\nlet curr_date = d.toISOString();\n\nlet str = http_method + new_line;\n   str += cont_type + new_line;\n   str += curr_date + new_line;\n   str += url_path;\n   \nlet sig = encodeURI(CE.hmacSha1Base64(secret, str));\n\nheaders[\"x-tau-rest-signature\"] = sig;\nheaders[\"Date\"] = curr_date;\n\ndone({\n  \"request_vendor_headers\": headers,\n  \"continue\": true\n})",
+            "type": "preRequest"
+        }
+    ],
+    "beta": false,
+    "key": "taulia",
+    "authentication": {
+        "type": "custom"
+    },
+    "bulkUploadEnabled": false,
+    "image": "https://images.cloudelements.io/taulia-squarelogo-1517525911560201901231715.png",
+    "models": [],
+    "active": true,
+    "resources": [
+        {
+            "path": "/hubs/general/batch/{id}",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve a batch",
+            "model": {
+                "transform": false,
+                "name": "batch",
+                "swagger": {
+                    "batch": {
+                        "type": "array",
+                        "items": {
+                            "type": "batchObject"
+                        }
+                    },
+                    "batchObject": {
+                        "title": "batch",
+                        "type": "object",
+                        "properties": {
+                            "lastUpdated": {
+                                "x-samplevalue": "2019-01-29T22:36:54.076Z",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "documentId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "message": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "objectId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "referenceId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "ticketId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "objectType": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "status": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/v1/batch/{id}"
+        },
+        {
+            "method": "GET",
+            "kind": "eb",
+            "description": "Search for /earlyPayment",
+            "type": "api",
+            "vendorPath": "/v1/earlyPayments/notifications",
+            "path": "/hubs/general/earlyPayments",
+            "vendorMethod": "GET",
+            "response": {
+                "contentType": "application/json"
+            },
+            "model": {
+                "transform": false,
+                "name": "earlyPayments",
+                "swagger": {
+                    "data": [
+                        {
+                            "earlyPaymentRequestId": "string",
+                            "additionalParams": {
+                                "additionalProp1": "string",
+                                "additionalProp3": "string",
+                                "additionalProp2": "string"
+                            },
+                            "erpInvoiceId": "string",
+                            "invoiceId": "string",
+                            "notificationId": "string",
+                            "erpType": "string",
+                            "transactionId": "string",
+                            "status": "PENDING"
+                        }
+                    ],
+                    "offset": 0,
+                    "max": 0,
+                    "count": 0
+                }
+            },
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "change",
+                    "description": "One of \"pending\", \"startedForFunder\", or \"cancelled\"",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "change",
+                    "required": true
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "max",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "offset",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                }
+            ],
+            "rootKey": "data"
+        },
+        {
+            "path": "/hubs/general/earlyPayments",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a(n) /earlyPayment",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "earlyPayment",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "earlyPayment",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/v1/earlyPayments"
+        },
+        {
+            "path": "/hubs/general/earlyPayments/{id}",
+            "vendorMethod": "DELETE",
+            "method": "DELETE",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Delete a(n) /earlyPayment notification",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "notificationId",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/v1/earlyPayments/{notificationId}"
+        },
+        {
+            "path": "/hubs/general/earlyPayments/{id}",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve a(n) /earlyPayment",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "notificationId",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/v1/earlyPayments/{notificationId}"
+        },
+        {
+            "path": "/hubs/general/invoices",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Post a new Invoice",
+            "model": {
+                "requestName": "invoices",
+                "transform": false,
+                "name": "invoices",
+                "requestSwagger": {
+                    "invoicesSupplier": {
+                        "title": "supplier",
+                        "type": "object",
+                        "properties": {
+                            "fromAddress": {
+                                "type": "invoicesSupplierFromAddress"
+                            },
+                            "vendorNumber": {
+                                "x-samplevalue": "974",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "invoicesSupplierFromAddress": {
+                        "title": "fromAddress",
+                        "type": "object",
+                        "properties": {
+                            "country": {
+                                "x-samplevalue": "US",
+                                "type": "string"
+                            },
+                            "zipCode": {
+                                "x-samplevalue": "75266-0188",
+                                "type": "string"
+                            },
+                            "city": {
+                                "x-samplevalue": "Dallas",
+                                "type": "string"
+                            },
+                            "name": {
+                                "x-samplevalue": "PO Box 660108",
+                                "type": "string"
+                            },
+                            "addressLine1": {
+                                "x-samplevalue": "PO Box 660108",
+                                "type": "string"
+                            },
+                            "region": {
+                                "x-samplevalue": "TX",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "invoicesCustomer": {
+                        "title": "customer",
+                        "type": "object",
+                        "properties": {
+                            "businessUnit": {
+                                "x-samplevalue": "2",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "invoices": {
+                        "type": "array",
+                        "items": {
+                            "type": "invoicesObject"
+                        }
+                    },
+                    "invoicesObject": {
+                        "title": "invoices",
+                        "type": "object",
+                        "properties": {
+                            "netAmount": {
+                                "x-samplevalue": 209.47,
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "dueDate": {
+                                "x-samplevalue": "2017-04-28T07:00:00Z",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ssZ",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "buyerTimestamp": {
+                                "x-samplevalue": "2017-06-09T00:40:56Z",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ssZ",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "grossAmount": {
+                                "x-samplevalue": 209.47,
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "invoiceDate": {
+                                "x-samplevalue": "2017-04-03T07:00:00Z",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ssZ",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "message": {
+                                "x-samplevalue": "Employees cell phones and mifis. March 2017",
+                                "type": "string"
+                            },
+                            "invoiceIndicator": {
+                                "x-samplevalue": true,
+                                "type": "boolean"
+                            },
+                            "lineItems": {
+                                "type": "array",
+                                "items": {
+                                    "type": "invoicesLineItems"
+                                }
+                            },
+                            "number": {
+                                "x-samplevalue": "3257",
+                                "type": "string"
+                            },
+                            "supplier": {
+                                "type": "invoicesSupplier"
+                            },
+                            "currency": {
+                                "x-samplevalue": "USD",
+                                "type": "string"
+                            },
+                            "customer": {
+                                "type": "invoicesCustomer"
+                            },
+                            "status": {
+                                "x-samplevalue": "PAID",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "invoicesLineItems": {
+                        "title": "lineItems",
+                        "properties": {
+                            "itemNumber": {
+                                "x-samplevalue": 1,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "totalAmount": {
+                                "x-samplevalue": 67.92,
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "unit": {
+                                "x-samplevalue": "EA",
+                                "type": "string"
+                            },
+                            "quantity": {
+                                "x-samplevalue": 1,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "netAmount": {
+                                "x-samplevalue": 67.92,
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "itemDescription": {
+                                "x-samplevalue": "Employees cell phones and mifis  March 2017",
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "invoices": {
+                        "title": "invoices",
+                        "properties": {
+                            "tickets": {
+                                "type": "array",
+                                "items": {
+                                    "type": "invoicesTickets"
+                                }
+                            },
+                            "success": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "batchId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "message": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "invoicesTickets": {
+                        "title": "tickets",
+                        "properties": {
+                            "documentId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "referenceId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "ticketId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "invoice",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "invoice",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/v1/invoices"
+        },
+        {
+            "path": "/hubs/general/invoices/{id}",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "...",
+            "model": {
+                "transform": false,
+                "name": "invoices",
+                "swagger": {
+                    "externalIdLinkObjects": [
+                        {
+                            "apiKeyId": "string",
+                            "externalId": "string"
+                        }
+                    ],
+                    "metadata": {
+                        "lastSubmissionToErp": "2019-01-23T14:24:39.357Z",
+                        "transactionId": "range [0",
+                        "transferAttemptsToErp": 0
+                    },
+                    "statusLastUpdated": "2019-01-23T14:24:39.357Z",
+                    "dueDate": "2019-01-23T14:24:39.357Z",
+                    "discountAmount": 0,
+                    "postingDate": "2019-01-23T14:24:39.357Z",
+                    "receivingDate": "2019-01-23T14:24:39.357Z",
+                    "invoiceIndicator": false,
+                    "otherCurrencyExchangeRate": 0,
+                    "partialPayment": false,
+                    "lineItems": [
+                        {
+                            "itemNumber": 0,
+                            "taxClearanceItemType": "string",
+                            "customFields": [
+                                {
+                                    "name": "string",
+                                    "value": "string"
+                                }
+                            ],
+                            "freight": 0,
+                            "materialCodeSupplier": "string",
+                            "discount": 0,
+                            "pricePerUnit": 0,
+                            "taxItems": [
+                                {
+                                    "amount": 0,
+                                    "rate": 0,
+                                    "taxType": "string"
+                                }
+                            ],
+                            "goodsReceiptSapItemNumber": "string",
+                            "materialCodeBuyer": "string",
+                            "serviceLineNumber": 0,
+                            "itemDescription": "string",
+                            "taxExemptReason": "string",
+                            "goodsReceiptSapYear": "string",
+                            "priceUnit": 0,
+                            "quantity": 0,
+                            "deliveryNote": "string",
+                            "netAmount": 0,
+                            "goodsReceiptSapNumber": "string",
+                            "materialCode": "string",
+                            "poItemNumber": 0,
+                            "taxRate": 0,
+                            "totalAmount": 0,
+                            "unit": "string",
+                            "blanketItemCategory": "string",
+                            "taxAmount": 0,
+                            "poNumber": "string",
+                            "poItemDescription": "string"
+                        }
+                    ],
+                    "number": "range [0",
+                    "otherCurrency": "string",
+                    "totalAddlChargesAmount": 0,
+                    "referenceNumber": "string",
+                    "supplier": {
+                        "remitToAddress": {
+                            "country": "string",
+                            "zipCode": "string",
+                            "city": "string",
+                            "language": "string",
+                            "poBoxZipCode": "string",
+                            "poBox": "string",
+                            "phone": "string",
+                            "name": "string",
+                            "addressLine1": "string",
+                            "addressLine2": "string",
+                            "addressLine3": "string",
+                            "fax": "string",
+                            "region": "string",
+                            "email": "string"
+                        },
+                        "remitTo": {
+                            "id": "string",
+                            "type": "string"
+                        },
+                        "shipFromAddress": {
+                            "country": "string",
+                            "zipCode": "string",
+                            "city": "string",
+                            "language": "string",
+                            "poBoxZipCode": "string",
+                            "poBox": "string",
+                            "phone": "string",
+                            "name": "string",
+                            "addressLine1": "string",
+                            "addressLine2": "string",
+                            "addressLine3": "string",
+                            "fax": "string",
+                            "region": "string",
+                            "email": "string"
+                        },
+                        "fromAddress": {
+                            "country": "string",
+                            "zipCode": "string",
+                            "city": "string",
+                            "language": "string",
+                            "poBoxZipCode": "string",
+                            "poBox": "string",
+                            "phone": "string",
+                            "name": "string",
+                            "addressLine1": "string",
+                            "addressLine2": "string",
+                            "addressLine3": "string",
+                            "fax": "string",
+                            "region": "string",
+                            "email": "string"
+                        },
+                        "vendorNumber": "string",
+                        "supplierTaxIdentifiers": [
+                            {
+                                "countryIso": "string",
+                                "type": "string",
+                                "value": "string"
+                            }
+                        ]
+                    },
+                    "deliverDate": "2019-01-23T14:24:39.357Z",
+                    "payment": {
+                        "paymentBlock": "range [0",
+                        "paymentReference": "range [0",
+                        "paymentMethod": "range [0",
+                        "paymentDate": "2019-01-23T14:24:39.357Z",
+                        "paymentDocument": "range [0",
+                        "paymentTerms": {
+                            "paymentTermsKey": "string",
+                            "percent1": 0,
+                            "description": "string",
+                            "percent2": 0,
+                            "baselineDate": {
+                                "additionalMonth": 0,
+                                "fixedDay": 0,
+                                "defaultDetermination": "string",
+                                "defaultDeterminationDescription": "string",
+                                "baselineDate": "2019-01-23T14:24:39.357Z"
+                            },
+                            "asap": false,
+                            "fixedDay2": 0,
+                            "fixedDay1": 0,
+                            "definedDueDate": "2019-01-23T14:24:39.357Z",
+                            "days3": 0,
+                            "days2": 0,
+                            "days1": 0,
+                            "daysNet": 0,
+                            "additionalMonth2": 0,
+                            "additionalMonth1": 0
+                        }
+                    },
+                    "id": "string",
+                    "credit": {
+                        "creditReason": "range [0",
+                        "creditedInvoiceNumber": "range [0",
+                        "creditedInvoiceDate": "2019-01-23T14:24:39.357Z"
+                    },
+                    "deliveryNote": "range [0",
+                    "totalDiscountAmount": 0,
+                    "tax": {
+                        "taxItems": [
+                            {
+                                "amount": 0,
+                                "rate": 0,
+                                "taxType": "string"
+                            }
+                        ],
+                        "selectedFreightTaxRuleId": "string",
+                        "headerTotalTaxAmount": 0,
+                        "lineItemTotalTaxAmount": 0,
+                        "totalTaxAmount": 0
+                    },
+                    "grossAmount": 0,
+                    "erpStatusExplanation": "range [0",
+                    "discountBaseAmount": 0,
+                    "documentLinks": [
+                        {
+                            "financeId": "string"
+                        }
+                    ],
+                    "erpInvoiceStatus": "string",
+                    "additionalCharges": [
+                        {
+                            "taxRate": 0,
+                            "description": "string",
+                            "specialChargeName": "string",
+                            "creditIndicator": false,
+                            "taxAmount": 0,
+                            "fieldType": "string",
+                            "fieldValue": 0,
+                            "taxExemptReason": "string"
+                        }
+                    ],
+                    "sapField": {
+                        "sapIdMm": "range [0",
+                        "sapIdWf": "range [0",
+                        "ersIndicator": false,
+                        "headerText": "range [0",
+                        "paymentSapId": "range [0",
+                        "sapCreateDate": "2019-01-23T14:24:39.357Z",
+                        "sapDoc": "range [0",
+                        "sapIdFi": "range [0"
+                    },
+                    "earlyPayment": {
+                        "financeRate": 0,
+                        "financeOrigin": "string",
+                        "invoiceAutoFinanceRate": {
+                            "autoFinanceRate": 0,
+                            "invoiceRequestType": "string"
+                        },
+                        "nonFinanceDays": [
+                            "2019-01-23T14:24:39.357Z"
+                        ],
+                        "financeStart": "2019-01-23T14:24:39.357Z",
+                        "financeGroup": "range [0",
+                        "tedEligible": false
+                    },
+                    "functionalMessages": [
+                        "string"
+                    ],
+                    "poNumber": "range [0",
+                    "status": "string",
+                    "attachments": [
+                        "string"
+                    ],
+                    "signature": {
+                        "entityFingerprint": "string",
+                        "localScheme": 0,
+                        "signature": "string",
+                        "signatureVersion": 0,
+                        "timestamp": "2019-01-23T14:24:39.357Z"
+                    },
+                    "customFields": [
+                        {
+                            "name": "string",
+                            "value": "string"
+                        }
+                    ],
+                    "origin": "string",
+                    "buyerTimestamp": "2019-01-23T14:24:39.357Z",
+                    "paymentAmount": 0,
+                    "lineItemTotalDiscountAmount": 0,
+                    "ticketDocumentId": "string",
+                    "currency": "range [0",
+                    "netAmount": 0,
+                    "paymentItemText": "string",
+                    "invoiceDate": "2019-01-23T14:24:39.357Z",
+                    "compliance": {
+                        "taxClearanceUuid": "string",
+                        "isSigned": false,
+                        "nordicPaymentReference": "range [0",
+                        "trustWeaverArchiveBuyerReference": "string",
+                        "complianceFields": [
+                            {
+                                "uiLabel": "string",
+                                "uiPosition": 0,
+                                "name": "string",
+                                "uiSection": "string",
+                                "type": "string",
+                                "value": "string"
+                            }
+                        ],
+                        "legalAttachmentId": "string",
+                        "taxClearanceDocType": "string",
+                        "taxClearanceUploadSchema": "string"
+                    },
+                    "creditedInvoiceErpFields": {
+                        "clientId": "string",
+                        "netAmount": 0,
+                        "currency": "string",
+                        "documentId": "string",
+                        "financeId": "string",
+                        "grossAmount": 0,
+                        "materialManagementId": "string",
+                        "creationDate": "2019-01-23T14:24:39.357Z",
+                        "linkedDocumentId": "string",
+                        "workflowId": "string"
+                    },
+                    "comment": "string",
+                    "customer": {
+                        "shipToAddress": {
+                            "country": "string",
+                            "zipCode": "string",
+                            "city": "string",
+                            "language": "string",
+                            "poBoxZipCode": "string",
+                            "poBox": "string",
+                            "phone": "string",
+                            "name": "string",
+                            "addressLine1": "string",
+                            "addressLine2": "string",
+                            "addressLine3": "string",
+                            "fax": "string",
+                            "region": "string",
+                            "email": "string"
+                        },
+                        "businessUnit": "string",
+                        "contactPerson": "string",
+                        "buyerTaxIdentifiers": [
+                            {
+                                "countryIso": "string",
+                                "type": "string",
+                                "value": "string"
+                            }
+                        ],
+                        "toAddress": {
+                            "country": "string",
+                            "zipCode": "string",
+                            "city": "string",
+                            "language": "string",
+                            "poBoxZipCode": "string",
+                            "poBox": "string",
+                            "phone": "string",
+                            "name": "string",
+                            "addressLine1": "string",
+                            "addressLine2": "string",
+                            "addressLine3": "string",
+                            "fax": "string",
+                            "region": "string",
+                            "email": "string"
+                        },
+                        "shipTo": "string"
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The Object ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/v1/invoices/{id}"
+        },
+        {
+            "path": "/hubs/general/invoices/notifications",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /invoices",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/v1/invoices/supplierSubmissionNotifications",
+            "rootKey": "notifications"
+        },
+        {
+            "path": "/hubs/general/supplierMaster",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a(n) /supplierMaster",
+            "model": {
+                "requestName": "supplierMaster",
+                "transform": false,
+                "name": "supplierMaster",
+                "requestSwagger": {
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesPercent1": {
+                        "title": "percent1",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesFax": {
+                        "title": "fax",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccounts": {
+                        "title": "supplierMasterBankAccounts",
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "x-samplevalue": "bankAccounts",
+                                "type": "string"
+                            },
+                            "properties": {
+                                "type": "supplierMasterSupplierMasterBankAccountsProperties"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesDepartment": {
+                        "title": "department",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesAdditionalMonth1": {
+                        "title": "additionalMonth1",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsProperties": {
+                        "title": "properties",
+                        "type": "object",
+                        "properties": {
+                            "bankNumber": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesBankNumber"
+                            },
+                            "ibanNumber": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesIbanNumber"
+                            },
+                            "country": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesCountry"
+                            },
+                            "bankBranchNumber": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesBankBranchNumber"
+                            },
+                            "bankRegion": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesBankRegion"
+                            },
+                            "swiftNumber": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesSwiftNumber"
+                            },
+                            "bankName": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesBankName"
+                            },
+                            "externalAccountHolder": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesExternalAccountHolder"
+                            },
+                            "accountNumber": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesAccountNumber"
+                            },
+                            "externalAccountHolderId": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesExternalAccountHolderId"
+                            },
+                            "bankCity": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesBankCity"
+                            },
+                            "integrity": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesIntegrity"
+                            },
+                            "currency": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesCurrency"
+                            },
+                            "bankStreet": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesBankStreet"
+                            },
+                            "controlKey": {
+                                "type": "supplierMasterSupplierMasterBankAccountsPropertiesControlKey"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesAdditionalMonth2": {
+                        "title": "additionalMonth2",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDatePropertiesBaselineDate": {
+                        "title": "baselineDate",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "2019-01-22T14:57:32.955Z",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "x-mask": {
+                                "x-samplevalue": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "type": "string"
+                            },
+                            "format": {
+                                "x-samplevalue": "date-time",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterTaxIdentifiersPropertiesCountryIso": {
+                        "title": "countryIso",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesNotes": {
+                        "title": "notes",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesInvite": {
+                        "title": "invite",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "type": {
+                                "x-samplevalue": "boolean",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesPercent2": {
+                        "title": "percent2",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterTaxIdentifiersPropertiesValue": {
+                        "title": "value",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesSupplierLaunchId": {
+                        "title": "supplierLaunchId",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPropertiesInvoiceRemitToMandatory": {
+                        "title": "invoiceRemitToMandatory",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "type": {
+                                "x-samplevalue": "boolean",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddresses": {
+                        "title": "supplierMasterAddresses",
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "x-samplevalue": "addresses",
+                                "type": "string"
+                            },
+                            "properties": {
+                                "type": "supplierMasterSupplierMasterAddressesProperties"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDatePropertiesFixedDay": {
+                        "title": "fixedDay",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelations": {
+                        "title": "supplierMasterSupplierRelations",
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "x-samplevalue": "supplierRelations",
+                                "type": "string"
+                            },
+                            "properties": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsProperties"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesControlKey": {
+                        "title": "controlKey",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDefinedDueDate": {
+                        "title": "definedDueDate",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "2019-01-22T14:57:32.955Z",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "x-mask": {
+                                "x-samplevalue": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "type": "string"
+                            },
+                            "format": {
+                                "x-samplevalue": "date-time",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesBankStreet": {
+                        "title": "bankStreet",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterCustomFieldsPropertiesShowInUi": {
+                        "title": "showInUi",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "type": {
+                                "x-samplevalue": "boolean",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesCity": {
+                        "title": "city",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDate": {
+                        "title": "supplierMasterSupplierRelationsPaymentTermsBaselineDate",
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "x-samplevalue": "baselineDate",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "object",
+                                "type": "string"
+                            },
+                            "properties": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDateProperties"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterCustomFieldsPropertiesFieldName": {
+                        "title": "fieldName",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesSwiftNumber": {
+                        "title": "swiftNumber",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesBaselineDate": {
+                        "title": "baselineDate",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "supplierMasterSupplierRelationsPaymentTermsBaselineDate",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsProperties": {
+                        "title": "properties",
+                        "type": "object",
+                        "properties": {
+                            "paymentTermsKey": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesPaymentTermsKey"
+                            },
+                            "percent1": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesPercent1"
+                            },
+                            "description": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDescription"
+                            },
+                            "percent2": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesPercent2"
+                            },
+                            "baselineDate": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesBaselineDate"
+                            },
+                            "asap": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesAsap"
+                            },
+                            "fixedDay2": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesFixedDay2"
+                            },
+                            "fixedDay1": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesFixedDay1"
+                            },
+                            "definedDueDate": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDefinedDueDate"
+                            },
+                            "days3": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDays3"
+                            },
+                            "days2": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDays2"
+                            },
+                            "days1": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDays1"
+                            },
+                            "daysNet": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDaysNet"
+                            },
+                            "additionalMonth2": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesAdditionalMonth2"
+                            },
+                            "additionalMonth1": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesAdditionalMonth1"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPropertiesErpId": {
+                        "title": "erpId",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesPoBoxCity": {
+                        "title": "poBoxCity",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesLastName": {
+                        "title": "lastName",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDescription": {
+                        "title": "description",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesBankAccountsItems": {
+                        "title": "items",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "supplierMasterBankAccounts",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesCountry": {
+                        "title": "country",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesExternalAccountHolderId": {
+                        "title": "externalAccountHolderId",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesBankRegion": {
+                        "title": "bankRegion",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDateProperties": {
+                        "title": "properties",
+                        "type": "object",
+                        "properties": {
+                            "additionalMonth": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDatePropertiesAdditionalMonth"
+                            },
+                            "fixedDay": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDatePropertiesFixedDay"
+                            },
+                            "defaultDetermination": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDatePropertiesDefaultDetermination"
+                            },
+                            "defaultDeterminationDescription": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDatePropertiesDefaultDeterminationDescription"
+                            },
+                            "baselineDate": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDatePropertiesBaselineDate"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesAccountNumber": {
+                        "title": "accountNumber",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesAsap": {
+                        "title": "asap",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "type": {
+                                "x-samplevalue": "boolean",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesCurrency": {
+                        "title": "currency",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesTicketDocumentId": {
+                        "title": "ticketDocumentId",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesSupplierRelationsItems": {
+                        "title": "items",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "supplierMasterSupplierRelations",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesName": {
+                        "title": "name",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesFirstName": {
+                        "title": "firstName",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesCustomFields": {
+                        "title": "customFields",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "array",
+                                "type": "string"
+                            },
+                            "items": {
+                                "type": "supplierMasterSupplierMasterPropertiesCustomFieldsItems"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesName": {
+                        "title": "name",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDatePropertiesAdditionalMonth": {
+                        "title": "additionalMonth",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesRole": {
+                        "title": "role",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesIntegrity": {
+                        "title": "integrity",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "supplierMasterBankAccountsIntegrity",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterCustomFields": {
+                        "title": "supplierMasterCustomFields",
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "x-samplevalue": "customFields",
+                                "type": "string"
+                            },
+                            "properties": {
+                                "type": "supplierMasterSupplierMasterCustomFieldsProperties"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesContacts": {
+                        "title": "contacts",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "array",
+                                "type": "string"
+                            },
+                            "items": {
+                                "type": "supplierMasterSupplierMasterPropertiesContactsItems"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesBankCity": {
+                        "title": "bankCity",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesExternalAccountHolder": {
+                        "title": "externalAccountHolder",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesAddressLine3": {
+                        "title": "addressLine3",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesAddressLine1": {
+                        "title": "addressLine1",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesAddressLine2": {
+                        "title": "addressLine2",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesFax": {
+                        "title": "fax",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesSupplierRelations": {
+                        "title": "supplierRelations",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "array",
+                                "type": "string"
+                            },
+                            "items": {
+                                "type": "supplierMasterSupplierMasterPropertiesSupplierRelationsItems"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesAccessType": {
+                        "title": "accessType",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesContactsItems": {
+                        "title": "items",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "supplierMasterContacts",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDaysNet": {
+                        "title": "daysNet",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesTransactionId": {
+                        "title": "transactionId",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTerms": {
+                        "title": "supplierMasterSupplierRelationsPaymentTerms",
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "x-samplevalue": "paymentTerms",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "object",
+                                "type": "string"
+                            },
+                            "properties": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsProperties"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPropertiesPaymentTerms": {
+                        "title": "paymentTerms",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "supplierMasterSupplierRelationsPaymentTerms",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesTaxIdentifiers": {
+                        "title": "taxIdentifiers",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "array",
+                                "type": "string"
+                            },
+                            "items": {
+                                "type": "supplierMasterSupplierMasterPropertiesTaxIdentifiersItems"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterTaxIdentifiers": {
+                        "title": "supplierMasterTaxIdentifiers",
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "x-samplevalue": "taxIdentifiers",
+                                "type": "string"
+                            },
+                            "properties": {
+                                "type": "supplierMasterSupplierMasterTaxIdentifiersProperties"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesCustomFieldsItems": {
+                        "title": "items",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "supplierMasterCustomFields",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterTaxIdentifiersProperties": {
+                        "title": "properties",
+                        "type": "object",
+                        "properties": {
+                            "countryIso": {
+                                "type": "supplierMasterSupplierMasterTaxIdentifiersPropertiesCountryIso"
+                            },
+                            "type": {
+                                "type": "supplierMasterSupplierMasterTaxIdentifiersPropertiesType"
+                            },
+                            "value": {
+                                "type": "supplierMasterSupplierMasterTaxIdentifiersPropertiesValue"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesBankName": {
+                        "title": "bankName",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsIntegrity": {
+                        "title": "supplierMasterBankAccountsIntegrity",
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "x-samplevalue": "integrity",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "object",
+                                "type": "string"
+                            },
+                            "properties": {
+                                "type": "supplierMasterSupplierMasterBankAccountsIntegrityProperties"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesBankAccounts": {
+                        "title": "bankAccounts",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "array",
+                                "type": "string"
+                            },
+                            "items": {
+                                "type": "supplierMasterSupplierMasterPropertiesBankAccountsItems"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsIntegrityPropertiesSignature": {
+                        "title": "signature",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesPaymentTermsKey": {
+                        "title": "paymentTermsKey",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesPhone": {
+                        "title": "phone",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesTaxIdentifiersItems": {
+                        "title": "items",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "supplierMasterTaxIdentifiers",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesBankBranchNumber": {
+                        "title": "bankBranchNumber",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesPoBoxPostalCode": {
+                        "title": "poBoxPostalCode",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsIntegrityPropertiesLocalScheme": {
+                        "title": "localScheme",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesErpId": {
+                        "title": "erpId",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesMobileNumber": {
+                        "title": "mobileNumber",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesCountry": {
+                        "title": "country",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContacts": {
+                        "title": "supplierMasterContacts",
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "x-samplevalue": "contacts",
+                                "type": "string"
+                            },
+                            "properties": {
+                                "type": "supplierMasterSupplierMasterContactsProperties"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsIntegrityPropertiesEntityFingerprint": {
+                        "title": "entityFingerprint",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDays3": {
+                        "title": "days3",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsIntegrityProperties": {
+                        "title": "properties",
+                        "type": "object",
+                        "properties": {
+                            "entityFingerprint": {
+                                "type": "supplierMasterSupplierMasterBankAccountsIntegrityPropertiesEntityFingerprint"
+                            },
+                            "localScheme": {
+                                "type": "supplierMasterSupplierMasterBankAccountsIntegrityPropertiesLocalScheme"
+                            },
+                            "signature": {
+                                "type": "supplierMasterSupplierMasterBankAccountsIntegrityPropertiesSignature"
+                            },
+                            "signatureVersion": {
+                                "type": "supplierMasterSupplierMasterBankAccountsIntegrityPropertiesSignatureVersion"
+                            },
+                            "timestamp": {
+                                "type": "supplierMasterSupplierMasterBankAccountsIntegrityPropertiesTimestamp"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDays2": {
+                        "title": "days2",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesDays1": {
+                        "title": "days1",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMaster": {
+                        "title": "supplierMaster",
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "x-samplevalue": "supplierMaster",
+                                "type": "string"
+                            },
+                            "properties": {
+                                "type": "supplierMasterSupplierMasterProperties"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPropertiesPaymentTermsKey": {
+                        "title": "paymentTermsKey",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesIbanNumber": {
+                        "title": "ibanNumber",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPropertiesPaymentMethod": {
+                        "title": "paymentMethod",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesEmail": {
+                        "title": "email",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterTaxIdentifiersPropertiesType": {
+                        "title": "type",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesPoBox": {
+                        "title": "poBox",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesAddressesItems": {
+                        "title": "items",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "supplierMasterAddresses",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesProperties": {
+                        "title": "properties",
+                        "type": "object",
+                        "properties": {
+                            "country": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesCountry"
+                            },
+                            "poBoxCity": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesPoBoxCity"
+                            },
+                            "city": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesCity"
+                            },
+                            "postalCode": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesPostalCode"
+                            },
+                            "language": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesLanguage"
+                            },
+                            "type": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesType"
+                            },
+                            "poBox": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesPoBox"
+                            },
+                            "phone": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesPhone"
+                            },
+                            "name": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesName"
+                            },
+                            "poBoxPostalCode": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesPoBoxPostalCode"
+                            },
+                            "addressLine1": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesAddressLine1"
+                            },
+                            "addressLine2": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesAddressLine2"
+                            },
+                            "addressLine3": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesAddressLine3"
+                            },
+                            "fax": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesFax"
+                            },
+                            "region": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesRegion"
+                            },
+                            "email": {
+                                "type": "supplierMasterSupplierMasterAddressesPropertiesEmail"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsProperties": {
+                        "title": "properties",
+                        "type": "object",
+                        "properties": {
+                            "firstName": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesFirstName"
+                            },
+                            "lastName": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesLastName"
+                            },
+                            "emailAddress": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesEmailAddress"
+                            },
+                            "notes": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesNotes"
+                            },
+                            "role": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesRole"
+                            },
+                            "phone": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesPhone"
+                            },
+                            "mobileNumber": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesMobileNumber"
+                            },
+                            "erpId": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesErpId"
+                            },
+                            "invite": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesInvite"
+                            },
+                            "department": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesDepartment"
+                            },
+                            "fax": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesFax"
+                            },
+                            "transactionId": {
+                                "type": "supplierMasterSupplierMasterContactsPropertiesTransactionId"
+                            }
+                        }
+                    },
+                    "supplierMasterObject": {
+                        "title": "supplierMaster",
+                        "type": "object",
+                        "properties": {
+                            "supplierMasterAddresses": {
+                                "type": "supplierMasterSupplierMasterAddresses"
+                            },
+                            "supplierMasterContacts": {
+                                "type": "supplierMasterSupplierMasterContacts"
+                            },
+                            "supplierMasterCustomFields": {
+                                "type": "supplierMasterSupplierMasterCustomFields"
+                            },
+                            "supplierMasterSupplierRelations": {
+                                "type": "supplierMasterSupplierMasterSupplierRelations"
+                            },
+                            "supplierMasterBankAccounts": {
+                                "type": "supplierMasterSupplierMasterBankAccounts"
+                            },
+                            "supplierMasterSupplierRelationsPaymentTerms": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTerms"
+                            },
+                            "supplierMasterBankAccountsIntegrity": {
+                                "type": "supplierMasterSupplierMasterBankAccountsIntegrity"
+                            },
+                            "supplierMaster": {
+                                "type": "supplierMasterSupplierMaster"
+                            },
+                            "supplierMasterSupplierRelationsPaymentTermsBaselineDate": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDate"
+                            },
+                            "supplierMasterTaxIdentifiers": {
+                                "type": "supplierMasterSupplierMasterTaxIdentifiers"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesFixedDay2": {
+                        "title": "fixedDay2",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsPropertiesFixedDay1": {
+                        "title": "fixedDay1",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPropertiesTedEligible": {
+                        "title": "tedEligible",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "type": {
+                                "x-samplevalue": "boolean",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsIntegrityPropertiesSignatureVersion": {
+                        "title": "signatureVersion",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "format": {
+                                "x-samplevalue": "int32",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "integer",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMaster": {
+                        "type": "array",
+                        "items": {
+                            "type": "supplierMasterObject"
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesRegion": {
+                        "title": "region",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesAddresses": {
+                        "title": "addresses",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "x-samplevalue": "array",
+                                "type": "string"
+                            },
+                            "items": {
+                                "type": "supplierMasterSupplierMasterPropertiesAddressesItems"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesEmailAddress": {
+                        "title": "emailAddress",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDatePropertiesDefaultDetermination": {
+                        "title": "defaultDetermination",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesType": {
+                        "title": "type",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterContactsPropertiesPhone": {
+                        "title": "phone",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterPropertiesSupplierNumber": {
+                        "title": "supplierNumber",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsProperties": {
+                        "title": "properties",
+                        "type": "object",
+                        "properties": {
+                            "businessUnit": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPropertiesBusinessUnit"
+                            },
+                            "paymentTermsKey": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPropertiesPaymentTermsKey"
+                            },
+                            "paymentMethod": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPropertiesPaymentMethod"
+                            },
+                            "erpId": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPropertiesErpId"
+                            },
+                            "tedEligible": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPropertiesTedEligible"
+                            },
+                            "invoiceRemitToMandatory": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPropertiesInvoiceRemitToMandatory"
+                            },
+                            "paymentTerms": {
+                                "type": "supplierMasterSupplierMasterSupplierRelationsPropertiesPaymentTerms"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterProperties": {
+                        "title": "properties",
+                        "type": "object",
+                        "properties": {
+                            "accessType": {
+                                "type": "supplierMasterSupplierMasterPropertiesAccessType"
+                            },
+                            "addresses": {
+                                "type": "supplierMasterSupplierMasterPropertiesAddresses"
+                            },
+                            "supplierRelations": {
+                                "type": "supplierMasterSupplierMasterPropertiesSupplierRelations"
+                            },
+                            "customFields": {
+                                "type": "supplierMasterSupplierMasterPropertiesCustomFields"
+                            },
+                            "supplierNumber": {
+                                "type": "supplierMasterSupplierMasterPropertiesSupplierNumber"
+                            },
+                            "ticketDocumentId": {
+                                "type": "supplierMasterSupplierMasterPropertiesTicketDocumentId"
+                            },
+                            "bankAccounts": {
+                                "type": "supplierMasterSupplierMasterPropertiesBankAccounts"
+                            },
+                            "name": {
+                                "type": "supplierMasterSupplierMasterPropertiesName"
+                            },
+                            "contacts": {
+                                "type": "supplierMasterSupplierMasterPropertiesContacts"
+                            },
+                            "supplierLaunchId": {
+                                "type": "supplierMasterSupplierMasterPropertiesSupplierLaunchId"
+                            },
+                            "taxIdentifiers": {
+                                "type": "supplierMasterSupplierMasterPropertiesTaxIdentifiers"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterCustomFieldsProperties": {
+                        "title": "properties",
+                        "type": "object",
+                        "properties": {
+                            "fieldName": {
+                                "type": "supplierMasterSupplierMasterCustomFieldsPropertiesFieldName"
+                            },
+                            "fieldValue": {
+                                "type": "supplierMasterSupplierMasterCustomFieldsPropertiesFieldValue"
+                            },
+                            "showInUi": {
+                                "type": "supplierMasterSupplierMasterCustomFieldsPropertiesShowInUi"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPropertiesBusinessUnit": {
+                        "title": "businessUnit",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsIntegrityPropertiesTimestamp": {
+                        "title": "timestamp",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "2019-01-22T14:57:32.955Z",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "x-mask": {
+                                "x-samplevalue": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "type": "string"
+                            },
+                            "format": {
+                                "x-samplevalue": "date-time",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterBankAccountsPropertiesBankNumber": {
+                        "title": "bankNumber",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterSupplierRelationsPaymentTermsBaselineDatePropertiesDefaultDeterminationDescription": {
+                        "title": "defaultDeterminationDescription",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesLanguage": {
+                        "title": "language",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterAddressesPropertiesPostalCode": {
+                        "title": "postalCode",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierMasterCustomFieldsPropertiesFieldValue": {
+                        "title": "fieldValue",
+                        "type": "object",
+                        "properties": {
+                            "x-samplevalue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "supplierMasterTickets": {
+                        "title": "tickets",
+                        "properties": {
+                            "documentId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "referenceId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "ticketId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMaster": {
+                        "title": "supplierMaster",
+                        "properties": {
+                            "tickets": {
+                                "type": "array",
+                                "items": {
+                                    "type": "supplierMasterTickets"
+                                }
+                            },
+                            "success": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "batchId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "message": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "\nlet elements = [];\n\nelements.push(request_body_map);\n\nlet resp = JSON.stringify(elements)\n\nconsole.log(request_body_map);\nconsole.log(resp);\n\ndone({ \"request_vendor_body\": resp, \"continue\": true });",
+                    "type": "preRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "supplierMaster",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "supplierMaster",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/v1/supplierMaster"
+        },
+        {
+            "path": "/hubs/general/supplierMaster/{id}",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Get /{id}",
+            "model": {
+                "transform": false,
+                "name": "supplierMaster",
+                "swagger": {
+                    "supplierMasterAddresses": {
+                        "title": "addresses",
+                        "properties": {
+                            "country": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "poBoxCity": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "city": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "language": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "poBox": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "phone": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "name": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "poBoxPostalCode": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "addressLine1": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "addressLine2": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "addressLine3": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "fax": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "region": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "email": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterContacts": {
+                        "title": "contacts",
+                        "properties": {
+                            "firstName": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "lastName": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "emailAddress": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "notes": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "role": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "phone": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "mobileNumber": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "erpId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "invite": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "department": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "fax": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "transactionId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterCustomFields": {
+                        "title": "customFields",
+                        "properties": {
+                            "fieldName": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "fieldValue": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "showInUi": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierRelations": {
+                        "title": "supplierRelations",
+                        "properties": {
+                            "businessUnit": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "paymentTermsKey": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "paymentMethod": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "erpId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "tedEligible": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "invoiceRemitToMandatory": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "paymentTerms": {
+                                "type": "supplierMasterSupplierRelationsPaymentTerms"
+                            }
+                        }
+                    },
+                    "supplierMasterBankAccounts": {
+                        "title": "bankAccounts",
+                        "properties": {
+                            "bankNumber": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "ibanNumber": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "country": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "bankBranchNumber": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "bankRegion": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "swiftNumber": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "bankName": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "externalAccountHolder": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "accountNumber": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "externalAccountHolderId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "bankCity": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "integrity": {
+                                "type": "supplierMasterBankAccountsIntegrity"
+                            },
+                            "currency": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "bankStreet": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "controlKey": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierRelationsPaymentTerms": {
+                        "title": "paymentTerms",
+                        "type": "object",
+                        "properties": {
+                            "paymentTermsKey": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "percent1": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "description": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "percent2": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "baselineDate": {
+                                "type": "supplierMasterSupplierRelationsPaymentTermsBaselineDate"
+                            },
+                            "asap": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "fixedDay2": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "fixedDay1": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "definedDueDate": {
+                                "x-samplevalue": "2019-01-22T14:57:32.955Z",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "days3": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "days2": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "days1": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "daysNet": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "additionalMonth2": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "additionalMonth1": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    "supplierMasterBankAccountsIntegrity": {
+                        "title": "integrity",
+                        "type": "object",
+                        "properties": {
+                            "entityFingerprint": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "localScheme": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "signature": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "signatureVersion": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "timestamp": {
+                                "x-samplevalue": "2019-01-22T14:57:32.955Z",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "format": "date-time",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMaster": {
+                        "title": "supplierMaster",
+                        "properties": {
+                            "accessType": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "addresses": {
+                                "type": "array",
+                                "items": {
+                                    "type": "supplierMasterAddresses"
+                                }
+                            },
+                            "supplierRelations": {
+                                "type": "array",
+                                "items": {
+                                    "type": "supplierMasterSupplierRelations"
+                                }
+                            },
+                            "customFields": {
+                                "type": "array",
+                                "items": {
+                                    "type": "supplierMasterCustomFields"
+                                }
+                            },
+                            "supplierNumber": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "ticketDocumentId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "bankAccounts": {
+                                "type": "array",
+                                "items": {
+                                    "type": "supplierMasterBankAccounts"
+                                }
+                            },
+                            "name": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "contacts": {
+                                "type": "array",
+                                "items": {
+                                    "type": "supplierMasterContacts"
+                                }
+                            },
+                            "supplierLaunchId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "taxIdentifiers": {
+                                "type": "array",
+                                "items": {
+                                    "type": "supplierMasterTaxIdentifiers"
+                                }
+                            }
+                        }
+                    },
+                    "supplierMasterSupplierRelationsPaymentTermsBaselineDate": {
+                        "title": "baselineDate",
+                        "type": "object",
+                        "properties": {
+                            "additionalMonth": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "fixedDay": {
+                                "x-samplevalue": 0,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "defaultDetermination": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "defaultDeterminationDescription": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "baselineDate": {
+                                "x-samplevalue": "2019-01-22T14:57:32.955Z",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "format": "date-time",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "supplierMasterTaxIdentifiers": {
+                        "title": "taxIdentifiers",
+                        "properties": {
+                            "countryIso": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "type": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "value": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/v1/supplierMaster/{id}"
+        },
+        {
+            "path": "/hubs/general/ticket/{id}",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve a(n) /ticket",
+            "model": {
+                "transform": false,
+                "name": "ticket",
+                "swagger": {
+                    "ticket": {
+                        "title": "ticket",
+                        "properties": {
+                            "lastUpdated": {
+                                "x-samplevalue": "2019-01-29T22:43:21.881Z",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "documentId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "message": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "objectId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "referenceId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "ticketId": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "objectType": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            },
+                            "status": {
+                                "x-samplevalue": "string",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/v1/ticket/{id}"
+        }
+    ],
+    "modelType": "basic",
+    "protocolType": "http",
+    "transformationsEnabled": true,
+    "deleted": false,
+    "hub": "general",
+    "typeOauth": false,
+    "name": "Taulia",
+    "extendable": true,
+    "parameters": [
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "required": false
+        },
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "required": false
+        },
+        {
+            "vendorType": "header",
+            "name": "erp.client.id",
+            "source": "request",
+            "type": "configuration",
+            "vendorName": "x-tau-erp-client-id",
+            "required": false
+        },
+        {
+            "vendorType": "header",
+            "name": "api.key",
+            "source": "request",
+            "type": "configuration",
+            "vendorName": "x-tau-rest-apikey",
+            "required": false
+        }
+    ]
+}

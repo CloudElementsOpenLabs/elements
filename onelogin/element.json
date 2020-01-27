@@ -1,0 +1,397 @@
+{
+  "configuration": [
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "secret",
+      "active": true,
+      "description": "secret",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "secret",
+      "required": true
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "https://api.us.onelogin.com/api/1",
+      "displayOrder": 1,
+      "active": true,
+      "description": "OneLogin Base Url",
+      "type": "TEXTFIELD_1000",
+      "resellerConfig": false,
+      "required": true,
+      "hideFromConsole": true,
+      "name": "Base Url",
+      "groupControl": false,
+      "key": "base.url"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "page",
+      "displayOrder": 1,
+      "active": true,
+      "description": "OneLogin Pagination Type",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Pagination Type",
+      "groupControl": false,
+      "key": "pagination.type"
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "100",
+      "displayOrder": 1,
+      "active": true,
+      "description": "OneLogin Max Page Size (or limit)",
+      "type": "TEXTFIELD_32",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": true,
+      "name": "Max Page Size (or limit)",
+      "groupControl": false,
+      "key": "pagination.max"
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "token",
+      "active": true,
+      "description": "token",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "token",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 1,
+      "name": "key",
+      "active": true,
+      "description": "key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "key",
+      "required": true
+    },
+    {
+      "internal": false,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 11,
+      "name": "Event Notification Signature Key",
+      "active": true,
+      "description": "OneLogin Event Notification Signature Key",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.signature.key",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 12,
+      "name": "Event Notification Basic User Name",
+      "active": true,
+      "description": "OneLogin Event Notification Basic User Name",
+      "type": "TEXTFIELD_128",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.username",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 13,
+      "name": "Event Notification Basic Password",
+      "active": true,
+      "description": "OneLogin Event Notification Basic Password",
+      "type": "PASSWORD",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "event.notification.basic.password",
+      "required": false
+    },
+    {
+      "internal": false,
+      "hideFromConsole": false,
+      "companyConfig": false,
+      "displayOrder": 98,
+      "name": "Default select fields",
+      "active": true,
+      "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+      "type": "TEXTAREA",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "default.select.fields.map",
+      "required": false
+    },
+    {
+      "internal": false,
+      "companyConfig": false,
+      "defaultValue": "true",
+      "displayOrder": 99,
+      "active": true,
+      "description": "Used to enable/disable filtering of null values from the responses",
+      "type": "BOOLEAN",
+      "resellerConfig": false,
+      "required": false,
+      "hideFromConsole": false,
+      "name": "Filter null values from the response",
+      "groupControl": false,
+      "key": "filter.response.nulls"
+    },
+    {
+      "internal": true,
+      "hideFromConsole": true,
+      "companyConfig": false,
+      "displayOrder": 100,
+      "name": "Time of Getting Token or Performing Authentication",
+      "active": true,
+      "description": "OneLogin Time of Getting Token or Performing Authentication",
+      "type": "TEXTFIELD_32",
+      "groupControl": false,
+      "resellerConfig": false,
+      "key": "authentication.time",
+      "required": false
+    }
+  ],
+  "objects": [],
+  "description": "OneLogin",
+  "cloneable": false,
+  "extended": false,
+  "bulkDownloadEnabled": false,
+  "useModelsForMetadata": true,
+  "trialAccount": false,
+  "logo": "onelogin",
+  "hooks": [],
+  "beta": false,
+  "key": "onelogin",
+  "authentication": {
+    "type": "custom"
+  },
+  "bulkUploadEnabled": false,
+  "image": "https://images.cloudelements.io/Screen Shot 2019-01-24 at 10.03.19 AM201901241703.png",
+  "models": [],
+  "active": true,
+  "resources": [
+    {
+      "path": "/hubs/general/token",
+      "vendorMethod": "POST",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Create a(n) /token",
+      "type": "onProvision",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "header",
+          "dataType": "string",
+          "name": "client_id:${configuration.key}, client_secret:${configuration.secret}",
+          "description": ".",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "value",
+          "vendorName": "Authorization",
+          "required": false
+        },
+        {
+          "vendorType": "bodyToken",
+          "dataType": "string",
+          "name": "token",
+          "description": ".",
+          "vendorDataType": "string",
+          "source": "response",
+          "type": "configuration",
+          "vendorName": "data[0].access_token",
+          "required": false
+        }
+      ],
+      "vendorPath": "https://api.us.onelogin.com/auth/oauth2/token?grant_type=client_credentials"
+    },
+    {
+      "path": "/hubs/general/users",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Search for /users",
+      "model": {
+        "transform": false,
+        "name": "users",
+        "swagger": {
+          "users": {
+            "title": "users",
+            "properties": {
+              "firstname": {
+                "x-samplevalue": "Danielle",
+                "type": "string"
+              },
+              "password_changed_at": {
+                "x-samplevalue": "2019-01-22T21:51:14.422Z",
+                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                "format": "date-time",
+                "type": "string"
+              },
+              "last_login": {
+                "x-samplevalue": "2019-01-22T21:51:54.618Z",
+                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                "format": "date-time",
+                "type": "string"
+              },
+              "openid_name": {
+                "x-samplevalue": "danielle",
+                "type": "string"
+              },
+              "created_at": {
+                "x-samplevalue": "2019-01-22T21:50:42.742Z",
+                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                "format": "date-time",
+                "type": "string"
+              },
+              "invitation_sent_at": {
+                "x-samplevalue": "2019-01-22T21:50:42.452Z",
+                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                "format": "date-time",
+                "type": "string"
+              },
+              "lastname": {
+                "x-samplevalue": "Laforte",
+                "type": "string"
+              },
+              "activated_at": {
+                "x-samplevalue": "2019-01-22T21:51:13.790Z",
+                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                "format": "date-time",
+                "type": "string"
+              },
+              "updated_at": {
+                "x-samplevalue": "2019-01-22T21:51:54.740Z",
+                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                "format": "date-time",
+                "type": "string"
+              },
+              "role_id": {
+                "x-samplevalue": [
+                  247747
+                ],
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "id": {
+                "x-samplevalue": 50058469,
+                "format": "int32",
+                "type": "integer"
+              },
+              "state": {
+                "x-samplevalue": 1,
+                "format": "int32",
+                "type": "integer"
+              },
+              "email": {
+                "x-samplevalue": "danielle@cloud-elements.com",
+                "type": "string"
+              },
+              "status": {
+                "x-samplevalue": 1,
+                "format": "int32",
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "vendorPath": "/users",
+      "rootKey": "data"
+    },
+    {
+      "path": "/hubs/general/users/{id}",
+      "vendorMethod": "GET",
+      "method": "GET",
+      "kind": "eb",
+      "response": {
+        "contentType": "application/json"
+      },
+      "description": "Retrieve a(n) /users",
+      "type": "api",
+      "hooks": [],
+      "modelMigrated": false,
+      "parameters": [
+        {
+          "vendorType": "path",
+          "dataType": "string",
+          "name": "id",
+          "description": "The id ID",
+          "vendorDataType": "string",
+          "source": "request",
+          "type": "path",
+          "vendorName": "id",
+          "required": true
+        }
+      ],
+      "vendorPath": "/users/{id}"
+    }
+  ],
+  "modelType": "basic",
+  "protocolType": "http",
+  "transformationsEnabled": true,
+  "deleted": false,
+  "hub": "general",
+  "typeOauth": false,
+  "name": "OneLogin",
+  "extendable": true,
+  "parameters": [
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Accept",
+      "required": false
+    },
+    {
+      "vendorType": "header",
+      "name": "bearer:${configuration.token}",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Authorization",
+      "required": false
+    },
+    {
+      "vendorType": "header",
+      "name": "application/json",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Content-Type",
+      "required": false
+    }
+  ]
+}

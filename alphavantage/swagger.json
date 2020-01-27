@@ -1,0 +1,6081 @@
+{
+  "basePath": "/elements/api-v2",
+  "paths": {
+    "/currency-exchange-rates": {
+      "get": {
+        "summary": "Search for currency exchange rates",
+        "operationId": "getCurrencyExchangeRates",
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/currencyExchangeRates"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "from currency",
+            "description": "The from currency",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "to currency",
+            "description": "The to currency",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "tags": [
+          "currency-exchange-rates"
+        ]
+      }
+    },
+    "/objects": {
+      "get": {
+        "operationId": "getObjects",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Get a list of all the available objects.",
+        "tags": [
+          "objects"
+        ]
+      }
+    },
+    "/objects/{objectName}/docs": {
+      "get": {
+        "operationId": "getObjectsObjectNameDocs",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "Include discovery metadata in definitions",
+            "in": "query",
+            "name": "discovery",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "description": "Optionally resolve swagger references for an inline object definition",
+            "in": "query",
+            "name": "resolveReferences",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "description": "Include only OpenAPI / Swagger properties in definitions",
+            "in": "query",
+            "name": "basic",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "description": "The element swagger version to get the corresponding element swagger, Passing in \"-1\" gives latest element swagger",
+            "in": "query",
+            "name": "version",
+            "required": false,
+            "default": "-1",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/swaggerDocs"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Get swagger docs for an object.",
+        "tags": [
+          "objects"
+        ]
+      }
+    },
+    "/objects/{objectName}/metadata": {
+      "get": {
+        "operationId": "getObjectsObjectNameMetadata",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/objectsMetadata"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Get a list of all the field for an object.",
+        "tags": [
+          "objects"
+        ]
+      }
+    },
+    "/ping": {
+      "get": {
+        "operationId": "getPing",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/Pong"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Ping the Element to confirm that the Hub Element has a heartbeat.  If the Element does not have a heartbeat, an error message will be returned.",
+        "tags": [
+          "ping"
+        ]
+      }
+    },
+    "/technical-indicators": {
+      "get": {
+        "summary": "Search for technical indicators",
+        "operationId": "getTechnicalIndicators",
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/technicalIndicators"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "Technical indicator",
+            "description": "The indicator or function",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "Instrument or symbol",
+            "description": "The financial instrument or symbol",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "Interval",
+            "description": "The interval",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "Time Period",
+            "description": "The time period",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "Series Type",
+            "description": "The series type",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "tags": [
+          "technical-indicators"
+        ]
+      }
+    },
+    "/{objectName}": {
+      "get": {
+        "operationId": "getByObjectName",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The CEQL search expression.",
+            "in": "query",
+            "name": "where",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The page size. Defaults to 200 if not provided. Maximum of 5000.",
+            "format": "int64",
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "description": "The next page cursor, taken from the response header: `elements-next-page-token`",
+            "in": "query",
+            "name": "nextPage",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Object"
+              },
+              "type": "array"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Search for {objectName}",
+        "tags": [
+          "objectName"
+        ]
+      },
+      "post": {
+        "operationId": "createByObjectName",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName}",
+            "in": "body",
+            "name": "Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected"
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Create an {objectName}",
+        "tags": [
+          "objectName"
+        ]
+      }
+    },
+    "/{objectName}/{objectId}": {
+      "delete": {
+        "operationId": "deleteObjectNameByObjectId",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName} ID",
+            "in": "path",
+            "name": "objectId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected"
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Delete an {objectName}",
+        "tags": [
+          "objectName"
+        ]
+      },
+      "get": {
+        "operationId": "getObjectNameByObjectId",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName} ID",
+            "in": "path",
+            "name": "objectId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": [
+          "application/json",
+          "application/pdf"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Retrieve an {objectName}",
+        "tags": [
+          "objectName"
+        ]
+      },
+      "patch": {
+        "operationId": "updateObjectNameByObjectId",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName} ID",
+            "in": "path",
+            "name": "objectId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName}",
+            "in": "body",
+            "name": "Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Update an {objectName}",
+        "tags": [
+          "objectName"
+        ]
+      },
+      "put": {
+        "operationId": "replaceObjectNameByObjectId",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName} ID",
+            "in": "path",
+            "name": "objectId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName}",
+            "in": "body",
+            "name": "Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Update an {objectName}",
+        "tags": [
+          "objectName"
+        ]
+      }
+    },
+    "/{objectName}/{objectId}/{childObjectName}": {
+      "get": {
+        "operationId": "getObjectNameByChildObjectName",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName} ID",
+            "in": "path",
+            "name": "objectId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the childObjectName",
+            "in": "path",
+            "name": "childObjectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The CEQL search expression.",
+            "in": "query",
+            "name": "where",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The page size. Defaults to 200 if not provided. Maximum of 5000.",
+            "format": "int64",
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "description": "The next page cursor, taken from the response header: `elements-next-page-token`",
+            "in": "query",
+            "name": "nextPage",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Object"
+              },
+              "type": "array"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the &quot;Accept&quot; header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Search for {childObjectName}",
+        "tags": [
+          "objectName"
+        ]
+      },
+      "post": {
+        "operationId": "createObjectNameByChildObjectName",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName} ID",
+            "in": "path",
+            "name": "objectId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "childObjectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {childObjectName}",
+            "in": "body",
+            "name": "Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected"
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the &quot;Accept&quot; header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Create an {childObjectName}",
+        "tags": [
+          "objectName"
+        ]
+      }
+    },
+    "/{objectName}/{objectId}/{childObjectName}/{childObjectId}": {
+      "delete": {
+        "operationId": "deleteObjectNameByChildObjectId",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the childObjectName",
+            "in": "path",
+            "name": "childObjectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName} ID",
+            "in": "path",
+            "name": "objectId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {childObjectName} ID",
+            "in": "path",
+            "name": "childObjectId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected"
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the &quot;Accept&quot; header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Delete an {childObjectName}",
+        "tags": [
+          "objectName"
+        ]
+      },
+      "get": {
+        "operationId": "getObjectNameByChildObjectId",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the childObjectName",
+            "in": "path",
+            "name": "childObjectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName} ID",
+            "in": "path",
+            "name": "objectId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {childObjectName} ID",
+            "in": "path",
+            "name": "childObjectId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the &quot;Accept&quot; header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Retrieve an {childObjectName}",
+        "tags": [
+          "objectName"
+        ]
+      },
+      "patch": {
+        "operationId": "updateObjectNameByChildObjectId",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the childObjectName",
+            "in": "path",
+            "name": "childObjectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName} ID",
+            "in": "path",
+            "name": "objectId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {childObjectName} ID",
+            "in": "path",
+            "name": "childObjectId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName}",
+            "in": "body",
+            "name": "Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the &quot;Accept&quot; header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Update an {childObjectName}",
+        "tags": [
+          "objectName"
+        ]
+      },
+      "put": {
+        "operationId": "replaceObjectNameByChildObjectId",
+        "parameters": [
+          {
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the object",
+            "in": "path",
+            "name": "objectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The name of the childObjectName",
+            "in": "path",
+            "name": "childObjectName",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName} ID",
+            "in": "path",
+            "name": "objectId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {childObjectName} ID",
+            "in": "path",
+            "name": "childObjectId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The {objectName}",
+            "in": "body",
+            "name": "Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the &quot;Accept&quot; header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "summary": "Update an {childObjectName}",
+        "tags": [
+          "objectName"
+        ]
+      }
+    }
+  },
+  "host": "staging.cloud-elements.com",
+  "schemes": [
+    "https"
+  ],
+  "definitions": {
+    "swaggerschema": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "schema",
+      "properties": {
+        "$ref": {
+          "x-samplevalue": "#/definitions/Contact-POST-Response",
+          "type": "string"
+        }
+      }
+    },
+    "swaggerdefinitions": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "definitions",
+      "properties": {
+        "definition-name": {
+          "$ref": "#/definitions/swaggerdefinition-name"
+        }
+      }
+    },
+    "swagger415": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "415",
+      "properties": {
+        "description": {
+          "x-samplevalue": "Unsupported media type - The server cannot handle the requested Content-Type",
+          "type": "string"
+        }
+      }
+    },
+    "swaggerdefinition-name": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "definition-name",
+      "properties": {
+        "properties": {
+          "$ref": "#/definitions/swaggerproperties"
+        }
+      }
+    },
+    "swaggerparameters": {
+      "x-has-customfields": false,
+      "title": "parameters",
+      "properties": {
+        "schema": {
+          "$ref": "#/definitions/swaggerparametersschema"
+        },
+        "in": {
+          "x-samplevalue": "header",
+          "type": "string"
+        },
+        "name": {
+          "x-samplevalue": "Authorization",
+          "type": "string"
+        },
+        "description": {
+          "x-samplevalue": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+          "type": "string"
+        },
+        "type": {
+          "x-samplevalue": "string",
+          "type": "string"
+        },
+        "required": {
+          "x-samplevalue": true,
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "swaggerparametersschema": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "schema",
+      "properties": {
+        "$ref": {
+          "x-samplevalue": "#/definitions/Contact",
+          "type": "string"
+        }
+      }
+    },
+    "swaggerresponses": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "responses",
+      "properties": {
+        "200": {
+          "$ref": "#/definitions/swagger200"
+        },
+        "400": {
+          "$ref": "#/definitions/swagger400"
+        },
+        "401": {
+          "$ref": "#/definitions/swagger401"
+        },
+        "403": {
+          "$ref": "#/definitions/swagger403"
+        },
+        "404": {
+          "$ref": "#/definitions/swagger404"
+        },
+        "405": {
+          "$ref": "#/definitions/swagger405"
+        },
+        "406": {
+          "$ref": "#/definitions/swagger406"
+        },
+        "409": {
+          "$ref": "#/definitions/swagger409"
+        },
+        "415": {
+          "$ref": "#/definitions/swagger415"
+        },
+        "500": {
+          "$ref": "#/definitions/swagger500"
+        },
+        "502": {
+          "$ref": "#/definitions/swagger502"
+        }
+      }
+    },
+    "currencyExchangeRates": {
+      "properties": {
+        "Ask Price": {
+          "type": "string",
+          "x-samplevalue": "108.61000000"
+        },
+        "Bid Price": {
+          "type": "string",
+          "x-samplevalue": "108.61000000"
+        },
+        "Exchange Rate": {
+          "type": "string",
+          "x-samplevalue": "108.61000000"
+        },
+        "From_Currency Code": {
+          "type": "string",
+          "x-samplevalue": "USD"
+        },
+        "From_Currency Name": {
+          "type": "string",
+          "x-samplevalue": "United States Dollar"
+        },
+        "Last Refreshed": {
+          "format": "date-time",
+          "type": "string",
+          "x-mask": "yyyy-MM-dd HH:mm:ss",
+          "x-samplevalue": "2019-12-09 16:43:01"
+        },
+        "Time Zone": {
+          "type": "string",
+          "x-samplevalue": "UTC"
+        },
+        "To_Currency Code": {
+          "type": "string",
+          "x-samplevalue": "JPY"
+        },
+        "To_Currency Name": {
+          "type": "string",
+          "x-samplevalue": "Japanese Yen"
+        }
+      },
+      "title": "currencyExchangeRates",
+      "type": "object"
+    },
+    "swaggerproperties": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "properties",
+      "properties": {
+        "definition-property": {
+          "$ref": "#/definitions/swaggerdefinition-property"
+        }
+      }
+    },
+    "swagger-contacts-path": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "/contacts",
+      "properties": {
+        "post": {
+          "$ref": "#/definitions/swaggerpost"
+        }
+      }
+    },
+    "swagger200": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "200",
+      "properties": {
+        "schema": {
+          "$ref": "#/definitions/swaggerschema"
+        },
+        "description": {
+          "x-samplevalue": "OK - Everything worked as expected",
+          "type": "string"
+        }
+      }
+    },
+    "swagger400": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "400",
+      "properties": {
+        "description": {
+          "x-samplevalue": "Bad Request - Often due to a missing request parameter",
+          "type": "string"
+        }
+      }
+    },
+    "swaggerinfo": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "info",
+      "properties": {
+        "contact": {
+          "$ref": "#/definitions/swaggercontact"
+        },
+        "title": {
+          "x-samplevalue": "hubspotcrm",
+          "type": "string"
+        },
+        "version": {
+          "x-samplevalue": "api-v2",
+          "type": "string"
+        }
+      }
+    },
+    "swagger401": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "401",
+      "properties": {
+        "description": {
+          "x-samplevalue": "Unauthorized - An invalid element token, user secret and/or org secret provided",
+          "type": "string"
+        }
+      }
+    },
+    "swagger500": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "500",
+      "properties": {
+        "description": {
+          "x-samplevalue": "Server error - Something went wrong on the Cloud Elements server",
+          "type": "string"
+        }
+      }
+    },
+    "swaggerpaths": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "paths",
+      "properties": {
+        "/contacts": {
+          "$ref": "#/definitions/swagger-contacts-path"
+        }
+      }
+    },
+    "technicalIndicators": {
+      "properties": {
+        "2000-02-18": {
+          "type": "string",
+          "x-samplevalue": "107.8940"
+        },
+        "2000-02-25": {
+          "type": "string",
+          "x-samplevalue": "108.0450"
+        },
+        "2000-03-03": {
+          "type": "string",
+          "x-samplevalue": "105.5890"
+        },
+        "2000-03-10": {
+          "type": "string",
+          "x-samplevalue": "103.3450"
+        },
+        "2000-03-17": {
+          "type": "string",
+          "x-samplevalue": "101.3700"
+        },
+        "2000-03-24": {
+          "type": "string",
+          "x-samplevalue": "99.9010"
+        },
+        "2000-03-31": {
+          "type": "string",
+          "x-samplevalue": "99.4970"
+        },
+        "2000-04-07": {
+          "type": "string",
+          "x-samplevalue": "98.5610"
+        },
+        "2000-04-14": {
+          "type": "string",
+          "x-samplevalue": "97.6610"
+        },
+        "2000-04-20": {
+          "type": "string",
+          "x-samplevalue": "94.4050"
+        },
+        "2000-04-28": {
+          "type": "string",
+          "x-samplevalue": "91.0070"
+        },
+        "2000-05-05": {
+          "type": "string",
+          "x-samplevalue": "88.7820"
+        },
+        "2000-05-12": {
+          "type": "string",
+          "x-samplevalue": "86.8510"
+        },
+        "2000-05-19": {
+          "type": "string",
+          "x-samplevalue": "84.1510"
+        },
+        "2000-05-26": {
+          "type": "string",
+          "x-samplevalue": "80.9010"
+        },
+        "2000-06-02": {
+          "type": "string",
+          "x-samplevalue": "77.2700"
+        },
+        "2000-06-09": {
+          "type": "string",
+          "x-samplevalue": "73.0950"
+        },
+        "2000-06-16": {
+          "type": "string",
+          "x-samplevalue": "70.5510"
+        },
+        "2000-06-23": {
+          "type": "string",
+          "x-samplevalue": "68.9450"
+        },
+        "2000-06-30": {
+          "type": "string",
+          "x-samplevalue": "69.2700"
+        },
+        "2000-07-07": {
+          "type": "string",
+          "x-samplevalue": "70.5140"
+        },
+        "2000-07-14": {
+          "type": "string",
+          "x-samplevalue": "71.2960"
+        },
+        "2000-07-21": {
+          "type": "string",
+          "x-samplevalue": "72.0270"
+        },
+        "2000-07-28": {
+          "type": "string",
+          "x-samplevalue": "72.3330"
+        },
+        "2000-08-04": {
+          "type": "string",
+          "x-samplevalue": "72.8400"
+        },
+        "2000-08-11": {
+          "type": "string",
+          "x-samplevalue": "73.6150"
+        },
+        "2000-08-18": {
+          "type": "string",
+          "x-samplevalue": "74.2440"
+        },
+        "2000-08-25": {
+          "type": "string",
+          "x-samplevalue": "74.4130"
+        },
+        "2000-09-01": {
+          "type": "string",
+          "x-samplevalue": "74.1760"
+        },
+        "2000-09-08": {
+          "type": "string",
+          "x-samplevalue": "73.4260"
+        },
+        "2000-09-15": {
+          "type": "string",
+          "x-samplevalue": "72.3690"
+        },
+        "2000-09-22": {
+          "type": "string",
+          "x-samplevalue": "70.7250"
+        },
+        "2000-09-29": {
+          "type": "string",
+          "x-samplevalue": "69.2250"
+        },
+        "2000-10-06": {
+          "type": "string",
+          "x-samplevalue": "68.0690"
+        },
+        "2000-10-13": {
+          "type": "string",
+          "x-samplevalue": "66.6130"
+        },
+        "2000-10-20": {
+          "type": "string",
+          "x-samplevalue": "64.9440"
+        },
+        "2000-10-27": {
+          "type": "string",
+          "x-samplevalue": "64.1750"
+        },
+        "2000-11-03": {
+          "type": "string",
+          "x-samplevalue": "63.8560"
+        },
+        "2000-11-10": {
+          "type": "string",
+          "x-samplevalue": "63.7060"
+        },
+        "2000-11-17": {
+          "type": "string",
+          "x-samplevalue": "63.3750"
+        },
+        "2000-11-24": {
+          "type": "string",
+          "x-samplevalue": "63.2750"
+        },
+        "2000-12-01": {
+          "type": "string",
+          "x-samplevalue": "63.9940"
+        },
+        "2000-12-08": {
+          "type": "string",
+          "x-samplevalue": "63.3940"
+        },
+        "2000-12-15": {
+          "type": "string",
+          "x-samplevalue": "62.8940"
+        },
+        "2000-12-22": {
+          "type": "string",
+          "x-samplevalue": "62.2310"
+        },
+        "2000-12-29": {
+          "type": "string",
+          "x-samplevalue": "61.5690"
+        },
+        "2001-01-05": {
+          "type": "string",
+          "x-samplevalue": "59.5200"
+        },
+        "2001-01-12": {
+          "type": "string",
+          "x-samplevalue": "57.6640"
+        },
+        "2001-01-19": {
+          "type": "string",
+          "x-samplevalue": "56.1330"
+        },
+        "2001-01-26": {
+          "type": "string",
+          "x-samplevalue": "55.5390"
+        },
+        "2001-02-02": {
+          "type": "string",
+          "x-samplevalue": "55.0830"
+        },
+        "2001-02-09": {
+          "type": "string",
+          "x-samplevalue": "54.0140"
+        },
+        "2001-02-16": {
+          "type": "string",
+          "x-samplevalue": "54.1700"
+        },
+        "2001-02-23": {
+          "type": "string",
+          "x-samplevalue": "54.3580"
+        },
+        "2001-03-02": {
+          "type": "string",
+          "x-samplevalue": "55.2210"
+        },
+        "2001-03-09": {
+          "type": "string",
+          "x-samplevalue": "56.2580"
+        },
+        "2001-03-16": {
+          "type": "string",
+          "x-samplevalue": "57.3140"
+        },
+        "2001-03-23": {
+          "type": "string",
+          "x-samplevalue": "57.8700"
+        },
+        "2001-03-30": {
+          "type": "string",
+          "x-samplevalue": "58.2450"
+        },
+        "2001-04-06": {
+          "type": "string",
+          "x-samplevalue": "57.6510"
+        },
+        "2001-04-12": {
+          "type": "string",
+          "x-samplevalue": "56.9520"
+        },
+        "2001-04-20": {
+          "type": "string",
+          "x-samplevalue": "57.0170"
+        },
+        "2001-04-27": {
+          "type": "string",
+          "x-samplevalue": "57.9470"
+        },
+        "2001-05-04": {
+          "type": "string",
+          "x-samplevalue": "59.0620"
+        },
+        "2001-05-11": {
+          "type": "string",
+          "x-samplevalue": "60.3820"
+        },
+        "2001-05-18": {
+          "type": "string",
+          "x-samplevalue": "61.5700"
+        },
+        "2001-05-25": {
+          "type": "string",
+          "x-samplevalue": "62.9060"
+        },
+        "2001-06-01": {
+          "type": "string",
+          "x-samplevalue": "64.5360"
+        },
+        "2001-06-08": {
+          "type": "string",
+          "x-samplevalue": "65.8780"
+        },
+        "2001-06-15": {
+          "type": "string",
+          "x-samplevalue": "67.6820"
+        },
+        "2001-06-22": {
+          "type": "string",
+          "x-samplevalue": "68.8200"
+        },
+        "2001-06-29": {
+          "type": "string",
+          "x-samplevalue": "69.5900"
+        },
+        "2001-07-06": {
+          "type": "string",
+          "x-samplevalue": "69.9840"
+        },
+        "2001-07-13": {
+          "type": "string",
+          "x-samplevalue": "69.7510"
+        },
+        "2001-07-20": {
+          "type": "string",
+          "x-samplevalue": "69.8130"
+        },
+        "2001-07-27": {
+          "type": "string",
+          "x-samplevalue": "69.8240"
+        },
+        "2001-08-03": {
+          "type": "string",
+          "x-samplevalue": "69.5840"
+        },
+        "2001-08-10": {
+          "type": "string",
+          "x-samplevalue": "69.1570"
+        },
+        "2001-08-17": {
+          "type": "string",
+          "x-samplevalue": "68.6260"
+        },
+        "2001-08-24": {
+          "type": "string",
+          "x-samplevalue": "67.5070"
+        },
+        "2001-08-31": {
+          "type": "string",
+          "x-samplevalue": "66.9020"
+        },
+        "2001-09-07": {
+          "type": "string",
+          "x-samplevalue": "65.7110"
+        },
+        "2001-09-10": {
+          "type": "string",
+          "x-samplevalue": "63.9980"
+        },
+        "2001-09-21": {
+          "type": "string",
+          "x-samplevalue": "62.7800"
+        },
+        "2001-09-28": {
+          "type": "string",
+          "x-samplevalue": "60.7000"
+        },
+        "2001-10-05": {
+          "type": "string",
+          "x-samplevalue": "58.8700"
+        },
+        "2001-10-12": {
+          "type": "string",
+          "x-samplevalue": "57.9850"
+        },
+        "2001-10-19": {
+          "type": "string",
+          "x-samplevalue": "56.9220"
+        },
+        "2001-10-26": {
+          "type": "string",
+          "x-samplevalue": "56.1880"
+        },
+        "2001-11-02": {
+          "type": "string",
+          "x-samplevalue": "56.2320"
+        },
+        "2001-11-09": {
+          "type": "string",
+          "x-samplevalue": "56.2280"
+        },
+        "2001-11-16": {
+          "type": "string",
+          "x-samplevalue": "56.9790"
+        },
+        "2001-11-23": {
+          "type": "string",
+          "x-samplevalue": "58.1120"
+        },
+        "2001-11-30": {
+          "type": "string",
+          "x-samplevalue": "59.2090"
+        },
+        "2001-12-07": {
+          "type": "string",
+          "x-samplevalue": "60.5270"
+        },
+        "2001-12-14": {
+          "type": "string",
+          "x-samplevalue": "62.1850"
+        },
+        "2001-12-21": {
+          "type": "string",
+          "x-samplevalue": "63.2220"
+        },
+        "2001-12-28": {
+          "type": "string",
+          "x-samplevalue": "64.4040"
+        },
+        "2002-01-04": {
+          "type": "string",
+          "x-samplevalue": "65.3980"
+        },
+        "2002-01-11": {
+          "type": "string",
+          "x-samplevalue": "66.1630"
+        },
+        "2002-01-18": {
+          "type": "string",
+          "x-samplevalue": "66.8070"
+        },
+        "2002-01-25": {
+          "type": "string",
+          "x-samplevalue": "66.9980"
+        },
+        "2002-02-01": {
+          "type": "string",
+          "x-samplevalue": "66.7960"
+        },
+        "2002-02-08": {
+          "type": "string",
+          "x-samplevalue": "66.5370"
+        },
+        "2002-02-15": {
+          "type": "string",
+          "x-samplevalue": "66.1550"
+        },
+        "2002-02-22": {
+          "type": "string",
+          "x-samplevalue": "65.3940"
+        },
+        "2002-03-01": {
+          "type": "string",
+          "x-samplevalue": "64.4710"
+        },
+        "2002-03-08": {
+          "type": "string",
+          "x-samplevalue": "63.8230"
+        },
+        "2002-03-15": {
+          "type": "string",
+          "x-samplevalue": "63.3900"
+        },
+        "2002-03-22": {
+          "type": "string",
+          "x-samplevalue": "62.6890"
+        },
+        "2002-03-28": {
+          "type": "string",
+          "x-samplevalue": "61.9070"
+        },
+        "2002-04-05": {
+          "type": "string",
+          "x-samplevalue": "61.2290"
+        },
+        "2002-04-12": {
+          "type": "string",
+          "x-samplevalue": "60.2360"
+        },
+        "2002-04-19": {
+          "type": "string",
+          "x-samplevalue": "59.5960"
+        },
+        "2002-04-26": {
+          "type": "string",
+          "x-samplevalue": "59.2470"
+        },
+        "2002-05-03": {
+          "type": "string",
+          "x-samplevalue": "58.4030"
+        },
+        "2002-05-10": {
+          "type": "string",
+          "x-samplevalue": "57.5530"
+        },
+        "2002-05-17": {
+          "type": "string",
+          "x-samplevalue": "56.4740"
+        },
+        "2002-05-24": {
+          "type": "string",
+          "x-samplevalue": "55.6730"
+        },
+        "2002-05-31": {
+          "type": "string",
+          "x-samplevalue": "54.7580"
+        },
+        "2002-06-07": {
+          "type": "string",
+          "x-samplevalue": "53.8090"
+        },
+        "2002-06-14": {
+          "type": "string",
+          "x-samplevalue": "52.9910"
+        },
+        "2002-06-21": {
+          "type": "string",
+          "x-samplevalue": "53.1270"
+        },
+        "2002-06-28": {
+          "type": "string",
+          "x-samplevalue": "52.7360"
+        },
+        "2002-07-05": {
+          "type": "string",
+          "x-samplevalue": "52.4960"
+        },
+        "2002-07-12": {
+          "type": "string",
+          "x-samplevalue": "52.7900"
+        },
+        "2002-07-19": {
+          "type": "string",
+          "x-samplevalue": "52.9850"
+        },
+        "2002-07-26": {
+          "type": "string",
+          "x-samplevalue": "52.8350"
+        },
+        "2002-08-02": {
+          "type": "string",
+          "x-samplevalue": "51.9700"
+        },
+        "2002-08-09": {
+          "type": "string",
+          "x-samplevalue": "51.0400"
+        },
+        "2002-08-16": {
+          "type": "string",
+          "x-samplevalue": "50.7020"
+        },
+        "2002-08-23": {
+          "type": "string",
+          "x-samplevalue": "50.5410"
+        },
+        "2002-08-30": {
+          "type": "string",
+          "x-samplevalue": "50.2250"
+        },
+        "2002-09-06": {
+          "type": "string",
+          "x-samplevalue": "49.8680"
+        },
+        "2002-09-13": {
+          "type": "string",
+          "x-samplevalue": "49.1810"
+        },
+        "2002-09-20": {
+          "type": "string",
+          "x-samplevalue": "48.5000"
+        },
+        "2002-09-27": {
+          "type": "string",
+          "x-samplevalue": "48.0210"
+        },
+        "2002-10-04": {
+          "type": "string",
+          "x-samplevalue": "47.6130"
+        },
+        "2002-10-11": {
+          "type": "string",
+          "x-samplevalue": "47.3090"
+        },
+        "2002-10-18": {
+          "type": "string",
+          "x-samplevalue": "47.7050"
+        },
+        "2002-10-25": {
+          "type": "string",
+          "x-samplevalue": "48.1410"
+        },
+        "2002-11-01": {
+          "type": "string",
+          "x-samplevalue": "48.4770"
+        },
+        "2002-11-08": {
+          "type": "string",
+          "x-samplevalue": "48.9020"
+        },
+        "2002-11-15": {
+          "type": "string",
+          "x-samplevalue": "49.5570"
+        },
+        "2002-11-22": {
+          "type": "string",
+          "x-samplevalue": "50.5270"
+        },
+        "2002-11-29": {
+          "type": "string",
+          "x-samplevalue": "51.5730"
+        },
+        "2002-12-06": {
+          "type": "string",
+          "x-samplevalue": "52.7780"
+        },
+        "2002-12-13": {
+          "type": "string",
+          "x-samplevalue": "53.7910"
+        },
+        "2002-12-20": {
+          "type": "string",
+          "x-samplevalue": "54.7100"
+        },
+        "2002-12-27": {
+          "type": "string",
+          "x-samplevalue": "55.1900"
+        },
+        "2003-01-03": {
+          "type": "string",
+          "x-samplevalue": "55.2940"
+        },
+        "2003-01-10": {
+          "type": "string",
+          "x-samplevalue": "55.3560"
+        },
+        "2003-01-17": {
+          "type": "string",
+          "x-samplevalue": "55.3330"
+        },
+        "2003-01-24": {
+          "type": "string",
+          "x-samplevalue": "55.0130"
+        },
+        "2003-01-31": {
+          "type": "string",
+          "x-samplevalue": "54.2500"
+        },
+        "2003-02-07": {
+          "type": "string",
+          "x-samplevalue": "53.2370"
+        },
+        "2003-02-14": {
+          "type": "string",
+          "x-samplevalue": "52.0520"
+        },
+        "2003-02-21": {
+          "type": "string",
+          "x-samplevalue": "49.0140"
+        },
+        "2003-02-28": {
+          "type": "string",
+          "x-samplevalue": "46.1580"
+        },
+        "2003-03-07": {
+          "type": "string",
+          "x-samplevalue": "43.2550"
+        },
+        "2003-03-14": {
+          "type": "string",
+          "x-samplevalue": "40.2850"
+        },
+        "2003-03-21": {
+          "type": "string",
+          "x-samplevalue": "37.3350"
+        },
+        "2003-03-28": {
+          "type": "string",
+          "x-samplevalue": "34.2380"
+        },
+        "2003-04-04": {
+          "type": "string",
+          "x-samplevalue": "31.4760"
+        },
+        "2003-04-11": {
+          "type": "string",
+          "x-samplevalue": "29.1670"
+        },
+        "2003-04-17": {
+          "type": "string",
+          "x-samplevalue": "26.8010"
+        },
+        "2003-04-25": {
+          "type": "string",
+          "x-samplevalue": "24.6820"
+        },
+        "2003-05-02": {
+          "type": "string",
+          "x-samplevalue": "24.7590"
+        },
+        "2003-05-09": {
+          "type": "string",
+          "x-samplevalue": "24.9400"
+        },
+        "2003-05-16": {
+          "type": "string",
+          "x-samplevalue": "25.1530"
+        },
+        "2003-05-23": {
+          "type": "string",
+          "x-samplevalue": "25.3620"
+        },
+        "2003-05-30": {
+          "type": "string",
+          "x-samplevalue": "25.3350"
+        },
+        "2003-06-06": {
+          "type": "string",
+          "x-samplevalue": "25.2780"
+        },
+        "2003-06-13": {
+          "type": "string",
+          "x-samplevalue": "25.2250"
+        },
+        "2003-06-20": {
+          "type": "string",
+          "x-samplevalue": "25.0820"
+        },
+        "2003-06-27": {
+          "type": "string",
+          "x-samplevalue": "25.2690"
+        },
+        "2003-07-03": {
+          "type": "string",
+          "x-samplevalue": "25.3020"
+        },
+        "2003-07-11": {
+          "type": "string",
+          "x-samplevalue": "25.4650"
+        },
+        "2003-07-18": {
+          "type": "string",
+          "x-samplevalue": "25.6030"
+        },
+        "2003-07-25": {
+          "type": "string",
+          "x-samplevalue": "25.6750"
+        },
+        "2003-08-01": {
+          "type": "string",
+          "x-samplevalue": "25.8290"
+        },
+        "2003-08-08": {
+          "type": "string",
+          "x-samplevalue": "26.0190"
+        },
+        "2003-08-15": {
+          "type": "string",
+          "x-samplevalue": "26.0820"
+        },
+        "2003-08-22": {
+          "type": "string",
+          "x-samplevalue": "26.2660"
+        },
+        "2003-08-29": {
+          "type": "string",
+          "x-samplevalue": "26.4170"
+        },
+        "2003-09-05": {
+          "type": "string",
+          "x-samplevalue": "26.4730"
+        },
+        "2003-09-12": {
+          "type": "string",
+          "x-samplevalue": "26.7180"
+        },
+        "2003-09-19": {
+          "type": "string",
+          "x-samplevalue": "26.8530"
+        },
+        "2003-09-26": {
+          "type": "string",
+          "x-samplevalue": "27.0290"
+        },
+        "2003-10-03": {
+          "type": "string",
+          "x-samplevalue": "27.1830"
+        },
+        "2003-10-10": {
+          "type": "string",
+          "x-samplevalue": "27.4040"
+        },
+        "2003-10-17": {
+          "type": "string",
+          "x-samplevalue": "27.6870"
+        },
+        "2003-10-24": {
+          "type": "string",
+          "x-samplevalue": "28.0210"
+        },
+        "2003-10-31": {
+          "type": "string",
+          "x-samplevalue": "28.1560"
+        },
+        "2003-11-07": {
+          "type": "string",
+          "x-samplevalue": "28.1600"
+        },
+        "2003-11-14": {
+          "type": "string",
+          "x-samplevalue": "28.1020"
+        },
+        "2003-11-21": {
+          "type": "string",
+          "x-samplevalue": "27.8020"
+        },
+        "2003-11-28": {
+          "type": "string",
+          "x-samplevalue": "27.4980"
+        },
+        "2003-12-05": {
+          "type": "string",
+          "x-samplevalue": "27.1490"
+        },
+        "2003-12-12": {
+          "type": "string",
+          "x-samplevalue": "26.9200"
+        },
+        "2003-12-19": {
+          "type": "string",
+          "x-samplevalue": "26.7100"
+        },
+        "2003-12-26": {
+          "type": "string",
+          "x-samplevalue": "26.5280"
+        },
+        "2004-01-02": {
+          "type": "string",
+          "x-samplevalue": "26.3540"
+        },
+        "2004-01-09": {
+          "type": "string",
+          "x-samplevalue": "26.4360"
+        },
+        "2004-01-16": {
+          "type": "string",
+          "x-samplevalue": "26.5680"
+        },
+        "2004-01-23": {
+          "type": "string",
+          "x-samplevalue": "26.7550"
+        },
+        "2004-01-30": {
+          "type": "string",
+          "x-samplevalue": "27.0650"
+        },
+        "2004-02-06": {
+          "type": "string",
+          "x-samplevalue": "27.2950"
+        },
+        "2004-02-13": {
+          "type": "string",
+          "x-samplevalue": "27.4230"
+        },
+        "2004-02-20": {
+          "type": "string",
+          "x-samplevalue": "27.4810"
+        },
+        "2004-02-27": {
+          "type": "string",
+          "x-samplevalue": "27.4510"
+        },
+        "2004-03-05": {
+          "type": "string",
+          "x-samplevalue": "27.4000"
+        },
+        "2004-03-12": {
+          "type": "string",
+          "x-samplevalue": "27.3100"
+        },
+        "2004-03-19": {
+          "type": "string",
+          "x-samplevalue": "27.0700"
+        },
+        "2004-03-26": {
+          "type": "string",
+          "x-samplevalue": "26.7560"
+        },
+        "2004-04-02": {
+          "type": "string",
+          "x-samplevalue": "26.4810"
+        },
+        "2004-04-08": {
+          "type": "string",
+          "x-samplevalue": "26.2120"
+        },
+        "2004-04-16": {
+          "type": "string",
+          "x-samplevalue": "25.9970"
+        },
+        "2004-04-23": {
+          "type": "string",
+          "x-samplevalue": "25.7870"
+        },
+        "2004-04-30": {
+          "type": "string",
+          "x-samplevalue": "25.8630"
+        },
+        "2004-05-07": {
+          "type": "string",
+          "x-samplevalue": "25.8090"
+        },
+        "2004-05-14": {
+          "type": "string",
+          "x-samplevalue": "25.7080"
+        },
+        "2004-05-21": {
+          "type": "string",
+          "x-samplevalue": "25.6250"
+        },
+        "2004-05-28": {
+          "type": "string",
+          "x-samplevalue": "25.6960"
+        },
+        "2004-06-04": {
+          "type": "string",
+          "x-samplevalue": "25.8550"
+        },
+        "2004-06-10": {
+          "type": "string",
+          "x-samplevalue": "25.9330"
+        },
+        "2004-06-18": {
+          "type": "string",
+          "x-samplevalue": "26.0090"
+        },
+        "2004-06-25": {
+          "type": "string",
+          "x-samplevalue": "26.2840"
+        },
+        "2004-07-02": {
+          "type": "string",
+          "x-samplevalue": "26.6390"
+        },
+        "2004-07-09": {
+          "type": "string",
+          "x-samplevalue": "26.7250"
+        },
+        "2004-07-16": {
+          "type": "string",
+          "x-samplevalue": "26.8730"
+        },
+        "2004-07-23": {
+          "type": "string",
+          "x-samplevalue": "27.0710"
+        },
+        "2004-07-30": {
+          "type": "string",
+          "x-samplevalue": "27.3600"
+        },
+        "2004-08-06": {
+          "type": "string",
+          "x-samplevalue": "27.5830"
+        },
+        "2004-08-13": {
+          "type": "string",
+          "x-samplevalue": "27.6960"
+        },
+        "2004-08-20": {
+          "type": "string",
+          "x-samplevalue": "27.8020"
+        },
+        "2004-08-27": {
+          "type": "string",
+          "x-samplevalue": "27.8730"
+        },
+        "2004-09-03": {
+          "type": "string",
+          "x-samplevalue": "27.7800"
+        },
+        "2004-09-10": {
+          "type": "string",
+          "x-samplevalue": "27.6460"
+        },
+        "2004-09-17": {
+          "type": "string",
+          "x-samplevalue": "27.5680"
+        },
+        "2004-09-24": {
+          "type": "string",
+          "x-samplevalue": "27.5420"
+        },
+        "2004-10-01": {
+          "type": "string",
+          "x-samplevalue": "27.4980"
+        },
+        "2004-10-08": {
+          "type": "string",
+          "x-samplevalue": "27.5030"
+        },
+        "2004-10-15": {
+          "type": "string",
+          "x-samplevalue": "27.4960"
+        },
+        "2004-10-22": {
+          "type": "string",
+          "x-samplevalue": "27.5770"
+        },
+        "2004-10-29": {
+          "type": "string",
+          "x-samplevalue": "27.6370"
+        },
+        "2004-11-05": {
+          "type": "string",
+          "x-samplevalue": "27.7250"
+        },
+        "2004-11-12": {
+          "type": "string",
+          "x-samplevalue": "27.9140"
+        },
+        "2004-11-19": {
+          "type": "string",
+          "x-samplevalue": "27.9200"
+        },
+        "2004-11-26": {
+          "type": "string",
+          "x-samplevalue": "27.8420"
+        },
+        "2004-12-03": {
+          "type": "string",
+          "x-samplevalue": "27.7625"
+        },
+        "2004-12-10": {
+          "type": "string",
+          "x-samplevalue": "27.7545"
+        },
+        "2004-12-17": {
+          "type": "string",
+          "x-samplevalue": "27.6225"
+        },
+        "2004-12-23": {
+          "type": "string",
+          "x-samplevalue": "27.5045"
+        },
+        "2004-12-31": {
+          "type": "string",
+          "x-samplevalue": "27.4005"
+        },
+        "2005-01-07": {
+          "type": "string",
+          "x-samplevalue": "27.3125"
+        },
+        "2005-01-14": {
+          "type": "string",
+          "x-samplevalue": "27.1575"
+        },
+        "2005-01-21": {
+          "type": "string",
+          "x-samplevalue": "26.8415"
+        },
+        "2005-01-28": {
+          "type": "string",
+          "x-samplevalue": "26.6835"
+        },
+        "2005-02-04": {
+          "type": "string",
+          "x-samplevalue": "26.6425"
+        },
+        "2005-02-11": {
+          "type": "string",
+          "x-samplevalue": "26.6060"
+        },
+        "2005-02-18": {
+          "type": "string",
+          "x-samplevalue": "26.4972"
+        },
+        "2005-02-25": {
+          "type": "string",
+          "x-samplevalue": "26.3112"
+        },
+        "2005-03-04": {
+          "type": "string",
+          "x-samplevalue": "26.1312"
+        },
+        "2005-03-11": {
+          "type": "string",
+          "x-samplevalue": "25.9462"
+        },
+        "2005-03-18": {
+          "type": "string",
+          "x-samplevalue": "25.7742"
+        },
+        "2005-03-24": {
+          "type": "string",
+          "x-samplevalue": "25.5492"
+        },
+        "2005-04-01": {
+          "type": "string",
+          "x-samplevalue": "25.3862"
+        },
+        "2005-04-08": {
+          "type": "string",
+          "x-samplevalue": "25.2202"
+        },
+        "2005-04-15": {
+          "type": "string",
+          "x-samplevalue": "25.0882"
+        },
+        "2005-04-22": {
+          "type": "string",
+          "x-samplevalue": "24.9062"
+        },
+        "2005-04-29": {
+          "type": "string",
+          "x-samplevalue": "24.8120"
+        },
+        "2005-05-06": {
+          "type": "string",
+          "x-samplevalue": "24.8110"
+        },
+        "2005-05-13": {
+          "type": "string",
+          "x-samplevalue": "24.8120"
+        },
+        "2005-05-20": {
+          "type": "string",
+          "x-samplevalue": "24.8180"
+        },
+        "2005-05-27": {
+          "type": "string",
+          "x-samplevalue": "24.8850"
+        },
+        "2005-06-03": {
+          "type": "string",
+          "x-samplevalue": "25.0470"
+        },
+        "2005-06-10": {
+          "type": "string",
+          "x-samplevalue": "25.1450"
+        },
+        "2005-06-17": {
+          "type": "string",
+          "x-samplevalue": "25.2700"
+        },
+        "2005-06-24": {
+          "type": "string",
+          "x-samplevalue": "25.2650"
+        },
+        "2005-07-01": {
+          "type": "string",
+          "x-samplevalue": "25.3270"
+        },
+        "2005-07-08": {
+          "type": "string",
+          "x-samplevalue": "25.2860"
+        },
+        "2005-07-15": {
+          "type": "string",
+          "x-samplevalue": "25.2780"
+        },
+        "2005-07-22": {
+          "type": "string",
+          "x-samplevalue": "25.3260"
+        },
+        "2005-07-29": {
+          "type": "string",
+          "x-samplevalue": "25.3720"
+        },
+        "2005-08-05": {
+          "type": "string",
+          "x-samplevalue": "25.3790"
+        },
+        "2005-08-12": {
+          "type": "string",
+          "x-samplevalue": "25.5620"
+        },
+        "2005-08-19": {
+          "type": "string",
+          "x-samplevalue": "25.7220"
+        },
+        "2005-08-26": {
+          "type": "string",
+          "x-samplevalue": "25.8650"
+        },
+        "2005-09-02": {
+          "type": "string",
+          "x-samplevalue": "26.0490"
+        },
+        "2005-09-09": {
+          "type": "string",
+          "x-samplevalue": "26.2480"
+        },
+        "2005-09-16": {
+          "type": "string",
+          "x-samplevalue": "26.4400"
+        },
+        "2005-09-23": {
+          "type": "string",
+          "x-samplevalue": "26.5340"
+        },
+        "2005-09-30": {
+          "type": "string",
+          "x-samplevalue": "26.5030"
+        },
+        "2005-10-07": {
+          "type": "string",
+          "x-samplevalue": "26.5050"
+        },
+        "2005-10-14": {
+          "type": "string",
+          "x-samplevalue": "26.3900"
+        },
+        "2005-10-21": {
+          "type": "string",
+          "x-samplevalue": "26.0780"
+        },
+        "2005-10-28": {
+          "type": "string",
+          "x-samplevalue": "25.8690"
+        },
+        "2005-11-04": {
+          "type": "string",
+          "x-samplevalue": "25.7510"
+        },
+        "2005-11-11": {
+          "type": "string",
+          "x-samplevalue": "25.7410"
+        },
+        "2005-11-18": {
+          "type": "string",
+          "x-samplevalue": "25.7710"
+        },
+        "2005-11-25": {
+          "type": "string",
+          "x-samplevalue": "25.9200"
+        },
+        "2005-12-02": {
+          "type": "string",
+          "x-samplevalue": "26.0900"
+        },
+        "2005-12-09": {
+          "type": "string",
+          "x-samplevalue": "26.3430"
+        },
+        "2005-12-16": {
+          "type": "string",
+          "x-samplevalue": "26.5420"
+        },
+        "2005-12-23": {
+          "type": "string",
+          "x-samplevalue": "26.7570"
+        },
+        "2005-12-30": {
+          "type": "string",
+          "x-samplevalue": "26.9570"
+        },
+        "2006-01-06": {
+          "type": "string",
+          "x-samplevalue": "27.0930"
+        },
+        "2006-01-13": {
+          "type": "string",
+          "x-samplevalue": "27.2250"
+        },
+        "2006-01-20": {
+          "type": "string",
+          "x-samplevalue": "27.2430"
+        },
+        "2006-01-27": {
+          "type": "string",
+          "x-samplevalue": "27.1480"
+        },
+        "2006-02-03": {
+          "type": "string",
+          "x-samplevalue": "27.1200"
+        },
+        "2006-02-10": {
+          "type": "string",
+          "x-samplevalue": "27.0910"
+        },
+        "2006-02-17": {
+          "type": "string",
+          "x-samplevalue": "26.9590"
+        },
+        "2006-02-24": {
+          "type": "string",
+          "x-samplevalue": "26.8550"
+        },
+        "2006-03-03": {
+          "type": "string",
+          "x-samplevalue": "26.8480"
+        },
+        "2006-03-10": {
+          "type": "string",
+          "x-samplevalue": "26.8720"
+        },
+        "2006-03-17": {
+          "type": "string",
+          "x-samplevalue": "26.9449"
+        },
+        "2006-03-24": {
+          "type": "string",
+          "x-samplevalue": "27.0209"
+        },
+        "2006-03-31": {
+          "type": "string",
+          "x-samplevalue": "27.0329"
+        },
+        "2006-04-07": {
+          "type": "string",
+          "x-samplevalue": "27.1589"
+        },
+        "2006-04-13": {
+          "type": "string",
+          "x-samplevalue": "27.0999"
+        },
+        "2006-04-21": {
+          "type": "string",
+          "x-samplevalue": "27.0509"
+        },
+        "2006-04-28": {
+          "type": "string",
+          "x-samplevalue": "27.0959"
+        },
+        "2006-05-05": {
+          "type": "string",
+          "x-samplevalue": "26.8629"
+        },
+        "2006-05-12": {
+          "type": "string",
+          "x-samplevalue": "26.5729"
+        },
+        "2006-05-19": {
+          "type": "string",
+          "x-samplevalue": "26.1909"
+        },
+        "2006-05-26": {
+          "type": "string",
+          "x-samplevalue": "25.7410"
+        },
+        "2006-06-02": {
+          "type": "string",
+          "x-samplevalue": "25.3270"
+        },
+        "2006-06-09": {
+          "type": "string",
+          "x-samplevalue": "24.8970"
+        },
+        "2006-06-16": {
+          "type": "string",
+          "x-samplevalue": "24.3250"
+        },
+        "2006-06-23": {
+          "type": "string",
+          "x-samplevalue": "23.8190"
+        },
+        "2006-06-30": {
+          "type": "string",
+          "x-samplevalue": "23.3830"
+        },
+        "2006-07-07": {
+          "type": "string",
+          "x-samplevalue": "23.0300"
+        },
+        "2006-07-14": {
+          "type": "string",
+          "x-samplevalue": "22.9400"
+        },
+        "2006-07-21": {
+          "type": "string",
+          "x-samplevalue": "22.7840"
+        },
+        "2006-07-28": {
+          "type": "string",
+          "x-samplevalue": "22.8750"
+        },
+        "2006-08-04": {
+          "type": "string",
+          "x-samplevalue": "23.0340"
+        },
+        "2006-08-11": {
+          "type": "string",
+          "x-samplevalue": "23.1070"
+        },
+        "2006-08-18": {
+          "type": "string",
+          "x-samplevalue": "23.2870"
+        },
+        "2006-08-25": {
+          "type": "string",
+          "x-samplevalue": "23.6580"
+        },
+        "2006-09-01": {
+          "type": "string",
+          "x-samplevalue": "24.0280"
+        },
+        "2006-09-08": {
+          "type": "string",
+          "x-samplevalue": "24.3320"
+        },
+        "2006-09-15": {
+          "type": "string",
+          "x-samplevalue": "24.5220"
+        },
+        "2006-09-22": {
+          "type": "string",
+          "x-samplevalue": "24.8530"
+        },
+        "2006-09-29": {
+          "type": "string",
+          "x-samplevalue": "25.3050"
+        },
+        "2006-10-06": {
+          "type": "string",
+          "x-samplevalue": "25.6360"
+        },
+        "2006-10-13": {
+          "type": "string",
+          "x-samplevalue": "26.0090"
+        },
+        "2006-10-20": {
+          "type": "string",
+          "x-samplevalue": "26.4290"
+        },
+        "2006-10-27": {
+          "type": "string",
+          "x-samplevalue": "26.8070"
+        },
+        "2006-11-03": {
+          "type": "string",
+          "x-samplevalue": "27.0760"
+        },
+        "2006-11-10": {
+          "type": "string",
+          "x-samplevalue": "27.3690"
+        },
+        "2006-11-17": {
+          "type": "string",
+          "x-samplevalue": "27.7190"
+        },
+        "2006-11-24": {
+          "type": "string",
+          "x-samplevalue": "28.1280"
+        },
+        "2006-12-01": {
+          "type": "string",
+          "x-samplevalue": "28.4230"
+        },
+        "2006-12-08": {
+          "type": "string",
+          "x-samplevalue": "28.6650"
+        },
+        "2006-12-15": {
+          "type": "string",
+          "x-samplevalue": "28.8520"
+        },
+        "2006-12-22": {
+          "type": "string",
+          "x-samplevalue": "29.0910"
+        },
+        "2006-12-29": {
+          "type": "string",
+          "x-samplevalue": "29.1960"
+        },
+        "2007-01-05": {
+          "type": "string",
+          "x-samplevalue": "29.3570"
+        },
+        "2007-01-12": {
+          "type": "string",
+          "x-samplevalue": "29.4870"
+        },
+        "2007-01-19": {
+          "type": "string",
+          "x-samplevalue": "29.7360"
+        },
+        "2007-01-26": {
+          "type": "string",
+          "x-samplevalue": "29.9230"
+        },
+        "2007-02-02": {
+          "type": "string",
+          "x-samplevalue": "30.0360"
+        },
+        "2007-02-09": {
+          "type": "string",
+          "x-samplevalue": "30.0640"
+        },
+        "2007-02-16": {
+          "type": "string",
+          "x-samplevalue": "30.0300"
+        },
+        "2007-02-23": {
+          "type": "string",
+          "x-samplevalue": "29.9740"
+        },
+        "2007-03-02": {
+          "type": "string",
+          "x-samplevalue": "29.8510"
+        },
+        "2007-03-09": {
+          "type": "string",
+          "x-samplevalue": "29.6470"
+        },
+        "2007-03-16": {
+          "type": "string",
+          "x-samplevalue": "29.3740"
+        },
+        "2007-03-23": {
+          "type": "string",
+          "x-samplevalue": "29.1430"
+        },
+        "2007-03-30": {
+          "type": "string",
+          "x-samplevalue": "28.8110"
+        },
+        "2007-04-05": {
+          "type": "string",
+          "x-samplevalue": "28.4940"
+        },
+        "2007-04-13": {
+          "type": "string",
+          "x-samplevalue": "28.2865"
+        },
+        "2007-04-20": {
+          "type": "string",
+          "x-samplevalue": "28.1495"
+        },
+        "2007-04-27": {
+          "type": "string",
+          "x-samplevalue": "28.1565"
+        },
+        "2007-05-04": {
+          "type": "string",
+          "x-samplevalue": "28.3065"
+        },
+        "2007-05-11": {
+          "type": "string",
+          "x-samplevalue": "28.4625"
+        },
+        "2007-05-18": {
+          "type": "string",
+          "x-samplevalue": "28.7975"
+        },
+        "2007-05-25": {
+          "type": "string",
+          "x-samplevalue": "29.1525"
+        },
+        "2007-06-01": {
+          "type": "string",
+          "x-samplevalue": "29.4675"
+        },
+        "2007-06-08": {
+          "type": "string",
+          "x-samplevalue": "29.7155"
+        },
+        "2007-06-15": {
+          "type": "string",
+          "x-samplevalue": "29.9205"
+        },
+        "2007-06-22": {
+          "type": "string",
+          "x-samplevalue": "30.1320"
+        },
+        "2007-06-29": {
+          "type": "string",
+          "x-samplevalue": "30.2190"
+        },
+        "2007-07-06": {
+          "type": "string",
+          "x-samplevalue": "30.2900"
+        },
+        "2007-07-13": {
+          "type": "string",
+          "x-samplevalue": "30.2630"
+        },
+        "2007-07-20": {
+          "type": "string",
+          "x-samplevalue": "30.1870"
+        },
+        "2007-07-27": {
+          "type": "string",
+          "x-samplevalue": "30.2390"
+        },
+        "2007-08-03": {
+          "type": "string",
+          "x-samplevalue": "30.1065"
+        },
+        "2007-08-10": {
+          "type": "string",
+          "x-samplevalue": "29.9650"
+        },
+        "2007-08-17": {
+          "type": "string",
+          "x-samplevalue": "29.8170"
+        },
+        "2007-08-24": {
+          "type": "string",
+          "x-samplevalue": "29.6410"
+        },
+        "2007-08-31": {
+          "type": "string",
+          "x-samplevalue": "29.4330"
+        },
+        "2007-09-07": {
+          "type": "string",
+          "x-samplevalue": "29.3360"
+        },
+        "2007-09-14": {
+          "type": "string",
+          "x-samplevalue": "29.2360"
+        },
+        "2007-09-21": {
+          "type": "string",
+          "x-samplevalue": "29.1290"
+        },
+        "2007-09-28": {
+          "type": "string",
+          "x-samplevalue": "29.0340"
+        },
+        "2007-10-05": {
+          "type": "string",
+          "x-samplevalue": "28.8440"
+        },
+        "2007-10-12": {
+          "type": "string",
+          "x-samplevalue": "28.8695"
+        },
+        "2007-10-19": {
+          "type": "string",
+          "x-samplevalue": "28.9710"
+        },
+        "2007-10-26": {
+          "type": "string",
+          "x-samplevalue": "29.0890"
+        },
+        "2007-11-02": {
+          "type": "string",
+          "x-samplevalue": "29.7560"
+        },
+        "2007-11-09": {
+          "type": "string",
+          "x-samplevalue": "30.5710"
+        },
+        "2007-11-16": {
+          "type": "string",
+          "x-samplevalue": "31.0530"
+        },
+        "2007-11-23": {
+          "type": "string",
+          "x-samplevalue": "31.5820"
+        },
+        "2007-11-30": {
+          "type": "string",
+          "x-samplevalue": "32.1120"
+        },
+        "2007-12-07": {
+          "type": "string",
+          "x-samplevalue": "32.5810"
+        },
+        "2007-12-14": {
+          "type": "string",
+          "x-samplevalue": "33.0990"
+        },
+        "2007-12-21": {
+          "type": "string",
+          "x-samplevalue": "33.6360"
+        },
+        "2007-12-28": {
+          "type": "string",
+          "x-samplevalue": "34.2400"
+        },
+        "2008-01-04": {
+          "type": "string",
+          "x-samplevalue": "34.8180"
+        },
+        "2008-01-11": {
+          "type": "string",
+          "x-samplevalue": "34.7880"
+        },
+        "2008-01-18": {
+          "type": "string",
+          "x-samplevalue": "34.5580"
+        },
+        "2008-01-25": {
+          "type": "string",
+          "x-samplevalue": "34.3800"
+        },
+        "2008-02-01": {
+          "type": "string",
+          "x-samplevalue": "34.2860"
+        },
+        "2008-02-08": {
+          "type": "string",
+          "x-samplevalue": "33.9260"
+        },
+        "2008-02-15": {
+          "type": "string",
+          "x-samplevalue": "33.4280"
+        },
+        "2008-02-22": {
+          "type": "string",
+          "x-samplevalue": "32.8440"
+        },
+        "2008-02-29": {
+          "type": "string",
+          "x-samplevalue": "32.1060"
+        },
+        "2008-03-07": {
+          "type": "string",
+          "x-samplevalue": "31.2170"
+        },
+        "2008-03-14": {
+          "type": "string",
+          "x-samplevalue": "30.4100"
+        },
+        "2008-03-20": {
+          "type": "string",
+          "x-samplevalue": "29.6850"
+        },
+        "2008-03-28": {
+          "type": "string",
+          "x-samplevalue": "29.1720"
+        },
+        "2008-04-04": {
+          "type": "string",
+          "x-samplevalue": "28.8060"
+        },
+        "2008-04-11": {
+          "type": "string",
+          "x-samplevalue": "28.4590"
+        },
+        "2008-04-18": {
+          "type": "string",
+          "x-samplevalue": "28.2340"
+        },
+        "2008-04-25": {
+          "type": "string",
+          "x-samplevalue": "28.4020"
+        },
+        "2008-05-02": {
+          "type": "string",
+          "x-samplevalue": "28.5020"
+        },
+        "2008-05-09": {
+          "type": "string",
+          "x-samplevalue": "28.7320"
+        },
+        "2008-05-16": {
+          "type": "string",
+          "x-samplevalue": "28.9430"
+        },
+        "2008-05-23": {
+          "type": "string",
+          "x-samplevalue": "29.1490"
+        },
+        "2008-05-30": {
+          "type": "string",
+          "x-samplevalue": "29.2240"
+        },
+        "2008-06-06": {
+          "type": "string",
+          "x-samplevalue": "29.1150"
+        },
+        "2008-06-13": {
+          "type": "string",
+          "x-samplevalue": "29.0880"
+        },
+        "2008-06-20": {
+          "type": "string",
+          "x-samplevalue": "29.0340"
+        },
+        "2008-06-27": {
+          "type": "string",
+          "x-samplevalue": "29.0380"
+        },
+        "2008-07-03": {
+          "type": "string",
+          "x-samplevalue": "28.7830"
+        },
+        "2008-07-11": {
+          "type": "string",
+          "x-samplevalue": "28.4130"
+        },
+        "2008-07-18": {
+          "type": "string",
+          "x-samplevalue": "27.9290"
+        },
+        "2008-07-25": {
+          "type": "string",
+          "x-samplevalue": "27.5610"
+        },
+        "2008-08-01": {
+          "type": "string",
+          "x-samplevalue": "27.1650"
+        },
+        "2008-08-08": {
+          "type": "string",
+          "x-samplevalue": "26.8960"
+        },
+        "2008-08-15": {
+          "type": "string",
+          "x-samplevalue": "26.8580"
+        },
+        "2008-08-22": {
+          "type": "string",
+          "x-samplevalue": "26.8750"
+        },
+        "2008-08-29": {
+          "type": "string",
+          "x-samplevalue": "26.7350"
+        },
+        "2008-09-05": {
+          "type": "string",
+          "x-samplevalue": "26.6735"
+        },
+        "2008-09-12": {
+          "type": "string",
+          "x-samplevalue": "26.5295"
+        },
+        "2008-09-19": {
+          "type": "string",
+          "x-samplevalue": "26.6115"
+        },
+        "2008-09-26": {
+          "type": "string",
+          "x-samplevalue": "26.7225"
+        },
+        "2008-10-03": {
+          "type": "string",
+          "x-samplevalue": "26.8495"
+        },
+        "2008-10-10": {
+          "type": "string",
+          "x-samplevalue": "26.8195"
+        },
+        "2008-10-17": {
+          "type": "string",
+          "x-samplevalue": "26.5695"
+        },
+        "2008-10-24": {
+          "type": "string",
+          "x-samplevalue": "26.2035"
+        },
+        "2008-10-31": {
+          "type": "string",
+          "x-samplevalue": "25.5925"
+        },
+        "2008-11-07": {
+          "type": "string",
+          "x-samplevalue": "25.0795"
+        },
+        "2008-11-14": {
+          "type": "string",
+          "x-samplevalue": "24.4975"
+        },
+        "2008-11-21": {
+          "type": "string",
+          "x-samplevalue": "23.8505"
+        },
+        "2008-11-28": {
+          "type": "string",
+          "x-samplevalue": "23.1475"
+        },
+        "2008-12-05": {
+          "type": "string",
+          "x-samplevalue": "22.5130"
+        },
+        "2008-12-12": {
+          "type": "string",
+          "x-samplevalue": "21.8540"
+        },
+        "2008-12-19": {
+          "type": "string",
+          "x-samplevalue": "21.2250"
+        },
+        "2008-12-26": {
+          "type": "string",
+          "x-samplevalue": "20.8630"
+        },
+        "2009-01-02": {
+          "type": "string",
+          "x-samplevalue": "20.3580"
+        },
+        "2009-01-09": {
+          "type": "string",
+          "x-samplevalue": "20.2110"
+        },
+        "2009-01-16": {
+          "type": "string",
+          "x-samplevalue": "19.9340"
+        },
+        "2009-01-23": {
+          "type": "string",
+          "x-samplevalue": "19.6955"
+        },
+        "2009-01-30": {
+          "type": "string",
+          "x-samplevalue": "19.4505"
+        },
+        "2009-02-06": {
+          "type": "string",
+          "x-samplevalue": "19.1625"
+        },
+        "2009-02-13": {
+          "type": "string",
+          "x-samplevalue": "19.1440"
+        },
+        "2009-02-20": {
+          "type": "string",
+          "x-samplevalue": "18.9580"
+        },
+        "2009-02-27": {
+          "type": "string",
+          "x-samplevalue": "18.8260"
+        },
+        "2009-03-06": {
+          "type": "string",
+          "x-samplevalue": "18.5055"
+        },
+        "2009-03-13": {
+          "type": "string",
+          "x-samplevalue": "18.1105"
+        },
+        "2009-03-20": {
+          "type": "string",
+          "x-samplevalue": "17.7685"
+        },
+        "2009-03-27": {
+          "type": "string",
+          "x-samplevalue": "17.5345"
+        },
+        "2009-04-03": {
+          "type": "string",
+          "x-samplevalue": "17.3625"
+        },
+        "2009-04-09": {
+          "type": "string",
+          "x-samplevalue": "17.4875"
+        },
+        "2009-04-17": {
+          "type": "string",
+          "x-samplevalue": "17.7555"
+        },
+        "2009-04-24": {
+          "type": "string",
+          "x-samplevalue": "17.6755"
+        },
+        "2009-05-01": {
+          "type": "string",
+          "x-samplevalue": "17.8815"
+        },
+        "2009-05-08": {
+          "type": "string",
+          "x-samplevalue": "18.1165"
+        },
+        "2009-05-15": {
+          "type": "string",
+          "x-samplevalue": "18.4330"
+        },
+        "2009-05-22": {
+          "type": "string",
+          "x-samplevalue": "18.9490"
+        },
+        "2009-05-29": {
+          "type": "string",
+          "x-samplevalue": "19.2250"
+        },
+        "2009-06-05": {
+          "type": "string",
+          "x-samplevalue": "19.5880"
+        },
+        "2009-06-12": {
+          "type": "string",
+          "x-samplevalue": "20.0120"
+        },
+        "2009-06-19": {
+          "type": "string",
+          "x-samplevalue": "20.4810"
+        },
+        "2009-06-26": {
+          "type": "string",
+          "x-samplevalue": "20.9070"
+        },
+        "2009-07-02": {
+          "type": "string",
+          "x-samplevalue": "21.3780"
+        },
+        "2009-07-10": {
+          "type": "string",
+          "x-samplevalue": "21.6440"
+        },
+        "2009-07-17": {
+          "type": "string",
+          "x-samplevalue": "21.8490"
+        },
+        "2009-07-24": {
+          "type": "string",
+          "x-samplevalue": "22.3730"
+        },
+        "2009-07-31": {
+          "type": "string",
+          "x-samplevalue": "22.6810"
+        },
+        "2009-08-07": {
+          "type": "string",
+          "x-samplevalue": "23.1090"
+        },
+        "2009-08-14": {
+          "type": "string",
+          "x-samplevalue": "23.3550"
+        },
+        "2009-08-21": {
+          "type": "string",
+          "x-samplevalue": "23.4890"
+        },
+        "2009-08-28": {
+          "type": "string",
+          "x-samplevalue": "23.6070"
+        },
+        "2009-09-04": {
+          "type": "string",
+          "x-samplevalue": "23.6690"
+        },
+        "2009-09-11": {
+          "type": "string",
+          "x-samplevalue": "23.7710"
+        },
+        "2009-09-18": {
+          "type": "string",
+          "x-samplevalue": "23.9150"
+        },
+        "2009-09-25": {
+          "type": "string",
+          "x-samplevalue": "24.1840"
+        },
+        "2009-10-02": {
+          "type": "string",
+          "x-samplevalue": "24.3000"
+        },
+        "2009-10-09": {
+          "type": "string",
+          "x-samplevalue": "24.4540"
+        },
+        "2009-10-16": {
+          "type": "string",
+          "x-samplevalue": "24.6380"
+        },
+        "2009-10-23": {
+          "type": "string",
+          "x-samplevalue": "24.9410"
+        },
+        "2009-10-30": {
+          "type": "string",
+          "x-samplevalue": "25.4215"
+        },
+        "2009-11-06": {
+          "type": "string",
+          "x-samplevalue": "25.7505"
+        },
+        "2009-11-13": {
+          "type": "string",
+          "x-samplevalue": "26.1555"
+        },
+        "2009-11-20": {
+          "type": "string",
+          "x-samplevalue": "26.6545"
+        },
+        "2009-11-27": {
+          "type": "string",
+          "x-samplevalue": "27.1735"
+        },
+        "2009-12-04": {
+          "type": "string",
+          "x-samplevalue": "27.5775"
+        },
+        "2009-12-11": {
+          "type": "string",
+          "x-samplevalue": "27.9955"
+        },
+        "2009-12-18": {
+          "type": "string",
+          "x-samplevalue": "28.4885"
+        },
+        "2009-12-24": {
+          "type": "string",
+          "x-samplevalue": "28.9625"
+        },
+        "2009-12-31": {
+          "type": "string",
+          "x-samplevalue": "29.4135"
+        },
+        "2010-01-08": {
+          "type": "string",
+          "x-samplevalue": "29.6630"
+        },
+        "2010-01-15": {
+          "type": "string",
+          "x-samplevalue": "29.9640"
+        },
+        "2010-01-22": {
+          "type": "string",
+          "x-samplevalue": "30.1770"
+        },
+        "2010-01-29": {
+          "type": "string",
+          "x-samplevalue": "30.1400"
+        },
+        "2010-02-05": {
+          "type": "string",
+          "x-samplevalue": "29.9950"
+        },
+        "2010-02-12": {
+          "type": "string",
+          "x-samplevalue": "29.8810"
+        },
+        "2010-02-19": {
+          "type": "string",
+          "x-samplevalue": "29.7160"
+        },
+        "2010-02-26": {
+          "type": "string",
+          "x-samplevalue": "29.6090"
+        },
+        "2010-03-05": {
+          "type": "string",
+          "x-samplevalue": "29.4460"
+        },
+        "2010-03-12": {
+          "type": "string",
+          "x-samplevalue": "29.1980"
+        },
+        "2010-03-19": {
+          "type": "string",
+          "x-samplevalue": "29.0540"
+        },
+        "2010-03-26": {
+          "type": "string",
+          "x-samplevalue": "28.9330"
+        },
+        "2010-04-01": {
+          "type": "string",
+          "x-samplevalue": "28.8290"
+        },
+        "2010-04-09": {
+          "type": "string",
+          "x-samplevalue": "28.8180"
+        },
+        "2010-04-16": {
+          "type": "string",
+          "x-samplevalue": "29.0040"
+        },
+        "2010-04-23": {
+          "type": "string",
+          "x-samplevalue": "29.2800"
+        },
+        "2010-04-30": {
+          "type": "string",
+          "x-samplevalue": "29.5670"
+        },
+        "2010-05-07": {
+          "type": "string",
+          "x-samplevalue": "29.7500"
+        },
+        "2010-05-14": {
+          "type": "string",
+          "x-samplevalue": "29.7740"
+        },
+        "2010-05-21": {
+          "type": "string",
+          "x-samplevalue": "29.8340"
+        },
+        "2010-05-28": {
+          "type": "string",
+          "x-samplevalue": "29.6010"
+        },
+        "2010-06-04": {
+          "type": "string",
+          "x-samplevalue": "29.2040"
+        },
+        "2010-06-11": {
+          "type": "string",
+          "x-samplevalue": "28.8150"
+        },
+        "2010-06-18": {
+          "type": "string",
+          "x-samplevalue": "28.4880"
+        },
+        "2010-06-25": {
+          "type": "string",
+          "x-samplevalue": "28.1410"
+        },
+        "2010-07-02": {
+          "type": "string",
+          "x-samplevalue": "27.5150"
+        },
+        "2010-07-09": {
+          "type": "string",
+          "x-samplevalue": "26.7850"
+        },
+        "2010-07-16": {
+          "type": "string",
+          "x-samplevalue": "26.1610"
+        },
+        "2010-07-23": {
+          "type": "string",
+          "x-samplevalue": "25.7560"
+        },
+        "2010-07-30": {
+          "type": "string",
+          "x-samplevalue": "25.4300"
+        },
+        "2010-08-06": {
+          "type": "string",
+          "x-samplevalue": "25.3440"
+        },
+        "2010-08-13": {
+          "type": "string",
+          "x-samplevalue": "25.3460"
+        },
+        "2010-08-20": {
+          "type": "string",
+          "x-samplevalue": "25.2000"
+        },
+        "2010-08-27": {
+          "type": "string",
+          "x-samplevalue": "25.0580"
+        },
+        "2010-09-03": {
+          "type": "string",
+          "x-samplevalue": "24.7540"
+        },
+        "2010-09-10": {
+          "type": "string",
+          "x-samplevalue": "24.7130"
+        },
+        "2010-09-17": {
+          "type": "string",
+          "x-samplevalue": "24.7630"
+        },
+        "2010-09-24": {
+          "type": "string",
+          "x-samplevalue": "24.8480"
+        },
+        "2010-10-01": {
+          "type": "string",
+          "x-samplevalue": "24.8360"
+        },
+        "2010-10-08": {
+          "type": "string",
+          "x-samplevalue": "24.6460"
+        },
+        "2010-10-15": {
+          "type": "string",
+          "x-samplevalue": "24.5210"
+        },
+        "2010-10-22": {
+          "type": "string",
+          "x-samplevalue": "24.5250"
+        },
+        "2010-10-29": {
+          "type": "string",
+          "x-samplevalue": "24.6130"
+        },
+        "2010-11-05": {
+          "type": "string",
+          "x-samplevalue": "24.8570"
+        },
+        "2010-11-12": {
+          "type": "string",
+          "x-samplevalue": "25.1510"
+        },
+        "2010-11-19": {
+          "type": "string",
+          "x-samplevalue": "25.3740"
+        },
+        "2010-11-26": {
+          "type": "string",
+          "x-samplevalue": "25.5190"
+        },
+        "2010-12-03": {
+          "type": "string",
+          "x-samplevalue": "25.5100"
+        },
+        "2010-12-10": {
+          "type": "string",
+          "x-samplevalue": "25.7190"
+        },
+        "2010-12-17": {
+          "type": "string",
+          "x-samplevalue": "26.0500"
+        },
+        "2010-12-23": {
+          "type": "string",
+          "x-samplevalue": "26.3710"
+        },
+        "2010-12-31": {
+          "type": "string",
+          "x-samplevalue": "26.6240"
+        },
+        "2011-01-07": {
+          "type": "string",
+          "x-samplevalue": "26.9050"
+        },
+        "2011-01-14": {
+          "type": "string",
+          "x-samplevalue": "27.0430"
+        },
+        "2011-01-21": {
+          "type": "string",
+          "x-samplevalue": "27.1910"
+        },
+        "2011-01-28": {
+          "type": "string",
+          "x-samplevalue": "27.3600"
+        },
+        "2011-02-04": {
+          "type": "string",
+          "x-samplevalue": "27.5720"
+        },
+        "2011-02-11": {
+          "type": "string",
+          "x-samplevalue": "27.8330"
+        },
+        "2011-02-18": {
+          "type": "string",
+          "x-samplevalue": "27.8605"
+        },
+        "2011-02-25": {
+          "type": "string",
+          "x-samplevalue": "27.8115"
+        },
+        "2011-03-04": {
+          "type": "string",
+          "x-samplevalue": "27.6855"
+        },
+        "2011-03-11": {
+          "type": "string",
+          "x-samplevalue": "27.4865"
+        },
+        "2011-03-18": {
+          "type": "string",
+          "x-samplevalue": "27.2305"
+        },
+        "2011-03-25": {
+          "type": "string",
+          "x-samplevalue": "26.9225"
+        },
+        "2011-04-01": {
+          "type": "string",
+          "x-samplevalue": "26.6725"
+        },
+        "2011-04-08": {
+          "type": "string",
+          "x-samplevalue": "26.4155"
+        },
+        "2011-04-15": {
+          "type": "string",
+          "x-samplevalue": "26.2575"
+        },
+        "2011-04-21": {
+          "type": "string",
+          "x-samplevalue": "25.9875"
+        },
+        "2011-04-29": {
+          "type": "string",
+          "x-samplevalue": "25.8230"
+        },
+        "2011-05-06": {
+          "type": "string",
+          "x-samplevalue": "25.7390"
+        },
+        "2011-05-13": {
+          "type": "string",
+          "x-samplevalue": "25.6500"
+        },
+        "2011-05-20": {
+          "type": "string",
+          "x-samplevalue": "25.5330"
+        },
+        "2011-05-27": {
+          "type": "string",
+          "x-samplevalue": "25.4050"
+        },
+        "2011-06-03": {
+          "type": "string",
+          "x-samplevalue": "25.3830"
+        },
+        "2011-06-10": {
+          "type": "string",
+          "x-samplevalue": "25.2220"
+        },
+        "2011-06-17": {
+          "type": "string",
+          "x-samplevalue": "25.0560"
+        },
+        "2011-06-24": {
+          "type": "string",
+          "x-samplevalue": "24.8540"
+        },
+        "2011-07-01": {
+          "type": "string",
+          "x-samplevalue": "24.7670"
+        },
+        "2011-07-08": {
+          "type": "string",
+          "x-samplevalue": "24.8210"
+        },
+        "2011-07-15": {
+          "type": "string",
+          "x-samplevalue": "24.8890"
+        },
+        "2011-07-22": {
+          "type": "string",
+          "x-samplevalue": "24.9720"
+        },
+        "2011-07-29": {
+          "type": "string",
+          "x-samplevalue": "25.2020"
+        },
+        "2011-08-05": {
+          "type": "string",
+          "x-samplevalue": "25.5320"
+        },
+        "2011-08-12": {
+          "type": "string",
+          "x-samplevalue": "25.5380"
+        },
+        "2011-08-19": {
+          "type": "string",
+          "x-samplevalue": "25.6570"
+        },
+        "2011-08-26": {
+          "type": "string",
+          "x-samplevalue": "25.7200"
+        },
+        "2011-09-02": {
+          "type": "string",
+          "x-samplevalue": "25.8560"
+        },
+        "2011-09-09": {
+          "type": "string",
+          "x-samplevalue": "25.9530"
+        },
+        "2011-09-16": {
+          "type": "string",
+          "x-samplevalue": "25.9035"
+        },
+        "2011-09-23": {
+          "type": "string",
+          "x-samplevalue": "25.9215"
+        },
+        "2011-09-30": {
+          "type": "string",
+          "x-samplevalue": "25.7775"
+        },
+        "2011-10-07": {
+          "type": "string",
+          "x-samplevalue": "25.5235"
+        },
+        "2011-10-14": {
+          "type": "string",
+          "x-samplevalue": "25.4305"
+        },
+        "2011-10-21": {
+          "type": "string",
+          "x-samplevalue": "25.6399"
+        },
+        "2011-10-28": {
+          "type": "string",
+          "x-samplevalue": "25.8219"
+        },
+        "2011-11-04": {
+          "type": "string",
+          "x-samplevalue": "26.0554"
+        },
+        "2011-11-11": {
+          "type": "string",
+          "x-samplevalue": "26.1234"
+        },
+        "2011-11-18": {
+          "type": "string",
+          "x-samplevalue": "26.2914"
+        },
+        "2011-11-25": {
+          "type": "string",
+          "x-samplevalue": "26.2549"
+        },
+        "2011-12-02": {
+          "type": "string",
+          "x-samplevalue": "26.0689"
+        },
+        "2011-12-09": {
+          "type": "string",
+          "x-samplevalue": "26.1279"
+        },
+        "2011-12-16": {
+          "type": "string",
+          "x-samplevalue": "26.1969"
+        },
+        "2011-12-23": {
+          "type": "string",
+          "x-samplevalue": "26.1409"
+        },
+        "2011-12-30": {
+          "type": "string",
+          "x-samplevalue": "26.0255"
+        },
+        "2012-01-06": {
+          "type": "string",
+          "x-samplevalue": "25.9745"
+        },
+        "2012-01-13": {
+          "type": "string",
+          "x-samplevalue": "26.1040"
+        },
+        "2012-01-20": {
+          "type": "string",
+          "x-samplevalue": "26.3230"
+        },
+        "2012-01-27": {
+          "type": "string",
+          "x-samplevalue": "26.5900"
+        },
+        "2012-02-03": {
+          "type": "string",
+          "x-samplevalue": "26.9630"
+        },
+        "2012-02-10": {
+          "type": "string",
+          "x-samplevalue": "27.4730"
+        },
+        "2012-02-17": {
+          "type": "string",
+          "x-samplevalue": "27.9580"
+        },
+        "2012-02-24": {
+          "type": "string",
+          "x-samplevalue": "28.5350"
+        },
+        "2012-03-02": {
+          "type": "string",
+          "x-samplevalue": "29.0570"
+        },
+        "2012-03-09": {
+          "type": "string",
+          "x-samplevalue": "29.6620"
+        },
+        "2012-03-16": {
+          "type": "string",
+          "x-samplevalue": "30.2040"
+        },
+        "2012-03-23": {
+          "type": "string",
+          "x-samplevalue": "30.6525"
+        },
+        "2012-03-30": {
+          "type": "string",
+          "x-samplevalue": "31.0315"
+        },
+        "2012-04-05": {
+          "type": "string",
+          "x-samplevalue": "31.2985"
+        },
+        "2012-04-13": {
+          "type": "string",
+          "x-samplevalue": "31.5235"
+        },
+        "2012-04-20": {
+          "type": "string",
+          "x-samplevalue": "31.6185"
+        },
+        "2012-04-27": {
+          "type": "string",
+          "x-samplevalue": "31.7865"
+        },
+        "2012-05-04": {
+          "type": "string",
+          "x-samplevalue": "31.8665"
+        },
+        "2012-05-11": {
+          "type": "string",
+          "x-samplevalue": "31.8125"
+        },
+        "2012-05-18": {
+          "type": "string",
+          "x-samplevalue": "31.6935"
+        },
+        "2012-05-25": {
+          "type": "string",
+          "x-samplevalue": "31.4065"
+        },
+        "2012-06-01": {
+          "type": "string",
+          "x-samplevalue": "31.0910"
+        },
+        "2012-06-08": {
+          "type": "string",
+          "x-samplevalue": "30.7340"
+        },
+        "2012-06-15": {
+          "type": "string",
+          "x-samplevalue": "30.4850"
+        },
+        "2012-06-22": {
+          "type": "string",
+          "x-samplevalue": "30.3620"
+        },
+        "2012-06-29": {
+          "type": "string",
+          "x-samplevalue": "30.2930"
+        },
+        "2012-07-06": {
+          "type": "string",
+          "x-samplevalue": "30.1240"
+        },
+        "2012-07-13": {
+          "type": "string",
+          "x-samplevalue": "29.9380"
+        },
+        "2012-07-20": {
+          "type": "string",
+          "x-samplevalue": "29.8160"
+        },
+        "2012-07-27": {
+          "type": "string",
+          "x-samplevalue": "29.6910"
+        },
+        "2012-08-03": {
+          "type": "string",
+          "x-samplevalue": "29.7560"
+        },
+        "2012-08-10": {
+          "type": "string",
+          "x-samplevalue": "29.8180"
+        },
+        "2012-08-17": {
+          "type": "string",
+          "x-samplevalue": "29.9910"
+        },
+        "2012-08-24": {
+          "type": "string",
+          "x-samplevalue": "30.1000"
+        },
+        "2012-08-31": {
+          "type": "string",
+          "x-samplevalue": "30.1940"
+        },
+        "2012-09-07": {
+          "type": "string",
+          "x-samplevalue": "30.2090"
+        },
+        "2012-09-14": {
+          "type": "string",
+          "x-samplevalue": "30.2300"
+        },
+        "2012-09-21": {
+          "type": "string",
+          "x-samplevalue": "30.3370"
+        },
+        "2012-09-28": {
+          "type": "string",
+          "x-samplevalue": "30.4890"
+        },
+        "2012-10-05": {
+          "type": "string",
+          "x-samplevalue": "30.5130"
+        },
+        "2012-10-12": {
+          "type": "string",
+          "x-samplevalue": "30.5020"
+        },
+        "2012-10-19": {
+          "type": "string",
+          "x-samplevalue": "30.4390"
+        },
+        "2012-10-26": {
+          "type": "string",
+          "x-samplevalue": "30.2770"
+        },
+        "2012-11-02": {
+          "type": "string",
+          "x-samplevalue": "30.0500"
+        },
+        "2012-11-09": {
+          "type": "string",
+          "x-samplevalue": "29.9190"
+        },
+        "2012-11-16": {
+          "type": "string",
+          "x-samplevalue": "29.7680"
+        },
+        "2012-11-23": {
+          "type": "string",
+          "x-samplevalue": "29.3650"
+        },
+        "2012-11-30": {
+          "type": "string",
+          "x-samplevalue": "29.0000"
+        },
+        "2012-12-07": {
+          "type": "string",
+          "x-samplevalue": "28.5780"
+        },
+        "2012-12-14": {
+          "type": "string",
+          "x-samplevalue": "28.2530"
+        },
+        "2012-12-21": {
+          "type": "string",
+          "x-samplevalue": "27.9680"
+        },
+        "2012-12-28": {
+          "type": "string",
+          "x-samplevalue": "27.7510"
+        },
+        "2013-01-04": {
+          "type": "string",
+          "x-samplevalue": "27.5370"
+        },
+        "2013-01-11": {
+          "type": "string",
+          "x-samplevalue": "27.3590"
+        },
+        "2013-01-18": {
+          "type": "string",
+          "x-samplevalue": "27.0870"
+        },
+        "2013-01-25": {
+          "type": "string",
+          "x-samplevalue": "26.9230"
+        },
+        "2013-02-01": {
+          "type": "string",
+          "x-samplevalue": "27.0440"
+        },
+        "2013-02-08": {
+          "type": "string",
+          "x-samplevalue": "27.0770"
+        },
+        "2013-02-15": {
+          "type": "string",
+          "x-samplevalue": "27.1640"
+        },
+        "2013-02-22": {
+          "type": "string",
+          "x-samplevalue": "27.2960"
+        },
+        "2013-03-01": {
+          "type": "string",
+          "x-samplevalue": "27.4140"
+        },
+        "2013-03-08": {
+          "type": "string",
+          "x-samplevalue": "27.4790"
+        },
+        "2013-03-15": {
+          "type": "string",
+          "x-samplevalue": "27.6140"
+        },
+        "2013-03-22": {
+          "type": "string",
+          "x-samplevalue": "27.7250"
+        },
+        "2013-03-28": {
+          "type": "string",
+          "x-samplevalue": "27.8650"
+        },
+        "2013-04-05": {
+          "type": "string",
+          "x-samplevalue": "27.9990"
+        },
+        "2013-04-12": {
+          "type": "string",
+          "x-samplevalue": "28.0710"
+        },
+        "2013-04-19": {
+          "type": "string",
+          "x-samplevalue": "28.1490"
+        },
+        "2013-04-26": {
+          "type": "string",
+          "x-samplevalue": "28.4130"
+        },
+        "2013-05-03": {
+          "type": "string",
+          "x-samplevalue": "28.8050"
+        },
+        "2013-05-10": {
+          "type": "string",
+          "x-samplevalue": "29.3500"
+        },
+        "2013-05-17": {
+          "type": "string",
+          "x-samplevalue": "29.8260"
+        },
+        "2013-05-24": {
+          "type": "string",
+          "x-samplevalue": "30.5050"
+        },
+        "2013-05-31": {
+          "type": "string",
+          "x-samplevalue": "31.1590"
+        },
+        "2013-06-07": {
+          "type": "string",
+          "x-samplevalue": "31.8210"
+        },
+        "2013-06-14": {
+          "type": "string",
+          "x-samplevalue": "32.5080"
+        },
+        "2013-06-21": {
+          "type": "string",
+          "x-samplevalue": "33.1040"
+        },
+        "2013-06-28": {
+          "type": "string",
+          "x-samplevalue": "33.5330"
+        },
+        "2013-07-05": {
+          "type": "string",
+          "x-samplevalue": "33.9790"
+        },
+        "2013-07-12": {
+          "type": "string",
+          "x-samplevalue": "34.2340"
+        },
+        "2013-07-19": {
+          "type": "string",
+          "x-samplevalue": "34.4580"
+        },
+        "2013-07-26": {
+          "type": "string",
+          "x-samplevalue": "34.3670"
+        },
+        "2013-08-02": {
+          "type": "string",
+          "x-samplevalue": "34.0410"
+        },
+        "2013-08-09": {
+          "type": "string",
+          "x-samplevalue": "33.7890"
+        },
+        "2013-08-16": {
+          "type": "string",
+          "x-samplevalue": "33.5430"
+        },
+        "2013-08-23": {
+          "type": "string",
+          "x-samplevalue": "33.1680"
+        },
+        "2013-08-30": {
+          "type": "string",
+          "x-samplevalue": "33.1390"
+        },
+        "2013-09-06": {
+          "type": "string",
+          "x-samplevalue": "33.0200"
+        },
+        "2013-09-13": {
+          "type": "string",
+          "x-samplevalue": "32.6671"
+        },
+        "2013-09-20": {
+          "type": "string",
+          "x-samplevalue": "32.5701"
+        },
+        "2013-09-27": {
+          "type": "string",
+          "x-samplevalue": "32.2581"
+        },
+        "2013-10-04": {
+          "type": "string",
+          "x-samplevalue": "32.3881"
+        },
+        "2013-10-11": {
+          "type": "string",
+          "x-samplevalue": "32.6011"
+        },
+        "2013-10-18": {
+          "type": "string",
+          "x-samplevalue": "32.8011"
+        },
+        "2013-10-25": {
+          "type": "string",
+          "x-samplevalue": "33.0531"
+        },
+        "2013-11-01": {
+          "type": "string",
+          "x-samplevalue": "33.4381"
+        },
+        "2013-11-08": {
+          "type": "string",
+          "x-samplevalue": "33.5571"
+        },
+        "2013-11-15": {
+          "type": "string",
+          "x-samplevalue": "34.1511"
+        },
+        "2013-11-22": {
+          "type": "string",
+          "x-samplevalue": "34.7640"
+        },
+        "2013-11-29": {
+          "type": "string",
+          "x-samplevalue": "35.2190"
+        },
+        "2013-12-06": {
+          "type": "string",
+          "x-samplevalue": "35.7740"
+        },
+        "2013-12-13": {
+          "type": "string",
+          "x-samplevalue": "36.3300"
+        },
+        "2013-12-20": {
+          "type": "string",
+          "x-samplevalue": "36.6430"
+        },
+        "2013-12-27": {
+          "type": "string",
+          "x-samplevalue": "36.9340"
+        },
+        "2014-01-03": {
+          "type": "string",
+          "x-samplevalue": "37.1580"
+        },
+        "2014-01-10": {
+          "type": "string",
+          "x-samplevalue": "37.2820"
+        },
+        "2014-01-17": {
+          "type": "string",
+          "x-samplevalue": "37.3220"
+        },
+        "2014-01-24": {
+          "type": "string",
+          "x-samplevalue": "37.2350"
+        },
+        "2014-01-31": {
+          "type": "string",
+          "x-samplevalue": "37.1870"
+        },
+        "2014-02-07": {
+          "type": "string",
+          "x-samplevalue": "37.1680"
+        },
+        "2014-02-14": {
+          "type": "string",
+          "x-samplevalue": "37.0220"
+        },
+        "2014-02-21": {
+          "type": "string",
+          "x-samplevalue": "36.9290"
+        },
+        "2014-02-28": {
+          "type": "string",
+          "x-samplevalue": "37.0250"
+        },
+        "2014-03-07": {
+          "type": "string",
+          "x-samplevalue": "37.1360"
+        },
+        "2014-03-14": {
+          "type": "string",
+          "x-samplevalue": "37.2130"
+        },
+        "2014-03-21": {
+          "type": "string",
+          "x-samplevalue": "37.3180"
+        },
+        "2014-03-28": {
+          "type": "string",
+          "x-samplevalue": "37.7530"
+        },
+        "2014-04-04": {
+          "type": "string",
+          "x-samplevalue": "38.1140"
+        },
+        "2014-04-11": {
+          "type": "string",
+          "x-samplevalue": "38.4230"
+        },
+        "2014-04-17": {
+          "type": "string",
+          "x-samplevalue": "38.5600"
+        },
+        "2014-04-25": {
+          "type": "string",
+          "x-samplevalue": "38.9100"
+        },
+        "2014-05-02": {
+          "type": "string",
+          "x-samplevalue": "39.1610"
+        },
+        "2014-05-09": {
+          "type": "string",
+          "x-samplevalue": "39.3440"
+        },
+        "2014-05-16": {
+          "type": "string",
+          "x-samplevalue": "39.5260"
+        },
+        "2014-05-23": {
+          "type": "string",
+          "x-samplevalue": "39.6880"
+        },
+        "2014-05-30": {
+          "type": "string",
+          "x-samplevalue": "39.9240"
+        },
+        "2014-06-06": {
+          "type": "string",
+          "x-samplevalue": "39.9850"
+        },
+        "2014-06-13": {
+          "type": "string",
+          "x-samplevalue": "40.0810"
+        },
+        "2014-06-20": {
+          "type": "string",
+          "x-samplevalue": "40.1890"
+        },
+        "2014-06-27": {
+          "type": "string",
+          "x-samplevalue": "40.4510"
+        },
+        "2014-07-03": {
+          "type": "string",
+          "x-samplevalue": "40.6550"
+        },
+        "2014-07-11": {
+          "type": "string",
+          "x-samplevalue": "40.8160"
+        },
+        "2014-07-18": {
+          "type": "string",
+          "x-samplevalue": "41.0860"
+        },
+        "2014-07-25": {
+          "type": "string",
+          "x-samplevalue": "41.5680"
+        },
+        "2014-08-01": {
+          "type": "string",
+          "x-samplevalue": "42.0430"
+        },
+        "2014-08-08": {
+          "type": "string",
+          "x-samplevalue": "42.3140"
+        },
+        "2014-08-15": {
+          "type": "string",
+          "x-samplevalue": "42.5450"
+        },
+        "2014-08-22": {
+          "type": "string",
+          "x-samplevalue": "42.9000"
+        },
+        "2014-08-29": {
+          "type": "string",
+          "x-samplevalue": "43.3360"
+        },
+        "2014-09-05": {
+          "type": "string",
+          "x-samplevalue": "43.7060"
+        },
+        "2014-09-12": {
+          "type": "string",
+          "x-samplevalue": "44.0910"
+        },
+        "2014-09-19": {
+          "type": "string",
+          "x-samplevalue": "44.5700"
+        },
+        "2014-09-26": {
+          "type": "string",
+          "x-samplevalue": "45.0780"
+        },
+        "2014-10-03": {
+          "type": "string",
+          "x-samplevalue": "45.2200"
+        },
+        "2014-10-10": {
+          "type": "string",
+          "x-samplevalue": "45.3960"
+        },
+        "2014-10-17": {
+          "type": "string",
+          "x-samplevalue": "45.4810"
+        },
+        "2014-10-24": {
+          "type": "string",
+          "x-samplevalue": "45.4610"
+        },
+        "2014-10-31": {
+          "type": "string",
+          "x-samplevalue": "45.5380"
+        },
+        "2014-11-07": {
+          "type": "string",
+          "x-samplevalue": "45.6870"
+        },
+        "2014-11-14": {
+          "type": "string",
+          "x-samplevalue": "46.0090"
+        },
+        "2014-11-21": {
+          "type": "string",
+          "x-samplevalue": "46.3480"
+        },
+        "2014-11-28": {
+          "type": "string",
+          "x-samplevalue": "46.4930"
+        },
+        "2014-12-05": {
+          "type": "string",
+          "x-samplevalue": "46.5510"
+        },
+        "2014-12-12": {
+          "type": "string",
+          "x-samplevalue": "46.7790"
+        },
+        "2014-12-19": {
+          "type": "string",
+          "x-samplevalue": "46.8870"
+        },
+        "2014-12-26": {
+          "type": "string",
+          "x-samplevalue": "47.2830"
+        },
+        "2015-01-02": {
+          "type": "string",
+          "x-samplevalue": "47.7470"
+        },
+        "2015-01-09": {
+          "type": "string",
+          "x-samplevalue": "47.8130"
+        },
+        "2015-01-16": {
+          "type": "string",
+          "x-samplevalue": "47.8660"
+        },
+        "2015-01-23": {
+          "type": "string",
+          "x-samplevalue": "47.6310"
+        },
+        "2015-01-30": {
+          "type": "string",
+          "x-samplevalue": "47.3900"
+        },
+        "2015-02-06": {
+          "type": "string",
+          "x-samplevalue": "46.6500"
+        },
+        "2015-02-13": {
+          "type": "string",
+          "x-samplevalue": "46.0860"
+        },
+        "2015-02-20": {
+          "type": "string",
+          "x-samplevalue": "45.6570"
+        },
+        "2015-02-27": {
+          "type": "string",
+          "x-samplevalue": "45.3070"
+        },
+        "2015-03-06": {
+          "type": "string",
+          "x-samplevalue": "44.8960"
+        },
+        "2015-03-13": {
+          "type": "string",
+          "x-samplevalue": "44.3450"
+        },
+        "2015-03-20": {
+          "type": "string",
+          "x-samplevalue": "43.8550"
+        },
+        "2015-03-27": {
+          "type": "string",
+          "x-samplevalue": "43.4010"
+        },
+        "2015-04-02": {
+          "type": "string",
+          "x-samplevalue": "42.8810"
+        },
+        "2015-04-10": {
+          "type": "string",
+          "x-samplevalue": "42.2150"
+        },
+        "2015-04-17": {
+          "type": "string",
+          "x-samplevalue": "42.2960"
+        },
+        "2015-04-24": {
+          "type": "string",
+          "x-samplevalue": "42.2450"
+        },
+        "2015-05-01": {
+          "type": "string",
+          "x-samplevalue": "42.5710"
+        },
+        "2015-05-08": {
+          "type": "string",
+          "x-samplevalue": "43.0380"
+        },
+        "2015-05-15": {
+          "type": "string",
+          "x-samplevalue": "43.4260"
+        },
+        "2015-05-22": {
+          "type": "string",
+          "x-samplevalue": "44.0050"
+        },
+        "2015-05-29": {
+          "type": "string",
+          "x-samplevalue": "44.5410"
+        },
+        "2015-06-05": {
+          "type": "string",
+          "x-samplevalue": "44.9590"
+        },
+        "2015-06-12": {
+          "type": "string",
+          "x-samplevalue": "45.4790"
+        },
+        "2015-06-19": {
+          "type": "string",
+          "x-samplevalue": "45.9900"
+        },
+        "2015-06-26": {
+          "type": "string",
+          "x-samplevalue": "46.4830"
+        },
+        "2015-07-02": {
+          "type": "string",
+          "x-samplevalue": "46.8140"
+        },
+        "2015-07-10": {
+          "type": "string",
+          "x-samplevalue": "46.4870"
+        },
+        "2015-07-17": {
+          "type": "string",
+          "x-samplevalue": "46.1475"
+        },
+        "2015-07-24": {
+          "type": "string",
+          "x-samplevalue": "46.0575"
+        },
+        "2015-07-31": {
+          "type": "string",
+          "x-samplevalue": "45.8535"
+        },
+        "2015-08-07": {
+          "type": "string",
+          "x-samplevalue": "45.8685"
+        },
+        "2015-08-14": {
+          "type": "string",
+          "x-samplevalue": "45.8575"
+        },
+        "2015-08-21": {
+          "type": "string",
+          "x-samplevalue": "45.9085"
+        },
+        "2015-08-28": {
+          "type": "string",
+          "x-samplevalue": "45.4085"
+        },
+        "2015-09-04": {
+          "type": "string",
+          "x-samplevalue": "45.1495"
+        },
+        "2015-09-11": {
+          "type": "string",
+          "x-samplevalue": "44.9755"
+        },
+        "2015-09-18": {
+          "type": "string",
+          "x-samplevalue": "44.9225"
+        },
+        "2015-09-25": {
+          "type": "string",
+          "x-samplevalue": "44.7870"
+        },
+        "2015-10-02": {
+          "type": "string",
+          "x-samplevalue": "44.5050"
+        },
+        "2015-10-09": {
+          "type": "string",
+          "x-samplevalue": "44.4855"
+        },
+        "2015-10-16": {
+          "type": "string",
+          "x-samplevalue": "44.4855"
+        },
+        "2015-10-23": {
+          "type": "string",
+          "x-samplevalue": "44.5325"
+        },
+        "2015-10-30": {
+          "type": "string",
+          "x-samplevalue": "45.1045"
+        },
+        "2015-11-06": {
+          "type": "string",
+          "x-samplevalue": "46.3445"
+        },
+        "2015-11-13": {
+          "type": "string",
+          "x-samplevalue": "47.4255"
+        },
+        "2015-11-20": {
+          "type": "string",
+          "x-samplevalue": "48.4035"
+        },
+        "2015-11-27": {
+          "type": "string",
+          "x-samplevalue": "49.4855"
+        },
+        "2015-12-04": {
+          "type": "string",
+          "x-samplevalue": "50.5775"
+        },
+        "2015-12-11": {
+          "type": "string",
+          "x-samplevalue": "51.7735"
+        },
+        "2015-12-18": {
+          "type": "string",
+          "x-samplevalue": "52.6320"
+        },
+        "2015-12-24": {
+          "type": "string",
+          "x-samplevalue": "53.4220"
+        },
+        "2015-12-31": {
+          "type": "string",
+          "x-samplevalue": "54.2150"
+        },
+        "2016-01-08": {
+          "type": "string",
+          "x-samplevalue": "54.3940"
+        },
+        "2016-01-15": {
+          "type": "string",
+          "x-samplevalue": "54.3600"
+        },
+        "2016-01-22": {
+          "type": "string",
+          "x-samplevalue": "54.0530"
+        },
+        "2016-01-29": {
+          "type": "string",
+          "x-samplevalue": "53.9390"
+        },
+        "2016-02-05": {
+          "type": "string",
+          "x-samplevalue": "54.0020"
+        },
+        "2016-02-12": {
+          "type": "string",
+          "x-samplevalue": "53.5030"
+        },
+        "2016-02-19": {
+          "type": "string",
+          "x-samplevalue": "53.0140"
+        },
+        "2016-02-26": {
+          "type": "string",
+          "x-samplevalue": "52.8090"
+        },
+        "2016-03-04": {
+          "type": "string",
+          "x-samplevalue": "52.4560"
+        },
+        "2016-03-11": {
+          "type": "string",
+          "x-samplevalue": "52.0770"
+        },
+        "2016-03-18": {
+          "type": "string",
+          "x-samplevalue": "51.9160"
+        },
+        "2016-03-24": {
+          "type": "string",
+          "x-samplevalue": "51.9900"
+        },
+        "2016-04-01": {
+          "type": "string",
+          "x-samplevalue": "52.2630"
+        },
+        "2016-04-08": {
+          "type": "string",
+          "x-samplevalue": "52.6120"
+        },
+        "2016-04-15": {
+          "type": "string",
+          "x-samplevalue": "52.5730"
+        },
+        "2016-04-22": {
+          "type": "string",
+          "x-samplevalue": "53.1670"
+        },
+        "2016-04-29": {
+          "type": "string",
+          "x-samplevalue": "53.2550"
+        },
+        "2016-05-06": {
+          "type": "string",
+          "x-samplevalue": "53.0270"
+        },
+        "2016-05-13": {
+          "type": "string",
+          "x-samplevalue": "52.9410"
+        },
+        "2016-05-20": {
+          "type": "string",
+          "x-samplevalue": "52.8650"
+        },
+        "2016-05-27": {
+          "type": "string",
+          "x-samplevalue": "52.6540"
+        },
+        "2016-06-03": {
+          "type": "string",
+          "x-samplevalue": "52.5550"
+        },
+        "2016-06-10": {
+          "type": "string",
+          "x-samplevalue": "52.3330"
+        },
+        "2016-06-17": {
+          "type": "string",
+          "x-samplevalue": "51.7480"
+        },
+        "2016-06-24": {
+          "type": "string",
+          "x-samplevalue": "51.3630"
+        },
+        "2016-07-01": {
+          "type": "string",
+          "x-samplevalue": "50.7240"
+        },
+        "2016-07-08": {
+          "type": "string",
+          "x-samplevalue": "50.6290"
+        },
+        "2016-07-15": {
+          "type": "string",
+          "x-samplevalue": "50.8790"
+        },
+        "2016-07-22": {
+          "type": "string",
+          "x-samplevalue": "51.2000"
+        },
+        "2016-07-29": {
+          "type": "string",
+          "x-samplevalue": "51.7670"
+        },
+        "2016-08-05": {
+          "type": "string",
+          "x-samplevalue": "52.3670"
+        },
+        "2016-08-12": {
+          "type": "string",
+          "x-samplevalue": "52.9465"
+        },
+        "2016-08-19": {
+          "type": "string",
+          "x-samplevalue": "53.5485"
+        },
+        "2016-08-26": {
+          "type": "string",
+          "x-samplevalue": "54.3505"
+        },
+        "2016-09-02": {
+          "type": "string",
+          "x-samplevalue": "55.1045"
+        },
+        "2016-09-09": {
+          "type": "string",
+          "x-samplevalue": "55.9725"
+        },
+        "2016-09-16": {
+          "type": "string",
+          "x-samplevalue": "56.4895"
+        },
+        "2016-09-23": {
+          "type": "string",
+          "x-samplevalue": "56.9665"
+        },
+        "2016-09-30": {
+          "type": "string",
+          "x-samplevalue": "57.3045"
+        },
+        "2016-10-07": {
+          "type": "string",
+          "x-samplevalue": "57.3980"
+        },
+        "2016-10-14": {
+          "type": "string",
+          "x-samplevalue": "57.5290"
+        },
+        "2016-10-21": {
+          "type": "string",
+          "x-samplevalue": "57.4595"
+        },
+        "2016-10-28": {
+          "type": "string",
+          "x-samplevalue": "57.6525"
+        },
+        "2016-11-04": {
+          "type": "string",
+          "x-samplevalue": "57.9085"
+        },
+        "2016-11-11": {
+          "type": "string",
+          "x-samplevalue": "58.0685"
+        },
+        "2016-11-18": {
+          "type": "string",
+          "x-samplevalue": "58.1925"
+        },
+        "2016-11-25": {
+          "type": "string",
+          "x-samplevalue": "58.6425"
+        },
+        "2016-12-02": {
+          "type": "string",
+          "x-samplevalue": "58.9495"
+        },
+        "2016-12-09": {
+          "type": "string",
+          "x-samplevalue": "59.2115"
+        },
+        "2016-12-16": {
+          "type": "string",
+          "x-samplevalue": "59.6530"
+        },
+        "2016-12-23": {
+          "type": "string",
+          "x-samplevalue": "60.1180"
+        },
+        "2016-12-30": {
+          "type": "string",
+          "x-samplevalue": "60.7030"
+        },
+        "2017-01-06": {
+          "type": "string",
+          "x-samplevalue": "60.9880"
+        },
+        "2017-01-13": {
+          "type": "string",
+          "x-samplevalue": "61.2480"
+        },
+        "2017-01-20": {
+          "type": "string",
+          "x-samplevalue": "61.5380"
+        },
+        "2017-01-27": {
+          "type": "string",
+          "x-samplevalue": "61.9060"
+        },
+        "2017-02-03": {
+          "type": "string",
+          "x-samplevalue": "62.4250"
+        },
+        "2017-02-10": {
+          "type": "string",
+          "x-samplevalue": "62.7410"
+        },
+        "2017-02-17": {
+          "type": "string",
+          "x-samplevalue": "63.1950"
+        },
+        "2017-02-24": {
+          "type": "string",
+          "x-samplevalue": "63.4740"
+        },
+        "2017-03-03": {
+          "type": "string",
+          "x-samplevalue": "63.6720"
+        },
+        "2017-03-10": {
+          "type": "string",
+          "x-samplevalue": "63.7480"
+        },
+        "2017-03-17": {
+          "type": "string",
+          "x-samplevalue": "63.9700"
+        },
+        "2017-03-24": {
+          "type": "string",
+          "x-samplevalue": "64.1850"
+        },
+        "2017-03-31": {
+          "type": "string",
+          "x-samplevalue": "64.3800"
+        },
+        "2017-04-07": {
+          "type": "string",
+          "x-samplevalue": "64.6910"
+        },
+        "2017-04-13": {
+          "type": "string",
+          "x-samplevalue": "64.6830"
+        },
+        "2017-04-21": {
+          "type": "string",
+          "x-samplevalue": "64.8370"
+        },
+        "2017-04-28": {
+          "type": "string",
+          "x-samplevalue": "65.1610"
+        },
+        "2017-05-05": {
+          "type": "string",
+          "x-samplevalue": "65.5680"
+        },
+        "2017-05-12": {
+          "type": "string",
+          "x-samplevalue": "66.0110"
+        },
+        "2017-05-19": {
+          "type": "string",
+          "x-samplevalue": "66.4280"
+        },
+        "2017-05-26": {
+          "type": "string",
+          "x-samplevalue": "66.7160"
+        },
+        "2017-06-02": {
+          "type": "string",
+          "x-samplevalue": "67.2040"
+        },
+        "2017-06-09": {
+          "type": "string",
+          "x-samplevalue": "67.9380"
+        },
+        "2017-06-16": {
+          "type": "string",
+          "x-samplevalue": "68.2820"
+        },
+        "2017-06-23": {
+          "type": "string",
+          "x-samplevalue": "68.7710"
+        },
+        "2017-06-30": {
+          "type": "string",
+          "x-samplevalue": "69.4070"
+        },
+        "2017-07-07": {
+          "type": "string",
+          "x-samplevalue": "69.5920"
+        },
+        "2017-07-14": {
+          "type": "string",
+          "x-samplevalue": "69.6700"
+        },
+        "2017-07-21": {
+          "type": "string",
+          "x-samplevalue": "70.0530"
+        },
+        "2017-07-28": {
+          "type": "string",
+          "x-samplevalue": "70.5920"
+        },
+        "2017-08-04": {
+          "type": "string",
+          "x-samplevalue": "71.1330"
+        },
+        "2017-08-11": {
+          "type": "string",
+          "x-samplevalue": "71.4340"
+        },
+        "2017-08-18": {
+          "type": "string",
+          "x-samplevalue": "71.5430"
+        },
+        "2017-08-25": {
+          "type": "string",
+          "x-samplevalue": "71.8650"
+        },
+        "2017-09-01": {
+          "type": "string",
+          "x-samplevalue": "72.1210"
+        },
+        "2017-09-08": {
+          "type": "string",
+          "x-samplevalue": "72.3150"
+        },
+        "2017-09-15": {
+          "type": "string",
+          "x-samplevalue": "72.8130"
+        },
+        "2017-09-22": {
+          "type": "string",
+          "x-samplevalue": "73.3900"
+        },
+        "2017-09-29": {
+          "type": "string",
+          "x-samplevalue": "73.5190"
+        },
+        "2017-10-06": {
+          "type": "string",
+          "x-samplevalue": "73.6370"
+        },
+        "2017-10-13": {
+          "type": "string",
+          "x-samplevalue": "73.9040"
+        },
+        "2017-10-20": {
+          "type": "string",
+          "x-samplevalue": "74.3660"
+        },
+        "2017-10-27": {
+          "type": "string",
+          "x-samplevalue": "74.9590"
+        },
+        "2017-11-03": {
+          "type": "string",
+          "x-samplevalue": "76.0820"
+        },
+        "2017-11-10": {
+          "type": "string",
+          "x-samplevalue": "77.1960"
+        },
+        "2017-11-17": {
+          "type": "string",
+          "x-samplevalue": "78.2280"
+        },
+        "2017-11-24": {
+          "type": "string",
+          "x-samplevalue": "79.0370"
+        },
+        "2017-12-01": {
+          "type": "string",
+          "x-samplevalue": "79.8450"
+        },
+        "2017-12-08": {
+          "type": "string",
+          "x-samplevalue": "80.8780"
+        },
+        "2017-12-15": {
+          "type": "string",
+          "x-samplevalue": "81.8360"
+        },
+        "2017-12-22": {
+          "type": "string",
+          "x-samplevalue": "82.9510"
+        },
+        "2017-12-29": {
+          "type": "string",
+          "x-samplevalue": "83.7400"
+        },
+        "2018-01-05": {
+          "type": "string",
+          "x-samplevalue": "84.4535"
+        },
+        "2018-01-12": {
+          "type": "string",
+          "x-samplevalue": "84.9035"
+        },
+        "2018-01-19": {
+          "type": "string",
+          "x-samplevalue": "85.4935"
+        },
+        "2018-01-26": {
+          "type": "string",
+          "x-samplevalue": "86.1275"
+        },
+        "2018-02-02": {
+          "type": "string",
+          "x-samplevalue": "87.4015"
+        },
+        "2018-02-09": {
+          "type": "string",
+          "x-samplevalue": "88.1265"
+        },
+        "2018-02-16": {
+          "type": "string",
+          "x-samplevalue": "88.5580"
+        },
+        "2018-02-23": {
+          "type": "string",
+          "x-samplevalue": "89.2765"
+        },
+        "2018-03-02": {
+          "type": "string",
+          "x-samplevalue": "90.0045"
+        },
+        "2018-03-09": {
+          "type": "string",
+          "x-samplevalue": "90.7075"
+        },
+        "2018-03-16": {
+          "type": "string",
+          "x-samplevalue": "91.7450"
+        },
+        "2018-03-23": {
+          "type": "string",
+          "x-samplevalue": "92.2990"
+        },
+        "2018-03-29": {
+          "type": "string",
+          "x-samplevalue": "92.3500"
+        },
+        "2018-04-06": {
+          "type": "string",
+          "x-samplevalue": "92.3970"
+        },
+        "2018-04-13": {
+          "type": "string",
+          "x-samplevalue": "91.9870"
+        },
+        "2018-04-20": {
+          "type": "string",
+          "x-samplevalue": "92.3380"
+        },
+        "2018-04-27": {
+          "type": "string",
+          "x-samplevalue": "93.0389"
+        },
+        "2018-05-04": {
+          "type": "string",
+          "x-samplevalue": "93.5244"
+        },
+        "2018-05-11": {
+          "type": "string",
+          "x-samplevalue": "93.6014"
+        },
+        "2018-05-18": {
+          "type": "string",
+          "x-samplevalue": "94.1594"
+        },
+        "2018-05-25": {
+          "type": "string",
+          "x-samplevalue": "94.2094"
+        },
+        "2018-06-01": {
+          "type": "string",
+          "x-samplevalue": "94.6194"
+        },
+        "2018-06-08": {
+          "type": "string",
+          "x-samplevalue": "95.6844"
+        },
+        "2018-06-15": {
+          "type": "string",
+          "x-samplevalue": "96.7744"
+        },
+        "2018-06-22": {
+          "type": "string",
+          "x-samplevalue": "97.6714"
+        },
+        "2018-06-29": {
+          "type": "string",
+          "x-samplevalue": "98.2644"
+        },
+        "2018-07-06": {
+          "type": "string",
+          "x-samplevalue": "98.5000"
+        },
+        "2018-07-13": {
+          "type": "string",
+          "x-samplevalue": "99.0315"
+        },
+        "2018-07-20": {
+          "type": "string",
+          "x-samplevalue": "100.0545"
+        },
+        "2018-07-27": {
+          "type": "string",
+          "x-samplevalue": "100.8925"
+        },
+        "2018-08-03": {
+          "type": "string",
+          "x-samplevalue": "101.9115"
+        },
+        "2018-08-10": {
+          "type": "string",
+          "x-samplevalue": "102.9395"
+        },
+        "2018-08-17": {
+          "type": "string",
+          "x-samplevalue": "103.7375"
+        },
+        "2018-08-24": {
+          "type": "string",
+          "x-samplevalue": "104.3515"
+        },
+        "2018-08-31": {
+          "type": "string",
+          "x-samplevalue": "105.2775"
+        },
+        "2018-09-07": {
+          "type": "string",
+          "x-samplevalue": "106.3625"
+        },
+        "2018-09-14": {
+          "type": "string",
+          "x-samplevalue": "107.4365"
+        },
+        "2018-09-21": {
+          "type": "string",
+          "x-samplevalue": "108.6410"
+        },
+        "2018-09-28": {
+          "type": "string",
+          "x-samplevalue": "109.4040"
+        },
+        "2018-10-05": {
+          "type": "string",
+          "x-samplevalue": "110.2490"
+        },
+        "2018-10-12": {
+          "type": "string",
+          "x-samplevalue": "110.6960"
+        },
+        "2018-10-19": {
+          "type": "string",
+          "x-samplevalue": "110.7750"
+        },
+        "2018-10-26": {
+          "type": "string",
+          "x-samplevalue": "110.7830"
+        },
+        "2018-11-02": {
+          "type": "string",
+          "x-samplevalue": "110.8425"
+        },
+        "2018-11-09": {
+          "type": "string",
+          "x-samplevalue": "110.5525"
+        },
+        "2018-11-16": {
+          "type": "string",
+          "x-samplevalue": "110.4095"
+        },
+        "2018-11-23": {
+          "type": "string",
+          "x-samplevalue": "110.3525"
+        },
+        "2018-11-30": {
+          "type": "string",
+          "x-samplevalue": "109.4625"
+        },
+        "2018-12-07": {
+          "type": "string",
+          "x-samplevalue": "109.4595"
+        },
+        "2018-12-14": {
+          "type": "string",
+          "x-samplevalue": "108.4645"
+        },
+        "2018-12-21": {
+          "type": "string",
+          "x-samplevalue": "107.8395"
+        },
+        "2018-12-28": {
+          "type": "string",
+          "x-samplevalue": "106.7165"
+        },
+        "2019-01-04": {
+          "type": "string",
+          "x-samplevalue": "105.9135"
+        },
+        "2019-01-11": {
+          "type": "string",
+          "x-samplevalue": "105.2670"
+        },
+        "2019-01-18": {
+          "type": "string",
+          "x-samplevalue": "104.8200"
+        },
+        "2019-01-25": {
+          "type": "string",
+          "x-samplevalue": "104.5530"
+        },
+        "2019-02-01": {
+          "type": "string",
+          "x-samplevalue": "104.3520"
+        },
+        "2019-02-08": {
+          "type": "string",
+          "x-samplevalue": "104.1600"
+        },
+        "2019-02-15": {
+          "type": "string",
+          "x-samplevalue": "103.4800"
+        },
+        "2019-02-22": {
+          "type": "string",
+          "x-samplevalue": "103.7790"
+        },
+        "2019-03-01": {
+          "type": "string",
+          "x-samplevalue": "104.4140"
+        },
+        "2019-03-08": {
+          "type": "string",
+          "x-samplevalue": "105.9480"
+        },
+        "2019-03-15": {
+          "type": "string",
+          "x-samplevalue": "106.9180"
+        },
+        "2019-03-22": {
+          "type": "string",
+          "x-samplevalue": "108.3710"
+        },
+        "2019-03-29": {
+          "type": "string",
+          "x-samplevalue": "109.8370"
+        },
+        "2019-04-05": {
+          "type": "string",
+          "x-samplevalue": "111.0570"
+        },
+        "2019-04-12": {
+          "type": "string",
+          "x-samplevalue": "112.4120"
+        },
+        "2019-04-18": {
+          "type": "string",
+          "x-samplevalue": "114.2190"
+        },
+        "2019-04-26": {
+          "type": "string",
+          "x-samplevalue": "115.8610"
+        },
+        "2019-05-03": {
+          "type": "string",
+          "x-samplevalue": "118.0720"
+        },
+        "2019-05-10": {
+          "type": "string",
+          "x-samplevalue": "119.5350"
+        },
+        "2019-05-17": {
+          "type": "string",
+          "x-samplevalue": "120.6440"
+        },
+        "2019-05-24": {
+          "type": "string",
+          "x-samplevalue": "122.1970"
+        },
+        "2019-05-31": {
+          "type": "string",
+          "x-samplevalue": "123.2780"
+        },
+        "2019-06-07": {
+          "type": "string",
+          "x-samplevalue": "124.0070"
+        },
+        "2019-06-14": {
+          "type": "string",
+          "x-samplevalue": "125.3520"
+        },
+        "2019-06-21": {
+          "type": "string",
+          "x-samplevalue": "126.6340"
+        },
+        "2019-06-28": {
+          "type": "string",
+          "x-samplevalue": "128.2400"
+        },
+        "2019-07-05": {
+          "type": "string",
+          "x-samplevalue": "129.6410"
+        },
+        "2019-07-12": {
+          "type": "string",
+          "x-samplevalue": "130.2910"
+        },
+        "2019-07-19": {
+          "type": "string",
+          "x-samplevalue": "131.5960"
+        },
+        "2019-07-26": {
+          "type": "string",
+          "x-samplevalue": "132.9260"
+        },
+        "2019-08-02": {
+          "type": "string",
+          "x-samplevalue": "134.4240"
+        },
+        "2019-08-09": {
+          "type": "string",
+          "x-samplevalue": "135.0560"
+        },
+        "2019-08-16": {
+          "type": "string",
+          "x-samplevalue": "136.3780"
+        },
+        "2019-08-23": {
+          "type": "string",
+          "x-samplevalue": "136.9235"
+        },
+        "2019-08-30": {
+          "type": "string",
+          "x-samplevalue": "137.1595"
+        },
+        "2019-09-06": {
+          "type": "string",
+          "x-samplevalue": "137.1205"
+        },
+        "2019-09-13": {
+          "type": "string",
+          "x-samplevalue": "137.4165"
+        },
+        "2019-09-20": {
+          "type": "string",
+          "x-samplevalue": "137.3595"
+        },
+        "2019-09-27": {
+          "type": "string",
+          "x-samplevalue": "137.3385"
+        },
+        "2019-10-04": {
+          "type": "string",
+          "x-samplevalue": "137.4025"
+        },
+        "2019-10-11": {
+          "type": "string",
+          "x-samplevalue": "136.9665"
+        },
+        "2019-10-18": {
+          "type": "string",
+          "x-samplevalue": "137.6055"
+        },
+        "2019-10-25": {
+          "type": "string",
+          "x-samplevalue": "137.7435"
+        },
+        "2019-11-01": {
+          "type": "string",
+          "x-samplevalue": "138.3980"
+        },
+        "2019-11-08": {
+          "type": "string",
+          "x-samplevalue": "139.3820"
+        },
+        "2019-11-15": {
+          "type": "string",
+          "x-samplevalue": "140.2550"
+        },
+        "2019-11-22": {
+          "type": "string",
+          "x-samplevalue": "141.3030"
+        },
+        "2019-11-29": {
+          "type": "string",
+          "x-samplevalue": "142.7200"
+        },
+        "2019-12-06": {
+          "type": "string",
+          "x-samplevalue": "143.9780"
+        },
+        "2019-12-09 12:01:52": {
+          "type": "string",
+          "x-samplevalue": "145.2800"
+        }
+      },
+      "title": "technicalIndicators",
+      "type": "object"
+    },
+    "swagger403": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "403",
+      "properties": {
+        "description": {
+          "x-samplevalue": "Forbidden - Access to the resource by the provider is forbidden",
+          "type": "string"
+        }
+      }
+    },
+    "swagger502": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "502",
+      "properties": {
+        "description": {
+          "x-samplevalue": "Provider server error - Something went wrong on the Provider or Endpoint's server",
+          "type": "string"
+        }
+      }
+    },
+    "swagger404": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "404",
+      "properties": {
+        "description": {
+          "x-samplevalue": "Not found - The requested resource is not found",
+          "type": "string"
+        }
+      }
+    },
+    "swagger405": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "405",
+      "properties": {
+        "description": {
+          "x-samplevalue": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected",
+          "type": "string"
+        }
+      }
+    },
+    "objectsMetadataFields": {
+      "properties": {
+        "mask": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "vendorDisplayName": {
+          "type": "string"
+        },
+        "vendorPath": {
+          "type": "string"
+        },
+        "vendorReadOnly": {
+          "type": "boolean"
+        },
+        "vendorRequired": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "swaggerDocs": {
+      "x-has-customfields": false,
+      "title": "swaggerDocs",
+      "properties": {
+        "basePath": {
+          "x-samplevalue": "/elements/api-v2/hubs/crm",
+          "type": "string"
+        },
+        "paths": {
+          "$ref": "#/definitions/swaggerpaths"
+        },
+        "host": {
+          "x-samplevalue": "localhost:5050",
+          "type": "string"
+        },
+        "schemes": {
+          "x-samplevalue": [
+            "http"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "definitions": {
+          "$ref": "#/definitions/swaggerdefinitions"
+        },
+        "swagger": {
+          "x-samplevalue": "2.0",
+          "type": "string"
+        },
+        "info": {
+          "$ref": "#/definitions/swaggerinfo"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/swaggertags"
+          }
+        }
+      },
+      "type": "object"
+    },
+    "swaggercontact": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "contact",
+      "properties": {
+        "email": {
+          "x-samplevalue": "support@cloud-elements.com",
+          "type": "string"
+        }
+      }
+    },
+    "swaggerpost": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "post",
+      "properties": {
+        "summary": {
+          "x-samplevalue": "Create a new contact in the CRM service. Contact creation will flow through Cloud Elements to your CRM service. With the exception of the 'id' field, the required fields indicated in the 'Contact' model are those required to create a new contact.",
+          "type": "string"
+        },
+        "operationId": {
+          "x-samplevalue": "createContact",
+          "type": "string"
+        },
+        "responses": {
+          "$ref": "#/definitions/swaggerresponses"
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/swaggerparameters"
+          }
+        },
+        "tags": {
+          "x-samplevalue": [
+            "contacts"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "swagger406": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "406",
+      "properties": {
+        "description": {
+          "x-samplevalue": "Not acceptable - The response content type does not match the 'Accept' header value",
+          "type": "string"
+        }
+      }
+    },
+    "swaggerdefinition-property": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "#/definitions/definition-property",
+      "properties": {
+        "type": {
+          "x-samplevalue": "string",
+          "type": "string"
+        }
+      }
+    },
+    "Object": {
+      "description": "Fields for the object. There will be fields associated with an Object, which are not all described here.",
+      "properties": {
+        "objectField": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "swagger409": {
+      "x-has-customfields": false,
+      "type": "object",
+      "title": "409",
+      "properties": {
+        "description": {
+          "x-samplevalue": "Conflict - If a resource being created already exists",
+          "type": "string"
+        }
+      }
+    },
+    "objectsMetadata": {
+      "properties": {
+        "fields": {
+          "items": {
+            "$ref": "#/definitions/objectsMetadataFields"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "swaggertags": {
+      "x-has-customfields": false,
+      "title": "tags",
+      "properties": {
+        "name": {
+          "x-samplevalue": "contacts",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Pong": {
+      "properties": {
+        "dateTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "swagger": "2.0",
+  "info": {
+    "contact": {
+      "email": "support@cloud-elements.com"
+    },
+    "title": "alphavantage",
+    "version": "api-v2"
+  },
+  "tags": [
+    {
+      "name": "currency-exchange-rates"
+    },
+    {
+      "name": "ping"
+    },
+    {
+      "name": "objects"
+    },
+    {
+      "name": "technical-indicators"
+    },
+    {
+      "name": "objectName"
+    }
+  ]
+}

@@ -1,0 +1,558 @@
+{
+    "configuration": [
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "page",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Repsly Pagination Type",
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Pagination Type",
+            "groupControl": false,
+            "key": "pagination.type"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Repsly Max Page Size (or limit)",
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Max Page Size (or limit)",
+            "groupControl": false,
+            "key": "pagination.max"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "https://api.repsly.com/v3-ce-poc",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Repsly Base Url",
+            "type": "TEXTFIELD_1000",
+            "resellerConfig": false,
+            "required": true,
+            "hideFromConsole": true,
+            "name": "Base Url",
+            "groupControl": false,
+            "key": "base.url"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 2,
+            "name": "Username",
+            "active": true,
+            "description": "Repsly Username",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "username",
+            "required": true
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 3,
+            "name": "Password",
+            "active": true,
+            "description": "Repsly Password",
+            "type": "PASSWORD",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "password",
+            "required": true
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 11,
+            "name": "Event Notification Signature Key",
+            "active": true,
+            "description": "Repsly Event Notification Signature Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.signature.key",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 12,
+            "name": "Event Notification Basic User Name",
+            "active": true,
+            "description": "Repsly Event Notification Basic User Name",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.basic.username",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 13,
+            "name": "Event Notification Basic Password",
+            "active": true,
+            "description": "Repsly Event Notification Basic Password",
+            "type": "PASSWORD",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.basic.password",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 98,
+            "name": "Default select fields",
+            "active": true,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "type": "TEXTAREA",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "default.select.fields.map",
+            "required": false
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "displayOrder": 99,
+            "active": true,
+            "description": "Used to enable/disable filtering of null values from the responses",
+            "type": "BOOLEAN",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Filter null values from the response",
+            "groupControl": false,
+            "key": "filter.response.nulls"
+        },
+        {
+            "internal": true,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 100,
+            "name": "Time of Getting Token or Performing Authentication",
+            "active": true,
+            "description": "Repsly Time of Getting Token or Performing Authentication",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "authentication.time",
+            "required": false
+        },
+        {
+            "internal": true,
+            "companyConfig": false,
+            "defaultValue": "polling",
+            "displayOrder": 100,
+            "active": true,
+            "description": "Repsly Event Type",
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Event Type",
+            "groupControl": false,
+            "key": "event.vendor.type"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "15",
+            "displayOrder": 101,
+            "active": true,
+            "description": "Repsly Set time interval for polling application (in minutes)",
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Event poller refresh interval",
+            "groupControl": false,
+            "key": "event.poller.refresh_interval"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "false",
+            "displayOrder": 102,
+            "active": true,
+            "description": "Repsly Enable/Disable Event Notification",
+            "type": "BOOLEAN",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Event Notifications Enabled",
+            "groupControl": false,
+            "key": "event.notification.enabled"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 102,
+            "name": "Event Notification Callback URL",
+            "active": true,
+            "description": "Repsly Event Notification Callback URL",
+            "type": "TEXTFIELD_1000",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.callback.url",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 104,
+            "name": "Event Notification Subscription ID",
+            "active": true,
+            "description": "Repsly Event Notification Subscription ID",
+            "type": "TEXTFIELD_1000",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.subscription.id",
+            "required": false
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "{\"clients\":{\"url\":\"/clients/startingFrom=${epoch:0}\",\"idField\":\"ClientID\",\"datesConfiguration\":{\"updatedDateField\":\"\",\"updatedDateFormat\":\"\",\"updatedDateTimezone\":\"\",\"createdDateField\":\"\",\"createdDateFormat\":\"\",\"createdDateTimezone\":\"\"}}}",
+            "displayOrder": 104,
+            "active": true,
+            "description": "Repsly Event Poller Resources Configuration",
+            "type": "TEXTAREA",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Event Poller Resources Configuration",
+            "groupControl": false,
+            "key": "event.poller.configuration"
+        }
+    ],
+    "objects": [],
+    "description": "Repsly Mobile CRM brings organizations closer to their field reps and helps them execute at retail. Improve brand visibility, build accountability, and more.",
+    "cloneable": false,
+    "extended": false,
+    "bulkDownloadEnabled": false,
+    "useModelsForMetadata": true,
+    "trialAccount": false,
+    "logo": "repsly",
+    "hooks": [],
+    "beta": false,
+    "key": "repsly",
+    "authentication": {
+        "type": "basic"
+    },
+    "bulkUploadEnabled": false,
+    "image": "https://images.cloudelements.io/Screen Shot 2019-03-09 at 8.50.48 AM201903091550.png",
+    "models": [],
+    "active": true,
+    "resources": [
+        {
+            "nextPageKey": "elements-next-page-token",
+            "path": "/hubs/general/clients",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /products",
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let url = \"/export/clients/0\";\n\nif(request_parameters.version){\n  url = \"/export/clients/\" + request_parameters.version;\n}\n\ndone({\n  \"request_vendor_path\":url,\n  \"continue\":true\n})",
+                    "type": "preRequest"
+                },
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let stamp = response_body_raw_map.MetaCollectionResult.LastTimeStamp;\nlet headers = response_headers;\nheaders['elements-next-page-token'] = stamp;\n\ndone({\"response_body\" : response_body_raw_map.Clients,\n      \"response_headers\":headers,\n      \"continue\":true});",
+                    "type": "postRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                },
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "version",
+                    "description": "Start with 0 and then enter the returend timestamp in the response. Only 50 returned/page. Epoch ex: 4133665534",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "version",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/export/clients/0"
+        },
+        {
+            "path": "/hubs/general/clients",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a(n) /products",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "products-request",
+                    "name": "body",
+                    "description": "Ex: {\"Code\":\"38273\", \"Name\":\"danielle\"}",
+                    "vendorDataType": "products-request",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/import/client"
+        },
+        {
+            "method": "GET",
+            "kind": "eb",
+            "description": "Search for /products",
+            "type": "api",
+            "vendorPath": "/export/clients/0",
+            "path": "/hubs/general/clients_copy",
+            "vendorMethod": "GET",
+            "response": {
+                "contentType": "application/json"
+            },
+            "model": {
+                "transform": false,
+                "name": "clients",
+                "swagger": {
+                    "clients": {
+                        "title": "clients",
+                        "properties": {
+                            "ZIP": {
+                                "type": "string"
+                            },
+                            "Email": {
+                                "type": "string"
+                            },
+                            "Website": {
+                                "type": "string"
+                            },
+                            "Name": {
+                                "x-samplevalue": "Your Store",
+                                "type": "string"
+                            },
+                            "RepresentativeName": {
+                                "type": "string"
+                            },
+                            "Phone": {
+                                "type": "string"
+                            },
+                            "ZIPExt": {
+                                "type": "string"
+                            },
+                            "Status": {
+                                "type": "string"
+                            },
+                            "Territory": {
+                                "type": "string"
+                            },
+                            "PriceLists": {
+                                "type": "array"
+                            },
+                            "City": {
+                                "type": "string"
+                            },
+                            "Code": {
+                                "x-samplevalue": "1",
+                                "type": "string"
+                            },
+                            "Mobile": {
+                                "type": "string"
+                            },
+                            "ContactTitle": {
+                                "x-samplevalue": "Store Manager",
+                                "type": "string"
+                            },
+                            "TimeStamp": {
+                                "x-samplevalue": 4132316190,
+                                "format": "int64",
+                                "type": "integer"
+                            },
+                            "Active": {
+                                "x-samplevalue": true,
+                                "type": "boolean"
+                            },
+                            "CustomFields": {
+                                "type": "array"
+                            },
+                            "StreetAddress": {
+                                "x-samplevalue": "N/A",
+                                "type": "string"
+                            },
+                            "State": {
+                                "type": "string"
+                            },
+                            "Note": {
+                                "type": "string"
+                            },
+                            "ClientID": {
+                                "x-samplevalue": 13614245,
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "Country": {
+                                "type": "string"
+                            },
+                            "Tag": {
+                                "x-samplevalue": "Grocery,Independent",
+                                "type": "string"
+                            },
+                            "ContactName": {
+                                "x-samplevalue": "Manager Mike",
+                                "type": "string"
+                            },
+                            "RepresentativeCode": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let url = \"/export/clients/0\";\n\nif(request_parameters.version){\n  url = \"/export/clients/\" + request_parameters.version;\n}\n\ndone({\n  \"request_vendor_path\":url,\n  \"continue\":true\n})",
+                    "type": "preRequest"
+                }
+            ],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "version",
+                    "description": "Start with 0 and then enter the returend timestamp in the response. Only 50 returned/page. Epoch ex: 4133665534",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "version",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                }
+            ],
+            "rootKey": "Clients"
+        },
+        {
+            "path": "/hubs/general/products",
+            "vendorMethod": "POST",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a(n) /products",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "products-request",
+                    "name": "body",
+                    "description": "Ex: {\"Code\":\"34\", \"Name\":\"Apple\", \"UnitPrice\": 1.00}",
+                    "vendorDataType": "products-request",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ],
+            "vendorPath": "/import/product"
+        }
+    ],
+    "modelType": "basic",
+    "protocolType": "http",
+    "transformationsEnabled": true,
+    "deleted": false,
+    "hub": "general",
+    "typeOauth": false,
+    "name": "Repsly",
+    "extendable": true,
+    "parameters": [
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "required": false
+        },
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "required": false
+        }
+    ]
+}
