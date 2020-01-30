@@ -1,0 +1,975 @@
+{
+  "configuration": [{
+    "internal": false,
+    "hideFromConsole": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "name": "x-ApplicationKey",
+    "active": true,
+    "description": "x-ApplicationKey",
+    "type": "TEXTFIELD_128",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "x-applicationkey",
+    "required": true
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "{base-url}",
+    "displayOrder": 1,
+    "active": true,
+    "description": "SAP Fieldglass Base Url",
+    "type": "TEXTFIELD_1000",
+    "resellerConfig": false,
+    "required": true,
+    "hideFromConsole": true,
+    "name": "Base Url",
+    "groupControl": false,
+    "key": "base.url"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "100",
+    "displayOrder": 1,
+    "active": true,
+    "description": "SAP Fieldglass Max Page Size (or limit)",
+    "type": "TEXTFIELD_32",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Max Page Size (or limit)",
+    "groupControl": false,
+    "key": "pagination.max"
+  }, {
+    "internal": false,
+    "hideFromConsole": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "name": "Username",
+    "active": true,
+    "description": "Username",
+    "type": "TEXTFIELD_128",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "username",
+    "required": true
+  }, {
+    "internal": false,
+    "hideFromConsole": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "name": "Password",
+    "active": true,
+    "description": "Password",
+    "type": "PASSWORD",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "password",
+    "required": true
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "page",
+    "displayOrder": 1,
+    "active": true,
+    "description": "SAP Fieldglass Pagination Type",
+    "type": "TEXTFIELD_32",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Pagination Type",
+    "groupControl": false,
+    "key": "pagination.type"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "true",
+    "displayOrder": 1,
+    "active": true,
+    "description": "Filter null values from the response",
+    "type": "BOOLEAN",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Filter null values from the response",
+    "groupControl": false,
+    "key": "filter.response.nulls"
+  }, {
+    "internal": false,
+    "hideFromConsole": true,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "name": "expires_in",
+    "active": true,
+    "description": "expires_in",
+    "type": "TEXTFIELD_32",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "expires_in",
+    "required": false
+  }, {
+    "internal": false,
+    "hideFromConsole": true,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "name": "access_token",
+    "active": true,
+    "description": "access-token",
+    "type": "TEXTAREA",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "access_token",
+    "required": false
+  }, {
+    "internal": false,
+    "hideFromConsole": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "name": "Base-Url",
+    "active": true,
+    "description": "Base-Url",
+    "type": "TEXTFIELD_128",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "base-url",
+    "required": true
+  }, {
+    "internal": false,
+    "hideFromConsole": true,
+    "companyConfig": false,
+    "displayOrder": 11,
+    "name": "Event Notification Signature Key",
+    "active": true,
+    "description": "SAP Fieldglass Event Notification Signature Key",
+    "type": "TEXTFIELD_128",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "event.notification.signature.key",
+    "required": false
+  }, {
+    "internal": false,
+    "hideFromConsole": false,
+    "companyConfig": false,
+    "displayOrder": 12,
+    "name": "Event Notification Basic User Name",
+    "active": true,
+    "description": "SAP Fieldglass Event Notification Basic User Name",
+    "type": "TEXTFIELD_128",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "event.notification.basic.username",
+    "required": false
+  }, {
+    "internal": false,
+    "hideFromConsole": false,
+    "companyConfig": false,
+    "displayOrder": 13,
+    "name": "Event Notification Basic Password",
+    "active": true,
+    "description": "SAP Fieldglass Event Notification Basic Password",
+    "type": "PASSWORD",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "event.notification.basic.password",
+    "required": false
+  }, {
+    "internal": false,
+    "hideFromConsole": false,
+    "companyConfig": false,
+    "displayOrder": 98,
+    "name": "Default select fields",
+    "active": true,
+    "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+    "type": "TEXTAREA",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "default.select.fields.map",
+    "required": false
+  }, {
+    "internal": true,
+    "hideFromConsole": true,
+    "companyConfig": false,
+    "displayOrder": 100,
+    "name": "Time of Getting Token or Performing Authentication",
+    "active": true,
+    "description": "SAP Fieldglass Time of Getting Token or Performing Authentication",
+    "type": "TEXTFIELD_32",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "authentication.time",
+    "required": false
+  }, {
+    "internal": true,
+    "companyConfig": false,
+    "defaultValue": "webhooks",
+    "displayOrder": 100,
+    "active": true,
+    "description": "SAP Fieldglass Event Type",
+    "type": "TEXTFIELD_128",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Event Type",
+    "groupControl": false,
+    "key": "event.vendor.type"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "15",
+    "displayOrder": 101,
+    "active": true,
+    "description": "SAP Fieldglass Set time interval for polling application (in minutes)",
+    "type": "TEXTFIELD_128",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Event poller refresh interval",
+    "groupControl": false,
+    "key": "event.poller.refresh_interval"
+  }, {
+    "internal": false,
+    "hideFromConsole": false,
+    "companyConfig": false,
+    "displayOrder": 102,
+    "name": "Event Notification Callback URL",
+    "active": true,
+    "description": "SAP Fieldglass Event Notification Callback URL",
+    "type": "TEXTFIELD_1000",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "event.notification.callback.url",
+    "required": false
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "false",
+    "displayOrder": 102,
+    "active": true,
+    "description": "SAP Fieldglass Enable/Disable Event Notification",
+    "type": "BOOLEAN",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Event Notifications Enabled",
+    "groupControl": false,
+    "key": "event.notification.enabled"
+  }, {
+    "internal": false,
+    "hideFromConsole": false,
+    "companyConfig": false,
+    "displayOrder": 103,
+    "name": "Event Notification Instance Finder",
+    "active": true,
+    "description": "SAP Fieldglass This helps find all instances pertaining to an incoming event. The EVENT_NOTIFICATION_INSTANCE_FINDER is composed of two values, in the form \"[INSTANCE_CONFIG_PROPERTY_KEY]|[JSON_PATH_TO_PROPERTY_VALUE]\". The first value, INSTANCE_CONFIG_PROPERTY_KEY, is the element config key that we will use to determine which instances this event pertains to.  The second value, JSON_PATH_TO_PROPERTY_VALUE, is the JSON XPath to the event JSON that we will use to lookup the instances.  For example, GitHub sends the organization name back in their response, and we save this element config value as \"github.organization\", so the instance finder for GitHub would be \"github.organization|organization.login\"",
+    "type": "TEXTAREA",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "event.notification.instance.finder",
+    "required": false
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "{}",
+    "displayOrder": 104,
+    "active": true,
+    "description": "SAP Fieldglass Event Poller Resources Configuration",
+    "type": "TEXTAREA",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Event Poller Resources Configuration",
+    "groupControl": false,
+    "key": "event.poller.configuration"
+  }, {
+    "internal": false,
+    "hideFromConsole": true,
+    "companyConfig": false,
+    "displayOrder": 104,
+    "name": "Event Notification Subscription ID",
+    "active": true,
+    "description": "SAP Fieldglass Event Notification Subscription ID",
+    "type": "TEXTFIELD_1000",
+    "groupControl": false,
+    "resellerConfig": false,
+    "key": "event.notification.subscription.id",
+    "required": false
+  }],
+  "objects": [],
+  "description": "workers details",
+  "cloneable": false,
+  "extended": false,
+  "bulkDownloadEnabled": false,
+  "useModelsForMetadata": true,
+  "trialAccount": false,
+  "logo": "sapfieldglass",
+  "hooks": [{
+    "isLegacy": false,
+    "contextParams": "",
+    "mimeType": "application/javascript",
+    "body": "let eventObj = {};\n    \nif(events){  \n\n  const providerKeys = Object.keys(events).filter((key) => key !== \"eventId\" && key !== \"eventHeaders\");\n  eventObj.event_type='UNKNOWN';\n\n  if (providerKeys && providerKeys.length > 0){\n    \n    \n    if (events[providerKeys[0]].DataArea) {\n      \n     const event_object_type = Object.keys(events[providerKeys[0]].DataArea);\n     \n     if(event_object_type && event_object_type.length > 0){\n       \n       \n       let eventType=event_object_type[0];\n       eventObj.event_object_type = eventType;\n       \n       if(events[providerKeys[0]].DataArea[`${event_object_type[0]}`][`${event_object_type[0]}ID`]) {\n\n         eventObj.event_object_id = events[providerKeys[0]].DataArea[`${event_object_type[0]}`][`${event_object_type[0]}ID`];\n         done({\"events\":[eventObj]});\n        }\n       }\n     \n    }\n  }\n}\n\n",
+    "type": "event"
+  }],
+  "beta": false,
+  "key": "sapfieldglass",
+  "authentication": {
+    "type": "custom"
+  },
+  "bulkUploadEnabled": false,
+  "image": "elements/custom-element-default-logo.png",
+  "models": [],
+  "active": true,
+  "resources": [{
+    "path": "/hubs/humancapital/access-token",
+    "vendorMethod": "POST",
+    "method": "POST",
+    "kind": "eb",
+    "response": {
+      "contentType": "application/json"
+    },
+    "description": "Create a(n) authorization",
+    "type": "provisionAuthValidation",
+    "hooks": [{
+      "isLegacy": false,
+      "contextParams": "configuration,response_body,response_iserror,response_error",
+      "mimeType": "application/javascript",
+      "body": "if(!response_iserror){\n  configuration.access_token=response_body.access_token;\n  configuration.expires_in=response_body.expires_in;\n  done({configuration});\n} else {\n  if(response_body)\n    done({response_error_message: JSON.stringify(response_body)});\n  else\n    done({response_error_message:\"Failed to create instance\"});\n}\n\n",
+      "type": "postRequest"
+    }],
+    "modelMigrated": false,
+    "parameters": [{
+      "vendorType": "header",
+      "dataType": "string",
+      "name": "Basic CE.b64(${configuration.username}:${configuration.password})",
+      "description": "base 64b encoding of user credentials ",
+      "vendorDataType": "string",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Authorization",
+      "required": false
+    }, {
+      "vendorType": "header",
+      "dataType": "string",
+      "name": "${configuration.x-applicationkey}",
+      "description": "Send the api key",
+      "vendorDataType": "string",
+      "source": "request",
+      "type": "value",
+      "vendorName": "x-ApplicationKey",
+      "required": false
+    }],
+    "vendorPath": "/api/oauth2/v2.0/token?grant_type=client_credentials&response_type=token"
+  }, {
+    "path": "/hubs/humancapital/refresh-access-token",
+    "vendorMethod": "POST",
+    "method": "POST",
+    "nextResource": "POST:/hubs/humancapital/access-token",
+    "kind": "eb",
+    "response": {
+      "contentType": "application/json"
+    },
+    "description": "Create a(n) refreshAccessToken",
+    "type": "onRefresh",
+    "hooks": [{
+      "isLegacy": false,
+      "contextParams": "",
+      "mimeType": "application/javascript",
+      "body": "done({continue: false});",
+      "type": "preRequest"
+    }],
+    "modelMigrated": false,
+    "parameters": [{
+      "vendorType": "header",
+      "dataType": "string",
+      "name": "Basic CE.b64(${configuration.username}:${configuration.password})",
+      "description": "base 64b encoding of user credentials ",
+      "vendorDataType": "string",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Authorization",
+      "required": false
+    }, {
+      "vendorType": "header",
+      "dataType": "string",
+      "name": "${configuration.x-applicationkey}",
+      "description": "Send the api key",
+      "vendorDataType": "string",
+      "source": "request",
+      "type": "value",
+      "vendorName": "x-ApplicationKey",
+      "required": false
+    }],
+    "vendorPath": "/api/oauth2/v2.0/token?grant_type=client_credentials&response_type=token"
+  }, {
+    "method": "GET",
+    "kind": "eb",
+    "description": "Get list of workers",
+    "type": "api",
+    "vendorPath": "/api/vc/connector/worker_download?object_ref=",
+    "path": "/hubs/humancapital/workers",
+    "paginationType": "VENDOR_NOT_SUPPORTED",
+    "vendorMethod": "GET",
+    "response": {
+      "contentType": "application/json"
+    },
+    "model": {
+      "transform": false,
+      "name": "workersGetRes",
+      "swagger": {
+        "workersGetResObject": {
+          "title": "workersGetRes",
+          "type": "object",
+          "properties": {
+            "BuyerCode": {
+              "x-samplevalue": "FGFL",
+              "type": "string"
+            },
+            "Site": {
+              "type": "workersGetResSite"
+            },
+            "Status": {
+              "x-samplevalue": "Pending",
+              "type": "string"
+            },
+            "Rates": {
+              "type": "workersGetResRates"
+            },
+            "VendorName": {
+              "x-samplevalue": "Accounting",
+              "type": "string"
+            },
+            "BillablePerDiem": {
+              "x-samplevalue": "0.00",
+              "type": "string"
+            },
+            "FirstName": {
+              "x-samplevalue": "John",
+              "type": "string"
+            },
+            "CostCenters": {
+              "type": "workersGetResCostCenters"
+            },
+            "VendorNumber": {
+              "x-samplevalue": "S007",
+              "type": "string"
+            },
+            "WorkerID": {
+              "x-samplevalue": "FGFLWO00000263",
+              "type": "string"
+            },
+            "EndDate": {
+              "x-samplevalue": "07/31/2019",
+              "type": "string"
+            },
+            "StartDate": {
+              "x-samplevalue": "06/01/2019",
+              "type": "string"
+            },
+            "CustomFields": {
+              "type": "string"
+            },
+            "WorkOrderID": {
+              "x-samplevalue": "FGFLWO00000263",
+              "type": "string"
+            },
+            "BusinessUnit": {
+              "type": "workersGetResBusinessUnit"
+            },
+            "JobCode": {
+              "x-samplevalue": "NA",
+              "type": "string"
+            },
+            "WorkersEmail": {
+              "x-sub-format": "email",
+              "x-samplevalue": "test.cloud@email.com",
+              "type": "string"
+            },
+            "Currency": {
+              "x-samplevalue": "USD",
+              "type": "string"
+            },
+            "JobSeekerID": {
+              "x-samplevalue": "S007JS00000001",
+              "type": "string"
+            },
+            "SecurityID": {
+              "x-samplevalue": "12345678AK",
+              "type": "string"
+            },
+            "JobPostingTitle": {
+              "x-samplevalue": "Business Analyst",
+              "type": "string"
+            },
+            "JobSeekerCode": {
+              "x-samplevalue": "1244eeer",
+              "type": "string"
+            },
+            "LastName": {
+              "x-samplevalue": "Doe",
+              "type": "string"
+            },
+            "WorkOrderOwner": {
+              "x-samplevalue": "manager",
+              "type": "string"
+            }
+          }
+        },
+        "workersGetResRates": {
+          "title": "Rates",
+          "type": "object",
+          "properties": {
+            "Rate": {
+              "type": "array",
+              "items": {
+                "type": "workersGetResRatesRate"
+              }
+            }
+          }
+        },
+        "workersGetResSite": {
+          "title": "Site",
+          "type": "object",
+          "properties": {
+            "Code": {
+              "x-samplevalue": "US-IL-Chicago",
+              "type": "string"
+            },
+            "Name": {
+              "x-samplevalue": "US-IL-Chicago",
+              "type": "string"
+            }
+          }
+        },
+        "workersGetResCostCentersCostCenter": {
+          "title": "CostCenter",
+          "properties": {
+            "Tasks": {
+              "type": "workersGetResCostCentersCostCenterTasks"
+            },
+            "Code": {
+              "x-samplevalue": "8707-00",
+              "type": "string"
+            },
+            "Name": {
+              "x-samplevalue": "Marketing (MRKG)",
+              "type": "string"
+            }
+          }
+        },
+        "workersGetRes": {
+          "type": "array",
+          "items": {
+            "type": "workersGetResObject"
+          }
+        },
+        "workersGetResRatesRate": {
+          "title": "Rate",
+          "properties": {
+            "PayRate": {
+              "x-samplevalue": "32.00",
+              "type": "string"
+            },
+            "UOM": {
+              "x-samplevalue": "Hr",
+              "type": "string"
+            },
+            "BillRate": {
+              "x-samplevalue": "35.00",
+              "type": "string"
+            },
+            "RateCategory": {
+              "x-samplevalue": "ST",
+              "type": "string"
+            }
+          }
+        },
+        "workersGetResBusinessUnit": {
+          "title": "BusinessUnit",
+          "type": "object",
+          "properties": {
+            "Code": {
+              "x-samplevalue": "Accounting",
+              "type": "string"
+            },
+            "Name": {
+              "x-samplevalue": "Accounting",
+              "type": "string"
+            }
+          }
+        },
+        "workersGetResCostCentersCostCenterTasks": {
+          "title": "Tasks",
+          "type": "object",
+          "properties": {
+            "Task": {
+              "type": "array",
+              "items": {
+                "type": "workersGetResCostCentersCostCenterTasksTask"
+              }
+            }
+          }
+        },
+        "workersGetResCostCentersCostCenterTasksTask": {
+          "title": "Task",
+          "properties": {
+            "Code": {
+              "x-samplevalue": "US-IL-Chicago",
+              "type": "string"
+            },
+            "Name": {
+              "x-samplevalue": "US-IL-Chicago",
+              "type": "string"
+            }
+          }
+        },
+        "workersGetResCostCenters": {
+          "title": "CostCenters",
+          "type": "object",
+          "properties": {
+            "CostCenter": {
+              "type": "array",
+              "items": {
+                "type": "workersGetResCostCentersCostCenter"
+              }
+            }
+          }
+        }
+      }
+    },
+    "hooks": [{
+      "isLegacy": false,
+      "contextParams": "response_body",
+      "mimeType": "application/javascript",
+      "body": "let res=response_body;\nlet i;\nlet Length=res.length;\n \nif(Length>0){\n\nfor(i=0;i<Length;i++){\n  \n    if(res[i].Rates && res[i].Rates.Rate ){\n      \n    if(! ((Array.isArray(res[i].Rates.Rate )) )){\n     \n      res[i].Rates.Rate=[res[i].Rates.Rate];\n       \n    }\n     \n  }\n\n}\n \n  for(i=0;i<Length;i++){\n  \n    if(res[i].CostCenters && res[i].CostCenters.CostCenter ){\n      \n    if(! ((Array.isArray(res[i].CostCenters.CostCenter )) )){\n     \n      res[i].CostCenters.CostCenter=[res[i].CostCenters.CostCenter];\n       \n    }\n     \n  }\n\n}\n \n \n}\ndone({\"response_body\":res});",
+      "type": "postRequest"
+    }],
+    "modelMigrated": false,
+    "parameters": [{
+      "vendorType": "header",
+      "dataType": "string",
+      "name": "Bearer ${configuration.access_token}",
+      "description": "Send the access token ",
+      "vendorDataType": "string",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Authorization",
+      "required": false
+    }],
+    "rootKey": "ShowWorker.DataArea.Worker"
+  }, {
+    "method": "GET",
+    "kind": "eb",
+    "description": "Retrieve workers by their id",
+    "type": "api",
+    "vendorPath": "/api/vc/connector/worker_download?object_ref={object_ref}",
+    "path": "/hubs/humancapital/workers/{id}",
+    "paginationType": "NO_PAGINATION",
+    "vendorMethod": "GET",
+    "response": {
+      "contentType": "application/json"
+    },
+    "model": {
+      "transform": false,
+      "name": "workersGetByIdRes",
+      "swagger": {
+        "workersGetByIdResSite": {
+          "title": "Site",
+          "type": "object",
+          "properties": {
+            "Code": {
+              "x-samplevalue": "US-CO-Denver",
+              "type": "string"
+            },
+            "Name": {
+              "x-samplevalue": "US-CO-Denver",
+              "type": "string"
+            }
+          }
+        },
+        "workersGetByIdResCostCentersCostCenter": {
+          "title": "CostCenter",
+          "type": "object",
+          "properties": {
+            "Tasks": {
+              "type": "workersGetByIdResCostCentersCostCenterTasks"
+            },
+            "Code": {
+              "x-samplevalue": "7301-00",
+              "type": "string"
+            },
+            "Name": {
+              "x-samplevalue": "Information Technology (IT)",
+              "type": "string"
+            }
+          }
+        },
+        "workersGetByIdResBusinessUnit": {
+          "title": "BusinessUnit",
+          "type": "object",
+          "properties": {
+            "Code": {
+              "x-samplevalue": "Accounting",
+              "type": "string"
+            },
+            "Name": {
+              "x-samplevalue": "Accounting",
+              "type": "string"
+            }
+          }
+        },
+        "workersGetByIdResRatesRate": {
+          "title": "Rate",
+          "properties": {
+            "PayRate": {
+              "x-samplevalue": "70.00",
+              "type": "string"
+            },
+            "UOM": {
+              "x-samplevalue": "Hr",
+              "type": "string"
+            },
+            "BillRate": {
+              "x-samplevalue": "90.00",
+              "type": "string"
+            },
+            "RateCategory": {
+              "x-samplevalue": "ST",
+              "type": "string"
+            }
+          }
+        },
+        "workersGetByIdResCostCentersCostCenterTasks": {
+          "title": "Tasks",
+          "type": "object",
+          "properties": {
+            "Task": {
+              "type": "array",
+              "items": {
+                "type": "workersGetByIdResCostCentersCostCenterTasksTask"
+              }
+            }
+          }
+        },
+        "workersGetByIdResRates": {
+          "title": "Rates",
+          "type": "object",
+          "properties": {
+            "Rate": {
+              "type": "array",
+              "items": {
+                "type": "workersGetByIdResRatesRate"
+              }
+            }
+          }
+        },
+        "workersGetByIdRes": {
+          "x-primary-key": ["WorkerID"],
+          "title": "workersGetByIdRes",
+          "properties": {
+            "BuyerCode": {
+              "x-samplevalue": "FGFL",
+              "type": "string"
+            },
+            "Site": {
+              "type": "workersGetByIdResSite"
+            },
+            "Rates": {
+              "type": "workersGetByIdResRates"
+            },
+            "ExternalReferenceId": {
+              "type": "string"
+            },
+            "BillablePerDiem": {
+              "x-samplevalue": "0.00",
+              "type": "string"
+            },
+            "ExternalRef": {
+              "type": "string"
+            },
+            "RemitToAddressCode": {
+              "type": "string"
+            },
+            "CostCenters": {
+              "type": "workersGetByIdResCostCenters"
+            },
+            "VendorNumber": {
+              "x-samplevalue": "S007",
+              "type": "string"
+            },
+            "WorkerID": {
+              "x-samplevalue": "FGFLWK00000129",
+              "type": "string"
+            },
+            "StartDate": {
+              "x-samplevalue": "05/16/2019",
+              "type": "string"
+            },
+            "PersonID": {
+              "x-samplevalue": "z19051509091181840856938",
+              "type": "string"
+            },
+            "WorkOrderID": {
+              "x-samplevalue": "FGFLWO00000264",
+              "type": "string"
+            },
+            "WorkOrderOwnerEmployeeID": {
+              "type": "string"
+            },
+            "JobCode": {
+              "x-samplevalue": "NA",
+              "type": "string"
+            },
+            "Currency": {
+              "x-samplevalue": "USD",
+              "type": "string"
+            },
+            "JobSeekerID": {
+              "x-samplevalue": "S007JS00000002",
+              "type": "string"
+            },
+            "SecurityID": {
+              "x-samplevalue": "12153456LA",
+              "type": "string"
+            },
+            "InSiteStatus": {
+              "type": "string"
+            },
+            "Status": {
+              "x-samplevalue": "Active",
+              "type": "string"
+            },
+            "VendorName": {
+              "x-samplevalue": "Accounting",
+              "type": "string"
+            },
+            "FirstName": {
+              "x-samplevalue": "Brie",
+              "type": "string"
+            },
+            "Sequence": {
+              "x-samplevalue": "1",
+              "type": "string"
+            },
+            "EndDate": {
+              "x-samplevalue": "07/03/2019",
+              "type": "string"
+            },
+            "CustomFields": {
+              "type": "string"
+            },
+            "BusinessUnit": {
+              "type": "workersGetByIdResBusinessUnit"
+            },
+            "WorkersEmail": {
+              "x-sub-format": "email",
+              "x-samplevalue": "smartone@yopmail.com",
+              "type": "string"
+            },
+            "JobPostingTitle": {
+              "x-samplevalue": "Database Admin - Accounting",
+              "type": "string"
+            },
+            "SupplierRef": {
+              "x-samplevalue": "ABC Workforce Consultants",
+              "type": "string"
+            },
+            "JobSeekerCode": {
+              "type": "string"
+            },
+            "LastName": {
+              "x-samplevalue": "Larson",
+              "type": "string"
+            },
+            "JobPostingID": {
+              "x-samplevalue": "FGFLJP00000868",
+              "type": "string"
+            },
+            "WorkOrderOwner": {
+              "x-samplevalue": "Accounting_manager",
+              "type": "string"
+            }
+          }
+        },
+        "workersGetByIdResCostCenters": {
+          "title": "CostCenters",
+          "type": "object",
+          "properties": {
+            "CostCenter": {
+              "type": "workersGetByIdResCostCentersCostCenter"
+            }
+          }
+        },
+        "workersGetByIdResCostCentersCostCenterTasksTask": {
+          "title": "Task",
+          "properties": {
+            "Code": {
+              "type": "string"
+            },
+            "Name": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "hooks": [{
+      "isLegacy": false,
+      "contextParams": "response_body,response_status_code,response_error",
+      "mimeType": "application/javascript",
+      "body": "if (!response_body){\n  \n  done({response_status_code: 404,\n        response_error_message:\"Worker could not be found \"\n    });\n}\n\ndone();",
+      "type": "postRequest"
+    }],
+    "modelMigrated": false,
+    "parameters": [{
+      "vendorType": "header",
+      "dataType": "string",
+      "name": "Bearer ${configuration.access_token}",
+      "description": "Bearer authorization",
+      "vendorDataType": "string",
+      "source": "request",
+      "type": "value",
+      "vendorName": "Authorization",
+      "required": false
+    }, {
+      "vendorType": "path",
+      "dataType": "string",
+      "name": "id",
+      "description": "The id of the worker",
+      "vendorDataType": "string",
+      "source": "request",
+      "type": "path",
+      "vendorName": "object_ref",
+      "required": true
+    }],
+    "rootKey": "ShowWorker.DataArea.Worker"
+  }],
+  "modelType": "basic",
+  "protocolType": "http",
+  "transformationsEnabled": true,
+  "deleted": false,
+  "hub": "humancapital",
+  "typeOauth": false,
+  "name": "SAP Fieldglass",
+  "extendable": true,
+  "parameters": [{
+    "vendorType": "header",
+    "name": "application/json",
+    "source": "request",
+    "type": "value",
+    "vendorName": "Accept",
+    "required": false
+  }, {
+    "vendorType": "path",
+    "name": "base-url",
+    "source": "request",
+    "type": "configuration",
+    "vendorName": "base-url",
+    "required": false
+  }, {
+    "vendorType": "header",
+    "name": "application/json",
+    "source": "request",
+    "type": "value",
+    "vendorName": "Content-Type",
+    "required": false
+  }]
+}
