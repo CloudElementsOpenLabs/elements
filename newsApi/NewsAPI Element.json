@@ -1,0 +1,403 @@
+{
+    "configuration":[
+       {
+          "internal":false,
+          "hideFromConsole":false,
+          "companyConfig":false,
+          "displayOrder":1,
+          "name":"The API Key",
+          "active":true,
+          "description":"The apiKey required for authentification",
+          "type":"TEXTFIELD_128",
+          "groupControl":false,
+          "resellerConfig":false,
+          "key":"apiKey",
+          "required":true
+       },
+       {
+          "internal":false,
+          "companyConfig":false,
+          "defaultValue":"100",
+          "displayOrder":1,
+          "active":true,
+          "description":"NewsAPI Max Page Size (or limit)",
+          "type":"TEXTFIELD_32",
+          "resellerConfig":false,
+          "required":false,
+          "hideFromConsole":true,
+          "name":"Max Page Size (or limit)",
+          "groupControl":false,
+          "key":"pagination.max"
+       },
+       {
+          "internal":false,
+          "companyConfig":false,
+          "defaultValue":"cursor",
+          "displayOrder":1,
+          "active":true,
+          "description":"NewsAPI Pagination Type",
+          "type":"TEXTFIELD_32",
+          "resellerConfig":false,
+          "required":false,
+          "hideFromConsole":true,
+          "name":"Pagination Type",
+          "groupControl":false,
+          "key":"pagination.type"
+       },
+       {
+          "internal":false,
+          "companyConfig":false,
+          "defaultValue":"https://newsapi.org/v2",
+          "displayOrder":1,
+          "active":true,
+          "description":"NewsAPI Base Url",
+          "type":"TEXTFIELD_1000",
+          "resellerConfig":false,
+          "required":true,
+          "hideFromConsole":true,
+          "name":"Base Url",
+          "groupControl":false,
+          "key":"base.url"
+       },
+       {
+          "internal":false,
+          "hideFromConsole":true,
+          "companyConfig":false,
+          "displayOrder":11,
+          "name":"Event Notification Signature Key",
+          "active":true,
+          "description":"NewsAPI Event Notification Signature Key",
+          "type":"TEXTFIELD_128",
+          "groupControl":false,
+          "resellerConfig":false,
+          "key":"event.notification.signature.key",
+          "required":false
+       },
+       {
+          "internal":false,
+          "hideFromConsole":false,
+          "companyConfig":false,
+          "displayOrder":12,
+          "name":"Event Notification Basic User Name",
+          "active":true,
+          "description":"NewsAPI Event Notification Basic User Name",
+          "type":"TEXTFIELD_128",
+          "groupControl":false,
+          "resellerConfig":false,
+          "key":"event.notification.basic.username",
+          "required":false
+       },
+       {
+          "internal":false,
+          "hideFromConsole":false,
+          "companyConfig":false,
+          "displayOrder":13,
+          "name":"Event Notification Basic Password",
+          "active":true,
+          "description":"NewsAPI Event Notification Basic Password",
+          "type":"PASSWORD",
+          "groupControl":false,
+          "resellerConfig":false,
+          "key":"event.notification.basic.password",
+          "required":false
+       },
+       {
+          "internal":false,
+          "hideFromConsole":false,
+          "companyConfig":false,
+          "displayOrder":98,
+          "name":"Default select fields",
+          "active":true,
+          "description":"Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+          "type":"TEXTAREA",
+          "groupControl":false,
+          "resellerConfig":false,
+          "key":"default.select.fields.map",
+          "required":false
+       },
+       {
+          "internal":false,
+          "companyConfig":false,
+          "defaultValue":"true",
+          "displayOrder":99,
+          "active":true,
+          "description":"Used to enable/disable filtering of null values from the responses",
+          "type":"BOOLEAN",
+          "resellerConfig":false,
+          "required":false,
+          "hideFromConsole":false,
+          "name":"Filter null values from the response",
+          "groupControl":false,
+          "key":"filter.response.nulls"
+       },
+       {
+          "internal":true,
+          "hideFromConsole":true,
+          "companyConfig":false,
+          "displayOrder":100,
+          "name":"Time of Getting Token or Performing Authentication",
+          "active":true,
+          "description":"NewsAPI Time of Getting Token or Performing Authentication",
+          "type":"TEXTFIELD_32",
+          "groupControl":false,
+          "resellerConfig":false,
+          "key":"authentication.time",
+          "required":false
+       }
+    ],
+    "objects":[
+ 
+    ],
+    "description":"News API is a simple HTTP REST API for searching and retrieving live articles from all over the web.",
+    "cloneable":false,
+    "extended":false,
+    "bulkDownloadEnabled":false,
+    "useModelsForMetadata":true,
+    "trialAccount":false,
+    "logo":"newsapi",
+    "hooks":[
+ 
+    ],
+    "beta":false,
+    "key":"newsapi",
+    "authentication":{
+       "type":"custom"
+    },
+    "bulkUploadEnabled":false,
+    "image":"https://images.cloudelements.io/NewsAPI202001100803.jpg",
+    "active":true,
+    "resources":[
+       {
+          "method":"GET",
+          "kind":"eb",
+          "description":"Search for everything",
+          "type":"api",
+          "vendorPath":"/everything",
+          "path":"/hubs/general/everything",
+          "paginationType":"VENDOR_SUPPORTED",
+          "vendorMethod":"GET",
+          "response":{
+             "contentTypeAsString":"application/json",
+             "contentType":"application/json"
+          },
+          "tryitoutDisable":false,
+          "hooks":[
+ 
+          ],
+          "parameters":[
+             {
+                "vendorType":"query",
+                "dataType":"string",
+                "name":"pageSize",
+                "description":"Free accounts have a limit of 100 responses.\nThe number of resources to return in a given page.",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"pageSize",
+                "required":false
+             },
+             {
+                "vendorType":"query",
+                "converter":"toQueryParameters",
+                "dataType":"string",
+                "name":"where",
+                "description":"Available parameters:\nq , qInTitle, sources, domains ex (q='Bitcoin'). More information on the parameters can be found at http://tiny.cc/NewsAPI",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"converter:toQueryParameters",
+                "required":true
+             },
+             {
+                "vendorType":"query",
+                "dataType":"string",
+                "name":"language",
+                "description":"The 2-letter ISO-639-1 code of the language you want to get headlines for. Possible options:en, ro, ru , es , fr. Default: all languages returned.",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"language",
+                "required":false
+             }
+          ],
+          "rootKey":"articles|articles"
+       },
+       {
+          "method":"GET",
+          "kind":"eb",
+          "description":"Search for Sources",
+          "type":"api",
+          "vendorPath":"/sources",
+          "path":"/hubs/general/sources",
+          "paginationType":"VENDOR_SUPPORTED",
+          "vendorMethod":"GET",
+          "response":{
+             "contentTypeAsString":"application/json",
+             "contentType":"application/json"
+          },
+          "tryitoutDisable":false,
+          "hooks":[
+ 
+          ],
+          "parameters":[
+             {
+                "vendorType":"query",
+                "dataType":"string",
+                "name":"country",
+                "description":"The 2-letter ISO 3166-1 code of the country you want to get headlines for. Possible options: us , uk , jp , ro . Note: you can't mix this param with the sources param.",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"country",
+                "required":false
+             },
+             {
+                "vendorType":"query",
+                "dataType":"string",
+                "name":"category",
+                "description":"The category you want to get headlines for. Possible options: business entertainment general health science sports technology . Note: you can't mix this param with the sources param.",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"category",
+                "required":false
+             },
+             {
+                "vendorType":"query",
+                "dataType":"string",
+                "name":"language",
+                "description":"Find sources that display news in a specific language. Possible options: en, es, fr, ro, ru. Default: all languages.",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"language",
+                "required":false
+             },
+             {
+                "vendorType":"query",
+                "dataType":"string",
+                "name":"pageSize",
+                "description":"Free accounts have a limit of 100 responses\nThe number of resources to return in a given page.",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"pageSize",
+                "required":false
+             }
+          ],
+          "rootKey":"sources|sources"
+       },
+       {
+          "method":"GET",
+          "kind":"eb",
+          "description":"Search for topHeadlines",
+          "type":"api",
+          "vendorPath":"/top-headlines",
+          "path":"/hubs/general/top-headlines",
+          "paginationType":"VENDOR_SUPPORTED",
+          "vendorMethod":"GET",
+          "response":{
+             "contentTypeAsString":"application/json",
+             "contentType":"application/json"
+          },
+          "tryitoutDisable":false,
+          "hooks":[
+ 
+          ],
+          "parameters":[
+             {
+                "vendorType":"query",
+                "dataType":"string",
+                "name":"page",
+                "description":"The page number of resources to retrieve",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"page",
+                "required":false
+             },
+             {
+                "vendorType":"query",
+                "dataType":"string",
+                "name":"pageSize",
+                "description":"Free accounts have a limit of 100 responses.\nThe number of resources to return in a given page.",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"pageSize",
+                "required":false
+             },
+             {
+                "vendorType":"query",
+                "dataType":"string",
+                "name":"country",
+                "description":"The 2-letter ISO 3166-1 code of the country you want to get headlines for. Possible options: us , uk , jp , ro . Note: you can't mix this param with the sources param.",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"country",
+                "required":true
+             },
+             {
+                "vendorType":"query",
+                "dataType":"string",
+                "name":"category",
+                "description":"The category you want to get headlines for. Possible options: business entertainment general health science sports technology . Note: you can't mix this param with the sources param.",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"category",
+                "required":false
+             },
+             {
+                "vendorType":"query",
+                "converter":"toQueryParameters",
+                "dataType":"string",
+                "name":"where",
+                "description":"The CEQL search expression.\nUse q='xxxxx'to search for keyword or a phrase.",
+                "vendorDataType":"string",
+                "source":"request",
+                "type":"query",
+                "vendorName":"converter:toQueryParameters",
+                "required":false
+             }
+          ],
+          "rootKey":"articles|articles"
+       }
+    ],
+    "modelType":"basic",
+    "protocolType":"http",
+    "transformationsEnabled":true,
+    "deleted":false,
+    "hub":"general",
+    "typeOauth":false,
+    "name":"NewsAPI",
+    "extendable":true,
+    "parameters":[
+       {
+          "vendorType":"header",
+          "name":"application/json",
+          "source":"request",
+          "type":"value",
+          "vendorName":"Accept",
+          "required":false
+       },
+       {
+          "vendorType":"header",
+          "name":"apiKey",
+          "description":"The api key required to auth",
+          "source":"request",
+          "type":"configuration",
+          "vendorName":"Authorization",
+          "required":false
+       },
+       {
+          "vendorType":"header",
+          "name":"application/json",
+          "source":"request",
+          "type":"value",
+          "vendorName":"Content-Type",
+          "required":false
+       }
+    ]
+ }
