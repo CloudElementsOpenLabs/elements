@@ -1,0 +1,1354 @@
+{
+	"configuration": [{
+		"internal": false,
+		"hideFromConsole": true,
+		"companyConfig": false,
+		"displayOrder": 1,
+		"name": "Pagination Type",
+		"active": true,
+		"description": "ExactOnline Pagination Type",
+		"type": "TEXTFIELD_32",
+		"groupControl": false,
+		"resellerConfig": false,
+		"key": "pagination.type",
+		"required": false
+	}, {
+		"internal": true,
+		"companyConfig": false,
+		"defaultValue": "600",
+		"displayOrder": 1,
+		"active": true,
+		"description": "ExactOnline OAuth Refresh Interval",
+		"type": "TEXTFIELD_32",
+		"resellerConfig": false,
+		"required": false,
+		"hideFromConsole": true,
+		"name": "OAuth Refresh Interval",
+		"groupControl": false,
+		"key": "oauth.user.refresh_interval"
+	}, {
+		"internal": true,
+		"companyConfig": false,
+		"defaultValue": "https://start.exactonline.nl/api/oauth2/auth",
+		"displayOrder": 1,
+		"active": true,
+		"description": "ExactOnline OAuth Authorization URL",
+		"type": "TEXTFIELD_1000",
+		"resellerConfig": false,
+		"required": true,
+		"hideFromConsole": true,
+		"name": "OAuth Authorization URL",
+		"groupControl": false,
+		"key": "oauth.authorization.url"
+	}, {
+		"internal": false,
+		"companyConfig": false,
+		"defaultValue": "https://start.exactonline.nl/",
+		"displayOrder": 1,
+		"active": true,
+		"description": "ExactOnline Base Url",
+		"type": "TEXTFIELD_1000",
+		"resellerConfig": false,
+		"required": true,
+		"hideFromConsole": true,
+		"name": "Base Url",
+		"groupControl": false,
+		"key": "base.url"
+	}, {
+		"internal": false,
+		"companyConfig": false,
+		"defaultValue": "false",
+		"displayOrder": 1,
+		"active": true,
+		"description": "ExactOnline OAuth basic header",
+		"type": "BOOLEAN",
+		"resellerConfig": false,
+		"required": false,
+		"hideFromConsole": true,
+		"name": "OAuth basic header",
+		"groupControl": false,
+		"key": "oauth.basic.header"
+	}, {
+		"internal": true,
+		"hideFromConsole": true,
+		"companyConfig": false,
+		"displayOrder": 1,
+		"name": "OAuth Access Token",
+		"active": true,
+		"description": "ExactOnline OAuth Access Token",
+		"type": "TEXTFIELD_32",
+		"groupControl": false,
+		"resellerConfig": false,
+		"key": "oauth.user.token",
+		"required": false
+	}, {
+		"internal": true,
+		"hideFromConsole": true,
+		"companyConfig": false,
+		"displayOrder": 1,
+		"name": "OAuth Refresh Time",
+		"active": true,
+		"description": "ExactOnline OAuth Refresh Time",
+		"type": "TEXTFIELD_64",
+		"groupControl": false,
+		"resellerConfig": false,
+		"key": "oauth.user.refresh_time",
+		"required": false
+	}, {
+		"internal": true,
+		"hideFromConsole": true,
+		"companyConfig": false,
+		"displayOrder": 1,
+		"name": "OAuth Refresh Token",
+		"active": true,
+		"description": "ExactOnline OAuth Refresh Token",
+		"type": "TEXTFIELD_64",
+		"groupControl": false,
+		"resellerConfig": false,
+		"key": "oauth.user.refresh_token",
+		"required": false
+	}, {
+		"internal": true,
+		"hideFromConsole": true,
+		"companyConfig": false,
+		"displayOrder": 1,
+		"name": "OAuth Token Revoke URL",
+		"active": true,
+		"description": "ExactOnline OAuth Token Revoke URL",
+		"type": "TEXTFIELD_1000",
+		"groupControl": false,
+		"resellerConfig": false,
+		"key": "oauth.token.revoke_url",
+		"required": false
+	}, {
+		"internal": false,
+		"companyConfig": false,
+		"defaultValue": "",
+		"displayOrder": 1,
+		"active": true,
+		"description": "ExactOnline OAuth API Key",
+		"type": "TEXTFIELD_128",
+		"resellerConfig": false,
+		"required": true,
+		"hideFromConsole": true,
+		"name": "OAuth API Key",
+		"groupControl": false,
+		"key": "oauth.api.key"
+	}, {
+		"internal": false,
+		"companyConfig": false,
+		"defaultValue": "read",
+		"displayOrder": 1,
+		"active": true,
+		"description": "ExactOnline OAuth Scope",
+		"type": "TEXTFIELD_64",
+		"resellerConfig": false,
+		"required": false,
+		"hideFromConsole": true,
+		"name": "OAuth Scope",
+		"groupControl": false,
+		"key": "oauth.scope"
+	}, {
+		"internal": true,
+		"companyConfig": false,
+		"defaultValue": "https://start.exactonline.nl/api/oauth2/token",
+		"displayOrder": 1,
+		"active": true,
+		"description": "ExactOnline OAuth Token URL",
+		"type": "TEXTFIELD_1000",
+		"resellerConfig": false,
+		"required": true,
+		"hideFromConsole": true,
+		"name": "OAuth Token URL",
+		"groupControl": false,
+		"key": "oauth.token.url"
+	}, {
+		"internal": false,
+		"companyConfig": false,
+		"defaultValue": "auth.cloudelements.io/oauth",
+		"displayOrder": 1,
+		"active": true,
+		"description": "ExactOnline OAuth Callback URL",
+		"type": "TEXTFIELD_1000",
+		"resellerConfig": false,
+		"required": true,
+		"hideFromConsole": true,
+		"name": "OAuth Callback URL",
+		"groupControl": false,
+		"key": "oauth.callback.url"
+	}, {
+		"internal": false,
+		"companyConfig": false,
+		"defaultValue": "",
+		"displayOrder": 1,
+		"active": true,
+		"description": "ExactOnline OAuth API Secret",
+		"type": "PASSWORD",
+		"resellerConfig": false,
+		"required": true,
+		"hideFromConsole": true,
+		"name": "OAuth API Secret",
+		"groupControl": false,
+		"key": "oauth.api.secret"
+	}, {
+		"internal": true,
+		"companyConfig": false,
+		"defaultValue": "https://start.exactonline.nl/api/oauth2/token",
+		"displayOrder": 1,
+		"active": true,
+		"description": "ExactOnline OAuth Token Refresh URL",
+		"type": "TEXTFIELD_1000",
+		"resellerConfig": false,
+		"required": false,
+		"hideFromConsole": true,
+		"name": "OAuth Token Refresh URL",
+		"groupControl": false,
+		"key": "oauth.token.refresh_url"
+	}, {
+		"internal": false,
+		"companyConfig": false,
+		"defaultValue": "100",
+		"displayOrder": 1,
+		"active": true,
+		"description": "ExactOnline Max Page Size (or limit)",
+		"type": "TEXTFIELD_32",
+		"resellerConfig": false,
+		"required": false,
+		"hideFromConsole": true,
+		"name": "Max Page Size (or limit)",
+		"groupControl": false,
+		"key": "pagination.max"
+	}, {
+		"internal": false,
+		"hideFromConsole": true,
+		"companyConfig": false,
+		"displayOrder": 11,
+		"name": "Event Notification Signature Key",
+		"active": true,
+		"description": "ExactOnline Event Notification Signature Key",
+		"type": "TEXTFIELD_128",
+		"groupControl": false,
+		"resellerConfig": false,
+		"key": "event.notification.signature.key",
+		"required": false
+	}, {
+		"internal": false,
+		"hideFromConsole": false,
+		"companyConfig": false,
+		"displayOrder": 12,
+		"name": "Event Notification Basic User Name",
+		"active": true,
+		"description": "ExactOnline Event Notification Basic User Name",
+		"type": "TEXTFIELD_128",
+		"groupControl": false,
+		"resellerConfig": false,
+		"key": "event.notification.basic.username",
+		"required": false
+	}, {
+		"internal": false,
+		"hideFromConsole": false,
+		"companyConfig": false,
+		"displayOrder": 13,
+		"name": "Event Notification Basic Password",
+		"active": true,
+		"description": "ExactOnline Event Notification Basic Password",
+		"type": "PASSWORD",
+		"groupControl": false,
+		"resellerConfig": false,
+		"key": "event.notification.basic.password",
+		"required": false
+	}, {
+		"internal": false,
+		"hideFromConsole": false,
+		"companyConfig": false,
+		"displayOrder": 98,
+		"name": "Default select fields",
+		"active": true,
+		"description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+		"type": "TEXTAREA",
+		"groupControl": false,
+		"resellerConfig": false,
+		"key": "default.select.fields.map",
+		"required": false
+	}, {
+		"internal": false,
+		"companyConfig": false,
+		"defaultValue": "true",
+		"displayOrder": 99,
+		"active": true,
+		"description": "Used to enable/disable filtering of null values from the responses",
+		"type": "BOOLEAN",
+		"resellerConfig": false,
+		"required": false,
+		"hideFromConsole": false,
+		"name": "Filter null values from the response",
+		"groupControl": false,
+		"key": "filter.response.nulls"
+	}, {
+		"internal": true,
+		"hideFromConsole": true,
+		"companyConfig": false,
+		"displayOrder": 100,
+		"name": "Time of Getting Token or Performing Authentication",
+		"active": true,
+		"description": "ExactOnline Time of Getting Token or Performing Authentication",
+		"type": "TEXTFIELD_32",
+		"groupControl": false,
+		"resellerConfig": false,
+		"key": "authentication.time",
+		"required": false
+	}],
+	"objects": [],
+	"description": "test",
+	"cloneable": false,
+	"extended": false,
+	"bulkDownloadEnabled": false,
+	"useModelsForMetadata": true,
+	"trialAccount": false,
+	"logo": "exactonline",
+	"hooks": [],
+	"beta": false,
+	"key": "exactonline",
+	"authentication": {
+		"type": "oauth2"
+	},
+	"bulkUploadEnabled": false,
+	"image": "https://images.cloudelements.co.uk/exact202001202320.jpg",
+	"active": true,
+	"resources": [{
+		"method": "GET",
+		"kind": "eb",
+		"description": "Search for customers",
+		"type": "api",
+		"vendorPath": "/api/v1/{division}/crm/Contacts",
+		"path": "/hubs/erp/contacts/{division}",
+		"vendorMethod": "GET",
+		"response": {
+			"contentTypeAsString": "application/json",
+			"contentType": "application/json"
+		},
+		"tryitoutDisable": false,
+		"model": {
+			"requestName": "customersGetReq",
+			"transform": false,
+			"name": "customersGetRes",
+			"requestSwagger": {
+				"customersGetReq": {
+					"title": "customersGetReq",
+					"properties": {
+						"id": {
+							"x-samplevalue": 123,
+							"format": "int32",
+							"type": "integer"
+						}
+					}
+				}
+			},
+			"swagger": {
+				"customersGetResObject": {
+					"title": "customersGetRes",
+					"type": "object",
+					"properties": {
+						"id": {
+							"x-samplevalue": 123,
+							"format": "int32",
+							"type": "integer"
+						}
+					}
+				},
+				"customersGetRes": {
+					"type": "array",
+					"items": {
+						"type": "customersGetResObject"
+					}
+				}
+			}
+		},
+		"hooks": [],
+		"parameters": [{
+			"vendorType": "path",
+			"dataType": "integer",
+			"name": "division",
+			"description": "The division ID",
+			"vendorDataType": "integer",
+			"source": "request",
+			"type": "path",
+			"vendorName": "division",
+			"required": false
+		}],
+		"rootKey": "d.results"
+	}, {
+		"method": "GET",
+		"kind": "eb",
+		"description": "Search for me",
+		"type": "api",
+		"vendorPath": "/api/v1/current/Me?$select=CurrentDivision",
+		"path": "/hubs/erp/currentDivision",
+		"paginationType": "NO_PAGINATION",
+		"vendorMethod": "GET",
+		"response": {
+			"contentTypeAsString": "application/json",
+			"contentType": "application/json"
+		},
+		"tryitoutDisable": false,
+		"hooks": [],
+		"parameters": [],
+		"rootKey": "d.results[0]"
+	}, {
+		"method": "GET",
+		"kind": "eb",
+		"description": "Search for invoices",
+		"type": "api",
+		"vendorPath": "/api/v1/{division}/salesinvoice/SalesInvoices",
+		"path": "/hubs/erp/invoices/{division}",
+		"vendorMethod": "GET",
+		"response": {
+			"contentTypeAsString": "application/json",
+			"contentType": "application/json"
+		},
+		"tryitoutDisable": false,
+		"model": {
+			"transform": false,
+			"name": "invoices",
+			"swagger": {
+				"invoices": {
+					"title": "invoices",
+					"properties": {
+						"PaymentCondition": {
+							"x-samplevalue": "21",
+							"type": "string"
+						},
+						"AmountDiscount": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"Description": {
+							"x-samplevalue": "Nieuwe factuur",
+							"type": "string"
+						},
+						"Discount": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"Modified": {
+							"x-samplevalue": "/Date(1579638357580)/",
+							"type": "string"
+						},
+						"AmountDiscountExclVat": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"ModifierFullName": {
+							"x-samplevalue": "Guy Van Wert",
+							"type": "string"
+						},
+						"SalesInvoiceLines": {
+							"type": "invoicesSalesInvoiceLines"
+						},
+						"Journal": {
+							"x-samplevalue": "70",
+							"type": "string"
+						},
+						"OrderNumber": {
+							"x-samplevalue": 1,
+							"format": "int32",
+							"type": "integer"
+						},
+						"Creator": {
+							"x-samplevalue": "fce38844-897a-42d1-a87c-171ccdcdb124",
+							"type": "string"
+						},
+						"VATAmountFC": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"Created": {
+							"x-samplevalue": "/Date(1579638357580)/",
+							"type": "string"
+						},
+						"JournalDescription": {
+							"x-samplevalue": "Verkoopboek",
+							"type": "string"
+						},
+						"SalespersonFullName": {
+							"x-samplevalue": "Guy Van Wert",
+							"type": "string"
+						},
+						"InvoiceToName": {
+							"x-samplevalue": "MyCustomerNr1",
+							"type": "string"
+						},
+						"StatusDescription": {
+							"x-samplevalue": "Open",
+							"type": "string"
+						},
+						"Currency": {
+							"x-samplevalue": "EUR",
+							"type": "string"
+						},
+						"TypeDescription": {
+							"x-samplevalue": "Factuur",
+							"type": "string"
+						},
+						"Division": {
+							"x-samplevalue": 2672983,
+							"format": "int32",
+							"type": "integer"
+						},
+						"InvoiceDate": {
+							"x-samplevalue": "/Date(1579564800000)/",
+							"type": "string"
+						},
+						"DueDate": {
+							"x-samplevalue": "/Date(1581379200000)/",
+							"type": "string"
+						},
+						"__metadata": {
+							"type": "invoices__metadata"
+						},
+						"Modifier": {
+							"x-samplevalue": "fce38844-897a-42d1-a87c-171ccdcdb124",
+							"type": "string"
+						},
+						"DeliverTo": {
+							"x-samplevalue": "dfc2f245-9284-4dde-b36b-02a9a5328c76",
+							"type": "string"
+						},
+						"Status": {
+							"x-samplevalue": 20,
+							"format": "int32",
+							"type": "integer"
+						},
+						"DeliverToAddress": {
+							"x-samplevalue": "249ae973-3462-4f29-9248-c2ab18b7d0d6",
+							"type": "string"
+						},
+						"PaymentConditionDescription": {
+							"x-samplevalue": "21 dagen",
+							"type": "string"
+						},
+						"StarterSalesInvoiceStatus": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"OrderedBy": {
+							"x-samplevalue": "dfc2f245-9284-4dde-b36b-02a9a5328c76",
+							"type": "string"
+						},
+						"OrderedByName": {
+							"x-samplevalue": "MyCustomerNr1",
+							"type": "string"
+						},
+						"InvoiceID": {
+							"x-samplevalue": "866b2a3d-9615-4f0c-aa5a-6081c4824fe8",
+							"type": "string"
+						},
+						"InvoiceTo": {
+							"x-samplevalue": "dfc2f245-9284-4dde-b36b-02a9a5328c76",
+							"type": "string"
+						},
+						"OrderDate": {
+							"x-samplevalue": "/Date(1579564800000)/",
+							"type": "string"
+						},
+						"VATAmountDC": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"Type": {
+							"x-samplevalue": 8020,
+							"format": "int32",
+							"type": "integer"
+						},
+						"DeliverToName": {
+							"x-samplevalue": "MyCustomerNr1",
+							"type": "string"
+						},
+						"AmountDC": {
+							"x-samplevalue": 1000,
+							"format": "int32",
+							"type": "integer"
+						},
+						"StarterSalesInvoiceStatusDescription": {
+							"x-samplevalue": "Concept",
+							"type": "string"
+						},
+						"DiscountType": {
+							"x-samplevalue": 1,
+							"format": "int32",
+							"type": "integer"
+						},
+						"AmountFC": {
+							"x-samplevalue": 1000,
+							"format": "int32",
+							"type": "integer"
+						},
+						"AmountFCExclVat": {
+							"x-samplevalue": 1000,
+							"format": "int32",
+							"type": "integer"
+						},
+						"CreatorFullName": {
+							"x-samplevalue": "Guy Van Wert",
+							"type": "string"
+						},
+						"Salesperson": {
+							"x-samplevalue": "fce38844-897a-42d1-a87c-171ccdcdb124",
+							"type": "string"
+						}
+					}
+				},
+				"invoicesSalesInvoiceLines__deferred": {
+					"title": "__deferred",
+					"type": "object",
+					"properties": {
+						"uri": {
+							"x-samplevalue": "https://start.exactonline.nl/api/v1/2672983/salesinvoice/SalesInvoices(guid'866b2a3d-9615-4f0c-aa5a-6081c4824fe8')/SalesInvoiceLines",
+							"type": "string"
+						}
+					}
+				},
+				"invoicesSalesInvoiceLines": {
+					"title": "SalesInvoiceLines",
+					"type": "object",
+					"properties": {
+						"__deferred": {
+							"type": "invoicesSalesInvoiceLines__deferred"
+						}
+					}
+				},
+				"invoices__metadata": {
+					"title": "__metadata",
+					"type": "object",
+					"properties": {
+						"type": {
+							"x-samplevalue": "Exact.Web.Api.Models.SalesInvoice",
+							"type": "string"
+						},
+						"uri": {
+							"x-samplevalue": "https://start.exactonline.nl/api/v1/2672983/salesinvoice/SalesInvoices(guid'866b2a3d-9615-4f0c-aa5a-6081c4824fe8')",
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"hooks": [],
+		"parameters": [{
+			"vendorType": "path",
+			"dataType": "string",
+			"name": "division",
+			"description": "The division ID",
+			"vendorDataType": "string",
+			"source": "request",
+			"type": "path",
+			"vendorName": "division",
+			"required": true
+		}],
+		"rootKey": "d.results"
+	}, {
+		"path": "/hubs/erp/ping",
+		"vendorMethod": "GET",
+		"method": "POST",
+		"kind": "eb",
+		"response": {
+			"contentTypeAsString": "application/json",
+			"contentType": "application/json"
+		},
+		"description": "Create a(n) ping",
+		"tryitoutDisable": false,
+		"type": "onProvision",
+		"hooks": [{
+			"isLegacy": false,
+			"contextParams": "configuration,response_body",
+			"mimeType": "application/javascript",
+			"body": "done({\n  configuration: {\n    'expires_in': '600',\n    'authentication.time': new Date().getTime(),\n    'auth_token': response_body\n  }, continue: false\n});",
+			"type": "postRequest"
+		}],
+		"parameters": [],
+		"vendorPath": "https://jsonplaceholder.typicode.com/todos/1"
+	}, {
+		"method": "GET",
+		"kind": "eb",
+		"description": "Search for products",
+		"type": "api",
+		"vendorPath": "/api/v1/{division}/logistics/Items",
+		"path": "/hubs/erp/products/{division}",
+		"vendorMethod": "GET",
+		"response": {
+			"contentTypeAsString": "application/json",
+			"contentType": "application/json"
+		},
+		"tryitoutDisable": false,
+		"model": {
+			"requestName": "productsGetReq",
+			"transform": false,
+			"name": "productsGetRes",
+			"requestSwagger": {
+				"productsGetReq": {
+					"title": "productsGetReq",
+					"properties": {
+						"id": {
+							"x-samplevalue": 123,
+							"format": "int32",
+							"type": "integer"
+						}
+					}
+				}
+			},
+			"swagger": {
+				"productsGetRes": {
+					"title": "productsGetRes",
+					"properties": {
+						"Description": {
+							"x-samplevalue": "Consultancy per uur",
+							"type": "string"
+						},
+						"Modified": {
+							"x-samplevalue": "/Date(1561090080777)/",
+							"type": "string"
+						},
+						"PictureThumbnailUrl": {
+							"x-samplevalue": "https://start.exactonline.nl//docs/images/placeholder_item.png",
+							"type": "string"
+						},
+						"CopyRemarks": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsBatchItem": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"Creator": {
+							"x-samplevalue": "7f5568d0-0c2d-4280-9276-64da8839fa31",
+							"type": "string"
+						},
+						"Unit": {
+							"x-samplevalue": "hour    ",
+							"type": "string"
+						},
+						"Created": {
+							"x-samplevalue": "/Date(1561090080777)/",
+							"type": "string"
+						},
+						"IsOnDemandItem": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"StartDate": {
+							"x-samplevalue": "/Date(1183248000000)/",
+							"type": "string"
+						},
+						"FreeBoolField_05": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"IsSerialItem": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"IsBatchNumberItem": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsSubcontractedItem": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"UnitType": {
+							"x-samplevalue": "T",
+							"type": "string"
+						},
+						"SecurityLevel": {
+							"x-samplevalue": 10,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsNewContract": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"ItemGroupDescription": {
+							"x-samplevalue": "Diensten",
+							"type": "string"
+						},
+						"Division": {
+							"x-samplevalue": 2672983,
+							"format": "int32",
+							"type": "integer"
+						},
+						"ID": {
+							"x-samplevalue": "4cf633b0-190b-41b3-9ce0-0e1e3bb70b78",
+							"type": "string"
+						},
+						"__metadata": {
+							"type": "productsGetRes__metadata"
+						},
+						"Modifier": {
+							"x-samplevalue": "7f5568d0-0c2d-4280-9276-64da8839fa31",
+							"type": "string"
+						},
+						"CostPriceCurrency": {
+							"x-samplevalue": "EUR",
+							"type": "string"
+						},
+						"CostPriceStandard": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsRegistrationCodeItem": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsMakeItem": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsWebshopItem": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsStockItem": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"SalesVatCode": {
+							"x-samplevalue": "2  ",
+							"type": "string"
+						},
+						"IsPurchaseItem": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"FreeBoolField_02": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"SalesVatCodeDescription": {
+							"x-samplevalue": "BTW hoog tarief, exclusief",
+							"type": "string"
+						},
+						"Code": {
+							"x-samplevalue": "CONSULT",
+							"type": "string"
+						},
+						"FreeBoolField_01": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"FreeBoolField_04": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"FreeBoolField_03": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"IsFractionAllowedItem": {
+							"x-samplevalue": true,
+							"type": "boolean"
+						},
+						"IsPackageItem": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"ItemGroup": {
+							"x-samplevalue": "f77b3282-b453-462e-8527-586ef75f8867",
+							"type": "string"
+						},
+						"ItemGroupCode": {
+							"x-samplevalue": "DIENSTEN",
+							"type": "string"
+						},
+						"IsTime": {
+							"x-samplevalue": 1,
+							"format": "int32",
+							"type": "integer"
+						},
+						"PictureUrl": {
+							"x-samplevalue": "https://start.exactonline.nl//docs/images/placeholder_item.png",
+							"type": "string"
+						},
+						"UnitDescription": {
+							"x-samplevalue": "Hour",
+							"type": "string"
+						},
+						"IsSalesItem": {
+							"x-samplevalue": true,
+							"type": "boolean"
+						}
+					}
+				},
+				"productsGetRes__metadata": {
+					"title": "__metadata",
+					"type": "object",
+					"properties": {
+						"type": {
+							"x-samplevalue": "Exact.Web.Api.Models.Item",
+							"type": "string"
+						},
+						"uri": {
+							"x-samplevalue": "https://start.exactonline.nl/api/v1/2672983/logistics/Items(guid'4cf633b0-190b-41b3-9ce0-0e1e3bb70b78')",
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"hooks": [],
+		"parameters": [{
+			"vendorType": "path",
+			"dataType": "integer",
+			"name": "division",
+			"description": "The division ID",
+			"vendorDataType": "integer",
+			"source": "request",
+			"type": "path",
+			"vendorName": "division",
+			"required": false
+		}],
+		"rootKey": "d.results"
+	}, {
+		"method": "GET",
+		"kind": "eb",
+		"description": "Search for purchase-orders",
+		"type": "api",
+		"vendorPath": "/api/v1/{division}/purchaseorder/PurchaseOrders?$top=1",
+		"path": "/hubs/erp/purchase-orders/{division}",
+		"vendorMethod": "GET",
+		"response": {
+			"contentTypeAsString": "application/json",
+			"contentType": "application/json"
+		},
+		"tryitoutDisable": false,
+		"model": {
+			"requestName": "purchaseordersGetReq",
+			"transform": false,
+			"name": "purchaseordersGetRes",
+			"requestSwagger": {
+				"purchaseordersGetReq": {
+					"title": "purchaseordersGetReq",
+					"properties": {
+						"id": {
+							"x-samplevalue": 123,
+							"format": "int32",
+							"type": "integer"
+						}
+					}
+				}
+			},
+			"swagger": {
+				"purchaseordersGetResObject": {
+					"title": "purchaseordersGetRes",
+					"type": "object",
+					"properties": {
+						"id": {
+							"x-samplevalue": 123,
+							"format": "int32",
+							"type": "integer"
+						}
+					}
+				},
+				"purchaseordersGetRes": {
+					"type": "array",
+					"items": {
+						"type": "purchaseordersGetResObject"
+					}
+				}
+			}
+		},
+		"hooks": [],
+		"parameters": [{
+			"vendorType": "path",
+			"dataType": "integer",
+			"name": "division",
+			"description": "The division ID",
+			"vendorDataType": "integer",
+			"source": "request",
+			"type": "path",
+			"vendorName": "division",
+			"required": false
+		}],
+		"rootKey": "d.results"
+	}, {
+		"method": "GET",
+		"kind": "eb",
+		"description": "Search for vendors",
+		"type": "api",
+		"vendorPath": "/api/v1/{division}/crm/Accounts",
+		"path": "/hubs/erp/vendors/{division}",
+		"vendorMethod": "GET",
+		"response": {
+			"contentTypeAsString": "application/json",
+			"contentType": "application/json"
+		},
+		"tryitoutDisable": false,
+		"model": {
+			"requestName": "vendorsGetReq",
+			"transform": false,
+			"name": "vendorsGetRes",
+			"requestSwagger": {
+				"vendorsGetReq": {
+					"title": "vendorsGetReq",
+					"properties": {
+						"id": {
+							"x-samplevalue": 123,
+							"format": "int32",
+							"type": "integer"
+						}
+					}
+				}
+			},
+			"swagger": {
+				"vendorsGetResBankAccounts__deferred": {
+					"title": "__deferred",
+					"type": "object",
+					"properties": {
+						"uri": {
+							"x-samplevalue": "https://start.exactonline.nl/api/v1/2672983/crm/Accounts(guid'dfc2f245-9284-4dde-b36b-02a9a5328c76')/BankAccounts",
+							"type": "string"
+						}
+					}
+				},
+				"vendorsGetRes": {
+					"title": "vendorsGetRes",
+					"properties": {
+						"Email": {
+							"x-sub-format": "email",
+							"x-samplevalue": "info@unknown.nl",
+							"type": "string"
+						},
+						"LogoUrl": {
+							"x-samplevalue": "https://start.exactonline.nl//docs/images/placeholder_account_myeol.png",
+							"type": "string"
+						},
+						"IsAgency": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"StateName": {
+							"x-samplevalue": "Zuid-Holland",
+							"type": "string"
+						},
+						"CreditLinePurchase": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"Creator": {
+							"x-samplevalue": "fce38844-897a-42d1-a87c-171ccdcdb124",
+							"type": "string"
+						},
+						"Name": {
+							"x-samplevalue": "MyCustomerNr1",
+							"type": "string"
+						},
+						"StartDate": {
+							"x-samplevalue": "/Date(1579564800000)/",
+							"type": "string"
+						},
+						"PurchaseCurrency": {
+							"x-samplevalue": "EUR",
+							"type": "string"
+						},
+						"InvoicingMethod": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"SecurityLevel": {
+							"x-samplevalue": 10,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsPurchase": {
+							"x-samplevalue": true,
+							"type": "boolean"
+						},
+						"ID": {
+							"x-samplevalue": "dfc2f245-9284-4dde-b36b-02a9a5328c76",
+							"type": "string"
+						},
+						"Status": {
+							"x-samplevalue": "C",
+							"type": "string"
+						},
+						"SeparateInvPerSubscription": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IgnoreDatevWarningMessage": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"IsBank": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"DiscountSales": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"ConsolidationScenario": {
+							"x-samplevalue": 4,
+							"format": "int32",
+							"type": "integer"
+						},
+						"City": {
+							"x-samplevalue": "Delft",
+							"type": "string"
+						},
+						"Code": {
+							"x-samplevalue": "                 4",
+							"type": "string"
+						},
+						"Postcode": {
+							"x-samplevalue": "2600",
+							"type": "string"
+						},
+						"AddressLine1": {
+							"x-samplevalue": "UnknownStreet",
+							"type": "string"
+						},
+						"CanDropShip": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"State": {
+							"x-samplevalue": "ZH ",
+							"type": "string"
+						},
+						"CreatorFullName": {
+							"x-samplevalue": "Guy Van Wert",
+							"type": "string"
+						},
+						"Country": {
+							"x-samplevalue": "NL ",
+							"type": "string"
+						},
+						"SalesCurrency": {
+							"x-samplevalue": "EUR",
+							"type": "string"
+						},
+						"Blocked": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"SeparateInvPerProject": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsAnonymised": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsSales": {
+							"x-samplevalue": true,
+							"type": "boolean"
+						},
+						"Modified": {
+							"x-samplevalue": "/Date(1579638319393)/",
+							"type": "string"
+						},
+						"CountryName": {
+							"x-samplevalue": "Nederland",
+							"type": "string"
+						},
+						"ModifierFullName": {
+							"x-samplevalue": "Guy Van Wert",
+							"type": "string"
+						},
+						"IsMailing": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"LogoThumbnailUrl": {
+							"x-samplevalue": "https://start.exactonline.nl//docs/images/placeholder_account_myeol.png",
+							"type": "string"
+						},
+						"IsMember": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"Created": {
+							"x-samplevalue": "/Date(1579638319393)/",
+							"type": "string"
+						},
+						"IsAccountant": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"CostPaid": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"CreditLineSales": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsSupplier": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"StatusSince": {
+							"x-samplevalue": "/Date(1579564800000)/",
+							"type": "string"
+						},
+						"Division": {
+							"x-samplevalue": 2672983,
+							"format": "int32",
+							"type": "integer"
+						},
+						"__metadata": {
+							"type": "vendorsGetRes__metadata"
+						},
+						"Modifier": {
+							"x-samplevalue": "fce38844-897a-42d1-a87c-171ccdcdb124",
+							"type": "string"
+						},
+						"SalesCurrencyDescription": {
+							"x-samplevalue": "Euro",
+							"type": "string"
+						},
+						"IsCompetitor": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"PurchaseLeadDays": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"DiscountPurchase": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"PurchaseCurrencyDescription": {
+							"x-samplevalue": "Euro",
+							"type": "string"
+						},
+						"ShippingLeadDays": {
+							"x-samplevalue": 0,
+							"format": "int32",
+							"type": "integer"
+						},
+						"IsPilot": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"Type": {
+							"x-samplevalue": "A",
+							"type": "string"
+						},
+						"BankAccounts": {
+							"type": "vendorsGetResBankAccounts"
+						},
+						"CustomerSince": {
+							"x-samplevalue": "/Date(1579564800000)/",
+							"type": "string"
+						},
+						"IsReseller": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"RecepientOfCommissions": {
+							"x-samplevalue": false,
+							"type": "boolean"
+						},
+						"InvoiceAttachmentType": {
+							"x-samplevalue": 1,
+							"format": "int32",
+							"type": "integer"
+						}
+					}
+				},
+				"vendorsGetRes__metadata": {
+					"title": "__metadata",
+					"type": "object",
+					"properties": {
+						"type": {
+							"x-samplevalue": "Exact.Web.Api.Models.Account",
+							"type": "string"
+						},
+						"uri": {
+							"x-samplevalue": "https://start.exactonline.nl/api/v1/2672983/crm/Accounts(guid'dfc2f245-9284-4dde-b36b-02a9a5328c76')",
+							"type": "string"
+						}
+					}
+				},
+				"vendorsGetResBankAccounts": {
+					"title": "BankAccounts",
+					"type": "object",
+					"properties": {
+						"__deferred": {
+							"type": "vendorsGetResBankAccounts__deferred"
+						}
+					}
+				}
+			}
+		},
+		"hooks": [],
+		"parameters": [{
+			"vendorType": "path",
+			"dataType": "integer",
+			"name": "division",
+			"description": "The division ID",
+			"vendorDataType": "integer",
+			"source": "request",
+			"type": "path",
+			"vendorName": "division",
+			"required": false
+		}],
+		"rootKey": "d.results"
+	}],
+	"modelType": "basic",
+	"protocolType": "http",
+	"transformationsEnabled": true,
+	"deleted": false,
+	"hub": "erp",
+	"typeOauth": false,
+	"name": "ExactOnline",
+	"extendable": true,
+	"parameters": [{
+		"vendorType": "header",
+		"name": "application/json",
+		"source": "request",
+		"type": "value",
+		"vendorName": "Accept",
+		"required": false
+	}, {
+		"vendorType": "header",
+		"name": "application/json",
+		"source": "request",
+		"type": "value",
+		"vendorName": "Content-Type",
+		"required": false
+	}]
+}
