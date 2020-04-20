@@ -1,4 +1,4 @@
-#Tableau
+Tableau
 -------------
 
 Tableau is business intelligence software that helps people see and understand their data.
