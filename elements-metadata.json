@@ -1,4 +1,26 @@
 {
+ "Exact Online" : {
+    "image" : "https://images.cloudelements.co.uk/exact202001202320.jpg",
+    "path" : "exactonline/element.json",
+    "hub" : "erp",
+    "author" : "GuyVanWert",
+    "name" : "Tableau",
+    "description" : "Exact online is an ERP mainly used in the Benelux",
+    "active" : true,
+    "vendor_version" : "1",
+    "key" : "exactonline"
+  },
+ "Tableau" : {
+    "image" : "https://images.cloudelements.io/unnamed-3202004212146.png",
+    "path" : "tableau/element.json",
+    "hub" : "general",
+    "author" : "GuyVanWert",
+    "name" : "Tableau",
+    "description" : "Tableau is Business intelligence and analytics software",
+    "active" : true,
+    "vendor_version" : "3.7",
+    "key" : "tableau"
+  },
   "Mandrill" : {
     "image" : "https://images.cloudelements.io/mandrill201810221710.png",
     "path" : "mandrill_3/element.json",
