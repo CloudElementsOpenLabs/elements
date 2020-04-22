@@ -1,0 +1,13 @@
+{
+  "id": 1206,
+  "name": "ExactOnline",
+  "key": "exactonline",
+  "active": true,
+  "beta": false,
+  "defaultAuthentication": "oauth2",
+  "description": "ExactOline is the online version for exact.com - An ERP mainly used in the Benelux",
+  "displayOrder": 100,
+  "captured": false,
+  "extended": false,
+  "private": true
+}

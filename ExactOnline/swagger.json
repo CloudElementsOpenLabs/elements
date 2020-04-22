@@ -67,59 +67,6 @@
         ]
       }
     },
-    "/currentDivision": {
-      "get": {
-        "summary": "Search for me",
-        "operationId": "getCurrentDivision",
-        "responses": {
-          "200": {
-            "description": "OK - Everything worked as expected"
-          },
-          "400": {
-            "description": "Bad Request - Often due to a missing request parameter"
-          },
-          "401": {
-            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
-          },
-          "403": {
-            "description": "Forbidden - Access to the resource by the provider is forbidden"
-          },
-          "404": {
-            "description": "Not found - The requested resource is not found"
-          },
-          "405": {
-            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
-          },
-          "406": {
-            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
-          },
-          "409": {
-            "description": "Conflict - If a resource being created already exists"
-          },
-          "415": {
-            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
-          },
-          "500": {
-            "description": "Server error - Something went wrong on the Cloud Elements server"
-          },
-          "502": {
-            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
-          }
-        },
-        "parameters": [
-          {
-            "in": "header",
-            "name": "Authorization",
-            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
-            "type": "string",
-            "required": true
-          }
-        ],
-        "tags": [
-          "currentDivision"
-        ]
-      }
-    },
     "/invoices/{division}": {
       "get": {
         "summary": "Search for invoices",
@@ -180,6 +127,59 @@
         ],
         "tags": [
           "invoices"
+        ]
+      }
+    },
+    "/my-division": {
+      "get": {
+        "summary": "Search for me",
+        "operationId": "getMyDivision",
+        "responses": {
+          "200": {
+            "description": "OK - Everything worked as expected"
+          },
+          "400": {
+            "description": "Bad Request - Often due to a missing request parameter"
+          },
+          "401": {
+            "description": "Unauthorized - An invalid element token, user secret and/or org secret provided"
+          },
+          "403": {
+            "description": "Forbidden - Access to the resource by the provider is forbidden"
+          },
+          "404": {
+            "description": "Not found - The requested resource is not found"
+          },
+          "405": {
+            "description": "Method not allowed - Incorrect HTTP verb used, e.g., GET used when POST expected"
+          },
+          "406": {
+            "description": "Not acceptable - The response content type does not match the 'Accept' header value"
+          },
+          "409": {
+            "description": "Conflict - If a resource being created already exists"
+          },
+          "415": {
+            "description": "Unsupported media type - The server cannot handle the requested Content-Type"
+          },
+          "500": {
+            "description": "Server error - Something went wrong on the Cloud Elements server"
+          },
+          "502": {
+            "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
+          }
+        },
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "description": "The authorization tokens. The format for the header value is 'Element &lt;token&gt;, User &lt;user secret&gt;'",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "tags": [
+          "my-division"
         ]
       }
     },
@@ -1270,7 +1270,7 @@
             "description": "Provider server error - Something went wrong on the Provider or Endpoint's server"
           }
         },
-        "summary": "Create an {childObjectName}",
+        "summary": "Create an {objectName}",
         "tags": [
           "objectName"
         ]
@@ -2831,10 +2831,14 @@
   },
   "swagger": "2.0",
   "info": {
+    "x-element-name": "ExactOnline",
+    "x-element-hub": "erp",
+    "x-element-key": "exactonline",
     "contact": {
       "email": "support@cloud-elements.com"
     },
     "title": "exactonline",
+    "x-element-id": 1206,
     "version": "api-v2"
   },
   "tags": [
@@ -2845,13 +2849,13 @@
       "name": "invoices"
     },
     {
+      "name": "my-division"
+    },
+    {
       "name": "ping"
     },
     {
       "name": "objects"
-    },
-    {
-      "name": "currentDivision"
     },
     {
       "name": "objectName"
