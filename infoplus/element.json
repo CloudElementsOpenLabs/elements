@@ -1,0 +1,1366 @@
+{
+    "id": 11336,
+    "name": "Infoplus",
+    "key": "infoplus",
+    "description": "This element will be partially built ",
+    "image": "https://images.cloudelements.io/Image 2018-04-03 at 11.49.29 AM201804031759.png",
+    "logo": "infoplus",
+    "active": true,
+    "deleted": false,
+    "typeOauth": false,
+    "trialAccount": false,
+    "configuration": [
+        {
+            "id": 148700,
+            "name": "Base Url",
+            "key": "base.url",
+            "description": "Infoplus Base Url",
+            "defaultValue": "",
+            "resellerConfig": false,
+            "companyConfig": false,
+            "active": true,
+            "internal": false,
+            "groupControl": false,
+            "displayOrder": 1,
+            "type": "TEXTFIELD_1000",
+            "hideFromConsole": true,
+            "required": true
+        },
+        {
+            "id": 148699,
+            "name": "Max Page Size (or limit)",
+            "key": "pagination.max",
+            "description": "Infoplus Max Page Size (or limit)",
+            "defaultValue": "250",
+            "resellerConfig": false,
+            "companyConfig": false,
+            "active": true,
+            "internal": false,
+            "groupControl": false,
+            "displayOrder": 1,
+            "type": "TEXTFIELD_32",
+            "hideFromConsole": true,
+            "required": false
+        },
+        {
+            "id": 148698,
+            "name": "Pagination Type",
+            "key": "pagination.type",
+            "description": "Infoplus Pagination Type",
+            "defaultValue": "page",
+            "resellerConfig": false,
+            "companyConfig": false,
+            "active": true,
+            "internal": false,
+            "groupControl": false,
+            "displayOrder": 1,
+            "type": "TEXTFIELD_32",
+            "hideFromConsole": true,
+            "required": false
+        },
+        {
+            "id": 148697,
+            "name": "API Key",
+            "key": "api.key",
+            "description": "API Key",
+            "resellerConfig": false,
+            "companyConfig": false,
+            "active": true,
+            "internal": false,
+            "groupControl": false,
+            "displayOrder": 1,
+            "type": "TEXTFIELD_128",
+            "hideFromConsole": false,
+            "required": true
+        },
+        {
+            "id": 148701,
+            "name": "Time of Getting Token or Performing Authentication",
+            "key": "authentication.time",
+            "description": "Infoplus Time of Getting Token or Performing Authentication",
+            "resellerConfig": false,
+            "companyConfig": false,
+            "active": true,
+            "internal": true,
+            "groupControl": false,
+            "displayOrder": 100,
+            "type": "TEXTFIELD_32",
+            "hideFromConsole": true,
+            "required": false
+        },
+        {
+            "id": 148702,
+            "name": "Event Type",
+            "key": "event.vendor.type",
+            "description": "Infoplus Event Type",
+            "defaultValue": "polling",
+            "resellerConfig": false,
+            "companyConfig": false,
+            "active": true,
+            "internal": true,
+            "groupControl": false,
+            "displayOrder": 100,
+            "type": "TEXTFIELD_128",
+            "hideFromConsole": true,
+            "required": false
+        },
+        {
+            "id": 148703,
+            "name": "Event poller refresh interval",
+            "key": "event.poller.refresh_interval",
+            "description": "Infoplus Set time interval for polling application (in minutes)",
+            "defaultValue": "3",
+            "resellerConfig": false,
+            "companyConfig": false,
+            "active": true,
+            "internal": false,
+            "groupControl": false,
+            "displayOrder": 101,
+            "type": "TEXTFIELD_128",
+            "hideFromConsole": false,
+            "required": false
+        },
+        {
+            "id": 148704,
+            "name": "Event Notifications Enabled",
+            "key": "event.notification.enabled",
+            "description": "Infoplus Enable/Disable Event Notification",
+            "defaultValue": "false",
+            "resellerConfig": false,
+            "companyConfig": false,
+            "active": true,
+            "internal": false,
+            "groupControl": false,
+            "displayOrder": 102,
+            "type": "BOOLEAN",
+            "hideFromConsole": false,
+            "required": false
+        },
+        {
+            "id": 148705,
+            "name": "Event Notification Callback URL",
+            "key": "event.notification.callback.url",
+            "description": "Infoplus Event Notification Callback URL",
+            "resellerConfig": false,
+            "companyConfig": false,
+            "active": true,
+            "internal": false,
+            "groupControl": false,
+            "displayOrder": 102,
+            "type": "TEXTFIELD_1000",
+            "hideFromConsole": false,
+            "required": false
+        },
+        {
+            "id": 148706,
+            "name": "Event Poller Resources Configuration",
+            "key": "event.poller.configuration",
+            "description": "Infoplus Event Poller Resources Configuration",
+            "defaultValue": "{\"item-receipts\":{\"url\":\"/hubs/general/item-receipts?orderBy=!receivedDate&filter=receivedDate gte '${dateTimeZone:CST:yyyy-MM-dd'T'HH:mm:ssXXX}'\",\"idField\":\"id\",\"datesConfiguration\":{\"updatedDateField\":\"receivedDate\",\"updatedDateFormat\":\"yyyy-MM-dd'T'HH:mm:ssXXX\",\"updatedDateTimezone\":\"CST\",\"createdDateField\":\"orderDate\",\"createdDateFormat\":\"yyyy-MM-dd'T'HH:mm:ssXXX\",\"createdDateTimezone\":\"CST\"}}}",
+            "resellerConfig": false,
+            "companyConfig": false,
+            "active": true,
+            "internal": false,
+            "groupControl": false,
+            "displayOrder": 104,
+            "type": "TEXTAREA",
+            "hideFromConsole": false,
+            "required": false
+        },
+        {
+            "id": 148707,
+            "name": "Event Notification Subscription ID",
+            "key": "event.notification.subscription.id",
+            "description": "Infoplus Event Notification Subscription ID",
+            "resellerConfig": false,
+            "companyConfig": false,
+            "active": true,
+            "internal": false,
+            "groupControl": false,
+            "displayOrder": 104,
+            "type": "TEXTFIELD_1000",
+            "hideFromConsole": true,
+            "required": false
+        }
+    ],
+    "resources": [
+        {
+            "id": 260005,
+            "createdDate": "2018-04-03T21:59:07Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Search for /advanced-shipment-notifications",
+            "path": "/hubs/general/advanced-shipment-notifications",
+            "vendorPath": "/asn/search",
+            "method": "GET",
+            "vendorMethod": "GET",
+            "parameters": [
+                {
+                    "id": 577399,
+                    "resourceId": 260005,
+                    "createdDate": "2018-04-03T21:59:07Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "page",
+                    "vendorName": "page",
+                    "description": "The page number of resources to retrieve",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577398,
+                    "resourceId": 260005,
+                    "createdDate": "2018-04-03T21:59:07Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "where",
+                    "vendorName": "filter",
+                    "description": "The CEQL search expression",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577401,
+                    "resourceId": 260005,
+                    "createdDate": "2018-04-03T21:59:07Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "orderBy",
+                    "vendorName": "sort",
+                    "description": "add a specific field to order by, defaults to ASC, add “!” before the field name to denote DESC",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577400,
+                    "resourceId": 260005,
+                    "createdDate": "2018-04-03T21:59:07Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "pageSize",
+                    "vendorName": "limit",
+                    "description": "The number of resources to return in a given page",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                }
+            ],
+            "model": {
+                "name": "advancedShipmentNotifications",
+                "transform": false
+            },
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 260006,
+            "createdDate": "2018-04-03T22:00:07Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Create a(n) /advanced-shipment-notifications",
+            "path": "/hubs/general/advanced-shipment-notifications",
+            "vendorPath": "/asn",
+            "method": "POST",
+            "vendorMethod": "POST",
+            "parameters": [
+                {
+                    "id": 577402,
+                    "resourceId": 260006,
+                    "createdDate": "2018-04-03T22:00:07Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "body",
+                    "vendorName": "body",
+                    "description": "The object body",
+                    "type": "body",
+                    "vendorType": "body",
+                    "dataType": "advancedShipmentNotifications",
+                    "vendorDataType": "advancedShipmentNotifications",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "model": {
+                "name": "advancedShipmentNotifications",
+                "transform": false,
+                "requestName": "advancedShipmentNotifications"
+            },
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 260002,
+            "createdDate": "2018-04-03T21:57:27Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Update a(n) /advanced-shipment-notifications",
+            "path": "/hubs/general/advanced-shipment-notifications",
+            "vendorPath": "/asn",
+            "method": "PUT",
+            "vendorMethod": "PUT",
+            "parameters": [
+                {
+                    "id": 577395,
+                    "resourceId": 260002,
+                    "createdDate": "2018-04-03T21:57:27Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "body",
+                    "vendorName": "body",
+                    "description": "The object body",
+                    "type": "body",
+                    "vendorType": "body",
+                    "dataType": "advancedShipmentNotifications",
+                    "vendorDataType": "advancedShipmentNotifications",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "model": {
+                "name": "advancedShipmentNotifications",
+                "transform": false
+            },
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 260003,
+            "createdDate": "2018-04-03T21:57:48Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Delete a(n) /advanced-shipment-notifications",
+            "path": "/hubs/general/advanced-shipment-notifications/{id}",
+            "vendorPath": "/asn/{asnId}",
+            "method": "DELETE",
+            "vendorMethod": "DELETE",
+            "parameters": [
+                {
+                    "id": 577396,
+                    "resourceId": 260003,
+                    "createdDate": "2018-04-03T21:57:48Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "id",
+                    "vendorName": "asnId",
+                    "description": "The id ID",
+                    "type": "path",
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 260004,
+            "createdDate": "2018-04-03T21:58:14Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Retrieve a(n) /advanced-shipment-notifications",
+            "path": "/hubs/general/advanced-shipment-notifications/{id}",
+            "vendorPath": "/asn/{asnId}",
+            "method": "GET",
+            "vendorMethod": "GET",
+            "parameters": [
+                {
+                    "id": 577397,
+                    "resourceId": 260004,
+                    "createdDate": "2018-04-03T21:58:14Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "id",
+                    "vendorName": "asnId",
+                    "description": "The id ID",
+                    "type": "path",
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "model": {
+                "name": "advancedShipmentNotifications",
+                "transform": false
+            },
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259968,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Find Customers in the Finance System, using the provided CEQL search expression, or the where clause, without the WHERE keyword, in a typical SQL query. For example, to search for Customers last modified on or after 'Jan 15, 2014', the search expression will be where=lastModifiedDate>='2014-01-15T00:00:00.000Z'. When this parameter is omitted, all Customers are returned.",
+            "path": "/hubs/general/customers",
+            "vendorPath": "/customer/search",
+            "method": "GET",
+            "vendorMethod": "GET",
+            "parameters": [
+                {
+                    "id": 577337,
+                    "resourceId": 259968,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "page",
+                    "vendorName": "page",
+                    "description": "The start page for pagination, which defaults to 1 if not supplied",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "integer",
+                    "vendorDataType": "integer",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577338,
+                    "resourceId": 259968,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "pageSize",
+                    "vendorName": "limit",
+                    "description": "The page size for pagination, which defaults to 200 if not supplied",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "integer",
+                    "vendorDataType": "integer",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577336,
+                    "resourceId": 259968,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "filter",
+                    "vendorName": "filter",
+                    "description": "The search expression, or the where clause, without the WHERE keyword, in a typical SQL query. For example, to search for accounts last modified on or after 'Jan 15, 2014', the search expression will be <i>where=lastModifiedDate>='2014-01-15T00:00:00.000Z'</i>. When this parameter is omitted, all customers are returned ",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577390,
+                    "resourceId": 259968,
+                    "createdDate": "2018-04-03T21:26:00Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "orderBy",
+                    "vendorName": "sort",
+                    "description": "add a specific field to order by, defaults to ASC, add \"!\" before the field name to denote DESC",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                }
+            ],
+            "model": {
+                "name": "customers",
+                "transform": false,
+                "swagger": {
+                    "customers": {
+                        "properties": {
+                            "city": {
+                                "type": "string",
+                                "x-samplevalue": "Anywhere"
+                            },
+                            "customerNo": {
+                                "type": "string",
+                                "x-samplevalue": "1"
+                            },
+                            "id": {
+                                "format": "int32",
+                                "type": "integer",
+                                "x-samplevalue": 1
+                            },
+                            "lobId": {
+                                "format": "int32",
+                                "type": "integer",
+                                "x-samplevalue": 10084
+                            },
+                            "modifyDate": {
+                                "format": "date-time",
+                                "type": "string",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                                "x-samplevalue": "2017-08-31T20:45:21.755Z"
+                            },
+                            "name": {
+                                "type": "string",
+                                "x-samplevalue": "Test Customer 1"
+                            },
+                            "state": {
+                                "type": "string",
+                                "x-samplevalue": "California"
+                            },
+                            "street": {
+                                "type": "string",
+                                "x-samplevalue": "321 Main Street"
+                            },
+                            "zipCode": {
+                                "type": "string",
+                                "x-samplevalue": "90210"
+                            }
+                        },
+                        "title": "customers",
+                        "x-has-customfields": false
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259972,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Update a Customer given a set of partial attributes associated with a given ID in the Finance system. The update API uses the PATCH HTTP verb, so only those fields provided in the Customer object will be updated, and those fields not provided will be left alone.  Updating an Customer with a specified ID that does not exist will result in an error response.",
+            "path": "/hubs/general/customers",
+            "vendorPath": "/customer",
+            "method": "PATCH",
+            "vendorMethod": "PATCH",
+            "parameters": [
+                {
+                    "id": 577343,
+                    "resourceId": 259972,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "body",
+                    "vendorName": "body",
+                    "description": "The customer object, with those fields that are to be updated.",
+                    "type": "body",
+                    "vendorType": "body",
+                    "dataType": "body",
+                    "vendorDataType": "body",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259969,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Create a Customer in the Finance system.  Customer creation will flow through Cloud Elements to the Finance Service.",
+            "path": "/hubs/general/customers",
+            "vendorPath": "/customer",
+            "method": "POST",
+            "vendorMethod": "POST",
+            "parameters": [
+                {
+                    "id": 577339,
+                    "resourceId": 259969,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "body",
+                    "vendorName": "body",
+                    "description": "The Customer object to be created.<br>With the exception of the 'id' field, the required fields indicated in the 'Customer' model are those required to create a new customer",
+                    "type": "body",
+                    "vendorType": "body",
+                    "dataType": "body",
+                    "vendorDataType": "body",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "model": {
+                "name": "customers",
+                "transform": false
+            },
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259970,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Delete a customer associated with a given ID from the Finance system. This marks the customer as inactive.  Specifying a Customer associated with a given ID that does not exist will result in an error message.",
+            "path": "/hubs/general/customers/{id}",
+            "vendorPath": "/customer/{customerId}",
+            "method": "DELETE",
+            "vendorMethod": "DELETE",
+            "parameters": [
+                {
+                    "id": 577340,
+                    "resourceId": 259970,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "id",
+                    "vendorName": "customerId",
+                    "description": "The ID of the customer to delete in the Finance system.",
+                    "type": "path",
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259971,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Retrieve a Customer associated with a given ID from the Finance system. Specifying a Customer with an associated ID that does not exist will result in an error response.",
+            "path": "/hubs/general/customers/{id}",
+            "vendorPath": "/customer/{customerId}",
+            "method": "GET",
+            "vendorMethod": "GET",
+            "parameters": [
+                {
+                    "id": 577341,
+                    "resourceId": 259971,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "id",
+                    "vendorName": "customerId",
+                    "description": "The Id of the customer to retrieve from the finance system.",
+                    "type": "path",
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259998,
+            "createdDate": "2018-04-03T21:14:37Z",
+            "updatedDate": "2018-05-03T01:23:06Z",
+            "description": "Search for /item-receipts",
+            "path": "/hubs/general/item-receipts",
+            "vendorPath": "/itemReceipt/search",
+            "method": "GET",
+            "vendorMethod": "GET",
+            "parameters": [
+                {
+                    "id": 584884,
+                    "resourceId": 259998,
+                    "createdDate": "2018-04-11T05:21:36Z",
+                    "updatedDate": "2018-05-03T01:23:06Z",
+                    "name": "orderBy",
+                    "vendorName": "sort",
+                    "description": "add a specific field to order by, defaults to ASC, add \"!\" before the field name to denote DESC like !modifyDate",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577385,
+                    "resourceId": 259998,
+                    "createdDate": "2018-04-03T21:14:37Z",
+                    "updatedDate": "2018-05-03T01:23:06Z",
+                    "name": "page",
+                    "vendorName": "page",
+                    "description": "The page number of resources to retrieve",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577384,
+                    "resourceId": 259998,
+                    "createdDate": "2018-04-03T21:14:37Z",
+                    "updatedDate": "2018-05-03T01:23:06Z",
+                    "name": "filter",
+                    "vendorName": "filter",
+                    "description": "The CEQL search expression, like legacyPoNo like \"XXXX%\"",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577386,
+                    "resourceId": 259998,
+                    "createdDate": "2018-04-03T21:14:37Z",
+                    "updatedDate": "2018-05-03T01:23:06Z",
+                    "name": "pageSize",
+                    "vendorName": "limit",
+                    "description": "The number of resources to return in a given page",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                }
+            ],
+            "model": {
+                "name": "itemReceipts",
+                "transform": false
+            },
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 260000,
+            "createdDate": "2018-04-03T21:19:26Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Update a(n) /item-receipts",
+            "path": "/hubs/general/item-receipts",
+            "vendorPath": "/itemReceipt",
+            "method": "PUT",
+            "vendorMethod": "PUT",
+            "parameters": [
+                {
+                    "id": 577388,
+                    "resourceId": 260000,
+                    "createdDate": "2018-04-03T21:19:26Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "body",
+                    "vendorName": "body",
+                    "description": "The object body",
+                    "type": "body",
+                    "vendorType": "body",
+                    "dataType": "itemReceipts",
+                    "vendorDataType": "itemReceipts",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "model": {
+                "name": "itemReceipts",
+                "transform": false
+            },
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259999,
+            "createdDate": "2018-04-03T21:18:31Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Retrieve a(n) /item-receipts",
+            "path": "/hubs/general/item-receipts/{id}",
+            "vendorPath": "/itemReceipt/{itemReceiptId}",
+            "method": "GET",
+            "vendorMethod": "GET",
+            "parameters": [
+                {
+                    "id": 577387,
+                    "resourceId": 259999,
+                    "createdDate": "2018-04-03T21:18:31Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "id",
+                    "vendorName": "itemReceiptId",
+                    "description": "The id ID",
+                    "type": "path",
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "model": {
+                "name": "itemReceipts",
+                "transform": false
+            },
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 260078,
+            "createdDate": "2018-04-04T04:41:34Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Search for /items",
+            "path": "/hubs/general/items",
+            "vendorPath": "/item/search",
+            "method": "GET",
+            "vendorMethod": "GET",
+            "parameters": [
+                {
+                    "id": 577522,
+                    "resourceId": 260078,
+                    "createdDate": "2018-04-04T04:41:34Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "pageSize",
+                    "vendorName": "limit",
+                    "description": "The number of resources to return in a given page",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577520,
+                    "resourceId": 260078,
+                    "createdDate": "2018-04-04T04:41:34Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "filter",
+                    "vendorName": "filter",
+                    "description": "The CEQL search expression",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577523,
+                    "resourceId": 260078,
+                    "createdDate": "2018-04-04T04:41:34Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "orderBy",
+                    "vendorName": "sort",
+                    "description": "add a specific field to order by, defaults to ASC, add “!” before the field name to denote DESC",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577521,
+                    "resourceId": 260078,
+                    "createdDate": "2018-04-04T04:41:34Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "page",
+                    "vendorName": "page",
+                    "description": "The page number of resources to retrieve",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                }
+            ],
+            "model": {
+                "name": "items",
+                "transform": false
+            },
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 260076,
+            "createdDate": "2018-04-04T04:39:54Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Update a(n) /items",
+            "path": "/hubs/general/items",
+            "vendorPath": "/item",
+            "method": "PUT",
+            "vendorMethod": "PUT",
+            "parameters": [
+                {
+                    "id": 577518,
+                    "resourceId": 260076,
+                    "createdDate": "2018-04-04T04:39:54Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "body",
+                    "vendorName": "body",
+                    "description": "The object body",
+                    "type": "body",
+                    "vendorType": "body",
+                    "dataType": "items",
+                    "vendorDataType": "items",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 260075,
+            "createdDate": "2018-04-04T04:39:28Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Delete a(n) /items",
+            "path": "/hubs/general/items/{id}",
+            "vendorPath": "/item/{itemId}",
+            "method": "DELETE",
+            "vendorMethod": "DELETE",
+            "parameters": [
+                {
+                    "id": 577517,
+                    "resourceId": 260075,
+                    "createdDate": "2018-04-04T04:39:28Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "id",
+                    "vendorName": "itemId",
+                    "description": "The id ID",
+                    "type": "path",
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 260077,
+            "createdDate": "2018-04-04T04:40:23Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Retrieve a(n) /items",
+            "path": "/hubs/general/items/{id}",
+            "vendorPath": "/item/{itemId}",
+            "method": "GET",
+            "vendorMethod": "GET",
+            "parameters": [
+                {
+                    "id": 577519,
+                    "resourceId": 260077,
+                    "createdDate": "2018-04-04T04:40:23Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "id",
+                    "vendorName": "itemId",
+                    "description": "The id ID",
+                    "type": "path",
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 260074,
+            "createdDate": "2018-04-04T04:38:31Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "lookup an item by SKU",
+            "path": "/hubs/general/items/sku",
+            "vendorPath": "/item/getBySKU",
+            "method": "GET",
+            "vendorMethod": "GET",
+            "parameters": [
+                {
+                    "id": 577515,
+                    "resourceId": 260074,
+                    "createdDate": "2018-04-04T04:38:31Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "Stock Keeping Unit",
+                    "vendorName": "sku",
+                    "description": "The Item SKU to lookup",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                },
+                {
+                    "id": 577516,
+                    "resourceId": 260074,
+                    "createdDate": "2018-04-04T04:38:31Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "Ling of Business Id",
+                    "vendorName": "lobId",
+                    "description": "The Item lobID to lookup",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259973,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Find Vendors in the Finance System, using the provided CEQL search expression, or the where clause, without the WHERE keyword, in a typical SQL query. For example, to search for Vendors last modified on or after 'Jan 15, 2014', the search expression will be where=lastModifiedDate>='2014-01-15T00:00:00.000Z'. When this parameter is omitted, all Vendors are returned.",
+            "path": "/hubs/general/vendors",
+            "vendorPath": "/vendor/search",
+            "method": "GET",
+            "vendorMethod": "GET",
+            "parameters": [
+                {
+                    "id": 577344,
+                    "resourceId": 259973,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "filter",
+                    "vendorName": "filter",
+                    "description": "The CEQL search expression, or the where clause, without the WHERE keyword, in a typical SQL query. For example, to search for accounts last modified on or after 'Jan 15, 2014', the search expression will be <i>where=lastModifiedDate>='2014-01-15T00:00:00.000Z'</i>. When this parameter is omitted, all vendors are returned ",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577345,
+                    "resourceId": 259973,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "page",
+                    "vendorName": "page",
+                    "description": "The start page for pagination, which defaults to 1 if not supplied",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "integer",
+                    "vendorDataType": "integer",
+                    "source": "request",
+                    "required": false
+                },
+                {
+                    "id": 577346,
+                    "resourceId": 259973,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "pageSize",
+                    "vendorName": "limit",
+                    "description": "The page size for pagination, which defaults to 200 if not supplied",
+                    "type": "query",
+                    "vendorType": "query",
+                    "dataType": "integer",
+                    "vendorDataType": "integer",
+                    "source": "request",
+                    "required": false
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259977,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Update a Vendor Order given a set of partial attributes associated with a given ID in the Finance system. The update API uses the PATCH HTTP verb, so only those fields provided in the Vendor Order object will be updated, and those fields not provided will be left alone.  Updating a Vendor Order with a specified ID that does not exist will result in an error response.",
+            "path": "/hubs/general/vendors",
+            "vendorPath": "/vendor",
+            "method": "PATCH",
+            "vendorMethod": "PUT",
+            "parameters": [
+                {
+                    "id": 577350,
+                    "resourceId": 259977,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "body",
+                    "vendorName": "body",
+                    "description": "The Vendor object, with those fields that are to be updated.",
+                    "type": "body",
+                    "vendorType": "body",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259974,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Create a new Vendor in the Finance system.  Vendor creation will flow through Cloud Elements to the Finance Service.",
+            "path": "/hubs/general/vendors",
+            "vendorPath": "/vendor",
+            "method": "POST",
+            "vendorMethod": "POST",
+            "parameters": [
+                {
+                    "id": 577347,
+                    "resourceId": 259974,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "body",
+                    "vendorName": "body",
+                    "description": "The Vendor object to be created.<br>With the exception of the 'id' field, the required fields indicated in the 'Vendor' model are those required to create a new vendor",
+                    "type": "body",
+                    "vendorType": "body",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "model": {
+                "name": "vendors",
+                "transform": false
+            },
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259975,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Delete a Vendor associated with a given ID from the Finance system.  This marks it as inactive in the system Specifying a Vendor associated with a given ID that does not exist will result in an error message.",
+            "path": "/hubs/general/vendors/{id}",
+            "vendorPath": "/vendor/{vendorId}",
+            "method": "DELETE",
+            "vendorMethod": "DELETE",
+            "parameters": [
+                {
+                    "id": 577348,
+                    "resourceId": 259975,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "id",
+                    "vendorName": "vendorId",
+                    "description": "The ID of the vendor to delete in the Finance system.",
+                    "type": "path",
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        },
+        {
+            "id": 259976,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "description": "Retrieve a defined Vendor associated with a given ID from the Finance system. Specifying a Vendor with an associated ID that does not exist will result in an error response.",
+            "path": "/hubs/general/vendors/{id}",
+            "vendorPath": "/vendor/{vendorId}",
+            "method": "GET",
+            "vendorMethod": "GET",
+            "parameters": [
+                {
+                    "id": 577349,
+                    "resourceId": 259976,
+                    "createdDate": "2018-04-03T20:01:59Z",
+                    "updatedDate": "2018-04-19T21:38:53Z",
+                    "name": "id",
+                    "vendorName": "vendorId",
+                    "description": "The Id of the vendor to retrieve from the finance system.",
+                    "type": "path",
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "required": true
+                }
+            ],
+            "type": "api",
+            "hooks": [],
+            "response": {
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6044,
+            "kind": "eb",
+            "modelMigrated": false
+        }
+    ],
+    "objects": [],
+    "models": [],
+    "transformationsEnabled": true,
+    "bulkDownloadEnabled": false,
+    "bulkUploadEnabled": false,
+    "cloneable": true,
+    "extendable": false,
+    "beta": false,
+    "authentication": {
+        "type": "custom"
+    },
+    "hooks": [],
+    "extended": false,
+    "useModelsForMetadata": true,
+    "hub": "general",
+    "protocolType": "http",
+    "parameters": [
+        {
+            "id": 8814,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "name": "application/json",
+            "vendorName": "Accept",
+            "type": "value",
+            "vendorType": "header",
+            "source": "request",
+            "elementId": 11336,
+            "required": false
+        },
+        {
+            "id": 8815,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "name": "${configuration.api.key}",
+            "vendorName": "API-Key",
+            "type": "value",
+            "vendorType": "header",
+            "source": "request",
+            "elementId": 11336,
+            "required": false
+        },
+        {
+            "id": 8816,
+            "createdDate": "2018-04-03T20:01:59Z",
+            "updatedDate": "2018-04-19T21:38:53Z",
+            "name": "application/json",
+            "vendorName": "Content-Type",
+            "type": "value",
+            "vendorType": "header",
+            "source": "request",
+            "elementId": 11336,
+            "required": false
+        }
+    ],
+    "private": true
+}

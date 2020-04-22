@@ -1,0 +1,1224 @@
+{
+    "configuration": [
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "Pagination Type",
+            "active": true,
+            "description": "Shiftboard Pagination Type",
+            "type": "TEXTFIELD_32",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "pagination.type",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "API Access Key",
+            "active": true,
+            "description": "API Access Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "access.key",
+            "required": true
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 1,
+            "name": "Secret Key",
+            "active": true,
+            "description": "Secret Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "secret.key",
+            "required": true
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "https://api.shiftdata.com",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Shiftboard Base Url",
+            "type": "TEXTFIELD_1000",
+            "resellerConfig": false,
+            "required": true,
+            "hideFromConsole": true,
+            "name": "Base Url",
+            "groupControl": false,
+            "key": "base.url"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Shiftboard Max Page Size (or limit)",
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Max Page Size (or limit)",
+            "groupControl": false,
+            "key": "pagination.max"
+        },
+        {
+            "internal": false,
+            "hideFromConsole": true,
+            "companyConfig": false,
+            "displayOrder": 11,
+            "name": "Event Notification Signature Key",
+            "active": true,
+            "description": "Shiftboard Event Notification Signature Key",
+            "type": "TEXTFIELD_128",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "event.notification.signature.key",
+            "required": false
+        },
+        {
+            "internal": false,
+            "hideFromConsole": false,
+            "companyConfig": false,
+            "displayOrder": 98,
+            "name": "Default select fields",
+            "active": true,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "type": "TEXTAREA",
+            "groupControl": false,
+            "resellerConfig": false,
+            "key": "default.select.fields.map",
+            "required": false
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "displayOrder": 99,
+            "active": true,
+            "description": "Used to enable/disable filtering of null values from the responses",
+            "type": "BOOLEAN",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Filter null values from the response",
+            "groupControl": false,
+            "key": "filter.response.nulls"
+        }
+    ],
+    "objects": [
+        {
+            "elementId": 15729,
+            "metadataDiscovery": false,
+            "bulkDownloadEnabled": true,
+            "eventsEnabled": false,
+            "name": "shift",
+            "nativeBulkUpload": false,
+            "operationsSupported": [
+                "unknown"
+            ],
+            "vendorEventTypes": "unknown",
+            "nativeBulkDownload": false,
+            "primaryKeyName": "id"
+        },
+        {
+            "elementId": 15729,
+            "metadataDiscovery": false,
+            "bulkDownloadEnabled": true,
+            "eventsEnabled": false,
+            "name": "account",
+            "nativeBulkUpload": false,
+            "operationsSupported": [
+                "unknown"
+            ],
+            "vendorEventTypes": "unknown",
+            "nativeBulkDownload": false,
+            "primaryKeyName": "id"
+        }
+    ],
+    "description": "Element for the Shiftboard Element",
+    "cloneable": false,
+    "extended": false,
+    "bulkDownloadEnabled": false,
+    "useModelsForMetadata": true,
+    "trialAccount": false,
+    "logo": "shiftboard",
+    "hooks": [
+        {
+            "isLegacy": false,
+            "mimeType": "application/javascript",
+            "body": "const method = \"method\";\nconst params = \"params\";\nconst secret = configuration[\"secret.key\"];\n\nlet parameters_map = request_vendor_parameters;\nlet potential_body = request_body;\nlet method_val = parameters_map.method;\nlet params_val = { };//generic GET call \nlet req_method = request_method;\n\nconsole.log(request_body);\n\nif(parameters_map.method && parameters_map.params){\n  //this is a dynamic /any_resource call\n  params_val = parameters_map.params;\n}else if(potential_body && req_method === \"POST\"){\n  //this is a POST or PATCH call\n  params_val = potential_body;\n}else if(potential_body && req_method === \"PATCH\"){\n  params_val = request_vendor_body_map;  \n  params_val.id = request_path_variables.id;\n}else if(request_path_variables.id){\n  //this is a GET /{id} call\n  params_val = {\"id\":request_path_variables.id};\n}\n\nconsole.log(params_val);\nlet expr_arr = request_expression;\nlet build_select = \"\";\n\nif(expr_arr && expr_arr.length){\n  build_select = {};\n  expr_arr.forEach((exp) =>{\n    if(exp.operator === \"=\"){\n      build_select[exp.attribute] = exp.value;\n    }\n  });\n}\n\nif(build_select){\n  params_val.select = build_select;\n}\n\nif(req_method != \"POST\"){\n  params_val = JSON.stringify(params_val);\n}\n\nconsole.log(params_val);\nlet str = method+method_val+params+params_val;\nconsole.log(str);\nlet sig = encodeURI(CE.hmacSha1Base64(secret, str));\n\nparameters_map.signature = sig;\nparameters_map.params = CE.b64(params_val);\n\ndone({\n  \"request_vendor_parameters\" : parameters_map,\n  \"request_vendor_body\": \"\",\n  \"continue\": true\n})",
+            "type": "preRequest"
+        },
+        {
+            "isLegacy": false,
+            "mimeType": "application/javascript",
+            "body": "let body = response_body;\nlet code = response_status_code;\n\nif(body.error && body.error.data && body.error.data.code)\n{\n  code = 400;\n  body.message = body.error.data.message;\n}\n  \ndone({\n  \"response_body\": body,\n  \"response_status_code\": code\n})",
+            "type": "postRequest"
+        }
+    ],
+    "beta": false,
+    "key": "shiftboard",
+    "authentication": {
+        "type": "custom"
+    },
+    "bulkUploadEnabled": false,
+    "image": "https://images.cloudelements.io/shiftboard201901220402.png",
+    "models": [],
+    "active": true,
+    "resources": [
+        {
+            "path": "/hubs/general/account",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /account",
+            "model": {
+                "transform": false,
+                "name": "account",
+                "swagger": {
+                    "account": {
+                        "title": "account",
+                        "properties": {
+                            "country": {
+                                "x-samplevalue": "United States",
+                                "type": "string"
+                            },
+                            "city": {
+                                "x-samplevalue": "Seattle",
+                                "type": "string"
+                            },
+                            "timezone": {
+                                "x-samplevalue": "Pacific Time (US/Can) (GMT-08:00)",
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "score": {
+                                "x-samplevalue": "6",
+                                "type": "string"
+                            },
+                            "def_call_first": {
+                                "x-samplevalue": "0",
+                                "type": "string"
+                            },
+                            "pager": {
+                                "type": "string"
+                            },
+                            "screen_name": {
+                                "x-samplevalue": "Byron Guilliams",
+                                "type": "string"
+                            },
+                            "mobile_phone": {
+                                "x-samplevalue": "206-555-3907",
+                                "type": "string"
+                            },
+                            "surname": {
+                                "type": "string"
+                            },
+                            "def_use_time": {
+                                "x-samplevalue": "0",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "2",
+                                "type": "string"
+                            },
+                            "state": {
+                                "x-samplevalue": "Washington",
+                                "type": "string"
+                            },
+                            "fax": {
+                                "type": "string"
+                            },
+                            "first_name": {
+                                "x-samplevalue": "Byron",
+                                "type": "string"
+                            },
+                            "email": {
+                                "x-sub-format": "email",
+                                "x-samplevalue": "3757546@ishifts.com",
+                                "type": "string"
+                            },
+                            "zip": {
+                                "x-samplevalue": "98144",
+                                "type": "string"
+                            },
+                            "address_second": {
+                                "type": "string"
+                            },
+                            "home_phone": {
+                                "type": "string"
+                            },
+                            "address": {
+                                "x-samplevalue": "1021 Magda Pl.",
+                                "type": "string"
+                            },
+                            "profile_type": {
+                                "x-samplevalue": "1",
+                                "type": "string"
+                            },
+                            "last_name": {
+                                "x-samplevalue": "Guilliams",
+                                "type": "string"
+                            },
+                            "middle_name": {
+                                "type": "string"
+                            },
+                            "org_hold": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "other_phone": {
+                                "x-samplevalue": "206-555-5437",
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "bad_email": {
+                                "x-samplevalue": true,
+                                "type": "boolean"
+                            },
+                            "olson_timezone": {
+                                "x-samplevalue": "America/Los_Angeles",
+                                "type": "string"
+                            },
+                            "org_pending": {
+                                "x-samplevalue": "0",
+                                "type": "string"
+                            },
+                            "region": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "account.list",
+                    "description": "no-op",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "value",
+                    "vendorName": "method",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "no-op",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                }
+            ],
+            "rootKey": "result.accounts"
+        },
+        {
+            "path": "/hubs/general/account",
+            "vendorMethod": "GET",
+            "method": "POST",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Create a new shiftboard Account",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "string",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "account.create",
+                    "description": "hidden",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "value",
+                    "vendorName": "method",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "path": "/hubs/general/account/{id}",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "get a specific account",
+            "model": {
+                "transform": false,
+                "name": "account",
+                "swagger": {
+                    "accountReferenced_objects": {
+                        "title": "referenced_objects",
+                        "type": "object",
+                        "properties": {
+                            "profile_types": {
+                                "type": "array",
+                                "items": {
+                                    "type": "accountReferenced_objectsProfile_types"
+                                }
+                            }
+                        }
+                    },
+                    "account": {
+                        "title": "account",
+                        "properties": {
+                            "country": {
+                                "x-samplevalue": "United States",
+                                "type": "string"
+                            },
+                            "city": {
+                                "type": "string"
+                            },
+                            "timezone": {
+                                "x-samplevalue": "GMT",
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "pager": {
+                                "type": "string"
+                            },
+                            "screen_name": {
+                                "x-samplevalue": "Natalie Kerns",
+                                "type": "string"
+                            },
+                            "mobile_phone": {
+                                "type": "string"
+                            },
+                            "surname": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "1",
+                                "type": "string"
+                            },
+                            "state": {
+                                "x-samplevalue": "Washington",
+                                "type": "string"
+                            },
+                            "fax": {
+                                "type": "string"
+                            },
+                            "first_name": {
+                                "x-samplevalue": "Natalie",
+                                "type": "string"
+                            },
+                            "email": {
+                                "x-samplevalue": "natalie@cloud-elements.com",
+                                "type": "string"
+                            },
+                            "zip": {
+                                "type": "string"
+                            },
+                            "address_second": {
+                                "type": "string"
+                            },
+                            "home_phone": {
+                                "type": "string"
+                            },
+                            "address": {
+                                "type": "string"
+                            },
+                            "profile_type": {
+                                "x-samplevalue": "1",
+                                "type": "string"
+                            },
+                            "last_name": {
+                                "x-samplevalue": "Kerns",
+                                "type": "string"
+                            },
+                            "middle_name": {
+                                "type": "string"
+                            },
+                            "org_hold": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "other_phone": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "bad_email": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "referenced_objects": {
+                                "type": "accountReferenced_objects"
+                            },
+                            "olson_timezone": {
+                                "x-samplevalue": "Etc/GMT",
+                                "type": "string"
+                            },
+                            "org_pending": {
+                                "x-samplevalue": "0",
+                                "type": "string"
+                            },
+                            "region": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "accountReferenced_objectsProfile_types": {
+                        "title": "profile_types",
+                        "properties": {
+                            "name": {
+                                "x-samplevalue": "Staff",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "1",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "account.get",
+                    "description": "hidden",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "value",
+                    "vendorName": "method",
+                    "required": false
+                },
+                {
+                    "vendorType": "no-op",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                }
+            ],
+            "rootKey": "result"
+        },
+        {
+            "path": "/hubs/general/account/{id}",
+            "vendorMethod": "GET",
+            "method": "PATCH",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Update an account record",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "no-op",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "account.update",
+                    "description": "hidden method val",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "value",
+                    "vendorName": "method",
+                    "required": false
+                },
+                {
+                    "vendorType": "body",
+                    "dataType": "account",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "account",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "path": "/hubs/general/any_resource",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /any_resource",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "method",
+                    "description": "shiftboard method to hit",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "method",
+                    "required": true
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "params",
+                    "description": "parameters to send to request",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "params",
+                    "required": true
+                }
+            ],
+            "rootKey": "result"
+        },
+        {
+            "path": "/hubs/general/membership",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /account",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "membership.list",
+                    "description": "no-op",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "value",
+                    "vendorName": "method",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "no-op",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                }
+            ],
+            "rootKey": "result.memberships"
+        },
+        {
+            "path": "/hubs/general/ping",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Retrieve a(n) /ping",
+            "type": "api",
+            "hooks": [
+                {
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "body": "let parameters_map = request_vendor_parameters;\n\nlet method = \"method\";\nlet method_val = \"system.echo\";\nlet params = \"params\";\nlet params_val = \"{ }\";\n\nlet secret = configuration[\"secret.key\"];\nconsole.log(secret);\nlet str = method+method_val+params+params_val;\nlet sig = CE.hmacSha1Base64(secret, str);\nsig = encodeURI(sig);\n\nparameters_map.signature = sig;\nparameters_map.method = method_val;\nparameters_map.params = CE.b64(params_val);\n\ndone({\n  \"request_vendor_parameters\" : parameters_map,\n  \"continue\": true\n})",
+                    "type": "preRequest"
+                }
+            ],
+            "modelMigrated": false
+        },
+        {
+            "path": "/hubs/general/profileData",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "profileData.list",
+                    "description": ".",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "value",
+                    "vendorName": "method",
+                    "required": false
+                }
+            ],
+            "rootKey": "result.profile_data"
+        },
+        {
+            "path": "/hubs/general/profileData/{id}",
+            "vendorMethod": "GET",
+            "method": "PATCH",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Update a(n) /",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "dataType": "string",
+                    "name": "body",
+                    "description": "The object body",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": true
+                },
+                {
+                    "vendorType": "path",
+                    "dataType": "string",
+                    "name": "id",
+                    "description": "The id ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "path": "/hubs/general/profileType",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /profile",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "profileType.list",
+                    "description": ".",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "value",
+                    "vendorName": "method",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                }
+            ],
+            "vendorPath": "/",
+            "rootKey": "result.profile_types"
+        },
+        {
+            "path": "/hubs/general/shift",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /account",
+            "model": {
+                "transform": false,
+                "name": "shift",
+                "swagger": {
+                    "shift": {
+                        "title": "shift",
+                        "properties": {
+                            "end_date": {
+                                "x-samplevalue": "2019-03-07T19:00:00",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ss",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "workgroup": {
+                                "x-samplevalue": "3757541",
+                                "type": "string"
+                            },
+                            "covering_member": {
+                                "x-samplevalue": "13",
+                                "type": "string"
+                            },
+                            "use_time": {
+                                "x-samplevalue": "1",
+                                "x-mask": "milliseconds",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "subject": {
+                                "type": "string"
+                            },
+                            "timezone": {
+                                "x-samplevalue": "GMT",
+                                "type": "string"
+                            },
+                            "count": {
+                                "x-samplevalue": "1",
+                                "type": "string"
+                            },
+                            "external_covering_member": {
+                                "x-samplevalue": "test555",
+                                "type": "string"
+                            },
+                            "published": {
+                                "x-samplevalue": true,
+                                "type": "boolean"
+                            },
+                            "covered": {
+                                "x-samplevalue": true,
+                                "type": "boolean"
+                            },
+                            "qty": {
+                                "x-samplevalue": "1",
+                                "type": "string"
+                            },
+                            "name": {
+                                "x-samplevalue": "Inbound Customer Service",
+                                "type": "string"
+                            },
+                            "client": {
+                                "x-samplevalue": "725931",
+                                "type": "string"
+                            },
+                            "location": {
+                                "x-samplevalue": "369590",
+                                "type": "string"
+                            },
+                            "id": {
+                                "x-samplevalue": "255484660",
+                                "type": "string"
+                            },
+                            "department": {
+                                "x-samplevalue": "48707",
+                                "type": "string"
+                            },
+                            "urgent": {
+                                "x-samplevalue": false,
+                                "type": "boolean"
+                            },
+                            "start_date": {
+                                "x-samplevalue": "2019-03-07T10:00:00",
+                                "x-mask": "yyyy-MM-dd'T'HH:mm:ss",
+                                "format": "date-time",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "shift.list",
+                    "description": "no-op",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "value",
+                    "vendorName": "method",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "no-op",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                }
+            ],
+            "rootKey": "result.shifts"
+        },
+        {
+            "path": "/hubs/general/shift/id",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /account",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "shift.list",
+                    "description": "no-op",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "value",
+                    "vendorName": "method",
+                    "required": false
+                },
+                {
+                    "vendorType": "no-op",
+                    "dataType": "string",
+                    "name": "ext",
+                    "description": "The Object ID",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "ext",
+                    "required": true
+                }
+            ],
+            "rootKey": "result.shifts"
+        },
+        {
+            "path": "/hubs/general/timecard",
+            "vendorMethod": "GET",
+            "method": "GET",
+            "kind": "eb",
+            "response": {
+                "contentType": "application/json"
+            },
+            "description": "Search for /account",
+            "type": "api",
+            "hooks": [],
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "timecard.list",
+                    "description": "no-op",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "value",
+                    "vendorName": "method",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "pageSize",
+                    "description": "The number of resources to return in a given page",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "pageSize",
+                    "required": false
+                },
+                {
+                    "vendorType": "query",
+                    "dataType": "string",
+                    "name": "page",
+                    "description": "The page number of resources to retrieve",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "page",
+                    "required": false
+                },
+                {
+                    "vendorType": "no-op",
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "name": "where",
+                    "description": "The CEQL search expression",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "type": "query",
+                    "vendorName": "converter:toQueryParameters",
+                    "required": false
+                }
+            ],
+            "rootKey": "result.timecards"
+        }
+    ],
+    "modelType": "basic",
+    "protocolType": "http",
+    "transformationsEnabled": true,
+    "deleted": false,
+    "hub": "general",
+    "typeOauth": false,
+    "name": "Shiftboard",
+    "extendable": true,
+    "parameters": [
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "required": false
+        },
+        {
+            "vendorType": "query",
+            "name": "access.key",
+            "source": "request",
+            "type": "configuration",
+            "vendorName": "access_key_id",
+            "required": false
+        },
+        {
+            "vendorType": "header",
+            "name": "application/json",
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "required": false
+        },
+        {
+            "vendorType": "query",
+            "name": "2.0",
+            "source": "request",
+            "type": "value",
+            "vendorName": "jsonrpc",
+            "required": false
+        }
+    ]
+}
