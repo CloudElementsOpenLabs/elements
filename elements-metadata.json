@@ -581,5 +581,16 @@
     "active" : true,
     "vendor_version" : "unknown",
     "key" : "sapfieldglass"
+  },
+  "NewsAPI" : {
+    "image":"https://images.cloudelements.io/NewsAPI202001100803.jpg",
+    "path" : "newsapi/element.json",
+    "hub" : "general" ,
+    "author" : "George-Novac",
+    "name" : "NewsAPI" ,
+    "description":"News API is a simple HTTP REST API for searching and retrieving live articles from all over the web.",
+    "active" : true,
+    "vendor_version" : "unknown",
+    "key":"newsapi"
   }
 }
