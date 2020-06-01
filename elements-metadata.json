@@ -115,7 +115,7 @@
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "VersaPay",
-    "description" : "blah blah blah",
+    "description" : "versapay",
     "active" : true,
     "vendor_version" : "latest",
     "key" : "versapay"
@@ -181,7 +181,7 @@
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "TalentReef",
-    "description" : "yaaa",
+    "description" : "talentreef apis",
     "active" : true,
     "vendor_version" : "v1",
     "key" : "talentreef"
@@ -423,7 +423,7 @@
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "ExpenseWire (Demo)",
-    "description" : "Imported http://ExpenseWire.com/ SOAP Element",
+    "description" : "Expensewire",
     "active" : true,
     "vendor_version" : "v2.0",
     "key" : "demoexpensewire"
