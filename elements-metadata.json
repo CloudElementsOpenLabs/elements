@@ -115,7 +115,7 @@
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "VersaPay",
-    "description" : "blah blah blah",
+    "description": "Leading cloud-based invoice presentment and payment provider for businesses of all sizes.",
     "active" : true,
     "vendor_version" : "latest",
     "key" : "versapay"
@@ -181,7 +181,7 @@
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "TalentReef",
-    "description" : "yaaa",
+    "description": "Human resource software specifically built for the Hourly workforce",
     "active" : true,
     "vendor_version" : "v1",
     "key" : "talentreef"
@@ -379,7 +379,7 @@
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "D&B",
-    "description" : "D&B",
+    "description": "Commercial data, analytics, and insights for businesses",
     "active" : true,
     "vendor_version" : "V4.0",
     "key" : "db"

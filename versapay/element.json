@@ -228,7 +228,7 @@
             "primaryKeyName": "number"
         }
     ],
-    "description": "blah blah blah",
+    "description": "Leading cloud-based invoice presentment and payment provider for businesses of all sizes.",
     "cloneable": true,
     "extended": false,
     "bulkDownloadEnabled": true,
