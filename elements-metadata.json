@@ -583,7 +583,7 @@
     "key" : "sapfieldglass"
   },
   "QuickBase" : {
-    "image" : "elements/provider_quickbase.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/quickbasedb/quickbase.png",
     "path" : "quickbasedb/element.json",
     "hub" : "db",
     "author" : "tyler-cloud-elements",
