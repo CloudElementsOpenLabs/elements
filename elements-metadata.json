@@ -495,7 +495,7 @@
     "key" : "microsoftgraph"
   },
   "jira" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/jira-test2/jira.jpg",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/jira-test2/jira.jpg",
     "path" : "jira-test2/element.json",
     "hub" : "general",
     "author" : "vineet-joshi",
@@ -506,7 +506,7 @@
     "key" : "jira-test2"
   },
   "Sonos" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/sonos/sonos.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/sonos/sonos.png",
     "path" : "sonos/element.json",
     "hub" : "general",
     "author" : "Guy Van Wert",
@@ -517,7 +517,7 @@
     "key" : "sonos"
   },
   "Alpha Vangate" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/alphavantage/alphavantage.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/alphavantage/alphavantage.png",
     "path" : "alphavantage/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
@@ -528,58 +528,70 @@
     "key" : "alphavantage"
   },
   "Oanda" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/oanda/oanda.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/oanda/oanda.png",
     "path" : "oanda/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "Oanda",
-    "description": "The OANDA v20 REST API provides programmatic access to OANDA’s next generation v20 trading engine. To use this API you must have a v20 trading account, which is available to all divisions except Japan.",
+    "description" : "The OANDA v20 REST API provides programmatic access to OANDA’s next generation v20 trading engine. To use this API you must have a v20 trading account, which is available to all divisions except Japan.",
     "active" : true,
     "vendor_version" : "unknown",
     "key" : "oanda"
   },
   "Spotify" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/spotify/oanda.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/spotify/oanda.png",
     "path" : "spotify/element.json",
     "hub" : "music",
     "author" : "Nick Bair",
     "name" : "Spotify",
-    "description": "Spotify is a music streaming platform. This element includes all endpoints detailed in the documentation though some functionality may be missing.",
+    "description" : "Spotify is a music streaming platform. This element includes all endpoints detailed in the documentation though some functionality may be missing.",
     "active" : true,
     "vendor_version" : "unknown",
     "key" : "spotify"
   },
   "Steam" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/steam/steam.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/steam/steam.png",
     "path" : "steam/element.json",
     "hub" : "gaming",
     "author" : "Aidad Wood",
     "name" : "steam",
-    "description": "Steam is a video game digital distribution platform. This element includes most endpoints detailed in the documentation for user authentication keys. Abilities include getting player stats, getting app news, getting game achievement schema, etc",
+    "description" : "Steam is a video game digital distribution platform. This element includes most endpoints detailed in the documentation for user authentication keys. Abilities include getting player stats, getting app news, getting game achievement schema, etc",
     "active" : true,
     "vendor_version" : "unknown",
     "key" : "steam"
   },
   "Netsuite 2018 Release1 (Proxy)" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/netsuiteerp2018release1(proxy)/oanda.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/netsuiteerp2018release1(proxy)/oanda.png",
     "path" : "netsuiteerp2018release1(proxy)/element.json",
     "hub" : "erp",
     "author" : "Aidan Wood",
     "name" : "Netsuite 2018 Release1 (Proxy)",
-    "description": "Netsuite 2018 ERP Element",
+    "description" : "Netsuite 2018 ERP Element",
     "active" : true,
     "vendor_version" : "v2018",
     "key" : "netsuiteerp2018release1(proxy)"
   },
   "SAP Fieldglass" : {
-    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/sapfieldglass/fieldglass.png",
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/sapfieldglass/fieldglass.png",
     "path" : "sapfieldglass/element.json",
     "hub" : "Human Capital",
     "author" : "Jamie Thorson",
     "name" : "SAP Fieldglass",
-    "description": "SAP Fieldglass API",
+    "description" : "SAP Fieldglass API",
     "active" : true,
     "vendor_version" : "unknown",
     "key" : "sapfieldglass"
+  },
+  "Trello" : {
+    "image" : "https://images.cloudelements.io/Trello-Logo.wine202010191027.png",
+    "path" : "trello/element.json",
+    "hub" : "general",
+    "author" : "kiasOrg",
+    "name" : "Trello",
+    "active" : true,
+    "description" : "The Trello API is extremely powerful and fun to use. Building a full application with Trello for web or mobile means getting to know the various concepts and models making up Trello.\n\nAuthentication is handled via OAuth1.0.",
+    "vendor_version" : null,
+    "key" : "trello",
+    "extended" : false
   }
 }
