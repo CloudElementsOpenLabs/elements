@@ -1,0 +1,2777 @@
+{
+  "elementMetadata": {
+    "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/quickbasedb/quickbase.png",
+    "notes": "The Quickbase service offers simple APIs for a cloud hosted DB. The Quickbase element easily extends that by offering bulk, eventing, dynamic discovery, metadata and normalized RESTful API endpoints created from your Quickbase tables.",
+    "usage": {
+      "instanceCount": 4,
+      "customerCount": 3,
+      "traffic": 467
+    },
+    "displayOrder": 100,
+    "active": true,
+    "description": "Add a QuickBase element to connect your existing QuickBase database, allowing you to manage data for your database tables. You will need your QuickBase database information to add an instance.",
+    "eventTypes": ["polling", "webhook"],
+    "hasSandboxWarnings": false,
+    "paginationMetadata": {},
+    "tags": [],
+    "authenticationTypes": ["custom"],
+    "provisioningNotes": "Requires Quickbase subdomain, username and password",
+    "hub": "db",
+    "discovery": {
+      "nativeObjectMetadataDiscovery": false,
+      "vendorSupportCustomFieldsDiscovery": false,
+      "supportCustomFieldsDiscovery": false,
+      "nativeObjectDiscovery": false,
+      "objectDiscoverySupport": false,
+      "crudsSupported": false
+    },
+    "captured": false,
+    "name": "QuickBase",
+    "api": {
+      "vendorLatestVersion": "REST V1",
+      "vendorDocumentationUrl": "https://help.quickbase.com/api-guide/understandreference.html",
+      "vendorSupportUrl": "https://www.quickbase.com/support",
+      "vendorSupportWebhooks": false,
+      "type": "rest xml",
+      "version": "DB APIs"
+    },
+    "extendable": true,
+    "id": 801,
+    "bulk": {
+      "download": true,
+      "upload": true,
+      "ceSupportNativeBulkUpload": false,
+      "vendorSupportNativeBulkDownload": false,
+      "ceSupportNativeBulkDownload": false,
+      "vendorSupportNativeBulkUpload": false
+    },
+    "beta": false,
+    "key": "quickbasedb"
+  },
+  "private": true,
+  "configuration": [{
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "active": true,
+    "description": "Bulk Relations",
+    "isPrivate": false,
+    "type": "TEXTAREA",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Bulk Relations",
+    "id": 14479,
+    "groupControl": false,
+    "key": "bulk.relations"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "active": true,
+    "description": "Session expiration window (12 hours normal - 43,200 seconds)",
+    "isPrivate": false,
+    "type": "TEXTFIELD_32",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Expires In",
+    "id": 14480,
+    "groupControl": false,
+    "key": "expires_in"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": ">=",
+    "displayOrder": 1,
+    "active": true,
+    "description": "Bulk query Operator",
+    "isPrivate": false,
+    "type": "TEXTFIELD_128",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Bulk query Operator",
+    "id": 14481,
+    "groupControl": false,
+    "key": "bulk.query.operator"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "offset",
+    "displayOrder": 1,
+    "active": true,
+    "description": "Quickbase CRM Pagination Type",
+    "isPrivate": false,
+    "type": "TEXTFIELD_32",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Pagination Type",
+    "id": 14482,
+    "groupControl": false,
+    "key": "pagination.type"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "200",
+    "displayOrder": 1,
+    "active": true,
+    "description": "Quickbase CRM Max Page Size (or limit)",
+    "isPrivate": false,
+    "type": "TEXTFIELD_32",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Max Page Size (or limit)",
+    "id": 14483,
+    "groupControl": false,
+    "key": "pagination.max"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "https://{subdomain}/db",
+    "displayOrder": 1,
+    "active": true,
+    "description": "Quickbase CRM Base URL",
+    "isPrivate": false,
+    "type": "TEXTFIELD_1000",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Base URL",
+    "id": 14484,
+    "groupControl": false,
+    "key": "base.url"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "true",
+    "displayOrder": 1,
+    "active": true,
+    "description": "Enables use of global fields query parameter to filter response to only specified fields. This will override any existing vendor functionality on the connector",
+    "isPrivate": false,
+    "type": "BOOLEAN",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Allow Select Fields parameter",
+    "id": 14485,
+    "groupControl": false,
+    "key": "allow.select.fields"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "active": true,
+    "description": "Subdomain is the domain against which you are invoking this call, for example, intuit.quickbase.com",
+    "isPrivate": false,
+    "type": "TEXTFIELD_32",
+    "resellerConfig": false,
+    "required": true,
+    "hideFromConsole": false,
+    "name": "Subdomain",
+    "id": 14486,
+    "groupControl": false,
+    "key": "subdomain"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "active": true,
+    "description": "The authentication ticket needed for application access",
+    "isPrivate": false,
+    "type": "TEXTFIELD_64",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "QuickBase Ticket",
+    "id": 14487,
+    "groupControl": false,
+    "key": "quickbase.ticket"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "fields",
+    "displayOrder": 1,
+    "active": true,
+    "description": "Schema for generating DB Swagger",
+    "isPrivate": false,
+    "type": "TEXTAREA",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "DB Schema",
+    "id": 14488,
+    "groupControl": false,
+    "key": "db.schema"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "date_modified",
+    "displayOrder": 1,
+    "active": true,
+    "description": "Bulk query FieldName",
+    "isPrivate": false,
+    "type": "TEXTFIELD_128",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Bulk query FieldName",
+    "id": 14489,
+    "groupControl": false,
+    "key": "bulk.query.field_name"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "active": true,
+    "description": "Bulk Add Metadata",
+    "isPrivate": false,
+    "type": "TEXTFIELD_128",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Bulk Add Metadata",
+    "id": 14490,
+    "groupControl": false,
+    "key": "bulk.add_metadata"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "JSON",
+    "displayOrder": 1,
+    "active": true,
+    "description": "Bulk Download Format",
+    "isPrivate": false,
+    "type": "TEXTFIELD_128",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Bulk Download Format",
+    "id": 14491,
+    "groupControl": false,
+    "key": "bulk.query.download_format"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "active": true,
+    "description": "Bulk query Date Mask",
+    "isPrivate": false,
+    "type": "TEXTFIELD_128",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Bulk query Date Mask",
+    "id": 14492,
+    "groupControl": false,
+    "key": "bulk.query.date_mask"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "date_created",
+    "displayOrder": 1,
+    "active": true,
+    "description": "Bulk Query Created Field Name",
+    "isPrivate": false,
+    "type": "TEXTFIELD_128",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Bulk query Created Field Name",
+    "id": 14493,
+    "groupControl": false,
+    "key": "bulk.attribute.created_time"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "active": true,
+    "description": "String of an array/map, like { objectName: databaseID }",
+    "isPrivate": false,
+    "type": "TEXTAREA",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "QuickBase Objects",
+    "id": 14494,
+    "groupControl": false,
+    "key": "quickbase.objects"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 1,
+    "active": true,
+    "description": "The ID of the current user. The user ID is required for some API calls. The userID persists from session to session",
+    "isPrivate": false,
+    "type": "TEXTFIELD_32",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "QuickBase User ID",
+    "id": 14495,
+    "groupControl": false,
+    "key": "quickbase.userid"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 2,
+    "active": true,
+    "description": "The user\u2019s email address registered with QuickBase or the user name that was selected within QuickBase when the user registered",
+    "isPrivate": false,
+    "type": "TEXTFIELD_32",
+    "resellerConfig": false,
+    "required": true,
+    "hideFromConsole": false,
+    "name": "QuickBase User",
+    "id": 14496,
+    "groupControl": false,
+    "key": "quickbase.user"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 3,
+    "active": true,
+    "description": "The user\u2019s QuickBase password",
+    "isPrivate": false,
+    "type": "PASSWORD",
+    "resellerConfig": false,
+    "required": true,
+    "hideFromConsole": false,
+    "name": "QuickBase Password",
+    "id": 14497,
+    "groupControl": false,
+    "key": "quickbase.password"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 4,
+    "active": true,
+    "description": "The QuickBase application/database name, (i.e. Test Database)",
+    "isPrivate": false,
+    "type": "TEXTFIELD_64",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Application Name",
+    "id": 14498,
+    "groupControl": false,
+    "key": "quickbase.appname"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 5,
+    "active": true,
+    "description": "The QuickBase application token. To find/generate Application tokens: go to Settings (for your app) > App properties > Advanced settings > Application Tokens (Security Options). Hit the link in \"Go to the Manage Application Token page\".",
+    "isPrivate": false,
+    "type": "TEXTFIELD_64",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Application Token",
+    "id": 14499,
+    "groupControl": false,
+    "key": "quickbase.apptoken"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 11,
+    "active": true,
+    "description": "QuickBase-clone Event Notification Signature Key",
+    "isPrivate": false,
+    "type": "TEXTFIELD_128",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Event Notification Signature Key",
+    "id": 14500,
+    "groupControl": false,
+    "key": "event.notification.signature.key"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 12,
+    "active": true,
+    "description": "Event Notification Callback Headers",
+    "isPrivate": false,
+    "type": "TEXTFIELD_128",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Event Notification Callback Headers",
+    "id": 14501,
+    "groupControl": false,
+    "key": "event.notification.callback.headers"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "true",
+    "displayOrder": 51,
+    "active": true,
+    "description": "Used to enable/disable filtering of null values from the responses.",
+    "isPrivate": false,
+    "type": "BOOLEAN",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Filter null values from the response",
+    "id": 14502,
+    "groupControl": false,
+    "key": "filter.response.nulls"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 98,
+    "active": true,
+    "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+    "isPrivate": false,
+    "type": "TEXTAREA",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Default select fields",
+    "id": 14503,
+    "groupControl": false,
+    "key": "default.select.fields.map"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 100,
+    "active": true,
+    "description": "Instance Variables",
+    "isPrivate": false,
+    "type": "CODE_EDITOR",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Instance Variables",
+    "id": 14504,
+    "groupControl": false,
+    "key": "instance.variables"
+  }, {
+    "internal": true,
+    "companyConfig": false,
+    "displayOrder": 100,
+    "active": true,
+    "description": "Quickbase CRM Time of Getting Token or Performing Authentication",
+    "isPrivate": false,
+    "type": "TEXTFIELD_32",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Time of Getting Token or Performing Authentication",
+    "id": 14505,
+    "groupControl": false,
+    "key": "authentication.time"
+  }, {
+    "internal": true,
+    "companyConfig": false,
+    "defaultValue": "polling",
+    "displayOrder": 100,
+    "active": true,
+    "description": "Event Type",
+    "isPrivate": false,
+    "type": "COMBO",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Event Type",
+    "options": [{
+      "description": "Polling Event Type",
+      "value": "polling"
+    }, {
+      "description": "Webhook Event Type",
+      "value": "webhook"
+    }],
+    "id": 14506,
+    "groupControl": false,
+    "key": "event.vendor.type"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "15",
+    "displayOrder": 101,
+    "active": true,
+    "description": "Set time interval for polling application (in minutes)",
+    "isPrivate": false,
+    "type": "TEXTFIELD_128",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Event poller refresh interval",
+    "id": 14507,
+    "groupControl": false,
+    "key": "event.poller.refresh_interval"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "false",
+    "displayOrder": 102,
+    "active": true,
+    "description": "Enable/Disable Event Notification",
+    "isPrivate": false,
+    "type": "BOOLEAN",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Event Notifications Enabled",
+    "id": 14508,
+    "groupControl": false,
+    "key": "event.notification.enabled"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 103,
+    "active": true,
+    "description": "Event Notification Callback URL",
+    "isPrivate": false,
+    "type": "TEXTFIELD_1000",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Event Notification Callback URL",
+    "id": 14509,
+    "groupControl": false,
+    "key": "event.notification.callback.url"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "defaultValue": "{\"{objectName}\":{\"url\":\"/hubs/db/{objectName}?where=date_modified>'${epoch}'\",\"idField\":\"record_id_\",\"datesConfiguration\":{\"updatedDateField\":\"date_modified\",\"updatedDateFormat\":\"milliseconds\",\"createdDateField\":\"date_created\",\"createdDateFormat\":\"milliseconds\"}}}",
+    "displayOrder": 104,
+    "active": true,
+    "description": "Event Poller Resources Configuration. The configuration is defined via JSON, an example of which is as follows - { \"contacts\": { \"url\": \"/hubs/helpdesk/contacts\", \u201cidField\u201d: \u201cuser.id\u201d, \u201cdatesConfiguration\u201d: { \"updatedDateField\": \"user.updated_at\", \"updatedDateFormat\": \"yyyy-MM-dd'T'HH:mm:ssX\", \u201ccreatedDateField\u201d: \u201cuser.created_at\u201d, \u201ccreatedDateFormat\": \"yyyy-MM-dd'T'HH:mm:ssX\" }, \"pageSize\": 10000 } }",
+    "isPrivate": false,
+    "type": "TEXTAREA",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Event Poller Resources Configuration",
+    "id": 14510,
+    "groupControl": false,
+    "key": "event.poller.configuration"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 110,
+    "active": true,
+    "description": "Event Notification basic authentication username",
+    "isPrivate": false,
+    "type": "TEXTFIELD_1000",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Event Notification Basic Authentication UserName",
+    "id": 14511,
+    "groupControl": false,
+    "key": "event.notification.basic.username"
+  }, {
+    "internal": false,
+    "companyConfig": false,
+    "displayOrder": 112,
+    "active": true,
+    "description": "Event Notification basic authentication password",
+    "isPrivate": false,
+    "type": "PASSWORD",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": false,
+    "name": "Event Notification Basic Authentication Password",
+    "id": 14512,
+    "groupControl": false,
+    "key": "event.notification.basic.password"
+  }, {
+    "internal": true,
+    "companyConfig": false,
+    "displayOrder": 300,
+    "active": true,
+    "description": "Event Notification Subscription ID",
+    "isPrivate": false,
+    "type": "TEXTFIELD_64",
+    "resellerConfig": false,
+    "required": false,
+    "hideFromConsole": true,
+    "name": "Event Notification Subscription ID",
+    "id": 14513,
+    "groupControl": false,
+    "key": "event.notification.subscription.id"
+  }],
+  "objects": [],
+  "description": "Add a QuickBase element to connect your existing QuickBase database, allowing you to manage data for your database tables. You will need your QuickBase database information to add an instance.",
+  "cloneable": false,
+  "extended": false,
+  "hookName": "QuickBase",
+  "bulkDownloadEnabled": true,
+  "useModelsForMetadata": true,
+  "paginatorVersion": "V2",
+  "trialAccount": false,
+  "logo": "quickbase",
+  "id": 801,
+  "hooks": [],
+  "beta": false,
+  "key": "quickbasedb",
+  "authentication": {
+    "type": "custom"
+  },
+  "bulkUploadEnabled": true,
+  "image": "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/quickbasedb/quickbase.png",
+  "active": true,
+  "resources": [{
+    "method": "POST",
+    "kind": "eb",
+    "description": "Authenticate the user     ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "provisionAuthValidation",
+    "vendorPath": "/main",
+    "path": "/hubs/db/auth",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "id": 26632,
+    "hooks": [{
+      "resourceId": 26632,
+      "isLegacy": false,
+      "contextParams": "configuration,response_body,response_status_code,response_iserror",
+      "id": 7900,
+      "mimeType": "application/javascript",
+      "body": "//handle potential error\nvar responseBody = response_body.qdbapi;\n\nif (!response_iserror && responseBody.errcode === 0) {\n\tlet configs = configuration;\n\tconfigs['quickbase.ticket'] = responseBody.ticket;\n\tconfigs['quickbase.userid'] = responseBody.userid;\n\tconfigs['expires_in'] = 43200; //12 hours in seconds\n\tdone ({\n\t\t\"configuration\": configs\n\t});\n} else {\n\tlet response = {};\n\tresponse.errcode = responseBody.errcode;\n\tresponse.errtext = responseBody.errtext;\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 401\n\t});\n}",
+      "type": "postRequest"
+    }],
+    "parameters": [{
+      "vendorType": "bodyToken",
+      "resourceId": 26632,
+      "dataType": "string",
+      "description": "The name of the user",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "username",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.user",
+      "id": 63929
+    }, {
+      "vendorType": "header",
+      "resourceId": 26632,
+      "dataType": "string",
+      "description": "Specific action to specify function",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_Authenticate",
+      "id": 63928
+    }, {
+      "vendorType": "body",
+      "resourceId": 26632,
+      "dataType": "string",
+      "description": "This whole thing",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>    <username>{username}<\/username>    <password>{password}<\/password> <\/qdbapi>",
+      "id": 63927
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26632,
+      "dataType": "string",
+      "description": "The password of the user",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "password",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.password",
+      "id": 63926
+    }]
+  }, {
+    "method": "GET",
+    "kind": "eb",
+    "description": "Get a list of the names and dbids of all the applications and tables that you are entitled to access, across all domains              ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "onProvision",
+    "vendorPath": "/main",
+    "path": "/hubs/db/db-access",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "model": {
+      "transform": false,
+      "name": "dbAccessList",
+      "swagger": {
+        "dbAccessListObject": {
+          "id": "dbAccessListObject",
+          "properties": {
+            "Customers": {
+              "type": "string"
+            }
+          }
+        },
+        "dbAccessList": {
+          "id": "dbAccessList",
+          "type": "array",
+          "items": {
+            "$ref": "dbAccessListObject"
+          }
+        }
+      }
+    },
+    "id": 26633,
+    "hooks": [],
+    "parameters": [{
+      "vendorType": "bodyToken",
+      "resourceId": 26633,
+      "dataType": "string",
+      "description": "The authentication ticket is returned via the API_Authenticate call",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "ticket",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.ticket",
+      "id": 63932
+    }, {
+      "vendorType": "header",
+      "resourceId": 26633,
+      "dataType": "string",
+      "description": "The functional action",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_GrantedDBs",
+      "id": 63931
+    }, {
+      "vendorType": "body",
+      "resourceId": 26633,
+      "dataType": "string",
+      "description": "XML request payload",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>    <ticket>{ticket}<\/ticket> <\/qdbapi>",
+      "id": 63930
+    }]
+  }, {
+    "method": "GET",
+    "kind": "eb",
+    "description": "Get information about the specified application or application table ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "apiNoDocumentation",
+    "vendorPath": "/{id}",
+    "path": "/hubs/db/db-schema/{dbId}",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "model": {
+      "transform": false,
+      "name": "dbSchema",
+      "swagger": {
+        "dbSchema": {
+          "id": "dbSchema",
+          "properties": {
+            "qdbapi": {
+              "type": "qdbapi"
+            }
+          }
+        },
+        "original": {
+          "id": "original",
+          "properties": {
+            "def_sort_fid": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "plural_record_name": {
+              "type": "string"
+            },
+            "next_record_id": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "next_query_id": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "mod_date": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "cre_date": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "key_fid": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "def_sort_order": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "table_id": {
+              "type": "string"
+            },
+            "app_id": {
+              "type": "string"
+            },
+            "single_record_name": {
+              "type": "string"
+            },
+            "next_field_id": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        },
+        "field": {
+          "id": "field",
+          "properties": {
+            "append_only": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "nowrap": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "find_enabled": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "maxlength": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "fieldhelp": {
+              "type": "unknown"
+            },
+            "bold": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "label": {
+              "type": "string"
+            },
+            "required": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "sort_as_given": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "@base_type": {
+              "type": "string"
+            },
+            "@field_type": {
+              "type": "string"
+            },
+            "allowHTML": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "allowInRecTemplate": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "carrychoices": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "doesdatacopy": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "unique": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "appears_by_default": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "@id": {
+              "type": "string"
+            },
+            "foreignkey": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "has_extension": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "num_lines": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "allow_new_choices": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        },
+        "query": {
+          "id": "query",
+          "properties": {
+            "qytype": {
+              "type": "string"
+            },
+            "qyname": {
+              "type": "string"
+            },
+            "qyopts": {
+              "type": "string"
+            },
+            "@id": {
+              "type": "string"
+            },
+            "qycalst": {
+              "format": "double",
+              "type": "number"
+            }
+          }
+        },
+        "qdbapi": {
+          "id": "qdbapi",
+          "properties": {
+            "errcode": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "errtext": {
+              "type": "string"
+            },
+            "action": {
+              "type": "string"
+            },
+            "date_format": {
+              "type": "string"
+            },
+            "time_zone": {
+              "type": "string"
+            },
+            "table": {
+              "type": "table"
+            }
+          }
+        },
+        "fields": {
+          "id": "fields",
+          "properties": {
+            "field": {
+              "type": "array",
+              "items": {
+                "$ref": "field"
+              }
+            }
+          }
+        },
+        "queries": {
+          "id": "queries",
+          "properties": {
+            "query": {
+              "type": "array",
+              "items": {
+                "$ref": "query"
+              }
+            }
+          }
+        },
+        "table": {
+          "id": "table",
+          "properties": {
+            "original": {
+              "type": "original"
+            },
+            "name": {
+              "type": "string"
+            },
+            "fields": {
+              "type": "fields"
+            },
+            "queries": {
+              "type": "queries"
+            },
+            "desc": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "id": 26634,
+    "hooks": [],
+    "parameters": [{
+      "vendorType": "bodyToken",
+      "resourceId": 26634,
+      "dataType": "string",
+      "description": "The authentication ticket is returned via the API_Authenticate call",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "ticket",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.ticket",
+      "id": 63937
+    }, {
+      "vendorType": "header",
+      "resourceId": 26634,
+      "dataType": "string",
+      "description": "The functional action",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_GetSchema",
+      "id": 63936
+    }, {
+      "vendorType": "body",
+      "resourceId": 26634,
+      "dataType": "string",
+      "description": "XML request payload",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>    <ticket>{ticket}<\/ticket> <apptoken>{apptoken}<\/apptoken> <\/qdbapi>",
+      "id": 63935
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26634,
+      "dataType": "string",
+      "description": "The application token",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "apptoken",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.apptoken",
+      "id": 63934
+    }, {
+      "vendorType": "path",
+      "resourceId": 26634,
+      "dataType": "string",
+      "description": "The database ID",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "id",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "dbId",
+      "id": 63933
+    }]
+  }, {
+    "method": "GET",
+    "kind": "eb",
+    "description": "Get a list of all the available objects.         ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "path": "/hubs/db/objects",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "GET",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "model": {
+      "transform": false,
+      "name": "objects",
+      "swagger": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "id": 26645,
+    "hooks": [{
+      "resourceId": 26645,
+      "isLegacy": false,
+      "contextParams": "configuration,response_body",
+      "id": 7922,
+      "mimeType": "application/javascript",
+      "body": "var objectsString = configuration['quickbase.objects'];\nvar objectsArray = JSON.parse(objectsString);\nvar array = [];\n\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tfor (let key of keys) {\n\t\tarray.push(key);\n\t}\n}\n\ndone({\n\t\"continue\": true,\n\t\"response_body\": array\n});",
+      "type": "postRequest"
+    }, {
+      "resourceId": 26645,
+      "isLegacy": false,
+      "contextParams": "",
+      "id": 7921,
+      "mimeType": "application/javascript",
+      "body": "done({\n\t\"continue\": false\n});",
+      "type": "preRequest"
+    }],
+    "parameters": [{
+      "vendorType": "no-op",
+      "resourceId": 26645,
+      "dataType": "boolean",
+      "description": "Add fetchAll = true to call the vendor API to refresh the DB schema. Defaults to false.",
+      "vendorDataType": "boolean",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "query",
+      "vendorName": "fetchAll",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "fetchAll",
+      "id": 64000
+    }]
+  }, {
+    "method": "GET",
+    "kind": "eb",
+    "description": "Get a list of all the field for an object.                              ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "vendorPath": "/{id}",
+    "path": "/hubs/db/objects/{objectName}/metadata",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "model": {
+      "transform": false,
+      "name": "objectsMetadata",
+      "swagger": {
+        "fields": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "vendorPath": {
+              "type": "string"
+            }
+          }
+        },
+        "objectsMetadata": {
+          "type": "object",
+          "properties": {
+            "fields": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/fields"
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": 26646,
+    "hooks": [{
+      "resourceId": 26646,
+      "isLegacy": false,
+      "contextParams": "request_vendor_body,request_path,request_vendor_path,configuration",
+      "id": 7924,
+      "mimeType": "application/javascript",
+      "body": "var objectsString = configuration['quickbase.objects'];\nvar objectsArray = JSON.parse(objectsString);\nvar path = request_path;\nvar vendorPath = request_vendor_path;\n\npath = path.replace(\"/hubs/db/objects/\", \"\");\nvar objName = path.replace(\"/metadata\", \"\");\n\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tfor (let key of keys) {\n\t\tif (key === objName) {\n\t\t\tlet id = tmp[key];\n\t\t\tvendorPath = vendorPath.replace(\"{id}\", id);\n\t\t\tlet body = request_vendor_body;\n\t\t\tif (body.indexOf(\"{apptoken}\" > -1)) {\n\t\t\t\tbody = body.replace(\"<apptoken>{apptoken}<\/apptoken>\", \"\");\n\t\t\t}\n\t\t\tdone({\n\t\t\t\t\"request_vendor_path\": vendorPath,\n\t\t\t\t\"request_vendor_body\": body\n\t\t\t});\n\t\t}\n\t}\n}\n\nif (vendorPath.indexOf(\"{id}\" > -1)) {\n\tvendorPath = vendorPath.replace(\"{id}\", \"junk\");\n\tdone({\n\t\t\"continue\": false,\n\t\t\"request_vendor_path\": vendorPath\n\t});\n} \n\ndone();",
+      "type": "preRequest"
+    }, {
+      "resourceId": 26646,
+      "isLegacy": false,
+      "contextParams": "request_vendor_url,response_body,response_status_code,response_iserror",
+      "id": 7923,
+      "mimeType": "application/javascript",
+      "body": "//metadata has \"fields\" : [ {\"type\": \"val\", \"vendorPath\": \"name\"} ]\n//types - string, number, boolean\nfunction filterMetadata(arrayMap) {\n\tvar finalArray = [];\n\tfor (var i = 0; i < arrayMap.length; i++) {\n\t\tlet tmp = arrayMap[i];\n\t\tlet tmpMap = {};\n\t\tif (tmp.compositeFields) {\n\t\t\tlet obj = tmp.compositeFields;\n\t\t\tif (obj.compositeField) {\n\t\t\t\tlet array = obj.compositeField;\n\t\t\t\tfor (var j = 0; j < array.length; j++) {\n\t\t\t\t\tlet mapper = array[j];\n\t\t\t\t\tlet newObj = {};\n\t\t\t\t\tvar pathAttr = tmp.label + \". \" + mapper['@key'];\n\t\t\t\t\tnewObj.vendorPath = correctName(pathAttr);\n\t\t\t\t\tnewObj.type = 'string';\n\t\t\t\t\tfinalArray.push(newObj);\n\t\t\t\t}\n\t\t\t}\n\t\t} else {\n\t\t\tif (tmp.label) {\n\t\t\t\ttmpMap.vendorPath = correctName(tmp.label);\n\t\t\t}\n\t\t\tif (tmp['@base_type']) {\n\t\t\t\ttmpMap.type = determineType(tmp['@base_type']);\n\t\t\t}\t\n\t\t\tfinalArray.push(tmpMap);\n\t\t}\n\t}\n\n\treturn finalArray;\n}\n\nfunction correctName(name) {\n\tvar flag = false;\n\twhile(flag === false) {\n\t\tif (name.indexOf(\" \") > -1) {\n\t\t\tname = name.replace(\" \", \"_\");\n\t\t} else if (name.indexOf(\"#\") > -1) {\n\t\t\tname = name.replace(\"#\", \"_\");\n\t\t} else if (name.indexOf(\"/\") > -1) {\n\t\t\tname = name.replace(\"/\", \"_\");\n\t\t} else if (name.indexOf(\"?\") > -1) {\n\t\t\tname = name.replace(\"?\", \"_\");\n\t\t} else if (name.indexOf(\".\") > -1) {\n\t\t\tname = name.replace(\".\", \"_\");\n\t\t} else {\n\t\t\tflag = true;\n\t\t}\n\t}\n\tname = convertNonAlphaNumeric(name);\n\treturn name.toLowerCase();\n}\n\nfunction convertNonAlphaNumeric(fieldName) {\n\tfieldName = fieldName.replace(/\\W+/g, \"_\");  \n\treturn fieldName;\n}\n\nfunction determineType(baseType) {\n\tswitch(baseType) {\n\t\tcase 'text':\n\t\t\treturn 'string';\n\t\tcase 'bool':\n\t\t\treturn 'boolean';\n\t\tcase 'int32':\n\t\tcase 'int64':\n\t\t\treturn 'number';\n\t\tdefault: \n\t\t\treturn 'UNKNOWN';\n\t}\n}\n\n\nvar vendorPath = request_vendor_url;\n\nif (vendorPath.indexOf(\"junk\") > -1) {\n\tlet response = {};\n\tresponse.error = \"Invalid objectName provided.\"\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 404\n\t});\n} else {\n\tvar responseBody = response_body.qdbapi;\n\tif (!response_iserror && responseBody.errcode === 0) {\n\t\t//fields logic\n\t\tif (responseBody.table !== null && responseBody.table !== undefined) {\n\t\t\tlet tableObj = responseBody.table;\n\t\t\tif (tableObj.fields !== null && tableObj.fields !== undefined) {\n\t\t\t\tlet fieldsObj = tableObj.fields;\n\t\t\t\tif (fieldsObj.field !== null && fieldsObj.field !== undefined) {\n\t\t\t\t\tlet fieldsArray = fieldsObj.field;\n\t\t\t\t\tlet map = {};\n\t\t\t\t\tmap.fields = filterMetadata(fieldsArray);\n\t\t\t\t\tdone({\n\t\t\t\t\t\t\"response_body\": map\n\t\t\t\t\t});\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tlet emptyMap = {};\n\t\temptyMap.fields = [];\n\t\tdone({\n\t\t\t\"response_body\": emptyMap\n\t\t});\n\t\t\n\t} else {\n\t\tlet response = {};\n\t\tresponse.errcode = responseBody.errcode;\n\t\tresponse.errtext = responseBody.errtext;\n\t\tdone({\n\t\t\t\"response_body\": response,\n\t\t\t\"response_status_code\": 400\n\t\t});\n\t}\n\t\n}\n\t\n\t\n",
+      "type": "postRequest"
+    }],
+    "parameters": [{
+      "vendorType": "body",
+      "resourceId": 26646,
+      "dataType": "string",
+      "description": "The XML request payload",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>    <ticket>{ticket}<\/ticket> <apptoken>{apptoken}<\/apptoken> <\/qdbapi>",
+      "id": 64005
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26646,
+      "dataType": "string",
+      "description": "QuickBase Application Token piece",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "apptoken",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.apptoken",
+      "id": 64004
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26646,
+      "dataType": "string",
+      "description": "The authentication ticket is returned via the API_Authenticate call",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "ticket",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.ticket",
+      "id": 64003
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26646,
+      "dataType": "string",
+      "description": "The name of the object",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "no-op",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectName",
+      "id": 64002
+    }, {
+      "vendorType": "header",
+      "resourceId": 26646,
+      "dataType": "string",
+      "description": "The functional action",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_GetSchema",
+      "id": 64001
+    }]
+  }, {
+    "method": "GET",
+    "kind": "eb",
+    "description": "Find objects in the QuickBase system, using the provided object name and CEQL search expression. The search expression in CEQL is the WHERE clause in a typical SQL query, but without the WHERE keyword. If a search expression is not provided, then the first 200 records will be returned.       ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "vendorPath": "/{id}",
+    "path": "/hubs/db/{objectName}",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "model": {
+      "transform": false,
+      "name": "List",
+      "swagger": {
+        "ListObject": {
+          "type": "object",
+          "properties": {
+            "update_id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "date_modified": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "record_id_": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "date_created": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "last_modified_by": {
+              "type": "string"
+            },
+            "record_owner": {
+              "type": "string"
+            },
+            "mobile_number": {
+              "type": "string"
+            },
+            "file_": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "id": 26635,
+    "hooks": [{
+      "resourceId": 26635,
+      "isLegacy": false,
+      "contextParams": "request_vendor_body,request_path,request_vendor_path,configuration",
+      "id": 7902,
+      "mimeType": "application/javascript",
+      "body": "var objectsString = configuration['quickbase.objects'];\nvar objectsArray = JSON.parse(objectsString);\nvar vendorPath = request_vendor_path;\nvar objName = request_path.replace(\"/hubs/db/\", \"\");\n\nif (objName.indexOf(\"`\") > -1) {\n\tobjName = objName.replace(\"`\", \"\");\n\tobjName = objName.replace(\"`\", \"\");\n}\n\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tconsole.log(keys);\n\tprint(keys + \"whm\");\n\tfor (let key of keys) {\n\t\tif (key === objName) {\n\t\t\tlet id = tmp[key];\n\t\t\tvendorPath = vendorPath.replace(\"{id}\", id);\n\t\t\tlet body = request_vendor_body;\n\t\t\tif (body.indexOf(\"{query}\" > -1)) {\n\t\t\t\tbody = body.replace(\"<query>{query}<\/query>\", \"\");\n\t\t\t}\n\t\t\tif (body.indexOf(\"{apptoken}\" > -1)) {\n\t\t\t\tbody = body.replace(\"<apptoken>{apptoken}<\/apptoken>\", \"\");\n\t\t\t}\n\t\t\tdone({\n\t\t\t\t\"request_vendor_body\": body,\n\t\t\t\t\"request_vendor_path\": vendorPath\n\t\t\t});\n\t\t}\n\t}\n}\n\nif (vendorPath.indexOf(\"{id}\" > -1)) {\n\tvendorPath = vendorPath.replace(\"{id}\", \"junk\");\n\tdone({\n\t\t\"continue\": false,\n\t\t\"request_vendor_path\": vendorPath\n\t});\n} \n\ndone();",
+      "type": "preRequest"
+    }, {
+      "resourceId": 26635,
+      "isLegacy": false,
+      "contextParams": "request_vendor_url,response_body,response_status_code",
+      "id": 7901,
+      "mimeType": "application/javascript",
+      "body": "var vendorPath = request_vendor_url;\n\nif (vendorPath.indexOf(\"junk\") > -1) {\n\tlet response = {};\n\tresponse.error = \"Invalid objectName provided.\"\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 404\n\t});\n} else {\n\tdone();\n}",
+      "type": "postRequest"
+    }],
+    "parameters": [{
+      "vendorType": "bodyToken",
+      "resourceId": 26635,
+      "dataType": "string",
+      "description": "The QuickBase application token",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "apptoken",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.apptoken",
+      "id": 63945
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26635,
+      "dataType": "string",
+      "description": "The authorization ticket biz",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "ticket",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.ticket",
+      "id": 63944
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26635,
+      "dataType": "string",
+      "description": "The page size for pagination, which defaults to 200 if not supplied",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "query",
+      "vendorName": "pageSize",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "pageSize",
+      "id": 63943
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26635,
+      "dataType": "string",
+      "description": "The start page for pagination, which defaults to 1 if not supplied",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "query",
+      "vendorName": "page",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "page",
+      "id": 63942
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26635,
+      "dataType": "string",
+      "description": "The object name of the object to search, e.g., 'account'.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "objectName",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectName",
+      "id": 63941
+    }, {
+      "vendorType": "header",
+      "resourceId": 26635,
+      "dataType": "string",
+      "description": "Functional action needed to do any querying ",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_DoQuery",
+      "id": 63940
+    }, {
+      "vendorType": "body",
+      "resourceId": 26635,
+      "dataType": "string",
+      "description": "The XML request body",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>     <ticket>{ticket}<\/ticket>  <apptoken>{apptoken}<\/apptoken>   <clist>a<\/clist>     <query>{query}<\/query>     <options>num-{pageSize}.skp-{page}<\/options> <\/qdbapi>",
+      "id": 63939
+    }, {
+      "vendorType": "query",
+      "resourceId": 26635,
+      "converter": "toQuickbase",
+      "dataType": "string",
+      "description": "The CEQL search expression, or the where clause, without the WHERE keyword, in a typical SQL query. The operators supported are '=', '!=', '>', '>=', '<', '<=', AND, OR. For example, a single query would be <i>where=date_modified>='1475622798642'<\/i>. A multiple query would be <i>where=(date_modified<'1475622798642' or date_created>'1475622798640') and last_name='Henderson'<\/i>. When this parameter is omitted, all objects of the given type are returned in a paginated fashion.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "query",
+      "vendorName": "converter:toQuickbase",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "where",
+      "id": 63938
+    }],
+    "rootKey": "|qdbapi.record"
+  }, {
+    "method": "POST",
+    "kind": "eb",
+    "description": "Create a new object in the QuickBase  system. The provided objectName can be that of a custom or standard object. Object creation will flow through Cloud Elements to your DB service.  ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "vendorPath": "/{id}",
+    "path": "/hubs/db/{objectName}",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "model": {
+      "requestName": "Object",
+      "transform": false,
+      "name": "ObjectResponse",
+      "requestSwagger": {
+        "Object": {
+          "description": "Fields for the object. There will be fields associated with an Object, which are not all described here.",
+          "type": "object",
+          "properties": {
+            "objectField": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "swagger": {
+        "ObjectResponse": {
+          "type": "object",
+          "properties": {
+            "update_id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "record_id_": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "id": 26636,
+    "hooks": [{
+      "resourceId": 26636,
+      "isLegacy": false,
+      "contextParams": "request_vendor_url,response_body,response_status_code,response_iserror",
+      "id": 7904,
+      "mimeType": "application/javascript",
+      "body": "var vendorPath = request_vendor_url;\nvar responseBody = response_body;\n\nif (vendorPath.indexOf(\"junk\") > -1) {\n\tlet response = {};\n\tresponse.error = \"Invalid objectName provided.\"\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 404\n\t});\n} else {\n\tif (!response_iserror && responseBody.errcode === 0) {\n\t\tvar normalizeMap = {};\n\t\tif (responseBody['update_id']) {\n\t\t\tnormalizeMap.update_id = responseBody['update_id'];\n\t\t}\n\t\tif (responseBody.rid) {\n\t\t\tnormalizeMap['record_id_'] = responseBody.rid;\n\t\t}\n\t\tdone({\n\t\t\t\"response_body\": normalizeMap\n\t\t});\n\t} else {\n\t\tlet response = {};\n\t\tresponse.errcode = responseBody.errcode;\n\t\tresponse.errtext = responseBody.errtext;\n\t\tdone({\n\t\t\t\"response_body\": response,\n\t\t\t\"response_status_code\": 400\n\t\t});\n\t}\n}",
+      "type": "postRequest"
+    }, {
+      "resourceId": 26636,
+      "isLegacy": false,
+      "contextParams": "request_body_map,request_vendor_body,request_path,request_vendor_path,configuration",
+      "id": 7903,
+      "mimeType": "application/javascript",
+      "body": "function formXmlBody(requestJson, requestXml) {\n\tlet fieldFormat = \"<field name=\\\"{name}\\\">{value}<\/field>\";\n\tlet fullXmlBody = \"\";\n\tlet keys = Object.keys(requestJson);\t\n\tfor (let key of keys) {\n\t\tlet field = fieldFormat.replace(\"{name}\", key);\n\t\tfield = field.replace(\"{value}\", requestJson[key]);\n\t\tfullXmlBody += field;\n\t}\n\trequestXml = requestXml.replace(\"<fields>{fields}<\/fields>\", fullXmlBody);\n\treturn requestXml;\n}\n\n\nvar objectsString = configuration['quickbase.objects'];\nvar objectsArray = JSON.parse(objectsString);\nvar vendorPath = request_vendor_path;\nvar objName = request_path.replace(\"/hubs/db/\", \"\");\n\nif (objName.indexOf(\"`\") > -1) {\n\tobjName = objName.replace(\"`\", \"\");\n\tobjName = objName.replace(\"`\", \"\");\n} \n\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tfor (let key of keys) {\n\t\tif (key === objName) {\n\t\t\tlet id = tmp[key];\n\t\t\tvendorPath = vendorPath.replace(\"{id}\", id);\n\t\t\tlet requestBody = formXmlBody(request_body_map, request_vendor_body);\n\t\t\tif (requestBody.indexOf(\"{apptoken}\" > -1)) {\n\t\t\t\trequestBody = requestBody.replace(\"<apptoken>{apptoken}<\/apptoken>\", \"\");\n\t\t\t}\n\t\t\tdone({\n\t\t\t\t\"request_vendor_body\": requestBody,\n\t\t\t\t\"request_vendor_path\": vendorPath\n\t\t\t});\n\t\t}\n\t}\n}\n\nif (vendorPath.indexOf(\"{id}\" > -1)) {\n\tvendorPath = vendorPath.replace(\"{id}\", \"junk\");\n\tdone({\n\t\t\"continue\": false,\n\t\t\"request_vendor_path\": vendorPath\n\t});\n} \n\ndone();",
+      "type": "preRequest"
+    }],
+    "parameters": [{
+      "vendorType": "body",
+      "resourceId": 26636,
+      "dataType": "string",
+      "description": "The XML request body",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>    <ticket>{ticket}<\/ticket>  <apptoken>{apptoken}<\/apptoken>  <fields>{fields}<\/fields> <\/qdbapi>",
+      "id": 63951
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26636,
+      "dataType": "string",
+      "description": "The authentication token",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "ticket",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.ticket",
+      "id": 63950
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26636,
+      "dataType": "string",
+      "description": "The object name of the object to be created, e.g., 'account'.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "no-op",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectName",
+      "id": 63949
+    }, {
+      "vendorType": "header",
+      "resourceId": 26636,
+      "dataType": "string",
+      "description": "The functional QuickBase action",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_AddRecord",
+      "id": 63948
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26636,
+      "dataType": "string",
+      "description": "The QuickBase application token",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "apptoken",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.apptoken",
+      "id": 63947
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26636,
+      "dataType": "Object",
+      "description": "The object to be created.",
+      "vendorDataType": "object",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "body",
+      "vendorName": "nope",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "body",
+      "id": 63946
+    }],
+    "rootKey": "|qdbapi"
+  }, {
+    "method": "GET",
+    "kind": "eb",
+    "description": "Get a list of all the fields metadata for an object.    ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "vendorPath": "/{id}",
+    "path": "/hubs/db/{objectName}/fields",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "model": {
+      "transform": false,
+      "name": "fieldsList",
+      "swagger": {
+        "fieldsListObject": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "id": 26637,
+    "hooks": [{
+      "resourceId": 26637,
+      "isLegacy": false,
+      "contextParams": "request_parameters,request_vendor_url,response_body,response_status_code,response_iserror",
+      "id": 7906,
+      "mimeType": "application/javascript",
+      "body": "//metadata has \"fields\" : [ {\"type\": \"val\", \"vendorPath\": \"name\"} ]\n//types - string, number, boolean\nfunction filterMetadata(arrayMap) {\n\tvar finalArray = [];\n\tfor (var i = 0; i < arrayMap.length; i++) {\n\t\tlet tmp = arrayMap[i];\n\t\tlet tmpMap = {};\n\t\tif (tmp.compositeFields) {\n\t\t\tlet obj = tmp.compositeFields;\n\t\t\tif (obj.compositeField) {\n\t\t\t\tlet array = obj.compositeField;\n\t\t\t\tfor (var j = 0; j < array.length; j++) {\n\t\t\t\t\tlet mapper = array[j];\n\t\t\t\t\tlet newObj = {};\n\t\t\t\t\tnewObj.name = correctName(tmp.label + \". \" + mapper['@key']);\n\t\t\t\t\tnewObj.id = mapper['@id'];\n\t\t\t\t\tfinalArray.push(newObj);\n\t\t\t\t}\n\t\t\t}\n\t\t} else {\n\t\t\tif (tmp.label) {\n\t\t\t\ttmpMap.name = correctName(tmp.label);\n\t\t\t}\n\t\t\tif (tmp['@id']) {\n\t\t\t\ttmpMap.id = tmp['@id'];\n\t\t\t}\t\n\t\t\tfinalArray.push(tmpMap);\n\t\t}\n\t}\n\n\treturn finalArray;\n}\n\nfunction correctName(name) {\n\tvar flag = false;\n\twhile(flag === false) {\n\t\tif (name.indexOf(\" \") > -1) {\n\t\t\tname = name.replace(\" \", \"_\");\n\t\t} else if (name.indexOf(\"#\") > -1) {\n\t\t\tname = name.replace(\"#\", \"_\");\n\t\t} else if (name.indexOf(\"/\") > -1) {\n\t\t\tname = name.replace(\"/\", \"_\");\n\t\t} else if (name.indexOf(\"?\") > -1) {\n\t\t\tname = name.replace(\"?\", \"_\");\n\t\t} else if (name.indexOf(\".\") > -1) {\n\t\t\tname = name.replace(\".\", \"_\");\n\t\t} else {\n\t\t\tflag = true;\n\t\t}\n\t}\n\tname = convertNonAlphaNumeric(name);\n\treturn name.toLowerCase();\n}\n\nfunction convertNonAlphaNumeric(fieldName) {\n\tfieldName = fieldName.replace(/\\W+/g, \"_\");  \n\treturn fieldName;\n}\n\nvar vendorPath = request_vendor_url;\n\nif (vendorPath.indexOf(\"junk\") > -1) {\n\tlet response = {};\n\tresponse.error = \"Invalid objectName provided.\"\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 404\n\t});\n} else {\n\tvar responseBody = response_body.qdbapi;\n\tif (!response_iserror && responseBody.errcode === 0) {\n\t\t//fields logic\n\t\tif (responseBody.table !== null && responseBody.table !== undefined) {\n\t\t\tlet tableObj = responseBody.table;\n\t\t\tif (tableObj.fields !== null && tableObj.fields !== undefined) {\n\t\t\t\tlet fieldsObj = tableObj.fields;\n\t\t\t\tif (fieldsObj.field !== null && fieldsObj.field !== undefined) {\n\t\t\t\t\tlet fieldsArray = fieldsObj.field;\n\t\t\t\t\tif (request_parameters.getAll === 'false') {\n\t\t\t\t\t\tlet array = filterMetadata(fieldsArray);\n\t\t\t\t\t\tdone({\n\t\t\t\t\t\t\t\"response_body\": array\n\t\t\t\t\t\t});\n\t\t\t\t\t} else {\n\t\t\t\t\t\tdone({\n\t\t\t\t\t\t\t\"response_body\": fieldsArray\n\t\t\t\t\t\t});\t\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tlet emptyArray = [];\n\t\tdone({\n\t\t\t\"response_body\": emptyArray\n\t\t});\n\t\t\n\t} else {\n\t\tlet response = {};\n\t\tresponse.errcode = responseBody.errcode;\n\t\tresponse.errtext = responseBody.errtext;\n\t\tdone({\n\t\t\t\"response_body\": response,\n\t\t\t\"response_status_code\": 400\n\t\t});\n\t}\n\t\n}\n\t\n\t\n",
+      "type": "postRequest"
+    }, {
+      "resourceId": 26637,
+      "isLegacy": false,
+      "contextParams": "request_vendor_body,request_path,request_vendor_path,configuration",
+      "id": 7905,
+      "mimeType": "application/javascript",
+      "body": "var objectsString = configuration['quickbase.objects'];\nvar objectsArray = JSON.parse(objectsString);\nvar path = request_path;\nvar vendorPath = request_vendor_path;\n\npath = path.replace(\"/hubs/db/\", \"\");\nvar objName = path.replace(\"/fields\", \"\");\n\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tfor (let key of keys) {\n\t\tif (key === objName) {\n\t\t\tlet id = tmp[key];\n\t\t\tvendorPath = vendorPath.replace(\"{id}\", id);\n\t\t\tlet body = request_vendor_body;\n\t\t\tif (body.indexOf(\"{apptoken}\" > -1)) {\n\t\t\t\tbody = body.replace(\"<apptoken>{apptoken}<\/apptoken>\", \"\");\n\t\t\t}\n\t\t\tdone({\n\t\t\t\t\"request_vendor_path\": vendorPath,\n\t\t\t\t\"request_vendor_body\": body\n\t\t\t});\n\t\t}\n\t}\n}\n\nif (vendorPath.indexOf(\"{id}\" > -1)) {\n\tvendorPath = vendorPath.replace(\"{id}\", \"junk\");\n\tdone({\n\t\t\"continue\": false,\n\t\t\"request_vendor_path\": vendorPath\n\t});\n} \n\ndone();",
+      "type": "preRequest"
+    }],
+    "parameters": [{
+      "vendorType": "bodyToken",
+      "resourceId": 26637,
+      "dataType": "string",
+      "description": "The QuickBase application token",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "apptoken",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.apptoken",
+      "id": 63957
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26637,
+      "dataType": "string",
+      "description": "The authentication ticket is returned via the API_Authenticate call",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "ticket",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.ticket",
+      "id": 63956
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26637,
+      "dataType": "boolean",
+      "description": "Use this parameter to retrieve all fields metadata for an object if true, or name/id if false. Defaults to true. ",
+      "vendorDataType": "boolean",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "query",
+      "vendorName": "nope",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "getAll",
+      "id": 63955
+    }, {
+      "vendorType": "header",
+      "resourceId": 26637,
+      "dataType": "string",
+      "description": "The functional action",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_GetSchema",
+      "id": 63954
+    }, {
+      "vendorType": "body",
+      "resourceId": 26637,
+      "dataType": "string",
+      "description": "The XML request payload",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>    <ticket>{ticket}<\/ticket> <apptoken>{apptoken}<\/apptoken> <\/qdbapi>",
+      "id": 63953
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26637,
+      "dataType": "string",
+      "description": "The name of the object",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "no-op",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectName",
+      "id": 63952
+    }]
+  }, {
+    "method": "POST",
+    "kind": "eb",
+    "description": "Create a custom field for an object.       ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "vendorPath": "/{id}",
+    "path": "/hubs/db/{objectName}/fields",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "model": {
+      "requestName": "fieldsCreate",
+      "transform": false,
+      "name": "fields",
+      "requestSwagger": {
+        "fieldsCreate": {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "swagger": {
+        "fields": {
+          "title": "fields",
+          "type": "object",
+          "properties": {
+            "pretend": {
+              "x-samplevalue": "value",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "id": 26638,
+    "hooks": [{
+      "resourceId": 26638,
+      "isLegacy": false,
+      "contextParams": "request_vendor_url,response_body,response_status_code,response_iserror",
+      "id": 7908,
+      "mimeType": "application/javascript",
+      "body": "var vendorPath = request_vendor_url;\n\nif (vendorPath.indexOf(\"junk\") > -1) {\n\tlet response = {};\n\tresponse.error = \"Invalid objectName provided.\"\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 404\n\t});\n} else {\n\tvar responseBody = response_body.qdbapi;\n\tif (!response_iserror && responseBody.errcode === 0) {\n\t\tlet object = {};\n\t\tobject.id = responseBody.fid;\n\t\tobject.success = true;\n\t\tdone({\n\t\t\t\"response_body\": object\n\t\t});\n\t\t\n\t} else {\n\t\tlet response = {};\n\t\tresponse.errcode = responseBody.errcode;\n\t\tresponse.errtext = responseBody.errtext;\n\t\tdone({\n\t\t\t\"response_body\": response,\n\t\t\t\"response_status_code\": 400\n\t\t});\n\t}\n\t\n}",
+      "type": "postRequest"
+    }, {
+      "resourceId": 26638,
+      "isLegacy": false,
+      "contextParams": "request_body_map,request_vendor_body,request_path,request_vendor_path,configuration",
+      "id": 7907,
+      "mimeType": "application/javascript",
+      "body": "function formXmlBody(requestJson, requestXml) {\n\tlet fieldFormat = \"<{name}>{value}<\/{name}>\";\n\tlet fullXmlBody = \"\";\n\tlet keys = Object.keys(requestJson);\t\n\tfor (let key of keys) {\n\t\tlet field = fieldFormat.replace(\"{name}\", key);\n\t\tfield = field.replace(\"{name}\", key);\n\t\tfield = field.replace(\"{value}\", requestJson[key]);\n\t\tfullXmlBody += field;\n\t}\n\trequestXml = requestXml.replace(\"<fields>{fields}<\/fields>\", fullXmlBody);\n\treturn requestXml;\n}\n\nvar objectsString = configuration['quickbase.objects'];\nvar objectsArray = JSON.parse(objectsString);\nvar path = request_path;\nvar vendorPath = request_vendor_path;\n\npath = path.replace(\"/hubs/db/\", \"\");\nvar objName = path.replace(\"/fields\", \"\");\n\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tfor (let key of keys) {\n\t\tif (key === objName) {\n\t\t\tlet id = tmp[key];\n\t\t\tvendorPath = vendorPath.replace(\"{id}\", id);\n\t\t\tlet requestBody = formXmlBody(request_body_map, request_vendor_body);\n\t\t\tif (requestBody.indexOf(\"{apptoken}\" > -1)) {\n\t\t\t\trequestBody = requestBody.replace(\"<apptoken>{apptoken}<\/apptoken>\", \"\");\n\t\t\t}\n\t\t\tdone({\n\t\t\t\t\"request_vendor_body\": requestBody,\n\t\t\t\t\"request_vendor_path\": vendorPath\n\t\t\t});\n\t\t}\n\t}\n}\n\nif (vendorPath.indexOf(\"{id}\" > -1)) {\n\tvendorPath = vendorPath.replace(\"{id}\", \"junk\");\n\tdone({\n\t\t\"continue\": false,\n\t\t\"request_vendor_path\": vendorPath\n\t});\n} \n\ndone();",
+      "type": "preRequest"
+    }],
+    "parameters": [{
+      "vendorType": "no-op",
+      "resourceId": 26638,
+      "dataType": "string",
+      "description": "The name of the object",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "no-op",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectName",
+      "id": 63963
+    }, {
+      "vendorType": "header",
+      "resourceId": 26638,
+      "dataType": "string",
+      "description": "The functional action",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_AddField",
+      "id": 63962
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26638,
+      "dataType": "string",
+      "description": "The QuickBase application token",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "apptoken",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.apptoken",
+      "id": 63961
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26638,
+      "dataType": "string",
+      "description": "The authentication ticket is returned via the API_Authenticate call",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "ticket",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.ticket",
+      "id": 63960
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26638,
+      "dataType": "fieldsCreate",
+      "description": "The fields object body. Useful parameters are label and type. ",
+      "vendorDataType": "object",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "body",
+      "vendorName": "nope",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "body",
+      "id": 63959
+    }, {
+      "vendorType": "body",
+      "resourceId": 26638,
+      "dataType": "string",
+      "description": "The XML request payload",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>    <ticket>{ticket}<\/ticket> <apptoken>{apptoken}<\/apptoken>  <fields>{fields}<\/fields> <\/qdbapi>",
+      "id": 63958
+    }]
+  }, {
+    "method": "DELETE",
+    "kind": "eb",
+    "description": "Delete a field associated with a given object name from the QuickBase system.  Specifying an object associated with a given objectName and ID that does not exist will result in an error message.     ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "vendorPath": "/{id}",
+    "path": "/hubs/db/{objectName}/fields/{id}",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "model": {
+      "transform": false,
+      "name": "fields",
+      "swagger": {
+        "fields": {
+          "type": "object",
+          "properties": {
+            "success": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "id": 26639,
+    "hooks": [{
+      "resourceId": 26639,
+      "isLegacy": false,
+      "contextParams": "request_vendor_body,request_path,request_vendor_path,configuration",
+      "id": 7910,
+      "mimeType": "application/javascript",
+      "body": "var objectsString = configuration['quickbase.objects'];\nvar objectsArray = JSON.parse(objectsString);\nvar vendorPath = request_vendor_path;\nvar body = request_vendor_body;\nvar path = request_path.split(\"/\");\nvar objName = path[3];\nvar objId = path[5];\n\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tfor (let key of keys) {\n\t\tif (key === objName) {\n\t\t\tlet id = tmp[key];\n\t\t\tvendorPath = vendorPath.replace(\"{id}\", id);\n\t\t\tbody = body.replace(\"{fid}\", objId);\n\t\t\tif (body.indexOf(\"{apptoken}\" > -1)) {\n\t\t\t\tbody = body.replace(\"<apptoken>{apptoken}<\/apptoken>\", \"\");\n\t\t\t}\n\t\t\tdone({\n\t\t\t\t\"request_vendor_path\": vendorPath,\n\t\t\t\t\"request_vendor_body\": body\n\t\t\t});\n\t\t}\n\t}\n}\n\nif (vendorPath.indexOf(\"{id}\" > -1)) {\n\tvendorPath = vendorPath.replace(\"{id}\", \"junk\");\n\tdone({\n\t\t\"continue\": false,\n\t\t\"request_vendor_path\": vendorPath\n\t});\n} \n\ndone();",
+      "type": "preRequest"
+    }, {
+      "resourceId": 26639,
+      "isLegacy": false,
+      "contextParams": "request_vendor_url,response_body,response_status_code,response_iserror",
+      "id": 7909,
+      "mimeType": "application/javascript",
+      "body": "var vendorPath = request_vendor_url;\nvar responseBody = response_body;\n\nif (vendorPath.indexOf(\"junk\") > -1) {\n\tlet response = {};\n\tresponse.error = \"Invalid objectName provided.\"\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 404\n\t});\n} else {\n\tif (!response_iserror && responseBody.errcode === 0) {\n\t\tvar normalizeMap = {};\n\t\tnormalizeMap.success = true;\n\t\tdone({\n\t\t\t\"response_body\": normalizeMap\n\t\t});\n\t} else {\n\t\tlet response = {};\n\t\tresponse.errcode = responseBody.errcode;\n\t\tresponse.errtext = responseBody.errtext;\n\t\tdone({\n\t\t\t\"response_body\": response,\n\t\t\t\"response_status_code\": 400\n\t\t});\n\t}\n}",
+      "type": "postRequest"
+    }],
+    "parameters": [{
+      "vendorType": "bodyToken",
+      "resourceId": 26639,
+      "dataType": "string",
+      "description": "The QuickBase application token",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "apptoken",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.apptoken",
+      "id": 63969
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26639,
+      "dataType": "string",
+      "description": "The ticket authentication",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "ticket",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.ticket",
+      "id": 63968
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26639,
+      "dataType": "string",
+      "description": "The object name of the object to be deleted, e.g., 'account'.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "no-op",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectName",
+      "id": 63967
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26639,
+      "dataType": "string",
+      "description": "The ID of the field to delete from the QuickBase system.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "nope",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "id",
+      "id": 63966
+    }, {
+      "vendorType": "header",
+      "resourceId": 26639,
+      "dataType": "string",
+      "description": "The QuickBase functional action",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_DeleteField",
+      "id": 63965
+    }, {
+      "vendorType": "body",
+      "resourceId": 26639,
+      "dataType": "string",
+      "description": "The XML request body",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>    <ticket>{ticket}<\/ticket> <apptoken>{apptoken}<\/apptoken>  <fid>{fid}<\/fid>  <\/qdbapi>",
+      "id": 63964
+    }],
+    "rootKey": "|qdbapi"
+  }, {
+    "method": "DELETE",
+    "kind": "eb",
+    "description": "Delete an object associated with a given object name and ID from the QuickBase system.  Specifying an object associated with a given objectName and ID that does not exist will result in an error message.  ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "vendorPath": "/{id}",
+    "path": "/hubs/db/{objectName}/{objectId}",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "id": 26640,
+    "hooks": [{
+      "resourceId": 26640,
+      "isLegacy": false,
+      "contextParams": "request_vendor_body,request_path,request_vendor_path,configuration",
+      "id": 7912,
+      "mimeType": "application/javascript",
+      "body": "var objectsString = configuration['quickbase.objects'];\nvar objectsArray = JSON.parse(objectsString);\nvar vendorPath = request_vendor_path;\nvar body = request_vendor_body;\nvar path = request_path.split(\"/\");\nvar objName = path[3];\nvar objId = path[4];\n\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tfor (let key of keys) {\n\t\tif (key === objName) {\n\t\t\tlet id = tmp[key];\n\t\t\tvendorPath = vendorPath.replace(\"{id}\", id);\n\t\t\tbody = body.replace(\"{rid}\", objId);\n\t\t\tif (body.indexOf(\"{apptoken}\" > -1)) {\n\t\t\t\tbody = body.replace(\"<apptoken>{apptoken}<\/apptoken>\", \"\");\n\t\t\t}\n\t\t\tdone({\n\t\t\t\t\"request_vendor_path\": vendorPath,\n\t\t\t\t\"request_vendor_body\": body\n\t\t\t});\n\t\t}\n\t}\n}\n\nif (vendorPath.indexOf(\"{id}\" > -1)) {\n\tvendorPath = vendorPath.replace(\"{id}\", \"junk\");\n\tdone({\n\t\t\"continue\": false,\n\t\t\"request_vendor_path\": vendorPath\n\t});\n} \n\ndone();",
+      "type": "preRequest"
+    }, {
+      "resourceId": 26640,
+      "isLegacy": false,
+      "contextParams": "request_vendor_url,response_body,response_status_code,response_iserror",
+      "id": 7911,
+      "mimeType": "application/javascript",
+      "body": "var vendorPath = request_vendor_url;\nvar responseBody = response_body;\n\nif (vendorPath.indexOf(\"junk\") > -1) {\n\tlet response = {};\n\tresponse.error = \"Invalid objectName provided.\"\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 404\n\t});\n} else {\n\tif (!response_iserror && responseBody.errcode === 0) {\n\t\tvar normalizeMap = {};\n\t\tif (responseBody.rid) {\n\t\t\tnormalizeMap['record_id_'] = responseBody.rid;\n\t\t}\n\t\tnormalizeMap.success = true;\n\t\tdone({\n\t\t\t\"response_body\": normalizeMap\n\t\t});\n\t} else {\n\t\tlet response = {};\n\t\tresponse.errcode = responseBody.errcode;\n\t\tresponse.errtext = responseBody.errtext;\n\t\tdone({\n\t\t\t\"response_body\": response,\n\t\t\t\"response_status_code\": 400\n\t\t});\n\t}\n}",
+      "type": "postRequest"
+    }],
+    "parameters": [{
+      "vendorType": "body",
+      "resourceId": 26640,
+      "dataType": "string",
+      "description": "The XML request body",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>    <ticket>{ticket}<\/ticket> <apptoken>{apptoken}<\/apptoken> <rid>{rid}<\/rid>  <\/qdbapi>",
+      "id": 63975
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26640,
+      "dataType": "string",
+      "description": "The ticket authentication",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "ticket",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.ticket",
+      "id": 63974
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26640,
+      "dataType": "string",
+      "description": "The object name of the object to be deleted, e.g., 'account'.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "no-op",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectName",
+      "id": 63973
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26640,
+      "dataType": "string",
+      "description": "The ID of the object to delete from the QuickBase system.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "nope",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectId",
+      "id": 63972
+    }, {
+      "vendorType": "header",
+      "resourceId": 26640,
+      "dataType": "string",
+      "description": "The QuickBase functional action",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_DeleteRecord",
+      "id": 63971
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26640,
+      "dataType": "string",
+      "description": "The QuickBase application token",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "apptoken",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.apptoken",
+      "id": 63970
+    }],
+    "rootKey": "|qdbapi"
+  }, {
+    "method": "GET",
+    "kind": "eb",
+    "description": "Retrieve an object associated with a given ID from the QuickBase system. Specifying an object with a specified ID that does not exist will result in an error response.     ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "vendorPath": "/{id}",
+    "path": "/hubs/db/{objectName}/{objectId}",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "model": {
+      "transform": false,
+      "name": "ObjectGetRes",
+      "swagger": {
+        "ObjectGetRes": {
+          "type": "object",
+          "properties": {
+            "update_id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "date_modified": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "record_id_": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "date_created": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "customer_name": {
+              "type": "string"
+            },
+            "last_modified_by": {
+              "type": "string"
+            },
+            "record_owner": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "id": 26641,
+    "hooks": [{
+      "resourceId": 26641,
+      "isLegacy": false,
+      "contextParams": "request_vendor_url,response_body,response_status_code,response_iserror",
+      "id": 7913,
+      "mimeType": "application/javascript",
+      "body": "function buildMap(arrayMap, objectMap) {\n\t\n\tfor (var i = 0; i < arrayMap.length; i++) {\n\t\tlet tmp = arrayMap[i];\n\t\tif (tmp.name && tmp.value) {\n\t\t\tlet name = correctName(tmp.name);\n\t\t\tobjectMap[name] = tmp.value;\n\t\t}\n\t\t\n\t}\n\n\treturn objectMap;\n}\n\nfunction correctName(name) {\n\tvar flag = false;\n\twhile(flag === false) {\n\t\tif (name.indexOf(\" \") > -1) {\n\t\t\tname = name.replace(\" \", \"_\");\n\t\t} else if (name.indexOf(\"#\") > -1) {\n\t\t\tname = name.replace(\"#\", \"_\");\n\t\t} else if (name.indexOf(\"/\") > -1) {\n\t\t\tname = name.replace(\"/\", \"_\");\n\t\t} else if (name.indexOf(\":\") > -1) {\n\t\t\tname = name.replace(\":\", \"_\");\n\t\t} else if (name.indexOf(\"?\") > -1) {\n\t\t\tname = name.replace(\"?\", \"_\");\n\t\t} else {\n\t\t\tflag = true;\n\t\t}\n\t}\n\treturn name.toLowerCase();\n}\n\nvar vendorPath = request_vendor_url;\nvar responseBody = response_body;\n\nif (vendorPath.indexOf(\"junk\") > -1) {\n\tlet response = {};\n\tresponse.error = \"Invalid objectName provided.\"\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 404\n\t});\n} else {\n\tif (!response_iserror && responseBody.errcode === 0) {\n\t\tvar normalizeMap = {};\n\t\tif (responseBody['update_id']) {\n\t\t\tnormalizeMap.update_id = responseBody['update_id'];\n\t\t}\n\t\tif (responseBody.field) {\n\t\t\tnormalizeMap = buildMap(responseBody.field, normalizeMap);\n\t\t}\n\t\tdone({\n\t\t\t\"response_body\": normalizeMap\n\t\t});\n\t} else {\n\t\tlet response = {};\n\t\tresponse.errcode = responseBody.errcode;\n\t\tresponse.errtext = responseBody.errtext;\n\t\tdone({\n\t\t\t\"response_body\": response,\n\t\t\t\"response_status_code\": 400\n\t\t});\n\t}\n}",
+      "type": "postRequest"
+    }, {
+      "resourceId": 26641,
+      "isLegacy": false,
+      "contextParams": "request_vendor_body,request_path,request_vendor_path,configuration",
+      "id": 7914,
+      "mimeType": "application/javascript",
+      "body": "var objectsString = configuration['quickbase.objects'];\nvar objectsArray = JSON.parse(objectsString);\nvar vendorPath = request_vendor_path;\nvar body = request_vendor_body;\nvar path = request_path.split(\"/\");\nvar objName = path[3];\nvar objId = path[4];\n\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tfor (let key of keys) {\n\t\tif (key === objName) {\n\t\t\tlet id = tmp[key];\n\t\t\tvendorPath = vendorPath.replace(\"{id}\", id);\n\t\t\tbody = body.replace(\"{rid}\", objId);\n\t\t\tif (body.indexOf(\"{apptoken}\" > -1)) {\n\t\t\t\tbody = body.replace(\"<apptoken>{apptoken}<\/apptoken>\", \"\");\n\t\t\t}\n\t\t\tdone({\n\t\t\t\t\"request_vendor_path\": vendorPath,\n\t\t\t\t\"request_vendor_body\": body\n\t\t\t});\n\t\t}\n\t}\n}\n\nif (vendorPath.indexOf(\"{id}\" > -1)) {\n\tvendorPath = vendorPath.replace(\"{id}\", \"junk\");\n\tdone({\n\t\t\"continue\": false,\n\t\t\"request_vendor_path\": vendorPath\n\t});\n} \n\ndone();",
+      "type": "preRequest"
+    }],
+    "parameters": [{
+      "vendorType": "bodyToken",
+      "resourceId": 26641,
+      "dataType": "string",
+      "description": "The QuickBase application token",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "apptoken",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.apptoken",
+      "id": 63981
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26641,
+      "dataType": "string",
+      "description": "The ID of the object to retrieve from the QuickBase system.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "nope",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectId",
+      "id": 63980
+    }, {
+      "vendorType": "header",
+      "resourceId": 26641,
+      "dataType": "string",
+      "description": "The functional QuickBase action",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_GetRecordInfo",
+      "id": 63979
+    }, {
+      "vendorType": "body",
+      "resourceId": 26641,
+      "dataType": "string",
+      "description": "The XML request body",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>    <ticket>{ticket}<\/ticket> <apptoken>{apptoken}<\/apptoken> <rid>{rid}<\/rid>  <\/qdbapi>",
+      "id": 63978
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26641,
+      "dataType": "string",
+      "description": "The authentication ticket ",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "ticket",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.ticket",
+      "id": 63977
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26641,
+      "dataType": "string",
+      "description": "The object name of the object to be retrieved, e.g., account'.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "no-op",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectName",
+      "id": 63976
+    }],
+    "rootKey": "|qdbapi"
+  }, {
+    "method": "PATCH",
+    "kind": "eb",
+    "description": "Update an object associated with a given object name and ID in the QuickBase system. The update API uses the PATCH HTTP verb, so only those fields provided in the object will be updated, and those fields not provided will be left alone. Updating an object with a specified ID that does not exist will result in an error response.  ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "vendorPath": "/{id}",
+    "path": "/hubs/db/{objectName}/{objectId}",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "model": {
+      "requestName": "Object",
+      "transform": false,
+      "name": "ObjectResponse",
+      "requestSwagger": {
+        "Object": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "swagger": {
+        "ObjectResponse": {
+          "type": "object",
+          "properties": {
+            "update_id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "record_id_": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "id": 26642,
+    "hooks": [{
+      "resourceId": 26642,
+      "isLegacy": false,
+      "contextParams": "request_vendor_url,response_body,response_status_code,response_iserror",
+      "id": 7916,
+      "mimeType": "application/javascript",
+      "body": "var vendorPath = request_vendor_url;\nvar responseBody = response_body;\n\nif (vendorPath.indexOf(\"junk\") > -1) {\n\tlet response = {};\n\tresponse.error = \"Invalid objectName provided.\"\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 404\n\t});\n} else {\n\tif (!response_iserror && responseBody.errcode === 0) {\n\t\tvar normalizeMap = {};\n\t\tif (responseBody['update_id']) {\n\t\t\tnormalizeMap.update_id = responseBody['update_id'];\n\t\t}\n\t\tif (responseBody.rid) {\n\t\t\tnormalizeMap['record_id_'] = responseBody.rid;\n\t\t}\n\t\tdone({\n\t\t\t\"response_body\": normalizeMap\n\t\t});\n\t} else {\n\t\tlet response = {};\n\t\tresponse.errcode = responseBody.errcode;\n\t\tresponse.errtext = responseBody.errtext;\n\t\tdone({\n\t\t\t\"response_body\": response,\n\t\t\t\"response_status_code\": 400\n\t\t});\n\t}\n}",
+      "type": "postRequest"
+    }, {
+      "resourceId": 26642,
+      "isLegacy": false,
+      "contextParams": "request_body_map,request_vendor_body,request_path,request_vendor_path,configuration",
+      "id": 7915,
+      "mimeType": "application/javascript",
+      "body": "function formXmlBody(requestJson, requestXml) {\n\tlet fieldFormat = \"<field name=\\\"{name}\\\">{value}<\/field>\";\n\tlet fullXmlBody = \"\";\n\tlet keys = Object.keys(requestJson);\t\n\tfor (let key of keys) {\n\t\tlet field = fieldFormat.replace(\"{name}\", key);\n\t\tfield = field.replace(\"{value}\", requestJson[key]);\n\t\tfullXmlBody += field;\n\t}\n\trequestXml = requestXml.replace(\"<fields>{fields}<\/fields>\", fullXmlBody);\n\treturn requestXml;\n}\n\n\nvar objectsString = configuration['quickbase.objects'];\nvar objectsArray = JSON.parse(objectsString);\nvar vendorPath = request_vendor_path;\nvar body = request_vendor_body;\nvar path = request_path.split(\"/\");\nvar objName = path[3];\nvar objId = path[4];\n\n\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tfor (let key of keys) {\n\t\tif (key === objName) {\n\t\t\tlet id = tmp[key];\n\t\t\tvendorPath = vendorPath.replace(\"{id}\", id);\n\t\t\tbody = body.replace(\"{rid}\", objId);\n\t\t\tlet requestBody = formXmlBody(request_body_map, body);\n\t\t\tif (requestBody.indexOf(\"{apptoken}\" > -1)) {\n\t\t\t\trequestBody = requestBody.replace(\"<apptoken>{apptoken}<\/apptoken>\", \"\");\n\t\t\t}\n\t\t\tdone({\n\t\t\t\t\"request_vendor_body\": requestBody,\n\t\t\t\t\"request_vendor_path\": vendorPath\n\t\t\t});\n\t\t}\n\t}\n}\n\nif (vendorPath.indexOf(\"{id}\" > -1)) {\n\tvendorPath = vendorPath.replace(\"{id}\", \"junk\");\n\tdone({\n\t\t\"continue\": false,\n\t\t\"request_vendor_path\": vendorPath\n\t});\n} \n\ndone();\n",
+      "type": "preRequest"
+    }],
+    "parameters": [{
+      "vendorType": "bodyToken",
+      "resourceId": 26642,
+      "dataType": "string",
+      "description": "The QuickBase application token",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "apptoken",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.apptoken",
+      "id": 63988
+    }, {
+      "vendorType": "bodyToken",
+      "resourceId": 26642,
+      "dataType": "string",
+      "description": "The ticket authentication ",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "configuration",
+      "vendorName": "ticket",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "quickbase.ticket",
+      "id": 63987
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26642,
+      "dataType": "string",
+      "description": "The object name of the object to be updated, e.g., 'account'.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "no-op",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectName",
+      "id": 63986
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26642,
+      "dataType": "string",
+      "description": "The ID of the object to update in the QuickBase system.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "nope",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectId",
+      "id": 63985
+    }, {
+      "vendorType": "header",
+      "resourceId": 26642,
+      "dataType": "string",
+      "description": "The QuickBase functional action",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_EditRecord",
+      "id": 63984
+    }, {
+      "vendorType": "body",
+      "resourceId": 26642,
+      "dataType": "string",
+      "description": "The XML request body",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "body",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "<qdbapi>    <ticket>{ticket}<\/ticket>  <apptoken>{apptoken}<\/apptoken>  <rid>{rid}<\/rid>  <fields>{fields}<\/fields> <\/qdbapi>",
+      "id": 63983
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26642,
+      "dataType": "Object",
+      "description": "The object with those fields that are to be updated.",
+      "vendorDataType": "object",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "body",
+      "vendorName": "hm",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "body",
+      "id": 63982
+    }],
+    "rootKey": "|qdbapi"
+  }, {
+    "method": "POST",
+    "kind": "eb",
+    "description": "Create a file attachment for an given object name and ID in the QuickBase system. Creating an attachment for an object with a specified ID that does not exist will result in an error response.              ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "vendorPath": "/{id}",
+    "path": "/hubs/db/{objectName}/{objectId}/attachments",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "POST",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "id": 26643,
+    "hooks": [{
+      "resourceId": 26643,
+      "isLegacy": false,
+      "contextParams": "request_vendor_body,request_path,request_parameters,request_vendor_path,request_vendor_headers,configuration",
+      "id": 7918,
+      "mimeType": "application/javascript",
+      "body": "var attachmentBody;\nvar vendorPath = request_vendor_path;\ntry {\n\tattachmentBody = JSON.parse(request_vendor_body);\n} catch (e) {\n\tvendorPath = vendorPath.replace(\"{id}\", \"pass\");\n\tdone({\n\t\t\"request_vendor_path\": vendorPath\n\t});\n}\n\nvar ticket = configuration['quickbase.ticket'];\nvar apptoken = configuration['quickbase.apptoken'];\nvar objectsString = configuration['quickbase.objects'];\nvar objectsArray = JSON.parse(objectsString);\nvar path = request_path.split(\"/\");\nvar objName = path[3];\nvar objId = path[4];\n\nvar headers = request_vendor_headers;\nheaders['Content-Type'] = \"application/xml\";\nvar template = \"<qdbapi>    <ticket>{ticket}<\/ticket>  <apptoken>{apptoken}<\/apptoken>  <rid>{rid}<\/rid>  <field name=\\\"{fieldName}\\\" filename=\\\"{fileName}\\\">{base64Content}<\/field> <\/qdbapi>\";\n\n\n\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tfor (let key of keys) {\n\t\tif (key === objName) {\n\t\t\tlet id = tmp[key];\n\t\t\tvendorPath = vendorPath.replace(\"pass\", id);\n\t\t\tlet requestBody = template.replace(\"{ticket}\", ticket);\n\t\t\trequestBody = requestBody.replace(\"{apptoken}\", apptoken);\n\t\t\trequestBody = requestBody.replace(\"{rid}\", objId);\n\t\t\trequestBody = requestBody.replace(\"{fieldName}\", request_parameters.fieldName);\n\t\t\trequestBody = requestBody.replace(\"{fileName}\", attachmentBody.name);\n\t\t\trequestBody = requestBody.replace(\"{base64Content}\", attachmentBody.body);\n\t\t\tdone({\n\t\t\t\t\"request_vendor_headers\": headers,\n\t\t\t\t\"request_vendor_body\": requestBody,\n\t\t\t\t\"request_vendor_path\": vendorPath\n\t\t\t});\n\t\t}\n\t}\n}\n\nif (vendorPath.indexOf(\"pass\" > -1)) {\n\tvendorPath = vendorPath.replace(\"pass\", \"junk\");\n\tdone({\n\t\t\"continue\": false,\n\t\t\"request_vendor_path\": vendorPath\n\t});\n} \n\ndone();\n",
+      "type": "preRequest"
+    }, {
+      "resourceId": 26643,
+      "isLegacy": false,
+      "contextParams": "request_vendor_url,response_body,response_status_code",
+      "id": 7917,
+      "mimeType": "application/javascript",
+      "body": "var vendorPath = request_vendor_url;\nvar responseBody = response_body;\n\nif (vendorPath.indexOf(\"junk\") > -1) {\n\tlet response = {};\n\tresponse.error = \"Invalid objectName provided.\"\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 404\n\t});\n} else {\n\tdone();\n}",
+      "type": "postRequest"
+    }],
+    "parameters": [{
+      "vendorType": "no-op",
+      "resourceId": 26643,
+      "dataType": "string",
+      "description": "The name of the field for the object name/id that the attachment is being posted to, (i.e. 'file', 'photo', etc).",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "query",
+      "vendorName": "fieldName",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "fieldName",
+      "id": 63994
+    }, {
+      "vendorType": "header",
+      "resourceId": 26643,
+      "dataType": "string",
+      "description": "The QuickBase functional action",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "QUICKBASE-ACTION",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "API_EditRecord",
+      "id": 63993
+    }, {
+      "vendorType": "header",
+      "resourceId": 26643,
+      "dataType": "string",
+      "description": "The header to create base64 body",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "Content-Type",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "multipart/form-data",
+      "id": 63992
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26643,
+      "dataType": "string",
+      "description": "The object name of the object to be updated, e.g., 'account'.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "no-op",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectName",
+      "id": 63991
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26643,
+      "dataType": "string",
+      "description": "The ID of the object to update in the QuickBase system.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "nope",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectId",
+      "id": 63990
+    }, {
+      "vendorType": "body",
+      "resourceId": 26643,
+      "dataType": "file",
+      "description": "The file to be uploaded to the QuickBase system",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "multipart",
+      "vendorName": "hm",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "file",
+      "id": 63989
+    }],
+    "rootKey": "|qdbapi"
+  }, {
+    "method": "GET",
+    "kind": "eb",
+    "description": "Download a file attachment using the associated field ID for an given object name and ID in the QuickBase system. Creating an attachment for an object with a specified ID or field ID that does not exist will result in an error response.        ",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "api",
+    "vendorPath": "/up/{id}/a",
+    "path": "/hubs/db/{objectName}/{objectId}/attachments/{fieldId}",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "vendorMethod": "GET",
+    "response": {
+      "contentTypeAsString": "application/json",
+      "contentType": "application/json"
+    },
+    "ownerAccountId": 159,
+    "tryitoutDisable": false,
+    "id": 26644,
+    "hooks": [{
+      "resourceId": 26644,
+      "isLegacy": false,
+      "contextParams": "request_path,request_parameters,request_vendor_path,configuration",
+      "id": 7920,
+      "mimeType": "application/javascript",
+      "body": "var attachmentBody;\nvar vendorPath = request_vendor_path;\n\nvar objectsString = configuration['quickbase.objects'];\nvar ticket = configuration['quickbase.ticket'];\nvar apptoken = configuration['quickbase.apptoken'];\nvar baseUrl = configuration['base.url'];\nvar objectsArray = JSON.parse(objectsString);\nvar path = request_path.split(\"/\");\nvar objName = path[3];\nvar objId = path[4];\nvar fieldId = path[6];\n\nif(objName.indexOf(\"`\") > -1) {\n\tobjName = objName.replace(\"`\", \"\");\n\tobjName = objName.replace(\"`\", \"\");\n}\n\nbaseUrl = baseUrl.substr(0, baseUrl.indexOf(\"/db\"));\nfor (var i = 0; i < objectsArray.length; i++) {\n\tlet tmp = objectsArray[i];\n\tlet keys = Object.keys(tmp);\t\n\tfor (let key of keys) {\n\t\tif (key === objName) {\n\t\t\tlet id = tmp[key];\n\t\t\tvendorPath = vendorPath.replace(\"{id}\", id);\n\t\t\tvendorPath += \"/r\" + objId;\n\t\t\tvendorPath += \"/e\" + fieldId;\n\t\t\tif (request_parameters['Version Number']) {\n\t\t\t\tvendorPath += \"/v\" + request_parameters['Version Number'];\n\t\t\t} else {\n\t\t\t\tvendorPath += \"/v0\";\n\t\t\t}\n\t\t\tvendorPath += \"?ticket=\" + ticket;\n\t\t\tvendorPath += \"&apptoken=\" + apptoken;\n\t\t\tdone({\n\t\t\t\t\"request_vendor_path\": baseUrl + vendorPath\n\t\t\t});\n\t\t}\n\t}\n}\n\nif (vendorPath.indexOf(\"{id}\" > -1)) {\n\tvendorPath = vendorPath.replace(\"{id}\", \"junk\");\n\tdone({\n\t\t\"continue\": false,\n\t\t\"request_vendor_path\": vendorPath\n\t});\n} \n\ndone();\n",
+      "type": "preRequest"
+    }, {
+      "resourceId": 26644,
+      "isLegacy": false,
+      "contextParams": "request_vendor_url,response_headers,response_body,response_status_code",
+      "id": 7919,
+      "mimeType": "application/javascript",
+      "body": "var vendorPath = request_vendor_url;\nvar responseBody = response_body;\n\nif (vendorPath.indexOf(\"junk\") > -1) {\n\tlet response = {};\n\tresponse.error = \"Invalid objectName provided.\"\n\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 404\n\t});\n} else {\n\tif (responseBody.indexOf(\"<!DOCTYPE HTML>\") > -1) {\n\t\tlet response = {};\n\t\tresponse.errcode = response_headers['QUICKBASE-ERRCODE'];\n\t\tresponse.errtext = response_headers['QUICKBASE-ERRTEXT'];\n\t\tdone({\n\t\t\"response_body\": response,\n\t\t\"response_status_code\": 400\n\t\t});\n\t} else {\n\t\tdone();\n\t}\n}",
+      "type": "postRequest"
+    }],
+    "parameters": [{
+      "vendorType": "header",
+      "resourceId": 26644,
+      "dataType": "string",
+      "description": "Turns on streaming for this API",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "value",
+      "vendorName": "Elements-Stream",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "true",
+      "id": 63999
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26644,
+      "dataType": "string",
+      "description": "The ID of the field for the object name/id that the attachment is being posted to, (i.e. 'file', 'photo', etc). This can be retrieved using a GET /{objectName}/fields call or via the QuickBase UI",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "fieldName",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "fieldId",
+      "id": 63998
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26644,
+      "dataType": "string",
+      "description": "The object name of the object to be updated, e.g., 'account'.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "no-op",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectName",
+      "id": 63997
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26644,
+      "dataType": "string",
+      "description": "Version number is used to specify the version of the file. The default is set at 0, the most recent version.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "query",
+      "vendorName": "version",
+      "required": false,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "Version Number",
+      "id": 63996
+    }, {
+      "vendorType": "no-op",
+      "resourceId": 26644,
+      "dataType": "string",
+      "description": "The ID of the object to update in the QuickBase system.",
+      "vendorDataType": "string",
+      "source": "request",
+      "updatedDate": "2020-07-31T21:04:33Z",
+      "type": "path",
+      "vendorName": "nope",
+      "required": true,
+      "createdDate": "2020-07-31T21:04:23Z",
+      "name": "objectId",
+      "id": 63995
+    }]
+  }],
+  "protocolType": "http",
+  "transformationsEnabled": true,
+  "childTransformationsEnabled": true,
+  "deleted": false,
+  "hub": "db",
+  "typeOauth": false,
+  "name": "QuickBase",
+  "extendable": true,
+  "parameters": [{
+    "elementId": 801,
+    "vendorType": "header",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "name": "application/xml",
+    "id": 1160,
+    "source": "request",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "value",
+    "vendorName": "Accept",
+    "required": false
+  }, {
+    "elementId": 801,
+    "vendorType": "header",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "name": "application/xml",
+    "id": 1161,
+    "source": "request",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "value",
+    "vendorName": "Content-Type",
+    "required": false
+  }, {
+    "elementId": 801,
+    "vendorType": "path",
+    "createdDate": "2020-07-31T21:04:23Z",
+    "name": "subdomain",
+    "id": 1162,
+    "source": "request",
+    "updatedDate": "2020-07-31T21:04:33Z",
+    "type": "configuration",
+    "vendorName": "subdomain",
+    "required": false
+  }]
+}

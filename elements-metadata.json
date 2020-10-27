@@ -582,6 +582,18 @@
     "vendor_version" : "unknown",
     "key" : "sapfieldglass"
   },
+  "QuickBase" : {
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/quickbasedb/quickbase.png",
+    "path" : "quickbasedb/element.json",
+    "hub" : "db",
+    "author" : "tyler-cloud-elements",
+    "name" : "QuickBase",
+    "active" : true,
+    "description" : "Add a QuickBase element to connect your existing QuickBase database, allowing you to manage data for your database tables. You will need your QuickBase database information to add an instance.",
+    "vendor_version" : null,
+    "key" : "quickbasedb",
+    "extended" : false
+  },
   "Zoom" : {
     "image" : "https://images.cloudelements.io/zoom-icon-white202010131830.png",
     "path" : "zoom/element.json",
