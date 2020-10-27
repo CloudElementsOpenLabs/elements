@@ -582,7 +582,7 @@
     "vendor_version" : "unknown",
     "key" : "sapfieldglass"
   },
-  "Trello" : {
+   "Trello" : {
     "image" : "https://images.cloudelements.io/Trello-Logo.wine202010191027.png",
     "path" : "trello/element.json",
     "hub" : "general",
@@ -592,6 +592,30 @@
     "description" : "The Trello API is extremely powerful and fun to use. Building a full application with Trello for web or mobile means getting to know the various concepts and models making up Trello.\n\nAuthentication is handled via OAuth1.0.",
     "vendor_version" : null,
     "key" : "trello",
+    "extended" : false
+  },
+  "QuickBase" : {
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/quickbasedb/quickbase.png",
+    "path" : "quickbasedb/element.json",
+    "hub" : "db",
+    "author" : "tyler-cloud-elements",
+    "name" : "QuickBase",
+    "active" : true,
+    "description" : "Add a QuickBase element to connect your existing QuickBase database, allowing you to manage data for your database tables. You will need your QuickBase database information to add an instance.",
+    "vendor_version" : null,
+    "key" : "quickbasedb",
+    "extended" : false
+  },
+  "Zoom" : {
+    "image" : "https://images.cloudelements.io/zoom-icon-white202010131830.png",
+    "path" : "zoom/element.json",
+    "hub" : "collaboration",
+    "author" : "kiasOrg",
+    "name" : "Zoom",
+    "active" : true,
+    "description" : "The Zoom API allows developers to safely and securely access information from Zoom. You can use this API to build private services or public applications on the Zoom App Marketplace.\n\nZoom allows for two types of apps: user-managed and account-level. Endpoints in the Zoom element require an authenticated instance for one or the other. For example, if you want to request the GET /contacts endpoint, you need to have a user-managed authenticated instance, otherwise you will not be able to make the request. If you want to GET /users, you need to have an account-level authenticated instance with admin scopes, or you will not be able to make the request.",
+    "vendor_version" : null,
+    "key" : "zoom",
     "extended" : false
   }
 }
