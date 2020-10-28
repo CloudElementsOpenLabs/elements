@@ -582,7 +582,7 @@
     "vendor_version" : "unknown",
     "key" : "sapfieldglass"
   },
-   "Trello" : {
+  "Trello" : {
     "image" : "https://images.cloudelements.io/Trello-Logo.wine202010191027.png",
     "path" : "trello/element.json",
     "hub" : "general",
@@ -616,6 +616,18 @@
     "description" : "The Zoom API allows developers to safely and securely access information from Zoom. You can use this API to build private services or public applications on the Zoom App Marketplace.\n\nZoom allows for two types of apps: user-managed and account-level. Endpoints in the Zoom element require an authenticated instance for one or the other. For example, if you want to request the GET /contacts endpoint, you need to have a user-managed authenticated instance, otherwise you will not be able to make the request. If you want to GET /users, you need to have an account-level authenticated instance with admin scopes, or you will not be able to make the request.",
     "vendor_version" : null,
     "key" : "zoom",
+    "extended" : false
+  },
+  "Epicor" : {
+    "image" : "https://images.cloudelements.io/Image 2020-09-17 at 3.54.16 PM202009171955.png",
+    "path" : "epicor/element.json",
+    "hub" : "erp",
+    "author" : "kiawnna",
+    "name" : "Epicor",
+    "active" : true,
+    "description" : "Add an Epicor Instance to connect your existing account to the ERP Hub, allowing you to manage all of your ERP activities across multiple ERP Elements. You will need your Epicor server details to add an instance.",
+    "vendor_version" : null,
+    "key" : "epicor",
     "extended" : false
   }
 }
