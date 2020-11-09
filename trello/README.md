@@ -1,11 +1,9 @@
----------------------------
-Author Name:kiasOrg
 # Trello Element
 ## Vendor documentation
-https://marketplace.zoom.us/docs/api-reference/zoom-api
+https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/
 
 ## Authentication & Endpoints
-The Zoom Element uses OAuth1 for authentication. You will need your client id, client secret, username (usually email) and password to authenticate an instance.
+The Trello Element uses OAuth1 for authentication. You will need your client id, client secret, username (usually email) and password to authenticate an instance.
 
 #### `/boards`
 * `/boards/{id}` - get, update, and delete a single board by id
