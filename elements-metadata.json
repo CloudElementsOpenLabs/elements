@@ -629,5 +629,17 @@
     "vendor_version" : null,
     "key" : "knowledgeowl",
     "extended" : false
+  },
+  "SquareSandbox" : {
+    "image" : "https://images.cloudelements.io/39003-square-pay-logo-icon-vector-icon-vector-eps202010231356.png",
+    "path" : "squaresandbox/element.json",
+    "hub" : "general",
+    "author" : "kiawnna",
+    "name" : "SquareSandbox",
+    "active" : true,
+    "description" : "Square has a separate API endpoint for testing against Sandbox accounts. Instead of `connect.squareup.com`, the endpoint is `connect.squareupsandbox.com`. As the Cloud Elements Square Element was built to authenticate and make requests to the former, this Element will allow users to authorize requests against the latter. You can visit this web page: https://developer.squareup.com/docs/oauth-api/walkthrough to see an example of the OAuth at work.\n\nUsers must have their own Square Application with an authorized Sandbox Test Account. Visit the Square developer dashboard to create an Application, Sandbox Test Account, create OAuth tokens, and grant your application specific permissions to your sandbox seller account(s). Visit this link to do so: https://squareup.com/login?app=developer&return_to=https://developer.squareup.com/apps\n\nUsers must also have the Sandbox Account open in the browser before attempting to authenticate, or Square will send back an error telling users to do so before authenticating through Cloud Elements. ",
+    "vendor_version" : null,
+    "key" : "squaresandbox",
+    "extended" : false
   }
 }
