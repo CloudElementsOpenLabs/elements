@@ -629,5 +629,17 @@
     "vendor_version" : null,
     "key" : "knowledgeowl",
     "extended" : false
+  },
+  "SnapElement" : {
+    "image" : "elements/custom-element-default-logo.png",
+    "path" : "snapelement/element.json",
+    "hub" : "general",
+    "author" : "HarshaVardhanNaiduGangavarapu",
+    "name" : "SnapElement",
+    "active" : true,
+    "description" : "Snap Element Test for Element Publish",
+    "vendor_version" : null,
+    "key" : "snapelement",
+    "extended" : false
   }
 }
