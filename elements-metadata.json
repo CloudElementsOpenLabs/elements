@@ -629,5 +629,17 @@
     "vendor_version" : null,
     "key" : "knowledgeowl",
     "extended" : false
+  },
+  "ElementPublish" : {
+    "image" : "elements/custom-element-default-logo.png",
+    "path" : "elementpublish/element.json",
+    "hub" : "general",
+    "author" : "HarshaVardhanNaiduGangavarapu",
+    "name" : "ElementPublish",
+    "active" : true,
+    "description" : "Element Publish Test",
+    "vendor_version" : null,
+    "key" : "elementpublish",
+    "extended" : false
   }
 }
