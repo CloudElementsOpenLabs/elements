@@ -629,5 +629,17 @@
     "vendor_version" : null,
     "key" : "knowledgeowl",
     "extended" : false
+  },
+  "StageElement" : {
+    "image" : "elements/custom-element-default-logo.png",
+    "path" : "stageelement/element.json",
+    "hub" : "general",
+    "author" : "HarshaVardhanNaiduGangavarapu",
+    "name" : "Stage Element",
+    "active" : true,
+    "description" : "Stage Element for Publish Test",
+    "vendor_version" : null,
+    "key" : "stageelement",
+    "extended" : false
   }
 }
