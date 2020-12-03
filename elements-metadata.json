@@ -629,5 +629,17 @@
     "vendor_version" : null,
     "key" : "knowledgeowl",
     "extended" : false
+  },
+  "Dice.com" : {
+    "image" : "https://images.cloudelements.io/Dice202007290549.png",
+    "path" : "dice/element.json",
+    "hub" : "humancapital",
+    "author" : "IanGSalmon",
+    "name" : "Dice.com",
+    "active" : true,
+    "description" : "Dice Talent Public API",
+    "vendor_version" : null,
+    "key" : "dice",
+    "extended" : false
   }
 }
