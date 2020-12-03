@@ -629,5 +629,17 @@
     "vendor_version" : null,
     "key" : "knowledgeowl",
     "extended" : false
+  },
+  "Epicor" : {
+    "image" : "https://images.cloudelements.io/Epicor_logo_trimmed202009171725.png",
+    "path" : "epicor/element.json",
+    "hub" : "erp",
+    "author" : "IanGSalmon",
+    "name" : "Epicor",
+    "active" : true,
+    "description" : "Add an Epicor Instance to connect your existing account to the ERP Hub, allowing you to manage all of your ERP activities across multiple ERP Elements. You will need your Epicor server details to add an instance.",
+    "vendor_version" : null,
+    "key" : "epicor",
+    "extended" : false
   }
 }
