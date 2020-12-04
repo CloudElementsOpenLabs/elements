@@ -629,5 +629,17 @@
     "vendor_version" : null,
     "key" : "knowledgeowl",
     "extended" : false
+  },
+  "Test" : {
+    "image" : "elements/custom-element-default-logo.png",
+    "path" : "test/element.json",
+    "hub" : "analytics",
+    "author" : "svatada",
+    "name" : "Test",
+    "active" : true,
+    "description" : "test",
+    "vendor_version" : null,
+    "key" : "test",
+    "extended" : false
   }
 }
