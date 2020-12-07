@@ -154,15 +154,16 @@
     "key" : "democalculator"
   },
   "Pinterest" : {
-    "image" : "https://images.cloudelements.io/App-Pinterest-icon-with-out-background201808282145.png",
-    "path" : "pinterest/element.json",
+    "image" : "https://images.cloudelements.io/pinterest201908071353.png",
+    "path" : "pinterestdemo2/element.json",
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "Pinterest",
-    "description" : "Pinterest Element",
+    "description" : "Pinterest",
     "active" : true,
-    "vendor_version" : "v1",
-    "key" : "pinterest"
+    "vendor_version" : null,
+    "key" : "pinterestdemo2",
+    "extended" : false
   },
   "Taulia" : {
     "image" : "https://images.cloudelements.io/taulia-squarelogo-1517525911560201901231715.png",
