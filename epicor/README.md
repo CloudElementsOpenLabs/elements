@@ -3,6 +3,17 @@ Author Name:IanGSalmon
 **Epicor10 Element**  
 This element allows the creation of an element instance for the Epicor10, on-prem API. In order to implement this element, you will need a method for exposing the local network with access to the Epicor10 API, such as Ground2Cloud.  
 #  
+**Vendor Documentation**  
+In order to access API documentation, please access the following address in a web browser and login using your Epicor user credentials: https://{yourServer}/{yourEpicorEnv}/api/help/{apiVersion}  
+- yourServer, refers to a private network address  
+  - E.g. "10.1.50.170"  
+  - E.g. "localhost"  
+- yourEpicorEnv, refers to the name of the Epicor environment being served  
+  - E.g. "erp10"  
+- apiVersion, refers to the version of the Epicor REST API
+  - E.g. "v1"  
+A completed documentation URL example could look like: https://localhost/erp10/api/help/v1  
+#  
 **Resources**  
 This element contains full CRUD capability *(GET, POST, PATCH, DELETE)* for the following resources *(element resource name followed by Epicor10 vendor name)*:  
 - contacts
