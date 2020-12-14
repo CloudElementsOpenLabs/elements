@@ -33,15 +33,16 @@
     "key" : "mavenlink"
   },
   "GitHub" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/github_max_test/github_max_test.png",
-    "path" : "github_max_test/element.json",
+    "image" : "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png",
+    "path" : "extended-resources/github/element.json",
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "GitHub",
     "description" : "Build software better, together. Powerful collaboration, code review, and code management for open source and private projects.",
     "active" : true,
-    "vendor_version" : "latest",
-    "key" : "github_max_test"
+    "vendor_version" : null,
+    "key" : "github",
+    "extended" : true
   },
   "Asana" : {
     "image" : "https://images.cloudelements.io/asana201711150235.png",
@@ -115,7 +116,7 @@
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "VersaPay",
-    "description" : "versapay",
+    "description" : "blah blah blah",
     "active" : true,
     "vendor_version" : "latest",
     "key" : "versapay"
@@ -181,7 +182,7 @@
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "TalentReef",
-    "description" : "talentreef apis",
+    "description" : "yaaa",
     "active" : true,
     "vendor_version" : "v1",
     "key" : "talentreef"
@@ -423,7 +424,7 @@
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "ExpenseWire (Demo)",
-    "description" : "Expensewire",
+    "description" : "Imported http://ExpenseWire.com/ SOAP Element",
     "active" : true,
     "vendor_version" : "v2.0",
     "key" : "demoexpensewire"
@@ -494,6 +495,17 @@
     "vendor_version" : "v1.0",
     "key" : "microsoftgraph"
   },
+  "TrackTik" : {
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/tracktikapi2/tracktikapi2.png",
+    "path" : "tracktikapi2/element.json",
+    "hub" : "general",
+    "author" : "MaxwellWarnerCE",
+    "name" : "TrackTik API 2",
+    "description" : "# Introduction\nThe TrackTik API is built on HTTP. Our API is RESTful. It has predictable\nresource URLs. It returns HTTP response codes to indicate errors. It also\naccepts and returns JSON in the HTTP body. You can use your favorite\nHTTP/REST library for your programming language to use TrackTik's API, or\nyou can use one of our SDKs.\n\nMost of the objects are supported by an API which is documented and available for use so that you\nmay automate any work flows necessary. This document contains the most commonly\nintegrated resources.\n\n# Authentication\nTo use the API, you will need to receive your API token.\nYou can generate additional API keys, and delete API keys (as you may\nneed to rotate your keys in the future). You authenticate to the\nTrackTik API by providing your secret token in the request header or in a query parameter.\n\nTrackTik now supports two forms of authentication: header token and query parameters token\n\n\n# Service patterns\n \n\n```\nGET /entity-tag\n# Return a collection of entities\n# Service: EntityCollection\n```\n```\nGET /entity-tag/{id} \n# Return an entity detail\n# Service: SingleEntity\n```\n\n```\nPOST /entity-tag/{id}/action/{actionName}\n# Runs an action on a model @todo\n# Service: Action\n```\n\n```\nPOST /entity-tag/batch/{actionName}\n# Runs a batch action on some models defined by a filter or a list of IDS @todo\n# Service: ActionBatch\n```\n\n```\nGET /entity-tag/action/{actionName}\n# Returns the action definition\n# Service: ActionDefinition\n```\n\n# Sorting Results\n\nWhen calling the collection services, you can sort the results by using a coma seperated value of fields\n- For descendant order, append \"-\" before the field\n```\nGET /resource?sort=-createdAt\n# Sorts the results by createdAt desc\n```\n- You can add relations or more fields in the request\n```\nGET /resource?sort=-createdAt, region.name\n# Sorts the results by createdAt desc and then region.name ascendant\n```\n\n\n# Filtering Results\n\nYou can filter the API using all fields \n```\nGET /resource?customId=ABC001\n# Returns objects with customId = to ABC001.\n```\nYou can also filter by relations\n```\nGET /resource?region.id=15\n# Returns objects with region ID = 15\n```\n\nYou can chain filters. Filters are chainned using the AND conditions. \n```\nGET /resource?region.id=15&createdAt=2015-01-01\n# Returns objects with region ID = 15 created on 2015-01-01\n```\n\n# :IN filters\n\nSometimes, you need to query more than one value. You can use the \"in\" pseudo operator in your filter. \n```\nGET /resource?region.id:in=15,10\n# Returns objects with region ID = 15 or ID=10\n```\n\n# Date Filters\n\n**Filtering by a date**\n```\nGET /entity-tag?created={{date}}\n# Returns objects created on that date\n```\n\n```\n/entity-tag?created:before={{date}}\n# Returns objects created before that date. Non-inclusive\n```\n\n```\n/entity-tag?created:after={{date}}\n# Returns objects created after that date. Non-inclusive\n```\n\n```\n/entity-tag?created:between={{date1}},{{date2}}\n# Returns objects created between the 2 dates. Inclusive\n```\n\n**Supported date format**\n\n```\n2018-01-02 # International format\n12/01/2018 # US Format\n01-12-2018 # UK Format\n```\n\n**Supported time formats**\n\n```\n23:30 # 24hr format\n11:30am # US format\n2330 # Short (24hr) format\n```\n\n**Relative Formats**\nFor a full list, please refer to [this guide](http://www.php.net/manual/en/datetime.formats.relative.php)\n```\n\"yesterday 14:00\"\n\"last day of next month\"\n```\n\n\n\n# Scope Filters\n\nScopes are pre-made filters that can be applied to any services that return a collection of entities.\n- Each entity defines their own scopes. \n- You can filter by multiple scopes\n\n**Example scopes for the **shift** entity**\n\n- LATE\n- PUBLISHED\n- NOT_PUBLISHED\n- VACANT\n- WORKING\n- MISSED\n- NOT\n- HAS_OVERTIME\n- ACKNOWLEDGED\n- NOT_ACKNOWLEDGED\n- TIMESHEET_NOT_APPROVED\n- TIMESHEET_APPROVED\n- TODAY\n- COMPLETED\n\n**Unique scope usage**\n\n```\nGET /shift?scope=LATE\n# Return the list of current late shift\n```\n\n```\nGET /shift?scope=VACANT\n# Return the list of vacant shifts\n```\n\n**Multiple scopes usage** \n- Separate by a coma (,) for AND condition\n- Separate by a pipe (|) for OR condition\n\n```\nGET /shift?scope=VACANT,STARTING_SOON\n# Return the list of vacant shifts that are vacant AND are starting soon\n```\n\n```\nGET /shift?scope=VACANT|MISSED\n# Return the list of vacant shifts that are vacant OR were missed\n```\n\n# On-demand fields\n\nOn-demand fields can be added to the API object output by specifying with the `include` query parameter.\n```\nGET /employees?include=employmentProfile\n```\nThe employee object will now include a `employmentProfile` property. You can specify multiple on-demand fields by separating them with a coma.\n```\nGET /employees?include=employmentProfile,address\n```\n\n",
+    "active" : true,
+    "vendor_version" : "v1",
+    "key" : "tracktikapi2"
+  },
   "jira" : {
     "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/jira-test2/jira.jpg",
     "path" : "jira-test2/element.json",
@@ -516,8 +528,8 @@
     "vendor_version" : "V1",
     "key" : "sonos"
   },
-  "Alpha Vangate" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/alphavantage/alphavantage.png",
+  "alphavantage" : {
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/AlphaVantage/alphavantage.png",
     "path" : "alphavantage/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
@@ -527,107 +539,15 @@
     "vendor_version" : "v1",
     "key" : "alphavantage"
   },
-  "Oanda" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/oanda/oanda.png",
+  "oanda" : {
+    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/Oanda/oanda.png",
     "path" : "oanda/element.json",
     "hub" : "general",
     "author" : "Nick Bair",
     "name" : "Oanda",
     "description" : "The OANDA v20 REST API provides programmatic access to OANDA’s next generation v20 trading engine. To use this API you must have a v20 trading account, which is available to all divisions except Japan.",
     "active" : true,
-    "vendor_version" : "unknown",
+    "vendor_version" : "v20",
     "key" : "oanda"
-  },
-  "Spotify" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/spotify/oanda.png",
-    "path" : "spotify/element.json",
-    "hub" : "music",
-    "author" : "Nick Bair",
-    "name" : "Spotify",
-    "description" : "Spotify is a music streaming platform. This element includes all endpoints detailed in the documentation though some functionality may be missing.",
-    "active" : true,
-    "vendor_version" : "unknown",
-    "key" : "spotify"
-  },
-  "Steam" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/steam/steam.png",
-    "path" : "steam/element.json",
-    "hub" : "gaming",
-    "author" : "Aidad Wood",
-    "name" : "steam",
-    "description" : "Steam is a video game digital distribution platform. This element includes most endpoints detailed in the documentation for user authentication keys. Abilities include getting player stats, getting app news, getting game achievement schema, etc",
-    "active" : true,
-    "vendor_version" : "unknown",
-    "key" : "steam"
-  },
-  "Netsuite 2018 Release1 (Proxy)" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/netsuiteerp2018release1(proxy)/oanda.png",
-    "path" : "netsuiteerp2018release1(proxy)/element.json",
-    "hub" : "erp",
-    "author" : "Aidan Wood",
-    "name" : "Netsuite 2018 Release1 (Proxy)",
-    "description" : "Netsuite 2018 ERP Element",
-    "active" : true,
-    "vendor_version" : "v2018",
-    "key" : "netsuiteerp2018release1(proxy)"
-  },
-  "SAP Fieldglass" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/sapfieldglass/fieldglass.png",
-    "path" : "sapfieldglass/element.json",
-    "hub" : "Human Capital",
-    "author" : "Jamie Thorson",
-    "name" : "SAP Fieldglass",
-    "description" : "SAP Fieldglass API",
-    "active" : true,
-    "vendor_version" : "unknown",
-    "key" : "sapfieldglass"
-  },
-  "Trello" : {
-    "image" : "https://images.cloudelements.io/Trello-Logo.wine202010191027.png",
-    "path" : "trello/element.json",
-    "hub" : "general",
-    "author" : "kiasOrg",
-    "name" : "Trello",
-    "active" : true,
-    "description" : "The Trello API is extremely powerful and fun to use. Building a full application with Trello for web or mobile means getting to know the various concepts and models making up Trello.\n\nAuthentication is handled via OAuth1.0.",
-    "vendor_version" : null,
-    "key" : "trello",
-    "extended" : false
-  },
-  "QuickBase" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/quickbasedb/quickbase.png",
-    "path" : "quickbasedb/element.json",
-    "hub" : "db",
-    "author" : "tyler-cloud-elements",
-    "name" : "QuickBase",
-    "active" : true,
-    "description" : "Add a QuickBase element to connect your existing QuickBase database, allowing you to manage data for your database tables. You will need your QuickBase database information to add an instance.",
-    "vendor_version" : null,
-    "key" : "quickbasedb",
-    "extended" : false
-  },
-  "Zoom" : {
-    "image" : "https://images.cloudelements.io/zoom-icon-white202010131830.png",
-    "path" : "zoom/element.json",
-    "hub" : "collaboration",
-    "author" : "kiasOrg",
-    "name" : "Zoom",
-    "active" : true,
-    "description" : "The Zoom API allows developers to safely and securely access information from Zoom. You can use this API to build private services or public applications on the Zoom App Marketplace.\n\nZoom allows for two types of apps: user-managed and account-level. Endpoints in the Zoom element require an authenticated instance for one or the other. For example, if you want to request the GET /contacts endpoint, you need to have a user-managed authenticated instance, otherwise you will not be able to make the request. If you want to GET /users, you need to have an account-level authenticated instance with admin scopes, or you will not be able to make the request.",
-    "vendor_version" : null,
-    "key" : "zoom",
-    "extended" : false
-  },
-  "KnowledgeOwl" : {
-    "image" : "https://images.cloudelements.io/KOlogo202010281709.png",
-    "path" : "knowledgeowl/element.json",
-    "hub" : "general",
-    "author" : "kiawnna",
-    "name" : "Knowledge Owl",
-    "active" : true,
-    "description" : "KnowledgeOwl makes one thing--awesome knowledge base software. Knowledge Owl's API allows users to list, create, update, and suggest articles, as well as a handful of other operations involving files, readers, categories, and tags.",
-    "vendor_version" : null,
-    "key" : "knowledgeowl",
-    "extended" : false
   }
 }
