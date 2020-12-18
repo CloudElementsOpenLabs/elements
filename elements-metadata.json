@@ -1,5 +1,5 @@
 {
-	"Mandrill": {
+  "Mandrill": {
 		"image": "https://images.cloudelements.io/mandrill201810221710.png",
 		"path": "mandrill_3/element.json",
 		"hub": "general",
@@ -665,5 +665,17 @@
 		"vendor_version": null,
 		"key": "moneycorp_2",
 		"extended": false
-	}
+	},
+  "ACIModelbank" : {
+    "image" : "https://images.cloudelements.io/ACI-worldwide-logo202012102156.jpg",
+    "path" : "acimodelbank/element.json",
+    "hub" : "finance",
+    "author" : "GuyVanWert",
+    "name" : "ACI Modelbank",
+    "active" : true,
+    "description" : "Modelbank",
+    "vendor_version" : null,
+    "key" : "acimodelbank",
+    "extended" : false
+  }
 }
