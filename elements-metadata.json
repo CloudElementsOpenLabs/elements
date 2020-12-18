@@ -1,4 +1,26 @@
 {
+  "Exact Online" : {
+    "image" : "https://images.cloudelements.co.uk/exact202001202320.jpg",
+    "path" : "exactonline/element.json",
+    "hub" : "erp",
+    "author" : "GuyVanWert",
+    "name" : "Tableau",
+    "description" : "Exact online is an ERP mainly used in the Benelux",
+    "active" : true,
+    "vendor_version" : "1",
+    "key" : "exactonline"
+  },
+  "Tableau" : {
+    "image" : "https://images.cloudelements.io/unnamed-3202004212146.png",
+    "path" : "tableau/element.json",
+    "hub" : "general",
+    "author" : "GuyVanWert",
+    "name" : "Tableau",
+    "description" : "Tableau is Business intelligence and analytics software",
+    "active" : true,
+    "vendor_version" : "3.7",
+    "key" : "tableau"
+  },
   "Mandrill" : {
     "image" : "https://images.cloudelements.io/mandrill201810221710.png",
     "path" : "mandrill_3/element.json",
@@ -115,7 +137,7 @@
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "VersaPay",
-    "description" : "versapay",
+    "description" : "blah blah blah",
     "active" : true,
     "vendor_version" : "latest",
     "key" : "versapay"
@@ -181,7 +203,7 @@
     "hub" : "general",
     "author" : "MaxwellWarnerCE",
     "name" : "TalentReef",
-    "description" : "talentreef apis",
+    "description" : "yaaa",
     "active" : true,
     "vendor_version" : "v1",
     "key" : "talentreef"
@@ -423,7 +445,7 @@
     "hub" : "general",
     "author" : "daniellelaforte",
     "name" : "ExpenseWire (Demo)",
-    "description" : "Expensewire",
+    "description" : "Imported http://ExpenseWire.com/ SOAP Element",
     "active" : true,
     "vendor_version" : "v2.0",
     "key" : "demoexpensewire"
@@ -582,74 +604,16 @@
     "vendor_version" : "unknown",
     "key" : "sapfieldglass"
   },
-  "Trello" : {
-    "image" : "https://images.cloudelements.io/Trello-Logo.wine202010191027.png",
-    "path" : "trello/element.json",
+  "XLedger" : {
+    "image" : "https://images.cloudelements.io/xledger_share_logo202011051434.png",
+    "path" : "xledger_combined/element.json",
     "hub" : "general",
-    "author" : "kiasOrg",
-    "name" : "Trello",
+    "author" : "GuyVanWert",
+    "name" : "XLedger",
     "active" : true,
-    "description" : "The Trello API is extremely powerful and fun to use. Building a full application with Trello for web or mobile means getting to know the various concepts and models making up Trello.\n\nAuthentication is handled via OAuth1.0.",
+    "description" : "Imported http://ws.xledger.net/ SOAP Element",
     "vendor_version" : null,
-    "key" : "trello",
-    "extended" : false
-  },
-  "QuickBase" : {
-    "image" : "https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/quickbasedb/quickbase.png",
-    "path" : "quickbasedb/element.json",
-    "hub" : "db",
-    "author" : "tyler-cloud-elements",
-    "name" : "QuickBase",
-    "active" : true,
-    "description" : "Add a QuickBase element to connect your existing QuickBase database, allowing you to manage data for your database tables. You will need your QuickBase database information to add an instance.",
-    "vendor_version" : null,
-    "key" : "quickbasedb",
-    "extended" : false
-  },
-  "Zoom" : {
-    "image" : "https://images.cloudelements.io/zoom-icon-white202010131830.png",
-    "path" : "zoom/element.json",
-    "hub" : "collaboration",
-    "author" : "kiasOrg",
-    "name" : "Zoom",
-    "active" : true,
-    "description" : "The Zoom API allows developers to safely and securely access information from Zoom. You can use this API to build private services or public applications on the Zoom App Marketplace.\n\nZoom allows for two types of apps: user-managed and account-level. Endpoints in the Zoom element require an authenticated instance for one or the other. For example, if you want to request the GET /contacts endpoint, you need to have a user-managed authenticated instance, otherwise you will not be able to make the request. If you want to GET /users, you need to have an account-level authenticated instance with admin scopes, or you will not be able to make the request.",
-    "vendor_version" : null,
-    "key" : "zoom",
-    "extended" : false
-  },
-  "KnowledgeOwl" : {
-    "image" : "https://images.cloudelements.io/KOlogo202010281709.png",
-    "path" : "knowledgeowl/element.json",
-    "hub" : "general",
-    "author" : "kiawnna",
-    "name" : "Knowledge Owl",
-    "active" : true,
-    "description" : "KnowledgeOwl makes one thing--awesome knowledge base software. Knowledge Owl's API allows users to list, create, update, and suggest articles, as well as a handful of other operations involving files, readers, categories, and tags.",
-    "vendor_version" : null,
-    "key" : "knowledgeowl",
-    "extended" : false
-  },
-  "Epicor" : {
-    "image" : "https://images.cloudelements.io/Epicor_logo_trimmed202009171725.png",
-    "path" : "epicor/element.json",
-    "hub" : "erp",
-    "author" : "IanGSalmon",
-    "name" : "Epicor",
-    "active" : true,
-    "description" : "Add an Epicor Instance to connect your existing account to the ERP Hub, allowing you to manage all of your ERP activities across multiple ERP Elements. You will need your Epicor server details to add an instance.",
-    "vendor_version" : null,
-    "key" : "epicor",
-  "Dice.com" : {
-    "image" : "https://images.cloudelements.io/Dice202007290549.png",
-    "path" : "dice/element.json",
-    "hub" : "humancapital",
-    "author" : "IanGSalmon",
-    "name" : "Dice.com",
-    "active" : true,
-    "description" : "Dice Talent Public API",
-    "vendor_version" : null,
-    "key" : "dice",
+    "key" : "xledger_combined",
     "extended" : false
   }
 }
