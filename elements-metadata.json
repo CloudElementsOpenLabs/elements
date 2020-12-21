@@ -1,5 +1,5 @@
 {
-  "Mandrill": {
+	"Mandrill": {
 		"image": "https://images.cloudelements.io/mandrill201810221710.png",
 		"path": "mandrill_3/element.json",
 		"hub": "general",
@@ -666,16 +666,28 @@
 		"key": "moneycorp_2",
 		"extended": false
 	},
-  "ACIModelbank" : {
-    "image" : "https://images.cloudelements.io/ACI-worldwide-logo202012102156.jpg",
-    "path" : "acimodelbank/element.json",
-    "hub" : "finance",
-    "author" : "GuyVanWert",
-    "name" : "ACI Modelbank",
-    "active" : true,
-    "description" : "Modelbank",
-    "vendor_version" : null,
-    "key" : "acimodelbank",
-    "extended" : false
-  }
+	"ACIModelbank": {
+		"image": "https://images.cloudelements.io/ACI-worldwide-logo202012102156.jpg",
+		"path": "acimodelbank/element.json",
+		"hub": "finance",
+		"author": "GuyVanWert",
+		"name": "ACI Modelbank",
+		"active": true,
+		"description": "Modelbank",
+		"vendor_version": null,
+		"key": "acimodelbank",
+		"extended": false
+	},
+	"Akeneo": {
+		"image": "https://images.cloudelements.io/leistungen-e-commerce-akeneo-logo201809191606.png",
+		"path": "akeneo/element.json",
+		"author": "GuyVanWert",
+		"name": "Akeneo",
+		"description": "Akeneo PIM element",
+		"key": "akeneo",
+		"extended": false,
+		"hub": "general",
+		"active": true,
+		"vendor_version": null
+	}
 }
