@@ -689,5 +689,17 @@
 		"hub": "general",
 		"active": true,
 		"vendor_version": null
+	},
+	"Palette": {
+		"image": "https://images.cloudelements.io/Screen Shot 2019-02-12 at 10.34.33 AM201902121735.png",
+		"path": "httppalette.se/element.json",
+		"hub": "general",
+		"author": "GuyVanWert",
+		"name": "Palette",
+		"active": true,
+		"description": "Imported http://palette.se/ SOAP Element",
+		"vendor_version": null,
+		"key": "httppalette.se",
+		"extended": false
 	}
 }
