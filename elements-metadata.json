@@ -701,5 +701,17 @@
 		"vendor_version": null,
 		"key": "httppalette.se",
 		"extended": false
-	}
+	},
+  "XLedger" : {
+    "image" : "https://images.cloudelements.io/xledger_share_logo202011051434.png",
+    "path" : "xledger_combined/element.json",
+    "hub" : "general",
+    "author" : "GuyVanWert",
+    "name" : "XLedger",
+    "active" : true,
+    "description" : "Imported http://ws.xledger.net/ SOAP Element",
+    "vendor_version" : null,
+    "key" : "xledger_combined",
+    "extended" : false
+  }
 }
