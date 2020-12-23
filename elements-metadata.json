@@ -702,16 +702,28 @@
 		"key": "httppalette.se",
 		"extended": false
 	},
-  "XLedger" : {
-    "image" : "https://images.cloudelements.io/xledger_share_logo202011051434.png",
-    "path" : "xledger_combined/element.json",
-    "hub" : "general",
-    "author" : "GuyVanWert",
-    "name" : "XLedger",
-    "active" : true,
-    "description" : "Imported http://ws.xledger.net/ SOAP Element",
-    "vendor_version" : null,
-    "key" : "xledger_combined",
-    "extended" : false
-  }
+	"XLedger": {
+		"image": "https://images.cloudelements.io/xledger_share_logo202011051434.png",
+		"path": "xledger_combined/element.json",
+		"hub": "general",
+		"author": "GuyVanWert",
+		"name": "XLedger",
+		"active": true,
+		"description": "Imported http://ws.xledger.net/ SOAP Element",
+		"vendor_version": null,
+		"key": "xledger_combined",
+		"extended": false
+	},
+	"Tableau": {
+		"image": "https://images.cloudelements.io/unnamed-3202004212146.png",
+		"path": "tableauAuthTest/element.json",
+		"hub": "general",
+		"author": "GuyVanWert",
+		"name": "Tableau",
+		"description": "Imported Element",
+		"active": true,
+		"vendor_version": null,
+		"key": "tableauAuthTest",
+		"extended": false
+	}
 }
