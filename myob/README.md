@@ -68,3 +68,15 @@ This element contains POST functionality for the following resource:
 - *OAuth API Secret* 
   - Client Secret provided when a Cloud Elements connected application is created.   
   #  
+  **Bulk**  
+  This MYOB Advanced element has Cloud Elements (pagination-based) bulk supported for all of the aforementioned resources.  
+  #  
+  **Polling**  
+  This MYOB Advanced element can create events in the Cloud Elements platform via polling on individual objects. The following objects have polling enabled:
+    - customers
+    - taxes
+    - vendors
+    - currencies
+    - invoices
+    - salesOrders
+    - itemCategories
