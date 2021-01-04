@@ -725,5 +725,17 @@
 		"vendor_version": null,
 		"key": "tableauAuthTest",
 		"extended": false
+	},
+	"MYOBAdvanced": {
+		"image": "elements/custom-element-default-logo.png",
+		"path": "myob/element.json",
+		"hub": "finance",
+		"author": "IanGSalmon",
+		"name": "MYOB Advanced",
+		"active": true,
+		"description": "MYOB helps customers with solutions for tax, accounting and other financial business services software .This element has Procure to Pay usecase related objects exposed. API v. 17.200.001 was used for development and testing of the MYOB Advanced Element",
+		"vendor_version": null,
+		"key": "myob",
+		"extended": false
 	}
 }
