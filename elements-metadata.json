@@ -632,14 +632,14 @@
   },
   "DayforceHCM" : {
     "image" : "elements/custom-element-default-logo.png",
-    "path" : "dayforcehcmcatalog/element.json",
+    "path" : "dayforcehcm/element.json",
     "hub" : "humancapital",
     "author" : "gapking90",
     "name" : "Dayforce HCM",
     "active" : true,
     "description" : "Dayforce HCM",
     "vendor_version" : null,
-    "key" : "dayforcehcmcatalog",
+    "key" : "dayforcehcm",
     "extended" : false
   }
 }
