@@ -632,14 +632,14 @@
   },
   "ePages" : {
     "image" : "elements/provider_epages.png",
-    "path" : "epagescatalog/element.json",
+    "path" : "epages/element.json",
     "hub" : "ecommerce",
     "author" : "gapking90",
     "name" : "ePages",
     "active" : true,
     "description" : "Add an ePages Instance to connect your existing ePages account to the eCommerce Hub, allowing you to manage customers, orders and products across multiple eCommerce Elements. You will need your ePages account information to add an instance.",
     "vendor_version" : null,
-    "key" : "epagescatalog",
+    "key" : "epages",
     "extended" : false
   }
 }
