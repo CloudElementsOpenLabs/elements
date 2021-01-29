@@ -632,14 +632,14 @@
   },
   "POSable" : {
     "image" : "elements/provider_posable.png",
-    "path" : "posablecatalog/element.json",
+    "path" : "posable/element.json",
     "hub" : "pointofsale",
     "author" : "gapking90",
     "name" : "POSable",
     "active" : true,
     "description" : "The POSable element",
     "vendor_version" : null,
-    "key" : "posablecatalog",
+    "key" : "posable",
     "extended" : false
   }
 }
