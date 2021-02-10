@@ -797,5 +797,17 @@
 		"vendor_version": null,
 		"key": "epages",
 		"extended": false
+	},
+	"POSable": {
+		"image": "elements/provider_posable.png",
+		"path": "posable/element.json",
+		"hub": "pointofsale",
+		"author": "gapking90",
+		"name": "POSable",
+		"active": true,
+		"description": "The POSable element",
+		"vendor_version": null,
+		"key": "posable",
+		"extended": false
 	}
 }
