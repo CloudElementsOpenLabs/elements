@@ -1,5 +1,5 @@
 {
-	"Mandrill": {
+"Mandrill": {
 		"image": "https://images.cloudelements.io/mandrill201810221710.png",
 		"path": "mandrill_3/element.json",
 		"hub": "general",
@@ -761,5 +761,17 @@
 		"vendor_version": null,
 		"key": "linkedin",
 		"extended": false
-	}
+	},
+  "DayforceHCM" : {
+    "image" : "elements/custom-element-default-logo.png",
+    "path" : "dayforcehcm/element.json",
+    "hub" : "humancapital",
+    "author" : "gapking90",
+    "name" : "Dayforce HCM",
+    "active" : true,
+    "description" : "Dayforce HCM",
+    "vendor_version" : null,
+    "key" : "dayforcehcm",
+    "extended" : false
+  }
 }
