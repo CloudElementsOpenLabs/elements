@@ -809,5 +809,17 @@
 		"vendor_version": null,
 		"key": "posable",
 		"extended": false
+	},
+	"SageFinancials": {
+		"image": "https://images.cloudelements.io/sagefinancials201811061947.png",
+		"path": "sagelive/element.json",
+		"hub": "sageaccounting",
+		"author": "gapking90",
+		"name": "Sage Financials",
+		"active": true,
+		"description": "Add a Sage Financials Instance to connect your existing Sage account to the Sage Accounting Hub, allowing you to manage customers, journals, ledger accounts, etc. across multiple Sage Elements. You will need your Sage Financials account information to add an instance.",
+		"vendor_version": null,
+		"key": "sagelive",
+		"extended": false
 	}
 }
