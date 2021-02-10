@@ -738,16 +738,28 @@
 		"key": "myob",
 		"extended": false
 	},
-  "ServiceTitan" : {
-    "image" : "https://images.cloudelements.io/da2f5247.servicetitan-logo-400202009031916.png",
-    "path" : "servicetitan/element.json",
-    "hub" : "general",
-    "author" : "MaxwellWarnerCE",
-    "name" : "ServiceTitan",
-    "active" : true,
-    "description" : "This element was built for a POC Demo for the Service Titan team ",
-    "vendor_version" : null,
-    "key" : "servicetitan",
-    "extended" : false
-  }
+	"ServiceTitan": {
+		"image": "https://images.cloudelements.io/da2f5247.servicetitan-logo-400202009031916.png",
+		"path": "servicetitan/element.json",
+		"hub": "general",
+		"author": "MaxwellWarnerCE",
+		"name": "ServiceTitan",
+		"active": true,
+		"description": "This element was built for a POC Demo for the Service Titan team ",
+		"vendor_version": null,
+		"key": "servicetitan",
+		"extended": false
+	},
+	"LinkedIn": {
+		"image": "elements/provider_linkedin.png",
+		"path": "linkedin/element.json",
+		"hub": "social",
+		"author": "gapking90",
+		"name": "LinkedIn",
+		"active": true,
+		"description": "Add a LinkedIn Instance to connect your existing LinkedIn account to the Social Hub, allowing you to manage companies, comments, followers and likes across multiple Social Elements. You will need your LinkedIn account information to add an instance.",
+		"vendor_version": null,
+		"key": "linkedin",
+		"extended": false
+	}
 }
