@@ -1,5 +1,5 @@
 {
-"Mandrill": {
+	"Mandrill": {
 		"image": "https://images.cloudelements.io/mandrill201810221710.png",
 		"path": "mandrill_3/element.json",
 		"hub": "general",
@@ -762,16 +762,28 @@
 		"key": "linkedin",
 		"extended": false
 	},
-  "DayforceHCM" : {
-    "image" : "elements/custom-element-default-logo.png",
-    "path" : "dayforcehcm/element.json",
-    "hub" : "humancapital",
-    "author" : "gapking90",
-    "name" : "Dayforce HCM",
-    "active" : true,
-    "description" : "Dayforce HCM",
-    "vendor_version" : null,
-    "key" : "dayforcehcm",
-    "extended" : false
-  }
+	"DayforceHCM": {
+		"image": "elements/custom-element-default-logo.png",
+		"path": "dayforcehcm/element.json",
+		"hub": "humancapital",
+		"author": "gapking90",
+		"name": "Dayforce HCM",
+		"active": true,
+		"description": "Dayforce HCM",
+		"vendor_version": null,
+		"key": "dayforcehcm",
+		"extended": false
+	},
+	"PipelineDeals": {
+		"image": "https://financesonline.com/uploads/2015/10/pipe.png",
+		"path": "pipelinedeals/element.json",
+		"hub": "crm",
+		"author": "gapking90",
+		"name": "PipelineDeals",
+		"active": true,
+		"description": "CRM service for tracking deals and contacts",
+		"vendor_version": null,
+		"key": "pipelinedeals",
+		"extended": false
+	}
 }
