@@ -632,14 +632,14 @@
   },
   "EventMobiv1" : {
     "image" : "elements/provider_eventmobiv1.png",
-    "path" : "eventmobiv1-clone/element.json",
+    "path" : "eventmobiv1/element.json",
     "hub" : "event-conferencing",
     "author" : "gapking90",
     "name" : "EventMobi v1",
     "active" : true,
     "description" : "EventMobi v1 - Mobile apps for events, conferences & tradeshows that enhance the attendee experience.",
     "vendor_version" : null,
-    "key" : "eventmobiv1-clone",
+    "key" : "eventmobiv1",
     "extended" : false
   }
 }
