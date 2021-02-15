@@ -632,14 +632,14 @@
   },
   "Bazaarvoice" : {
     "image" : "elements/provider_bazaarvoice.png",
-    "path" : "bazaarvoice-clone/element.json",
+    "path" : "bazaarvoice/element.json",
     "hub" : "inspirato",
     "author" : "gapking90",
     "name" : "Bazaarvoice",
     "active" : true,
     "description" : "The Bazaarvoice element",
     "vendor_version" : null,
-    "key" : "bazaarvoice-clone",
+    "key" : "bazaarvoice",
     "extended" : false
   }
 }
