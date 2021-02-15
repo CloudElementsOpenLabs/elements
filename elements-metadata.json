@@ -632,14 +632,14 @@
   },
   "VisualStudioTeamServices" : {
     "image" : "http://developers.cloud-elements.com/assets/img/default-ce-logo-element-builder.png",
-    "path" : "vsts-clone/element.json",
+    "path" : "vsts/element.json",
     "hub" : "collaboration",
     "author" : "gapking90",
     "name" : "Visual Studio Team Services",
     "active" : true,
     "description" : "Add an Microsoft Visual Studio Team Service Instance to connect your existing VSTS account to the Collaboration Hub, allowing you to manage work items. You will need your VSTS account information to add an instance.",
     "vendor_version" : null,
-    "key" : "vsts-clone",
+    "key" : "vsts",
     "extended" : false
   }
 }
