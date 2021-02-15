@@ -632,14 +632,14 @@
   },
   "Brandfolder" : {
     "image" : "elements/provider_brandfolder.png",
-    "path" : "brandfolder-clone/element.json",
+    "path" : "brandfolder/element.json",
     "hub" : "general",
     "author" : "gapking90",
     "name" : "Brandfolder",
     "active" : true,
     "description" : "Add an Brandfolder Instance to connect your existing Brandfolder account to the General Hub, allowing you to manage assets and attachments across multiple Elements. You will need your Brandfolder account information to add an instance.",
     "vendor_version" : null,
-    "key" : "brandfolder-clone",
+    "key" : "brandfolder",
     "extended" : false
   }
 }
