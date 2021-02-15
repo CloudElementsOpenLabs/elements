@@ -632,14 +632,14 @@
   },
   "SAPAnywhere" : {
     "image" : "elements/provider_sapanywhere.png",
-    "path" : "sapanywhere-clone/element.json",
+    "path" : "sapanywhere/element.json",
     "hub" : "ecommerce",
     "author" : "gapking90",
     "name" : "SAP Anywhere",
     "active" : true,
     "description" : "Add an SAP Anywhere Instance to connect your existing SAP Anywhere account to the eCommerce Hub, allowing you to manage customers, orders and products across multiple eCommerce Elements. You will need your SAP Anywhere account information to add an instance.",
     "vendor_version" : null,
-    "key" : "sapanywhere-clone",
+    "key" : "sapanywhere",
     "extended" : false
   }
 }
