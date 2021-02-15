@@ -632,14 +632,14 @@
   },
   "Kissmetrics" : {
     "image" : "elements/provider_kissmetrics.png",
-    "path" : "kissmetrics-clone/element.json",
+    "path" : "kissmetrics/element.json",
     "hub" : "marketing",
     "author" : "gapking90",
     "name" : "Kissmetrics",
     "active" : true,
     "description" : "Kissmetrics Element",
     "vendor_version" : null,
-    "key" : "kissmetrics-clone",
+    "key" : "kissmetrics",
     "extended" : false
   }
 }
