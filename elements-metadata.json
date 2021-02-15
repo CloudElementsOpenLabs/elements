@@ -632,14 +632,14 @@
   },
   "Mixpanel" : {
     "image" : "https://uxcam.com/images/mixpanel-logo.png",
-    "path" : "mixpanel-clone/element.json",
+    "path" : "mixpanel/element.json",
     "hub" : "general",
     "author" : "gapking90",
     "name" : "Mixpanel",
     "active" : true,
     "description" : "Add an Mixpanel element to connect to your existing mixpanel account, allowing you to create activities, users and download activities and users",
     "vendor_version" : null,
-    "key" : "mixpanel-clone",
+    "key" : "mixpanel",
     "extended" : false
   }
 }
