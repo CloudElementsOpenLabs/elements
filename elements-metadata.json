@@ -632,14 +632,14 @@
   },
   "MessageBus" : {
     "image" : "https://pbs.twimg.com/profile_images/530385734490804225/ptiF5kQf_400x400.png",
-    "path" : "messagebus-clone/element.json",
+    "path" : "messagebus/element.json",
     "hub" : "messaging",
     "author" : "gapking90",
     "name" : "Message Bus",
     "active" : true,
     "description" : "Add a Message Bus Instance to connect your existing Message Bus account to the Messaging Hub, allowing you to send, receive and manage email and SMS messages etc. across multiple Messaging Elements. You will need your Message Bus account information, or use our trial account to add an instance.",
     "vendor_version" : null,
-    "key" : "messagebus-clone",
+    "key" : "messagebus",
     "extended" : false
   }
 }
