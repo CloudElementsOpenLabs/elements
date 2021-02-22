@@ -726,18 +726,6 @@
 		"key": "tableauAuthTest",
 		"extended": false
 	},
-	"MYOBAdvanced": {
-		"image": "elements/custom-element-default-logo.png",
-		"path": "myob/element.json",
-		"hub": "finance",
-		"author": "IanGSalmon",
-		"name": "MYOB Advanced",
-		"active": true,
-		"description": "MYOB helps customers with solutions for tax, accounting and other financial business services software .This element has Procure to Pay usecase related objects exposed. API v. 17.200.001 was used for development and testing of the MYOB Advanced Element",
-		"vendor_version": null,
-		"key": "myob",
-		"extended": false
-	},
 	"ServiceTitan": {
 		"image": "https://images.cloudelements.io/da2f5247.servicetitan-logo-400202009031916.png",
 		"path": "servicetitan/element.json",
@@ -760,18 +748,6 @@
 		"description": "Add a LinkedIn Instance to connect your existing LinkedIn account to the Social Hub, allowing you to manage companies, comments, followers and likes across multiple Social Elements. You will need your LinkedIn account information to add an instance.",
 		"vendor_version": null,
 		"key": "linkedin",
-		"extended": false
-	},
-	"DayforceHCM": {
-		"image": "elements/custom-element-default-logo.png",
-		"path": "dayforcehcm/element.json",
-		"hub": "humancapital",
-		"author": "gapking90",
-		"name": "Dayforce HCM",
-		"active": true,
-		"description": "Dayforce HCM",
-		"vendor_version": null,
-		"key": "dayforcehcm",
 		"extended": false
 	},
 	"PipelineDeals": {
