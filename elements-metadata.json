@@ -737,5 +737,17 @@
 		"vendor_version": null,
 		"key": "servicetitan",
 		"extended": false
+	},
+	"DayforceHCM": {
+		"image": "elements/custom-element-default-logo.png",
+		"path": "dayforcehcm/element.json",
+		"hub": "humancapital",
+		"author": "gapking90",
+		"name": "Dayforce HCM",
+		"active": true,
+		"description": "Dayforce HCM",
+		"vendor_version": null,
+		"key": "dayforcehcm",
+		"extended": false
 	}
 }
