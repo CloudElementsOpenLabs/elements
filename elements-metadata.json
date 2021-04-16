@@ -749,5 +749,17 @@
 		"vendor_version": null,
 		"key": "dayforcehcm",
 		"extended": false
-	}
+	},
+  "ADPVantage" : {
+    "image" : "elements/custom-element-default-logo.png",
+    "path" : "adpvantage/element.json",
+    "hub" : "humancapital",
+    "author" : "saisravan84",
+    "name" : "ADP Vantage",
+    "active" : true,
+    "description" : "ADP Vantage Element Build for iCIMs Contract",
+    "vendor_version" : null,
+    "key" : "adpvantage",
+    "extended" : false
+  }
 }
