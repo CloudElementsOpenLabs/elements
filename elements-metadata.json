@@ -750,7 +750,7 @@
 		"key": "dayforcehcm",
 		"extended": false
 	},
-  	"ADPVantage" : {
+  "ADPVantage" : {
 		"image" : "elements/custom-element-default-logo.png",
 		"path" : "adpvantage/element.json",
 		"hub" : "humancapital",
@@ -762,7 +762,7 @@
 		"key" : "adpvantage",
 		"extended" : false
   	},
-  	"LinkedIn": {
+  "LinkedIn": {
 		"image": "elements/provider_linkedin.png",
 		"path": "linkedin/element.json",
 		"hub": "social",
@@ -774,7 +774,7 @@
 		"key": "linkedin",
 		"extended": false
 	},
-  	"ePages": {
+  "ePages": {
 		"image": "elements/provider_epages.png",
 		"path": "epages/element.json",
 		"hub": "ecommerce",
@@ -821,5 +821,17 @@
 		"vendor_version": null,
 		"key": "sagelive",
 		"extended": false
-	}
+	},
+  "VisualStudioTeamServices" : {
+    "image" : "http://developers.cloud-elements.com/assets/img/default-ce-logo-element-builder.png",
+    "path" : "vsts/element.json",
+    "hub" : "collaboration",
+    "author" : "gapking90",
+    "name" : "Visual Studio Team Services",
+    "active" : true,
+    "description" : "Add an Microsoft Visual Studio Team Service Instance to connect your existing VSTS account to the Collaboration Hub, allowing you to manage work items. You will need your VSTS account information to add an instance.",
+    "vendor_version" : null,
+    "key" : "vsts",
+    "extended" : false
+  }
 }
