@@ -893,5 +893,17 @@
     "vendor_version" : null,
     "key" : "eventmobiv1",
     "extended" : false
+  },
+  "Wrike" : {
+    "image" : "https://www.wrike.com/blog/wp-content/uploads/2014/09/Wrike_Black.png",
+    "path" : "wrike/element.json",
+    "hub" : "helpdesk",
+    "author" : "gapking90",
+    "name" : "Wrike",
+    "active" : true,
+    "description" : "Add a Wrike Instance to connect your existing Wrike account to the Help Desk Hub, allowing you to manage your incidents, priorities, statuses, users, etc. across multiple Help Desk Elements. You will need your Wrike account information to add an instance.",
+    "vendor_version" : null,
+    "key" : "wrike",
+    "extended" : false
   }
 }
