@@ -905,5 +905,17 @@
     "vendor_version" : null,
     "key" : "wrike",
     "extended" : false
+  },
+  "Kissmetrics" : {
+    "image" : "elements/provider_kissmetrics.png",
+    "path" : "kissmetrics/element.json",
+    "hub" : "marketing",
+    "author" : "gapking90",
+    "name" : "Kissmetrics",
+    "active" : true,
+    "description" : "Kissmetrics Element",
+    "vendor_version" : null,
+    "key" : "kissmetrics",
+    "extended" : false
   }
 }
