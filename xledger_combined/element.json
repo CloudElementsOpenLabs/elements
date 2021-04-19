@@ -1,1 +1,2391 @@
-{"private":true,"configuration":[{"internal":false,"companyConfig":false,"defaultValue":"page","displayOrder":1,"active":true,"description":"http://ws.xledger.net/ Pagination Type","isPrivate":false,"type":"TEXTFIELD_32","resellerConfig":false,"required":false,"hideFromConsole":true,"name":"Pagination Type","id":380381,"groupControl":false,"key":"pagination.type"},{"internal":false,"companyConfig":false,"defaultValue":"100","displayOrder":1,"active":true,"description":"The maximum number of records the API provider returns in a response","isPrivate":false,"type":"TEXTFIELD_32","resellerConfig":false,"required":false,"hideFromConsole":true,"name":"Max Page Size (or limit)","id":380382,"groupControl":false,"key":"pagination.max"},{"internal":false,"companyConfig":false,"defaultValue":"https://ws.xledger.net/WS/Common/Lib/FileUpload.asmx","displayOrder":1,"active":true,"description":"http://ws.xledger.net/ Base Url","isPrivate":false,"type":"TEXTFIELD_1000","resellerConfig":false,"required":true,"hideFromConsole":true,"name":"Base Url","id":380383,"groupControl":false,"key":"base.url"},{"internal":false,"companyConfig":false,"defaultValue":"xlintegration.P.O.C@gmail.com","displayOrder":1,"active":true,"description":"Logon ID","isPrivate":false,"type":"TEXTFIELD_128","resellerConfig":false,"required":true,"hideFromConsole":false,"name":"Logon ID","id":380394,"groupControl":false,"key":"logon"},{"internal":false,"companyConfig":false,"displayOrder":2,"active":true,"description":"Password","isPrivate":false,"type":"TEXTFIELD_128","resellerConfig":false,"required":true,"hideFromConsole":false,"name":"Password","id":380395,"groupControl":false,"key":"password"},{"internal":false,"companyConfig":false,"defaultValue":"XLEDGER","displayOrder":3,"active":true,"description":"Application ID","isPrivate":false,"type":"TEXTFIELD_128","resellerConfig":false,"required":true,"hideFromConsole":false,"name":"Application ID","id":380393,"groupControl":false,"key":"application"},{"internal":false,"companyConfig":false,"displayOrder":4,"active":true,"description":"LogonKeyResult","isPrivate":false,"type":"TEXTFIELD_128","resellerConfig":false,"required":false,"hideFromConsole":false,"name":"LogonKeyResult","id":380392,"groupControl":false,"key":"accessToken"},{"internal":false,"companyConfig":false,"displayOrder":11,"active":true,"description":"http://ws.xledger.net/ Event Notification Signature Key","isPrivate":false,"type":"TEXTFIELD_128","resellerConfig":false,"required":false,"hideFromConsole":true,"name":"Event Notification Signature Key","id":380384,"groupControl":false,"key":"event.notification.signature.key"},{"internal":false,"companyConfig":false,"displayOrder":12,"active":true,"description":"http://ws.xledger.net/ Event Notification Basic User Name","isPrivate":false,"type":"TEXTFIELD_128","resellerConfig":false,"required":false,"hideFromConsole":false,"name":"Event Notification Basic User Name","id":380386,"groupControl":false,"key":"event.notification.basic.username"},{"internal":false,"companyConfig":false,"displayOrder":12,"active":true,"description":"http://ws.xledger.net/ Event Notification Callback Headers","isPrivate":false,"type":"TEXTFIELD_128","resellerConfig":false,"required":false,"hideFromConsole":false,"name":"Event Notification Callback Headers","id":380385,"groupControl":false,"key":"event.notification.callback.headers"},{"internal":false,"companyConfig":false,"displayOrder":13,"active":true,"description":"http://ws.xledger.net/ Event Notification Basic Password","isPrivate":false,"type":"PASSWORD","resellerConfig":false,"required":false,"hideFromConsole":false,"name":"Event Notification Basic Password","id":380387,"groupControl":false,"key":"event.notification.basic.password"},{"internal":false,"companyConfig":false,"displayOrder":98,"active":true,"description":"Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings","isPrivate":false,"type":"TEXTAREA","resellerConfig":false,"required":false,"hideFromConsole":false,"name":"Default select fields","id":380388,"groupControl":false,"key":"default.select.fields.map"},{"internal":false,"companyConfig":false,"defaultValue":"true","displayOrder":99,"active":true,"description":"Used to enable/disable filtering of null values from the responses","isPrivate":false,"type":"BOOLEAN","resellerConfig":false,"required":false,"hideFromConsole":false,"name":"Filter null values from the response","id":380389,"groupControl":false,"key":"filter.response.nulls"},{"internal":false,"companyConfig":false,"displayOrder":100,"active":true,"description":"Instance Variables","isPrivate":false,"type":"CODE_EDITOR","resellerConfig":false,"required":false,"hideFromConsole":false,"name":"Instance Variables","id":380390,"groupControl":false,"key":"instance.variables"},{"internal":true,"companyConfig":false,"displayOrder":100,"active":true,"description":"XLedger FileUpload Time of Getting Token or Performing Authentication","isPrivate":false,"type":"TEXTFIELD_32","resellerConfig":false,"required":false,"hideFromConsole":true,"name":"Time of Getting Token or Performing Authentication","id":380391,"groupControl":false,"key":"authentication.time"}],"objects":[],"description":"Imported http://ws.xledger.net/ SOAP Element","cloneable":false,"extended":false,"bulkDownloadEnabled":false,"useModelsForMetadata":true,"paginatorVersion":"V2","trialAccount":false,"logo":"xledger_fileupload","id":27678,"hooks":[],"beta":false,"key":"xledger_combined","authentication":{"type":"custom"},"bulkUploadEnabled":false,"image":"https://images.cloudelements.io/xledger_share_logo202011051434.png","active":true,"resources":[{"method":"POST","kind":"eb","description":"authenticateConnection","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/authenticateConnection","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"requestName":"authenticateConnectionRequest","transform":false,"name":"authenticateConnection","requestSwagger":{"authenticateConnectionRequest":{"type":"object","properties":{"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"}}}},"swagger":{"authenticateConnection":{"type":"object","properties":{"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"}}}}},"id":625075,"hooks":[],"parameters":[{"vendorType":"header","resourceId":625075,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/AuthenticateConnection","id":1488794},{"vendorType":"body","resourceId":625075,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:AuthenticateConnection><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:AuthenticateConnection><\/soap:Body><\/soap:Envelope>","id":1488792},{"vendorType":"bodyToken","resourceId":625075,"dataType":"authenticateConnectionRequest","description":"Object input JSON","vendorDataType":"authenticateConnectionRequest","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488793}],"rootKey":"|soap:Envelope.soap:Body"},{"method":"POST","kind":"eb","description":"authenticateConnection","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/authenticateConnection-AuthenticateConnection","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"requestName":"authenticateConnectionRequest","transform":false,"name":"authenticateConnection","requestSwagger":{"authenticateConnectionRequest":{"type":"object","properties":{"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"}}}},"swagger":{"authenticateConnection":{"type":"object","properties":{"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"}}}}},"id":625076,"hooks":[],"parameters":[{"vendorType":"body","resourceId":625076,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:AuthenticateConnection><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:AuthenticateConnection><\/soapenv:Body><\/soapenv:Envelope>","id":1488795},{"vendorType":"header","resourceId":625076,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/AuthenticateConnection","id":1488797},{"vendorType":"bodyToken","resourceId":625076,"dataType":"authenticateConnectionRequest","description":"Object input JSON","vendorDataType":"authenticateConnectionRequest","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488796}],"rootKey":"|soapenv:Envelope.soapenv:Body"},{"method":"GET","kind":"eb","description":"budgetImport","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/budgetImport-BudgetImport/{id}","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"transform":false,"name":"budgetImport","swagger":{"budgetImport":{"type":"object","properties":{"bDelete":{"type":"boolean"},"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"},"itFiscalPeriodTo":{"format":"int32","type":"integer"},"itFiscalPeriodFrom":{"format":"int32","type":"integer"},"sFilter":{"type":"string"},"isFiscalYear":{"format":"int32","type":"integer"},"sBudget":{"type":"string"},"sImportCode":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"}}}}},"id":625077,"hooks":[],"parameters":[{"vendorType":"body","resourceId":625077,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:BudgetImport><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:sImportCode>{sImportCode}<\/ws:sImportCode><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:isFiscalYear>{isFiscalYear}<\/ws:isFiscalYear><ws:itFiscalPeriodFrom>{itFiscalPeriodFrom}<\/ws:itFiscalPeriodFrom><ws:itFiscalPeriodTo>{itFiscalPeriodTo}<\/ws:itFiscalPeriodTo><ws:sBudget>{sBudget}<\/ws:sBudget><ws:sFilter>{sFilter}<\/ws:sFilter><ws:bDelete>{bDelete}<\/ws:bDelete><\/ws:BudgetImport><\/soapenv:Body><\/soapenv:Envelope>","id":1488798},{"vendorType":"bodyToken","resourceId":625077,"dataType":"string","description":"Id ","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"path","vendorName":"id","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"id","id":1488800},{"vendorType":"bodyToken","resourceId":625077,"dataType":"Object","description":"Object input JSON","vendorDataType":"Object","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488799},{"vendorType":"header","resourceId":625077,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/BudgetImport","id":1488801}],"rootKey":"|soapenv:Envelope.soapenv:Body"},{"method":"GET","kind":"eb","description":"budgetImport","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/budgetImport/{id}","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"transform":false,"name":"budgetImport","swagger":{"budgetImport":{"type":"object","properties":{"bDelete":{"type":"boolean"},"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"},"itFiscalPeriodTo":{"format":"int32","type":"integer"},"itFiscalPeriodFrom":{"format":"int32","type":"integer"},"sFilter":{"type":"string"},"isFiscalYear":{"format":"int32","type":"integer"},"sBudget":{"type":"string"},"sImportCode":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"}}}}},"id":625078,"hooks":[],"parameters":[{"vendorType":"bodyToken","resourceId":625078,"dataType":"string","description":"Id ","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"path","vendorName":"id","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"id","id":1488805},{"vendorType":"body","resourceId":625078,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:BudgetImport><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:sImportCode>{sImportCode}<\/ws:sImportCode><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:isFiscalYear>{isFiscalYear}<\/ws:isFiscalYear><ws:itFiscalPeriodFrom>{itFiscalPeriodFrom}<\/ws:itFiscalPeriodFrom><ws:itFiscalPeriodTo>{itFiscalPeriodTo}<\/ws:itFiscalPeriodTo><ws:sBudget>{sBudget}<\/ws:sBudget><ws:sFilter>{sFilter}<\/ws:sFilter><ws:bDelete>{bDelete}<\/ws:bDelete><\/ws:BudgetImport><\/soap:Body><\/soap:Envelope>","id":1488802},{"vendorType":"bodyToken","resourceId":625078,"dataType":"Object","description":"Object input JSON","vendorDataType":"Object","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488803},{"vendorType":"header","resourceId":625078,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/BudgetImport","id":1488804}],"rootKey":"|soap:Envelope.soap:Body"},{"method":"GET","kind":"eb","description":"getFileUploadEntityCodes","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/getFileUploadEntityCodes-GetFileUploadEntityCodes/{id}","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"transform":false,"name":"getFileUploadEntityCodes","swagger":{"getFileUploadEntityCodes":{"type":"object","properties":{}}}},"id":625079,"hooks":[],"parameters":[{"vendorType":"bodyToken","resourceId":625079,"dataType":"string","description":"Id ","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"path","vendorName":"id","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"id","id":1488808},{"vendorType":"bodyToken","resourceId":625079,"dataType":"Object","description":"Object input JSON","vendorDataType":"Object","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488807},{"vendorType":"header","resourceId":625079,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/GetFileUploadEntityCodes","id":1488809},{"vendorType":"body","resourceId":625079,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:GetFileUploadEntityCodes><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:GetFileUploadEntityCodes><\/soapenv:Body><\/soapenv:Envelope>","id":1488806}],"rootKey":"|soapenv:Envelope.soapenv:Body"},{"method":"GET","kind":"eb","description":"getFileUploadEntityCodes","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/getFileUploadEntityCodes/{id}","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"transform":false,"name":"getFileUploadEntityCodes","swagger":{"getFileUploadEntityCodes":{"type":"object","properties":{}}}},"id":625080,"hooks":[],"parameters":[{"vendorType":"header","resourceId":625080,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/GetFileUploadEntityCodes","id":1488813},{"vendorType":"body","resourceId":625080,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:GetFileUploadEntityCodes><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:GetFileUploadEntityCodes><\/soap:Body><\/soap:Envelope>","id":1488810},{"vendorType":"bodyToken","resourceId":625080,"dataType":"Object","description":"Object input JSON","vendorDataType":"Object","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488811},{"vendorType":"bodyToken","resourceId":625080,"dataType":"string","description":"Id ","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"path","vendorName":"id","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"id","id":1488812}],"rootKey":"|soap:Envelope.soap:Body"},{"method":"GET","kind":"eb","description":"getFileUploadEntityCodesWithPassword","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/getFileUploadEntityCodesWithPassword-GetFileUploadEntityCodesWithPassword/{id}","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"transform":false,"name":"getFileUploadEntityCodesWithPassword","swagger":{"getFileUploadEntityCodesWithPassword":{"type":"object","properties":{"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"}}}}},"id":625081,"hooks":[],"parameters":[{"vendorType":"header","resourceId":625081,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/GetFileUploadEntityCodesWithPassword","id":1488816},{"vendorType":"bodyToken","resourceId":625081,"dataType":"string","description":"Id ","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"path","vendorName":"id","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"id","id":1488817},{"vendorType":"body","resourceId":625081,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:GetFileUploadEntityCodesWithPassword><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:GetFileUploadEntityCodesWithPassword><\/soapenv:Body><\/soapenv:Envelope>","id":1488814},{"vendorType":"bodyToken","resourceId":625081,"dataType":"Object","description":"Object input JSON","vendorDataType":"Object","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488815}],"rootKey":"|soapenv:Envelope.soapenv:Body"},{"method":"GET","kind":"eb","description":"getFileUploadEntityCodesWithPassword","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/getFileUploadEntityCodesWithPassword/{id}","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"transform":false,"name":"getFileUploadEntityCodesWithPassword","swagger":{"getFileUploadEntityCodesWithPassword":{"type":"object","properties":{"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"}}}}},"id":625082,"hooks":[],"parameters":[{"vendorType":"bodyToken","resourceId":625082,"dataType":"Object","description":"Object input JSON","vendorDataType":"Object","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488820},{"vendorType":"body","resourceId":625082,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:GetFileUploadEntityCodesWithPassword><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:GetFileUploadEntityCodesWithPassword><\/soap:Body><\/soap:Envelope>","id":1488818},{"vendorType":"header","resourceId":625082,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/GetFileUploadEntityCodesWithPassword","id":1488819},{"vendorType":"bodyToken","resourceId":625082,"dataType":"string","description":"Id ","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"path","vendorName":"id","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"id","id":1488821}],"rootKey":"|soap:Envelope.soap:Body"},{"method":"POST","kind":"eb","description":"logonKey","updatedDate":"2020-11-20T20:57:53Z","type":"onProvision","path":"/hubs/general/logonKey","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"requestName":"logonKeyRequest","transform":false,"name":"logonKey","requestSwagger":{"logonKeyRequest":{"id":"logonKeyRequest","properties":{"sLogonID":{"type":"string"},"sApplication":{"type":"string"},"sPassword":{"type":"string"}}}},"swagger":{"logonKey":{"id":"logonKey","properties":{"sLogonID":{"type":"string"},"sApplication":{"type":"string"},"sPassword":{"type":"string"}}}}},"id":625074,"hooks":[{"resourceId":625074,"isLegacy":false,"contextParams":"configuration,response_body","id":221542,"mimeType":"application/javascript","body":"configuration.accessToken = response_body.LogonKeyResponse.LogonKeyResult;\n\n\n\ndone({ \"configuration\": configuration }) ","type":"postRequest"},{"resourceId":625074,"isLegacy":false,"contextParams":"request_vendor_path","id":221543,"mimeType":"application/javascript","body":"done ({ \"request_vendor_path\": \"https://ws.xledger.net/WS/Common/Lib/Authentication.asmx\" })","type":"preRequest"}],"parameters":[{"vendorType":"bodyToken","resourceId":625074,"dataType":"string","description":"auto application set","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"configuration","vendorName":"sApplication","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"application","id":1488786},{"vendorType":"bodyToken","resourceId":625074,"dataType":"string","description":"auto password set","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"configuration","vendorName":"sPassword","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"password","id":1488787},{"vendorType":"bodyToken","resourceId":625074,"dataType":"string","description":"auto logon set","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"configuration","vendorName":"sLogonID","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"logon","id":1488788},{"vendorType":"body","resourceId":625074,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:LogonKey><ws:sLogonID>{sLogonID}<\/ws:sLogonID><ws:sPassword>{sPassword}<\/ws:sPassword><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:LogonKey><\/soap:Body><\/soap:Envelope>","id":1488789},{"vendorType":"bodyToken","resourceId":625074,"dataType":"logonKeyRequest","description":"Object input JSON","vendorDataType":"logonKeyRequest","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488790},{"vendorType":"header","resourceId":625074,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/LogonKey","id":1488791}],"rootKey":"|soap:Envelope.soap:Body"},{"method":"POST","kind":"eb","description":"receiveCheckImageFile","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/receiveCheckImageFile","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"requestName":"receiveCheckImageFileRequest","transform":false,"name":"receiveCheckImageFile","requestSwagger":{"receiveCheckImageFileRequest":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"},"xlikvFlags":{"type":"string"}}}},"swagger":{"receiveCheckImageFile":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"},"xlikvFlags":{"type":"string"}}}}},"id":625083,"hooks":[],"parameters":[{"vendorType":"bodyToken","resourceId":625083,"dataType":"receiveCheckImageFileRequest","description":"Object input JSON","vendorDataType":"receiveCheckImageFileRequest","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488822},{"vendorType":"body","resourceId":625083,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:ReceiveCheckImageFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:xlikvFlags>{xlikvFlags}<\/ws:xlikvFlags><\/ws:ReceiveCheckImageFile><\/soap:Body><\/soap:Envelope>","id":1488823},{"vendorType":"header","resourceId":625083,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/ReceiveCheckImageFile","id":1488824}],"rootKey":"|soap:Envelope.soap:Body"},{"method":"POST","kind":"eb","description":"receiveCheckImageFile","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/receiveCheckImageFile-ReceiveCheckImageFile","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"requestName":"receiveCheckImageFileRequest","transform":false,"name":"receiveCheckImageFile","requestSwagger":{"receiveCheckImageFileRequest":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"},"xlikvFlags":{"type":"string"}}}},"swagger":{"receiveCheckImageFile":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"},"xlikvFlags":{"type":"string"}}}}},"id":625084,"hooks":[],"parameters":[{"vendorType":"bodyToken","resourceId":625084,"dataType":"receiveCheckImageFileRequest","description":"Object input JSON","vendorDataType":"receiveCheckImageFileRequest","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488826},{"vendorType":"body","resourceId":625084,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:ReceiveCheckImageFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:xlikvFlags>{xlikvFlags}<\/ws:xlikvFlags><\/ws:ReceiveCheckImageFile><\/soapenv:Body><\/soapenv:Envelope>","id":1488825},{"vendorType":"header","resourceId":625084,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/ReceiveCheckImageFile","id":1488827}],"rootKey":"|soapenv:Envelope.soapenv:Body"},{"method":"POST","kind":"eb","description":"receiveFile","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/receiveFile","createdDate":"2020-11-17T16:21:55Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"id":633372,"hooks":[{"resourceId":633372,"isLegacy":false,"contextParams":"request_vendor_body,request_parameters,request_vendor_headers","id":227142,"mimeType":"application/javascript","body":"\nxmlBody = request_vendor_body;\nxmlBody = xmlBody.replace( \"{aFile}\", CE.b64(request_parameters.fileContent) );\n\nheaders = request_vendor_headers;\nheaders[\"Content-Type\"] = \"text/xml\";\n\ndone (\n  {\n    \"vendor_body\": request_vendor_body,\n    \"request_vendor_body\": xmlBody,\n    \"request_vendor_headers\": headers\n  });","type":"preRequest"}],"parameters":[{"vendorType":"query","resourceId":633372,"dataType":"string","description":"The actual file content","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"query","vendorName":"fileContent","required":false,"createdDate":"2020-11-19T21:24:36Z","name":"fileContent","id":1515632},{"vendorType":"body","resourceId":633372,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-19T21:38:28Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:ReceiveFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:sImportCode>{sImportCode}<\/ws:sImportCode><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><\/ws:ReceiveFile><\/soap:Body><\/soap:Envelope>","id":1515642},{"vendorType":"header","resourceId":633372,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-17T16:21:55Z","name":"http://ws.xledger.net/ReceiveFile","id":1511195},{"vendorType":"bodyToken","resourceId":633372,"dataType":"string","description":"The file name - Make sure to add the extension","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"query","vendorName":"sFileName","required":false,"createdDate":"2020-11-17T16:21:55Z","name":"filename","id":1511201},{"vendorType":"bodyToken","resourceId":633372,"dataType":"string","description":"the import code","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"query","vendorName":"sImportCode","required":false,"createdDate":"2020-11-17T16:21:55Z","name":"importCode","id":1511202},{"vendorType":"bodyToken","resourceId":633372,"dataType":"string","description":"the entity code","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"query","vendorName":"iEntityCode","required":false,"createdDate":"2020-11-17T16:21:55Z","name":"entityCode","id":1511203},{"vendorType":"bodyToken","resourceId":633372,"dataType":"string","description":"Logon from the instance","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"configuration","vendorName":"sUserName","required":false,"createdDate":"2020-11-17T16:21:55Z","name":"logon","id":1511197},{"vendorType":"bodyToken","resourceId":633372,"dataType":"string","description":"Access token set after instance creation","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"configuration","vendorName":"sKey","required":false,"createdDate":"2020-11-17T16:21:55Z","name":"accessToken","id":1511198},{"vendorType":"bodyToken","resourceId":633372,"dataType":"string","description":"Application from the instance","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"configuration","vendorName":"sApplication","required":false,"createdDate":"2020-11-17T16:21:55Z","name":"application","id":1511199}],"rootKey":"|soap:Envelope.soap:Body"},{"method":"POST","kind":"eb","description":"receiveFile","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/receiveFile-ReceiveFile","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"requestName":"receiveFileRequest","transform":false,"name":"receiveFile","requestSwagger":{"receiveFileRequest":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sImportCode":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"}}}},"swagger":{"receiveFile":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sImportCode":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"}}}}},"id":625086,"hooks":[],"parameters":[{"vendorType":"body","resourceId":625086,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:ReceiveFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:sImportCode>{sImportCode}<\/ws:sImportCode><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><\/ws:ReceiveFile><\/soapenv:Body><\/soapenv:Envelope>","id":1488831},{"vendorType":"bodyToken","resourceId":625086,"dataType":"receiveFileRequest","description":"Object input JSON","vendorDataType":"receiveFileRequest","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488832},{"vendorType":"header","resourceId":625086,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/ReceiveFile","id":1488833}],"rootKey":"|soapenv:Envelope.soapenv:Body"},{"method":"POST","kind":"eb","description":"receiveScannerFile","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/receiveScannerFile","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"requestName":"receiveScannerFileRequest","transform":false,"name":"receiveScannerFile","requestSwagger":{"receiveScannerFileRequest":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"}}}},"swagger":{"receiveScannerFile":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"}}}}},"id":625087,"hooks":[],"parameters":[{"vendorType":"bodyToken","resourceId":625087,"dataType":"receiveScannerFileRequest","description":"Object input JSON","vendorDataType":"receiveScannerFileRequest","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488834},{"vendorType":"header","resourceId":625087,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/ReceiveScannerFile","id":1488835},{"vendorType":"body","resourceId":625087,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:ReceiveScannerFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><\/ws:ReceiveScannerFile><\/soap:Body><\/soap:Envelope>","id":1488836}],"rootKey":"|soap:Envelope.soap:Body"},{"method":"POST","kind":"eb","description":"receiveScannerFileEx","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/receiveScannerFileEx","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"requestName":"receiveScannerFileExRequest","transform":false,"name":"receiveScannerFileEx","requestSwagger":{"receiveScannerFileExRequest":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"},"xlikvFlags":{"type":"string"}}}},"swagger":{"receiveScannerFileEx":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"},"xlikvFlags":{"type":"string"}}}}},"id":625088,"hooks":[],"parameters":[{"vendorType":"bodyToken","resourceId":625088,"dataType":"receiveScannerFileExRequest","description":"Object input JSON","vendorDataType":"receiveScannerFileExRequest","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488838},{"vendorType":"header","resourceId":625088,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/ReceiveScannerFileEx","id":1488839},{"vendorType":"body","resourceId":625088,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:ReceiveScannerFileEx><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:xlikvFlags>{xlikvFlags}<\/ws:xlikvFlags><\/ws:ReceiveScannerFileEx><\/soap:Body><\/soap:Envelope>","id":1488837}],"rootKey":"|soap:Envelope.soap:Body"},{"method":"POST","kind":"eb","description":"receiveScannerFileEx","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/receiveScannerFileEx-ReceiveScannerFileEx","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"requestName":"receiveScannerFileExRequest","transform":false,"name":"receiveScannerFileEx","requestSwagger":{"receiveScannerFileExRequest":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"},"xlikvFlags":{"type":"string"}}}},"swagger":{"receiveScannerFileEx":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"},"xlikvFlags":{"type":"string"}}}}},"id":625089,"hooks":[],"parameters":[{"vendorType":"bodyToken","resourceId":625089,"dataType":"receiveScannerFileExRequest","description":"Object input JSON","vendorDataType":"receiveScannerFileExRequest","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488841},{"vendorType":"header","resourceId":625089,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/ReceiveScannerFileEx","id":1488842},{"vendorType":"body","resourceId":625089,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:ReceiveScannerFileEx><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:xlikvFlags>{xlikvFlags}<\/ws:xlikvFlags><\/ws:ReceiveScannerFileEx><\/soapenv:Body><\/soapenv:Envelope>","id":1488840}],"rootKey":"|soapenv:Envelope.soapenv:Body"},{"method":"POST","kind":"eb","description":"receiveScannerFile","updatedDate":"2020-11-20T20:57:53Z","type":"api","path":"/hubs/general/receiveScannerFile-ReceiveScannerFile","createdDate":"2020-11-06T23:15:31Z","vendorMethod":"POST","response":{"contentTypeAsString":"application/json","contentType":"application/json"},"ownerAccountId":6905,"tryitoutDisable":false,"model":{"requestName":"receiveScannerFileRequest","transform":false,"name":"receiveScannerFile","requestSwagger":{"receiveScannerFileRequest":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"}}}},"swagger":{"receiveScannerFile":{"type":"object","properties":{"sFileName":{"type":"string"},"aFile":{"type":"string"},"sApplication":{"type":"string"},"sKey":{"type":"string"},"sUserName":{"type":"string"},"iEntityCode":{"format":"int32","type":"integer"}}}}},"id":625090,"hooks":[],"parameters":[{"vendorType":"header","resourceId":625090,"dataType":"string","description":"Soap Action header","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Soapaction","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"http://ws.xledger.net/ReceiveScannerFile","id":1488844},{"vendorType":"bodyToken","resourceId":625090,"dataType":"receiveScannerFileRequest","description":"Object input JSON","vendorDataType":"receiveScannerFileRequest","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"body","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"body","id":1488845},{"vendorType":"body","resourceId":625090,"dataType":"string","description":"Template XML","vendorDataType":"string","source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"body","required":false,"createdDate":"2020-11-06T23:15:31Z","name":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:ReceiveScannerFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><\/ws:ReceiveScannerFile><\/soapenv:Body><\/soapenv:Envelope>","id":1488843}],"rootKey":"|soapenv:Envelope.soapenv:Body"}],"protocolType":"soap","transformationsEnabled":true,"childTransformationsEnabled":true,"deleted":false,"hub":"general","typeOauth":false,"name":"XLedger","extendable":true,"parameters":[{"elementId":27678,"vendorType":"header","createdDate":"2020-11-06T23:15:31Z","name":"application/json","id":34349,"source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Accept","required":false},{"elementId":27678,"vendorType":"header","createdDate":"2020-11-06T23:15:31Z","name":"application/soap+xml; charset=\"utf-8\"","description":"Content-Type","id":34350,"source":"request","updatedDate":"2020-11-20T20:57:53Z","type":"value","vendorName":"Content-Type","required":false}]}
+{
+    "private": true,
+    "configuration": [
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "page",
+            "displayOrder": 1,
+            "active": true,
+            "description": "http://ws.xledger.net/ Pagination Type",
+            "isPrivate": false,
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Pagination Type",
+            "id": 380381,
+            "groupControl": false,
+            "key": "pagination.type"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "100",
+            "displayOrder": 1,
+            "active": true,
+            "description": "The maximum number of records the API provider returns in a response",
+            "isPrivate": false,
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Max Page Size (or limit)",
+            "id": 380382,
+            "groupControl": false,
+            "key": "pagination.max"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "https://ws.xledger.net/WS/Common/Lib/FileUpload.asmx",
+            "displayOrder": 1,
+            "active": true,
+            "description": "http://ws.xledger.net/ Base Url",
+            "isPrivate": false,
+            "type": "TEXTFIELD_1000",
+            "resellerConfig": false,
+            "required": true,
+            "hideFromConsole": true,
+            "name": "Base Url",
+            "id": 380383,
+            "groupControl": false,
+            "key": "base.url"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "xlintegration.P.O.C@gmail.com",
+            "displayOrder": 1,
+            "active": true,
+            "description": "Logon ID",
+            "isPrivate": false,
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": true,
+            "hideFromConsole": false,
+            "name": "Logon ID",
+            "id": 380394,
+            "groupControl": false,
+            "key": "logon"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "displayOrder": 2,
+            "active": true,
+            "description": "Password",
+            "isPrivate": false,
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": true,
+            "hideFromConsole": false,
+            "name": "Password",
+            "id": 380395,
+            "groupControl": false,
+            "key": "password"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "XLEDGER",
+            "displayOrder": 3,
+            "active": true,
+            "description": "Application ID",
+            "isPrivate": false,
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": true,
+            "hideFromConsole": false,
+            "name": "Application ID",
+            "id": 380393,
+            "groupControl": false,
+            "key": "application"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "displayOrder": 4,
+            "active": true,
+            "description": "LogonKeyResult",
+            "isPrivate": false,
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "LogonKeyResult",
+            "id": 380392,
+            "groupControl": false,
+            "key": "accessToken"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "displayOrder": 11,
+            "active": true,
+            "description": "http://ws.xledger.net/ Event Notification Signature Key",
+            "isPrivate": false,
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Event Notification Signature Key",
+            "id": 380384,
+            "groupControl": false,
+            "key": "event.notification.signature.key"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "displayOrder": 12,
+            "active": true,
+            "description": "http://ws.xledger.net/ Event Notification Basic User Name",
+            "isPrivate": false,
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Event Notification Basic User Name",
+            "id": 380386,
+            "groupControl": false,
+            "key": "event.notification.basic.username"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "displayOrder": 12,
+            "active": true,
+            "description": "http://ws.xledger.net/ Event Notification Callback Headers",
+            "isPrivate": false,
+            "type": "TEXTFIELD_128",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Event Notification Callback Headers",
+            "id": 380385,
+            "groupControl": false,
+            "key": "event.notification.callback.headers"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "displayOrder": 13,
+            "active": true,
+            "description": "http://ws.xledger.net/ Event Notification Basic Password",
+            "isPrivate": false,
+            "type": "PASSWORD",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Event Notification Basic Password",
+            "id": 380387,
+            "groupControl": false,
+            "key": "event.notification.basic.password"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "displayOrder": 98,
+            "active": true,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "isPrivate": false,
+            "type": "TEXTAREA",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Default select fields",
+            "id": 380388,
+            "groupControl": false,
+            "key": "default.select.fields.map"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "displayOrder": 99,
+            "active": true,
+            "description": "Used to enable/disable filtering of null values from the responses",
+            "isPrivate": false,
+            "type": "BOOLEAN",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Filter null values from the response",
+            "id": 380389,
+            "groupControl": false,
+            "key": "filter.response.nulls"
+        },
+        {
+            "internal": false,
+            "companyConfig": false,
+            "di¸splayOrder": 100,
+            "active": true,
+            "description": "Instance Variables",
+            "isPrivate": false,
+            "type": "CODE_EDITOR",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": false,
+            "name": "Instance Variables",
+            "id": 380390,
+            "groupControl": false,
+            "key": "instance.variables"
+        },
+        {
+            "internal": true,
+            "companyConfig": false,
+            "displayOrder": 100,
+            "active": true,
+            "description": "XLedger FileUpload Time of Getting Token or Performing Authentication",
+            "isPrivate": false,
+            "type": "TEXTFIELD_32",
+            "resellerConfig": false,
+            "required": false,
+            "hideFromConsole": true,
+            "name": "Time of Getting Token or Performing Authentication",
+            "id": 380391,
+            "groupControl": false,
+            "key": "authentication.time"
+        }
+    ],
+    "objects": [],
+    "description": "Imported http://ws.xledger.net/ SOAP Element",
+    "cloneable": false,
+    "extended": false,
+    "bulkDownloadEnabled": false,
+    "useModelsForMetadata": true,
+    "paginatorVersion": "V2",
+    "trialAccount": false,
+    "logo": "xledger_fileupload",
+    "id": 27678,
+    "hooks": [],
+    "beta": false,
+    "key": "xledger_combined",
+    "authentication": {
+        "type": "custom"
+    },
+    "bulkUploadEnabled": false,
+    "image": "https://images.cloudelements.io/xledger_share_logo202011051434.png",
+    "active": true,
+    "resources": [
+        {
+            "method": "POST",
+            "kind": "eb",
+            "description": "authenticateConnection",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/authenticateConnection",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "requestName": "authenticateConnectionRequest",
+                "transform": false,
+                "name": "authenticateConnection",
+                "requestSwagger": {
+                    "authenticateConnectionRequest": {
+                        "type": "object",
+                        "properties": {
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "authenticateConnection": {
+                        "type": "object",
+                        "properties": {
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625075,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "header",
+                    "resourceId": 625075,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/AuthenticateConnection",
+                    "id": 1488794
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625075,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:AuthenticateConnection><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:AuthenticateConnection><\/soap:Body><\/soap:Envelope>",
+                    "id": 1488792
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625075,
+                    "dataType": "authenticateConnectionRequest",
+                    "description": "Object input JSON",
+                    "vendorDataType": "authenticateConnectionRequest",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488793
+                }
+            ],
+            "rootKey": "|soap:Envelope.soap:Body"
+        },
+        {
+            "method": "POST",
+            "kind": "eb",
+            "description": "authenticateConnection",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/authenticateConnection-AuthenticateConnection",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "requestName": "authenticateConnectionRequest",
+                "transform": false,
+                "name": "authenticateConnection",
+                "requestSwagger": {
+                    "authenticateConnectionRequest": {
+                        "type": "object",
+                        "properties": {
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "authenticateConnection": {
+                        "type": "object",
+                        "properties": {
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625076,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "resourceId": 625076,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:AuthenticateConnection><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:AuthenticateConnection><\/soapenv:Body><\/soapenv:Envelope>",
+                    "id": 1488795
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625076,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/AuthenticateConnection",
+                    "id": 1488797
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625076,
+                    "dataType": "authenticateConnectionRequest",
+                    "description": "Object input JSON",
+                    "vendorDataType": "authenticateConnectionRequest",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488796
+                }
+            ],
+            "rootKey": "|soapenv:Envelope.soapenv:Body"
+        },
+        {
+            "method": "GET",
+            "kind": "eb",
+            "description": "budgetImport",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/budgetImport-BudgetImport/{id}",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "transform": false,
+                "name": "budgetImport",
+                "swagger": {
+                    "budgetImport": {
+                        "type": "object",
+                        "properties": {
+                            "bDelete": {
+                                "type": "boolean"
+                            },
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "itFiscalPeriodTo": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "itFiscalPeriodFrom": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "sFilter": {
+                                "type": "string"
+                            },
+                            "isFiscalYear": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "sBudget": {
+                                "type": "string"
+                            },
+                            "sImportCode": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625077,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "resourceId": 625077,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:BudgetImport><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:sImportCode>{sImportCode}<\/ws:sImportCode><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:isFiscalYear>{isFiscalYear}<\/ws:isFiscalYear><ws:itFiscalPeriodFrom>{itFiscalPeriodFrom}<\/ws:itFiscalPeriodFrom><ws:itFiscalPeriodTo>{itFiscalPeriodTo}<\/ws:itFiscalPeriodTo><ws:sBudget>{sBudget}<\/ws:sBudget><ws:sFilter>{sFilter}<\/ws:sFilter><ws:bDelete>{bDelete}<\/ws:bDelete><\/ws:BudgetImport><\/soapenv:Body><\/soapenv:Envelope>",
+                    "id": 1488798
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625077,
+                    "dataType": "string",
+                    "description": "Id ",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "id",
+                    "id": 1488800
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625077,
+                    "dataType": "Object",
+                    "description": "Object input JSON",
+                    "vendorDataType": "Object",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488799
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625077,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/BudgetImport",
+                    "id": 1488801
+                }
+            ],
+            "rootKey": "|soapenv:Envelope.soapenv:Body"
+        },
+        {
+            "method": "GET",
+            "kind": "eb",
+            "description": "budgetImport",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/budgetImport/{id}",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "transform": false,
+                "name": "budgetImport",
+                "swagger": {
+                    "budgetImport": {
+                        "type": "object",
+                        "properties": {
+                            "bDelete": {
+                                "type": "boolean"
+                            },
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "itFiscalPeriodTo": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "itFiscalPeriodFrom": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "sFilter": {
+                                "type": "string"
+                            },
+                            "isFiscalYear": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "sBudget": {
+                                "type": "string"
+                            },
+                            "sImportCode": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625078,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625078,
+                    "dataType": "string",
+                    "description": "Id ",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "id",
+                    "id": 1488805
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625078,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:BudgetImport><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:sImportCode>{sImportCode}<\/ws:sImportCode><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:isFiscalYear>{isFiscalYear}<\/ws:isFiscalYear><ws:itFiscalPeriodFrom>{itFiscalPeriodFrom}<\/ws:itFiscalPeriodFrom><ws:itFiscalPeriodTo>{itFiscalPeriodTo}<\/ws:itFiscalPeriodTo><ws:sBudget>{sBudget}<\/ws:sBudget><ws:sFilter>{sFilter}<\/ws:sFilter><ws:bDelete>{bDelete}<\/ws:bDelete><\/ws:BudgetImport><\/soap:Body><\/soap:Envelope>",
+                    "id": 1488802
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625078,
+                    "dataType": "Object",
+                    "description": "Object input JSON",
+                    "vendorDataType": "Object",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488803
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625078,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/BudgetImport",
+                    "id": 1488804
+                }
+            ],
+            "rootKey": "|soap:Envelope.soap:Body"
+        },
+        {
+            "method": "GET",
+            "kind": "eb",
+            "description": "getFileUploadEntityCodes",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/getFileUploadEntityCodes-GetFileUploadEntityCodes/{id}",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "transform": false,
+                "name": "getFileUploadEntityCodes",
+                "swagger": {
+                    "getFileUploadEntityCodes": {
+                        "type": "object",
+                        "properties": {}
+                    }
+                }
+            },
+            "id": 625079,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625079,
+                    "dataType": "string",
+                    "description": "Id ",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "id",
+                    "id": 1488808
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625079,
+                    "dataType": "Object",
+                    "description": "Object input JSON",
+                    "vendorDataType": "Object",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488807
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625079,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/GetFileUploadEntityCodes",
+                    "id": 1488809
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625079,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:GetFileUploadEntityCodes><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:GetFileUploadEntityCodes><\/soapenv:Body><\/soapenv:Envelope>",
+                    "id": 1488806
+                }
+            ],
+            "rootKey": "|soapenv:Envelope.soapenv:Body"
+        },
+        {
+            "method": "GET",
+            "kind": "eb",
+            "description": "getFileUploadEntityCodes",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/getFileUploadEntityCodes/{id}",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "transform": false,
+                "name": "getFileUploadEntityCodes",
+                "swagger": {
+                    "getFileUploadEntityCodes": {
+                        "type": "object",
+                        "properties": {}
+                    }
+                }
+            },
+            "id": 625080,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "header",
+                    "resourceId": 625080,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/GetFileUploadEntityCodes",
+                    "id": 1488813
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625080,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:GetFileUploadEntityCodes><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:GetFileUploadEntityCodes><\/soap:Body><\/soap:Envelope>",
+                    "id": 1488810
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625080,
+                    "dataType": "Object",
+                    "description": "Object input JSON",
+                    "vendorDataType": "Object",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488811
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625080,
+                    "dataType": "string",
+                    "description": "Id ",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "id",
+                    "id": 1488812
+                }
+            ],
+            "rootKey": "|soap:Envelope.soap:Body"
+        },
+        {
+            "method": "GET",
+            "kind": "eb",
+            "description": "getFileUploadEntityCodesWithPassword",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/getFileUploadEntityCodesWithPassword-GetFileUploadEntityCodesWithPassword/{id}",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "transform": false,
+                "name": "getFileUploadEntityCodesWithPassword",
+                "swagger": {
+                    "getFileUploadEntityCodesWithPassword": {
+                        "type": "object",
+                        "properties": {
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625081,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "header",
+                    "resourceId": 625081,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/GetFileUploadEntityCodesWithPassword",
+                    "id": 1488816
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625081,
+                    "dataType": "string",
+                    "description": "Id ",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "id",
+                    "id": 1488817
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625081,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:GetFileUploadEntityCodesWithPassword><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:GetFileUploadEntityCodesWithPassword><\/soapenv:Body><\/soapenv:Envelope>",
+                    "id": 1488814
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625081,
+                    "dataType": "Object",
+                    "description": "Object input JSON",
+                    "vendorDataType": "Object",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488815
+                }
+            ],
+            "rootKey": "|soapenv:Envelope.soapenv:Body"
+        },
+        {
+            "method": "GET",
+            "kind": "eb",
+            "description": "getFileUploadEntityCodesWithPassword",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/getFileUploadEntityCodesWithPassword/{id}",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "transform": false,
+                "name": "getFileUploadEntityCodesWithPassword",
+                "swagger": {
+                    "getFileUploadEntityCodesWithPassword": {
+                        "type": "object",
+                        "properties": {
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625082,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625082,
+                    "dataType": "Object",
+                    "description": "Object input JSON",
+                    "vendorDataType": "Object",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488820
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625082,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:GetFileUploadEntityCodesWithPassword><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:GetFileUploadEntityCodesWithPassword><\/soap:Body><\/soap:Envelope>",
+                    "id": 1488818
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625082,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/GetFileUploadEntityCodesWithPassword",
+                    "id": 1488819
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625082,
+                    "dataType": "string",
+                    "description": "Id ",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "path",
+                    "vendorName": "id",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "id",
+                    "id": 1488821
+                }
+            ],
+            "rootKey": "|soap:Envelope.soap:Body"
+        },
+        {
+            "method": "POST",
+            "kind": "eb",
+            "description": "logonKey",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "onProvision",
+            "path": "/hubs/general/logonKey",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "requestName": "logonKeyRequest",
+                "transform": false,
+                "name": "logonKey",
+                "requestSwagger": {
+                    "logonKeyRequest": {
+                        "id": "logonKeyRequest",
+                        "properties": {
+                            "sLogonID": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sPassword": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "logonKey": {
+                        "id": "logonKey",
+                        "properties": {
+                            "sLogonID": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sPassword": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625074,
+            "hooks": [
+                {
+                    "resourceId": 625074,
+                    "isLegacy": false,
+                    "contextParams": "configuration,response_body",
+                    "id": 221542,
+                    "mimeType": "application/javascript",
+                    "body": "configuration.accessToken = response_body.LogonKeyResponse.LogonKeyResult;\n\n\n\ndone({ \"configuration\": configuration }) ",
+                    "type": "postRequest"
+                },
+                {
+                    "resourceId": 625074,
+                    "isLegacy": false,
+                    "contextParams": "request_vendor_path",
+                    "id": 221543,
+                    "mimeType": "application/javascript",
+                    "body": "done ({ \"request_vendor_path\": \"https://ws.xledger.net/WS/Common/Lib/Authentication.asmx\" })",
+                    "type": "preRequest"
+                }
+            ],
+            "parameters": [
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625074,
+                    "dataType": "string",
+                    "description": "auto application set",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "configuration",
+                    "vendorName": "sApplication",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "application",
+                    "id": 1488786
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625074,
+                    "dataType": "string",
+                    "description": "auto password set",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "configuration",
+                    "vendorName": "sPassword",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "password",
+                    "id": 1488787
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625074,
+                    "dataType": "string",
+                    "description": "auto logon set",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "configuration",
+                    "vendorName": "sLogonID",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "logon",
+                    "id": 1488788
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625074,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:LogonKey><ws:sLogonID>{sLogonID}<\/ws:sLogonID><ws:sPassword>{sPassword}<\/ws:sPassword><ws:sApplication>{sApplication}<\/ws:sApplication><\/ws:LogonKey><\/soap:Body><\/soap:Envelope>",
+                    "id": 1488789
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625074,
+                    "dataType": "logonKeyRequest",
+                    "description": "Object input JSON",
+                    "vendorDataType": "logonKeyRequest",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488790
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625074,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/LogonKey",
+                    "id": 1488791
+                }
+            ],
+            "rootKey": "|soap:Envelope.soap:Body"
+        },
+        {
+            "method": "POST",
+            "kind": "eb",
+            "description": "receiveCheckImageFile",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/receiveCheckImageFile",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "requestName": "receiveCheckImageFileRequest",
+                "transform": false,
+                "name": "receiveCheckImageFile",
+                "requestSwagger": {
+                    "receiveCheckImageFileRequest": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "xlikvFlags": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "receiveCheckImageFile": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "xlikvFlags": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625083,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625083,
+                    "dataType": "receiveCheckImageFileRequest",
+                    "description": "Object input JSON",
+                    "vendorDataType": "receiveCheckImageFileRequest",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488822
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625083,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:ReceiveCheckImageFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:xlikvFlags>{xlikvFlags}<\/ws:xlikvFlags><\/ws:ReceiveCheckImageFile><\/soap:Body><\/soap:Envelope>",
+                    "id": 1488823
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625083,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/ReceiveCheckImageFile",
+                    "id": 1488824
+                }
+            ],
+            "rootKey": "|soap:Envelope.soap:Body"
+        },
+        {
+            "method": "POST",
+            "kind": "eb",
+            "description": "receiveCheckImageFile",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/receiveCheckImageFile-ReceiveCheckImageFile",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "requestName": "receiveCheckImageFileRequest",
+                "transform": false,
+                "name": "receiveCheckImageFile",
+                "requestSwagger": {
+                    "receiveCheckImageFileRequest": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "xlikvFlags": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "receiveCheckImageFile": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "xlikvFlags": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625084,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625084,
+                    "dataType": "receiveCheckImageFileRequest",
+                    "description": "Object input JSON",
+                    "vendorDataType": "receiveCheckImageFileRequest",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488826
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625084,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:ReceiveCheckImageFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:xlikvFlags>{xlikvFlags}<\/ws:xlikvFlags><\/ws:ReceiveCheckImageFile><\/soapenv:Body><\/soapenv:Envelope>",
+                    "id": 1488825
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625084,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/ReceiveCheckImageFile",
+                    "id": 1488827
+                }
+            ],
+            "rootKey": "|soapenv:Envelope.soapenv:Body"
+        },
+        {
+            "method": "POST",
+            "kind": "eb",
+            "description": "receiveFile",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/receiveFile",
+            "createdDate": "2020-11-17T16:21:55Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "id": 633372,
+            "hooks": [
+                {
+                    "resourceId": 633372,
+                    "isLegacy": false,
+                    "contextParams": "request_vendor_body,request_parameters,request_vendor_headers",
+                    "id": 227142,
+                    "mimeType": "application/javascript",
+                    "body": "\nxmlBody = request_vendor_body;\nxmlBody = xmlBody.replace( \"{aFile}\", CE.b64(request_parameters.fileContent) );\n\nheaders = request_vendor_headers;\nheaders[\"Content-Type\"] = \"text/xml\";\n\ndone (\n  {\n    \"vendor_body\": request_vendor_body,\n    \"request_vendor_body\": xmlBody,\n    \"request_vendor_headers\": headers\n  });",
+                    "type": "preRequest"
+                }
+            ],
+            "parameters": [
+                {
+                    "vendorType": "query",
+                    "resourceId": 633372,
+                    "dataType": "string",
+                    "description": "The actual file content",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "query",
+                    "vendorName": "fileContent",
+                    "required": false,
+                    "createdDate": "2020-11-19T21:24:36Z",
+                    "name": "fileContent",
+                    "id": 1515632
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 633372,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-19T21:38:28Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:ReceiveFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:sImportCode>{sImportCode}<\/ws:sImportCode><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><\/ws:ReceiveFile><\/soap:Body><\/soap:Envelope>",
+                    "id": 1515642
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 633372,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-17T16:21:55Z",
+                    "name": "http://ws.xledger.net/ReceiveFile",
+                    "id": 1511195
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 633372,
+                    "dataType": "string",
+                    "description": "The file name - Make sure to add the extension",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "query",
+                    "vendorName": "sFileName",
+                    "required": false,
+                    "createdDate": "2020-11-17T16:21:55Z",
+                    "name": "filename",
+                    "id": 1511201
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 633372,
+                    "dataType": "string",
+                    "description": "the import code",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "query",
+                    "vendorName": "sImportCode",
+                    "required": false,
+                    "createdDate": "2020-11-17T16:21:55Z",
+                    "name": "importCode",
+                    "id": 1511202
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 633372,
+                    "dataType": "string",
+                    "description": "the entity code",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "query",
+                    "vendorName": "iEntityCode",
+                    "required": false,
+                    "createdDate": "2020-11-17T16:21:55Z",
+                    "name": "entityCode",
+                    "id": 1511203
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 633372,
+                    "dataType": "string",
+                    "description": "Logon from the instance",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "configuration",
+                    "vendorName": "sUserName",
+                    "required": false,
+                    "createdDate": "2020-11-17T16:21:55Z",
+                    "name": "logon",
+                    "id": 1511197
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 633372,
+                    "dataType": "string",
+                    "description": "Access token set after instance creation",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "configuration",
+                    "vendorName": "sKey",
+                    "required": false,
+                    "createdDate": "2020-11-17T16:21:55Z",
+                    "name": "accessToken",
+                    "id": 1511198
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 633372,
+                    "dataType": "string",
+                    "description": "Application from the instance",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "configuration",
+                    "vendorName": "sApplication",
+                    "required": false,
+                    "createdDate": "2020-11-17T16:21:55Z",
+                    "name": "application",
+                    "id": 1511199
+                }
+            ],
+            "rootKey": "|soap:Envelope.soap:Body"
+        },
+        {
+            "method": "POST",
+            "kind": "eb",
+            "description": "receiveFile",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/receiveFile-ReceiveFile",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "requestName": "receiveFileRequest",
+                "transform": false,
+                "name": "receiveFile",
+                "requestSwagger": {
+                    "receiveFileRequest": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sImportCode": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "receiveFile": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sImportCode": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625086,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "body",
+                    "resourceId": 625086,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:ReceiveFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:sImportCode>{sImportCode}<\/ws:sImportCode><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><\/ws:ReceiveFile><\/soapenv:Body><\/soapenv:Envelope>",
+                    "id": 1488831
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625086,
+                    "dataType": "receiveFileRequest",
+                    "description": "Object input JSON",
+                    "vendorDataType": "receiveFileRequest",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488832
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625086,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/ReceiveFile",
+                    "id": 1488833
+                }
+            ],
+            "rootKey": "|soapenv:Envelope.soapenv:Body"
+        },
+        {
+            "method": "POST",
+            "kind": "eb",
+            "description": "receiveScannerFile",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/receiveScannerFile",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "requestName": "receiveScannerFileRequest",
+                "transform": false,
+                "name": "receiveScannerFile",
+                "requestSwagger": {
+                    "receiveScannerFileRequest": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "receiveScannerFile": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625087,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625087,
+                    "dataType": "receiveScannerFileRequest",
+                    "description": "Object input JSON",
+                    "vendorDataType": "receiveScannerFileRequest",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488834
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625087,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/ReceiveScannerFile",
+                    "id": 1488835
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625087,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:ReceiveScannerFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><\/ws:ReceiveScannerFile><\/soap:Body><\/soap:Envelope>",
+                    "id": 1488836
+                }
+            ],
+            "rootKey": "|soap:Envelope.soap:Body"
+        },
+        {
+            "method": "POST",
+            "kind": "eb",
+            "description": "receiveScannerFileEx",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/receiveScannerFileEx",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "requestName": "receiveScannerFileExRequest",
+                "transform": false,
+                "name": "receiveScannerFileEx",
+                "requestSwagger": {
+                    "receiveScannerFileExRequest": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "xlikvFlags": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "receiveScannerFileEx": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "xlikvFlags": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625088,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625088,
+                    "dataType": "receiveScannerFileExRequest",
+                    "description": "Object input JSON",
+                    "vendorDataType": "receiveScannerFileExRequest",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488838
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625088,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/ReceiveScannerFileEx",
+                    "id": 1488839
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625088,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:ws=\"http://ws.xledger.net/\"><soap:Header><\/soap:Header><soap:Body><ws:ReceiveScannerFileEx><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:xlikvFlags>{xlikvFlags}<\/ws:xlikvFlags><\/ws:ReceiveScannerFileEx><\/soap:Body><\/soap:Envelope>",
+                    "id": 1488837
+                }
+            ],
+            "rootKey": "|soap:Envelope.soap:Body"
+        },
+        {
+            "method": "POST",
+            "kind": "eb",
+            "description": "receiveScannerFileEx",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/receiveScannerFileEx-ReceiveScannerFileEx",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "requestName": "receiveScannerFileExRequest",
+                "transform": false,
+                "name": "receiveScannerFileEx",
+                "requestSwagger": {
+                    "receiveScannerFileExRequest": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "xlikvFlags": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "receiveScannerFileEx": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "xlikvFlags": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625089,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625089,
+                    "dataType": "receiveScannerFileExRequest",
+                    "description": "Object input JSON",
+                    "vendorDataType": "receiveScannerFileExRequest",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488841
+                },
+                {
+                    "vendorType": "header",
+                    "resourceId": 625089,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/ReceiveScannerFileEx",
+                    "id": 1488842
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625089,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:ReceiveScannerFileEx><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><ws:xlikvFlags>{xlikvFlags}<\/ws:xlikvFlags><\/ws:ReceiveScannerFileEx><\/soapenv:Body><\/soapenv:Envelope>",
+                    "id": 1488840
+                }
+            ],
+            "rootKey": "|soapenv:Envelope.soapenv:Body"
+        },
+        {
+            "method": "POST",
+            "kind": "eb",
+            "description": "receiveScannerFile",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "api",
+            "path": "/hubs/general/receiveScannerFile-ReceiveScannerFile",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "vendorMethod": "POST",
+            "response": {
+                "contentTypeAsString": "application/json",
+                "contentType": "application/json"
+            },
+            "ownerAccountId": 6905,
+            "tryitoutDisable": false,
+            "model": {
+                "requestName": "receiveScannerFileRequest",
+                "transform": false,
+                "name": "receiveScannerFile",
+                "requestSwagger": {
+                    "receiveScannerFileRequest": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        }
+                    }
+                },
+                "swagger": {
+                    "receiveScannerFile": {
+                        "type": "object",
+                        "properties": {
+                            "sFileName": {
+                                "type": "string"
+                            },
+                            "aFile": {
+                                "type": "string"
+                            },
+                            "sApplication": {
+                                "type": "string"
+                            },
+                            "sKey": {
+                                "type": "string"
+                            },
+                            "sUserName": {
+                                "type": "string"
+                            },
+                            "iEntityCode": {
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            },
+            "id": 625090,
+            "hooks": [],
+            "parameters": [
+                {
+                    "vendorType": "header",
+                    "resourceId": 625090,
+                    "dataType": "string",
+                    "description": "Soap Action header",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "Soapaction",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "http://ws.xledger.net/ReceiveScannerFile",
+                    "id": 1488844
+                },
+                {
+                    "vendorType": "bodyToken",
+                    "resourceId": 625090,
+                    "dataType": "receiveScannerFileRequest",
+                    "description": "Object input JSON",
+                    "vendorDataType": "receiveScannerFileRequest",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "body",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "body",
+                    "id": 1488845
+                },
+                {
+                    "vendorType": "body",
+                    "resourceId": 625090,
+                    "dataType": "string",
+                    "description": "Template XML",
+                    "vendorDataType": "string",
+                    "source": "request",
+                    "updatedDate": "2020-11-20T20:57:53Z",
+                    "type": "value",
+                    "vendorName": "body",
+                    "required": false,
+                    "createdDate": "2020-11-06T23:15:31Z",
+                    "name": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.xledger.net/\"><soapenv:Header><\/soapenv:Header><soapenv:Body><ws:ReceiveScannerFile><ws:sUserName>{sUserName}<\/ws:sUserName><ws:sKey>{sKey}<\/ws:sKey><ws:sApplication>{sApplication}<\/ws:sApplication><ws:sFileName>{sFileName}<\/ws:sFileName><ws:aFile>{aFile}<\/ws:aFile><ws:iEntityCode>{iEntityCode}<\/ws:iEntityCode><\/ws:ReceiveScannerFile><\/soapenv:Body><\/soapenv:Envelope>",
+                    "id": 1488843
+                }
+            ],
+            "rootKey": "|soapenv:Envelope.soapenv:Body"
+        }
+    ],
+    "protocolType": "soap",
+    "transformationsEnabled": true,
+    "childTransformationsEnabled": true,
+    "deleted": false,
+    "hub": "general",
+    "typeOauth": false,
+    "name": "XLedger",
+    "extendable": true,
+    "parameters": [
+        {
+            "elementId": 27678,
+            "vendorType": "header",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "name": "application/json",
+            "id": 34349,
+            "source": "request",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "value",
+            "vendorName": "Accept",
+            "required": false
+        },
+        {
+            "elementId": 27678,
+            "vendorType": "header",
+            "createdDate": "2020-11-06T23:15:31Z",
+            "name": "application/soap+xml; charset=\"utf-8\"",
+            "description": "Content-Type",
+            "id": 34350,
+            "source": "request",
+            "updatedDate": "2020-11-20T20:57:53Z",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "required": false
+        }
+    ]
+}
